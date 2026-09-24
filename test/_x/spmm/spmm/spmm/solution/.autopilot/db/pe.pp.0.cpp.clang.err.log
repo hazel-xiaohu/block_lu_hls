@@ -1,0 +1,88 @@
+/home/huz/project/SpMM_TCAD/test/pe.cpp:13:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE off
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:30:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:46:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_op_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=variable=psum1 op=fmul impl=fulldsp_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_OP variable=psum1 op=fmul impl=fulldsp
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:48:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_op_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=variable=psum2 op=fmul impl=fulldsp_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_OP variable=psum2 op=fmul impl=fulldsp
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:50:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_op_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=variable=psum3 op=fmul impl=fulldsp_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_OP variable=psum3 op=fmul impl=fulldsp
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:52:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_op_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=variable=psum4 op=fmul impl=fulldsp_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_OP variable=psum4 op=fmul impl=fulldsp
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:107:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merge_controller_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE off
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:151:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=_merge_temp_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:177:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_op_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=_merge_temp_XLX_SEP_ PragmaOptions=variable=m_result op=fadd impl=fulldsp_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_OP variable=m_result op=fadd impl=fulldsp
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:199:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=two_merger_XLX_SEP_ PragmaOptions=disable_start_propagation_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW disable_start_propagation
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:202:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=two_merger_XLX_SEP_ PragmaOptions=variable=temp_fifo depth=4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable=temp_fifo depth=4
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:196:17: warning: unused parameter 'result' [-Wunused-parameter]
+  merge_stream* result, id_t* length, merge_stream* from11, merge_stream* from21, id_t len11, id_t *len2_t1,
+                ^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:196:53: warning: unused parameter 'from11' [-Wunused-parameter]
+  merge_stream* result, id_t* length, merge_stream* from11, merge_stream* from21, id_t len11, id_t *len2_t1,
+                                                    ^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:210:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=allocation_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=function instances=two_merger limit=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ALLOCATION function instances=two_merger limit=1
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:213:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=variable=ping depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable=ping depth=1000
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:214:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=variable=pong depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable=pong depth=1000
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:216:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=variable=ping1 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable=ping1 depth=1000
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:217:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=variable=pong1 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable=pong1 depth=1000
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:249:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE off
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:348:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merger_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:351:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merger_XLX_SEP_ PragmaOptions=variable=mresult depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=mresult depth=8
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:360:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=generate_mccontrol_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE off
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:368:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=generate_mccontrol_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:390:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=from_ms_to_val_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:397:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merger_test_XLX_SEP_ PragmaOptions=m_axi depth=350 port=in offset=slave bundle=in_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=350 port=in offset=slave bundle=in
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:398:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merger_test_XLX_SEP_ PragmaOptions=m_axi depth=350 port=out offset=slave bundle=out_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=350 port=out offset=slave bundle=out
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:400:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merger_test_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:402:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merger_test_XLX_SEP_ PragmaOptions=disable_start_propagation_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW disable_start_propagation
+^
+/home/huz/project/SpMM_TCAD/test/pe.cpp:407:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=merger_test_XLX_SEP_ PragmaOptions=variable=ms depth=70_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=ms depth=70
+^
+29 warnings generated.

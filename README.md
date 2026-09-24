@@ -17,7 +17,14 @@ We implement and evaluate the design on the Xilinx ZCU106 platform under 100MHz.
 + The ***HLS*** folder includes the source code of SpMM design. 
 + The ***SDK*** folder includes the driver code for the FPGA design in the Vitis IDE.  
 
-Currently, two cases are not supported: 1) empty rows exist; 2) the number of partial results exceed 1000. We will support these cases in the future.
+Empty rows in either input are supported by both `spmm` and `spmm_row_wise`,
+including entirely empty inputs and zero output rows. Input matrices use valid,
+zero-based CSR with sorted column indices. Empty output rows have equal adjacent
+row pointers; `C_rcsr` must have space for `arnum + 1` entries.
+
+The existing 1000-entry partial-result buffering limit remains. See
+[the empty-row regression notes](tests/README.md) for the stream protocol,
+root causes, and validation commands.
 
 For now, benchmarks we use are as follows:
 

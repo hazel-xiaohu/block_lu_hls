@@ -22,10 +22,10 @@ def main():
     if not os.path.exists('bin'):
         os.mkdir('bin')
 
-    for item in os.listdir(config.bench_path):
-        if os.path.isdir(config.bench_path + '/' + item):
-            target_mat_file = config.bench_path + '/' + item + '/' + item + '.mtx'
-            origin_matrix_a = mmread(target_mat_file).tocsr()
+    for item in ['poisson3Da']:
+        if os.path.isdir('bin'):
+            #target_mat_file = config.bench_path + '/' + item + '/' + item + '.mtx'
+            origin_matrix_a = mmread("/home/huz/project/SpMM_TCAD/sparse_mm/poisson3Da.mtx").tocsr()
 
             print("-"*20)
             print("Processing {}".format(item))

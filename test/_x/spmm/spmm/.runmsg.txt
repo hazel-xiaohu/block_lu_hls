@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: spmm
+Log file: /home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/vitis_hls.log

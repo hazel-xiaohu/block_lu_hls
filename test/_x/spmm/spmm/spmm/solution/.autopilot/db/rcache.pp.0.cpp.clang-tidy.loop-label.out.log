@@ -1,0 +1,90 @@
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:2639:5: remark: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_676_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:2639:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:2653:5: remark: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_690_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:2653:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:2667:5: remark: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_704_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:2667:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:6175:7: remark: Added loop label VITIS_LOOP_1251_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^
+      VITIS_LOOP_1251_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:6175:7: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55258:2: remark: Added loop label VITIS_LOOP_9_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^
+ VITIS_LOOP_9_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55258:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55289:2: remark: Added loop label VITIS_LOOP_40_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^
+ VITIS_LOOP_40_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55289:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55322:2: remark: Added loop label VITIS_LOOP_73_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^
+ VITIS_LOOP_73_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55322:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55328:5: remark: Added loop label VITIS_LOOP_79_2:   [xilinx-label-all-loops]
+    for (id_t _t=0; _t<1; ){
+    ^
+    VITIS_LOOP_79_2: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55328:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55336:8: remark: Added loop label VITIS_LOOP_87_3:   [xilinx-label-all-loops]
+       for (id_t i=access_idx; i<access_idx+2; i++){
+       ^
+       VITIS_LOOP_87_3: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55336:8: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55377:2: remark: Added loop label VITIS_LOOP_128_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^
+ VITIS_LOOP_128_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55377:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55406:2: remark: Added loop label VITIS_LOOP_157_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ) {
+ ^
+ VITIS_LOOP_157_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55406:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55412:5: remark: Added loop label VITIS_LOOP_163_2:   [xilinx-label-all-loops]
+    for (id_t _t=0; _t<1; ){
+    ^
+    VITIS_LOOP_163_2: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55412:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55474:2: remark: Added loop label VITIS_LOOP_225_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ) {
+ ^
+ VITIS_LOOP_225_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55474:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55553:2: remark: Added loop label VITIS_LOOP_304_1:   [xilinx-label-all-loops]
+ for (id_t i=0; i<32; i++) {
+ ^
+ VITIS_LOOP_304_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55553:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55555:3: remark: Added loop label VITIS_LOOP_306_2:   [xilinx-label-all-loops]
+  for (id_t j=0; j<16; j++) {
+  ^
+  VITIS_LOOP_306_2: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55555:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55568:2: remark: Added loop label VITIS_LOOP_319_3:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^
+ VITIS_LOOP_319_3: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55568:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55582:5: remark: Added loop label VITIS_LOOP_333_4:   [xilinx-label-all-loops]
+    for (id_t j=0; j<16; j++) {
+    ^
+    VITIS_LOOP_333_4: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55582:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55641:7: remark: Added loop label VITIS_LOOP_392_5:   [xilinx-label-all-loops]
+      for (id_t tl=0; tl<16; tl++) {
+      ^
+      VITIS_LOOP_392_5: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/rcache.pp.0.cpp:55641:7: note: FIX-IT applied suggested code changes

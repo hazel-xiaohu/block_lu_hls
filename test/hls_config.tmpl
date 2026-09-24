@@ -1,0 +1,24 @@
+# 2. HLS 设置
+[hls]
+clock=5.0
+syn.top=spmm
+syn.file=core.cpp
+
+syn.file=pe.cpp
+syn.file=rcache.cpp
+syn.file=util.cpp
+syn.file=vccache.cpp
+
+# 6. 测试激励文件
+tb.file=tb.cpp
+#cosim.trace_level=all
+syn.cflags=-DSPMM_COSIM_RANDOM_EMPTY -DSPMM_C_SUB_AB
+tb.cflags=-DSPMM_COSIM_RANDOM_EMPTY -DSPMM_C_SUB_AB
+
+# Do not retain a waveform database during the normal regression cosim.
+cosim.trace_level=none
+cosim.wave_debug=false
+cosim.O=true
+
+vivado.flow=${VIVADO_FLOW}
+vivado.rtl=verilog

@@ -1,0 +1,2630 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "137 135 11 67 52 82 50 37 110 12 122 39 114 146 40 113 3 71 89 119 104 75 91 72 5 112 123 132 56 24 136 36 64 92 29 45 74 120 121 88 131 16 78 148 60 44 126 13 145 127 90 46 27 66 53 105 106 32 14 62 2 130 26 68 51 76 42 77 58 22 85 20 4 142 108 54 84 17 101 43 28 117",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "core.cpp",
+    "fileloc": 155,
+    "instructions": 894,
+    "memory_accesses": 0,
+    "name": "spmm",
+    "total_instructions": 63823
+  },
+  "1": {
+    "basicblocks": 26,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 15,
+    "file": "vccache.cpp",
+    "fileloc": 74,
+    "instructions": 283,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 8,
+    "name": "schedule_access",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 283
+  },
+  "10": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 47,
+    "file": "rcache.cpp",
+    "fileloc": 35,
+    "instructions": 417,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "rrequest_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 417
+  },
+  "100": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 23,
+    "file": "vccache.cpp",
+    "fileloc": 43,
+    "instructions": 172,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "request_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 172
+  },
+  "101": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 19,
+    "file": "util.cpp",
+    "fileloc": 830,
+    "instructions": 299,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 12,
+    "name": "sub_final_merger",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 299
+  },
+  "102": {
+    "basicblocks": 28,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "vccache.cpp",
+    "fileloc": 175,
+    "instructions": 186,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 10,
+    "name": "collector",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 186
+  },
+  "103": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 146,
+    "instructions": 456,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "request_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 456
+  },
+  "104": {
+    "basicblocks": 21,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 8,
+    "file": "core.cpp",
+    "fileloc": 74,
+    "instructions": 144,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 20,
+    "name": "merge_4_to_1_mi",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 144
+  },
+  "105": {
+    "basicblocks": 102,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 24,
+    "file": "vccache.cpp",
+    "fileloc": 591,
+    "instructions": 748,
+    "loads": {
+      "L": 36
+    },
+    "memory_accesses": 16,
+    "name": "ccache",
+    "stores": {
+      "L": 83
+    },
+    "total_instructions": 748
+  },
+  "106": {
+    "basicblocks": 102,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 24,
+    "file": "vccache.cpp",
+    "fileloc": 591,
+    "instructions": 748,
+    "loads": {
+      "L": 36
+    },
+    "memory_accesses": 16,
+    "name": "ccache",
+    "stores": {
+      "L": 83
+    },
+    "total_instructions": 748
+  },
+  "107": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 14,
+    "file": "vccache.cpp",
+    "fileloc": 4,
+    "instructions": 126,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 15,
+    "name": "vcrequest_splitter",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 126
+  },
+  "108": {
+    "basicblocks": 1,
+    "calls": "111 49",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "pe.cpp",
+    "fileloc": 346,
+    "instructions": 8,
+    "memory_accesses": 0,
+    "name": "merger",
+    "total_instructions": 4802
+  },
+  "109": {
+    "basicblocks": 26,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 15,
+    "file": "vccache.cpp",
+    "fileloc": 74,
+    "instructions": 283,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 8,
+    "name": "schedule_access",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 283
+  },
+  "11": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 17,
+    "def_use_depth": 20,
+    "file": "task_scheduler.h",
+    "fileloc": 57,
+    "instructions": 798,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 42,
+    "name": "A_element_distributor",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 798
+  },
+  "110": {
+    "basicblocks": 15,
+    "calls": "",
+    "control_depth": 6,
+    "def_use_depth": 68,
+    "file": "rcache.cpp",
+    "fileloc": 215,
+    "instructions": 603,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 12,
+    "name": "request_to_rbanks",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 603
+  },
+  "111": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 13,
+    "file": "pe.cpp",
+    "fileloc": 90,
+    "instructions": 136,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "merge_controller",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 136
+  },
+  "112": {
+    "basicblocks": 21,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 15,
+    "file": "util.cpp",
+    "fileloc": 659,
+    "instructions": 325,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 20,
+    "name": "merge_4_to_1_rresponse",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 325
+  },
+  "113": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 11,
+    "file": "core.cpp",
+    "fileloc": 116,
+    "instructions": 137,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_mi",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 137
+  },
+  "114": {
+    "basicblocks": 63,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 27,
+    "file": "rcache.cpp",
+    "fileloc": 260,
+    "instructions": 708,
+    "loads": {
+      "L": 34
+    },
+    "memory_accesses": 16,
+    "name": "rcache",
+    "stores": {
+      "L": 55
+    },
+    "total_instructions": 708
+  },
+  "115": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 68,
+    "file": "rcache.cpp",
+    "fileloc": 121,
+    "instructions": 895,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "rrequest_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 895
+  },
+  "116": {
+    "basicblocks": 28,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "vccache.cpp",
+    "fileloc": 175,
+    "instructions": 186,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 10,
+    "name": "collector",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 186
+  },
+  "117": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 7,
+    "file": "util.cpp",
+    "fileloc": 949,
+    "instructions": 74,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 4,
+    "name": "write_C_val_cid",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 74
+  },
+  "118": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 146,
+    "instructions": 456,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "request_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 456
+  },
+  "119": {
+    "basicblocks": 21,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 8,
+    "file": "core.cpp",
+    "fileloc": 74,
+    "instructions": 144,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 20,
+    "name": "merge_4_to_1_mi",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 144
+  },
+  "12": {
+    "basicblocks": 63,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 27,
+    "file": "rcache.cpp",
+    "fileloc": 260,
+    "instructions": 708,
+    "loads": {
+      "L": 34
+    },
+    "memory_accesses": 16,
+    "name": "rcache",
+    "stores": {
+      "L": 55
+    },
+    "total_instructions": 708
+  },
+  "120": {
+    "basicblocks": 1,
+    "calls": "15 100 109 86 83 19 125 95 65",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "vccache.cpp",
+    "fileloc": 248,
+    "instructions": 48,
+    "memory_accesses": 0,
+    "name": "vcrequest_manager",
+    "total_instructions": 2369
+  },
+  "121": {
+    "basicblocks": 1,
+    "calls": "81 41 21 147 57 129 118 116 102",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "vccache.cpp",
+    "fileloc": 248,
+    "instructions": 48,
+    "memory_accesses": 0,
+    "name": "vcrequest_manager",
+    "total_instructions": 2370
+  },
+  "122": {
+    "basicblocks": 63,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 27,
+    "file": "rcache.cpp",
+    "fileloc": 260,
+    "instructions": 708,
+    "loads": {
+      "L": 34
+    },
+    "memory_accesses": 16,
+    "name": "rcache",
+    "stores": {
+      "L": 55
+    },
+    "total_instructions": 708
+  },
+  "123": {
+    "basicblocks": 21,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 15,
+    "file": "util.cpp",
+    "fileloc": 659,
+    "instructions": 325,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 20,
+    "name": "merge_4_to_1_rresponse",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 325
+  },
+  "124": {
+    "basicblocks": 68,
+    "calls": "7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 97 97 97 97",
+    "control_depth": 0,
+    "def_use_depth": 6,
+    "file": "pe.cpp",
+    "fileloc": 208,
+    "instructions": 231,
+    "loads": {
+      "L": 15
+    },
+    "memory_accesses": 0,
+    "name": "merge_two_sub",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 4658
+  },
+  "125": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 146,
+    "instructions": 456,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "request_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 456
+  },
+  "126": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 277,
+    "instructions": 301,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 7,
+    "name": "request_to_vcbanks",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 301
+  },
+  "127": {
+    "basicblocks": 39,
+    "calls": "",
+    "control_depth": 19,
+    "def_use_depth": 30,
+    "file": "util.cpp",
+    "fileloc": 193,
+    "instructions": 890,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 28,
+    "name": "merge_4_to_1_vcrequest",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 890
+  },
+  "128": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 146,
+    "instructions": 456,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "request_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 456
+  },
+  "129": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 146,
+    "instructions": 456,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "request_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 456
+  },
+  "13": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 277,
+    "instructions": 301,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 7,
+    "name": "request_to_vcbanks",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 301
+  },
+  "130": {
+    "basicblocks": 23,
+    "calls": "",
+    "control_depth": 11,
+    "def_use_depth": 14,
+    "file": "util.cpp",
+    "fileloc": 519,
+    "instructions": 204,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 14,
+    "name": "merge_2_to_1_vcresult",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 204
+  },
+  "131": {
+    "basicblocks": 1,
+    "calls": "133 139 6 30 134 103 94 38 140",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "vccache.cpp",
+    "fileloc": 248,
+    "instructions": 48,
+    "memory_accesses": 0,
+    "name": "vcrequest_manager",
+    "total_instructions": 2370
+  },
+  "132": {
+    "basicblocks": 21,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 15,
+    "file": "util.cpp",
+    "fileloc": 659,
+    "instructions": 325,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 20,
+    "name": "merge_4_to_1_rresponse",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 325
+  },
+  "133": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 14,
+    "file": "vccache.cpp",
+    "fileloc": 4,
+    "instructions": 126,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 15,
+    "name": "vcrequest_splitter",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 126
+  },
+  "134": {
+    "basicblocks": 26,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 15,
+    "file": "vccache.cpp",
+    "fileloc": 74,
+    "instructions": 283,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 8,
+    "name": "schedule_access",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 283
+  },
+  "135": {
+    "basicblocks": 6,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 8,
+    "file": "task_scheduler.h",
+    "fileloc": 31,
+    "instructions": 70,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 6,
+    "name": "A_element_reader",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 70
+  },
+  "136": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 26,
+    "file": "util.cpp",
+    "fileloc": 152,
+    "instructions": 234,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "from_rcache_result_to_B_vcrequest",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 234
+  },
+  "137": {
+    "basicblocks": 6,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 7,
+    "file": "task_scheduler.h",
+    "fileloc": 6,
+    "instructions": 41,
+    "memory_accesses": 3,
+    "name": "A_row_reader",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 41
+  },
+  "138": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 24,
+    "file": "vccache.cpp",
+    "fileloc": 43,
+    "instructions": 173,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "request_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 173
+  },
+  "139": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 24,
+    "file": "vccache.cpp",
+    "fileloc": 43,
+    "instructions": 173,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "request_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 173
+  },
+  "14": {
+    "basicblocks": 23,
+    "calls": "",
+    "control_depth": 11,
+    "def_use_depth": 13,
+    "file": "util.cpp",
+    "fileloc": 701,
+    "instructions": 163,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 14,
+    "name": "merge_2_to_1_vcresponse",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 163
+  },
+  "140": {
+    "basicblocks": 28,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "vccache.cpp",
+    "fileloc": 175,
+    "instructions": 186,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 10,
+    "name": "collector",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 186
+  },
+  "141": {
+    "basicblocks": 18,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 29,
+    "file": "rcache.cpp",
+    "fileloc": 62,
+    "instructions": 519,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 2,
+    "name": "rschedule_access",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 519
+  },
+  "142": {
+    "basicblocks": 1,
+    "calls": "96 124",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "pe.cpp",
+    "fileloc": 346,
+    "instructions": 8,
+    "memory_accesses": 0,
+    "name": "merger",
+    "total_instructions": 4802
+  },
+  "143": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 13,
+    "file": "pe.cpp",
+    "fileloc": 138,
+    "instructions": 162,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 12,
+    "name": "_merge_temp",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 162
+  },
+  "144": {
+    "basicblocks": 28,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "vccache.cpp",
+    "fileloc": 175,
+    "instructions": 186,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 10,
+    "name": "collector",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 186
+  },
+  "145": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 277,
+    "instructions": 301,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 7,
+    "name": "request_to_vcbanks",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 301
+  },
+  "146": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 11,
+    "file": "core.cpp",
+    "fileloc": 116,
+    "instructions": 137,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_mi",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 137
+  },
+  "147": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 24,
+    "file": "vccache.cpp",
+    "fileloc": 43,
+    "instructions": 173,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "request_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 173
+  },
+  "148": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 277,
+    "instructions": 301,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 7,
+    "name": "request_to_vcbanks",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 301
+  },
+  "149": {
+    "basicblocks": 68,
+    "calls": "7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 97 97 97 97",
+    "control_depth": 0,
+    "def_use_depth": 6,
+    "file": "pe.cpp",
+    "fileloc": 208,
+    "instructions": 231,
+    "loads": {
+      "L": 15
+    },
+    "memory_accesses": 0,
+    "name": "merge_two_sub",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 4658
+  },
+  "15": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 14,
+    "file": "vccache.cpp",
+    "fileloc": 4,
+    "instructions": 126,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 15,
+    "name": "vcrequest_splitter",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 126
+  },
+  "150": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 47,
+    "file": "rcache.cpp",
+    "fileloc": 4,
+    "instructions": 435,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 9,
+    "name": "rrequest_splitter",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 435
+  },
+  "16": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 277,
+    "instructions": 301,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 7,
+    "name": "request_to_vcbanks",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 301
+  },
+  "17": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 19,
+    "file": "util.cpp",
+    "fileloc": 830,
+    "instructions": 299,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 12,
+    "name": "sub_final_merger",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 299
+  },
+  "18": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 13,
+    "file": "pe.cpp",
+    "fileloc": 90,
+    "instructions": 136,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "merge_controller",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 136
+  },
+  "19": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 146,
+    "instructions": 456,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "request_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 456
+  },
+  "2": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 14,
+    "file": "util.cpp",
+    "fileloc": 278,
+    "instructions": 144,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_vcresponse",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 144
+  },
+  "20": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 9,
+    "file": "util.cpp",
+    "fileloc": 901,
+    "instructions": 98,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "convert_pblock_to_mergeitem",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 98
+  },
+  "21": {
+    "basicblocks": 26,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 15,
+    "file": "vccache.cpp",
+    "fileloc": 74,
+    "instructions": 283,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 8,
+    "name": "schedule_access",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 283
+  },
+  "22": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 9,
+    "file": "util.cpp",
+    "fileloc": 901,
+    "instructions": 98,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "convert_pblock_to_mergeitem",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 98
+  },
+  "23": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 29,
+    "file": "rcache.cpp",
+    "fileloc": 150,
+    "instructions": 437,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "rcollector",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 437
+  },
+  "24": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 26,
+    "file": "util.cpp",
+    "fileloc": 152,
+    "instructions": 234,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "from_rcache_result_to_B_vcrequest",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 234
+  },
+  "25": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 47,
+    "file": "rcache.cpp",
+    "fileloc": 4,
+    "instructions": 435,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 9,
+    "name": "rrequest_splitter",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 435
+  },
+  "26": {
+    "basicblocks": 23,
+    "calls": "",
+    "control_depth": 11,
+    "def_use_depth": 14,
+    "file": "util.cpp",
+    "fileloc": 519,
+    "instructions": 204,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 14,
+    "name": "merge_2_to_1_vcresult",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 204
+  },
+  "27": {
+    "basicblocks": 39,
+    "calls": "",
+    "control_depth": 19,
+    "def_use_depth": 30,
+    "file": "util.cpp",
+    "fileloc": 193,
+    "instructions": 890,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 28,
+    "name": "merge_4_to_1_vcrequest",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 890
+  },
+  "28": {
+    "basicblocks": 6,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "util.cpp",
+    "fileloc": 932,
+    "instructions": 27,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 3,
+    "name": "write_C_rid_rlen",
+    "total_instructions": 27
+  },
+  "29": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "core.cpp",
+    "fileloc": 41,
+    "instructions": 114,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 6,
+    "name": "generate_data",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 114
+  },
+  "3": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 11,
+    "file": "core.cpp",
+    "fileloc": 116,
+    "instructions": 137,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_mi",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 137
+  },
+  "30": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 24,
+    "file": "vccache.cpp",
+    "fileloc": 43,
+    "instructions": 173,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "request_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 173
+  },
+  "31": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 68,
+    "file": "rcache.cpp",
+    "fileloc": 121,
+    "instructions": 895,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "rrequest_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 895
+  },
+  "32": {
+    "basicblocks": 23,
+    "calls": "",
+    "control_depth": 11,
+    "def_use_depth": 13,
+    "file": "util.cpp",
+    "fileloc": 701,
+    "instructions": 163,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 14,
+    "name": "merge_2_to_1_vcresponse",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 163
+  },
+  "33": {
+    "basicblocks": 28,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "vccache.cpp",
+    "fileloc": 175,
+    "instructions": 186,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 10,
+    "name": "collector",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 186
+  },
+  "34": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 47,
+    "file": "rcache.cpp",
+    "fileloc": 4,
+    "instructions": 435,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 9,
+    "name": "rrequest_splitter",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 435
+  },
+  "35": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 47,
+    "file": "rcache.cpp",
+    "fileloc": 35,
+    "instructions": 417,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "rrequest_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 417
+  },
+  "36": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 26,
+    "file": "util.cpp",
+    "fileloc": 152,
+    "instructions": 234,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "from_rcache_result_to_B_vcrequest",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 234
+  },
+  "37": {
+    "basicblocks": 39,
+    "calls": "",
+    "control_depth": 19,
+    "def_use_depth": 68,
+    "file": "util.cpp",
+    "fileloc": 4,
+    "instructions": 1645,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 28,
+    "name": "merge_4_to_1_rrequest",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 1645
+  },
+  "38": {
+    "basicblocks": 28,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "vccache.cpp",
+    "fileloc": 175,
+    "instructions": 186,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 10,
+    "name": "collector",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 186
+  },
+  "39": {
+    "basicblocks": 63,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 27,
+    "file": "rcache.cpp",
+    "fileloc": 260,
+    "instructions": 708,
+    "loads": {
+      "L": 34
+    },
+    "memory_accesses": 16,
+    "name": "rcache",
+    "stores": {
+      "L": 55
+    },
+    "total_instructions": 708
+  },
+  "4": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 9,
+    "file": "util.cpp",
+    "fileloc": 901,
+    "instructions": 98,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "convert_pblock_to_mergeitem",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 98
+  },
+  "40": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 11,
+    "file": "core.cpp",
+    "fileloc": 116,
+    "instructions": 137,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_mi",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 137
+  },
+  "41": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 24,
+    "file": "vccache.cpp",
+    "fileloc": 43,
+    "instructions": 173,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "request_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 173
+  },
+  "42": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 18,
+    "file": "pe.cpp",
+    "fileloc": 3,
+    "instructions": 259,
+    "loads": {
+      "L": 6
+    },
+    "memory_accesses": 18,
+    "name": "pe",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 259
+  },
+  "43": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 19,
+    "file": "util.cpp",
+    "fileloc": 756,
+    "instructions": 302,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 12,
+    "name": "final_merger",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 302
+  },
+  "44": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 277,
+    "instructions": 301,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 7,
+    "name": "request_to_vcbanks",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 301
+  },
+  "45": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "core.cpp",
+    "fileloc": 41,
+    "instructions": 114,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 6,
+    "name": "generate_data",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 114
+  },
+  "46": {
+    "basicblocks": 39,
+    "calls": "",
+    "control_depth": 19,
+    "def_use_depth": 30,
+    "file": "util.cpp",
+    "fileloc": 193,
+    "instructions": 890,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 28,
+    "name": "merge_4_to_1_vcrequest",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 890
+  },
+  "47": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 29,
+    "file": "rcache.cpp",
+    "fileloc": 150,
+    "instructions": 437,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "rcollector",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 437
+  },
+  "48": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 29,
+    "file": "rcache.cpp",
+    "fileloc": 150,
+    "instructions": 437,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "rcollector",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 437
+  },
+  "49": {
+    "basicblocks": 68,
+    "calls": "7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 97 97 97 97",
+    "control_depth": 0,
+    "def_use_depth": 6,
+    "file": "pe.cpp",
+    "fileloc": 208,
+    "instructions": 231,
+    "loads": {
+      "L": 15
+    },
+    "memory_accesses": 0,
+    "name": "merge_two_sub",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 4658
+  },
+  "5": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 16,
+    "file": "util.cpp",
+    "fileloc": 88,
+    "instructions": 247,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_rresponse",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 247
+  },
+  "50": {
+    "basicblocks": 1,
+    "calls": "34 35 69 31 55",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "rcache.cpp",
+    "fileloc": 193,
+    "instructions": 26,
+    "memory_accesses": 0,
+    "name": "rcrequest_manager",
+    "total_instructions": 2729
+  },
+  "51": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 7,
+    "file": "util.cpp",
+    "fileloc": 345,
+    "instructions": 61,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_vcresult",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 61
+  },
+  "52": {
+    "basicblocks": 1,
+    "calls": "150 61 9 115 47",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "rcache.cpp",
+    "fileloc": 193,
+    "instructions": 26,
+    "memory_accesses": 0,
+    "name": "rcrequest_manager",
+    "total_instructions": 2729
+  },
+  "53": {
+    "basicblocks": 102,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 24,
+    "file": "vccache.cpp",
+    "fileloc": 320,
+    "instructions": 748,
+    "loads": {
+      "L": 36
+    },
+    "memory_accesses": 16,
+    "name": "vcache",
+    "stores": {
+      "L": 83
+    },
+    "total_instructions": 748
+  },
+  "54": {
+    "basicblocks": 1,
+    "calls": "93 149",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "pe.cpp",
+    "fileloc": 346,
+    "instructions": 8,
+    "memory_accesses": 0,
+    "name": "merger",
+    "total_instructions": 4802
+  },
+  "55": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 29,
+    "file": "rcache.cpp",
+    "fileloc": 150,
+    "instructions": 437,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "rcollector",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 437
+  },
+  "56": {
+    "basicblocks": 21,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 15,
+    "file": "util.cpp",
+    "fileloc": 659,
+    "instructions": 325,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 20,
+    "name": "merge_4_to_1_rresponse",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 325
+  },
+  "57": {
+    "basicblocks": 26,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 15,
+    "file": "vccache.cpp",
+    "fileloc": 74,
+    "instructions": 283,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 8,
+    "name": "schedule_access",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 283
+  },
+  "58": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 18,
+    "file": "pe.cpp",
+    "fileloc": 3,
+    "instructions": 259,
+    "loads": {
+      "L": 6
+    },
+    "memory_accesses": 18,
+    "name": "pe",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 259
+  },
+  "59": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 24,
+    "file": "vccache.cpp",
+    "fileloc": 43,
+    "instructions": 173,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "request_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 173
+  },
+  "6": {
+    "basicblocks": 26,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 15,
+    "file": "vccache.cpp",
+    "fileloc": 74,
+    "instructions": 283,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 8,
+    "name": "schedule_access",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 283
+  },
+  "60": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 277,
+    "instructions": 301,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 7,
+    "name": "request_to_vcbanks",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 301
+  },
+  "61": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 47,
+    "file": "rcache.cpp",
+    "fileloc": 35,
+    "instructions": 417,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "rrequest_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 417
+  },
+  "62": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 14,
+    "file": "util.cpp",
+    "fileloc": 278,
+    "instructions": 144,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_vcresponse",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 144
+  },
+  "63": {
+    "basicblocks": 68,
+    "calls": "7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 97 97 97 97",
+    "control_depth": 0,
+    "def_use_depth": 6,
+    "file": "pe.cpp",
+    "fileloc": 208,
+    "instructions": 231,
+    "loads": {
+      "L": 15
+    },
+    "memory_accesses": 0,
+    "name": "merge_two_sub",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 4658
+  },
+  "64": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 26,
+    "file": "util.cpp",
+    "fileloc": 152,
+    "instructions": 234,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "from_rcache_result_to_B_vcrequest",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 234
+  },
+  "65": {
+    "basicblocks": 28,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "vccache.cpp",
+    "fileloc": 175,
+    "instructions": 186,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 10,
+    "name": "collector",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 186
+  },
+  "66": {
+    "basicblocks": 102,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 24,
+    "file": "vccache.cpp",
+    "fileloc": 320,
+    "instructions": 748,
+    "loads": {
+      "L": 36
+    },
+    "memory_accesses": 16,
+    "name": "vcache",
+    "stores": {
+      "L": 83
+    },
+    "total_instructions": 748
+  },
+  "67": {
+    "basicblocks": 1,
+    "calls": "99 87 141 79 23",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "rcache.cpp",
+    "fileloc": 193,
+    "instructions": 26,
+    "memory_accesses": 0,
+    "name": "rcrequest_manager",
+    "total_instructions": 2729
+  },
+  "68": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 7,
+    "file": "util.cpp",
+    "fileloc": 345,
+    "instructions": 61,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_vcresult",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 61
+  },
+  "69": {
+    "basicblocks": 18,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 29,
+    "file": "rcache.cpp",
+    "fileloc": 62,
+    "instructions": 519,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 2,
+    "name": "rschedule_access",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 519
+  },
+  "7": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 17,
+    "file": "pe.cpp",
+    "fileloc": 138,
+    "instructions": 201,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 12,
+    "name": "_merge_temp",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 201
+  },
+  "70": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 146,
+    "instructions": 456,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "request_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 456
+  },
+  "71": {
+    "basicblocks": 21,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 8,
+    "file": "core.cpp",
+    "fileloc": 74,
+    "instructions": 144,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 20,
+    "name": "merge_4_to_1_mi",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 144
+  },
+  "72": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 16,
+    "file": "util.cpp",
+    "fileloc": 88,
+    "instructions": 247,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_rresponse",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 247
+  },
+  "73": {
+    "basicblocks": 18,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 29,
+    "file": "rcache.cpp",
+    "fileloc": 62,
+    "instructions": 519,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 2,
+    "name": "rschedule_access",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 519
+  },
+  "74": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "core.cpp",
+    "fileloc": 41,
+    "instructions": 114,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 6,
+    "name": "generate_data",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 114
+  },
+  "75": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 16,
+    "file": "util.cpp",
+    "fileloc": 88,
+    "instructions": 247,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_rresponse",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 247
+  },
+  "76": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 18,
+    "file": "pe.cpp",
+    "fileloc": 3,
+    "instructions": 259,
+    "loads": {
+      "L": 6
+    },
+    "memory_accesses": 18,
+    "name": "pe",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 259
+  },
+  "77": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 18,
+    "file": "pe.cpp",
+    "fileloc": 3,
+    "instructions": 259,
+    "loads": {
+      "L": 6
+    },
+    "memory_accesses": 18,
+    "name": "pe",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 259
+  },
+  "78": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 277,
+    "instructions": 301,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 7,
+    "name": "request_to_vcbanks",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 301
+  },
+  "79": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 68,
+    "file": "rcache.cpp",
+    "fileloc": 121,
+    "instructions": 895,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "rrequest_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 895
+  },
+  "8": {
+    "basicblocks": 26,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 15,
+    "file": "vccache.cpp",
+    "fileloc": 74,
+    "instructions": 283,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 8,
+    "name": "schedule_access",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 283
+  },
+  "80": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 68,
+    "file": "rcache.cpp",
+    "fileloc": 121,
+    "instructions": 895,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "rrequest_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 895
+  },
+  "81": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 14,
+    "file": "vccache.cpp",
+    "fileloc": 4,
+    "instructions": 126,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 15,
+    "name": "vcrequest_splitter",
+    "stores": {
+      "L": 12
+    },
+    "total_instructions": 126
+  },
+  "82": {
+    "basicblocks": 1,
+    "calls": "25 10 73 80 48",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "rcache.cpp",
+    "fileloc": 193,
+    "instructions": 26,
+    "memory_accesses": 0,
+    "name": "rcrequest_manager",
+    "total_instructions": 2729
+  },
+  "83": {
+    "basicblocks": 26,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 15,
+    "file": "vccache.cpp",
+    "fileloc": 74,
+    "instructions": 283,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 8,
+    "name": "schedule_access",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 283
+  },
+  "84": {
+    "basicblocks": 1,
+    "calls": "18 63",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "pe.cpp",
+    "fileloc": 346,
+    "instructions": 8,
+    "memory_accesses": 0,
+    "name": "merger",
+    "total_instructions": 4802
+  },
+  "85": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 9,
+    "file": "util.cpp",
+    "fileloc": 901,
+    "instructions": 98,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "convert_pblock_to_mergeitem",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 98
+  },
+  "86": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 24,
+    "file": "vccache.cpp",
+    "fileloc": 43,
+    "instructions": 173,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "request_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 173
+  },
+  "87": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 47,
+    "file": "rcache.cpp",
+    "fileloc": 35,
+    "instructions": 417,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 5,
+    "name": "rrequest_manager",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 417
+  },
+  "88": {
+    "basicblocks": 1,
+    "calls": "107 59 1 138 8 70 128 33 144",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "vccache.cpp",
+    "fileloc": 248,
+    "instructions": 48,
+    "memory_accesses": 0,
+    "name": "vcrequest_manager",
+    "total_instructions": 2370
+  },
+  "89": {
+    "basicblocks": 21,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 8,
+    "file": "core.cpp",
+    "fileloc": 74,
+    "instructions": 144,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 20,
+    "name": "merge_4_to_1_mi",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 144
+  },
+  "9": {
+    "basicblocks": 18,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 29,
+    "file": "rcache.cpp",
+    "fileloc": 62,
+    "instructions": 519,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 2,
+    "name": "rschedule_access",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 519
+  },
+  "90": {
+    "basicblocks": 39,
+    "calls": "",
+    "control_depth": 19,
+    "def_use_depth": 30,
+    "file": "util.cpp",
+    "fileloc": 193,
+    "instructions": 890,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 28,
+    "name": "merge_4_to_1_vcrequest",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 890
+  },
+  "91": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 16,
+    "file": "util.cpp",
+    "fileloc": 88,
+    "instructions": 247,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 11,
+    "name": "distributer_rresponse",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 247
+  },
+  "92": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "core.cpp",
+    "fileloc": 41,
+    "instructions": 114,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 6,
+    "name": "generate_data",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 114
+  },
+  "93": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 13,
+    "file": "pe.cpp",
+    "fileloc": 90,
+    "instructions": 136,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "merge_controller",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 136
+  },
+  "94": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 30,
+    "file": "vccache.cpp",
+    "fileloc": 146,
+    "instructions": 456,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "request_merger",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 456
+  },
+  "95": {
+    "basicblocks": 28,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 10,
+    "file": "vccache.cpp",
+    "fileloc": 175,
+    "instructions": 186,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 10,
+    "name": "collector",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 186
+  },
+  "96": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 13,
+    "file": "pe.cpp",
+    "fileloc": 90,
+    "instructions": 136,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "merge_controller",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 136
+  },
+  "97": {
+    "basicblocks": 1,
+    "calls": "143 98",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "pe.cpp",
+    "fileloc": 195,
+    "instructions": 8,
+    "memory_accesses": 0,
+    "name": "two_merger",
+    "total_instructions": 353
+  },
+  "98": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 17,
+    "file": "pe.cpp",
+    "fileloc": 138,
+    "instructions": 183,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 12,
+    "name": "_merge_temp",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 183
+  },
+  "99": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 47,
+    "file": "rcache.cpp",
+    "fileloc": 4,
+    "instructions": 435,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 9,
+    "name": "rrequest_splitter",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 435
+  }
+}

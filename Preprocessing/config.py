@@ -1,1 +1,1 @@
-bench_path = "/home/lsq/Downloads/sparse_mm"
+bench_path = "/home/huz/project/SpMM_TCAD/sparse_mm"

@@ -1,0 +1,18 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /home/huz/project/SpMM_TCAD/test/_x/reports/spmm
+	Log files: /home/huz/project/SpMM_TCAD/test/_x/logs/spmm
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/huz/project/SpMM_TCAD/test/spmm.xo.compile_summary, at Fri Apr 17 15:07:21 2026
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/huz/project/SpMM_TCAD/test/_x/reports/spmm/v++_compile_spmm_guidance.html', at Fri Apr 17 15:07:21 2026
+INFO: [v++ 60-895]   Target platform: /home/huz/software/2025.2/Vitis/base_platforms/xilinx_zcu106_base_202110_1/xilinx_zcu106_base_202110_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/home/huz/software/2025.2/Vitis/base_platforms/xilinx_zcu106_base_202110_1/hw/zcu106vcu_base.xsa'
+CRITICAL WARNING: [v++ 60-1299] The specified platform is not supported. Platform 'xilinx_zcu106_base_202110_1.xpfm' (version 2019.2) is a PRE_SYNTH platform and is not supported by the current tool version (2025.2). By policy, platforms are only supported on the same tool release on which the platform was created.
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_zcu106_base_202110_1
+INFO: [v++ 60-242] Creating kernel: 'spmm'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: spmm Log file: /home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/vitis_hls.log :
+ERROR: [v++ 214-219] Vitis kernel mode requires that all s_axilite ports must be bundled into one bundle. The following ports ('arnum,atnum,brnum,btnum,B_rcsr_base,B_val_base,B_cid_base,r1acc,r1hit,r2acc,r2hit,r3acc,r3hit,r4acc,r4hit,r5acc,r5hit,r6acc,r6hit,r7acc,r7hit,r8acc,r8hit,vc1acc,vc1hit,vc2acc,vc2hit,vc3acc,vc3hit,vc4acc,vc4hit,vc5acc,vc5hit,vc6acc,vc6hit,vc7acc,vc7hit,vc8acc,vc8hit,fnum,workload_counter1,workload_counter2,workload_counter3,workload_counter4,return' and 'A_rcsr,A_cid,A_val,B_rcsr1,B_rcsr2,B_rcsr3,B_rcsr4,B_val1,B_cid1,B_val2,B_cid2,B_val3,B_cid3,B_val4,B_cid4,B_val_port1,B_cid_port1,B_val_port2,B_cid_port2,B_val_port3,B_cid_port3,B_val_port4,B_cid_port4,C_rcsr,C_cid,C_val', in function 'spmm(unsigned int*, unsigned int*, float*, unsigned int, unsigned int, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, unsigned int, unsigned int, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, unsigned int*, unsigned int*, float*, unsigned int, unsigned int, unsigned int, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*)') have different bundle names: 'control' and 'control_r'. Consider removing the bundle names on these ports. (core.cpp:168:0)
+ERROR: [v++ 200-1715] Encountered problem during source synthesis
+ERROR: [v++ 60-300] Failed to build kernel(ip) spmm, see log for details: /home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/vitis_hls.log
+ERROR: [v++ 60-599] Kernel compilation failed to complete
+ERROR: [v++ 60-592] Failed to finish compilation

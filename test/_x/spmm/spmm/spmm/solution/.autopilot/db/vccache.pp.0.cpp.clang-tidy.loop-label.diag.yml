@@ -1,0 +1,328 @@
+---
+MainSourceFile:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        '/home/huz/software/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          290941
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        '/home/huz/software/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          291412
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        '/home/huz/software/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          291884
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        '/home/huz/software/2025.2/Vitis/common/technology/autopilot/etc/ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          637024
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_12_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      12
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2359218
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_12_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_48_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      48
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2360078
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_48_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_87_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      87
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2361115
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_87_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_92_2:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      92
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2361270
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_92_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_104_3:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      104
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2361664
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_104_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_111_4:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      111
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2361839
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_111_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_153_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      153
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2362789
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_153_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_184_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      184
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2363503
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_184_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_192_2:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      192
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2363787
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_192_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_198_3:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      198
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2364078
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_198_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_211_4:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      211
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2364572
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_211_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_225_5:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      225
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2365058
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_225_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_287_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      287
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2366974
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_287_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_368_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      368
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2369080
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_368_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_370_2:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      370
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2369136
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_370_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_382_3:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      382
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2369334
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_382_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_397_4:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      397
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2369692
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_397_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_472_5:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      472
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2371453
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_472_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_639_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      639
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2376609
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_639_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_641_2:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      641
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2376665
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_641_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_653_3:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      653
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2376863
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_653_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_668_4:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      668
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2377221
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_668_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_743_5:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/vccache.cpp'
+      FileOffset:      743
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/vccache.pp.0.cpp'
+          Offset:          2378982
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_743_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+...

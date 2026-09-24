@@ -1,0 +1,552 @@
+<pragmas>
+<pragma file="vccache.cpp" line="288" pragmaType="pipeline" parentfunction="request_to_vcbanks" off="0" ii="1" rewind="0" style=""/>
+<pragma file="vccache.cpp" line="383" pragmaType="pipeline" parentfunction="vcache" off="1" ii="0" rewind="0" style=""/>
+<pragma file="vccache.cpp" line="398" pragmaType="unroll" parentfunction="vcache" factor="-1" skip_exit_check="0"/>
+<pragma file="vccache.cpp" line="473" pragmaType="unroll" parentfunction="vcache" factor="-1" skip_exit_check="0"/>
+<pragma file="vccache.cpp" line="369" pragmaType="pipeline" parentfunction="vcache" off="0" ii="1" rewind="0" style=""/>
+<pragma file="vccache.cpp" line="371" pragmaType="unroll" parentfunction="vcache" factor="-1" skip_exit_check="0"/>
+<pragma file="vccache.cpp" line="325" pragmaType="bind_storage" parentfunction="vcache" op="666" impl="20" latency="-1" variable="_data"/>
+<pragma file="vccache.cpp" line="328" pragmaType="bind_storage" parentfunction="vcache" op="666" impl="19" latency="-1" variable="_tag"/>
+<pragma file="vccache.cpp" line="329" pragmaType="array_partition" parentfunction="vcache" dim="2" factor="0" mode="complete" dynamic="0" variable="_tag"/>
+<pragma file="vccache.cpp" line="335" pragmaType="bind_storage" parentfunction="vcache" op="666" impl="30" latency="-1" variable="_lru_count_1"/>
+<pragma file="vccache.cpp" line="337" pragmaType="bind_storage" parentfunction="vcache" op="666" impl="30" latency="-1" variable="_lru_count_2"/>
+<pragma file="vccache.cpp" line="339" pragmaType="bind_storage" parentfunction="vcache" op="666" impl="30" latency="-1" variable="_lru_count_3"/>
+<pragma file="vccache.cpp" line="341" pragmaType="bind_storage" parentfunction="vcache" op="666" impl="30" latency="-1" variable="_lru_count_4"/>
+<pragma file="vccache.cpp" line="343" pragmaType="bind_storage" parentfunction="vcache" op="666" impl="30" latency="-1" variable="_lru_count_5"/>
+<pragma file="vccache.cpp" line="345" pragmaType="bind_storage" parentfunction="vcache" op="666" impl="30" latency="-1" variable="_lru_count_6"/>
+<pragma file="vccache.cpp" line="347" pragmaType="bind_storage" parentfunction="vcache" op="666" impl="30" latency="-1" variable="_lru_count_7"/>
+<pragma file="vccache.cpp" line="349" pragmaType="bind_storage" parentfunction="vcache" op="666" impl="30" latency="-1" variable="_lru_count_8"/>
+<pragma file="vccache.cpp" line="365" pragmaType="array_partition" parentfunction="vcache" dim="1" factor="0" mode="complete" dynamic="0" variable="temp_lru"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1024, false>::operator()(int, int)" off="0" region="0" recursive="0"/>
+<pragma file="vccache.cpp" line="13" pragmaType="pipeline" parentfunction="vcrequest_splitter" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<2, false>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi2ELb0EEC2EDU2_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<3, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<3>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<2>::ap_uint(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, false>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<5>::ap_uint(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi3ELb0EEC2EDU3_" off="0" region="0" recursive="0"/>
+<pragma file="vccache.cpp" line="49" pragmaType="pipeline" parentfunction="request_manager" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi5ELb0EEC2EDU5_" off="0" region="0" recursive="0"/>
+<pragma file="vccache.cpp" line="252" pragmaType="dataflow" parentfunction="vcrequest_manager" disable_start_propagation="1"/>
+<pragma file="vccache.cpp" line="257" pragmaType="stream" parentfunction="vcrequest_manager" depth="8" type="fifo" variable="voff"/>
+<pragma file="vccache.cpp" line="258" pragmaType="stream" parentfunction="vcrequest_manager" depth="8" type="fifo" variable="coff"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<2, false>::operator==<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<1024, false>::ap_range_ref(ap_int_base<1024, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="vccache.cpp" line="154" pragmaType="pipeline" parentfunction="request_merger" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<3>::ap_uint(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<3, false>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<internal_control, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator==<2, false>(ap_int_base<2, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="vccache.cpp" line="88" pragmaType="pipeline" parentfunction="schedule_access" off="1" ii="0" rewind="0" style=""/>
+<pragma file="vccache.cpp" line="93" pragmaType="pipeline" parentfunction="schedule_access" off="1" ii="0" rewind="0" style=""/>
+<pragma file="vccache.cpp" line="112" pragmaType="pipeline" parentfunction="schedule_access" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="vccache.cpp" line="185" pragmaType="pipeline" parentfunction="collector" off="1" ii="0" rewind="0" style=""/>
+<pragma file="vccache.cpp" line="193" pragmaType="pipeline" parentfunction="collector" off="1" ii="0" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator==<3, false>(ap_int_base<3, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<2>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<3>::ap_uint<2>(ap_uint<2> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, false>::ap_int_base<1024, false>(ap_range_ref<1024, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<128>::ap_uint<1024, false>(ap_range_ref<1024, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<21>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<21>::ap_uint(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<21, false>::operator==<21, false>(ap_int_base<21, false> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator!=<3, false>(ap_int_base<3, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<3, false>::RType<($_0)32, true>::mult operator*<3, false>(ap_int_base<3, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, true>::RType<($_0)32, true>::plus operator+<35, true>(ap_int_base<35, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<1024, false> ap_int_base<1024, false>::operator()<36, true, 35, true>(ap_int_base<36, true> const&, ap_int_base<35, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, false>::operator++(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<5>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator<<5, false>(ap_int_base<5, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, false>::RType<($_0)32, true>::div operator/<5, false>(ap_int_base<5, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator==<6, true>(ap_int_base<6, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, false>::RType<($_0)32, true>::mod operator%<5, false>(ap_int_base<5, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="util.cpp" line="123" pragmaType="inline" parentfunction="find_eviction" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1024>::ap_uint<128>(ap_uint<128> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1024, false>::ap_int_base<128, false>(ap_int_base<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, false>& ap_int_base<5, false>::operator+=<1, false>(ap_int_base<1, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1024ELb0EEC2EDU1024_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<5>::ap_uint<5, false>(ap_int_base<5, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1ELb0EEC2EDU1_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, false>::RType<32, true>::mod operator%<5, false, 32, true>(ap_int_base<5, false> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<6, true>::operator==<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<5, false>::RType<32, true>::div operator/<5, false, 32, true>(ap_int_base<5, false> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<6, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<6>::ap_int<6, true>(ap_int_base<6, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi6ELb1EEC2EDB6_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<5, false>::operator<<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_int" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, true>::RType<32, true>::plus operator+<35, true, 32, true>(ap_int_base<35, true> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<36, true>::ap_int_base<35, true>(ap_int_base<35, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<36, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<36, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<36>::ap_int<36, true>(ap_int_base<36, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi36ELb1EEC2EDB36_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<3, false>::RType<32, true>::mult operator*<3, false, 32, true>(ap_int_base<3, false> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, true>::ap_int_base<3, false>(ap_int_base<3, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<35, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<35>::ap_int<35, true>(ap_int_base<35, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi35ELb1EEC2EDB35_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<3, false>::ap_int_base<2, false>(ap_int_base<2, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<2, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<3, false>::operator==<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<3, false>::operator!=<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<21, false>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi21ELb0EEC2EDU21_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<21, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<160, false>& ap_range_ref<160, false>::operator=<128, false>(ap_int_base<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="vccache.cpp" line="654" pragmaType="pipeline" parentfunction="ccache" off="1" ii="0" rewind="0" style=""/>
+<pragma file="vccache.cpp" line="669" pragmaType="unroll" parentfunction="ccache" factor="-1" skip_exit_check="0"/>
+<pragma file="vccache.cpp" line="744" pragmaType="unroll" parentfunction="ccache" factor="-1" skip_exit_check="0"/>
+<pragma file="vccache.cpp" line="640" pragmaType="pipeline" parentfunction="ccache" off="0" ii="1" rewind="0" style=""/>
+<pragma file="vccache.cpp" line="642" pragmaType="unroll" parentfunction="ccache" factor="-1" skip_exit_check="0"/>
+<pragma file="vccache.cpp" line="596" pragmaType="bind_storage" parentfunction="ccache" op="666" impl="20" latency="-1" variable="_data"/>
+<pragma file="vccache.cpp" line="599" pragmaType="bind_storage" parentfunction="ccache" op="666" impl="19" latency="-1" variable="_tag"/>
+<pragma file="vccache.cpp" line="600" pragmaType="array_partition" parentfunction="ccache" dim="2" factor="0" mode="complete" dynamic="0" variable="_tag"/>
+<pragma file="vccache.cpp" line="606" pragmaType="bind_storage" parentfunction="ccache" op="666" impl="30" latency="-1" variable="_lru_count_1"/>
+<pragma file="vccache.cpp" line="608" pragmaType="bind_storage" parentfunction="ccache" op="666" impl="30" latency="-1" variable="_lru_count_2"/>
+<pragma file="vccache.cpp" line="610" pragmaType="bind_storage" parentfunction="ccache" op="666" impl="30" latency="-1" variable="_lru_count_3"/>
+<pragma file="vccache.cpp" line="612" pragmaType="bind_storage" parentfunction="ccache" op="666" impl="30" latency="-1" variable="_lru_count_4"/>
+<pragma file="vccache.cpp" line="614" pragmaType="bind_storage" parentfunction="ccache" op="666" impl="30" latency="-1" variable="_lru_count_5"/>
+<pragma file="vccache.cpp" line="616" pragmaType="bind_storage" parentfunction="ccache" op="666" impl="30" latency="-1" variable="_lru_count_6"/>
+<pragma file="vccache.cpp" line="618" pragmaType="bind_storage" parentfunction="ccache" op="666" impl="30" latency="-1" variable="_lru_count_7"/>
+<pragma file="vccache.cpp" line="620" pragmaType="bind_storage" parentfunction="ccache" op="666" impl="30" latency="-1" variable="_lru_count_8"/>
+<pragma file="vccache.cpp" line="636" pragmaType="array_partition" parentfunction="ccache" dim="1" factor="0" mode="complete" dynamic="0" variable="temp_lru"/>
+<pragma file="util.cpp" line="25" pragmaType="pipeline" parentfunction="merge_4_to_1_rrequest" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="util.cpp" line="93" pragmaType="pipeline" parentfunction="distributer_rresponse" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="util.cpp" line="159" pragmaType="pipeline" parentfunction="from_rcache_result_to_B_vcrequest" off="1" ii="0" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="full" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="util.cpp" line="215" pragmaType="pipeline" parentfunction="merge_4_to_1_vcrequest" off="0" ii="1" rewind="0" style=""/>
+<pragma file="util.cpp" line="283" pragmaType="pipeline" parentfunction="distributer_vcresponse" off="0" ii="1" rewind="0" style=""/>
+<pragma file="util.cpp" line="350" pragmaType="pipeline" parentfunction="distributer_vcresult" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="util.cpp" line="534" pragmaType="pipeline" parentfunction="merge_2_to_1_vcresult" off="0" ii="1" rewind="0" style=""/>
+<pragma file="util.cpp" line="670" pragmaType="pipeline" parentfunction="merge_4_to_1_rresponse" off="0" ii="1" rewind="0" style=""/>
+<pragma file="util.cpp" line="716" pragmaType="pipeline" parentfunction="merge_2_to_1_vcresponse" off="0" ii="1" rewind="0" style=""/>
+<pragma file="util.cpp" line="761" pragmaType="pipeline" parentfunction="final_merger" off="1" ii="0" rewind="0" style=""/>
+<pragma file="util.cpp" line="774" pragmaType="pipeline" parentfunction="final_merger" off="0" ii="1" rewind="0" style=""/>
+<pragma file="util.cpp" line="803" pragmaType="bind_op" parentfunction="final_merger" op="9" impl="12" latency="-1"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="util.cpp" line="837" pragmaType="pipeline" parentfunction="sub_final_merger" off="1" ii="0" rewind="0" style=""/>
+<pragma file="util.cpp" line="848" pragmaType="pipeline" parentfunction="sub_final_merger" off="0" ii="1" rewind="0" style=""/>
+<pragma file="util.cpp" line="875" pragmaType="bind_op" parentfunction="sub_final_merger" op="9" impl="12" latency="-1"/>
+<pragma file="util.cpp" line="906" pragmaType="pipeline" parentfunction="convert_pblock_to_mergeitem" off="1" ii="0" rewind="0" style=""/>
+<pragma file="util.cpp" line="912" pragmaType="pipeline" parentfunction="convert_pblock_to_mergeitem" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<3, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool operator<=<3, false>(unsigned int, ap_int_base<3, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, false>::operator()(int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint<128, false>(ap_range_ref<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base<128, false>(ap_range_ref<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_uint64" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>::ap_range_ref(ap_int_base<128, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="bool ap_int_base<32, false>::operator<=<3, false>(ap_int_base<3, false> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="530" pragmaType="inline" parentfunction="ssdm_int<32, false>::ssdm_int(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="util.cpp" line="937" pragmaType="pipeline" parentfunction="write_C_rid_rlen" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="util.cpp" line="955" pragmaType="pipeline" parentfunction="write_C_val_cid" off="1" ii="0" rewind="0" style=""/>
+<pragma file="util.cpp" line="960" pragmaType="pipeline" parentfunction="write_C_val_cid" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="rcache.cpp" line="10" pragmaType="pipeline" parentfunction="rrequest_splitter" off="0" ii="1" rewind="0" style=""/>
+<pragma file="rcache.cpp" line="41" pragmaType="pipeline" parentfunction="rrequest_manager" off="0" ii="1" rewind="0" style=""/>
+<pragma file="rcache.cpp" line="74" pragmaType="pipeline" parentfunction="rschedule_access" off="1" ii="0" rewind="0" style=""/>
+<pragma file="rcache.cpp" line="80" pragmaType="pipeline" parentfunction="rschedule_access" off="1" ii="0" rewind="0" style=""/>
+<pragma file="rcache.cpp" line="88" pragmaType="pipeline" parentfunction="rschedule_access" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<160, false>::operator()(int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<160, false>& ap_range_ref<160, false>::operator=<128, false>(ap_range_ref<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, false>::ap_int_base<128, false>(ap_range_ref<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<160, false>::ap_int_base<128, false>(ap_int_base<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi160ELb0EEC2EDU160_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<160, false>::ap_range_ref(ap_int_base<160, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="rcache.cpp" line="129" pragmaType="pipeline" parentfunction="rrequest_merger" off="0" ii="1" rewind="0" style=""/>
+<pragma file="rcache.cpp" line="158" pragmaType="pipeline" parentfunction="rcollector" off="1" ii="0" rewind="0" style=""/>
+<pragma file="rcache.cpp" line="164" pragmaType="pipeline" parentfunction="rcollector" off="1" ii="0" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<160, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<160>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<160, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<rcache_request, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_uint64" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="rcache.cpp" line="195" pragmaType="dataflow" parentfunction="rcrequest_manager" disable_start_propagation="1"/>
+<pragma file="rcache.cpp" line="198" pragmaType="stream" parentfunction="rcrequest_manager" depth="16" type="fifo" variable="rcollec"/>
+<pragma file="rcache.cpp" line="199" pragmaType="stream" parentfunction="rcrequest_manager" depth="16" type="fifo" variable="rscheduler"/>
+<pragma file="rcache.cpp" line="203" pragmaType="stream" parentfunction="rcrequest_manager" depth="8" type="fifo" variable="roff"/>
+<pragma file="rcache.cpp" line="226" pragmaType="pipeline" parentfunction="request_to_rbanks" off="0" ii="1" rewind="0" style=""/>
+<pragma file="rcache.cpp" line="320" pragmaType="pipeline" parentfunction="rcache" off="1" ii="0" rewind="0" style=""/>
+<pragma file="rcache.cpp" line="334" pragmaType="unroll" parentfunction="rcache" factor="-1" skip_exit_check="0"/>
+<pragma file="rcache.cpp" line="393" pragmaType="unroll" parentfunction="rcache" factor="-1" skip_exit_check="0"/>
+<pragma file="rcache.cpp" line="305" pragmaType="pipeline" parentfunction="rcache" off="0" ii="1" rewind="0" style=""/>
+<pragma file="rcache.cpp" line="307" pragmaType="unroll" parentfunction="rcache" factor="-1" skip_exit_check="0"/>
+<pragma file="rcache.cpp" line="264" pragmaType="bind_storage" parentfunction="rcache" op="666" impl="18" latency="-1" variable="_data"/>
+<pragma file="rcache.cpp" line="267" pragmaType="bind_storage" parentfunction="rcache" op="666" impl="19" latency="-1" variable="_tag"/>
+<pragma file="rcache.cpp" line="268" pragmaType="array_partition" parentfunction="rcache" dim="2" factor="0" mode="complete" dynamic="0" variable="_tag"/>
+<pragma file="rcache.cpp" line="271" pragmaType="bind_storage" parentfunction="rcache" op="666" impl="30" latency="-1" variable="_lru_count_1"/>
+<pragma file="rcache.cpp" line="273" pragmaType="bind_storage" parentfunction="rcache" op="666" impl="30" latency="-1" variable="_lru_count_2"/>
+<pragma file="rcache.cpp" line="275" pragmaType="bind_storage" parentfunction="rcache" op="666" impl="30" latency="-1" variable="_lru_count_3"/>
+<pragma file="rcache.cpp" line="277" pragmaType="bind_storage" parentfunction="rcache" op="666" impl="30" latency="-1" variable="_lru_count_4"/>
+<pragma file="rcache.cpp" line="279" pragmaType="bind_storage" parentfunction="rcache" op="666" impl="30" latency="-1" variable="_lru_count_5"/>
+<pragma file="rcache.cpp" line="281" pragmaType="bind_storage" parentfunction="rcache" op="666" impl="30" latency="-1" variable="_lru_count_6"/>
+<pragma file="rcache.cpp" line="283" pragmaType="bind_storage" parentfunction="rcache" op="666" impl="30" latency="-1" variable="_lru_count_7"/>
+<pragma file="rcache.cpp" line="285" pragmaType="bind_storage" parentfunction="rcache" op="666" impl="30" latency="-1" variable="_lru_count_8"/>
+<pragma file="rcache.cpp" line="301" pragmaType="array_partition" parentfunction="rcache" dim="1" factor="0" mode="complete" dynamic="0" variable="temp_lru"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::RType<($_0)32, true>::div operator/<32, false>(ap_int_base<32, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::RType<($_0)32, true>::mod operator%<33, true>(ap_int_base<33, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::RType<($_0)32, true>::div operator/<32, true>(ap_int_base<32, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::operator long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::RType<32, false>::arg1 operator>><32, false>(ap_int_base<32, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<21>::ap_uint<32>(ap_uint<32> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<21, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::RType<32, true>::div operator/<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi33ELb1EEC2EDB33_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::RType<32, true>::mod operator%<33, true, 32, true>(ap_int_base<33, true> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<32>::ap_int<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::RType<32, true>::div operator/<32, false, 32, true>(ap_int_base<32, false> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<128, false>& ap_range_ref<128, false>::operator=<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="pe.cpp" line="13" pragmaType="pipeline" parentfunction="pe" off="1" ii="0" rewind="0" style=""/>
+<pragma file="pe.cpp" line="30" pragmaType="pipeline" parentfunction="pe" off="0" ii="1" rewind="0" style=""/>
+<pragma file="pe.cpp" line="46" pragmaType="bind_op" parentfunction="pe" op="13" impl="12" latency="-1"/>
+<pragma file="pe.cpp" line="48" pragmaType="bind_op" parentfunction="pe" op="13" impl="12" latency="-1"/>
+<pragma file="pe.cpp" line="50" pragmaType="bind_op" parentfunction="pe" op="13" impl="12" latency="-1"/>
+<pragma file="pe.cpp" line="52" pragmaType="bind_op" parentfunction="pe" op="13" impl="12" latency="-1"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<3, false>::RType<3, false>::minus operator-<3, false, 3, false>(ap_int_base<3, false> const&, ap_int_base<3, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, true>::RType<($_0)32, true>::plus operator+<4, true>(ap_int_base<4, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, true>::RType<32, true>::plus operator+<4, true, 32, true>(ap_int_base<4, true> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base<4, true>(ap_int_base<4, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, true>::ap_int_base<3, false>(ap_int_base<3, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<4>::ap_int<4, true>(ap_int_base<4, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi4ELb1EEC2EDB4_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<128, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="software/2025.2/Vitis/common/technology/autopilot/etc/ap_common.h" line="530" pragmaType="inline" parentfunction="ssdm_int<128, false>::ssdm_int(unsigned __int128)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="pe.cpp" line="107" pragmaType="pipeline" parentfunction="merge_controller" off="1" ii="0" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="pe.cpp" line="151" pragmaType="pipeline" parentfunction="_merge_temp" off="0" ii="1" rewind="0" style=""/>
+<pragma file="pe.cpp" line="177" pragmaType="bind_op" parentfunction="_merge_temp" op="9" impl="12" latency="-1"/>
+<pragma file="pe.cpp" line="249" pragmaType="pipeline" parentfunction="merge_two_sub" off="1" ii="0" rewind="0" style=""/>
+<pragma file="pe.cpp" line="210" pragmaType="allocation" parentfunction="merge_two_sub" type="function" limit="1" instances="two_merger"/>
+<pragma file="pe.cpp" line="213" pragmaType="stream" parentfunction="merge_two_sub" depth="1000" type="fifo" variable="ping"/>
+<pragma file="pe.cpp" line="214" pragmaType="stream" parentfunction="merge_two_sub" depth="1000" type="fifo" variable="pong"/>
+<pragma file="pe.cpp" line="216" pragmaType="stream" parentfunction="merge_two_sub" depth="1000" type="fifo" variable="ping1"/>
+<pragma file="pe.cpp" line="217" pragmaType="stream" parentfunction="merge_two_sub" depth="1000" type="fifo" variable="pong1"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="pe.cpp" line="348" pragmaType="dataflow" parentfunction="merger" disable_start_propagation="0"/>
+<pragma file="pe.cpp" line="351" pragmaType="stream" parentfunction="merger" depth="8" type="fifo" variable="mresult"/>
+<pragma file="task_scheduler.h" line="14" pragmaType="pipeline" parentfunction="A_row_reader" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="task_scheduler.h" line="42" pragmaType="pipeline" parentfunction="A_element_reader" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="task_scheduler.h" line="69" pragmaType="pipeline" parentfunction="A_element_distributor" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="core.cpp" line="44" pragmaType="pipeline" parentfunction="generate_data" off="1" ii="0" rewind="0" style=""/>
+<pragma file="core.cpp" line="87" pragmaType="pipeline" parentfunction="merge_4_to_1_mi" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="empty" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="core.cpp" line="121" pragmaType="pipeline" parentfunction="distributer_mi" off="0" ii="1" rewind="0" style=""/>
+<pragma file="core.cpp" line="246" pragmaType="dataflow" parentfunction="spmm" disable_start_propagation="1"/>
+<pragma file="core.cpp" line="170" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r1acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="171" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r2acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="172" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r3acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="173" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r4acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="174" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r5acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="175" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r6acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="176" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r7acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="177" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r8acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="178" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r1hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="179" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r2hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="180" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r3hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="181" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r4hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="182" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r5hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="183" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r6hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="184" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r7hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="185" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="r8hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="186" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="fnum" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="187" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="workload_counter1" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="188" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="workload_counter2" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="189" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="workload_counter3" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="190" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="workload_counter4" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="192" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc1acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="193" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc1hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="194" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc2acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="195" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc2hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="196" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc3acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="197" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc3hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="198" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc4acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="199" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc4hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="200" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc5acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="201" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc5hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="202" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc6acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="203" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc6hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="204" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc7acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="205" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc7hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="206" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc8acc" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="207" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="vc8hit" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="209" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="A_rcsr" bundle="arcsr" offset="slave" name="" depth="13515" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="210" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="A_cid" bundle="acid" offset="slave" name="" depth="352762" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="211" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="A_val" bundle="aval" offset="slave" name="" depth="352762" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="212" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="C_rcsr" bundle="crcsr" offset="slave" name="" depth="13515" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="213" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="C_cid" bundle="ccid" offset="slave" name="" depth="2957530" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="214" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="C_val" bundle="cval" offset="slave" name="" depth="2957530" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="215" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_rcsr1" bundle="brcsr1" offset="slave" name="" depth="13515" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="216" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_rcsr2" bundle="brcsr2" offset="slave" name="" depth="13515" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="217" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_rcsr3" bundle="brcsr3" offset="slave" name="" depth="13515" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="218" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_rcsr4" bundle="brcsr4" offset="slave" name="" depth="13515" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="219" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_val_port1" bundle="bv1" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="220" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_cid_port1" bundle="bc1" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="221" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_val_port2" bundle="bv2" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="222" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_cid_port2" bundle="bc2" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="223" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_val_port3" bundle="bv3" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="224" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_cid_port3" bundle="bc3" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="225" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_val_port4" bundle="bv4" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="226" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_cid_port4" bundle="bc4" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="228" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_val1" bundle="bval1" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="229" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_cid1" bundle="bcid1" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="230" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_val2" bundle="bval2" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="231" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_cid2" bundle="bcid2" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="232" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_val3" bundle="bval3" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="233" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_cid3" bundle="bcid3" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="234" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_val4" bundle="bval4" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="235" pragmaType="interface" parentfunction="spmm" mode="m_axi" port="B_cid4" bundle="bcid4" offset="slave" name="" depth="88191" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="core.cpp" line="237" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="arnum" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="238" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="atnum" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="239" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="brnum" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="240" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="btnum" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="241" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="B_rcsr_base" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="242" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="B_val_base" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="243" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="B_cid_base" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="244" pragmaType="interface" parentfunction="spmm" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="core.cpp" line="280" pragmaType="stream" parentfunction="spmm" depth="4" type="fifo" variable="rrequest1"/>
+<pragma file="core.cpp" line="281" pragmaType="stream" parentfunction="spmm" depth="4" type="fifo" variable="rrequest2"/>
+<pragma file="core.cpp" line="282" pragmaType="stream" parentfunction="spmm" depth="4" type="fifo" variable="rrequest3"/>
+<pragma file="core.cpp" line="283" pragmaType="stream" parentfunction="spmm" depth="4" type="fifo" variable="rrequest4"/>
+<pragma file="core.cpp" line="284" pragmaType="stream" parentfunction="spmm" depth="4" type="fifo" variable="rrequestf"/>
+<pragma file="core.cpp" line="288" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="rresponse1"/>
+<pragma file="core.cpp" line="289" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="rresponse2"/>
+<pragma file="core.cpp" line="290" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="rresponse3"/>
+<pragma file="core.cpp" line="291" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="rresponse4"/>
+<pragma file="core.cpp" line="300" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="rcache_re_bank1"/>
+<pragma file="core.cpp" line="301" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="rcache_re_bank2"/>
+<pragma file="core.cpp" line="302" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="rcache_re_bank3"/>
+<pragma file="core.cpp" line="303" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="rcache_re_bank4"/>
+<pragma file="core.cpp" line="312" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="rcache_bank1_res"/>
+<pragma file="core.cpp" line="313" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="rcache_bank2_res"/>
+<pragma file="core.cpp" line="314" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="rcache_bank3_res"/>
+<pragma file="core.cpp" line="315" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="rcache_bank4_res"/>
+<pragma file="core.cpp" line="319" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="rcache_res_final"/>
+<pragma file="core.cpp" line="330" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="requests_f"/>
+<pragma file="core.cpp" line="333" pragmaType="stream" parentfunction="spmm" depth="64" type="fifo" variable="vccache_re_bank1"/>
+<pragma file="core.cpp" line="334" pragmaType="stream" parentfunction="spmm" depth="64" type="fifo" variable="vccache_re_bank2"/>
+<pragma file="core.cpp" line="335" pragmaType="stream" parentfunction="spmm" depth="64" type="fifo" variable="vccache_re_bank3"/>
+<pragma file="core.cpp" line="336" pragmaType="stream" parentfunction="spmm" depth="64" type="fifo" variable="vccache_re_bank4"/>
+<pragma file="core.cpp" line="342" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank1_pe1"/>
+<pragma file="core.cpp" line="343" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank1_pe2"/>
+<pragma file="core.cpp" line="344" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank1_pe3"/>
+<pragma file="core.cpp" line="345" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank1_pe4"/>
+<pragma file="core.cpp" line="346" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank1_pe5"/>
+<pragma file="core.cpp" line="347" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank1_pe6"/>
+<pragma file="core.cpp" line="348" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank1_pe7"/>
+<pragma file="core.cpp" line="349" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank1_pe8"/>
+<pragma file="core.cpp" line="350" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank2_pe1"/>
+<pragma file="core.cpp" line="351" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank2_pe2"/>
+<pragma file="core.cpp" line="352" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank2_pe3"/>
+<pragma file="core.cpp" line="353" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank2_pe4"/>
+<pragma file="core.cpp" line="354" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank2_pe5"/>
+<pragma file="core.cpp" line="355" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank2_pe6"/>
+<pragma file="core.cpp" line="356" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank2_pe7"/>
+<pragma file="core.cpp" line="357" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vccache_re_bank2_pe8"/>
+<pragma file="core.cpp" line="358" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank1_pe1"/>
+<pragma file="core.cpp" line="359" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank1_pe2"/>
+<pragma file="core.cpp" line="360" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank1_pe3"/>
+<pragma file="core.cpp" line="361" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank1_pe4"/>
+<pragma file="core.cpp" line="362" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank1_pe5"/>
+<pragma file="core.cpp" line="363" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank1_pe6"/>
+<pragma file="core.cpp" line="364" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank1_pe7"/>
+<pragma file="core.cpp" line="365" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank1_pe8"/>
+<pragma file="core.cpp" line="366" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank2_pe1"/>
+<pragma file="core.cpp" line="367" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank2_pe2"/>
+<pragma file="core.cpp" line="368" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank2_pe3"/>
+<pragma file="core.cpp" line="369" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank2_pe4"/>
+<pragma file="core.cpp" line="370" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank2_pe5"/>
+<pragma file="core.cpp" line="371" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank2_pe6"/>
+<pragma file="core.cpp" line="372" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank2_pe7"/>
+<pragma file="core.cpp" line="373" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vccache_re_bank2_pe8"/>
+<pragma file="core.cpp" line="380" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank1_vres"/>
+<pragma file="core.cpp" line="381" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank2_vres"/>
+<pragma file="core.cpp" line="382" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank3_vres"/>
+<pragma file="core.cpp" line="383" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank4_vres"/>
+<pragma file="core.cpp" line="384" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank5_vres"/>
+<pragma file="core.cpp" line="385" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank6_vres"/>
+<pragma file="core.cpp" line="386" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank7_vres"/>
+<pragma file="core.cpp" line="387" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank8_vres"/>
+<pragma file="core.cpp" line="388" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank1_cres"/>
+<pragma file="core.cpp" line="389" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank2_cres"/>
+<pragma file="core.cpp" line="390" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank3_cres"/>
+<pragma file="core.cpp" line="391" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank4_cres"/>
+<pragma file="core.cpp" line="392" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank5_cres"/>
+<pragma file="core.cpp" line="393" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank6_cres"/>
+<pragma file="core.cpp" line="394" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank7_cres"/>
+<pragma file="core.cpp" line="395" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="vcache_bank8_cres"/>
+<pragma file="core.cpp" line="401" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vcache_bank1_result"/>
+<pragma file="core.cpp" line="402" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vcache_bank2_result"/>
+<pragma file="core.cpp" line="403" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vcache_bank3_result"/>
+<pragma file="core.cpp" line="404" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vcache_bank4_result"/>
+<pragma file="core.cpp" line="407" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vcache_bank1_vresult1"/>
+<pragma file="core.cpp" line="408" pragmaType="stream" parentfunction="spmm" depth="8" type="fifo" variable="vcache_bank1_cresult1"/>
+<pragma file="core.cpp" line="409" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vcache_bank1_vresult1"/>
+<pragma file="core.cpp" line="410" pragmaType="bind_storage" parentfunction="spmm" op="666" impl="10" latency="-1" variable="vcache_bank1_cresult1"/>
+<pragma file="core.cpp" line="418" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="vblock1"/>
+<pragma file="core.cpp" line="419" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="vblock2"/>
+<pragma file="core.cpp" line="420" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="vblock3"/>
+<pragma file="core.cpp" line="421" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="vblock4"/>
+<pragma file="core.cpp" line="422" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="cblock1"/>
+<pragma file="core.cpp" line="423" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="cblock2"/>
+<pragma file="core.cpp" line="424" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="cblock3"/>
+<pragma file="core.cpp" line="425" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="cblock4"/>
+<pragma file="core.cpp" line="428" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="vblock1d"/>
+<pragma file="core.cpp" line="429" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="vblock2d"/>
+<pragma file="core.cpp" line="430" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="vblock3d"/>
+<pragma file="core.cpp" line="431" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="vblock4d"/>
+<pragma file="core.cpp" line="432" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="cblock1d"/>
+<pragma file="core.cpp" line="433" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="cblock2d"/>
+<pragma file="core.cpp" line="434" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="cblock3d"/>
+<pragma file="core.cpp" line="435" pragmaType="stream" parentfunction="spmm" depth="100" type="fifo" variable="cblock4d"/>
+<pragma file="core.cpp" line="442" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="m_pe1"/>
+<pragma file="core.cpp" line="443" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="m_pe2"/>
+<pragma file="core.cpp" line="444" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="m_pe3"/>
+<pragma file="core.cpp" line="445" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="m_pe4"/>
+<pragma file="core.cpp" line="447" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="p_pe1"/>
+<pragma file="core.cpp" line="448" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="p_pe2"/>
+<pragma file="core.cpp" line="449" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="p_pe3"/>
+<pragma file="core.cpp" line="450" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="p_pe4"/>
+<pragma file="core.cpp" line="454" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="result_pe1"/>
+<pragma file="core.cpp" line="455" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="result_pe2"/>
+<pragma file="core.cpp" line="456" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="result_pe3"/>
+<pragma file="core.cpp" line="457" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="result_pe4"/>
+<pragma file="core.cpp" line="461" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="final_merger_1"/>
+<pragma file="core.cpp" line="462" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="final_merger_2"/>
+<pragma file="core.cpp" line="463" pragmaType="stream" parentfunction="spmm" depth="1000" type="fifo" variable="final_merger_3"/>
+<pragma file="core.cpp" line="464" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="final_len_1"/>
+<pragma file="core.cpp" line="465" pragmaType="stream" parentfunction="spmm" depth="16" type="fifo" variable="final_len_2"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<vccache_request, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<1024, false>& ap_range_ref<1024, false>::operator=<128, false>(ap_int_base<128, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<pe_job, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<rcache_response, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<rinfo, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<merge_item, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<Avc, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<bool, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<ap_uint<160>, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<B_row_request, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<unsigned int, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<ap_uint<128>, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<ap_uint<1024>, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<vccache_result, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<block, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<merge_control, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<partial_block, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<manager_idle, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<merge_control_r, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<vccache_response, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="pe.cpp" line="199" pragmaType="dataflow" parentfunction="two_merger" disable_start_propagation="1"/>
+<pragma file="pe.cpp" line="202" pragmaType="stream" parentfunction="two_merger" depth="4" type="fifo" variable="temp_fifo"/>
+</pragmas>

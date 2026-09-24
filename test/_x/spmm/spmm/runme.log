@@ -1,0 +1,349 @@
+
+*** Running loader
+    with args -exec vitis_hls -f spmm.tcl -messageDb vitis_hls.pb
+
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+  **** SW Build 6295257 on Nov 14 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Apr 17 15:07:23 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/huz/software/2025.2/Vitis/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'huz' on host 'xiaohu.' (Linux_x86_64 version 5.15.153.1-microsoft-standard-WSL2) on Fri Apr 17 15:07:24 CST 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.3 LTS
+INFO: [HLS 200-10] In directory '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm'
+WARNING: [HLS 200-2053] The vitis_hls executable is deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'spmm.tcl'
+INFO: [HLS 200-1510] Running: open_project spmm 
+WARNING: [HLS 200-2182] The 'spmm' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm'.
+INFO: [HLS 200-1510] Running: set_top spmm 
+INFO: [HLS 200-1510] Running: add_files /home/huz/project/SpMM_TCAD/test/core.cpp 
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/core.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/huz/project/SpMM_TCAD/test/pe.cpp 
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/pe.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/huz/project/SpMM_TCAD/test/rcache.cpp 
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/rcache.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/huz/project/SpMM_TCAD/test/row_wise.cpp 
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/row_wise.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/huz/project/SpMM_TCAD/test/util.cpp 
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/util.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/huz/project/SpMM_TCAD/test/vccache.cpp 
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/vccache.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'flow_target=vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 150.000000MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.667ns.
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_rtl -deadlock_detection sim 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format xo -ipname spmm 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 2.86 seconds. CPU system time: 0.25 seconds. Elapsed time: 3.48 seconds; current allocated memory: 251.090 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file '/home/huz/project/SpMM_TCAD/test/vccache.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '/home/huz/project/SpMM_TCAD/test/util.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '/home/huz/project/SpMM_TCAD/test/row_wise.cpp' ... 
+WARNING: [HLS 207-6591] unused parameter 'pe1_idle' (/home/huz/project/SpMM_TCAD/test/row_wise.cpp:42:16)
+WARNING: [HLS 207-6591] unused parameter 'pe2_idle' (/home/huz/project/SpMM_TCAD/test/row_wise.cpp:42:39)
+WARNING: [HLS 207-6591] unused parameter 'pe3_idle' (/home/huz/project/SpMM_TCAD/test/row_wise.cpp:42:62)
+WARNING: [HLS 207-6591] unused parameter 'pe4_idle' (/home/huz/project/SpMM_TCAD/test/row_wise.cpp:42:85)
+WARNING: [HLS 207-6591] unused parameter 'target' (/home/huz/project/SpMM_TCAD/test/row_wise.cpp:44:14)
+WARNING: [HLS 207-6591] unused parameter 'target2' (/home/huz/project/SpMM_TCAD/test/row_wise.cpp:44:33)
+WARNING: [HLS 207-6591] unused parameter 'pe_idle' (/home/huz/project/SpMM_TCAD/test/row_wise.cpp:115:16)
+WARNING: [HLS 207-6591] unused parameter 'target' (/home/huz/project/SpMM_TCAD/test/row_wise.cpp:443:127)
+WARNING: [HLS 207-6591] unused parameter 'target' (/home/huz/project/SpMM_TCAD/test/row_wise.cpp:468:36)
+INFO: [HLS 200-10] Analyzing design file '/home/huz/project/SpMM_TCAD/test/rcache.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '/home/huz/project/SpMM_TCAD/test/pe.cpp' ... 
+WARNING: [HLS 207-6591] unused parameter 'result' (/home/huz/project/SpMM_TCAD/test/pe.cpp:196:17)
+WARNING: [HLS 207-6591] unused parameter 'from11' (/home/huz/project/SpMM_TCAD/test/pe.cpp:196:53)
+INFO: [HLS 200-10] Analyzing design file '/home/huz/project/SpMM_TCAD/test/core.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 20.05 seconds. CPU system time: 1.86 seconds. Elapsed time: 24.58 seconds; current allocated memory: 260.242 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 64,316 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 46,327 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27,684 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27,714 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27,336 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 29,408 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 25,252 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 26,383 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 57,530 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 59,129 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 58,176 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 57,374 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 57,322 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 57,322 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 55,982 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 63,823 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'find_eviction(lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, unsigned int*)' into 'rcache(hls::stream<rcache_request, 0>*, unsigned int, hls::stream<rcache_response, 0>*, unsigned int*, unsigned int*, hls::stream<manager_idle, 0>*)' (rcache.cpp:421:7)
+INFO: [HLS 214-131] Inlining function 'find_eviction(lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, unsigned int*)' into 'vcache(hls::stream<vccache_request, 0>*, unsigned int, hls::stream<vccache_response, 0>*, hls::stream<vccache_result, 0>*, unsigned int*, unsigned int*)' (vccache.cpp:501:7)
+INFO: [HLS 214-131] Inlining function 'find_eviction(lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, unsigned int*)' into 'ccache(hls::stream<vccache_request, 0>*, unsigned int, hls::stream<vccache_response, 0>*, hls::stream<vccache_result, 0>*, unsigned int*, unsigned int*)' (vccache.cpp:772:7)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_641_2' is marked as complete unroll implied by the pipeline pragma (vccache.cpp:641:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_370_2' is marked as complete unroll implied by the pipeline pragma (vccache.cpp:370:21)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_306_2' is marked as complete unroll implied by the pipeline pragma (rcache.cpp:306:21)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_668_4' (vccache.cpp:668:23) in function 'ccache' completely with a factor of 16 (vccache.cpp:592:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_743_5' (vccache.cpp:743:25) in function 'ccache' completely with a factor of 16 (vccache.cpp:592:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_641_2' (vccache.cpp:641:21) in function 'ccache' completely with a factor of 16 (vccache.cpp:592:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_397_4' (vccache.cpp:397:23) in function 'vcache' completely with a factor of 16 (vccache.cpp:321:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_472_5' (vccache.cpp:472:25) in function 'vcache' completely with a factor of 16 (vccache.cpp:321:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_370_2' (vccache.cpp:370:21) in function 'vcache' completely with a factor of 16 (vccache.cpp:321:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_333_4' (rcache.cpp:333:23) in function 'rcache' completely with a factor of 16 (rcache.cpp:261:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_392_5' (rcache.cpp:392:25) in function 'rcache' completely with a factor of 16 (rcache.cpp:261:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_306_2' (rcache.cpp:306:21) in function 'rcache' completely with a factor of 16 (rcache.cpp:261:0)
+ERROR: [HLS 214-219] Vitis kernel mode requires that all s_axilite ports must be bundled into one bundle. The following ports ('arnum,atnum,brnum,btnum,B_rcsr_base,B_val_base,B_cid_base,r1acc,r1hit,r2acc,r2hit,r3acc,r3hit,r4acc,r4hit,r5acc,r5hit,r6acc,r6hit,r7acc,r7hit,r8acc,r8hit,vc1acc,vc1hit,vc2acc,vc2hit,vc3acc,vc3hit,vc4acc,vc4hit,vc5acc,vc5hit,vc6acc,vc6hit,vc7acc,vc7hit,vc8acc,vc8hit,fnum,workload_counter1,workload_counter2,workload_counter3,workload_counter4,return' and 'A_rcsr,A_cid,A_val,B_rcsr1,B_rcsr2,B_rcsr3,B_rcsr4,B_val1,B_cid1,B_val2,B_cid2,B_val3,B_cid3,B_val4,B_cid4,B_val_port1,B_cid_port1,B_val_port2,B_cid_port2,B_val_port3,B_cid_port3,B_val_port4,B_cid_port4,C_rcsr,C_cid,C_val', in function 'spmm(unsigned int*, unsigned int*, float*, unsigned int, unsigned int, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, unsigned int, unsigned int, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, unsigned int*, unsigned int*, float*, unsigned int, unsigned int, unsigned int, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*)') have different bundle names: 'control' and 'control_r'. Consider removing the bundle names on these ports. (core.cpp:168:0)
+INFO: [HLS 214-178] Inlining function 'float Reinterpret<float, ap_uint<32> >(ap_uint<32> const&)' into 'pe(hls::stream<block, 0>*, hls::stream<block, 0>*, hls::stream<block, 0>*, hls::stream<block, 0>*, hls::stream<pe_job, 0>*, hls::stream<partial_block, 0>*, hls::stream<unsigned int, 0>*, hls::stream<merge_control, 0>*, hls::stream<bool, 0>*, hls::stream<bool, 0>*, unsigned int*)' (pe.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<32> Reinterpret<ap_uint<32>, float>(float const&)' into 'pe(hls::stream<block, 0>*, hls::stream<block, 0>*, hls::stream<block, 0>*, hls::stream<block, 0>*, hls::stream<pe_job, 0>*, hls::stream<partial_block, 0>*, hls::stream<unsigned int, 0>*, hls::stream<merge_control, 0>*, hls::stream<bool, 0>*, hls::stream<bool, 0>*, unsigned int*)' (pe.cpp:4:0)
+INFO: [HLS 214-178] Inlining function 'float Reinterpret<float, ap_uint<32> >(ap_uint<32> const&)' into 'convert_pblock_to_mergeitem(hls::stream<partial_block, 0>*, hls::stream<merge_item, 0>*)' (util.cpp:901:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'fnum'. (core.cpp:168:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'vresponse'. (vccache.cpp:250:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'cresponse'. (vccache.cpp:250:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'response'. (rcache.cpp:193:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'B_val'. (vccache.cpp:250:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'B_cid'. (vccache.cpp:250:0)
+WARNING: [HLS 214-464] Skipping array undecay on variable length array 'B_rcsr'. (rcache.cpp:193:0)
+INFO: [HLS 214-248] Applying array_partition to '_tag': Complete partitioning on dimension 2. (rcache.cpp:266:17)
+INFO: [HLS 214-248] Applying array_partition to '_tag': Complete partitioning on dimension 2. (vccache.cpp:327:17)
+INFO: [HLS 214-248] Applying array_partition to '_tag': Complete partitioning on dimension 2. (vccache.cpp:598:17)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'pong1' with compact=bit mode in 66-bits (pe.cpp:215:22)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'ping1' with compact=bit mode in 66-bits (pe.cpp:215:15)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'pong' with compact=bit mode in 66-bits (pe.cpp:212:21)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'ping' with compact=bit mode in 66-bits (pe.cpp:212:15)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'temp_fifo' with compact=bit mode in 66-bits (pe.cpp:201:15)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mresult' with compact=bit mode in 36-bits (pe.cpp:350:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable '_A_reader_rs' with compact=bit mode in 64-bits (core.cpp:249:15)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable '_A_element_as' with compact=bit mode in 96-bits (core.cpp:252:13)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi1' with compact=bit mode in 5-bits (core.cpp:260:12)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi2' with compact=bit mode in 5-bits (core.cpp:260:17)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi3' with compact=bit mode in 5-bits (core.cpp:260:22)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi4' with compact=bit mode in 5-bits (core.cpp:260:27)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi1_1' with compact=bit mode in 5-bits (core.cpp:261:12)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi2_1' with compact=bit mode in 5-bits (core.cpp:261:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi3_1' with compact=bit mode in 5-bits (core.cpp:261:26)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi4_1' with compact=bit mode in 5-bits (core.cpp:261:33)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi1_2' with compact=bit mode in 5-bits (core.cpp:262:6)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi2_2' with compact=bit mode in 5-bits (core.cpp:262:13)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi3_2' with compact=bit mode in 5-bits (core.cpp:262:20)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi4_2' with compact=bit mode in 5-bits (core.cpp:262:27)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi1_3' with compact=bit mode in 5-bits (core.cpp:263:6)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi2_3' with compact=bit mode in 5-bits (core.cpp:263:13)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi3_3' with compact=bit mode in 5-bits (core.cpp:263:20)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi4_3' with compact=bit mode in 5-bits (core.cpp:263:27)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi1_4' with compact=bit mode in 5-bits (core.cpp:264:6)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi2_4' with compact=bit mode in 5-bits (core.cpp:264:13)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi3_4' with compact=bit mode in 5-bits (core.cpp:264:20)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mi4_4' with compact=bit mode in 5-bits (core.cpp:264:27)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'pe1_job' with compact=bit mode in 66-bits (core.cpp:273:12)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'pe2_job' with compact=bit mode in 66-bits (core.cpp:273:21)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'pe3_job' with compact=bit mode in 66-bits (core.cpp:273:30)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'pe4_job' with compact=bit mode in 66-bits (core.cpp:273:39)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_stream1' with compact=bit mode in 398-bits (core.cpp:276:16)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_stream2' with compact=bit mode in 398-bits (core.cpp:276:32)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_stream3' with compact=bit mode in 398-bits (core.cpp:276:48)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_stream4' with compact=bit mode in 398-bits (core.cpp:276:64)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rrequest1' with compact=bit mode in 398-bits (core.cpp:279:16)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rrequest2' with compact=bit mode in 398-bits (core.cpp:279:27)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rrequest3' with compact=bit mode in 398-bits (core.cpp:279:38)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rrequest4' with compact=bit mode in 398-bits (core.cpp:279:49)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rrequestf' with compact=bit mode in 398-bits (core.cpp:279:60)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rresponse1' with compact=bit mode in 168-bits (core.cpp:287:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rresponse2' with compact=bit mode in 168-bits (core.cpp:287:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rresponse3' with compact=bit mode in 168-bits (core.cpp:287:43)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rresponse4' with compact=bit mode in 168-bits (core.cpp:287:55)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rblock1' with compact=bit mode in 398-bits (core.cpp:296:16)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rblock2' with compact=bit mode in 398-bits (core.cpp:296:25)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rblock3' with compact=bit mode in 398-bits (core.cpp:296:34)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rblock4' with compact=bit mode in 398-bits (core.cpp:296:43)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank1' with compact=bit mode in 398-bits (core.cpp:299:16)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank2' with compact=bit mode in 398-bits (core.cpp:299:33)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank3' with compact=bit mode in 398-bits (core.cpp:299:50)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank4' with compact=bit mode in 398-bits (core.cpp:299:67)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank1_1' with compact=bit mode in 168-bits (core.cpp:305:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank1_2' with compact=bit mode in 168-bits (core.cpp:305:38)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank1_3' with compact=bit mode in 168-bits (core.cpp:305:57)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank1_4' with compact=bit mode in 168-bits (core.cpp:305:76)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank2_1' with compact=bit mode in 168-bits (core.cpp:306:5)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank2_2' with compact=bit mode in 168-bits (core.cpp:306:24)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank2_3' with compact=bit mode in 168-bits (core.cpp:306:43)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank2_4' with compact=bit mode in 168-bits (core.cpp:306:62)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank3_1' with compact=bit mode in 168-bits (core.cpp:307:5)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank3_2' with compact=bit mode in 168-bits (core.cpp:307:24)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank3_3' with compact=bit mode in 168-bits (core.cpp:307:43)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank3_4' with compact=bit mode in 168-bits (core.cpp:307:62)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank4_1' with compact=bit mode in 168-bits (core.cpp:308:5)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank4_2' with compact=bit mode in 168-bits (core.cpp:308:24)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank4_3' with compact=bit mode in 168-bits (core.cpp:308:43)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_re_bank4_4' with compact=bit mode in 168-bits (core.cpp:308:62)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_bank1_res' with compact=bit mode in 168-bits (core.cpp:311:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_bank2_res' with compact=bit mode in 168-bits (core.cpp:311:37)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_bank3_res' with compact=bit mode in 168-bits (core.cpp:311:55)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_bank4_res' with compact=bit mode in 168-bits (core.cpp:311:73)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_result_bank1_b' with compact=bit mode in 68-bits (core.cpp:322:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_result_bank2_b' with compact=bit mode in 68-bits (core.cpp:322:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_result_bank3_b' with compact=bit mode in 68-bits (core.cpp:322:65)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_result_bank4_b' with compact=bit mode in 68-bits (core.cpp:322:88)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_result_bank1_d' with compact=bit mode in 68-bits (core.cpp:323:11)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_result_bank2_d' with compact=bit mode in 68-bits (core.cpp:323:34)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_result_bank3_d' with compact=bit mode in 68-bits (core.cpp:323:57)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcache_result_bank4_d' with compact=bit mode in 68-bits (core.cpp:323:80)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vrequest1' with compact=bit mode in 225-bits (core.cpp:329:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vrequest2' with compact=bit mode in 225-bits (core.cpp:329:30)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vrequest3' with compact=bit mode in 225-bits (core.cpp:329:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vrequest4' with compact=bit mode in 225-bits (core.cpp:329:52)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'crequest1' with compact=bit mode in 225-bits (core.cpp:329:63)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'crequest2' with compact=bit mode in 225-bits (core.cpp:329:74)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'crequest3' with compact=bit mode in 225-bits (core.cpp:329:85)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'crequest4' with compact=bit mode in 225-bits (core.cpp:329:96)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank1' with compact=bit mode in 225-bits (core.cpp:332:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank2' with compact=bit mode in 225-bits (core.cpp:332:37)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank3' with compact=bit mode in 225-bits (core.cpp:332:55)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank4' with compact=bit mode in 225-bits (core.cpp:332:73)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank1_pe1' with compact=bit mode in 225-bits (core.cpp:338:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank1_pe2' with compact=bit mode in 225-bits (core.cpp:338:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank1_pe3' with compact=bit mode in 225-bits (core.cpp:338:63)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank1_pe4' with compact=bit mode in 225-bits (core.cpp:338:85)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank1_pe5' with compact=bit mode in 225-bits (core.cpp:339:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank1_pe6' with compact=bit mode in 225-bits (core.cpp:339:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank1_pe7' with compact=bit mode in 225-bits (core.cpp:339:63)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank1_pe8' with compact=bit mode in 225-bits (core.cpp:339:85)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank2_pe1' with compact=bit mode in 225-bits (core.cpp:340:7)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank2_pe2' with compact=bit mode in 225-bits (core.cpp:340:29)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank2_pe3' with compact=bit mode in 225-bits (core.cpp:340:51)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank2_pe4' with compact=bit mode in 225-bits (core.cpp:340:73)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank2_pe5' with compact=bit mode in 225-bits (core.cpp:341:7)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank2_pe6' with compact=bit mode in 225-bits (core.cpp:341:29)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank2_pe7' with compact=bit mode in 225-bits (core.cpp:341:51)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vccache_re_bank2_pe8' with compact=bit mode in 225-bits (core.cpp:341:73)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_bank1_vres' with compact=bit mode in 6-bits (core.cpp:376:20)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_bank2_vres' with compact=bit mode in 6-bits (core.cpp:376:39)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_bank3_cres' with compact=bit mode in 6-bits (core.cpp:378:46)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_bank4_cres' with compact=bit mode in 6-bits (core.cpp:378:65)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_res_vfinal' with compact=bit mode in 6-bits (core.cpp:397:20)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_res_cfinal' with compact=bit mode in 6-bits (core.cpp:397:39)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_bank1_result' with compact=bit mode in 1031-bits (core.cpp:399:18)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_bank2_result' with compact=bit mode in 1031-bits (core.cpp:399:39)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_bank3_result' with compact=bit mode in 1031-bits (core.cpp:399:60)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_bank4_result' with compact=bit mode in 1031-bits (core.cpp:399:81)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_bank1_vresult1' with compact=bit mode in 1031-bits (core.cpp:406:18)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcache_bank1_cresult1' with compact=bit mode in 1031-bits (core.cpp:406:41)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vresponse1' with compact=bit mode in 6-bits (core.cpp:413:20)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vresponse2' with compact=bit mode in 6-bits (core.cpp:413:32)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vresponse3' with compact=bit mode in 6-bits (core.cpp:413:44)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vresponse4' with compact=bit mode in 6-bits (core.cpp:413:56)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cresponse1' with compact=bit mode in 6-bits (core.cpp:413:68)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cresponse2' with compact=bit mode in 6-bits (core.cpp:413:80)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cresponse3' with compact=bit mode in 6-bits (core.cpp:413:92)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cresponse4' with compact=bit mode in 6-bits (core.cpp:413:104)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vblock1' with compact=bit mode in 134-bits (core.cpp:417:15)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vblock2' with compact=bit mode in 134-bits (core.cpp:417:24)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vblock3' with compact=bit mode in 134-bits (core.cpp:417:33)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vblock4' with compact=bit mode in 134-bits (core.cpp:417:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cblock1' with compact=bit mode in 134-bits (core.cpp:417:51)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cblock2' with compact=bit mode in 134-bits (core.cpp:417:60)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cblock3' with compact=bit mode in 134-bits (core.cpp:417:69)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cblock4' with compact=bit mode in 134-bits (core.cpp:417:78)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vblock1d' with compact=bit mode in 134-bits (core.cpp:427:15)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vblock2d' with compact=bit mode in 134-bits (core.cpp:427:25)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vblock3d' with compact=bit mode in 134-bits (core.cpp:427:35)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vblock4d' with compact=bit mode in 134-bits (core.cpp:427:45)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cblock1d' with compact=bit mode in 134-bits (core.cpp:427:55)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cblock2d' with compact=bit mode in 134-bits (core.cpp:427:65)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cblock3d' with compact=bit mode in 134-bits (core.cpp:427:75)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cblock4d' with compact=bit mode in 134-bits (core.cpp:427:85)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mc_pe1' with compact=bit mode in 66-bits (core.cpp:438:18)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mc_pe2' with compact=bit mode in 66-bits (core.cpp:438:26)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mc_pe3' with compact=bit mode in 66-bits (core.cpp:438:34)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'mc_pe4' with compact=bit mode in 66-bits (core.cpp:438:42)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'm_pe1' with compact=bit mode in 66-bits (core.cpp:441:15)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'm_pe2' with compact=bit mode in 66-bits (core.cpp:441:22)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'm_pe3' with compact=bit mode in 66-bits (core.cpp:441:29)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'm_pe4' with compact=bit mode in 66-bits (core.cpp:441:36)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'p_pe1' with compact=bit mode in 263-bits (core.cpp:446:17)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'p_pe2' with compact=bit mode in 263-bits (core.cpp:446:24)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'p_pe3' with compact=bit mode in 263-bits (core.cpp:446:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'p_pe4' with compact=bit mode in 263-bits (core.cpp:446:38)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'result_pe1' with compact=bit mode in 66-bits (core.cpp:453:15)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'result_pe2' with compact=bit mode in 66-bits (core.cpp:453:27)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'result_pe3' with compact=bit mode in 66-bits (core.cpp:453:39)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'result_pe4' with compact=bit mode in 66-bits (core.cpp:453:51)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'final_merger_1' with compact=bit mode in 66-bits (core.cpp:459:15)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'final_merger_2' with compact=bit mode in 66-bits (core.cpp:459:31)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'final_merger_3' with compact=bit mode in 66-bits (core.cpp:459:47)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rcollec' with compact=bit mode in 398-bits (rcache.cpp:197:16)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rrequest' with compact=bit mode in 398-bits (rcache.cpp:197:25)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'rscheduler' with compact=bit mode in 398-bits (rcache.cpp:197:35)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'r_first' with compact=bit mode in 398-bits (rcache.cpp:200:16)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'r_req' with compact=bit mode in 398-bits (rcache.cpp:200:25)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vcollector' with compact=bit mode in 68-bits (vccache.cpp:254:26)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'ccollector' with compact=bit mode in 68-bits (vccache.cpp:254:38)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vrequest' with compact=bit mode in 68-bits (vccache.cpp:254:50)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'crequest' with compact=bit mode in 68-bits (vccache.cpp:254:60)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'vscheduler' with compact=bit mode in 68-bits (vccache.cpp:254:70)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'cscheduler' with compact=bit mode in 68-bits (vccache.cpp:254:82)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'v_first' with compact=bit mode in 225-bits (vccache.cpp:255:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'c_first' with compact=bit mode in 225-bits (vccache.cpp:255:28)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'v_req' with compact=bit mode in 225-bits (vccache.cpp:255:37)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'c_req' with compact=bit mode in 225-bits (vccache.cpp:255:44)
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_225_5> at vccache.cpp:225:26 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_211_4> at vccache.cpp:211:27 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_198_3> at vccache.cpp:198:26 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_104_3> at vccache.cpp:104:27 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_53_2> at core.cpp:53:22 due to pipeline_loops threshold
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_13_1'(task_scheduler.h:13:19) has been inferred on bundle 'arcsr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (task_scheduler.h:13:19)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_41_1'(task_scheduler.h:41:19) has been inferred on bundle 'aval'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (task_scheduler.h:41:19)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_41_1'(task_scheduler.h:41:19) has been inferred on bundle 'acid'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (task_scheduler.h:41:19)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_87_3'(rcache.cpp:87:25) has been inferred on bundle 'brcsr1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (rcache.cpp:87:25)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_87_3'(rcache.cpp:87:25) has been inferred on bundle 'brcsr2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (rcache.cpp:87:25)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_87_3'(rcache.cpp:87:25) has been inferred on bundle 'brcsr3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (rcache.cpp:87:25)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_87_3'(rcache.cpp:87:25) has been inferred on bundle 'brcsr4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (rcache.cpp:87:25)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_53_2'(core.cpp:53:22) has been inferred on bundle 'bcid1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (core.cpp:53:22)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_53_2'(core.cpp:53:22) has been inferred on bundle 'bval1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (core.cpp:53:22)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_53_2'(core.cpp:53:22) has been inferred on bundle 'bcid2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (core.cpp:53:22)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_53_2'(core.cpp:53:22) has been inferred on bundle 'bval2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (core.cpp:53:22)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_53_2'(core.cpp:53:22) has been inferred on bundle 'bcid3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (core.cpp:53:22)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_53_2'(core.cpp:53:22) has been inferred on bundle 'bval3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (core.cpp:53:22)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_53_2'(core.cpp:53:22) has been inferred on bundle 'bcid4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (core.cpp:53:22)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_53_2'(core.cpp:53:22) has been inferred on bundle 'bval4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (core.cpp:53:22)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_104_3'(vccache.cpp:104:27) has been inferred on bundle 'bv1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:104:27)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_111_4'(vccache.cpp:111:26) has been inferred on bundle 'bv1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:111:26)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_104_3'(vccache.cpp:104:27) has been inferred on bundle 'bc1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:104:27)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_111_4'(vccache.cpp:111:26) has been inferred on bundle 'bc1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:111:26)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_104_3'(vccache.cpp:104:27) has been inferred on bundle 'bv2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:104:27)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_111_4'(vccache.cpp:111:26) has been inferred on bundle 'bv2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:111:26)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_104_3'(vccache.cpp:104:27) has been inferred on bundle 'bc2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:104:27)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_111_4'(vccache.cpp:111:26) has been inferred on bundle 'bc2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:111:26)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_104_3'(vccache.cpp:104:27) has been inferred on bundle 'bv3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:104:27)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_111_4'(vccache.cpp:111:26) has been inferred on bundle 'bv3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:111:26)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_104_3'(vccache.cpp:104:27) has been inferred on bundle 'bc3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:104:27)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_111_4'(vccache.cpp:111:26) has been inferred on bundle 'bc3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:111:26)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_104_3'(vccache.cpp:104:27) has been inferred on bundle 'bv4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:104:27)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_111_4'(vccache.cpp:111:26) has been inferred on bundle 'bv4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:111:26)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_104_3'(vccache.cpp:104:27) has been inferred on bundle 'bc4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:104:27)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 128 in loop 'VITIS_LOOP_111_4'(vccache.cpp:111:26) has been inferred on bundle 'bc4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (vccache.cpp:111:26)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'VITIS_LOOP_936_1'(util.cpp:936:20) has been inferred on bundle 'crcsr'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (util.cpp:936:20)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'VITIS_LOOP_959_2'(util.cpp:959:23) has been inferred on bundle 'cval'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (util.cpp:959:23)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'VITIS_LOOP_959_2'(util.cpp:959:23) has been inferred on bundle 'ccid'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (util.cpp:959:23)
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:43; Allocated memory: 48.262 MB.
+Pre-synthesis failed.
+    while executing
+"source spmm.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 36.47 seconds. Total CPU system time: 5.33 seconds. Total elapsed time: 45.2 seconds; peak allocated memory: 299.352 MB.

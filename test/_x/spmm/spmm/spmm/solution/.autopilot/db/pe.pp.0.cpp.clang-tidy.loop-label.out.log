@@ -1,0 +1,60 @@
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:2639:5: remark: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_676_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:2639:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:2653:5: remark: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_690_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:2653:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:2667:5: remark: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_704_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:2667:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:6175:7: remark: Added loop label VITIS_LOOP_1251_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^
+      VITIS_LOOP_1251_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:6175:7: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55193:2: remark: Added loop label VITIS_LOOP_12_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ) {
+ ^
+ VITIS_LOOP_12_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55193:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55210:4: remark: Added loop label VITIS_LOOP_29_2:   [xilinx-label-all-loops]
+   for (id_t i=0; i<b_rlen; ) {
+   ^
+   VITIS_LOOP_29_2: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55210:4: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55287:2: remark: Added loop label VITIS_LOOP_106_1:   [xilinx-label-all-loops]
+ for (bool enable=temp.end; !enable; ){
+ ^
+ VITIS_LOOP_106_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55287:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55331:2: remark: Added loop label VITIS_LOOP_150_1:   [xilinx-label-all-loops]
+ for (id_t i=0, j=0; i<len1 || j<len2; ){
+ ^
+ VITIS_LOOP_150_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55331:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55429:2: remark: Added loop label VITIS_LOOP_248_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ) {
+ ^
+ VITIS_LOOP_248_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55429:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55540:2: remark: Added loop label VITIS_LOOP_359_1:   [xilinx-label-all-loops]
+ for (id_t i=0; i<5; i++) {
+ ^
+ VITIS_LOOP_359_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55540:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55548:3: remark: Added loop label VITIS_LOOP_367_2:   [xilinx-label-all-loops]
+  for (id_t j=0; j<70; j++) {
+  ^
+  VITIS_LOOP_367_2: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55548:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55570:2: remark: Added loop label VITIS_LOOP_389_1:   [xilinx-label-all-loops]
+ for (id_t i=0; i<350; i++) {
+ ^
+ VITIS_LOOP_389_1: 
+/home/huz/project/SpMM_TCAD/test/_x/spmm/spmm/spmm/solution/.autopilot/db/pe.pp.0.cpp:55570:2: note: FIX-IT applied suggested code changes
