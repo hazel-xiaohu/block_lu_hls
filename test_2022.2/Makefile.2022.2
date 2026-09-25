@@ -1,0 +1,20 @@
+VITIS_HLS ?= vitis_hls
+
+.PHONY: all run csim csynth cosim clean
+
+all: run
+
+run:
+	$(VITIS_HLS) -f run_hls.tcl
+
+csim:
+	SPMM_HLS_EXEC=0 $(VITIS_HLS) -f run_hls.tcl
+
+csynth:
+	SPMM_HLS_EXEC=1 $(VITIS_HLS) -f run_hls.tcl
+
+cosim:
+	SPMM_HLS_EXEC=2 $(VITIS_HLS) -f run_hls.tcl
+
+clean:
+	rm -rf proj_block_lu_hls

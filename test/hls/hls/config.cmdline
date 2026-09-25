@@ -1,4 +1,0 @@
-part=xczu15eg-ffvb1156-2-i
-relativeroot=/home/huz/project/SpMM_TCAD/test
-original_argv=-c --mode hls --config /home/huz/project/SpMM_TCAD/test/hls_config.cfg --work_dir hls --part xczu15eg-ffvb1156-2-i 
-
