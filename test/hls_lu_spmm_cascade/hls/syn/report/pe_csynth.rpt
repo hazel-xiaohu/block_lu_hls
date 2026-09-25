@@ -1,0 +1,222 @@
+
+
+================================================================
+== Vitis HLS Report for 'pe'
+================================================================
+* Date:           Fri Sep 25 00:05:31 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  5.632 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+        |                                        |                             |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+        |                Instance                |            Module           |   min   |   max   |    min   |    max   | min | max |        Type       |
+        +----------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+        |grp_pe_Pipeline_VITIS_LOOP_35_2_fu_148  |pe_Pipeline_VITIS_LOOP_35_2  |        ?|        ?|         ?|         ?|    0|    0|  loop pipeline stp|
+        +----------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_12_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      55|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     8|    1277|     862|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|     176|    -|
+|Register         |        -|     -|     172|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     8|    1449|    1093|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|    ~0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------+-----------------------------+---------+----+------+-----+-----+
+    |                Instance                |            Module           | BRAM_18K| DSP|  FF  | LUT | URAM|
+    +----------------------------------------+-----------------------------+---------+----+------+-----+-----+
+    |grp_pe_Pipeline_VITIS_LOOP_35_2_fu_148  |pe_Pipeline_VITIS_LOOP_35_2  |        0|   8|  1277|  862|    0|
+    +----------------------------------------+-----------------------------+---------+----+------+-----+-----+
+    |Total                                   |                             |        0|   8|  1277|  862|    0|
+    +----------------------------------------+-----------------------------+---------+----+------+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |p_workload_counter_8_fu_261_p2  |         +|   0|  0|  39|          32|          32|
+    |ap_predicate_op56_read_state7   |       and|   0|  0|   2|           1|           1|
+    |ap_block_state1                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state4                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state7                 |        or|   0|  0|   2|           1|           1|
+    |or_ln16_fu_213_p2               |        or|   0|  0|   2|           1|           1|
+    |xor_ln12_fu_314_p2              |       xor|   0|  0|   2|           1|           2|
+    |xor_ln16_fu_207_p2              |       xor|   0|  0|   2|           1|           2|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |Total                           |          |   0|  0|  55|          40|          42|
+    +--------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+----+-----------+-----+-----------+
+    |           Name           | LUT| Input Size| Bits| Total Bits|
+    +--------------------------+----+-----------+-----+-----------+
+    |B_rlen_pe4_blk_n          |   9|          2|    1|          2|
+    |ap_NS_fsm                 |  43|          8|    1|          8|
+    |ap_done                   |   9|          2|    1|          2|
+    |efinish4_blk_n            |   9|          2|    1|          2|
+    |mc_pe4_blk_n              |   9|          2|    1|          2|
+    |mc_pe4_din                |  20|          4|   66|        264|
+    |p_pe4_blk_n               |   9|          2|    1|          2|
+    |p_pe4_din                 |   9|          2|  263|        526|
+    |p_pe4_write               |  14|          3|    1|          3|
+    |p_workload_counter_fu_84  |   9|          2|   32|         64|
+    |pe4_idle_blk_n            |   9|          2|    1|          2|
+    |pe4_job_blk_n             |   9|          2|    1|          2|
+    |phi_ln12_reg_137          |   9|          2|    1|          2|
+    |workload_counter4         |   9|          2|   32|         64|
+    +--------------------------+----+-----------+-----+-----------+
+    |Total                     | 176|         37|  403|        945|
+    +--------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |                         Name                        | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                            |   7|   0|    7|          0|
+    |ap_done_reg                                          |   1|   0|    1|          0|
+    |b_rlen_reg_346                                       |  32|   0|   32|          0|
+    |curr_job_end_reg_332                                 |   1|   0|    1|          0|
+    |curr_job_rid_reg_326                                 |  32|   0|   32|          0|
+    |curr_job_val_reg_337                                 |  32|   0|   32|          0|
+    |grp_pe_Pipeline_VITIS_LOOP_35_2_fu_148_ap_start_reg  |   1|   0|    1|          0|
+    |or_ln16_reg_342                                      |   1|   0|    1|          0|
+    |p_workload_counter_fu_84                             |  32|   0|   32|          0|
+    |phi_ln12_reg_137                                     |   1|   0|    1|          0|
+    |workload_counter4_preg                               |  32|   0|   32|          0|
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |Total                                                | 172|   0|  172|          0|
+    +-----------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+-------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++---------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|                 pe|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|                 pe|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|                 pe|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|                 pe|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|                 pe|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|                 pe|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|                 pe|  return value|
+|cblock4_dout               |   in|  134|     ap_fifo|            cblock4|       pointer|
+|cblock4_empty_n            |   in|    1|     ap_fifo|            cblock4|       pointer|
+|cblock4_read               |  out|    1|     ap_fifo|            cblock4|       pointer|
+|cblock4_num_data_valid     |   in|    8|     ap_fifo|            cblock4|       pointer|
+|cblock4_fifo_cap           |   in|    8|     ap_fifo|            cblock4|       pointer|
+|vblock4_dout               |   in|  134|     ap_fifo|            vblock4|       pointer|
+|vblock4_empty_n            |   in|    1|     ap_fifo|            vblock4|       pointer|
+|vblock4_read               |  out|    1|     ap_fifo|            vblock4|       pointer|
+|vblock4_num_data_valid     |   in|    8|     ap_fifo|            vblock4|       pointer|
+|vblock4_fifo_cap           |   in|    8|     ap_fifo|            vblock4|       pointer|
+|cblock4d_dout              |   in|  134|     ap_fifo|           cblock4d|       pointer|
+|cblock4d_empty_n           |   in|    1|     ap_fifo|           cblock4d|       pointer|
+|cblock4d_read              |  out|    1|     ap_fifo|           cblock4d|       pointer|
+|cblock4d_num_data_valid    |   in|    8|     ap_fifo|           cblock4d|       pointer|
+|cblock4d_fifo_cap          |   in|    8|     ap_fifo|           cblock4d|       pointer|
+|vblock4d_dout              |   in|  134|     ap_fifo|           vblock4d|       pointer|
+|vblock4d_empty_n           |   in|    1|     ap_fifo|           vblock4d|       pointer|
+|vblock4d_read              |  out|    1|     ap_fifo|           vblock4d|       pointer|
+|vblock4d_num_data_valid    |   in|    8|     ap_fifo|           vblock4d|       pointer|
+|vblock4d_fifo_cap          |   in|    8|     ap_fifo|           vblock4d|       pointer|
+|pe4_job_dout               |   in|   66|     ap_fifo|            pe4_job|       pointer|
+|pe4_job_empty_n            |   in|    1|     ap_fifo|            pe4_job|       pointer|
+|pe4_job_read               |  out|    1|     ap_fifo|            pe4_job|       pointer|
+|pe4_job_num_data_valid     |   in|    3|     ap_fifo|            pe4_job|       pointer|
+|pe4_job_fifo_cap           |   in|    3|     ap_fifo|            pe4_job|       pointer|
+|p_pe4_din                  |  out|  263|     ap_fifo|              p_pe4|       pointer|
+|p_pe4_full_n               |   in|    1|     ap_fifo|              p_pe4|       pointer|
+|p_pe4_write                |  out|    1|     ap_fifo|              p_pe4|       pointer|
+|p_pe4_num_data_valid       |   in|   32|     ap_fifo|              p_pe4|       pointer|
+|p_pe4_fifo_cap             |   in|   32|     ap_fifo|              p_pe4|       pointer|
+|B_rlen_pe4_dout            |   in|   32|     ap_fifo|         B_rlen_pe4|       pointer|
+|B_rlen_pe4_empty_n         |   in|    1|     ap_fifo|         B_rlen_pe4|       pointer|
+|B_rlen_pe4_read            |  out|    1|     ap_fifo|         B_rlen_pe4|       pointer|
+|B_rlen_pe4_num_data_valid  |   in|    3|     ap_fifo|         B_rlen_pe4|       pointer|
+|B_rlen_pe4_fifo_cap        |   in|    3|     ap_fifo|         B_rlen_pe4|       pointer|
+|mc_pe4_din                 |  out|   66|     ap_fifo|             mc_pe4|       pointer|
+|mc_pe4_full_n              |   in|    1|     ap_fifo|             mc_pe4|       pointer|
+|mc_pe4_write               |  out|    1|     ap_fifo|             mc_pe4|       pointer|
+|mc_pe4_num_data_valid      |   in|    3|     ap_fifo|             mc_pe4|       pointer|
+|mc_pe4_fifo_cap            |   in|    3|     ap_fifo|             mc_pe4|       pointer|
+|pe4_idle_din               |  out|    1|     ap_fifo|           pe4_idle|       pointer|
+|pe4_idle_full_n            |   in|    1|     ap_fifo|           pe4_idle|       pointer|
+|pe4_idle_write             |  out|    1|     ap_fifo|           pe4_idle|       pointer|
+|pe4_idle_num_data_valid    |   in|    3|     ap_fifo|           pe4_idle|       pointer|
+|pe4_idle_fifo_cap          |   in|    3|     ap_fifo|           pe4_idle|       pointer|
+|efinish4_dout              |   in|    1|     ap_fifo|           efinish4|       pointer|
+|efinish4_empty_n           |   in|    1|     ap_fifo|           efinish4|       pointer|
+|efinish4_read              |  out|    1|     ap_fifo|           efinish4|       pointer|
+|efinish4_num_data_valid    |   in|    3|     ap_fifo|           efinish4|       pointer|
+|efinish4_fifo_cap          |   in|    3|     ap_fifo|           efinish4|       pointer|
+|workload_counter4          |  out|   32|      ap_vld|  workload_counter4|       pointer|
+|workload_counter4_ap_vld   |  out|    1|      ap_vld|  workload_counter4|       pointer|
++---------------------------+-----+-----+------------+-------------------+--------------+
+

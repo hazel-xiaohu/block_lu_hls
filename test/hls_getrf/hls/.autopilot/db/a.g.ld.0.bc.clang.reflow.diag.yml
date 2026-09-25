@@ -1,0 +1,1345 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sparse_getrf.cpp, Line: 73, Column: 3 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'set_failure(unsigned int, unsigned int, unsigned int*, unsigned int*)'
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 25, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sparse_getrf.cpp, Line: 219, Column: 6 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'getrf_abs(float)'
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 3, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sparse_getrf.cpp, Line: 217, Column: 32 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)'
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_sparse_getrf_ir
+Args:            
+  - Callee:          sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_sparse_getrf_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_getrf.cpp, Line: 84, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        L_val84seq
+  - ArrayName:       L_val
+  - String:          ' '
+  - BundleName:      l_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_84_1
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:84:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 86, Column: 14 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.store.4
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_getrf.cpp, Line: 88, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        U_val85seq
+  - ArrayName:       U_val
+  - String:          ' '
+  - BundleName:      u_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_88_2
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:88:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 90, Column: 14 }
+  - OrigDirection:   write
+  - OrigID:          for.inc38.store.4
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       L_rcsr
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_138_6
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:138:21'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          cond.true.load.7
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 12, Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          cond.true.load.9
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep86seq
+  - ArrayName:       U_rcsr
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_138_6
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:138:21'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          cond.false.load.7
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 12, Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          cond.false.load.9
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep87seq
+  - ArrayName:       U_rcsr
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_173_9
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:173:22'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          if.end221.load.10
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 12, Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          if.end221.load.15
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_getrf.cpp, Line: 168, Column: 31 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep88seq
+  - ArrayName:       L_rcsr
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_167_8
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:167:21'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 168, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_173_9.load.8
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 169, Column: 29 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_173_9.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_getrf.cpp, Line: 170, Column: 31 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep89seq
+  - ArrayName:       U_rcsr
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_167_8
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:167:21'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 170, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_173_9.load.20
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 171, Column: 29 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_173_9.load.23
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_getrf.cpp, Line: 96, Column: 5 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep90seq
+  - ArrayName:       U_rcsr
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_93_3
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:93:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 96, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          lor.lhs.false57.load.5
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 96, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          lor.lhs.false57.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_getrf.cpp, Line: 95, Column: 5 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep91seq
+  - ArrayName:       L_rcsr
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_93_3
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:93:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 95, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          lor.lhs.false50.load.5
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 95, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          lor.lhs.false50.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_getrf.cpp, Line: 94, Column: 7 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep92seq
+  - ArrayName:       A_rcsr
+  - String:          ' '
+  - BundleName:      a_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_93_3
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:93:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 94, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.body44.load.12
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 94, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          for.body44.load.15
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:13:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:13:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:13:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: sparse_getrf.cpp, Line: 198, Column: 26 }
+Function:        sparse_getrf
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_198_11
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:198:26'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: sparse_getrf.cpp, Line: 206, Column: 26 }
+Function:        sparse_getrf
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_206_12
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:206:26'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:13:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          scevgep87seq
+  - ArrayName:       U_rcsr
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_getrf.cpp, Line: 168, Column: 31 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 168, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          scevgep88seq
+  - ArrayName:       L_rcsr
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_getrf.cpp, Line: 170, Column: 31 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 170, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          scevgep89seq
+  - ArrayName:       U_rcsr
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       L_rcsr
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          scevgep86seq
+  - ArrayName:       U_rcsr
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_getrf.cpp, Line: 96, Column: 5 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 96, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          scevgep90seq
+  - ArrayName:       U_rcsr
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_getrf.cpp, Line: 95, Column: 5 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 95, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          scevgep91seq
+  - ArrayName:       L_rcsr
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_getrf.cpp, Line: 94, Column: 7 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 94, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          scevgep92seq
+  - ArrayName:       A_rcsr
+  - String:          ' '
+  - BundleName:      a_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_getrf.cpp, Line: 88, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 88, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          U_val85seq
+  - ArrayName:       U_val
+  - String:          ' '
+  - BundleName:      u_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_88_2
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:88:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_getrf.cpp, Line: 84, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 84, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          L_val84seq
+  - ArrayName:       L_val
+  - String:          ' '
+  - BundleName:      l_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_84_1
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:84:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: sparse_getrf.cpp, Line: 206, Column: 26 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_206_12
+  - String:          '''('
+  - LoopLoc:         'sparse_getrf.cpp:206:26'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: sparse_getrf.cpp, Line: 198, Column: 26 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_198_11
+  - String:          '''('
+  - LoopLoc:         'sparse_getrf.cpp:198:26'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_198_11
+  - String:          '> at '
+  - LoopLoc:         'sparse_getrf.cpp:198:26'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sparse_getrf.cpp, Line: 198, Column: 26 }
+Function:        sparse_getrf
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  sparse_getrf
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_198_11
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:198:26'
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 198, Column: 26 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_206_12
+  - String:          '> at '
+  - LoopLoc:         'sparse_getrf.cpp:206:26'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sparse_getrf.cpp, Line: 206, Column: 26 }
+Function:        sparse_getrf
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  sparse_getrf
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_206_12
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:206:26'
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 206, Column: 26 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 84, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      l_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_84_1
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:84:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 84, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_84_1
+  - String:          '''('
+  - LoopLoc:         'sparse_getrf.cpp:84:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      l_val
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 88, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      u_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_88_2
+  - String:          ' '
+  - LoopLoc:         'sparse_getrf.cpp:88:19'
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 88, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_88_2
+  - String:          '''('
+  - LoopLoc:         'sparse_getrf.cpp:88:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      u_val
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 94, Column: 7 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      a_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 94, Column: 7 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      a_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 95, Column: 5 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 95, Column: 5 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      l_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 96, Column: 5 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 96, Column: 5 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      u_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq6
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      l_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      u_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 168, Column: 31 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq7
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 168, Column: 31 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      l_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 170, Column: 31 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq8
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 170, Column: 31 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      u_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq9
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - Function:        sparse_getrf
+    DebugLoc:        { File: sparse_getrf.cpp, Line: 47, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_getrf.cpp, Line: 11, Column: 27 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      u_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFailFullyUnroll
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Cannot unroll loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' ('
+  - LoopLoc:         'sparse_getrf.cpp:13:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sparse_getrf
+  - String:          ''' as it has a variable trip count'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFailFullyUnroll
+DebugLoc:        { File: sparse_getrf.cpp, Line: 13, Column: 19 }
+Function:        sparse_getrf
+Args:            
+  - String:          'Cannot unroll loop '''
+  - LoopName:        VITIS_LOOP_13_1
+  - String:          ''' ('
+  - LoopLoc:         'sparse_getrf.cpp:13:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          sparse_getrf
+  - String:          ''' as it has a variable trip count'
+...

@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+make[1]: Entering directory '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/csim/build'
+   Compiling ../../../../tb_sparse_getrf.cpp in release mode
+   Compiling ../../../../sparse_getrf.cpp in release mode
+   Generating csim.exe
+make[1]: Leaving directory '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/csim/build'
+fixed-panel sparse GETRF: n=12 panel_width=4 A_nnz=40 factor_pattern_nnz=54 symbolic_fill=14
+max factor error=7.45058e-09 max residual=1.6782e-07
+PASS sparse_getrf fixed CSR pattern
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

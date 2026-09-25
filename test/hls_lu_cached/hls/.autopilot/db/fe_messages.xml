@@ -1,0 +1,350 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:4:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="lu_abs" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:10:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="getrf_find_in_row" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:25:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gessm_fixed_csr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:56:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tstrf_fixed_csr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:93:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=L_rcsr offset=slave bundle=l_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:94:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=L_cid offset=slave bundle=l_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:95:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=L_val offset=slave bundle=l_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:96:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=B_rcsr offset=slave bundle=b_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:97:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=B_cid offset=slave bundle=b_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:98:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=B_val offset=slave bundle=b_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:99:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:140:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=U_rcsr offset=slave bundle=u_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:141:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=U_cid offset=slave bundle=u_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:142:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=U_val offset=slave bundle=u_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:143:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=B_rcsr offset=slave bundle=b_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:144:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=B_cid offset=slave bundle=b_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:145:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=B_val offset=slave bundle=b_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:146:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:9:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="cached_abs" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:15:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="cached_fail" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:26:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="clear_factor_cache" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:28:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="clear_factor_cache" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:47:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="clear_block_cache" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:49:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="clear_block_cache" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:240:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=work inter false" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:241:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:243:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_getrf" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:258:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:263:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:285:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=block inter false" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:286:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:288:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_gessm" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:318:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=multiplier complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:319:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=active complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:321:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_tstrf" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:330:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=block inter false" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:331:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:334:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="run_cached_tstrf" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=sparse_lu_shared" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:358:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=A_rcsr offset=slave bundle=a_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:359:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1024 port=A_cid offset=slave bundle=a_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:360:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1024 port=A_val offset=slave bundle=a_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:361:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=L_rcsr offset=slave bundle=l_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:362:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=L_cid offset=slave bundle=l_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:363:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=L_val offset=slave bundle=l_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:364:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=U_rcsr offset=slave bundle=u_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:365:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=U_cid offset=slave bundle=u_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:366:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=U_val offset=slave bundle=u_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:367:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=X_rcsr offset=slave bundle=x_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:368:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=X_cid offset=slave bundle=x_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:369:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=X_val offset=slave bundle=x_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:370:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=operation bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:371:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=n bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:372:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=a_nnz bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:373:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=l_nnz bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:374:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=u_nnz bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:375:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=x_rows bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:376:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=x_cols bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:377:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=x_nnz bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:378:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pivot_eps bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:379:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=status bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:380:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=failed_row bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:381:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:388:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=lower_pos cyclic factor=4 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:389:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=upper_pos cyclic factor=4 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:390:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=factor cyclic factor=4 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:391:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=block_pos cyclic factor=4 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:392:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=block_pos cyclic factor=4 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:393:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=block cyclic factor=4 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:394:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=block cyclic factor=4 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:450:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:232:8" msg_body="Inlining function 'cached_abs(float)' into 'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'">
+        <args Callee="cached_abs(float)" Callee-DebugLoc="File sparse_lu_shared_cached.cpp Line 8 Column 0" Caller="run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)" Caller-DebugLoc="File sparse_lu_shared_cached.cpp Line 193 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:310:7" msg_body="Inlining function 'cached_abs(float)' into 'run_cached_tstrf(unsigned int, unsigned int, float, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'">
+        <args Callee="cached_abs(float)" Callee-DebugLoc="File sparse_lu_shared_cached.cpp Line 8 Column 0" Caller="run_cached_tstrf(unsigned int, unsigned int, float, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)" Caller-DebugLoc="File sparse_lu_shared_cached.cpp Line 305 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:402:3" msg_body="Inlining function 'cached_fail(unsigned int, unsigned int, unsigned int*, unsigned int*)' into 'sparse_lu_shared'">
+        <args Callee="cached_fail(unsigned int, unsigned int, unsigned int*, unsigned int*)" Callee-DebugLoc="File sparse_lu_shared_cached.cpp Line 14 Column 0" Caller="sparse_lu_shared" Caller-DebugLoc="File sparse_lu_shared_cached.cpp Line 356 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:333:23" msg_body="Loop 'VITIS_LOOP_333_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_333_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:287:23" msg_body="Loop 'VITIS_LOOP_287_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_287_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:48:21" msg_body="Loop 'VITIS_LOOP_48_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_48_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:242:23" msg_body="Loop 'VITIS_LOOP_242_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_242_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:27:21" msg_body="Loop 'VITIS_LOOP_27_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_27_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:305:0" msg_body="Unrolling loop 'VITIS_LOOP_320_3' (sparse_lu_shared_cached.cpp:320:22) in function 'run_cached_tstrf' completely with a factor of 4">
+        <args Factor="4" LoopLoc="sparse_lu_shared_cached.cpp:320:22" LoopName="VITIS_LOOP_320_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:305:0" msg_body="Unrolling loop 'VITIS_LOOP_333_5' (sparse_lu_shared_cached.cpp:333:23) in function 'run_cached_tstrf' completely with a factor of 4">
+        <args Factor="4" LoopLoc="sparse_lu_shared_cached.cpp:333:23" LoopName="VITIS_LOOP_333_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:275:0" msg_body="Unrolling loop 'VITIS_LOOP_287_4' (sparse_lu_shared_cached.cpp:287:23) in function 'run_cached_gessm' completely with a factor of 4">
+        <args Factor="4" LoopLoc="sparse_lu_shared_cached.cpp:287:23" LoopName="VITIS_LOOP_287_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:43:0" msg_body="Unrolling loop 'VITIS_LOOP_48_3' (sparse_lu_shared_cached.cpp:48:21) in function 'clear_block_cache' completely with a factor of 4">
+        <args Factor="4" LoopLoc="sparse_lu_shared_cached.cpp:48:21" LoopName="VITIS_LOOP_48_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:193:0" msg_body="Unrolling loop 'VITIS_LOOP_242_6' (sparse_lu_shared_cached.cpp:242:23) in function 'run_cached_getrf' completely with a factor of 4">
+        <args Factor="4" LoopLoc="sparse_lu_shared_cached.cpp:242:23" LoopName="VITIS_LOOP_242_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:22:0" msg_body="Unrolling loop 'VITIS_LOOP_27_3' (sparse_lu_shared_cached.cpp:27:21) in function 'clear_factor_cache' completely with a factor of 4">
+        <args Factor="4" LoopLoc="sparse_lu_shared_cached.cpp:27:21" LoopName="VITIS_LOOP_27_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:193:0" msg_body="Inlining function 'validate_getrf_closure(unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)' into 'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'">
+        <args Callee="validate_getrf_closure(unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)" Callee-DebugLoc="File sparse_lu_shared_cached.cpp Line 127 Column 0" Caller="run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)" Caller-DebugLoc="File sparse_lu_shared_cached.cpp Line 193 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:275:0" msg_body="Inlining function 'validate_gessm_closure(unsigned int, unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)' into 'run_cached_gessm(unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'">
+        <args Callee="validate_gessm_closure(unsigned int, unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)" Callee-DebugLoc="File sparse_lu_shared_cached.cpp Line 148 Column 0" Caller="run_cached_gessm(unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)" Caller-DebugLoc="File sparse_lu_shared_cached.cpp Line 275 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:305:0" msg_body="Inlining function 'validate_tstrf_closure(unsigned int, unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)' into 'run_cached_tstrf(unsigned int, unsigned int, float, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'">
+        <args Callee="validate_tstrf_closure(unsigned int, unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)" Callee-DebugLoc="File sparse_lu_shared_cached.cpp Line 167 Column 0" Caller="run_cached_tstrf(unsigned int, unsigned int, float, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)" Caller-DebugLoc="File sparse_lu_shared_cached.cpp Line 305 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:356:0" msg_body="Inlining function 'clear_factor_cache(unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int)' into 'sparse_lu_shared'">
+        <args Callee="clear_factor_cache(unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int)" Callee-DebugLoc="File sparse_lu_shared_cached.cpp Line 22 Column 0" Caller="sparse_lu_shared" Caller-DebugLoc="File sparse_lu_shared_cached.cpp Line 356 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:356:0" msg_body="Inlining function 'clear_block_cache(unsigned short (*) [64], float (*) [64], unsigned int, unsigned int)' into 'sparse_lu_shared'">
+        <args Callee="clear_block_cache(unsigned short (*) [64], float (*) [64], unsigned int, unsigned int)" Callee-DebugLoc="File sparse_lu_shared_cached.cpp Line 43 Column 0" Caller="sparse_lu_shared" Caller-DebugLoc="File sparse_lu_shared_cached.cpp Line 356 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:356:0" msg_body="Inlining function 'cache_block(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned int*)' into 'sparse_lu_shared'">
+        <args Callee="cache_block(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned int*)" Callee-DebugLoc="File sparse_lu_shared_cached.cpp Line 100 Column 0" Caller="sparse_lu_shared" Caller-DebugLoc="File sparse_lu_shared_cached.cpp Line 356 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:356:0" msg_body="Skipping array undecay on variable length array 'failed_row'.">
+        <args ArrayName="failed_row"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:193:0" msg_body="Skipping array undecay on variable length array 'failed_row'.">
+        <args ArrayName="failed_row"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:193:0" msg_body="Skipping array undecay on variable length array 'L_rcsr'.">
+        <args ArrayName="L_rcsr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:193:0" msg_body="Skipping array undecay on variable length array 'L_cid'.">
+        <args ArrayName="L_cid"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:193:0" msg_body="Skipping array undecay on variable length array 'L_val'.">
+        <args ArrayName="L_val"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:193:0" msg_body="Skipping array undecay on variable length array 'U_rcsr'.">
+        <args ArrayName="U_rcsr"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:193:0" msg_body="Skipping array undecay on variable length array 'U_cid'.">
+        <args ArrayName="U_cid"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="sparse_lu_shared_cached.cpp:193:0" msg_body="Skipping array undecay on variable length array 'U_val'.">
+        <args ArrayName="U_val"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:383:14" msg_body="Applying array_partition to 'lower_pos': Cyclic partitioning with factor 4 on dimension 2.">
+        <args Dim="2" Factor="4" Mode="Cyclic" UOName="lower_pos"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:384:14" msg_body="Applying array_partition to 'upper_pos': Cyclic partitioning with factor 4 on dimension 2.">
+        <args Dim="2" Factor="4" Mode="Cyclic" UOName="upper_pos"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:385:14" msg_body="Applying array_partition to 'factor': Cyclic partitioning with factor 4 on dimension 2.">
+        <args Dim="2" Factor="4" Mode="Cyclic" UOName="factor"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:386:14" msg_body="Applying array_partition to 'block_pos': Cyclic partitioning with factor 4 on dimension 1. Cyclic partitioning with factor 4 on dimension 2.">
+        <args Dim="islist 1 2" Factor="islist 4 4" Mode="islist Cyclic Cyclic" UOName="block_pos"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:387:14" msg_body="Applying array_partition to 'block': Cyclic partitioning with factor 4 on dimension 1. Cyclic partitioning with factor 4 on dimension 2.">
+        <args Dim="islist 1 2" Factor="islist 4 4" Mode="islist Cyclic Cyclic" UOName="block"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:171:22" msg_body="pipeline   1 run_cached_tstrf config_compile -pipeline_loops 64VITIS_LOOP_171_3 sparse_lu_shared_cached.cpp:171:22">
+        <args LoopLoc="sparse_lu_shared_cached.cpp:171:22" LoopLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 171 Column 22" LoopName="VITIS_LOOP_171_3" PragmaFunction="run_cached_tstrf" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:152:22" msg_body="pipeline   1 run_cached_gessm config_compile -pipeline_loops 64VITIS_LOOP_152_3 sparse_lu_shared_cached.cpp:152:22">
+        <args LoopLoc="sparse_lu_shared_cached.cpp:152:22" LoopLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 152 Column 22" LoopName="VITIS_LOOP_152_3" PragmaFunction="run_cached_gessm" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:76:20" msg_body="pipeline   1 cache_triangular_pattern config_compile -pipeline_loops 64VITIS_LOOP_76_2 sparse_lu_shared_cached.cpp:76:20">
+        <args LoopLoc="sparse_lu_shared_cached.cpp:76:20" LoopLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 76 Column 20" LoopName="VITIS_LOOP_76_2" PragmaFunction="cache_triangular_pattern" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:210:21" msg_body="pipeline   1 run_cached_getrf config_compile -pipeline_loops 64VITIS_LOOP_210_2 sparse_lu_shared_cached.cpp:210:21">
+        <args LoopLoc="sparse_lu_shared_cached.cpp:210:21" LoopLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 210 Column 21" LoopName="VITIS_LOOP_210_2" PragmaFunction="run_cached_getrf" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:131:22" msg_body="pipeline   1 run_cached_getrf config_compile -pipeline_loops 64VITIS_LOOP_131_3 sparse_lu_shared_cached.cpp:131:22">
+        <args LoopLoc="sparse_lu_shared_cached.cpp:131:22" LoopLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 131 Column 22" LoopName="VITIS_LOOP_131_3" PragmaFunction="run_cached_getrf" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:110:21" msg_body="pipeline   1 sparse_lu_shared config_compile -pipeline_loops 64VITIS_LOOP_110_2 sparse_lu_shared_cached.cpp:110:21">
+        <args LoopLoc="sparse_lu_shared_cached.cpp:110:21" LoopLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 110 Column 21" LoopName="VITIS_LOOP_110_2" PragmaFunction="sparse_lu_shared" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-437" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:448:20" msg_body="Disabling loop flattening for loop 'VITIS_LOOP_448_1'.">
+        <args LoopName="VITIS_LOOP_448_1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:448:20" msg_body="loop_flatten off  1 sparse_lu_shared sparse_lu_shared_cached.cpp:450:1VITIS_LOOP_448_1 sparse_lu_shared_cached.cpp:448:20">
+        <args LoopLoc="sparse_lu_shared_cached.cpp:448:20" LoopLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 448 Column 20" LoopName="VITIS_LOOP_448_1" PragmaFunction="sparse_lu_shared" PragmaIsAuto="1" PragmaOptions="off" PragmaSrcLoc="sparse_lu_shared_cached.cpp:450:1" PragmaSrcLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 450 Column 1" PragmaType="loop_flatten"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-437" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:279:20" msg_body="Disabling loop flattening for loop 'VITIS_LOOP_279_1'.">
+        <args LoopName="VITIS_LOOP_279_1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:279:20" msg_body="loop_flatten off  1 run_cached_gessm sparse_lu_shared_cached.cpp:286:1VITIS_LOOP_279_1 sparse_lu_shared_cached.cpp:279:20">
+        <args LoopLoc="sparse_lu_shared_cached.cpp:279:20" LoopLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 279 Column 20" LoopName="VITIS_LOOP_279_1" PragmaFunction="run_cached_gessm" PragmaIsAuto="1" PragmaOptions="off" PragmaSrcLoc="sparse_lu_shared_cached.cpp:286:1" PragmaSrcLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 286 Column 1" PragmaType="loop_flatten"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-437" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:314:21" msg_body="Disabling loop flattening for loop 'VITIS_LOOP_314_2'.">
+        <args LoopName="VITIS_LOOP_314_2"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared_cached.cpp:314:21" msg_body="loop_flatten off  1 run_cached_tstrf sparse_lu_shared_cached.cpp:331:1VITIS_LOOP_314_2 sparse_lu_shared_cached.cpp:314:21">
+        <args LoopLoc="sparse_lu_shared_cached.cpp:314:21" LoopLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 314 Column 21" LoopName="VITIS_LOOP_314_2" PragmaFunction="run_cached_tstrf" PragmaIsAuto="1" PragmaOptions="off" PragmaSrcLoc="sparse_lu_shared_cached.cpp:331:1" PragmaSrcLoc-DebugLoc="File sparse_lu_shared_cached.cpp Line 331 Column 1" PragmaType="loop_flatten"/>
+    </msg>
+</xilinx:hls_fe_msgs>

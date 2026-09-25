@@ -1,0 +1,326 @@
+
+
+================================================================
+== Vitis HLS Report for 'run_cached_gessm'
+================================================================
+* Date:           Thu Sep 24 21:48:46 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_cached
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.961 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_149_1   |        ?|        ?|         ?|          -|          -|       ?|        no|
+        | + VITIS_LOOP_150_2  |        ?|        ?|         ?|          -|          -|       ?|        no|
+        |- VITIS_LOOP_279_1   |        ?|        ?|         ?|          -|          -|  1 ~ 64|        no|
+        | + VITIS_LOOP_280_2  |        ?|        ?|         ?|          -|          -|  0 ~ 63|        no|
+        +---------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 8 
+3 --> 4 2 
+4 --> 5 6 
+5 --> 6 
+6 --> 7 3 
+7 --> 
+8 --> 9 7 
+9 --> 10 8 
+10 --> 11 12 
+11 --> 12 
+12 --> 9 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%row = alloca i32 1" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 13 'alloca' 'row' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%x_cols_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %x_cols" [sparse_lu_shared_cached.cpp:270]   --->   Operation 14 'read' 'x_cols_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%n_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %n" [sparse_lu_shared_cached.cpp:270]   --->   Operation 15 'read' 'n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln149 = store i7 0, i7 %row" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 16 'store' 'store_ln149' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln149 = br void %VITIS_LOOP_150_2.i" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 17 'br' 'br_ln149' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.20>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%row_12 = load i7 %row" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 18 'load' 'row_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.77ns)   --->   "%icmp_ln149 = icmp_ult  i7 %row_12, i7 %n_read" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 19 'icmp' 'icmp_ln149' <Predicate = true> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.77ns)   --->   "%add_ln149 = add i7 %row_12, i7 1" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 20 'add' 'add_ln149' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln149 = br i1 %icmp_ln149, void %VITIS_LOOP_280_2.preheader, void %VITIS_LOOP_150_2.i.split" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 21 'br' 'br_ln149' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%trunc_ln149 = trunc i7 %row_12" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 22 'trunc' 'trunc_ln149' <Predicate = (icmp_ln149)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln149_1 = trunc i7 %row_12" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 23 'trunc' 'trunc_ln149_1' <Predicate = (icmp_ln149)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln149 = specloopname void @_ssdm_op_SpecLoopName, void @empty_43" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 24 'specloopname' 'specloopname_ln149' <Predicate = (icmp_ln149)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.77ns)   --->   "%icmp_ln150 = icmp_eq  i7 %row_12, i7 0" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 25 'icmp' 'icmp_ln150' <Predicate = (icmp_ln149)> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln150 = br i1 %icmp_ln150, void %for.body4.i.preheader, void %for.cond.i" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 26 'br' 'br_ln150' <Predicate = (icmp_ln149)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.42ns)   --->   "%br_ln150 = br void %for.body4.i" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 27 'br' 'br_ln150' <Predicate = (icmp_ln149 & !icmp_ln150)> <Delay = 0.42>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%row_8 = alloca i32 1" [sparse_lu_shared_cached.cpp:279]   --->   Operation 28 'alloca' 'row_8' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.42ns)   --->   "%store_ln279 = store i7 0, i7 %row_8" [sparse_lu_shared_cached.cpp:279]   --->   Operation 29 'store' 'store_ln279' <Predicate = (!icmp_ln149)> <Delay = 0.42>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln279 = br void %VITIS_LOOP_280_2" [sparse_lu_shared_cached.cpp:279]   --->   Operation 30 'br' 'br_ln279' <Predicate = (!icmp_ln149)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.23>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%source = phi i6 %add_ln150, void %for.inc26.i, i6 0, void %for.body4.i.preheader" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 31 'phi' 'source' <Predicate = (!icmp_ln150)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln150 = zext i6 %source" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 32 'zext' 'zext_ln150' <Predicate = (!icmp_ln150)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.77ns)   --->   "%icmp_ln150_1 = icmp_ult  i7 %zext_ln150, i7 %row_12" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 33 'icmp' 'icmp_ln150_1' <Predicate = (!icmp_ln150)> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.78ns)   --->   "%add_ln150 = add i6 %source, i6 1" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 34 'add' 'add_ln150' <Predicate = (!icmp_ln150)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln150 = br i1 %icmp_ln150_1, void %for.cond.i.loopexit, void %for.body4.i.split" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 35 'br' 'br_ln150' <Predicate = (!icmp_ln150)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%trunc_ln150 = trunc i6 %source" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 36 'trunc' 'trunc_ln150' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i4 @_ssdm_op_PartSelect.i4.i6.i32.i32, i6 %source, i32 2, i32 5" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 37 'partselect' 'lshr_ln' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_70 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i6.i4, i6 %trunc_ln149, i4 %lshr_ln" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 38 'bitconcatenate' 'tmp_70' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln151 = zext i10 %tmp_70" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 39 'zext' 'zext_ln151' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%lower_pos_0_addr = getelementptr i12 %lower_pos_0, i64 0, i64 %zext_ln151" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 40 'getelementptr' 'lower_pos_0_addr' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%lower_pos_1_addr = getelementptr i12 %lower_pos_1, i64 0, i64 %zext_ln151" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 41 'getelementptr' 'lower_pos_1_addr' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%lower_pos_2_addr = getelementptr i12 %lower_pos_2, i64 0, i64 %zext_ln151" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 42 'getelementptr' 'lower_pos_2_addr' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%lower_pos_3_addr = getelementptr i12 %lower_pos_3, i64 0, i64 %zext_ln151" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 43 'getelementptr' 'lower_pos_3_addr' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 0.00>
+ST_3 : Operation 44 [2/2] (1.23ns)   --->   "%lower_pos_0_load = load i10 %lower_pos_0_addr" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 44 'load' 'lower_pos_0_load' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_3 : Operation 45 [2/2] (1.23ns)   --->   "%lower_pos_1_load = load i10 %lower_pos_1_addr" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 45 'load' 'lower_pos_1_load' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_3 : Operation 46 [2/2] (1.23ns)   --->   "%lower_pos_2_load = load i10 %lower_pos_2_addr" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 46 'load' 'lower_pos_2_load' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_3 : Operation 47 [2/2] (1.23ns)   --->   "%lower_pos_3_load = load i10 %lower_pos_3_addr" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 47 'load' 'lower_pos_3_load' <Predicate = (!icmp_ln150 & icmp_ln150_1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.cond.i"   --->   Operation 48 'br' 'br_ln0' <Predicate = (!icmp_ln150 & !icmp_ln150_1)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.42ns)   --->   "%store_ln149 = store i7 %add_ln149, i7 %row" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 49 'store' 'store_ln149' <Predicate = (!icmp_ln150_1) | (icmp_ln150)> <Delay = 0.42>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln149 = br void %VITIS_LOOP_150_2.i" [sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276]   --->   Operation 50 'br' 'br_ln149' <Predicate = (!icmp_ln150_1) | (icmp_ln150)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 2.57>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%specloopname_ln150 = specloopname void @_ssdm_op_SpecLoopName, void @empty_34" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 51 'specloopname' 'specloopname_ln150' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/2] ( I:1.23ns O:1.23ns )   --->   "%lower_pos_0_load = load i10 %lower_pos_0_addr" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 52 'load' 'lower_pos_0_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_4 : Operation 53 [1/2] ( I:1.23ns O:1.23ns )   --->   "%lower_pos_1_load = load i10 %lower_pos_1_addr" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 53 'load' 'lower_pos_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_4 : Operation 54 [1/2] ( I:1.23ns O:1.23ns )   --->   "%lower_pos_2_load = load i10 %lower_pos_2_addr" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 54 'load' 'lower_pos_2_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_4 : Operation 55 [1/2] ( I:1.23ns O:1.23ns )   --->   "%lower_pos_3_load = load i10 %lower_pos_3_addr" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 55 'load' 'lower_pos_3_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_4 : Operation 56 [1/1] (0.52ns)   --->   "%tmp = sparsemux i12 @_ssdm_op_SparseMux.ap_auto.4i12.i12.i2, i2 0, i12 %lower_pos_0_load, i2 1, i12 %lower_pos_1_load, i2 2, i12 %lower_pos_2_load, i2 3, i12 %lower_pos_3_load, i12 0, i2 %trunc_ln150" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 56 'sparsemux' 'tmp' <Predicate = true> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 57 [1/1] (0.80ns)   --->   "%icmp_ln151 = icmp_eq  i12 %tmp, i12 4095" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 57 'icmp' 'icmp_ln151' <Predicate = true> <Delay = 0.80> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln151 = br i1 %icmp_ln151, void %for.body11.i.preheader, void %for.inc26.i" [sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276]   --->   Operation 58 'br' 'br_ln151' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 1.23>
+ST_5 : Operation 59 [2/2] (1.23ns)   --->   "%targetBlock = call i1 @run_cached_gessm_Pipeline_VITIS_LOOP_152_3, i7 %x_cols_read, i4 %lshr_ln, i13 %block_pos_0_0, i6 %trunc_ln149, i13 %block_pos_0_1, i13 %block_pos_0_2, i13 %block_pos_0_3, i13 %block_pos_1_0, i13 %block_pos_1_1, i13 %block_pos_1_2, i13 %block_pos_1_3, i13 %block_pos_2_0, i13 %block_pos_2_1, i13 %block_pos_2_2, i13 %block_pos_2_3, i13 %block_pos_3_0, i13 %block_pos_3_1, i13 %block_pos_3_2, i13 %block_pos_3_3, i2 %trunc_ln150, i2 %trunc_ln149_1" [sparse_lu_shared_cached.cpp:270]   --->   Operation 59 'call' 'targetBlock' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 3.96>
+ST_6 : Operation 60 [1/2] (3.96ns)   --->   "%targetBlock = call i1 @run_cached_gessm_Pipeline_VITIS_LOOP_152_3, i7 %x_cols_read, i4 %lshr_ln, i13 %block_pos_0_0, i6 %trunc_ln149, i13 %block_pos_0_1, i13 %block_pos_0_2, i13 %block_pos_0_3, i13 %block_pos_1_0, i13 %block_pos_1_1, i13 %block_pos_1_2, i13 %block_pos_1_3, i13 %block_pos_2_0, i13 %block_pos_2_1, i13 %block_pos_2_2, i13 %block_pos_2_3, i13 %block_pos_3_0, i13 %block_pos_3_1, i13 %block_pos_3_2, i13 %block_pos_3_3, i2 %trunc_ln150, i2 %trunc_ln149_1" [sparse_lu_shared_cached.cpp:270]   --->   Operation 60 'call' 'targetBlock' <Predicate = (!icmp_ln151)> <Delay = 3.96> <CoreType = "Generic">   --->   Generic Core
+ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%br_ln270 = br i1 %targetBlock, void %_ZL22validate_gessm_closurejjPA64_tS0_Pj.exit.thread, void %for.inc26.i" [sparse_lu_shared_cached.cpp:270]   --->   Operation 61 'br' 'br_ln270' <Predicate = (!icmp_ln151)> <Delay = 0.00>
+ST_6 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln155 = zext i6 %trunc_ln149" [sparse_lu_shared_cached.cpp:155->sparse_lu_shared_cached.cpp:276]   --->   Operation 62 'zext' 'zext_ln155' <Predicate = (!icmp_ln151 & !targetBlock)> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%write_ln155 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %failed_row, i32 %zext_ln155" [sparse_lu_shared_cached.cpp:155->sparse_lu_shared_cached.cpp:276]   --->   Operation 63 'write' 'write_ln155' <Predicate = (!icmp_ln151 & !targetBlock)> <Delay = 0.00>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%br_ln150 = br void %for.body4.i" [sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276]   --->   Operation 64 'br' 'br_ln150' <Predicate = (targetBlock) | (icmp_ln151)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 0.42>
+ST_7 : Operation 65 [1/1] (0.42ns)   --->   "%br_ln278 = br void %cleanup" [sparse_lu_shared_cached.cpp:278]   --->   Operation 65 'br' 'br_ln278' <Predicate = (icmp_ln149)> <Delay = 0.42>
+ST_7 : Operation 66 [1/1] (0.00ns)   --->   "%retval_0 = phi i1 1, void %_ZL22validate_gessm_closurejjPA64_tS0_Pj.exit.thread, i1 0, void %cleanup.loopexit"   --->   Operation 66 'phi' 'retval_0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%ret_ln297 = ret i1 %retval_0" [sparse_lu_shared_cached.cpp:297]   --->   Operation 67 'ret' 'ret_ln297' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 2> <Delay = 1.20>
+ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%row_13 = load i7 %row_8" [sparse_lu_shared_cached.cpp:279]   --->   Operation 68 'load' 'row_13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 69 [1/1] (0.77ns)   --->   "%icmp_ln279 = icmp_eq  i7 %row_13, i7 %n_read" [sparse_lu_shared_cached.cpp:279]   --->   Operation 69 'icmp' 'icmp_ln279' <Predicate = true> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 70 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 64, i64 0"   --->   Operation 70 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 71 [1/1] (0.77ns)   --->   "%add_ln279 = add i7 %row_13, i7 1" [sparse_lu_shared_cached.cpp:279]   --->   Operation 71 'add' 'add_ln279' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln279 = br i1 %icmp_ln279, void %VITIS_LOOP_280_2.split, void %cleanup.loopexit" [sparse_lu_shared_cached.cpp:279]   --->   Operation 72 'br' 'br_ln279' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 73 [1/1] (0.00ns)   --->   "%trunc_ln279 = trunc i7 %row_13" [sparse_lu_shared_cached.cpp:279]   --->   Operation 73 'trunc' 'trunc_ln279' <Predicate = (!icmp_ln279)> <Delay = 0.00>
+ST_8 : Operation 74 [1/1] (0.00ns)   --->   "%trunc_ln279_1 = trunc i7 %row_13" [sparse_lu_shared_cached.cpp:279]   --->   Operation 74 'trunc' 'trunc_ln279_1' <Predicate = (!icmp_ln279)> <Delay = 0.00>
+ST_8 : Operation 75 [1/1] (0.00ns)   --->   "%specloopname_ln279 = specloopname void @_ssdm_op_SpecLoopName, void @empty_49" [sparse_lu_shared_cached.cpp:279]   --->   Operation 75 'specloopname' 'specloopname_ln279' <Predicate = (!icmp_ln279)> <Delay = 0.00>
+ST_8 : Operation 76 [1/1] (0.42ns)   --->   "%br_ln280 = br void %for.body5" [sparse_lu_shared_cached.cpp:280]   --->   Operation 76 'br' 'br_ln280' <Predicate = (!icmp_ln279)> <Delay = 0.42>
+ST_8 : Operation 77 [1/1] (0.42ns)   --->   "%br_ln0 = br void %cleanup"   --->   Operation 77 'br' 'br_ln0' <Predicate = (icmp_ln279)> <Delay = 0.42>
+
+State 9 <SV = 3> <Delay = 1.23>
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "%source_1 = phi i6 0, void %VITIS_LOOP_280_2.split, i6 %add_ln280, void %for.inc43" [sparse_lu_shared_cached.cpp:280]   --->   Operation 78 'phi' 'source_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln280 = zext i6 %source_1" [sparse_lu_shared_cached.cpp:280]   --->   Operation 79 'zext' 'zext_ln280' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 80 [1/1] (0.77ns)   --->   "%icmp_ln280 = icmp_eq  i7 %zext_ln280, i7 %row_13" [sparse_lu_shared_cached.cpp:280]   --->   Operation 80 'icmp' 'icmp_ln280' <Predicate = true> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 81 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 63, i64 0"   --->   Operation 81 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 82 [1/1] (0.78ns)   --->   "%add_ln280 = add i6 %source_1, i6 1" [sparse_lu_shared_cached.cpp:280]   --->   Operation 82 'add' 'add_ln280' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 83 [1/1] (0.00ns)   --->   "%br_ln280 = br i1 %icmp_ln280, void %for.body5.split, void %for.inc46" [sparse_lu_shared_cached.cpp:280]   --->   Operation 83 'br' 'br_ln280' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 84 [1/1] (0.00ns)   --->   "%trunc_ln280 = trunc i6 %source_1" [sparse_lu_shared_cached.cpp:280]   --->   Operation 84 'trunc' 'trunc_ln280' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 85 [1/1] (0.00ns)   --->   "%lshr_ln4 = partselect i4 @_ssdm_op_PartSelect.i4.i6.i32.i32, i6 %source_1, i32 2, i32 5" [sparse_lu_shared_cached.cpp:280]   --->   Operation 85 'partselect' 'lshr_ln4' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_71 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i6.i4, i6 %trunc_ln279, i4 %lshr_ln4" [sparse_lu_shared_cached.cpp:281]   --->   Operation 86 'bitconcatenate' 'tmp_71' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 87 [1/1] (0.00ns)   --->   "%zext_ln281 = zext i10 %tmp_71" [sparse_lu_shared_cached.cpp:281]   --->   Operation 87 'zext' 'zext_ln281' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 88 [1/1] (0.00ns)   --->   "%lower_pos_0_addr_2 = getelementptr i12 %lower_pos_0, i64 0, i64 %zext_ln281" [sparse_lu_shared_cached.cpp:281]   --->   Operation 88 'getelementptr' 'lower_pos_0_addr_2' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 89 [1/1] (0.00ns)   --->   "%lower_pos_1_addr_2 = getelementptr i12 %lower_pos_1, i64 0, i64 %zext_ln281" [sparse_lu_shared_cached.cpp:281]   --->   Operation 89 'getelementptr' 'lower_pos_1_addr_2' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 90 [1/1] (0.00ns)   --->   "%lower_pos_2_addr_2 = getelementptr i12 %lower_pos_2, i64 0, i64 %zext_ln281" [sparse_lu_shared_cached.cpp:281]   --->   Operation 90 'getelementptr' 'lower_pos_2_addr_2' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 91 [1/1] (0.00ns)   --->   "%lower_pos_3_addr_2 = getelementptr i12 %lower_pos_3, i64 0, i64 %zext_ln281" [sparse_lu_shared_cached.cpp:281]   --->   Operation 91 'getelementptr' 'lower_pos_3_addr_2' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 92 [1/1] (0.00ns)   --->   "%factor_0_addr = getelementptr i32 %factor_0, i64 0, i64 %zext_ln281" [sparse_lu_shared_cached.cpp:282]   --->   Operation 92 'getelementptr' 'factor_0_addr' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 93 [1/1] (0.00ns)   --->   "%factor_1_addr = getelementptr i32 %factor_1, i64 0, i64 %zext_ln281" [sparse_lu_shared_cached.cpp:282]   --->   Operation 93 'getelementptr' 'factor_1_addr' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 94 [1/1] (0.00ns)   --->   "%factor_2_addr = getelementptr i32 %factor_2, i64 0, i64 %zext_ln281" [sparse_lu_shared_cached.cpp:282]   --->   Operation 94 'getelementptr' 'factor_2_addr' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 95 [1/1] (0.00ns)   --->   "%factor_3_addr = getelementptr i32 %factor_3, i64 0, i64 %zext_ln281" [sparse_lu_shared_cached.cpp:282]   --->   Operation 95 'getelementptr' 'factor_3_addr' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_9 : Operation 96 [2/2] (1.23ns)   --->   "%lower_pos_0_load_2 = load i10 %lower_pos_0_addr_2" [sparse_lu_shared_cached.cpp:281]   --->   Operation 96 'load' 'lower_pos_0_load_2' <Predicate = (!icmp_ln280)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_9 : Operation 97 [2/2] (1.23ns)   --->   "%lower_pos_1_load_2 = load i10 %lower_pos_1_addr_2" [sparse_lu_shared_cached.cpp:281]   --->   Operation 97 'load' 'lower_pos_1_load_2' <Predicate = (!icmp_ln280)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_9 : Operation 98 [2/2] (1.23ns)   --->   "%lower_pos_2_load_2 = load i10 %lower_pos_2_addr_2" [sparse_lu_shared_cached.cpp:281]   --->   Operation 98 'load' 'lower_pos_2_load_2' <Predicate = (!icmp_ln280)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_9 : Operation 99 [2/2] (1.23ns)   --->   "%lower_pos_3_load_2 = load i10 %lower_pos_3_addr_2" [sparse_lu_shared_cached.cpp:281]   --->   Operation 99 'load' 'lower_pos_3_load_2' <Predicate = (!icmp_ln280)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_9 : Operation 100 [1/1] (0.42ns)   --->   "%store_ln279 = store i7 %add_ln279, i7 %row_8" [sparse_lu_shared_cached.cpp:279]   --->   Operation 100 'store' 'store_ln279' <Predicate = (icmp_ln280)> <Delay = 0.42>
+ST_9 : Operation 101 [1/1] (0.00ns)   --->   "%br_ln279 = br void %VITIS_LOOP_280_2" [sparse_lu_shared_cached.cpp:279]   --->   Operation 101 'br' 'br_ln279' <Predicate = (icmp_ln280)> <Delay = 0.00>
+
+State 10 <SV = 4> <Delay = 2.57>
+ST_10 : Operation 102 [1/1] (0.00ns)   --->   "%specloopname_ln280 = specloopname void @_ssdm_op_SpecLoopName, void @empty_47" [sparse_lu_shared_cached.cpp:280]   --->   Operation 102 'specloopname' 'specloopname_ln280' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 103 [1/2] ( I:1.23ns O:1.23ns )   --->   "%lower_pos_0_load_2 = load i10 %lower_pos_0_addr_2" [sparse_lu_shared_cached.cpp:281]   --->   Operation 103 'load' 'lower_pos_0_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_10 : Operation 104 [1/2] ( I:1.23ns O:1.23ns )   --->   "%lower_pos_1_load_2 = load i10 %lower_pos_1_addr_2" [sparse_lu_shared_cached.cpp:281]   --->   Operation 104 'load' 'lower_pos_1_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_10 : Operation 105 [1/2] ( I:1.23ns O:1.23ns )   --->   "%lower_pos_2_load_2 = load i10 %lower_pos_2_addr_2" [sparse_lu_shared_cached.cpp:281]   --->   Operation 105 'load' 'lower_pos_2_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_10 : Operation 106 [1/2] ( I:1.23ns O:1.23ns )   --->   "%lower_pos_3_load_2 = load i10 %lower_pos_3_addr_2" [sparse_lu_shared_cached.cpp:281]   --->   Operation 106 'load' 'lower_pos_3_load_2' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_10 : Operation 107 [1/1] (0.52ns)   --->   "%tmp_s = sparsemux i12 @_ssdm_op_SparseMux.ap_auto.4i12.i12.i2, i2 0, i12 %lower_pos_0_load_2, i2 1, i12 %lower_pos_1_load_2, i2 2, i12 %lower_pos_2_load_2, i2 3, i12 %lower_pos_3_load_2, i12 0, i2 %trunc_ln280" [sparse_lu_shared_cached.cpp:281]   --->   Operation 107 'sparsemux' 'tmp_s' <Predicate = true> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 108 [1/1] (0.80ns)   --->   "%icmp_ln281 = icmp_eq  i12 %tmp_s, i12 4095" [sparse_lu_shared_cached.cpp:281]   --->   Operation 108 'icmp' 'icmp_ln281' <Predicate = true> <Delay = 0.80> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 109 [1/1] (0.00ns)   --->   "%br_ln281 = br i1 %icmp_ln281, void %VITIS_LOOP_283_3, void %for.inc43" [sparse_lu_shared_cached.cpp:281]   --->   Operation 109 'br' 'br_ln281' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 110 [2/2] (1.23ns)   --->   "%factor_0_load = load i10 %factor_0_addr" [sparse_lu_shared_cached.cpp:282]   --->   Operation 110 'load' 'factor_0_load' <Predicate = (!icmp_ln281 & trunc_ln280 == 0)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_10 : Operation 111 [2/2] (1.23ns)   --->   "%factor_1_load = load i10 %factor_1_addr" [sparse_lu_shared_cached.cpp:282]   --->   Operation 111 'load' 'factor_1_load' <Predicate = (!icmp_ln281 & trunc_ln280 == 1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_10 : Operation 112 [2/2] (1.23ns)   --->   "%factor_2_load = load i10 %factor_2_addr" [sparse_lu_shared_cached.cpp:282]   --->   Operation 112 'load' 'factor_2_load' <Predicate = (!icmp_ln281 & trunc_ln280 == 2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_10 : Operation 113 [2/2] (1.23ns)   --->   "%factor_3_load = load i10 %factor_3_addr" [sparse_lu_shared_cached.cpp:282]   --->   Operation 113 'load' 'factor_3_load' <Predicate = (!icmp_ln281 & trunc_ln280 == 3)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+
+State 11 <SV = 5> <Delay = 2.99>
+ST_11 : Operation 114 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_0_load = load i10 %factor_0_addr" [sparse_lu_shared_cached.cpp:282]   --->   Operation 114 'load' 'factor_0_load' <Predicate = (trunc_ln280 == 0)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_11 : Operation 115 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_1_load = load i10 %factor_1_addr" [sparse_lu_shared_cached.cpp:282]   --->   Operation 115 'load' 'factor_1_load' <Predicate = (trunc_ln280 == 1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_11 : Operation 116 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_2_load = load i10 %factor_2_addr" [sparse_lu_shared_cached.cpp:282]   --->   Operation 116 'load' 'factor_2_load' <Predicate = (trunc_ln280 == 2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_11 : Operation 117 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_3_load = load i10 %factor_3_addr" [sparse_lu_shared_cached.cpp:282]   --->   Operation 117 'load' 'factor_3_load' <Predicate = (trunc_ln280 == 3)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_11 : Operation 118 [1/1] (0.52ns)   --->   "%multiplier = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.4float.float.i2, i2 0, i32 %factor_0_load, i2 1, i32 %factor_1_load, i2 2, i32 %factor_2_load, i2 3, i32 %factor_3_load, i32 <undef>, i2 %trunc_ln280" [sparse_lu_shared_cached.cpp:282]   --->   Operation 118 'sparsemux' 'multiplier' <Predicate = true> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 119 [2/2] (1.23ns)   --->   "%call_ln270 = call void @run_cached_gessm_Pipeline_VITIS_LOOP_283_3, i7 %x_cols_read, i4 %lshr_ln4, i13 %block_pos_0_0, i13 %block_pos_0_1, i13 %block_pos_0_2, i13 %block_pos_0_3, i13 %block_pos_1_0, i13 %block_pos_1_1, i13 %block_pos_1_2, i13 %block_pos_1_3, i13 %block_pos_2_0, i13 %block_pos_2_1, i13 %block_pos_2_2, i13 %block_pos_2_3, i13 %block_pos_3_0, i13 %block_pos_3_1, i13 %block_pos_3_2, i13 %block_pos_3_3, i32 %block_0_0, i6 %trunc_ln279, i32 %block_0_1, i32 %block_0_2, i32 %block_0_3, i32 %block_1_0, i32 %block_1_1, i32 %block_1_2, i32 %block_1_3, i32 %block_2_0, i32 %block_2_1, i32 %block_2_2, i32 %block_2_3, i32 %block_3_0, i32 %block_3_1, i32 %block_3_2, i32 %block_3_3, i2 %trunc_ln280, i32 %multiplier, i2 %trunc_ln279_1" [sparse_lu_shared_cached.cpp:270]   --->   Operation 119 'call' 'call_ln270' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Generic Core
+
+State 12 <SV = 6> <Delay = 0.00>
+ST_12 : Operation 120 [1/2] (0.00ns)   --->   "%call_ln270 = call void @run_cached_gessm_Pipeline_VITIS_LOOP_283_3, i7 %x_cols_read, i4 %lshr_ln4, i13 %block_pos_0_0, i13 %block_pos_0_1, i13 %block_pos_0_2, i13 %block_pos_0_3, i13 %block_pos_1_0, i13 %block_pos_1_1, i13 %block_pos_1_2, i13 %block_pos_1_3, i13 %block_pos_2_0, i13 %block_pos_2_1, i13 %block_pos_2_2, i13 %block_pos_2_3, i13 %block_pos_3_0, i13 %block_pos_3_1, i13 %block_pos_3_2, i13 %block_pos_3_3, i32 %block_0_0, i6 %trunc_ln279, i32 %block_0_1, i32 %block_0_2, i32 %block_0_3, i32 %block_1_0, i32 %block_1_1, i32 %block_1_2, i32 %block_1_3, i32 %block_2_0, i32 %block_2_1, i32 %block_2_2, i32 %block_2_3, i32 %block_3_0, i32 %block_3_1, i32 %block_3_2, i32 %block_3_3, i2 %trunc_ln280, i32 %multiplier, i2 %trunc_ln279_1" [sparse_lu_shared_cached.cpp:270]   --->   Operation 120 'call' 'call_ln270' <Predicate = (!icmp_ln281)> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_12 : Operation 121 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc43"   --->   Operation 121 'br' 'br_ln0' <Predicate = (!icmp_ln281)> <Delay = 0.00>
+ST_12 : Operation 122 [1/1] (0.00ns)   --->   "%br_ln280 = br void %for.body5" [sparse_lu_shared_cached.cpp:280]   --->   Operation 122 'br' 'br_ln280' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	'alloca' operation 7 bit ('row', sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276) [44]  (0.000 ns)
+	'store' operation ('store_ln149', sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276) of constant 0 7 bit on local variable 'row', sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276 [47]  (0.427 ns)
+
+ <State 2>: 1.200ns
+The critical path consists of the following:
+	'load' operation 7 bit ('row', sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276) on local variable 'row', sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276 [50]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln149', sparse_lu_shared_cached.cpp:149->sparse_lu_shared_cached.cpp:276) [51]  (0.773 ns)
+	'store' operation ('store_ln279', sparse_lu_shared_cached.cpp:279) of constant 0 7 bit on local variable 'row', sparse_lu_shared_cached.cpp:279 [101]  (0.427 ns)
+
+ <State 3>: 1.237ns
+The critical path consists of the following:
+	'phi' operation 6 bit ('source', sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276) with incoming values : ('add_ln150', sparse_lu_shared_cached.cpp:150->sparse_lu_shared_cached.cpp:276) [63]  (0.000 ns)
+	'getelementptr' operation 10 bit ('lower_pos_0_addr', sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276) [74]  (0.000 ns)
+	'load' operation 12 bit ('lower_pos_0_load', sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276) on array 'lower_pos_0' [78]  (1.237 ns)
+
+ <State 4>: 2.571ns
+The critical path consists of the following:
+	'load' operation 12 bit ('lower_pos_0_load', sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276) on array 'lower_pos_0' [78]  (1.237 ns)
+	'sparsemux' operation 12 bit ('tmp', sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276) [82]  (0.525 ns)
+	'icmp' operation 1 bit ('icmp_ln151', sparse_lu_shared_cached.cpp:151->sparse_lu_shared_cached.cpp:276) [83]  (0.809 ns)
+
+ <State 5>: 1.237ns
+The critical path consists of the following:
+	'call' operation 1 bit ('targetBlock', sparse_lu_shared_cached.cpp:270) to 'run_cached_gessm_Pipeline_VITIS_LOOP_152_3' [86]  (1.237 ns)
+
+ <State 6>: 3.961ns
+The critical path consists of the following:
+	'call' operation 1 bit ('targetBlock', sparse_lu_shared_cached.cpp:270) to 'run_cached_gessm_Pipeline_VITIS_LOOP_152_3' [86]  (3.961 ns)
+
+ <State 7>: 0.427ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation 1 bit ('retval_0') [158]  (0.427 ns)
+	'br' operation ('br_ln278', sparse_lu_shared_cached.cpp:278) [91]  (0.427 ns)
+	'phi' operation 1 bit ('retval_0') [158]  (0.000 ns)
+
+ <State 8>: 1.200ns
+The critical path consists of the following:
+	'load' operation 7 bit ('row', sparse_lu_shared_cached.cpp:279) on local variable 'row', sparse_lu_shared_cached.cpp:279 [104]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln279', sparse_lu_shared_cached.cpp:279) [105]  (0.773 ns)
+	blocking operation 0.427 ns on control path)
+
+ <State 9>: 1.237ns
+The critical path consists of the following:
+	'phi' operation 6 bit ('source', sparse_lu_shared_cached.cpp:280) with incoming values : ('add_ln280', sparse_lu_shared_cached.cpp:280) [115]  (0.000 ns)
+	'getelementptr' operation 10 bit ('lower_pos_0_addr_2', sparse_lu_shared_cached.cpp:281) [127]  (0.000 ns)
+	'load' operation 12 bit ('lower_pos_0_load_2', sparse_lu_shared_cached.cpp:281) on array 'lower_pos_0' [135]  (1.237 ns)
+
+ <State 10>: 2.571ns
+The critical path consists of the following:
+	'load' operation 12 bit ('lower_pos_0_load_2', sparse_lu_shared_cached.cpp:281) on array 'lower_pos_0' [135]  (1.237 ns)
+	'sparsemux' operation 12 bit ('tmp_s', sparse_lu_shared_cached.cpp:281) [139]  (0.525 ns)
+	'icmp' operation 1 bit ('icmp_ln281', sparse_lu_shared_cached.cpp:281) [140]  (0.809 ns)
+
+ <State 11>: 2.999ns
+The critical path consists of the following:
+	'load' operation 32 bit ('factor_0_load', sparse_lu_shared_cached.cpp:282) on array 'factor_0' [143]  (1.237 ns)
+	'sparsemux' operation 32 bit ('multiplier', sparse_lu_shared_cached.cpp:282) [147]  (0.525 ns)
+	'call' operation ('call_ln270', sparse_lu_shared_cached.cpp:270) to 'run_cached_gessm_Pipeline_VITIS_LOOP_283_3' [148]  (1.237 ns)
+
+ <State 12>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

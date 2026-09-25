@@ -1,0 +1,99 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                       | Instructions | Description                                                                            |
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                            | 65,321       | After all functions are compiled and linked into a single design                       |
+|               |                            |              |                                                                                        |
+| Unroll/Inline |                            |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                 | 45,807       | user unroll pragmas are applied                                                        |
+|               | (2) simplification         | 27,422       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                 | 27,351       | user inline pragmas are applied                                                        |
+|               | (4) simplification         | 26,932       | simplification of applied user inline pragmas                                          |
+|               |                            |              |                                                                                        |
+| Array/Struct  |                            |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition        | 31,712       | user array partition pragmas are applied                                               |
+|               | (2) simplification         | 25,476       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate | 26,559       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape          | 56,754       | apply array reshape pragmas                                                            |
+|               | (5) access patterns        | 58,369       | array access pattern optmizations                                                      |
+|               |                            |              |                                                                                        |
+| Performance   |                            |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification    | 57,492       | loop and instruction simplification                                                    |
+|               | (2) parallelization        | 56,686       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition        | 56,648       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification         | 56,648       | simplification of design after performance transformations                             |
+|               |                            |              |                                                                                        |
+| HW Transforms |                            |              | After hardware transfomations                                                          |
+|               | (1) lowering               | 55,443       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations          | 62,158       | high level synthesis optimizations                                                     |
++---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++-------------------------------------+---------------------+------------------+------------------+-------------------+-------------------+-------------------+
+| Function                            | Location            | Compile/Link     | Unroll/Inline    | Array/Struct      | Performance       | HW Transforms     |
++-------------------------------------+---------------------+------------------+------------------+-------------------+-------------------+-------------------+
+| + spmm                              | core.cpp:155        | 65,321           | 26,932           | 58,369            | 56,648            | 62,158            |
+|    A_row_reader                     | task_scheduler.h:6  |    43            |    25            |    42             |    42             |    42             |
+|  + prepare_b_rcsr                   | rcache.cpp:197      |   226            |    39            |    42             |    41             |    51             |
+|     packed_row_ptr                  | rcache.cpp:189      |   124 (2 calls)  |                  |                   |                   |                   |
+|    A_element_filter                 | task_scheduler.h:56 |   147            |    47            |   116             |   116             |   120             |
+|    A_element_distributor            | task_scheduler.h:84 |   673            |   296            | 1,034             | 1,029             |   939             |
+|  + rcrequest_manager                | rcache.cpp:217      | 4,008 (4 calls)  | 1,924 (4 calls)  | 9,832 (4 calls)   | 9,628 (4 calls)   | 10,908 (4 calls)  |
+|     rrequest_splitter               | rcache.cpp:4        |   400 (4 calls)  |   200 (4 calls)  | 1,556 (4 calls)   | 1,536 (4 calls)   | 1,740 (4 calls)   |
+|     rrequest_manager                | rcache.cpp:35       |   408 (4 calls)  |   164 (4 calls)  | 1,524 (4 calls)   | 1,508 (4 calls)   | 1,668 (4 calls)   |
+|     rschedule_access                | rcache.cpp:62       | 1,576 (4 calls)  |   376 (4 calls)  | 1,880 (4 calls)   | 1,844 (4 calls)   | 2,068 (4 calls)   |
+|     rrequest_merger                 | rcache.cpp:118      |   372 (4 calls)  |   868 (4 calls)  | 3,188 (4 calls)   | 3,084 (4 calls)   | 3,580 (4 calls)   |
+|     rcollector                      | rcache.cpp:147      | 1,048 (4 calls)  |   232 (4 calls)  | 1,600 (4 calls)   | 1,572 (4 calls)   | 1,748 (4 calls)   |
+|    merge_4_to_1_rrequest            | util.cpp:4          |   244            |   421            | 1,471             | 1,445             | 1,645             |
+|    request_to_rbanks                | rcache.cpp:241      |   107            |   172            |   888             |   505             |   603             |
+|  + rcache                           | rcache.cpp:286      | 6,008 (4 calls)  | 3,088 (4 calls)  | 2,760 (4 calls)   | 2,728 (4 calls)   | 2,960 (4 calls)   |
+|     find_eviction                   | util.cpp:118        |   976 (4 calls)  |                  |                   |                   |                   |
+|    distributer_mi                   | core.cpp:116        |   840 (4 calls)  |   192 (4 calls)  |   536 (4 calls)   |   528 (4 calls)   |   548 (4 calls)   |
+|    merge_4_to_1_mi                  | core.cpp:74         |   832 (4 calls)  |   288 (4 calls)  |   480 (4 calls)   |   480 (4 calls)   |   576 (4 calls)   |
+|    distributer_rresponse            | util.cpp:88         |   840 (4 calls)  |   272 (4 calls)  |   960 (4 calls)   |   944 (4 calls)   |   988 (4 calls)   |
+|    merge_4_to_1_rresponse           | util.cpp:659        |   692 (4 calls)  |   368 (4 calls)  | 1,260 (4 calls)   | 1,260 (4 calls)   | 1,300 (4 calls)   |
+|    from_rcache_result_to_B_vcre...  | util.cpp:152        |   656 (4 calls)  |   224 (4 calls)  |   824 (4 calls)   |   812 (4 calls)   | 1,028 (4 calls)   |
+|    generate_data                    | core.cpp:41         |   652 (4 calls)  |   228 (4 calls)  |   476 (4 calls)   |   476 (4 calls)   |   468 (4 calls)   |
+|  + vcrequest_manager                | vccache.cpp:199     | 7,752 (4 calls)  | 3,128 (4 calls)  | 8,652 (4 calls)   | 8,392 (4 calls)   | 8,911 (4 calls)   |
+|     vcrequest_splitter              | vccache.cpp:4       |   488 (4 calls)  |   192 (4 calls)  |   396 (4 calls)   |   384 (4 calls)   |   504 (4 calls)   |
+|     request_manager                 | vccache.cpp:43      | 1,360 (8 calls)  |   424 (8 calls)  | 1,512 (8 calls)   | 1,488 (8 calls)   | 1,383 (8 calls)   |
+|     schedule_access                 | vccache.cpp:74      | 2,600 (8 calls)  | 1,112 (8 calls)  | 2,512 (8 calls)   | 2,376 (8 calls)   | 2,408 (8 calls)   |
+|     request_merger                  | vccache.cpp:145     |   744 (8 calls)  |   832 (8 calls)  | 3,384 (8 calls)   | 3,304 (8 calls)   | 3,648 (8 calls)   |
+|     collector                       | vccache.cpp:174     | 2,112 (8 calls)  |   400 (8 calls)  |   680 (8 calls)   |   672 (8 calls)   |   752 (8 calls)   |
+|    request_to_vcbanks               | vccache.cpp:233     |   928 (8 calls)  |   672 (8 calls)  | 2,744 (8 calls)   | 2,152 (8 calls)   | 2,408 (8 calls)   |
+|    merge_4_to_1_vcrequest           | util.cpp:193        |   976 (4 calls)  |   912 (4 calls)  | 3,308 (4 calls)   | 3,268 (4 calls)   | 3,560 (4 calls)   |
+|  + vcache                           | vccache.cpp:276     | 8,188 (2 calls)  | 2,162 (2 calls)  | 2,316 (2 calls)   | 2,302 (2 calls)   | 2,218 (2 calls)   |
+|     find_eviction                   | util.cpp:118        |   488 (2 calls)  |                  |                   |                   |                   |
+|  + ccache                           | vccache.cpp:567     | 8,188 (2 calls)  | 2,162 (2 calls)  | 2,316 (2 calls)   | 2,302 (2 calls)   | 2,218 (2 calls)   |
+|     find_eviction                   | util.cpp:118        |   488 (2 calls)  |                  |                   |                   |                   |
+|    merge_2_to_1_vcresponse          | util.cpp:701        |   260 (2 calls)  |   152 (2 calls)  |   354 (2 calls)   |   350 (2 calls)   |   326 (2 calls)   |
+|    distributer_vcresponse           | util.cpp:278        |   420 (2 calls)  |   106 (2 calls)  |   322 (2 calls)   |   318 (2 calls)   |   288 (2 calls)   |
+|    merge_2_to_1_vcresult            | util.cpp:519        |   260 (2 calls)  |   166 (2 calls)  |   432 (2 calls)   |   426 (2 calls)   |   408 (2 calls)   |
+|    distributer_vcresult             | util.cpp:345        |   384 (2 calls)  |    60 (2 calls)  |   106 (2 calls)   |   106 (2 calls)   |   122 (2 calls)   |
+|  + pe                               | pe.cpp:3            | 4,884 (4 calls)  |   516 (4 calls)  | 1,268 (4 calls)   | 1,264 (4 calls)   | 1,160 (4 calls)   |
+|     Reinterpret<float, ap_uint<3... | core.h:222          |   352 (16 calls) |                  |                   |                   |                   |
+|     Reinterpret<ap_uint<32>, flo... | core.h:230          |   416 (16 calls) |                  |                   |                   |                   |
+|  + convert_pblock_to_mergeitem      | util.cpp:900        | 1,012 (4 calls)  |   168 (4 calls)  |   424 (4 calls)   |   420 (4 calls)   |   392 (4 calls)   |
+|     Reinterpret<float, ap_uint<3... | core.h:222          |    88 (4 calls)  |                  |                   |                   |                   |
+|  + merger                           | pe.cpp:328          | 13,408 (4 calls) | 8,088 (4 calls)  | 13,880 (4 calls)  | 13,800 (4 calls)  | 16,076 (4 calls)  |
+|     merge_controller                | pe.cpp:96           |   208 (4 calls)  |    64 (4 calls)  |   176 (4 calls)   |   176 (4 calls)   |   208 (4 calls)   |
+|   + merge_two_sub                   | pe.cpp:188          | 13,156 (4 calls) | 8,000 (4 calls)  | 13,680 (4 calls)  | 13,600 (4 calls)  | 15,836 (4 calls)  |
+|      flush_three                    | pe.cpp:167          | 2,928 (16 calls) | 1,584 (16 calls) | 2,464 (16 calls)  | 2,464 (16 calls)  | 2,816 (16 calls)  |
+|      _merge_temp                    | pe.cpp:110          | 8,520 (60 calls) | 5,640 (60 calls) | 10,260 (60 calls) | 10,200 (60 calls) | 12,060 (60 calls) |
+|    sub_final_merger                 | util.cpp:829        |   448 (2 calls)  |   226 (2 calls)  |   522 (2 calls)   |   518 (2 calls)   |   598 (2 calls)   |
+|    final_merger                     | util.cpp:756        |   246            |   120            |   252             |   249             |   299             |
+|    write_C_sub                      | util.cpp:971        |   129            |    59            |    76             |    71             |   101             |
++-------------------------------------+---------------------+------------------+------------------+-------------------+-------------------+-------------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

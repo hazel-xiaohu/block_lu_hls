@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Sep 25 00:16:49 2026
+# Process ID         : 66655
+# Current directory  : /home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/ip_tmp
+# Command line       : vivado  -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
+# Log file           : /home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/ip_tmp/vivado.log
+# Journal file       : /home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/ip_tmp/vivado.jou
+# Running On         : xiaohu
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.3 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13500H
+# CPU Frequency      : 3187.201 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16473 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18620 MB
+# Available Virtual  : 15883 MB
+#-----------------------------------------------------------
+source run_vivado_gen_ip.tcl -notrace

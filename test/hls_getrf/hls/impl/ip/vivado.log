@@ -1,0 +1,80 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Sep 24 20:30:56 2026
+# Process ID         : 16261
+# Current directory  : /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip
+# Command line       : vivado -notrace -mode batch -source run_ippack.tcl
+# Log file           : /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/vivado.log
+# Journal file       : /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/vivado.jou
+# Running On         : xiaohu
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.3 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13500H
+# CPU Frequency      : 3187.201 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16473 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18620 MB
+# Available Virtual  : 15956 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/hls_data.json outdir=/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip srcdir=/home/huz/project/SpMM_TCAD/test/hls_getrf/hls ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/misc
+INFO: Copied 27 verilog file(s) to /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/hdl/verilog
+INFO: Copied 27 vhdl file(s) to /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/drivers
+Generating 4 subcores in /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/subcore_prj:
+impl/misc/sparse_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl
+impl/misc/sparse_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl
+impl/misc/sparse_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip.tcl
+impl/misc/sparse_getrf_fsub_32ns_32ns_32_8_full_dsp_1_ip.tcl
+INFO: Using COE_DIR=/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/hdl/verilog
+INFO: Generating sparse_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip via file impl/misc/sparse_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/huz/software/2025.2/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: Done generating sparse_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip via file impl/misc/sparse_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl
+INFO: Generating sparse_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip via file impl/misc/sparse_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: Done generating sparse_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip via file impl/misc/sparse_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl
+INFO: Generating sparse_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip via file impl/misc/sparse_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+INFO: Done generating sparse_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip via file impl/misc/sparse_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip.tcl
+INFO: Generating sparse_getrf_fsub_32ns_32ns_32_8_full_dsp_1_ip via file impl/misc/sparse_getrf_fsub_32ns_32ns_32_8_full_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_getrf_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_getrf_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: Done generating sparse_getrf_fsub_32ns_32ns_32_8_full_dsp_1_ip via file impl/misc/sparse_getrf_fsub_32ns_32ns_32_8_full_dsp_1_ip.tcl
+INFO: Found 1 unique subcore IP: xilinx.com:ip:floating_point:7.1
+INFO: Copied 4 subcore files: /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/hdl/ip/sparse_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip/sparse_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip.xci /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/hdl/ip/sparse_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip/sparse_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip.xci /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/hdl/ip/sparse_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip/sparse_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip.xci /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/hdl/ip/sparse_getrf_fsub_32ns_32ns_32_8_full_dsp_1_ip/sparse_getrf_fsub_32ns_32ns_32_8_full_dsp_1_ip.xci
+INFO: Import ports from HDL: /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/hdl/vhdl/sparse_getrf.vhd (sparse_getrf)
+INFO: Add axi4lite interface s_axi_control
+INFO: Add axi4lite interface s_axi_control_r
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/huz/software/2025.2/data/ip'.
+INFO: Add axi4full interface m_axi_a_row
+INFO: Add axi4full interface m_axi_a_col
+INFO: Add axi4full interface m_axi_a_val
+INFO: Add axi4full interface m_axi_l_row
+INFO: Add axi4full interface m_axi_l_col
+INFO: Add axi4full interface m_axi_l_val
+INFO: Add axi4full interface m_axi_u_row
+INFO: Add axi4full interface m_axi_u_col
+INFO: Add axi4full interface m_axi_u_val
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/component.xml
+INFO: Created IP archive /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/impl/ip/xilinx_com_hls_sparse_getrf_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 24 20:31:08 2026...

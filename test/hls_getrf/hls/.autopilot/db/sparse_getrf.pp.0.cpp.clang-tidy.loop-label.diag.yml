@@ -1,0 +1,160 @@
+---
+MainSourceFile:  '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_13_1:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      13
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          17051
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_13_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_84_1:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      84
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          19543
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_84_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_88_2:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      88
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          19641
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_88_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_93_3:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      93
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          19740
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_93_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_103_4:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      103
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          20038
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_103_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_120_5:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      120
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          20483
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_120_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_138_6:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      138
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          20987
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_138_6: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_163_7:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      163
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          21627
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_163_7: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_167_8:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      167
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          21780
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_167_8: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_173_9:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      173
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          22021
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_173_9: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_191_10:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      191
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          22603
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_191_10: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_198_11:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      198
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          22808
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_198_11: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_206_12:  '
+      FilePath:        sparse_getrf.cpp
+      FileOffset:      206
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp'
+          Offset:          23098
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_206_12: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+...

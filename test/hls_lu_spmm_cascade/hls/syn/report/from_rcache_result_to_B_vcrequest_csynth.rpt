@@ -1,0 +1,182 @@
+
+
+================================================================
+== Vitis HLS Report for 'from_rcache_result_to_B_vcrequest'
+================================================================
+* Date:           Fri Sep 25 00:05:10 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.925 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_158_1  |        ?|        ?|         2|          -|          -|     ?|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     143|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|     120|    -|
+|Register         |        -|     -|     175|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     175|     263|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |temp_result_brlen_4_fu_173_p2   |         -|   0|  0|  39|          32|          32|
+    |ap_predicate_op20_read_state2   |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op41_write_state3  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op45_write_state3  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op47_write_state3  |       and|   0|  0|   2|           1|           1|
+    |tmp_s_nbreadreq_fu_70_p3        |       and|   0|  0|   2|           1|           0|
+    |enable_43_fu_167_p2             |      icmp|   0|  0|  10|           3|           2|
+    |icmp_ln176_fu_202_p2            |      icmp|   0|  0|  39|          32|           5|
+    |icmp_ln178_fu_207_p2            |      icmp|   0|  0|  39|          32|          32|
+    |ap_block_state1                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3                 |        or|   0|  0|   2|           1|           1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |Total                           |          |   0|  0| 143|         107|          78|
+    +--------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |B_rlen_pe4_blk_n                   |   9|          2|    1|          2|
+    |ap_NS_fsm                          |  20|          4|    1|          4|
+    |ap_done                            |   9|          2|    1|          2|
+    |ap_phi_mux_enable_1_phi_fu_129_p8  |   9|          2|    1|          2|
+    |enable_1_reg_124                   |   9|          2|    1|          2|
+    |enable_reg_113                     |   9|          2|    1|          2|
+    |rblock4_blk_n                      |   9|          2|    1|          2|
+    |rcache_result_bank4_b_blk_n        |   9|          2|    1|          2|
+    |rcache_result_bank4_b_din          |  14|          3|   68|        204|
+    |rcache_result_bank4_d_blk_n        |   9|          2|    1|          2|
+    |rcache_result_bank4_d_din          |  14|          3|   68|        204|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              | 120|         26|  145|        428|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   3|   0|    3|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |enable_1_reg_124             |   1|   0|    1|          0|
+    |enable_43_reg_297            |   1|   0|    1|          0|
+    |enable_reg_113               |   1|   0|    1|          0|
+    |first_idx_reg_284            |  32|   0|   32|          0|
+    |second_idx_reg_292           |  32|   0|   32|          0|
+    |temp_result_bridx_fu_62      |  32|   0|   32|          0|
+    |temp_result_brlen_4_reg_302  |  32|   0|   32|          0|
+    |temp_result_brlen_fu_58      |  32|   0|   32|          0|
+    |temp_result_peID_6_reg_277   |   3|   0|    3|          0|
+    |temp_result_peID_fu_66       |   3|   0|    3|          0|
+    |tmp_173_reg_273              |   1|   0|    1|          0|
+    |tmp_s_reg_269                |   1|   0|    1|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 175|   0|  175|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------+-----+-----+------------+-----------------------------------+--------------+
+|               RTL Ports              | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++--------------------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                                |   in|    1|  ap_ctrl_hs|  from_rcache_result_to_B_vcrequest|  return value|
+|ap_rst                                |   in|    1|  ap_ctrl_hs|  from_rcache_result_to_B_vcrequest|  return value|
+|ap_start                              |   in|    1|  ap_ctrl_hs|  from_rcache_result_to_B_vcrequest|  return value|
+|ap_done                               |  out|    1|  ap_ctrl_hs|  from_rcache_result_to_B_vcrequest|  return value|
+|ap_continue                           |   in|    1|  ap_ctrl_hs|  from_rcache_result_to_B_vcrequest|  return value|
+|ap_idle                               |  out|    1|  ap_ctrl_hs|  from_rcache_result_to_B_vcrequest|  return value|
+|ap_ready                              |  out|    1|  ap_ctrl_hs|  from_rcache_result_to_B_vcrequest|  return value|
+|rblock4_dout                          |   in|  398|     ap_fifo|                            rblock4|       pointer|
+|rblock4_empty_n                       |   in|    1|     ap_fifo|                            rblock4|       pointer|
+|rblock4_read                          |  out|    1|     ap_fifo|                            rblock4|       pointer|
+|rblock4_num_data_valid                |   in|    3|     ap_fifo|                            rblock4|       pointer|
+|rblock4_fifo_cap                      |   in|    3|     ap_fifo|                            rblock4|       pointer|
+|rcache_result_bank4_b_din             |  out|   68|     ap_fifo|              rcache_result_bank4_b|       pointer|
+|rcache_result_bank4_b_full_n          |   in|    1|     ap_fifo|              rcache_result_bank4_b|       pointer|
+|rcache_result_bank4_b_write           |  out|    1|     ap_fifo|              rcache_result_bank4_b|       pointer|
+|rcache_result_bank4_b_num_data_valid  |   in|    3|     ap_fifo|              rcache_result_bank4_b|       pointer|
+|rcache_result_bank4_b_fifo_cap        |   in|    3|     ap_fifo|              rcache_result_bank4_b|       pointer|
+|rcache_result_bank4_d_din             |  out|   68|     ap_fifo|              rcache_result_bank4_d|       pointer|
+|rcache_result_bank4_d_full_n          |   in|    1|     ap_fifo|              rcache_result_bank4_d|       pointer|
+|rcache_result_bank4_d_write           |  out|    1|     ap_fifo|              rcache_result_bank4_d|       pointer|
+|rcache_result_bank4_d_num_data_valid  |   in|    3|     ap_fifo|              rcache_result_bank4_d|       pointer|
+|rcache_result_bank4_d_fifo_cap        |   in|    3|     ap_fifo|              rcache_result_bank4_d|       pointer|
+|B_rlen_pe4_din                        |  out|   32|     ap_fifo|                         B_rlen_pe4|       pointer|
+|B_rlen_pe4_full_n                     |   in|    1|     ap_fifo|                         B_rlen_pe4|       pointer|
+|B_rlen_pe4_write                      |  out|    1|     ap_fifo|                         B_rlen_pe4|       pointer|
+|B_rlen_pe4_num_data_valid             |   in|    3|     ap_fifo|                         B_rlen_pe4|       pointer|
+|B_rlen_pe4_fifo_cap                   |   in|    3|     ap_fifo|                         B_rlen_pe4|       pointer|
++--------------------------------------+-----+-----+------------+-----------------------------------+--------------+
+

@@ -1,0 +1,128 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'spmm'" level="0">
+<item name = "Date">Fri Sep 25 00:05:00 2026
+</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
+<item name = "Project">hls_lu_spmm_cascade</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu15eg-ffvb1156-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 7.710 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="call_ln246_entry_proc_fu_2060">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_A_row_reader_fu_2087">A_row_reader, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_prepare_b_rcsr_fu_2096">prepare_b_rcsr, 1058, 1058, 5.290 us, 5.290 us, 1058, 1058, no</column>
+<column name="grp_A_element_filter_fu_2106">A_element_filter, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_A_element_distributor_fu_2120">A_element_distributor, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_rcrequest_manager_fu_2141">rcrequest_manager, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_rcrequest_manager_87_fu_2150">rcrequest_manager_87, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_rcrequest_manager_88_fu_2161">rcrequest_manager_88, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_rcrequest_manager_89_fu_2172">rcrequest_manager_89, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_merge_4_to_1_rrequest_fu_2183">merge_4_to_1_rrequest, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_from_rcache_result_to_B_vcrequest_16_fu_2192">from_rcache_result_to_B_vcrequest_16, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_from_rcache_result_to_B_vcrequest_17_fu_2200">from_rcache_result_to_B_vcrequest_17, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_from_rcache_result_to_B_vcrequest_18_fu_2208">from_rcache_result_to_B_vcrequest_18, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_from_rcache_result_to_B_vcrequest_fu_2216">from_rcache_result_to_B_vcrequest, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_request_to_rbanks_fu_2224">request_to_rbanks, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_generate_data_fu_2238">generate_data, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_generate_data_90_fu_2251">generate_data_90, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_generate_data_91_fu_2264">generate_data_91, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_generate_data_92_fu_2277">generate_data_92, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_vcrequest_manager_fu_2290">vcrequest_manager, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_vcrequest_manager_93_fu_2309">vcrequest_manager_93, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_vcrequest_manager_94_fu_2328">vcrequest_manager_94, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_vcrequest_manager_95_fu_2347">vcrequest_manager_95, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_rcache_1_fu_2366">rcache_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_rcache_2_fu_2378">rcache_2, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_rcache_3_fu_2390">rcache_3, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_rcache_fu_2402">rcache, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_request_to_vcbanks_19_fu_2414">request_to_vcbanks_19, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_request_to_vcbanks_20_fu_2425">request_to_vcbanks_20, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_request_to_vcbanks_21_fu_2434">request_to_vcbanks_21, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_request_to_vcbanks_22_fu_2443">request_to_vcbanks_22, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_request_to_vcbanks_23_fu_2452">request_to_vcbanks_23, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_request_to_vcbanks_24_fu_2463">request_to_vcbanks_24, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_request_to_vcbanks_25_fu_2472">request_to_vcbanks_25, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_request_to_vcbanks_fu_2481">request_to_vcbanks, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_pe_35_fu_2490">pe_35, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_pe_36_fu_2506">pe_36, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_pe_37_fu_2522">pe_37, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_pe_fu_2538">pe, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_distributer_mi_4_fu_2554">distributer_mi_4, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_distributer_mi_5_fu_2563">distributer_mi_5, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_distributer_mi_6_fu_2572">distributer_mi_6, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_distributer_mi_fu_2581">distributer_mi, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_distributer_rresponse_10_fu_2590">distributer_rresponse_10, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_distributer_rresponse_11_fu_2599">distributer_rresponse_11, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_distributer_rresponse_12_fu_2608">distributer_rresponse_12, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_distributer_rresponse_fu_2617">distributer_rresponse, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_4_to_1_vcrequest_26_fu_2626">merge_4_to_1_vcrequest_26, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_4_to_1_vcrequest_27_fu_2635">merge_4_to_1_vcrequest_27, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_4_to_1_vcrequest_28_fu_2644">merge_4_to_1_vcrequest_28, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_4_to_1_vcrequest_fu_2653">merge_4_to_1_vcrequest, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_convert_pblock_to_mergeitem_38_fu_2662">convert_pblock_to_mergeitem_38, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_convert_pblock_to_mergeitem_39_fu_2668">convert_pblock_to_mergeitem_39, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_convert_pblock_to_mergeitem_40_fu_2674">convert_pblock_to_mergeitem_40, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_convert_pblock_to_mergeitem_fu_2680">convert_pblock_to_mergeitem, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_4_to_1_mi_7_fu_2686">merge_4_to_1_mi_7, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_4_to_1_mi_8_fu_2695">merge_4_to_1_mi_8, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_4_to_1_mi_9_fu_2704">merge_4_to_1_mi_9, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_4_to_1_mi_fu_2713">merge_4_to_1_mi, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_4_to_1_rresponse_13_fu_2722">merge_4_to_1_rresponse_13, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_merge_4_to_1_rresponse_14_fu_2731">merge_4_to_1_rresponse_14, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_merge_4_to_1_rresponse_15_fu_2740">merge_4_to_1_rresponse_15, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_merge_4_to_1_rresponse_fu_2749">merge_4_to_1_rresponse, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_vcache_29_fu_2758">vcache_29, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_vcache_fu_2770">vcache, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ccache_30_fu_2782">ccache_30, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_ccache_fu_2794">ccache, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merger_41_fu_2806">merger_41, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_merger_42_fu_2814">merger_42, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_merger_43_fu_2822">merger_43, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_merger_fu_2830">merger, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_merge_2_to_1_vcresponse_31_fu_2838">merge_2_to_1_vcresponse_31, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_2_to_1_vcresponse_fu_2845">merge_2_to_1_vcresponse, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_2_to_1_vcresult_33_fu_2852">merge_2_to_1_vcresult_33, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_2_to_1_vcresult_fu_2859">merge_2_to_1_vcresult, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_sub_final_merger_44_fu_2866">sub_final_merger_44, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_sub_final_merger_fu_2873">sub_final_merger, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_distributer_vcresponse_32_fu_2880">distributer_vcresponse_32, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_distributer_vcresponse_fu_2889">distributer_vcresponse, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_distributer_vcresult_34_fu_2898">distributer_vcresult_34, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_distributer_vcresult_fu_2907">distributer_vcresult, ?, ?, ?, ?, 0, 0, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_final_merger_fu_2916">final_merger, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_write_C_sub_fu_2925">write_C_sub, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

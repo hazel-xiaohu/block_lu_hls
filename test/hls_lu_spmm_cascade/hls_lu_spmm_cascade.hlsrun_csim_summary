@@ -1,0 +1,163 @@
+<ENTRY>
+{
+ "thisFile": "/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls_lu_spmm_cascade.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Sep 25 00:15:53 2026",
+ "timestampMillis": "1790266553686",
+ "buildStep": {
+  "cmdId": "5708c64f-d9e0-4113-a9ee-745e637726f0",
+  "name": "vitis-run",
+  "logFile": "/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/logs/hls_lu_spmm_cascade.steps.log",
+  "commandLine": "/home/huz/software/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --config /home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade_config.cfg --csim --work_dir hls_lu_spmm_cascade --part xczu15eg-ffvb1156-2-i ",
+  "args": [
+   "--mode",
+   "hls",
+   "--config",
+   "/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade_config.cfg",
+   "--csim",
+   "--work_dir",
+   "hls_lu_spmm_cascade",
+   "--part",
+   "xczu15eg-ffvb1156-2-i"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/huz/project/SpMM_TCAD/test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 25 00:15:53 2026",
+ "timestampMillis": "1790266553687",
+ "status": {
+  "cmdId": "5708c64f-d9e0-4113-a9ee-745e637726f0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Sep 25 00:15:58 2026",
+ "timestampMillis": "1790266558373",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "spmm",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/huz/project/SpMM_TCAD/test/core.cpp",
+     "/home/huz/project/SpMM_TCAD/test/pe.cpp",
+     "/home/huz/project/SpMM_TCAD/test/rcache.cpp",
+     "/home/huz/project/SpMM_TCAD/test/util.cpp",
+     "/home/huz/project/SpMM_TCAD/test/vccache.cpp",
+     "/home/huz/project/SpMM_TCAD/test/sparse_lu_shared_cached.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Sep 25 00:15:58 2026",
+ "timestampMillis": "1790266558375",
+ "buildStep": {
+  "cmdId": "6279650f-dfc8-49cf-b86e-97c1c5821a5e",
+  "name": "",
+  "logFile": "/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/huz/project/SpMM_TCAD/test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 25 00:15:58 2026",
+ "timestampMillis": "1790266558375",
+ "status": {
+  "cmdId": "6279650f-dfc8-49cf-b86e-97c1c5821a5e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 25 00:16:02 2026",
+ "timestampMillis": "1790266562228",
+ "status": {
+  "cmdId": "6279650f-dfc8-49cf-b86e-97c1c5821a5e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 25 00:16:02 2026",
+ "timestampMillis": "1790266562314",
+ "status": {
+  "cmdId": "5708c64f-d9e0-4113-a9ee-745e637726f0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 25 00:16:02 2026",
+ "timestampMillis": "1790266562315",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 25 00:16:02 2026",
+ "timestampMillis": "1790266562316",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

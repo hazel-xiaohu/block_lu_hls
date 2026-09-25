@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Sep 24 21:50:50 2026
+# Process ID         : 36816
+# Current directory  : /home/huz/project/SpMM_TCAD/test/hls_lu_cached/hls/.autopilot/db/ip_tmp
+# Command line       : vivado  -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
+# Log file           : /home/huz/project/SpMM_TCAD/test/hls_lu_cached/hls/.autopilot/db/ip_tmp/vivado.log
+# Journal file       : /home/huz/project/SpMM_TCAD/test/hls_lu_cached/hls/.autopilot/db/ip_tmp/vivado.jou
+# Running On         : xiaohu
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 22.04.3 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13500H
+# CPU Frequency      : 3187.201 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16473 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18620 MB
+# Available Virtual  : 15998 MB
+#-----------------------------------------------------------
+source run_vivado_gen_ip.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/huz/software/2025.2/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_lu_shared_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_lu_shared_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_lu_shared_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_lu_shared_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_lu_shared_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_lu_shared_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_lu_shared_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_lu_shared_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 24 21:51:00 2026...

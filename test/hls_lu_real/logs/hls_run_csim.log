@@ -1,0 +1,40 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir /home/huz/project/SpMM_TCAD/test/hls_lu_real 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/huz/project/SpMM_TCAD/test/hls_lu_real/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/huz/project/SpMM_TCAD/test/hls_lu_real'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_lu_real_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=sparse_lu_shared_cached.cpp' from hls_lu_real_config.cfg(4)
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/sparse_lu_shared_cached.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_lu_spmm_cascade.cpp' from hls_lu_real_config.cfg(5)
+INFO: [HLS 200-10] Adding test bench file '/home/huz/project/SpMM_TCAD/test/tb_lu_spmm_cascade.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.cflags=-DCASCADE_LU_ONLY' from hls_lu_real_config.cfg(6)
+INFO: [HLS 200-1465] Applying config ini 'syn.top=sparse_lu_shared' from hls_lu_real_config.cfg(3)
+INFO: [HLS 200-1465] Applying config ini 'clock=5.0' from hls_lu_real_config.cfg(2)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.O=true' from hls_lu_real_config.cfg(9)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=none' from hls_lu_real_config.cfg(7)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'cosim.wave_debug=false' from hls_lu_real_config.cfg(8)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'vivado.flow=impl' from hls_lu_real_config.cfg(10)
+INFO: [HLS 200-1465] Applying config ini 'vivado.rtl=verilog' from hls_lu_real_config.cfg(11)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/huz/project/SpMM_TCAD/test/hls_lu_real/vitis-comp.json
+INFO: [HLS 200-1465] Applying config ini 'part=xczu15eg-ffvb1156-2-i' from command line
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building optimized C Simulation binaries
+make[1]: Entering directory '/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/csim/build'
+   Compiling ../../../../tb_lu_spmm_cascade.cpp in release mode
+   Generating csim.exe
+make[1]: Leaving directory '/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/csim/build'
+real circuit_3_12127 LU block: global rows/cols 4608:4672 A11_nnz=86 L11_nnz=62 U11_nnz=62 L21_nnz=68 U12_nnz=68
+GETRF residual=4.66047e-09 GESSM residual=8.0781e-10 TSTRF residual=2.80218e-08
+PASS real GETRF/GESSM/TSTRF
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 2.48 seconds. Total CPU system time: 0.54 seconds. Total elapsed time: 3.02 seconds; peak allocated memory: 270.004 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 8s

@@ -1,0 +1,495 @@
+
+
+================================================================
+== Vitis HLS Report for 'run_cached_tstrf_Pipeline_VITIS_LOOP_329_4'
+================================================================
+* Date:           Thu Sep 24 21:48:45 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_cached
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.454 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_329_4  |        ?|        ?|        17|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 18
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 18
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 18, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.82>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%col = alloca i32 1" [sparse_lu_shared_cached.cpp:329]   --->   Operation 20 'alloca' 'col' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%cond_353_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %cond_353" [sparse_lu_shared_cached.cpp:324]   --->   Operation 21 'read' 'cond_353_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%cond_251_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %cond_251" [sparse_lu_shared_cached.cpp:324]   --->   Operation 22 'read' 'cond_251_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%cond_149_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %cond_149" [sparse_lu_shared_cached.cpp:324]   --->   Operation 23 'read' 'cond_149_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%cond48_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %cond48" [sparse_lu_shared_cached.cpp:324]   --->   Operation 24 'read' 'cond48_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %empty" [sparse_lu_shared_cached.cpp:324]   --->   Operation 25 'read' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_6 = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %empty_70" [sparse_lu_shared_cached.cpp:324]   --->   Operation 26 'read' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_7 = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %empty_69" [sparse_lu_shared_cached.cpp:324]   --->   Operation 27 'read' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln324_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %zext_ln324" [sparse_lu_shared_cached.cpp:324]   --->   Operation 28 'read' 'zext_ln324_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln332_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %zext_ln332" [sparse_lu_shared_cached.cpp:324]   --->   Operation 29 'read' 'zext_ln332_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%n_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %n" [sparse_lu_shared_cached.cpp:324]   --->   Operation 30 'read' 'n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_5_read = read i13 @_ssdm_op_Read.ap_auto.i13, i13 %tmp_5" [sparse_lu_shared_cached.cpp:324]   --->   Operation 31 'read' 'tmp_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln309_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %zext_ln309" [sparse_lu_shared_cached.cpp:324]   --->   Operation 32 'read' 'zext_ln309_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln324_1 = zext i7 %zext_ln309_read" [sparse_lu_shared_cached.cpp:324]   --->   Operation 33 'zext' 'zext_ln324_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.82ns)   --->   "%icmp_ln324 = icmp_eq  i13 %tmp_5_read, i13 8191" [sparse_lu_shared_cached.cpp:324]   --->   Operation 34 'icmp' 'icmp_ln324' <Predicate = true> <Delay = 0.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.82> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln299 = zext i7 %n_read" [sparse_lu_shared_cached.cpp:299]   --->   Operation 35 'zext' 'zext_ln299' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.42ns)   --->   "%store_ln329 = store i33 %zext_ln324_1, i33 %col" [sparse_lu_shared_cached.cpp:329]   --->   Operation 36 'store' 'store_ln329' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body50"   --->   Operation 37 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.02>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%col_1 = load i33 %col" [sparse_lu_shared_cached.cpp:329]   --->   Operation 38 'load' 'col_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%trunc_ln329 = trunc i33 %col_1" [sparse_lu_shared_cached.cpp:329]   --->   Operation 39 'trunc' 'trunc_ln329' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (1.01ns)   --->   "%icmp_ln329 = icmp_eq  i32 %trunc_ln329, i32 %zext_ln299" [sparse_lu_shared_cached.cpp:329]   --->   Operation 40 'icmp' 'icmp_ln329' <Predicate = true> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln329 = br i1 %icmp_ln329, void %for.body50.split, void %for.inc86.exitStub" [sparse_lu_shared_cached.cpp:329]   --->   Operation 41 'br' 'br_ln329' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%trunc_ln329_1 = trunc i33 %col_1" [sparse_lu_shared_cached.cpp:329]   --->   Operation 42 'trunc' 'trunc_ln329_1' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i10 @_ssdm_op_PartSelect.i10.i33.i32.i32, i33 %col_1, i32 2, i32 11" [sparse_lu_shared_cached.cpp:329]   --->   Operation 43 'partselect' 'lshr_ln' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%lshr_ln10_cast = partselect i8 @_ssdm_op_PartSelect.i8.i33.i32.i32, i33 %col_1, i32 2, i32 9" [sparse_lu_shared_cached.cpp:332]   --->   Operation 44 'partselect' 'lshr_ln10_cast' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.78ns)   --->   "%add_ln332 = add i10 %zext_ln332_read, i10 %lshr_ln" [sparse_lu_shared_cached.cpp:332]   --->   Operation 45 'add' 'add_ln332' <Predicate = (!icmp_ln329)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%zext_ln332_1 = zext i10 %add_ln332" [sparse_lu_shared_cached.cpp:332]   --->   Operation 46 'zext' 'zext_ln332_1' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%upper_pos_0_addr = getelementptr i12 %upper_pos_0, i64 0, i64 %zext_ln332_1" [sparse_lu_shared_cached.cpp:332]   --->   Operation 47 'getelementptr' 'upper_pos_0_addr' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%upper_pos_1_addr = getelementptr i12 %upper_pos_1, i64 0, i64 %zext_ln332_1" [sparse_lu_shared_cached.cpp:332]   --->   Operation 48 'getelementptr' 'upper_pos_1_addr' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%upper_pos_2_addr = getelementptr i12 %upper_pos_2, i64 0, i64 %zext_ln332_1" [sparse_lu_shared_cached.cpp:332]   --->   Operation 49 'getelementptr' 'upper_pos_2_addr' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%upper_pos_3_addr = getelementptr i12 %upper_pos_3, i64 0, i64 %zext_ln332_1" [sparse_lu_shared_cached.cpp:332]   --->   Operation 50 'getelementptr' 'upper_pos_3_addr' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%factor_0_addr = getelementptr i32 %factor_0, i64 0, i64 %zext_ln332_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 51 'getelementptr' 'factor_0_addr' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%factor_1_addr = getelementptr i32 %factor_1, i64 0, i64 %zext_ln332_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 52 'getelementptr' 'factor_1_addr' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%factor_2_addr = getelementptr i32 %factor_2, i64 0, i64 %zext_ln332_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 53 'getelementptr' 'factor_2_addr' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%factor_3_addr = getelementptr i32 %factor_3, i64 0, i64 %zext_ln332_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 54 'getelementptr' 'factor_3_addr' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.76ns)   --->   "%add_ln337 = add i8 %zext_ln324_read, i8 %lshr_ln10_cast" [sparse_lu_shared_cached.cpp:337]   --->   Operation 55 'add' 'add_ln337' <Predicate = (!icmp_ln329)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [2/2] (1.23ns)   --->   "%upper_pos_0_load = load i10 %upper_pos_0_addr" [sparse_lu_shared_cached.cpp:332]   --->   Operation 56 'load' 'upper_pos_0_load' <Predicate = (!icmp_ln329)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_2 : Operation 57 [2/2] (1.23ns)   --->   "%upper_pos_1_load = load i10 %upper_pos_1_addr" [sparse_lu_shared_cached.cpp:332]   --->   Operation 57 'load' 'upper_pos_1_load' <Predicate = (!icmp_ln329)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_2 : Operation 58 [2/2] (1.23ns)   --->   "%upper_pos_2_load = load i10 %upper_pos_2_addr" [sparse_lu_shared_cached.cpp:332]   --->   Operation 58 'load' 'upper_pos_2_load' <Predicate = (!icmp_ln329)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_2 : Operation 59 [2/2] (1.23ns)   --->   "%upper_pos_3_load = load i10 %upper_pos_3_addr" [sparse_lu_shared_cached.cpp:332]   --->   Operation 59 'load' 'upper_pos_3_load' <Predicate = (!icmp_ln329)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_2 : Operation 60 [1/1] (1.01ns)   --->   "%add_ln329 = add i33 %col_1, i33 1" [sparse_lu_shared_cached.cpp:329]   --->   Operation 60 'add' 'add_ln329' <Predicate = (!icmp_ln329)> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (0.42ns)   --->   "%store_ln329 = store i33 %add_ln329, i33 %col" [sparse_lu_shared_cached.cpp:329]   --->   Operation 61 'store' 'store_ln329' <Predicate = (!icmp_ln329)> <Delay = 0.42>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%br_ln329 = br void %for.body50" [sparse_lu_shared_cached.cpp:329]   --->   Operation 62 'br' 'br_ln329' <Predicate = (!icmp_ln329)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.57>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%specpipeline_ln331 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, i32 4294967295, void @empty_56" [sparse_lu_shared_cached.cpp:331]   --->   Operation 63 'specpipeline' 'specpipeline_ln331' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%specloopname_ln329 = specloopname void @_ssdm_op_SpecLoopName, void @empty_52" [sparse_lu_shared_cached.cpp:329]   --->   Operation 64 'specloopname' 'specloopname_ln329' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%zext_ln337 = zext i8 %add_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 65 'zext' 'zext_ln337' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%block_0_0_addr = getelementptr i32 %block_0_0, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 66 'getelementptr' 'block_0_0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%block_0_1_addr = getelementptr i32 %block_0_1, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 67 'getelementptr' 'block_0_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%block_0_2_addr = getelementptr i32 %block_0_2, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 68 'getelementptr' 'block_0_2_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%block_0_3_addr = getelementptr i32 %block_0_3, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 69 'getelementptr' 'block_0_3_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%block_1_0_addr = getelementptr i32 %block_1_0, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 70 'getelementptr' 'block_1_0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%block_1_1_addr = getelementptr i32 %block_1_1, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 71 'getelementptr' 'block_1_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%block_1_2_addr = getelementptr i32 %block_1_2, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 72 'getelementptr' 'block_1_2_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%block_1_3_addr = getelementptr i32 %block_1_3, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 73 'getelementptr' 'block_1_3_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%block_2_0_addr = getelementptr i32 %block_2_0, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 74 'getelementptr' 'block_2_0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%block_2_1_addr = getelementptr i32 %block_2_1, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 75 'getelementptr' 'block_2_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%block_2_2_addr = getelementptr i32 %block_2_2, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 76 'getelementptr' 'block_2_2_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%block_2_3_addr = getelementptr i32 %block_2_3, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 77 'getelementptr' 'block_2_3_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%block_3_0_addr = getelementptr i32 %block_3_0, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 78 'getelementptr' 'block_3_0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%block_3_1_addr = getelementptr i32 %block_3_1, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 79 'getelementptr' 'block_3_1_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%block_3_2_addr = getelementptr i32 %block_3_2, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 80 'getelementptr' 'block_3_2_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%block_3_3_addr = getelementptr i32 %block_3_3, i64 0, i64 %zext_ln337" [sparse_lu_shared_cached.cpp:337]   --->   Operation 81 'getelementptr' 'block_3_3_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/2] ( I:1.23ns O:1.23ns )   --->   "%upper_pos_0_load = load i10 %upper_pos_0_addr" [sparse_lu_shared_cached.cpp:332]   --->   Operation 82 'load' 'upper_pos_0_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_3 : Operation 83 [1/2] ( I:1.23ns O:1.23ns )   --->   "%upper_pos_1_load = load i10 %upper_pos_1_addr" [sparse_lu_shared_cached.cpp:332]   --->   Operation 83 'load' 'upper_pos_1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_3 : Operation 84 [1/2] ( I:1.23ns O:1.23ns )   --->   "%upper_pos_2_load = load i10 %upper_pos_2_addr" [sparse_lu_shared_cached.cpp:332]   --->   Operation 84 'load' 'upper_pos_2_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_3 : Operation 85 [1/2] ( I:1.23ns O:1.23ns )   --->   "%upper_pos_3_load = load i10 %upper_pos_3_addr" [sparse_lu_shared_cached.cpp:332]   --->   Operation 85 'load' 'upper_pos_3_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 12> <Depth = 1024> <RAM>
+ST_3 : Operation 86 [1/1] (0.52ns)   --->   "%tmp_s = sparsemux i12 @_ssdm_op_SparseMux.ap_auto.4i12.i12.i2, i2 0, i12 %upper_pos_0_load, i2 1, i12 %upper_pos_1_load, i2 2, i12 %upper_pos_2_load, i2 3, i12 %upper_pos_3_load, i12 0, i2 %trunc_ln329_1" [sparse_lu_shared_cached.cpp:332]   --->   Operation 86 'sparsemux' 'tmp_s' <Predicate = true> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 87 [1/1] (0.80ns)   --->   "%icmp_ln332 = icmp_eq  i12 %tmp_s, i12 4095" [sparse_lu_shared_cached.cpp:332]   --->   Operation 87 'icmp' 'icmp_ln332' <Predicate = true> <Delay = 0.80> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%br_ln332 = br i1 %icmp_ln332, void %VITIS_LOOP_333_5, void %for.inc83" [sparse_lu_shared_cached.cpp:332]   --->   Operation 88 'br' 'br_ln332' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln336 = br i1 %icmp_ln324, void %if.then68, void %for.inc80" [sparse_lu_shared_cached.cpp:336]   --->   Operation 89 'br' 'br_ln336' <Predicate = (!icmp_ln332)> <Delay = 0.00>
+ST_3 : Operation 90 [2/2] (1.23ns)   --->   "%factor_0_load = load i10 %factor_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 90 'load' 'factor_0_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 0)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 91 [2/2] (1.23ns)   --->   "%factor_1_load = load i10 %factor_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 91 'load' 'factor_1_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 92 [2/2] (1.23ns)   --->   "%factor_2_load = load i10 %factor_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 92 'load' 'factor_2_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 93 [2/2] (1.23ns)   --->   "%factor_3_load = load i10 %factor_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 93 'load' 'factor_3_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 3)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 94 [2/2] (1.23ns)   --->   "%block_0_0_load = load i8 %block_0_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 94 'load' 'block_0_0_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 0)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 95 [2/2] (1.23ns)   --->   "%block_0_1_load = load i8 %block_0_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 95 'load' 'block_0_1_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 96 [2/2] (1.23ns)   --->   "%block_0_2_load = load i8 %block_0_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 96 'load' 'block_0_2_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 97 [2/2] (1.23ns)   --->   "%block_0_3_load = load i8 %block_0_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 97 'load' 'block_0_3_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 3)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 98 [1/1] (0.54ns)   --->   "%switch_ln337 = switch i2 %trunc_ln329_1, void %arrayidx7858.case.3, i2 0, void %arrayidx7858.case.0216, i2 1, void %arrayidx7858.case.1, i2 2, void %arrayidx7858.case.2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 98 'switch' 'switch_ln337' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 0.54>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%br_ln337 = br void %for.inc80" [sparse_lu_shared_cached.cpp:337]   --->   Operation 99 'br' 'br_ln337' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%br_ln336 = br i1 %tmp, void %for.inc80.1, void %if.then68.1" [sparse_lu_shared_cached.cpp:336]   --->   Operation 100 'br' 'br_ln336' <Predicate = (!icmp_ln332)> <Delay = 0.00>
+ST_3 : Operation 101 [2/2] (1.23ns)   --->   "%factor_0_load_1 = load i10 %factor_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 101 'load' 'factor_0_load_1' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 102 [2/2] (1.23ns)   --->   "%factor_1_load_1 = load i10 %factor_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 102 'load' 'factor_1_load_1' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 103 [2/2] (1.23ns)   --->   "%factor_2_load_1 = load i10 %factor_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 103 'load' 'factor_2_load_1' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 104 [2/2] (1.23ns)   --->   "%factor_3_load_1 = load i10 %factor_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 104 'load' 'factor_3_load_1' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 105 [2/2] (1.23ns)   --->   "%block_1_0_load = load i8 %block_1_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 105 'load' 'block_1_0_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 106 [2/2] (1.23ns)   --->   "%block_1_1_load = load i8 %block_1_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 106 'load' 'block_1_1_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 107 [2/2] (1.23ns)   --->   "%block_1_2_load = load i8 %block_1_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 107 'load' 'block_1_2_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 108 [2/2] (1.23ns)   --->   "%block_1_3_load = load i8 %block_1_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 108 'load' 'block_1_3_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 109 [1/1] (0.54ns)   --->   "%switch_ln337 = switch i2 %trunc_ln329_1, void %arrayidx785.17.case.3, i2 0, void %arrayidx785.17.case.0, i2 1, void %arrayidx785.17.case.1168, i2 2, void %arrayidx785.17.case.2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 109 'switch' 'switch_ln337' <Predicate = (!icmp_ln332 & tmp)> <Delay = 0.54>
+ST_3 : Operation 110 [1/1] (0.00ns)   --->   "%br_ln337 = br void %for.inc80.1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 110 'br' 'br_ln337' <Predicate = (!icmp_ln332 & tmp)> <Delay = 0.00>
+ST_3 : Operation 111 [1/1] (0.00ns)   --->   "%br_ln336 = br i1 %tmp_6, void %for.inc80.2, void %if.then68.2" [sparse_lu_shared_cached.cpp:336]   --->   Operation 111 'br' 'br_ln336' <Predicate = (!icmp_ln332)> <Delay = 0.00>
+ST_3 : Operation 112 [2/2] (1.23ns)   --->   "%factor_0_load_2 = load i10 %factor_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 112 'load' 'factor_0_load_2' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 113 [2/2] (1.23ns)   --->   "%factor_1_load_2 = load i10 %factor_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 113 'load' 'factor_1_load_2' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 114 [2/2] (1.23ns)   --->   "%factor_2_load_2 = load i10 %factor_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 114 'load' 'factor_2_load_2' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 115 [2/2] (1.23ns)   --->   "%factor_3_load_2 = load i10 %factor_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 115 'load' 'factor_3_load_2' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 116 [2/2] (1.23ns)   --->   "%block_2_0_load = load i8 %block_2_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 116 'load' 'block_2_0_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 117 [2/2] (1.23ns)   --->   "%block_2_1_load = load i8 %block_2_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 117 'load' 'block_2_1_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 118 [2/2] (1.23ns)   --->   "%block_2_2_load = load i8 %block_2_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 118 'load' 'block_2_2_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 119 [2/2] (1.23ns)   --->   "%block_2_3_load = load i8 %block_2_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 119 'load' 'block_2_3_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 120 [1/1] (0.54ns)   --->   "%switch_ln337 = switch i2 %trunc_ln329_1, void %arrayidx785.26.case.3, i2 0, void %arrayidx785.26.case.0, i2 1, void %arrayidx785.26.case.1, i2 2, void %arrayidx785.26.case.2156" [sparse_lu_shared_cached.cpp:337]   --->   Operation 120 'switch' 'switch_ln337' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 0.54>
+ST_3 : Operation 121 [1/1] (0.00ns)   --->   "%br_ln337 = br void %for.inc80.2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 121 'br' 'br_ln337' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 0.00>
+ST_3 : Operation 122 [1/1] (0.00ns)   --->   "%br_ln336 = br i1 %tmp_7, void %for.inc80.3, void %if.then68.3" [sparse_lu_shared_cached.cpp:336]   --->   Operation 122 'br' 'br_ln336' <Predicate = (!icmp_ln332)> <Delay = 0.00>
+ST_3 : Operation 123 [2/2] (1.23ns)   --->   "%factor_0_load_3 = load i10 %factor_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 123 'load' 'factor_0_load_3' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 124 [2/2] (1.23ns)   --->   "%factor_1_load_3 = load i10 %factor_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 124 'load' 'factor_1_load_3' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 125 [2/2] (1.23ns)   --->   "%factor_2_load_3 = load i10 %factor_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 125 'load' 'factor_2_load_3' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 126 [2/2] (1.23ns)   --->   "%factor_3_load_3 = load i10 %factor_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 126 'load' 'factor_3_load_3' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 127 [2/2] (1.23ns)   --->   "%block_3_0_load = load i8 %block_3_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 127 'load' 'block_3_0_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 128 [2/2] (1.23ns)   --->   "%block_3_1_load = load i8 %block_3_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 128 'load' 'block_3_1_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 129 [2/2] (1.23ns)   --->   "%block_3_2_load = load i8 %block_3_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 129 'load' 'block_3_2_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 130 [2/2] (1.23ns)   --->   "%block_3_3_load = load i8 %block_3_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 130 'load' 'block_3_3_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 131 [1/1] (0.54ns)   --->   "%switch_ln337 = switch i2 %trunc_ln329_1, void %arrayidx785.35.case.3144, i2 0, void %arrayidx785.35.case.0, i2 1, void %arrayidx785.35.case.1, i2 2, void %arrayidx785.35.case.2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 131 'switch' 'switch_ln337' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 0.54>
+ST_3 : Operation 132 [1/1] (0.00ns)   --->   "%br_ln337 = br void %for.inc80.3" [sparse_lu_shared_cached.cpp:337]   --->   Operation 132 'br' 'br_ln337' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 0.00>
+ST_3 : Operation 133 [1/1] (0.00ns)   --->   "%br_ln339 = br void %for.inc83" [sparse_lu_shared_cached.cpp:339]   --->   Operation 133 'br' 'br_ln339' <Predicate = (!icmp_ln332)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.76>
+ST_4 : Operation 134 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_0_load = load i10 %factor_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 134 'load' 'factor_0_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 0)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 135 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_1_load = load i10 %factor_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 135 'load' 'factor_1_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 136 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_2_load = load i10 %factor_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 136 'load' 'factor_2_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 137 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_3_load = load i10 %factor_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 137 'load' 'factor_3_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 3)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 138 [1/1] (0.52ns)   --->   "%tmp_10 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.4float.float.i2, i2 0, i32 %factor_0_load, i2 1, i32 %factor_1_load, i2 2, i32 %factor_2_load, i2 3, i32 %factor_3_load, i32 <undef>, i2 %trunc_ln329_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 138 'sparsemux' 'tmp_10' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 139 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_0_0_load = load i8 %block_0_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 139 'load' 'block_0_0_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 0)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 140 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_0_1_load = load i8 %block_0_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 140 'load' 'block_0_1_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 141 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_0_2_load = load i8 %block_0_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 141 'load' 'block_0_2_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 142 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_0_3_load = load i8 %block_0_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 142 'load' 'block_0_3_load' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 3)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 143 [1/1] (0.52ns)   --->   "%tmp_11 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.4float.float.i2, i2 0, i32 %block_0_0_load, i2 1, i32 %block_0_1_load, i2 2, i32 %block_0_2_load, i2 3, i32 %block_0_3_load, i32 <undef>, i2 %trunc_ln329_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 143 'sparsemux' 'tmp_11' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 144 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_0_load_1 = load i10 %factor_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 144 'load' 'factor_0_load_1' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 145 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_1_load_1 = load i10 %factor_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 145 'load' 'factor_1_load_1' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 146 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_2_load_1 = load i10 %factor_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 146 'load' 'factor_2_load_1' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 147 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_3_load_1 = load i10 %factor_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 147 'load' 'factor_3_load_1' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 148 [1/1] (0.52ns)   --->   "%tmp_12 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.4float.float.i2, i2 0, i32 %factor_0_load_1, i2 1, i32 %factor_1_load_1, i2 2, i32 %factor_2_load_1, i2 3, i32 %factor_3_load_1, i32 <undef>, i2 %trunc_ln329_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 148 'sparsemux' 'tmp_12' <Predicate = (!icmp_ln332 & tmp)> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 149 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_1_0_load = load i8 %block_1_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 149 'load' 'block_1_0_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 150 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_1_1_load = load i8 %block_1_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 150 'load' 'block_1_1_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 151 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_1_2_load = load i8 %block_1_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 151 'load' 'block_1_2_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 152 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_1_3_load = load i8 %block_1_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 152 'load' 'block_1_3_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 153 [1/1] (0.52ns)   --->   "%tmp_13 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.4float.float.i2, i2 0, i32 %block_1_0_load, i2 1, i32 %block_1_1_load, i2 2, i32 %block_1_2_load, i2 3, i32 %block_1_3_load, i32 <undef>, i2 %trunc_ln329_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 153 'sparsemux' 'tmp_13' <Predicate = (!icmp_ln332 & tmp)> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 154 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_0_load_2 = load i10 %factor_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 154 'load' 'factor_0_load_2' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 155 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_1_load_2 = load i10 %factor_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 155 'load' 'factor_1_load_2' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 156 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_2_load_2 = load i10 %factor_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 156 'load' 'factor_2_load_2' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 157 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_3_load_2 = load i10 %factor_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 157 'load' 'factor_3_load_2' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 158 [1/1] (0.52ns)   --->   "%tmp_14 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.4float.float.i2, i2 0, i32 %factor_0_load_2, i2 1, i32 %factor_1_load_2, i2 2, i32 %factor_2_load_2, i2 3, i32 %factor_3_load_2, i32 <undef>, i2 %trunc_ln329_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 158 'sparsemux' 'tmp_14' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 159 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_2_0_load = load i8 %block_2_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 159 'load' 'block_2_0_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 160 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_2_1_load = load i8 %block_2_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 160 'load' 'block_2_1_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 161 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_2_2_load = load i8 %block_2_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 161 'load' 'block_2_2_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 162 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_2_3_load = load i8 %block_2_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 162 'load' 'block_2_3_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 163 [1/1] (0.52ns)   --->   "%tmp_15 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.4float.float.i2, i2 0, i32 %block_2_0_load, i2 1, i32 %block_2_1_load, i2 2, i32 %block_2_2_load, i2 3, i32 %block_2_3_load, i32 <undef>, i2 %trunc_ln329_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 163 'sparsemux' 'tmp_15' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 164 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_0_load_3 = load i10 %factor_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 164 'load' 'factor_0_load_3' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 165 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_1_load_3 = load i10 %factor_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 165 'load' 'factor_1_load_3' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 166 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_2_load_3 = load i10 %factor_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 166 'load' 'factor_2_load_3' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 167 [1/2] ( I:1.23ns O:1.23ns )   --->   "%factor_3_load_3 = load i10 %factor_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 167 'load' 'factor_3_load_3' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 168 [1/1] (0.52ns)   --->   "%tmp_16 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.4float.float.i2, i2 0, i32 %factor_0_load_3, i2 1, i32 %factor_1_load_3, i2 2, i32 %factor_2_load_3, i2 3, i32 %factor_3_load_3, i32 <undef>, i2 %trunc_ln329_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 168 'sparsemux' 'tmp_16' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 169 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_3_0_load = load i8 %block_3_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 169 'load' 'block_3_0_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 170 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_3_1_load = load i8 %block_3_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 170 'load' 'block_3_1_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 171 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_3_2_load = load i8 %block_3_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 171 'load' 'block_3_2_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 172 [1/2] ( I:1.23ns O:1.23ns )   --->   "%block_3_3_load = load i8 %block_3_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 172 'load' 'block_3_3_load' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 173 [1/1] (0.52ns)   --->   "%tmp_17 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.4float.float.i2, i2 0, i32 %block_3_0_load, i2 1, i32 %block_3_1_load, i2 2, i32 %block_3_2_load, i2 3, i32 %block_3_3_load, i32 <undef>, i2 %trunc_ln329_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 173 'sparsemux' 'tmp_17' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 0.52> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 3.17>
+ST_5 : Operation 174 [5/5] (3.17ns)   --->   "%mul = fmul i32 %cond48_read, i32 %tmp_10" [sparse_lu_shared_cached.cpp:337]   --->   Operation 174 'fmul' 'mul' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 175 [5/5] (3.17ns)   --->   "%mul_1 = fmul i32 %cond_149_read, i32 %tmp_12" [sparse_lu_shared_cached.cpp:337]   --->   Operation 175 'fmul' 'mul_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 176 [5/5] (3.17ns)   --->   "%mul_2 = fmul i32 %cond_251_read, i32 %tmp_14" [sparse_lu_shared_cached.cpp:337]   --->   Operation 176 'fmul' 'mul_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 177 [5/5] (3.17ns)   --->   "%mul_3 = fmul i32 %cond_353_read, i32 %tmp_16" [sparse_lu_shared_cached.cpp:337]   --->   Operation 177 'fmul' 'mul_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.17>
+ST_6 : Operation 178 [4/5] (3.17ns)   --->   "%mul = fmul i32 %cond48_read, i32 %tmp_10" [sparse_lu_shared_cached.cpp:337]   --->   Operation 178 'fmul' 'mul' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 179 [4/5] (3.17ns)   --->   "%mul_1 = fmul i32 %cond_149_read, i32 %tmp_12" [sparse_lu_shared_cached.cpp:337]   --->   Operation 179 'fmul' 'mul_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 180 [4/5] (3.17ns)   --->   "%mul_2 = fmul i32 %cond_251_read, i32 %tmp_14" [sparse_lu_shared_cached.cpp:337]   --->   Operation 180 'fmul' 'mul_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 181 [4/5] (3.17ns)   --->   "%mul_3 = fmul i32 %cond_353_read, i32 %tmp_16" [sparse_lu_shared_cached.cpp:337]   --->   Operation 181 'fmul' 'mul_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 3.17>
+ST_7 : Operation 182 [3/5] (3.17ns)   --->   "%mul = fmul i32 %cond48_read, i32 %tmp_10" [sparse_lu_shared_cached.cpp:337]   --->   Operation 182 'fmul' 'mul' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 183 [3/5] (3.17ns)   --->   "%mul_1 = fmul i32 %cond_149_read, i32 %tmp_12" [sparse_lu_shared_cached.cpp:337]   --->   Operation 183 'fmul' 'mul_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 184 [3/5] (3.17ns)   --->   "%mul_2 = fmul i32 %cond_251_read, i32 %tmp_14" [sparse_lu_shared_cached.cpp:337]   --->   Operation 184 'fmul' 'mul_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 185 [3/5] (3.17ns)   --->   "%mul_3 = fmul i32 %cond_353_read, i32 %tmp_16" [sparse_lu_shared_cached.cpp:337]   --->   Operation 185 'fmul' 'mul_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 3.17>
+ST_8 : Operation 186 [2/5] (3.17ns)   --->   "%mul = fmul i32 %cond48_read, i32 %tmp_10" [sparse_lu_shared_cached.cpp:337]   --->   Operation 186 'fmul' 'mul' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 187 [2/5] (3.17ns)   --->   "%mul_1 = fmul i32 %cond_149_read, i32 %tmp_12" [sparse_lu_shared_cached.cpp:337]   --->   Operation 187 'fmul' 'mul_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 188 [2/5] (3.17ns)   --->   "%mul_2 = fmul i32 %cond_251_read, i32 %tmp_14" [sparse_lu_shared_cached.cpp:337]   --->   Operation 188 'fmul' 'mul_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 189 [2/5] (3.17ns)   --->   "%mul_3 = fmul i32 %cond_353_read, i32 %tmp_16" [sparse_lu_shared_cached.cpp:337]   --->   Operation 189 'fmul' 'mul_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 3.17>
+ST_9 : Operation 190 [1/5] (3.17ns)   --->   "%mul = fmul i32 %cond48_read, i32 %tmp_10" [sparse_lu_shared_cached.cpp:337]   --->   Operation 190 'fmul' 'mul' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 191 [1/5] (3.17ns)   --->   "%mul_1 = fmul i32 %cond_149_read, i32 %tmp_12" [sparse_lu_shared_cached.cpp:337]   --->   Operation 191 'fmul' 'mul_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 192 [1/5] (3.17ns)   --->   "%mul_2 = fmul i32 %cond_251_read, i32 %tmp_14" [sparse_lu_shared_cached.cpp:337]   --->   Operation 192 'fmul' 'mul_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 193 [1/5] (3.17ns)   --->   "%mul_3 = fmul i32 %cond_353_read, i32 %tmp_16" [sparse_lu_shared_cached.cpp:337]   --->   Operation 193 'fmul' 'mul_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.17> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 3.45>
+ST_10 : Operation 194 [8/8] (3.45ns)   --->   "%sub = fsub i32 %tmp_11, i32 %mul" [sparse_lu_shared_cached.cpp:337]   --->   Operation 194 'fsub' 'sub' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 195 [8/8] (3.45ns)   --->   "%sub_1 = fsub i32 %tmp_13, i32 %mul_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 195 'fsub' 'sub_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 196 [8/8] (3.45ns)   --->   "%sub_2 = fsub i32 %tmp_15, i32 %mul_2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 196 'fsub' 'sub_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 197 [8/8] (3.45ns)   --->   "%sub_3 = fsub i32 %tmp_17, i32 %mul_3" [sparse_lu_shared_cached.cpp:337]   --->   Operation 197 'fsub' 'sub_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 3.45>
+ST_11 : Operation 198 [7/8] (3.45ns)   --->   "%sub = fsub i32 %tmp_11, i32 %mul" [sparse_lu_shared_cached.cpp:337]   --->   Operation 198 'fsub' 'sub' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 199 [7/8] (3.45ns)   --->   "%sub_1 = fsub i32 %tmp_13, i32 %mul_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 199 'fsub' 'sub_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 200 [7/8] (3.45ns)   --->   "%sub_2 = fsub i32 %tmp_15, i32 %mul_2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 200 'fsub' 'sub_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 201 [7/8] (3.45ns)   --->   "%sub_3 = fsub i32 %tmp_17, i32 %mul_3" [sparse_lu_shared_cached.cpp:337]   --->   Operation 201 'fsub' 'sub_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 3.45>
+ST_12 : Operation 202 [6/8] (3.45ns)   --->   "%sub = fsub i32 %tmp_11, i32 %mul" [sparse_lu_shared_cached.cpp:337]   --->   Operation 202 'fsub' 'sub' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 203 [6/8] (3.45ns)   --->   "%sub_1 = fsub i32 %tmp_13, i32 %mul_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 203 'fsub' 'sub_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 204 [6/8] (3.45ns)   --->   "%sub_2 = fsub i32 %tmp_15, i32 %mul_2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 204 'fsub' 'sub_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 205 [6/8] (3.45ns)   --->   "%sub_3 = fsub i32 %tmp_17, i32 %mul_3" [sparse_lu_shared_cached.cpp:337]   --->   Operation 205 'fsub' 'sub_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 3.45>
+ST_13 : Operation 206 [5/8] (3.45ns)   --->   "%sub = fsub i32 %tmp_11, i32 %mul" [sparse_lu_shared_cached.cpp:337]   --->   Operation 206 'fsub' 'sub' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 207 [5/8] (3.45ns)   --->   "%sub_1 = fsub i32 %tmp_13, i32 %mul_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 207 'fsub' 'sub_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 208 [5/8] (3.45ns)   --->   "%sub_2 = fsub i32 %tmp_15, i32 %mul_2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 208 'fsub' 'sub_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 209 [5/8] (3.45ns)   --->   "%sub_3 = fsub i32 %tmp_17, i32 %mul_3" [sparse_lu_shared_cached.cpp:337]   --->   Operation 209 'fsub' 'sub_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 3.45>
+ST_14 : Operation 210 [4/8] (3.45ns)   --->   "%sub = fsub i32 %tmp_11, i32 %mul" [sparse_lu_shared_cached.cpp:337]   --->   Operation 210 'fsub' 'sub' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 211 [4/8] (3.45ns)   --->   "%sub_1 = fsub i32 %tmp_13, i32 %mul_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 211 'fsub' 'sub_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 212 [4/8] (3.45ns)   --->   "%sub_2 = fsub i32 %tmp_15, i32 %mul_2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 212 'fsub' 'sub_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 213 [4/8] (3.45ns)   --->   "%sub_3 = fsub i32 %tmp_17, i32 %mul_3" [sparse_lu_shared_cached.cpp:337]   --->   Operation 213 'fsub' 'sub_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 3.45>
+ST_15 : Operation 214 [3/8] (3.45ns)   --->   "%sub = fsub i32 %tmp_11, i32 %mul" [sparse_lu_shared_cached.cpp:337]   --->   Operation 214 'fsub' 'sub' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 215 [3/8] (3.45ns)   --->   "%sub_1 = fsub i32 %tmp_13, i32 %mul_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 215 'fsub' 'sub_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 216 [3/8] (3.45ns)   --->   "%sub_2 = fsub i32 %tmp_15, i32 %mul_2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 216 'fsub' 'sub_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 217 [3/8] (3.45ns)   --->   "%sub_3 = fsub i32 %tmp_17, i32 %mul_3" [sparse_lu_shared_cached.cpp:337]   --->   Operation 217 'fsub' 'sub_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 3.45>
+ST_16 : Operation 218 [2/8] (3.45ns)   --->   "%sub = fsub i32 %tmp_11, i32 %mul" [sparse_lu_shared_cached.cpp:337]   --->   Operation 218 'fsub' 'sub' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 219 [2/8] (3.45ns)   --->   "%sub_1 = fsub i32 %tmp_13, i32 %mul_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 219 'fsub' 'sub_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 220 [2/8] (3.45ns)   --->   "%sub_2 = fsub i32 %tmp_15, i32 %mul_2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 220 'fsub' 'sub_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 221 [2/8] (3.45ns)   --->   "%sub_3 = fsub i32 %tmp_17, i32 %mul_3" [sparse_lu_shared_cached.cpp:337]   --->   Operation 221 'fsub' 'sub_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 3.45>
+ST_17 : Operation 222 [1/8] (3.45ns)   --->   "%sub = fsub i32 %tmp_11, i32 %mul" [sparse_lu_shared_cached.cpp:337]   --->   Operation 222 'fsub' 'sub' <Predicate = (!icmp_ln332 & !icmp_ln324)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 223 [1/8] (3.45ns)   --->   "%sub_1 = fsub i32 %tmp_13, i32 %mul_1" [sparse_lu_shared_cached.cpp:337]   --->   Operation 223 'fsub' 'sub_1' <Predicate = (!icmp_ln332 & tmp)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 224 [1/8] (3.45ns)   --->   "%sub_2 = fsub i32 %tmp_15, i32 %mul_2" [sparse_lu_shared_cached.cpp:337]   --->   Operation 224 'fsub' 'sub_2' <Predicate = (!icmp_ln332 & tmp_6)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 225 [1/8] (3.45ns)   --->   "%sub_3 = fsub i32 %tmp_17, i32 %mul_3" [sparse_lu_shared_cached.cpp:337]   --->   Operation 225 'fsub' 'sub_3' <Predicate = (!icmp_ln332 & tmp_7)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 258 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 258 'ret' 'ret_ln0' <Predicate = (icmp_ln329)> <Delay = 0.42>
+
+State 18 <SV = 17> <Delay = 1.23>
+ST_18 : Operation 226 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub, i8 %block_0_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 226 'store' 'store_ln337' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 227 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx7858.exit215" [sparse_lu_shared_cached.cpp:337]   --->   Operation 227 'br' 'br_ln337' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 2)> <Delay = 0.00>
+ST_18 : Operation 228 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub, i8 %block_0_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 228 'store' 'store_ln337' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 229 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx7858.exit215" [sparse_lu_shared_cached.cpp:337]   --->   Operation 229 'br' 'br_ln337' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 1)> <Delay = 0.00>
+ST_18 : Operation 230 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub, i8 %block_0_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 230 'store' 'store_ln337' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 0)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 231 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx7858.exit215" [sparse_lu_shared_cached.cpp:337]   --->   Operation 231 'br' 'br_ln337' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 0)> <Delay = 0.00>
+ST_18 : Operation 232 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub, i8 %block_0_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 232 'store' 'store_ln337' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 3)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 233 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx7858.exit215" [sparse_lu_shared_cached.cpp:337]   --->   Operation 233 'br' 'br_ln337' <Predicate = (!icmp_ln332 & !icmp_ln324 & trunc_ln329_1 == 3)> <Delay = 0.00>
+ST_18 : Operation 234 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_1, i8 %block_1_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 234 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 235 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.17.exit167" [sparse_lu_shared_cached.cpp:337]   --->   Operation 235 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp)> <Delay = 0.00>
+ST_18 : Operation 236 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_1, i8 %block_1_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 236 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 237 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.17.exit167" [sparse_lu_shared_cached.cpp:337]   --->   Operation 237 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp)> <Delay = 0.00>
+ST_18 : Operation 238 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_1, i8 %block_1_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 238 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 239 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.17.exit167" [sparse_lu_shared_cached.cpp:337]   --->   Operation 239 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp)> <Delay = 0.00>
+ST_18 : Operation 240 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_1, i8 %block_1_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 240 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 241 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.17.exit167" [sparse_lu_shared_cached.cpp:337]   --->   Operation 241 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp)> <Delay = 0.00>
+ST_18 : Operation 242 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_2, i8 %block_2_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 242 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 243 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.26.exit155" [sparse_lu_shared_cached.cpp:337]   --->   Operation 243 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_6)> <Delay = 0.00>
+ST_18 : Operation 244 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_2, i8 %block_2_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 244 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 245 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.26.exit155" [sparse_lu_shared_cached.cpp:337]   --->   Operation 245 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_6)> <Delay = 0.00>
+ST_18 : Operation 246 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_2, i8 %block_2_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 246 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 247 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.26.exit155" [sparse_lu_shared_cached.cpp:337]   --->   Operation 247 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_6)> <Delay = 0.00>
+ST_18 : Operation 248 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_2, i8 %block_2_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 248 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_6)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 249 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.26.exit155" [sparse_lu_shared_cached.cpp:337]   --->   Operation 249 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_6)> <Delay = 0.00>
+ST_18 : Operation 250 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_3, i8 %block_3_2_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 250 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 251 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.35.exit143" [sparse_lu_shared_cached.cpp:337]   --->   Operation 251 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 2 & tmp_7)> <Delay = 0.00>
+ST_18 : Operation 252 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_3, i8 %block_3_1_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 252 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 253 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.35.exit143" [sparse_lu_shared_cached.cpp:337]   --->   Operation 253 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 1 & tmp_7)> <Delay = 0.00>
+ST_18 : Operation 254 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_3, i8 %block_3_0_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 254 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 255 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.35.exit143" [sparse_lu_shared_cached.cpp:337]   --->   Operation 255 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 0 & tmp_7)> <Delay = 0.00>
+ST_18 : Operation 256 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln337 = store i32 %sub_3, i8 %block_3_3_addr" [sparse_lu_shared_cached.cpp:337]   --->   Operation 256 'store' 'store_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_7)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_18 : Operation 257 [1/1] (0.00ns)   --->   "%br_ln337 = br void %arrayidx785.35.exit143" [sparse_lu_shared_cached.cpp:337]   --->   Operation 257 'br' 'br_ln337' <Predicate = (!icmp_ln332 & trunc_ln329_1 == 3 & tmp_7)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 0.820ns
+The critical path consists of the following:
+	wire read operation ('tmp_5_read', sparse_lu_shared_cached.cpp:324) on port 'tmp_5' (sparse_lu_shared_cached.cpp:324) [48]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln324', sparse_lu_shared_cached.cpp:324) [51]  (0.820 ns)
+
+ <State 2>: 2.024ns
+The critical path consists of the following:
+	'load' operation 33 bit ('col', sparse_lu_shared_cached.cpp:329) on local variable 'col', sparse_lu_shared_cached.cpp:329 [56]  (0.000 ns)
+	'add' operation 10 bit ('add_ln332', sparse_lu_shared_cached.cpp:332) [66]  (0.787 ns)
+	'getelementptr' operation 10 bit ('upper_pos_0_addr', sparse_lu_shared_cached.cpp:332) [68]  (0.000 ns)
+	'load' operation 12 bit ('upper_pos_0_load', sparse_lu_shared_cached.cpp:332) on array 'upper_pos_0' [94]  (1.237 ns)
+
+ <State 3>: 2.571ns
+The critical path consists of the following:
+	'load' operation 12 bit ('upper_pos_0_load', sparse_lu_shared_cached.cpp:332) on array 'upper_pos_0' [94]  (1.237 ns)
+	'sparsemux' operation 12 bit ('tmp_s', sparse_lu_shared_cached.cpp:332) [98]  (0.525 ns)
+	'icmp' operation 1 bit ('icmp_ln332', sparse_lu_shared_cached.cpp:332) [99]  (0.809 ns)
+
+ <State 4>: 1.762ns
+The critical path consists of the following:
+	'load' operation 32 bit ('factor_0_load', sparse_lu_shared_cached.cpp:337) on array 'factor_0' [104]  (1.237 ns)
+	'sparsemux' operation 32 bit ('tmp_10', sparse_lu_shared_cached.cpp:337) [108]  (0.525 ns)
+
+ <State 5>: 3.176ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', sparse_lu_shared_cached.cpp:337) [109]  (3.176 ns)
+
+ <State 6>: 3.176ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', sparse_lu_shared_cached.cpp:337) [109]  (3.176 ns)
+
+ <State 7>: 3.176ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', sparse_lu_shared_cached.cpp:337) [109]  (3.176 ns)
+
+ <State 8>: 3.176ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', sparse_lu_shared_cached.cpp:337) [109]  (3.176 ns)
+
+ <State 9>: 3.176ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', sparse_lu_shared_cached.cpp:337) [109]  (3.176 ns)
+
+ <State 10>: 3.454ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', sparse_lu_shared_cached.cpp:337) [115]  (3.454 ns)
+
+ <State 11>: 3.454ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', sparse_lu_shared_cached.cpp:337) [115]  (3.454 ns)
+
+ <State 12>: 3.454ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', sparse_lu_shared_cached.cpp:337) [115]  (3.454 ns)
+
+ <State 13>: 3.454ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', sparse_lu_shared_cached.cpp:337) [115]  (3.454 ns)
+
+ <State 14>: 3.454ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', sparse_lu_shared_cached.cpp:337) [115]  (3.454 ns)
+
+ <State 15>: 3.454ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', sparse_lu_shared_cached.cpp:337) [115]  (3.454 ns)
+
+ <State 16>: 3.454ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', sparse_lu_shared_cached.cpp:337) [115]  (3.454 ns)
+
+ <State 17>: 3.454ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub', sparse_lu_shared_cached.cpp:337) [115]  (3.454 ns)
+
+ <State 18>: 1.237ns
+The critical path consists of the following:
+	'store' operation ('store_ln337', sparse_lu_shared_cached.cpp:337) of variable 'sub', sparse_lu_shared_cached.cpp:337 32 bit on array 'block_0_2' [118]  (1.237 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

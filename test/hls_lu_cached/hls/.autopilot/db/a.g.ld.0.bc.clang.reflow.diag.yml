@@ -1,0 +1,2652 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 194, Column: 22 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - Callee:          'cache_triangular_pattern(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, bool, bool, unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 66, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 226, Column: 11 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - Callee:          'validate_getrf_closure(unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 127, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 232, Column: 8 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cached_abs(float)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 8, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 276, Column: 22 }
+Function:        _ZL16run_cached_gessmjjPA64_tPA64_fS0_S2_Pj
+Args:            
+  - Callee:          'validate_gessm_closure(unsigned int, unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 148, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'run_cached_gessm(unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 275, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 306, Column: 22 }
+Function:        _ZL16run_cached_tstrfjjfPA64_tPA64_fS0_S2_Pj
+Args:            
+  - Callee:          'validate_tstrf_closure(unsigned int, unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 167, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'run_cached_tstrf(unsigned int, unsigned int, float, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 305, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 310, Column: 7 }
+Function:        _ZL16run_cached_tstrfjjfPA64_tPA64_fS0_S2_Pj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cached_abs(float)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 8, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'run_cached_tstrf(unsigned int, unsigned int, float, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 305, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 402, Column: 3 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cached_fail(unsigned int, unsigned int, unsigned int*, unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 14, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 444, Column: 14 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'run_cached_tstrf(unsigned int, unsigned int, float, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 305, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 406, Column: 2 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'clear_factor_cache(unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 22, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 408, Column: 13 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 441, Column: 13 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'cache_triangular_pattern(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, bool, bool, unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 66, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 434, Column: 14 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'run_cached_gessm(unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 275, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 422, Column: 2 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'clear_block_cache(unsigned short (*) [64], float (*) [64], unsigned int, unsigned int)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 43, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 423, Column: 12 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'cache_block(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 100, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 333, Column: 23 }
+Function:        _ZL16run_cached_tstrfjjfPA64_tPA64_fS0_S2_Pj
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_333_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 287, Column: 23 }
+Function:        _ZL16run_cached_gessmjjPA64_tPA64_fS0_S2_Pj
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_287_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 48, Column: 21 }
+Function:        _ZL17clear_block_cachePA64_tPA64_fjj
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_48_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 242, Column: 23 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_242_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 27, Column: 21 }
+Function:        _ZL18clear_factor_cachePA64_tS0_PA64_fj
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_27_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 305, Column: 0 }
+Function:        _ZL16run_cached_tstrfjjfPA64_tPA64_fS0_S2_Pj
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_320_3
+  - String:          ''' ('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:320:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          run_cached_tstrf
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 305, Column: 0 }
+Function:        _ZL16run_cached_tstrfjjfPA64_tPA64_fS0_S2_Pj
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_333_5
+  - String:          ''' ('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:333:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          run_cached_tstrf
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 275, Column: 0 }
+Function:        _ZL16run_cached_gessmjjPA64_tPA64_fS0_S2_Pj
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_287_4
+  - String:          ''' ('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:287:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          run_cached_gessm
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 43, Column: 0 }
+Function:        _ZL17clear_block_cachePA64_tPA64_fjj
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_48_3
+  - String:          ''' ('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:48:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          clear_block_cache
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_242_6
+  - String:          ''' ('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:242:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          run_cached_getrf
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 22, Column: 0 }
+Function:        _ZL18clear_factor_cachePA64_tS0_PA64_fj
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_27_3
+  - String:          ''' ('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:27:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          clear_factor_cache
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 194, Column: 22 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - Callee:          'cache_triangular_pattern(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, bool, bool, unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 66, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 226, Column: 11 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - Callee:          'validate_getrf_closure(unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 127, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 276, Column: 22 }
+Function:        _ZL16run_cached_gessmjjPA64_tPA64_fS0_S2_Pj
+Args:            
+  - Callee:          'validate_gessm_closure(unsigned int, unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 148, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'run_cached_gessm(unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 275, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 306, Column: 22 }
+Function:        _ZL16run_cached_tstrfjjfPA64_tPA64_fS0_S2_Pj
+Args:            
+  - Callee:          'validate_tstrf_closure(unsigned int, unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 167, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'run_cached_tstrf(unsigned int, unsigned int, float, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 305, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 406, Column: 2 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'clear_factor_cache(unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 22, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 408, Column: 13 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 422, Column: 2 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'clear_block_cache(unsigned short (*) [64], float (*) [64], unsigned int, unsigned int)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 43, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 423, Column: 12 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'cache_block(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 100, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 431, Column: 13 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'cache_triangular_pattern(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, bool, bool, unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 66, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 434, Column: 14 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'run_cached_gessm(unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 275, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 444, Column: 14 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'run_cached_tstrf(unsigned int, unsigned int, float, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 305, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_sparse_lu_shared_ir
+Args:            
+  - Callee:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_sparse_lu_shared_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'validate_getrf_closure(unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 127, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 275, Column: 0 }
+Function:        _ZL16run_cached_gessmjjPA64_tPA64_fS0_S2_Pj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'validate_gessm_closure(unsigned int, unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 148, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'run_cached_gessm(unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 275, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 305, Column: 0 }
+Function:        _ZL16run_cached_tstrfjjfPA64_tPA64_fS0_S2_Pj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'validate_tstrf_closure(unsigned int, unsigned int, unsigned short (*) [64], unsigned short (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 167, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'run_cached_tstrf(unsigned int, unsigned int, float, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 305, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clear_factor_cache(unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 22, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clear_block_cache(unsigned short (*) [64], float (*) [64], unsigned int, unsigned int)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 43, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cache_block(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 100, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       failed_row
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       failed_row
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       failed_row
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       failed_row
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       failed_row
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       failed_row
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       failed_row
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       L_rcsr
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       L_cid
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       L_val
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       failed_row
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       U_rcsr
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       U_cid
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       U_val
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       failed_row
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 383, Column: 14 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          lower_pos
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 384, Column: 14 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          upper_pos
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 385, Column: 14 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          factor
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 386, Column: 14 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          block_pos
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 387, Column: 14 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          block
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       X_cid
+  - String:          ' '
+  - BundleName:      x_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_449_2
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:449:21'
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 451, Column: 28 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep242seq
+  - ArrayName:       X_val
+  - String:          ' '
+  - BundleName:      x_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_449_2
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:449:21'
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 451, Column: 15 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.store.52
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 43 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep243seq
+  - ArrayName:       X_rcsr
+  - String:          ' '
+  - BundleName:      x_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_448_1
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:448:20'
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 43 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_449_2.load.10
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 62 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_449_2.load.14
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 103, Column: 28 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep244seq
+  - ArrayName:       X_rcsr
+  - String:          ' '
+  - BundleName:      x_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_102_1
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:102:20'
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 103, Column: 28 }
+  - OrigDirection:   read
+  - OrigID:          for.body.i.load.42
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 104, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          for.body.i.load.46
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 43 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 43 }
+  - OrigDirection:   read
+  - OrigID:          scevgep243seq
+  - ArrayName:       X_rcsr
+  - String:          ' '
+  - BundleName:      x_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_448_1
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:448:20'
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       X_cid
+  - String:          ' '
+  - BundleName:      x_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_448_1
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:448:20'
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          scevgep242seq
+  - ArrayName:       X_val
+  - String:          ' '
+  - BundleName:      x_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_448_1
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:448:20'
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 69, Column: 28 }
+Function:        _ZL24cache_triangular_patternPKjS0_PKfjjbbPA64_tPA64_fPj.7.8
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       row_ptr
+  - String:          ' '
+  - BundleName:      l_row,u_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_68_1
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:68:19'
+  - String:          ' '
+  - Function:        'cache_triangular_pattern(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, bool, bool, unsigned short (*) [64], float (*) [64], unsigned int*) (.7.8)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 66, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 69, Column: 28 }
+  - OrigDirection:   read
+  - OrigID:          for.body.load.18
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 70, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          for.body.load.22
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       L_cid
+  - String:          ' '
+  - BundleName:      l_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_257_8
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:257:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 259, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.body173.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep17seq
+  - ArrayName:       L_val
+  - String:          ' '
+  - BundleName:      l_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_257_8
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:257:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 260, Column: 15 }
+  - OrigDirection:   write
+  - OrigID:          for.inc188.store.3
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 43 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep18seq
+  - ArrayName:       U_rcsr
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_256_7
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:256:20'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 43 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_262_9.load.5
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 62 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_262_9.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 43 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep19seq
+  - ArrayName:       L_rcsr
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_256_7
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:256:20'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 43 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_257_8.load.9
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 62 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_257_8.load.13
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep20seq
+  - ArrayName:       U_cid
+  - String:          ' '
+  - BundleName:      u_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_262_9
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:262:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 264, Column: 27 }
+  - OrigDirection:   read
+  - OrigID:          for.inc210.load.8
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep23seq
+  - ArrayName:       U_val
+  - String:          ' '
+  - BundleName:      u_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_262_9
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:262:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 264, Column: 15 }
+  - OrigDirection:   write
+  - OrigID:          for.inc210.store.26
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 203, Column: 28 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep24seq
+  - ArrayName:       A_rcsr
+  - String:          ' '
+  - BundleName:      a_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_202_1
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:202:20'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 203, Column: 28 }
+  - OrigDirection:   read
+  - OrigID:          for.body.load.12
+  - OrigAccess:      load
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 204, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          for.body.load.16
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 43 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 43 }
+  - OrigDirection:   read
+  - OrigID:          scevgep19seq
+  - ArrayName:       L_rcsr
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_256_7
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:256:20'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 43 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 43 }
+  - OrigDirection:   read
+  - OrigID:          scevgep18seq
+  - ArrayName:       U_rcsr
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_256_7
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:256:20'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       L_cid
+  - String:          ' '
+  - BundleName:      l_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_256_7
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:256:20'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          scevgep20seq
+  - ArrayName:       U_cid
+  - String:          ' '
+  - BundleName:      u_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_256_7
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:256:20'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          scevgep17seq
+  - ArrayName:       L_val
+  - String:          ' '
+  - BundleName:      l_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_256_7
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:256:20'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          scevgep23seq
+  - ArrayName:       U_val
+  - String:          ' '
+  - BundleName:      u_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_256_7
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:256:20'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       X_cid
+  - String:          ' '
+  - BundleName:      x_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_449_2
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:449:21'
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          scevgep242seq
+  - ArrayName:       X_val
+  - String:          ' '
+  - BundleName:      x_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_449_2
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:449:21'
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 43 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 43 }
+  - OrigDirection:   read
+  - OrigID:          scevgep243seq
+  - ArrayName:       X_rcsr
+  - String:          ' '
+  - BundleName:      x_row
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 103, Column: 28 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 103, Column: 28 }
+  - OrigDirection:   read
+  - OrigID:          scevgep244seq
+  - ArrayName:       X_rcsr
+  - String:          ' '
+  - BundleName:      x_row
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 69, Column: 28 }
+Function:        _ZL24cache_triangular_patternPKjS0_PKfjjbbPA64_tPA64_fPj.7.8
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 69, Column: 28 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       row_ptr
+  - String:          ' '
+  - BundleName:      l_row,u_row
+  - String:          ' '
+  - Function:        'cache_triangular_pattern(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, bool, bool, unsigned short (*) [64], float (*) [64], unsigned int*) (.7.8)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 66, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          scevgep20seq
+  - ArrayName:       U_cid
+  - String:          ' '
+  - BundleName:      u_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_262_9
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:262:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          scevgep23seq
+  - ArrayName:       U_val
+  - String:          ' '
+  - BundleName:      u_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_262_9
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:262:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 43 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 43 }
+  - OrigDirection:   read
+  - OrigID:          scevgep18seq
+  - ArrayName:       U_rcsr
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          scevgep17seq
+  - ArrayName:       L_val
+  - String:          ' '
+  - BundleName:      l_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_257_8
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:257:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       L_cid
+  - String:          ' '
+  - BundleName:      l_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_257_8
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:257:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 43 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 43 }
+  - OrigDirection:   read
+  - OrigID:          scevgep19seq
+  - ArrayName:       L_rcsr
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 203, Column: 28 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 203, Column: 28 }
+  - OrigDirection:   read
+  - OrigID:          scevgep24seq
+  - ArrayName:       A_rcsr
+  - String:          ' '
+  - BundleName:      a_row
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_171_3
+  - String:          '> at '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:171:22'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 171, Column: 22 }
+Function:        _ZL16run_cached_tstrfjjfPA64_tPA64_fS0_S2_Pj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  run_cached_tstrf
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_171_3
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:171:22'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 171, Column: 22 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_152_3
+  - String:          '> at '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:152:22'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 152, Column: 22 }
+Function:        _ZL16run_cached_gessmjjPA64_tPA64_fS0_S2_Pj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  run_cached_gessm
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_152_3
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:152:22'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 152, Column: 22 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_76_2
+  - String:          '> at '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:76:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 76, Column: 20 }
+Function:        _ZL24cache_triangular_patternPKjS0_PKfjjbbPA64_tPA64_fPj.7.8
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cache_triangular_pattern
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_76_2
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:76:20'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 76, Column: 20 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_210_2
+  - String:          '> at '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:210:21'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 210, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  run_cached_getrf
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_210_2
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:210:21'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 210, Column: 21 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_131_3
+  - String:          '> at '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:131:22'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 131, Column: 22 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  run_cached_getrf
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_131_3
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:131:22'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 131, Column: 22 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_110_2
+  - String:          '> at '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:110:21'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 110, Column: 21 }
+Function:        sparse_lu_shared
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  sparse_lu_shared
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_110_2
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:110:21'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 110, Column: 21 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 448, Column: 20 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Disabling loop flattening for loop '''
+  - LoopName:        VITIS_LOOP_448_1
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 448, Column: 20 }
+Function:        sparse_lu_shared
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   'off '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  sparse_lu_shared
+  - String:          ' '
+  - PragmaSrcLoc:    'sparse_lu_shared_cached.cpp:450:1'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 450, Column: 1 }
+  - LoopName:        VITIS_LOOP_448_1
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:448:20'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 448, Column: 20 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 279, Column: 20 }
+Function:        _ZL16run_cached_gessmjjPA64_tPA64_fS0_S2_Pj
+Args:            
+  - String:          'Disabling loop flattening for loop '''
+  - LoopName:        VITIS_LOOP_279_1
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 279, Column: 20 }
+Function:        _ZL16run_cached_gessmjjPA64_tPA64_fS0_S2_Pj
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   'off '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  run_cached_gessm
+  - String:          ' '
+  - PragmaSrcLoc:    'sparse_lu_shared_cached.cpp:286:1'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 286, Column: 1 }
+  - LoopName:        VITIS_LOOP_279_1
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:279:20'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 279, Column: 20 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 314, Column: 21 }
+Function:        _ZL16run_cached_tstrfjjfPA64_tPA64_fS0_S2_Pj
+Args:            
+  - String:          'Disabling loop flattening for loop '''
+  - LoopName:        VITIS_LOOP_314_2
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 314, Column: 21 }
+Function:        _ZL16run_cached_tstrfjjfPA64_tPA64_fS0_S2_Pj
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   'off '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  run_cached_tstrf
+  - String:          ' '
+  - PragmaSrcLoc:    'sparse_lu_shared_cached.cpp:331:1'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 331, Column: 1 }
+  - LoopName:        VITIS_LOOP_314_2
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:314:21'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 314, Column: 21 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 69, Column: 28 }
+Function:        _ZL24cache_triangular_patternPKjS0_PKfjjbbPA64_tPA64_fPj.7.8.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - Function:        'cache_triangular_pattern(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, bool, bool, unsigned short (*) [64], float (*) [64], unsigned int*) (.7.8.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 66, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 69, Column: 28 }
+Function:        _ZL24cache_triangular_patternPKjS0_PKfjjbbPA64_tPA64_fPj.7.8.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      u_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 203, Column: 28 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      a_row
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*) (.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 203, Column: 28 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      a_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 43 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      l_row
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*) (.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 43 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      l_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      l_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_257_8
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:257:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*) (.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_257_8
+  - String:          '''('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:257:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      l_col
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      l_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_257_8
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:257:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*) (.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 257, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_257_8
+  - String:          '''('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:257:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      l_val
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 43 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      u_row
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*) (.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 43 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      u_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      u_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_262_9
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:262:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*) (.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_262_9
+  - String:          '''('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:262:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      u_col
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq6
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      u_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_262_9
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:262:21'
+  - String:          ' '
+  - Function:        'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*) (.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 262, Column: 21 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_262_9
+  - String:          '''('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:262:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      u_val
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 103, Column: 28 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      x_row
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 103, Column: 28 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      x_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 43 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      x_row
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 43 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      x_row
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      x_col
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_449_2
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:449:21'
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_449_2
+  - String:          '''('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:449:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      x_col
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      x_val
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_449_2
+  - String:          ' '
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:449:21'
+  - String:          ' '
+  - Function:        sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 449, Column: 21 }
+Function:        sparse_lu_shared
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_449_2
+  - String:          '''('
+  - LoopLoc:         'sparse_lu_shared_cached.cpp:449:21'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      x_val
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 194, Column: 22 }
+Function:        _ZL16run_cached_getrfPKjS0_PKfS0_S0_PfS0_S0_S3_jjjjfPA64_tS5_PA64_fPj.1
+Args:            
+  - Callee:          'cache_triangular_pattern(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, bool, bool, unsigned short (*) [64], float (*) [64], unsigned int*) (.7.8.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 66, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*) (.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 408, Column: 13 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'run_cached_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned short (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*) (.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 193, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 431, Column: 13 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'cache_triangular_pattern(unsigned int const*, unsigned int const*, float const*, unsigned int, unsigned int, bool, bool, unsigned short (*) [64], float (*) [64], unsigned int*) (.7.8.1)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 66, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 434, Column: 14 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'run_cached_gessm(unsigned int, unsigned int, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 275, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 444, Column: 14 }
+Function:        sparse_lu_shared
+Args:            
+  - Callee:          'run_cached_tstrf(unsigned int, unsigned int, float, unsigned short (*) [64], float (*) [64], unsigned short (*) [64], float (*) [64], unsigned int*)'
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 305, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          sparse_lu_shared
+    DebugLoc:        { File: sparse_lu_shared_cached.cpp, Line: 356, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

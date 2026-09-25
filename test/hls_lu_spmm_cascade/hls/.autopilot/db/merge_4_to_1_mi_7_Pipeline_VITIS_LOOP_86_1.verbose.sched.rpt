@@ -1,0 +1,204 @@
+
+
+================================================================
+== Vitis HLS Report for 'merge_4_to_1_mi_7_Pipeline_VITIS_LOOP_86_1'
+================================================================
+* Date:           Fri Sep 25 00:04:41 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.539 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_86_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.25>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%from4_end = alloca i32 1" [core.cpp:82]   --->   Operation 5 'alloca' 'from4_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%from3_end = alloca i32 1" [core.cpp:81]   --->   Operation 6 'alloca' 'from3_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%from2_end = alloca i32 1" [core.cpp:80]   --->   Operation 7 'alloca' 'from2_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%from1_end = alloca i32 1" [core.cpp:79]   --->   Operation 8 'alloca' 'from1_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rm1_idle, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %mi1_1, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %mi2_1, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %mi3_1, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %mi4_1, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%store_ln79 = store i1 0, i1 %from1_end" [core.cpp:79]   --->   Operation 14 'store' 'store_ln79' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 15 [1/1] (0.42ns)   --->   "%store_ln80 = store i1 0, i1 %from2_end" [core.cpp:80]   --->   Operation 15 'store' 'store_ln80' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln81 = store i1 0, i1 %from3_end" [core.cpp:81]   --->   Operation 16 'store' 'store_ln81' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 17 [1/1] (0.42ns)   --->   "%store_ln82 = store i1 0, i1 %from4_end" [core.cpp:82]   --->   Operation 17 'store' 'store_ln82' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 18 [1/1] (0.42ns)   --->   "%br_ln86 = br void %for.cond" [core.cpp:86]   --->   Operation 18 'br' 'br_ln86' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%enable = phi i1 0, void %newFuncRoot, i1 %enable_35, void %if.end38"   --->   Operation 19 'phi' 'enable' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln86 = br i1 %enable, void %for.body, void %for.end.exitStub" [core.cpp:86]   --->   Operation 20 'br' 'br_ln86' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specpipeline_ln87 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, i32 4294967295, void @empty_117" [core.cpp:87]   --->   Operation 21 'specpipeline' 'specpipeline_ln87' <Predicate = (!enable)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specloopname_ln86 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21" [core.cpp:86]   --->   Operation 22 'specloopname' 'specloopname_ln86' <Predicate = (!enable)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] ( I:0.00ns O:0.00ns )   --->   "%tmp = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i5P0A, i5 %mi1_1, i32 1" [core.cpp:89]   --->   Operation 23 'nbreadreq' 'tmp' <Predicate = (!enable)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln89 = br i1 %tmp, void %if.else, void %if.then1" [core.cpp:89]   --->   Operation 24 'br' 'br_ln89' <Predicate = (!enable)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] ( I:0.00ns O:0.00ns )   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i5P0A, i5 %mi2_1, i32 1" [core.cpp:94]   --->   Operation 25 'nbreadreq' 'tmp_s' <Predicate = (!enable & !tmp)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln94 = br i1 %tmp_s, void %if.else14, void %if.then6" [core.cpp:94]   --->   Operation 26 'br' 'br_ln94' <Predicate = (!enable & !tmp)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] ( I:0.00ns O:0.00ns )   --->   "%tmp_145 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i5P0A, i5 %mi3_1, i32 1" [core.cpp:99]   --->   Operation 27 'nbreadreq' 'tmp_145' <Predicate = (!enable & !tmp & !tmp_s)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln99 = br i1 %tmp_145, void %if.else24, void %if.then16" [core.cpp:99]   --->   Operation 28 'br' 'br_ln99' <Predicate = (!enable & !tmp & !tmp_s)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] ( I:0.00ns O:0.00ns )   --->   "%tmp_146 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i5P0A, i5 %mi4_1, i32 1" [core.cpp:104]   --->   Operation 29 'nbreadreq' 'tmp_146' <Predicate = (!enable & !tmp & !tmp_s & !tmp_145)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln104 = br i1 %tmp_146, void %if.end38, void %if.then26" [core.cpp:104]   --->   Operation 30 'br' 'br_ln104' <Predicate = (!enable & !tmp & !tmp_s & !tmp_145)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] ( I:1.82ns O:1.82ns )   --->   "%mi4_1_read = read i5 @_ssdm_op_Read.ap_fifo.volatile.i5P0A, i5 %mi4_1" [core.cpp:105]   --->   Operation 31 'read' 'mi4_1_read' <Predicate = (!enable & !tmp & !tmp_s & !tmp_145 & tmp_146)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%temp_end_26 = trunc i5 %mi4_1_read" [core.cpp:105]   --->   Operation 32 'trunc' 'temp_end_26' <Predicate = (!enable & !tmp & !tmp_s & !tmp_145 & tmp_146)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node or_ln107)   --->   "%temp_idle_12 = bitselect i1 @_ssdm_op_BitSelect.i1.i5.i32, i5 %mi4_1_read, i32 4" [core.cpp:105]   --->   Operation 33 'bitselect' 'temp_idle_12' <Predicate = (!enable & !tmp & !tmp_s & !tmp_145 & tmp_146)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node or_ln107)   --->   "%xor_ln107 = xor i1 %temp_idle_12, i1 1" [core.cpp:107]   --->   Operation 34 'xor' 'xor_ln107' <Predicate = (!enable & !tmp & !tmp_s & !tmp_145 & tmp_146)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln107 = or i1 %temp_end_26, i1 %xor_ln107" [core.cpp:107]   --->   Operation 35 'or' 'or_ln107' <Predicate = (!enable & !tmp & !tmp_s & !tmp_145 & tmp_146)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln107 = br i1 %or_ln107, void %if.then31, void %if.end33" [core.cpp:107]   --->   Operation 36 'br' 'br_ln107' <Predicate = (!enable & !tmp & !tmp_s & !tmp_145 & tmp_146)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.42ns)   --->   "%store_ln82 = store i1 %temp_end_26, i1 %from4_end" [core.cpp:82]   --->   Operation 37 'store' 'store_ln82' <Predicate = (!enable & !tmp & !tmp_s & !tmp_145 & tmp_146)> <Delay = 0.42>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln109 = br void %if.end38" [core.cpp:109]   --->   Operation 38 'br' 'br_ln109' <Predicate = (!enable & !tmp & !tmp_s & !tmp_145 & tmp_146)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] ( I:1.82ns O:1.82ns )   --->   "%mi3_1_read = read i5 @_ssdm_op_Read.ap_fifo.volatile.i5P0A, i5 %mi3_1" [core.cpp:100]   --->   Operation 39 'read' 'mi3_1_read' <Predicate = (!enable & !tmp & !tmp_s & tmp_145)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%temp_end_25 = trunc i5 %mi3_1_read" [core.cpp:100]   --->   Operation 40 'trunc' 'temp_end_25' <Predicate = (!enable & !tmp & !tmp_s & tmp_145)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node or_ln102)   --->   "%temp_idle_11 = bitselect i1 @_ssdm_op_BitSelect.i1.i5.i32, i5 %mi3_1_read, i32 4" [core.cpp:100]   --->   Operation 41 'bitselect' 'temp_idle_11' <Predicate = (!enable & !tmp & !tmp_s & tmp_145)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node or_ln102)   --->   "%xor_ln102 = xor i1 %temp_idle_11, i1 1" [core.cpp:102]   --->   Operation 42 'xor' 'xor_ln102' <Predicate = (!enable & !tmp & !tmp_s & tmp_145)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln102 = or i1 %temp_end_25, i1 %xor_ln102" [core.cpp:102]   --->   Operation 43 'or' 'or_ln102' <Predicate = (!enable & !tmp & !tmp_s & tmp_145)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln102 = br i1 %or_ln102, void %if.then21, void %if.end23" [core.cpp:102]   --->   Operation 44 'br' 'br_ln102' <Predicate = (!enable & !tmp & !tmp_s & tmp_145)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.42ns)   --->   "%store_ln81 = store i1 %temp_end_25, i1 %from3_end" [core.cpp:81]   --->   Operation 45 'store' 'store_ln81' <Predicate = (!enable & !tmp & !tmp_s & tmp_145)> <Delay = 0.42>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln104 = br void %if.end38" [core.cpp:104]   --->   Operation 46 'br' 'br_ln104' <Predicate = (!enable & !tmp & !tmp_s & tmp_145)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] ( I:1.82ns O:1.82ns )   --->   "%mi2_1_read = read i5 @_ssdm_op_Read.ap_fifo.volatile.i5P0A, i5 %mi2_1" [core.cpp:95]   --->   Operation 47 'read' 'mi2_1_read' <Predicate = (!enable & !tmp & tmp_s)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%temp_end_24 = trunc i5 %mi2_1_read" [core.cpp:95]   --->   Operation 48 'trunc' 'temp_end_24' <Predicate = (!enable & !tmp & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node or_ln97)   --->   "%temp_idle_10 = bitselect i1 @_ssdm_op_BitSelect.i1.i5.i32, i5 %mi2_1_read, i32 4" [core.cpp:95]   --->   Operation 49 'bitselect' 'temp_idle_10' <Predicate = (!enable & !tmp & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node or_ln97)   --->   "%xor_ln97 = xor i1 %temp_idle_10, i1 1" [core.cpp:97]   --->   Operation 50 'xor' 'xor_ln97' <Predicate = (!enable & !tmp & tmp_s)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln97 = or i1 %temp_end_24, i1 %xor_ln97" [core.cpp:97]   --->   Operation 51 'or' 'or_ln97' <Predicate = (!enable & !tmp & tmp_s)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln97 = br i1 %or_ln97, void %if.then11, void %if.end13" [core.cpp:97]   --->   Operation 52 'br' 'br_ln97' <Predicate = (!enable & !tmp & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.42ns)   --->   "%store_ln80 = store i1 %temp_end_24, i1 %from2_end" [core.cpp:80]   --->   Operation 53 'store' 'store_ln80' <Predicate = (!enable & !tmp & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln99 = br void %if.end38" [core.cpp:99]   --->   Operation 54 'br' 'br_ln99' <Predicate = (!enable & !tmp & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] ( I:1.82ns O:1.82ns )   --->   "%mi1_1_read = read i5 @_ssdm_op_Read.ap_fifo.volatile.i5P0A, i5 %mi1_1" [core.cpp:90]   --->   Operation 55 'read' 'mi1_1_read' <Predicate = (!enable & tmp)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%temp_end = trunc i5 %mi1_1_read" [core.cpp:90]   --->   Operation 56 'trunc' 'temp_end' <Predicate = (!enable & tmp)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns) (grouped into LUT with out node or_ln92)   --->   "%temp_idle = bitselect i1 @_ssdm_op_BitSelect.i1.i5.i32, i5 %mi1_1_read, i32 4" [core.cpp:90]   --->   Operation 57 'bitselect' 'temp_idle' <Predicate = (!enable & tmp)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns) (grouped into LUT with out node or_ln92)   --->   "%xor_ln92 = xor i1 %temp_idle, i1 1" [core.cpp:92]   --->   Operation 58 'xor' 'xor_ln92' <Predicate = (!enable & tmp)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln92 = or i1 %temp_end, i1 %xor_ln92" [core.cpp:92]   --->   Operation 59 'or' 'or_ln92' <Predicate = (!enable & tmp)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln92 = br i1 %or_ln92, void %if.then3, void %if.end" [core.cpp:92]   --->   Operation 60 'br' 'br_ln92' <Predicate = (!enable & tmp)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.42ns)   --->   "%store_ln79 = store i1 %temp_end, i1 %from1_end" [core.cpp:79]   --->   Operation 61 'store' 'store_ln79' <Predicate = (!enable & tmp)> <Delay = 0.42>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%br_ln94 = br void %if.end38" [core.cpp:94]   --->   Operation 62 'br' 'br_ln94' <Predicate = (!enable & tmp)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 79 'ret' 'ret_ln0' <Predicate = (enable)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 2.53>
+ST_2 : Operation 63 [1/1] ( I:1.82ns O:1.82ns )   --->   "%write_ln108 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %rm1_idle, i1 1" [core.cpp:108]   --->   Operation 63 'write' 'write_ln108' <Predicate = (!tmp & !tmp_s & !tmp_145 & tmp_146 & !or_ln107)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%br_ln108 = br void %if.end33" [core.cpp:108]   --->   Operation 64 'br' 'br_ln108' <Predicate = (!tmp & !tmp_s & !tmp_145 & tmp_146 & !or_ln107)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] ( I:1.82ns O:1.82ns )   --->   "%write_ln103 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %rm1_idle, i1 1" [core.cpp:103]   --->   Operation 65 'write' 'write_ln103' <Predicate = (!tmp & !tmp_s & tmp_145 & !or_ln102)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%br_ln103 = br void %if.end23" [core.cpp:103]   --->   Operation 66 'br' 'br_ln103' <Predicate = (!tmp & !tmp_s & tmp_145 & !or_ln102)> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] ( I:1.82ns O:1.82ns )   --->   "%write_ln98 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %rm1_idle, i1 1" [core.cpp:98]   --->   Operation 67 'write' 'write_ln98' <Predicate = (!tmp & tmp_s & !or_ln97)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln98 = br void %if.end13" [core.cpp:98]   --->   Operation 68 'br' 'br_ln98' <Predicate = (!tmp & tmp_s & !or_ln97)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] ( I:1.82ns O:1.82ns )   --->   "%write_ln93 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %rm1_idle, i1 1" [core.cpp:93]   --->   Operation 69 'write' 'write_ln93' <Predicate = (tmp & !or_ln92)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln93 = br void %if.end" [core.cpp:93]   --->   Operation 70 'br' 'br_ln93' <Predicate = (tmp & !or_ln92)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%from4_end_16 = load i1 %from4_end" [core.cpp:111]   --->   Operation 71 'load' 'from4_end_16' <Predicate = (!enable)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%from3_end_16 = load i1 %from3_end" [core.cpp:111]   --->   Operation 72 'load' 'from3_end_16' <Predicate = (!enable)> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%from2_end_40 = load i1 %from2_end" [core.cpp:111]   --->   Operation 73 'load' 'from2_end_40' <Predicate = (!enable)> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%from1_end_40 = load i1 %from1_end" [core.cpp:111]   --->   Operation 74 'load' 'from1_end_40' <Predicate = (!enable)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node enable_35)   --->   "%and_ln111_5 = and i1 %from2_end_40, i1 %from1_end_40" [core.cpp:111]   --->   Operation 75 'and' 'and_ln111_5' <Predicate = (!enable)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 76 [1/1] (0.00ns) (grouped into LUT with out node enable_35)   --->   "%and_ln111 = and i1 %from4_end_16, i1 %from3_end_16" [core.cpp:111]   --->   Operation 76 'and' 'and_ln111' <Predicate = (!enable)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 77 [1/1] (0.28ns) (out node of the LUT)   --->   "%enable_35 = and i1 %and_ln111, i1 %and_ln111_5" [core.cpp:111]   --->   Operation 77 'and' 'enable_35' <Predicate = (!enable)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%br_ln86 = br void %for.cond" [core.cpp:86]   --->   Operation 78 'br' 'br_ln86' <Predicate = (!enable)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 2.252ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation 1 bit ('enable') with incoming values : ('enable', core.cpp:111) [21]  (0.427 ns)
+	'br' operation ('br_ln86', core.cpp:86) [19]  (0.427 ns)
+	'phi' operation 1 bit ('enable') with incoming values : ('enable', core.cpp:111) [21]  (0.000 ns)
+	fifo read operation ('mi4_1_read', core.cpp:105) on port 'mi4_1' (core.cpp:105) [38]  (1.825 ns)
+
+ <State 2>: 2.539ns
+The critical path consists of the following:
+	'load' operation 1 bit ('from4_end', core.cpp:111) on local variable 'from4_end', core.cpp:82 [90]  (0.000 ns)
+	'and' operation 1 bit ('and_ln111', core.cpp:111) [95]  (0.000 ns)
+	'and' operation 1 bit ('enable', core.cpp:111) [96]  (0.287 ns)
+	multiplexor before 'phi' operation 1 bit ('enable') with incoming values : ('enable', core.cpp:111) [21]  (0.427 ns)
+	'phi' operation 1 bit ('enable') with incoming values : ('enable', core.cpp:111) [21]  (0.000 ns)
+	fifo read operation ('mi4_1_read', core.cpp:105) on port 'mi4_1' (core.cpp:105) [38]  (1.825 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

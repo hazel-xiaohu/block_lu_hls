@@ -1,0 +1,352 @@
+
+
+================================================================
+== Vitis HLS Report for 'sub_final_merger_Pipeline_VITIS_LOOP_846_2'
+================================================================
+* Date:           Fri Sep 25 00:04:59 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  5.067 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_846_2  |        ?|        ?|        10|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 11
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 11, States = { 1 2 3 4 5 6 7 8 9 10 11 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.47>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%temp_val_1 = alloca i32 1" [util.cpp:831]   --->   Operation 13 'alloca' 'temp_val_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%empty_333 = alloca i32 1"   --->   Operation 14 'alloca' 'empty_333' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%temp_cid_2 = alloca i32 1" [util.cpp:831]   --->   Operation 15 'alloca' 'temp_cid_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%temp_end = alloca i32 1" [util.cpp:831]   --->   Operation 16 'alloca' 'temp_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%temp_global_end = alloca i32 1" [util.cpp:831]   --->   Operation 17 'alloca' 'temp_global_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%temp1_val_1 = alloca i32 1" [util.cpp:831]   --->   Operation 18 'alloca' 'temp1_val_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%empty_334 = alloca i32 1"   --->   Operation 19 'alloca' 'empty_334' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%temp1_end = alloca i32 1" [util.cpp:831]   --->   Operation 20 'alloca' 'temp1_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%temp1_global_end = alloca i32 1" [util.cpp:831]   --->   Operation 21 'alloca' 'temp1_global_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%enable_i = alloca i32 1" [util.cpp:846]   --->   Operation 22 'alloca' 'enable_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%hold_s2 = alloca i32 1" [util.cpp:845]   --->   Operation 23 'alloca' 'hold_s2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%hold_s1 = alloca i32 1" [util.cpp:844]   --->   Operation 24 'alloca' 'hold_s1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%temp1_cid_1 = alloca i32 1" [util.cpp:831]   --->   Operation 25 'alloca' 'temp1_cid_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe3, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe4, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %final_merger_2, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%temp_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %temp_val" [util.cpp:829]   --->   Operation 29 'read' 'temp_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %empty" [util.cpp:829]   --->   Operation 30 'read' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%temp_cid_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %temp_cid" [util.cpp:829]   --->   Operation 31 'read' 'temp_cid_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_22 = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %empty_175" [util.cpp:829]   --->   Operation 32 'read' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%temp1_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %temp1_val" [util.cpp:829]   --->   Operation 33 'read' 'temp1_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_23 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %empty_174" [util.cpp:829]   --->   Operation 34 'read' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%temp1_cid_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %temp1_cid" [util.cpp:829]   --->   Operation 35 'read' 'temp1_cid_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_24 = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %empty_173" [util.cpp:829]   --->   Operation 36 'read' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.47ns)   --->   "%store_ln831 = store i32 %temp1_cid_read, i32 %temp1_cid_1" [util.cpp:831]   --->   Operation 37 'store' 'store_ln831' <Predicate = true> <Delay = 0.47>
+ST_1 : Operation 38 [1/1] (0.42ns)   --->   "%store_ln844 = store i1 1, i1 %hold_s1" [util.cpp:844]   --->   Operation 38 'store' 'store_ln844' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 39 [1/1] (0.42ns)   --->   "%store_ln845 = store i1 1, i1 %hold_s2" [util.cpp:845]   --->   Operation 39 'store' 'store_ln845' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 40 [1/1] (0.47ns)   --->   "%store_ln846 = store i1 %tmp_22, i1 %enable_i" [util.cpp:846]   --->   Operation 40 'store' 'store_ln846' <Predicate = true> <Delay = 0.47>
+ST_1 : Operation 41 [1/1] (0.42ns)   --->   "%store_ln831 = store i1 0, i1 %temp1_global_end" [util.cpp:831]   --->   Operation 41 'store' 'store_ln831' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 42 [1/1] (0.47ns)   --->   "%store_ln831 = store i1 %tmp_24, i1 %temp1_end" [util.cpp:831]   --->   Operation 42 'store' 'store_ln831' <Predicate = true> <Delay = 0.47>
+ST_1 : Operation 43 [1/1] (0.42ns)   --->   "%store_ln829 = store i32 %tmp_23, i32 %empty_334" [util.cpp:829]   --->   Operation 43 'store' 'store_ln829' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 44 [1/1] (0.42ns)   --->   "%store_ln831 = store i32 %temp1_val_read, i32 %temp1_val_1" [util.cpp:831]   --->   Operation 44 'store' 'store_ln831' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 45 [1/1] (0.42ns)   --->   "%store_ln831 = store i1 0, i1 %temp_global_end" [util.cpp:831]   --->   Operation 45 'store' 'store_ln831' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 46 [1/1] (0.42ns)   --->   "%store_ln831 = store i1 %tmp_22, i1 %temp_end" [util.cpp:831]   --->   Operation 46 'store' 'store_ln831' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 47 [1/1] (0.42ns)   --->   "%store_ln831 = store i32 %temp_cid_read, i32 %temp_cid_2" [util.cpp:831]   --->   Operation 47 'store' 'store_ln831' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 48 [1/1] (0.42ns)   --->   "%store_ln829 = store i32 %tmp, i32 %empty_333" [util.cpp:829]   --->   Operation 48 'store' 'store_ln829' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 49 [1/1] (0.42ns)   --->   "%store_ln831 = store i32 %temp_val_read, i32 %temp_val_1" [util.cpp:831]   --->   Operation 49 'store' 'store_ln831' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 50 [1/1] (0.42ns)   --->   "%br_ln846 = br void %for.cond7" [util.cpp:846]   --->   Operation 50 'br' 'br_ln846' <Predicate = true> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 5.06>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%enable_j = phi i1 %enable_j_145, void %if.end41, i1 %tmp_24, void %newFuncRoot" [util.cpp:829]   --->   Operation 51 'phi' 'enable_j' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%temp_cid_3 = load i32 %temp_cid_2"   --->   Operation 52 'load' 'temp_cid_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%enable_i_1 = load i1 %enable_i" [util.cpp:846]   --->   Operation 53 'load' 'enable_i_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.28ns)   --->   "%and_ln846 = and i1 %enable_i_1, i1 %enable_j" [util.cpp:846]   --->   Operation 54 'and' 'and_ln846' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln846 = br i1 %and_ln846, void %for.body10, void %for.end.exitStub" [util.cpp:846]   --->   Operation 55 'br' 'br_ln846' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%hold_s1_load = load i1 %hold_s1" [util.cpp:848]   --->   Operation 56 'load' 'hold_s1_load' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%specpipeline_ln847 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, i32 4294967295, void @empty_117" [util.cpp:847]   --->   Operation 57 'specpipeline' 'specpipeline_ln847' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%specloopname_ln846 = specloopname void @_ssdm_op_SpecLoopName, void @empty_29" [util.cpp:846]   --->   Operation 58 'specloopname' 'specloopname_ln846' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.42ns)   --->   "%br_ln848 = br i1 %hold_s1_load, void %land.lhs.true11, void %if.end" [util.cpp:848]   --->   Operation 59 'br' 'br_ln848' <Predicate = (!and_ln846)> <Delay = 0.42>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln848 = br i1 %enable_i_1, void %if.then12, void %land.lhs.true11.if.end_crit_edge" [util.cpp:848]   --->   Operation 60 'br' 'br_ln848' <Predicate = (!and_ln846 & !hold_s1_load)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] ( I:1.74ns O:1.74ns )   --->   "%result_pe3_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %result_pe3" [util.cpp:849]   --->   Operation 61 'read' 'result_pe3_read' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%trunc_ln849 = trunc i66 %result_pe3_read" [util.cpp:849]   --->   Operation 62 'trunc' 'trunc_ln849' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%temp_cid_4 = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %result_pe3_read, i32 32, i32 63" [util.cpp:849]   --->   Operation 63 'partselect' 'temp_cid_4' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%temp_end_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe3_read, i32 64" [util.cpp:849]   --->   Operation 64 'bitselect' 'temp_end_2' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%temp_global_end_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe3_read, i32 65" [util.cpp:849]   --->   Operation 65 'bitselect' 'temp_global_end_1' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%temp_val_2 = bitcast i32 %trunc_ln849" [util.cpp:849]   --->   Operation 66 'bitcast' 'temp_val_2' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.47ns)   --->   "%store_ln846 = store i1 %temp_end_2, i1 %enable_i" [util.cpp:846]   --->   Operation 67 'store' 'store_ln846' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 0.47>
+ST_2 : Operation 68 [1/1] (0.42ns)   --->   "%store_ln831 = store i1 %temp_global_end_1, i1 %temp_global_end" [util.cpp:831]   --->   Operation 68 'store' 'store_ln831' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 0.42>
+ST_2 : Operation 69 [1/1] (0.42ns)   --->   "%store_ln831 = store i1 %temp_end_2, i1 %temp_end" [util.cpp:831]   --->   Operation 69 'store' 'store_ln831' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 0.42>
+ST_2 : Operation 70 [1/1] (0.42ns)   --->   "%store_ln849 = store i32 %trunc_ln849, i32 %empty_333" [util.cpp:849]   --->   Operation 70 'store' 'store_ln849' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 0.42>
+ST_2 : Operation 71 [1/1] (0.42ns)   --->   "%store_ln831 = store i32 %temp_val_2, i32 %temp_val_1" [util.cpp:831]   --->   Operation 71 'store' 'store_ln831' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 0.42>
+ST_2 : Operation 72 [1/1] (0.42ns)   --->   "%br_ln851 = br void %if.end" [util.cpp:851]   --->   Operation 72 'br' 'br_ln851' <Predicate = (!and_ln846 & !enable_i_1 & !hold_s1_load)> <Delay = 0.42>
+ST_2 : Operation 73 [1/1] (0.47ns)   --->   "%store_ln846 = store i1 1, i1 %enable_i" [util.cpp:846]   --->   Operation 73 'store' 'store_ln846' <Predicate = (!and_ln846 & enable_i_1 & !hold_s1_load)> <Delay = 0.47>
+ST_2 : Operation 74 [1/1] (0.42ns)   --->   "%br_ln848 = br void %if.end" [util.cpp:848]   --->   Operation 74 'br' 'br_ln848' <Predicate = (!and_ln846 & enable_i_1 & !hold_s1_load)> <Delay = 0.42>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%temp_cid_1 = phi i32 %temp_cid_4, void %if.then12, i32 %temp_cid_3, void %for.body10, i32 %temp_cid_3, void %land.lhs.true11.if.end_crit_edge"   --->   Operation 75 'phi' 'temp_cid_1' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%hold_s2_load = load i1 %hold_s2" [util.cpp:852]   --->   Operation 76 'load' 'hold_s2_load' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.28ns)   --->   "%or_ln852 = or i1 %hold_s2_load, i1 %enable_j" [util.cpp:852]   --->   Operation 77 'or' 'or_ln852' <Predicate = (!and_ln846)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node enable_j_1)   --->   "%xor_ln852 = xor i1 %hold_s2_load, i1 1" [util.cpp:852]   --->   Operation 78 'xor' 'xor_ln852' <Predicate = (!and_ln846)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 79 [1/1] (0.28ns) (out node of the LUT)   --->   "%enable_j_1 = or i1 %enable_j, i1 %xor_ln852" [util.cpp:852]   --->   Operation 79 'or' 'enable_j_1' <Predicate = (!and_ln846)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%enable_i_load = load i1 %enable_i" [util.cpp:857]   --->   Operation 80 'load' 'enable_i_load' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%br_ln852 = br i1 %or_ln852, void %if.then16, void %if.end19" [util.cpp:852]   --->   Operation 81 'br' 'br_ln852' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] ( I:1.74ns O:1.74ns )   --->   "%result_pe4_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %result_pe4" [util.cpp:853]   --->   Operation 82 'read' 'result_pe4_read' <Predicate = (!and_ln846 & !or_ln852)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%trunc_ln853 = trunc i66 %result_pe4_read" [util.cpp:853]   --->   Operation 83 'trunc' 'trunc_ln853' <Predicate = (!and_ln846 & !or_ln852)> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%temp1_cid_2 = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %result_pe4_read, i32 32, i32 63" [util.cpp:853]   --->   Operation 84 'partselect' 'temp1_cid_2' <Predicate = (!and_ln846 & !or_ln852)> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%temp1_end_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe4_read, i32 64" [util.cpp:853]   --->   Operation 85 'bitselect' 'temp1_end_2' <Predicate = (!and_ln846 & !or_ln852)> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%temp1_global_end_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe4_read, i32 65" [util.cpp:853]   --->   Operation 86 'bitselect' 'temp1_global_end_1' <Predicate = (!and_ln846 & !or_ln852)> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%temp1_val_2 = bitcast i32 %trunc_ln853" [util.cpp:853]   --->   Operation 87 'bitcast' 'temp1_val_2' <Predicate = (!and_ln846 & !or_ln852)> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.44ns)   --->   "%select_ln857 = select i1 %enable_i_load, i32 4294967295, i32 %temp_cid_1" [util.cpp:857]   --->   Operation 88 'select' 'select_ln857' <Predicate = (!and_ln846 & !or_ln852)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln860 = br i1 %temp1_end_2, void %if.then16.if.then16._crit_edge1_crit_edge, void %if.then16.if.then16._crit_edge_crit_edge" [util.cpp:860]   --->   Operation 89 'br' 'br_ln860' <Predicate = (!and_ln846 & !or_ln852)> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (0.47ns)   --->   "%store_ln831 = store i32 %temp1_cid_2, i32 %temp1_cid_1" [util.cpp:831]   --->   Operation 90 'store' 'store_ln831' <Predicate = (!and_ln846 & !or_ln852 & !temp1_end_2)> <Delay = 0.47>
+ST_2 : Operation 91 [1/1] (0.42ns)   --->   "%store_ln853 = store i32 %trunc_ln853, i32 %empty_334" [util.cpp:853]   --->   Operation 91 'store' 'store_ln853' <Predicate = (!and_ln846 & !or_ln852 & !temp1_end_2)> <Delay = 0.42>
+ST_2 : Operation 92 [1/1] (0.42ns)   --->   "%store_ln831 = store i32 %temp1_val_2, i32 %temp1_val_1" [util.cpp:831]   --->   Operation 92 'store' 'store_ln831' <Predicate = (!and_ln846 & !or_ln852 & !temp1_end_2)> <Delay = 0.42>
+ST_2 : Operation 93 [1/1] (0.47ns)   --->   "%br_ln860 = br void %if.then16._crit_edge1" [util.cpp:860]   --->   Operation 93 'br' 'br_ln860' <Predicate = (!and_ln846 & !or_ln852 & !temp1_end_2)> <Delay = 0.47>
+ST_2 : Operation 94 [1/1] (0.42ns)   --->   "%store_ln853 = store i32 %trunc_ln853, i32 %empty_334" [util.cpp:853]   --->   Operation 94 'store' 'store_ln853' <Predicate = (!and_ln846 & !or_ln852 & temp1_end_2)> <Delay = 0.42>
+ST_2 : Operation 95 [1/1] (0.42ns)   --->   "%store_ln831 = store i32 %temp1_val_2, i32 %temp1_val_1" [util.cpp:831]   --->   Operation 95 'store' 'store_ln831' <Predicate = (!and_ln846 & !or_ln852 & temp1_end_2)> <Delay = 0.42>
+ST_2 : Operation 96 [1/1] (0.42ns)   --->   "%br_ln860 = br void %if.then16._crit_edge" [util.cpp:860]   --->   Operation 96 'br' 'br_ln860' <Predicate = (!and_ln846 & !or_ln852 & temp1_end_2)> <Delay = 0.42>
+ST_2 : Operation 97 [1/1] (0.44ns)   --->   "%temp_cid_6 = select i1 %enable_i_load, i32 4294967295, i32 %temp_cid_1" [util.cpp:857]   --->   Operation 97 'select' 'temp_cid_6' <Predicate = (!and_ln846 & or_ln852)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 98 [1/1] (0.47ns)   --->   "%br_ln860 = br i1 %enable_j_1, void %if.then16._crit_edge1, void %if.then16._crit_edge" [util.cpp:860]   --->   Operation 98 'br' 'br_ln860' <Predicate = (!and_ln846 & or_ln852)> <Delay = 0.47>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%spec_select3548 = phi i32 %select_ln857, void %if.then16.if.then16._crit_edge_crit_edge, i32 %temp_cid_6, void %if.end19"   --->   Operation 99 'phi' 'spec_select3548' <Predicate = (!and_ln846 & or_ln852 & enable_j_1) | (!and_ln846 & !or_ln852 & temp1_end_2)> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (0.47ns)   --->   "%store_ln831 = store i32 4294967295, i32 %temp1_cid_1" [util.cpp:831]   --->   Operation 100 'store' 'store_ln831' <Predicate = (!and_ln846 & or_ln852 & enable_j_1) | (!and_ln846 & !or_ln852 & temp1_end_2)> <Delay = 0.47>
+ST_2 : Operation 101 [1/1] (0.47ns)   --->   "%br_ln860 = br void %if.then16._crit_edge1" [util.cpp:860]   --->   Operation 101 'br' 'br_ln860' <Predicate = (!and_ln846 & or_ln852 & enable_j_1) | (!and_ln846 & !or_ln852 & temp1_end_2)> <Delay = 0.47>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%spec_select3547 = phi i32 %spec_select3548, void %if.then16._crit_edge, i32 %select_ln857, void %if.then16.if.then16._crit_edge1_crit_edge, i32 %temp_cid_6, void %if.end19"   --->   Operation 102 'phi' 'spec_select3547' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%enable_j_145 = phi i1 1, void %if.then16._crit_edge, i1 0, void %if.then16.if.then16._crit_edge1_crit_edge, i1 0, void %if.end19"   --->   Operation 103 'phi' 'enable_j_145' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%enable_i_load_1 = load i1 %enable_i" [util.cpp:863]   --->   Operation 104 'load' 'enable_i_load_1' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%temp1_cid_3 = load i32 %temp1_cid_1" [util.cpp:869]   --->   Operation 105 'load' 'temp1_cid_3' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 106 [1/1] (0.28ns)   --->   "%and_ln863 = and i1 %enable_i_load_1, i1 %enable_j_145" [util.cpp:863]   --->   Operation 106 'and' 'and_ln863' <Predicate = (!and_ln846)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%br_ln863 = br i1 %and_ln863, void %if.then26, void %if.end41" [util.cpp:863]   --->   Operation 107 'br' 'br_ln863' <Predicate = (!and_ln846)> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (1.01ns)   --->   "%icmp_ln864 = icmp_ult  i32 %spec_select3547, i32 %temp1_cid_3" [util.cpp:864]   --->   Operation 108 'icmp' 'icmp_ln864' <Predicate = (!and_ln846 & !and_ln863)> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%br_ln864 = br i1 %icmp_ln864, void %if.else, void %if.then29" [util.cpp:864]   --->   Operation 109 'br' 'br_ln864' <Predicate = (!and_ln846 & !and_ln863)> <Delay = 0.00>
+ST_2 : Operation 110 [1/1] (1.01ns)   --->   "%icmp_ln868 = icmp_ugt  i32 %spec_select3547, i32 %temp1_cid_3" [util.cpp:868]   --->   Operation 110 'icmp' 'icmp_ln868' <Predicate = (!and_ln846 & !and_ln863 & !icmp_ln864)> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 111 [1/1] (0.42ns)   --->   "%store_ln845 = store i1 0, i1 %hold_s2" [util.cpp:845]   --->   Operation 111 'store' 'store_ln845' <Predicate = (!and_ln846 & !and_ln863 & !icmp_ln864)> <Delay = 0.42>
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "%br_ln868 = br i1 %icmp_ln868, void %fpga_resource_hint.if.else34.1, void %if.then33" [util.cpp:868]   --->   Operation 112 'br' 'br_ln868' <Predicate = (!and_ln846 & !and_ln863 & !icmp_ln864)> <Delay = 0.00>
+ST_2 : Operation 113 [1/1] (0.42ns)   --->   "%store_ln844 = store i1 0, i1 %hold_s1" [util.cpp:844]   --->   Operation 113 'store' 'store_ln844' <Predicate = (!and_ln846 & !and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 0.42>
+ST_2 : Operation 114 [1/1] (0.42ns)   --->   "%store_ln844 = store i1 1, i1 %hold_s1" [util.cpp:844]   --->   Operation 114 'store' 'store_ln844' <Predicate = (!and_ln846 & !and_ln863 & !icmp_ln864 & icmp_ln868)> <Delay = 0.42>
+ST_2 : Operation 115 [1/1] (0.42ns)   --->   "%store_ln844 = store i1 0, i1 %hold_s1" [util.cpp:844]   --->   Operation 115 'store' 'store_ln844' <Predicate = (!and_ln846 & !and_ln863 & icmp_ln864)> <Delay = 0.42>
+ST_2 : Operation 116 [1/1] (0.42ns)   --->   "%store_ln845 = store i1 1, i1 %hold_s2" [util.cpp:845]   --->   Operation 116 'store' 'store_ln845' <Predicate = (!and_ln846 & !and_ln863 & icmp_ln864)> <Delay = 0.42>
+ST_2 : Operation 117 [1/1] (0.42ns)   --->   "%store_ln831 = store i32 %spec_select3547, i32 %temp_cid_2" [util.cpp:831]   --->   Operation 117 'store' 'store_ln831' <Predicate = (!and_ln846)> <Delay = 0.42>
+ST_2 : Operation 118 [1/1] (0.00ns)   --->   "%br_ln846 = br void %for.cond7" [util.cpp:846]   --->   Operation 118 'br' 'br_ln846' <Predicate = (!and_ln846)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.45>
+ST_3 : Operation 119 [1/1] (0.00ns)   --->   "%temp_val_1_load = load i32 %temp_val_1" [util.cpp:873]   --->   Operation 119 'load' 'temp_val_1_load' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 0.00>
+ST_3 : Operation 120 [1/1] (0.00ns)   --->   "%temp1_val_1_load = load i32 %temp1_val_1" [util.cpp:873]   --->   Operation 120 'load' 'temp1_val_1_load' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 0.00>
+ST_3 : Operation 121 [8/8] (3.45ns)   --->   "%m_result = fadd i32 %temp_val_1_load, i32 %temp1_val_1_load" [util.cpp:873]   --->   Operation 121 'fadd' 'm_result' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 122 [1/1] (0.00ns)   --->   "%p_load = load i32 %empty_334" [util.cpp:869]   --->   Operation 122 'load' 'p_load' <Predicate = (!and_ln863 & !icmp_ln864 & icmp_ln868)> <Delay = 0.00>
+ST_3 : Operation 123 [1/1] (0.00ns)   --->   "%p_load16 = load i32 %empty_333" [util.cpp:865]   --->   Operation 123 'load' 'p_load16' <Predicate = (!and_ln863 & icmp_ln864)> <Delay = 0.00>
+ST_3 : Operation 124 [1/1] (0.00ns)   --->   "%temp_end_load = load i1 %temp_end" [util.cpp:865]   --->   Operation 124 'load' 'temp_end_load' <Predicate = (!and_ln863 & icmp_ln864)> <Delay = 0.00>
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "%temp_global_end_load_1 = load i1 %temp_global_end" [util.cpp:865]   --->   Operation 125 'load' 'temp_global_end_load_1' <Predicate = (!and_ln863 & icmp_ln864)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 3.45>
+ST_4 : Operation 126 [7/8] (3.45ns)   --->   "%m_result = fadd i32 %temp_val_1_load, i32 %temp1_val_1_load" [util.cpp:873]   --->   Operation 126 'fadd' 'm_result' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 3.45>
+ST_5 : Operation 127 [6/8] (3.45ns)   --->   "%m_result = fadd i32 %temp_val_1_load, i32 %temp1_val_1_load" [util.cpp:873]   --->   Operation 127 'fadd' 'm_result' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 3.45>
+ST_6 : Operation 128 [5/8] (3.45ns)   --->   "%m_result = fadd i32 %temp_val_1_load, i32 %temp1_val_1_load" [util.cpp:873]   --->   Operation 128 'fadd' 'm_result' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 3.45>
+ST_7 : Operation 129 [4/8] (3.45ns)   --->   "%m_result = fadd i32 %temp_val_1_load, i32 %temp1_val_1_load" [util.cpp:873]   --->   Operation 129 'fadd' 'm_result' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 3.45>
+ST_8 : Operation 130 [3/8] (3.45ns)   --->   "%m_result = fadd i32 %temp_val_1_load, i32 %temp1_val_1_load" [util.cpp:873]   --->   Operation 130 'fadd' 'm_result' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 3.45>
+ST_9 : Operation 131 [2/8] (3.45ns)   --->   "%m_result = fadd i32 %temp_val_1_load, i32 %temp1_val_1_load" [util.cpp:873]   --->   Operation 131 'fadd' 'm_result' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 3.45>
+ST_10 : Operation 132 [1/1] (0.42ns)   --->   "%store_ln831 = store i1 %temp1_global_end_1, i1 %temp1_global_end" [util.cpp:831]   --->   Operation 132 'store' 'store_ln831' <Predicate = (!and_ln846 & !or_ln852 & !temp1_end_2)> <Delay = 0.42>
+ST_10 : Operation 133 [1/1] (0.47ns)   --->   "%store_ln831 = store i1 0, i1 %temp1_end" [util.cpp:831]   --->   Operation 133 'store' 'store_ln831' <Predicate = (!and_ln846 & !or_ln852 & !temp1_end_2)> <Delay = 0.47>
+ST_10 : Operation 134 [1/1] (0.42ns)   --->   "%store_ln831 = store i1 %temp1_global_end_1, i1 %temp1_global_end" [util.cpp:831]   --->   Operation 134 'store' 'store_ln831' <Predicate = (!and_ln846 & !or_ln852 & temp1_end_2)> <Delay = 0.42>
+ST_10 : Operation 135 [1/1] (0.47ns)   --->   "%store_ln831 = store i1 1, i1 %temp1_end" [util.cpp:831]   --->   Operation 135 'store' 'store_ln831' <Predicate = (!and_ln846 & !or_ln852 & temp1_end_2)> <Delay = 0.47>
+ST_10 : Operation 136 [1/8] (3.45ns)   --->   "%m_result = fadd i32 %temp_val_1_load, i32 %temp1_val_1_load" [util.cpp:873]   --->   Operation 136 'fadd' 'm_result' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 3.45> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 137 [1/1] (0.00ns)   --->   "%specfucore_ln874 = specfucore void @_ssdm_op_SpecFUCore, i32 %m_result, i64 9, i64 12, i64 18446744073709551615, i1 0" [util.cpp:874]   --->   Operation 137 'specfucore' 'specfucore_ln874' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 0.00>
+ST_10 : Operation 153 [1/1] (0.00ns)   --->   "%temp_global_end_load = load i1 %temp_global_end"   --->   Operation 153 'load' 'temp_global_end_load' <Predicate = (and_ln846)> <Delay = 0.00>
+ST_10 : Operation 154 [1/1] (0.00ns)   --->   "%temp1_global_end_load = load i1 %temp1_global_end"   --->   Operation 154 'load' 'temp1_global_end_load' <Predicate = (and_ln846)> <Delay = 0.00>
+ST_10 : Operation 155 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %temp1_global_end_4_out, i1 %temp1_global_end_load"   --->   Operation 155 'write' 'write_ln0' <Predicate = (and_ln846)> <Delay = 0.00>
+ST_10 : Operation 156 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %temp_global_end_5_out, i1 %temp_global_end_load"   --->   Operation 156 'write' 'write_ln0' <Predicate = (and_ln846)> <Delay = 0.00>
+ST_10 : Operation 157 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 157 'ret' 'ret_ln0' <Predicate = (and_ln846)> <Delay = 0.42>
+
+State 11 <SV = 10> <Delay = 1.74>
+ST_11 : Operation 138 [1/1] (0.00ns)   --->   "%rbegin = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_20" [util.cpp:873]   --->   Operation 138 'specregionbegin' 'rbegin' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 0.00>
+ST_11 : Operation 139 [1/1] (0.00ns)   --->   "%rend = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_20, i32 %rbegin" [util.cpp:873]   --->   Operation 139 'specregionend' 'rend' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 0.00>
+ST_11 : Operation 140 [1/1] (0.00ns)   --->   "%bitcast_ln878 = bitcast i32 %m_result" [util.cpp:878]   --->   Operation 140 'bitcast' 'bitcast_ln878' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 0.00>
+ST_11 : Operation 141 [1/1] (0.00ns)   --->   "%tmp_21 = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i32.i32, i32 %spec_select3547, i32 %bitcast_ln878" [util.cpp:878]   --->   Operation 141 'bitconcatenate' 'tmp_21' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 0.00>
+ST_11 : Operation 142 [1/1] (0.00ns)   --->   "%zext_ln878 = zext i64 %tmp_21" [util.cpp:878]   --->   Operation 142 'zext' 'zext_ln878' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 0.00>
+ST_11 : Operation 143 [1/1] ( I:1.74ns O:1.74ns )   --->   "%write_ln878 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %final_merger_2, i66 %zext_ln878" [util.cpp:878]   --->   Operation 143 'write' 'write_ln878' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_11 : Operation 144 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end41"   --->   Operation 144 'br' 'br_ln0' <Predicate = (!and_ln863 & !icmp_ln864 & !icmp_ln868)> <Delay = 0.00>
+ST_11 : Operation 145 [1/1] (0.00ns)   --->   "%temp1_end_load = load i1 %temp1_end" [util.cpp:869]   --->   Operation 145 'load' 'temp1_end_load' <Predicate = (!and_ln863 & !icmp_ln864 & icmp_ln868)> <Delay = 0.00>
+ST_11 : Operation 146 [1/1] (0.00ns)   --->   "%temp1_global_end_load_1 = load i1 %temp1_global_end" [util.cpp:869]   --->   Operation 146 'load' 'temp1_global_end_load_1' <Predicate = (!and_ln863 & !icmp_ln864 & icmp_ln868)> <Delay = 0.00>
+ST_11 : Operation 147 [1/1] (0.00ns)   --->   "%or_ln869_s = bitconcatenate i66 @_ssdm_op_BitConcatenate.i66.i1.i1.i32.i32, i1 %temp1_global_end_load_1, i1 %temp1_end_load, i32 %temp1_cid_3, i32 %p_load" [util.cpp:869]   --->   Operation 147 'bitconcatenate' 'or_ln869_s' <Predicate = (!and_ln863 & !icmp_ln864 & icmp_ln868)> <Delay = 0.00>
+ST_11 : Operation 148 [1/1] ( I:1.74ns O:1.74ns )   --->   "%write_ln869 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %final_merger_2, i66 %or_ln869_s" [util.cpp:869]   --->   Operation 148 'write' 'write_ln869' <Predicate = (!and_ln863 & !icmp_ln864 & icmp_ln868)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_11 : Operation 149 [1/1] (0.00ns)   --->   "%br_ln872 = br void %if.end41" [util.cpp:872]   --->   Operation 149 'br' 'br_ln872' <Predicate = (!and_ln863 & !icmp_ln864 & icmp_ln868)> <Delay = 0.00>
+ST_11 : Operation 150 [1/1] (0.00ns)   --->   "%or_ln865_s = bitconcatenate i66 @_ssdm_op_BitConcatenate.i66.i1.i1.i32.i32, i1 %temp_global_end_load_1, i1 %temp_end_load, i32 %spec_select3547, i32 %p_load16" [util.cpp:865]   --->   Operation 150 'bitconcatenate' 'or_ln865_s' <Predicate = (!and_ln863 & icmp_ln864)> <Delay = 0.00>
+ST_11 : Operation 151 [1/1] ( I:1.74ns O:1.74ns )   --->   "%write_ln865 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %final_merger_2, i66 %or_ln865_s" [util.cpp:865]   --->   Operation 151 'write' 'write_ln865' <Predicate = (!and_ln863 & icmp_ln864)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_11 : Operation 152 [1/1] (0.00ns)   --->   "%br_ln868 = br void %if.end41" [util.cpp:868]   --->   Operation 152 'br' 'br_ln868' <Predicate = (!and_ln863 & icmp_ln864)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 0.476ns
+The critical path consists of the following:
+	'alloca' operation 32 bit ('temp1.cid', util.cpp:831) [26]  (0.000 ns)
+	'store' operation ('store_ln831', util.cpp:831) of variable 'temp1_cid_read', util.cpp:829 32 bit on local variable 'temp1.cid', util.cpp:831 [38]  (0.476 ns)
+
+ <State 2>: 5.067ns
+The critical path consists of the following:
+	'phi' operation 1 bit ('enable_j', util.cpp:829) with incoming values : ('tmp_24', util.cpp:829) [53]  (0.000 ns)
+	'and' operation 1 bit ('and_ln846', util.cpp:846) [56]  (0.287 ns)
+	fifo read operation ('result_pe3_read', util.cpp:849) on port 'result_pe3' (util.cpp:849) [66]  (1.747 ns)
+	'store' operation ('store_ln846', util.cpp:846) of variable 'temp.end', util.cpp:849 1 bit on local variable 'enable_i', util.cpp:846 [72]  (0.476 ns)
+	'load' operation 1 bit ('enable_i_load', util.cpp:857) on local variable 'enable_i', util.cpp:846 [87]  (0.000 ns)
+	'select' operation 32 bit ('temp.cid', util.cpp:857) [112]  (0.449 ns)
+	multiplexor before 'phi' operation 32 bit ('temp.cid') with incoming values : ('select_ln857', util.cpp:857) ('temp.cid', util.cpp:857) [115]  (0.476 ns)
+	'phi' operation 32 bit ('temp.cid') with incoming values : ('select_ln857', util.cpp:857) ('temp.cid', util.cpp:857) [115]  (0.000 ns)
+	multiplexor before 'phi' operation 32 bit ('temp.cid') with incoming values : ('select_ln857', util.cpp:857) ('temp.cid', util.cpp:857) [119]  (0.476 ns)
+	'phi' operation 32 bit ('temp.cid') with incoming values : ('select_ln857', util.cpp:857) ('temp.cid', util.cpp:857) [119]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln864', util.cpp:864) [126]  (1.016 ns)
+	blocking operation 0.14 ns on control path)
+
+ <State 3>: 3.454ns
+The critical path consists of the following:
+	'load' operation 32 bit ('temp_val_1_load', util.cpp:873) on local variable 'temp.val', util.cpp:831 [133]  (0.000 ns)
+	'fadd' operation 32 bit ('m_result', util.cpp:873) [136]  (3.454 ns)
+
+ <State 4>: 3.454ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('m_result', util.cpp:873) [136]  (3.454 ns)
+
+ <State 5>: 3.454ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('m_result', util.cpp:873) [136]  (3.454 ns)
+
+ <State 6>: 3.454ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('m_result', util.cpp:873) [136]  (3.454 ns)
+
+ <State 7>: 3.454ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('m_result', util.cpp:873) [136]  (3.454 ns)
+
+ <State 8>: 3.454ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('m_result', util.cpp:873) [136]  (3.454 ns)
+
+ <State 9>: 3.454ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('m_result', util.cpp:873) [136]  (3.454 ns)
+
+ <State 10>: 3.454ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('m_result', util.cpp:873) [136]  (3.454 ns)
+
+ <State 11>: 1.747ns
+The critical path consists of the following:
+	'load' operation 1 bit ('temp1_end_load', util.cpp:869) on local variable 'temp1.end', util.cpp:831 [147]  (0.000 ns)
+	fifo write operation ('write_ln869', util.cpp:869) on port 'final_merger_2' (util.cpp:869) [150]  (1.747 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

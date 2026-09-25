@@ -1,0 +1,6 @@
+   Build using "/home/huz/software/2025.2/Vitis/lnx64/tools/clang-16/bin/clang++"
+   Compiling apatb_sparse_getrf.cpp
+   Compiling sparse_getrf.cpp_pre.cpp.tb.cpp
+   Compiling tb_sparse_getrf.cpp_pre.cpp.tb.cpp
+   Compiling apatb_sparse_getrf_ir.ll
+   Generating cosim.tv.exe

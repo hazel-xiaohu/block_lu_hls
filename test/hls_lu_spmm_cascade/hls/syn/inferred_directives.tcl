@@ -1,0 +1,6 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline merge_controller/VITIS_LOOP_97_1
+set_directive_pipeline schedule_access/VITIS_LOOP_105_3
+set_directive_pipeline generate_data/VITIS_LOOP_53_2
+# Inferred from performance & pipeline pragmas/directives
+set_directive_loop_flatten a_element_filter/VITIS_LOOP_61_1 -off

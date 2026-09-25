@@ -1,0 +1,51 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/usr/include/x86_64-linux-gnu/gmp.h</string>
+      <key>line</key>
+      <integer>2142</integer>
+      <key>column</key>
+      <integer>345</integer>
+      <key>message</key>
+      <string>equality comparison with extraneous parentheses</string>
+      <key>ID</key>
+      <integer>6020</integer>
+      <key>WarningOption</key>
+      <string>parentheses-equality</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>note</string>
+      <key>filename</key>
+      <string>/usr/include/x86_64-linux-gnu/gmp.h</string>
+      <key>line</key>
+      <integer>2142</integer>
+      <key>column</key>
+      <integer>345</integer>
+      <key>message</key>
+      <string>remove extraneous parentheses around the comparison to silence this warning</string>
+      <key>ID</key>
+      <integer>5159</integer>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>note</string>
+      <key>filename</key>
+      <string>/usr/include/x86_64-linux-gnu/gmp.h</string>
+      <key>line</key>
+      <integer>2142</integer>
+      <key>column</key>
+      <integer>345</integer>
+      <key>message</key>
+      <string>use &apos;=&apos; to turn this equality comparison into an assignment</string>
+      <key>ID</key>
+      <integer>5160</integer>
+    </dict>
+  </array>
+</dict>

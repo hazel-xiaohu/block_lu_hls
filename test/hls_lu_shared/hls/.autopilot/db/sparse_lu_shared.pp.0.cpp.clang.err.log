@@ -1,0 +1,88 @@
+sparse_lu_shared.cpp:5:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=shared_abs_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+^
+sparse_lu_shared.cpp:11:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=shared_fail_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+^
+sparse_lu_shared.cpp:18:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=valid_sorted_row_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+^
+sparse_lu_shared.cpp:37:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=shared_getrf_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+^
+directive:1:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=name=sparse_lu_shared_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=sparse_lu_shared
+^
+sparse_lu_shared.cpp:123:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=64 +1 port=A_rcsr offset=slave bundle=a_row_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=64 +1 port=A_rcsr offset=slave bundle=a_row
+^
+sparse_lu_shared.cpp:124:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=1024 port=A_cid offset=slave bundle=a_col_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=1024 port=A_cid offset=slave bundle=a_col
+^
+sparse_lu_shared.cpp:125:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=1024 port=A_val offset=slave bundle=a_val_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=1024 port=A_val offset=slave bundle=a_val
+^
+sparse_lu_shared.cpp:126:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=64 +1 port=L_rcsr offset=slave bundle=l_row_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=64 +1 port=L_rcsr offset=slave bundle=l_row
+^
+sparse_lu_shared.cpp:127:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=2048 port=L_cid offset=slave bundle=l_col_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=2048 port=L_cid offset=slave bundle=l_col
+^
+sparse_lu_shared.cpp:128:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=2048 port=L_val offset=slave bundle=l_val_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=2048 port=L_val offset=slave bundle=l_val
+^
+sparse_lu_shared.cpp:129:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=64 +1 port=U_rcsr offset=slave bundle=u_row_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=64 +1 port=U_rcsr offset=slave bundle=u_row
+^
+sparse_lu_shared.cpp:130:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=2048 port=U_cid offset=slave bundle=u_col_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=2048 port=U_cid offset=slave bundle=u_col
+^
+sparse_lu_shared.cpp:131:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=2048 port=U_val offset=slave bundle=u_val_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=2048 port=U_val offset=slave bundle=u_val
+^
+sparse_lu_shared.cpp:132:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=64 +1 port=X_rcsr offset=slave bundle=x_row_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=64 +1 port=X_rcsr offset=slave bundle=x_row
+^
+sparse_lu_shared.cpp:133:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=(2048 + 2048) port=X_cid offset=slave bundle=x_col_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=(2048 + 2048) port=X_cid offset=slave bundle=x_col
+^
+sparse_lu_shared.cpp:134:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=m_axi depth=(2048 + 2048) port=X_val offset=slave bundle=x_val_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=(2048 + 2048) port=X_val offset=slave bundle=x_val
+^
+sparse_lu_shared.cpp:135:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=operation bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=operation bundle=control
+^
+sparse_lu_shared.cpp:136:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=n bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=n bundle=control
+^
+sparse_lu_shared.cpp:137:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=a_nnz bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=a_nnz bundle=control
+^
+sparse_lu_shared.cpp:138:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=l_nnz bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=l_nnz bundle=control
+^
+sparse_lu_shared.cpp:139:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=u_nnz bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=u_nnz bundle=control
+^
+sparse_lu_shared.cpp:140:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=x_rows bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=x_rows bundle=control
+^
+sparse_lu_shared.cpp:141:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=x_cols bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=x_cols bundle=control
+^
+sparse_lu_shared.cpp:142:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=x_nnz bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=x_nnz bundle=control
+^
+sparse_lu_shared.cpp:143:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=pivot_eps bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=pivot_eps bundle=control
+^
+sparse_lu_shared.cpp:144:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=status bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=status bundle=control
+^
+sparse_lu_shared.cpp:145:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=failed_row bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=failed_row bundle=control
+^
+sparse_lu_shared.cpp:146:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=hls_XLX_SEP_ PragmaFunction=sparse_lu_shared_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+^
+29 warnings generated.

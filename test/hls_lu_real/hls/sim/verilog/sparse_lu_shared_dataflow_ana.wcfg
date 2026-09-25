@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sparse_lu_shared.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_sparse_lu_shared_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared//AESL_inst_sparse_lu_shared_activity">
+         <obj_property name="label">AESL_inst_sparse_lu_shared_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_sparse_lu_shared_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_sparse_lu_shared_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared//AESL_inst_sparse_lu_shared_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared//AESL_inst_sparse_lu_shared_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared//AESL_inst_sparse_lu_shared_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_activity">
+            <obj_property name="label">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_activity">
+            <obj_property name="label">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_activity">
+            <obj_property name="label">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_fu_767_activity">
+            <obj_property name="label">grp_cache_triangular_pattern_fu_767_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_cache_triangular_pattern_fu_767_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_cache_triangular_pattern_fu_767_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_fu_767_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_fu_767_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_fu_767_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity">
+               <obj_property name="label">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_fu_800_activity">
+            <obj_property name="label">grp_run_cached_tstrf_fu_800_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_run_cached_tstrf_fu_800_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_tstrf_fu_800_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_fu_800_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_fu_800_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_fu_800_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_activity">
+               <obj_property name="label">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_activity">
+               <obj_property name="label">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_fu_849_activity">
+            <obj_property name="label">grp_run_cached_gessm_fu_849_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_run_cached_gessm_fu_849_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_gessm_fu_849_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_fu_849_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_fu_849_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_fu_849_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_activity">
+               <obj_property name="label">grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_activity">
+               <obj_property name="label">grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_activity">
+            <obj_property name="label">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_fu_927_activity">
+            <obj_property name="label">grp_run_cached_getrf_fu_927_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_run_cached_getrf_fu_927_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_getrf_fu_927_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_fu_927_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_fu_927_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_fu_927_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_fu_687_activity">
+               <obj_property name="label">grp_cache_triangular_pattern_fu_687_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_cache_triangular_pattern_fu_687_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_cache_triangular_pattern_fu_687_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_fu_687_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_fu_687_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_fu_687_activity.dataflowTxTooltipData</obj_property>
+               <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity">
+                  <obj_property name="label">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <obj_property name="UseFullPath">true</obj_property>
+                  <obj_property name="ElementShortName">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity</obj_property>
+                  <obj_property name="ObjectShortName">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity</obj_property>
+                  <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+                  <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+                  <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+                  <obj_property name="UseCustomSignalColor">true</obj_property>
+                  <obj_property name="CustomSignalColor">turquoise</obj_property>
+                  <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+                  <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity.dataflowTxWaveData.Cycles</obj_property>
+                  <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity.dataflowTxWaveData.OutStanding</obj_property>
+                  <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity.dataflowTxTooltipData</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_activity">
+               <obj_property name="label">grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_activity">
+               <obj_property name="label">grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_activity">
+               <obj_property name="label">grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_activity">
+               <obj_property name="label">grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_activity">
+               <obj_property name="label">grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared//AESL_inst_sparse_lu_shared_activity">
+      <obj_property name="ElementShortName">AESL_inst_sparse_lu_shared_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_sparse_lu_shared_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_sparse_lu_shared_group">
+      <obj_property name="label">AESL_inst_sparse_lu_shared</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_activity">
+         <obj_property name="ElementShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_activity">
+         <obj_property name="ElementShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_activity">
+         <obj_property name="ElementShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_fu_767_activity">
+         <obj_property name="ElementShortName">grp_cache_triangular_pattern_fu_767_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_cache_triangular_pattern_fu_767_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_fu_800_activity">
+         <obj_property name="ElementShortName">grp_run_cached_tstrf_fu_800_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_run_cached_tstrf_fu_800_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_fu_849_activity">
+         <obj_property name="ElementShortName">grp_run_cached_gessm_fu_849_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_run_cached_gessm_fu_849_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_activity">
+         <obj_property name="ElementShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_fu_927_activity">
+         <obj_property name="ElementShortName">grp_run_cached_getrf_fu_927_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_run_cached_getrf_fu_927_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_sparse_lu_shared_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_group">
+         <obj_property name="label">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2_fu_663/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_group">
+         <obj_property name="label">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2_fu_682/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_group">
+         <obj_property name="label">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_110_2_fu_720/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_cache_triangular_pattern_fu_767_group">
+         <obj_property name="label">grp_cache_triangular_pattern_fu_767</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity">
+            <obj_property name="ElementShortName">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_cache_triangular_pattern_fu_767_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_group">
+            <obj_property name="label">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_cache_triangular_pattern_fu_767/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_run_cached_tstrf_fu_800_group">
+         <obj_property name="label">grp_run_cached_tstrf_fu_800</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_activity">
+            <obj_property name="ElementShortName">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_activity">
+            <obj_property name="ElementShortName">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_tstrf_fu_800_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_group">
+            <obj_property name="label">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_171_3_fu_950/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_group">
+            <obj_property name="label">grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_tstrf_fu_800/grp_run_cached_tstrf_Pipeline_VITIS_LOOP_329_4_fu_1000/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_run_cached_gessm_fu_849_group">
+         <obj_property name="label">grp_run_cached_gessm_fu_849</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_activity">
+            <obj_property name="ElementShortName">grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_activity">
+            <obj_property name="ElementShortName">grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_gessm_fu_849_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_group">
+            <obj_property name="label">grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_152_3_fu_347/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_group">
+            <obj_property name="label">grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_gessm_fu_849/grp_run_cached_gessm_Pipeline_VITIS_LOOP_283_3_fu_388/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_group">
+         <obj_property name="label">grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_sparse_lu_shared_Pipeline_VITIS_LOOP_449_2_fu_897/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_run_cached_getrf_fu_927_group">
+         <obj_property name="label">grp_run_cached_getrf_fu_927</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_fu_687_activity">
+            <obj_property name="ElementShortName">grp_cache_triangular_pattern_fu_687_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_cache_triangular_pattern_fu_687_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_activity">
+            <obj_property name="ElementShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_activity">
+            <obj_property name="ElementShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_activity">
+            <obj_property name="ElementShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_activity">
+            <obj_property name="ElementShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_activity</obj_property>
+         </wvobject>
+         <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_activity">
+            <obj_property name="ElementShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_getrf_fu_927_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_cache_triangular_pattern_fu_687_group">
+            <obj_property name="label">grp_cache_triangular_pattern_fu_687</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="protoinst" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity">
+               <obj_property name="ElementShortName">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_activity</obj_property>
+            </wvobject>
+            <wvobject type="group" fp_name="grp_cache_triangular_pattern_fu_687_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_group">
+               <obj_property name="label">grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="group" fp_name="grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264_Handshake_group">
+                  <obj_property name="label">Block-level handshake</obj_property>
+                  <obj_property name="DisplayName">label</obj_property>
+                  <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/ap_start">
+                     <obj_property name="ElementShortName">ap_start</obj_property>
+                     <obj_property name="ObjectShortName">ap_start</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/ap_ready">
+                     <obj_property name="ElementShortName">ap_ready</obj_property>
+                     <obj_property name="ObjectShortName">ap_ready</obj_property>
+                  </wvobject>
+                  <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_cache_triangular_pattern_fu_687/grp_cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2_fu_264/ap_done">
+                     <obj_property name="ElementShortName">ap_done</obj_property>
+                     <obj_property name="ObjectShortName">ap_done</obj_property>
+                  </wvobject>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_group">
+            <obj_property name="label">grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_group">
+            <obj_property name="label">grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_group">
+            <obj_property name="label">grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_group">
+            <obj_property name="label">grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_group">
+            <obj_property name="label">grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_sparse_lu_shared_top/AESL_inst_sparse_lu_shared/grp_run_cached_getrf_fu_927/grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

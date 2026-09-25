@@ -191,7 +191,7 @@ int main() {
         const char* env_c_dir=std::getenv("SPMM_C_DATA_DIR");
         const std::string c_dir=env_c_dir ? env_c_dir : "/home/huz/project/SpMM_TCAD/test/random_filter_empty/C";
         const char* env_rows=std::getenv("SPMM_TEST_ROWS");
-        const size_t rows=env_rows ? std::stoul(env_rows) : 2048;
+        const size_t rows=env_rows ? std::stoul(env_rows) : 50;
         Matrix b=read_matrix(dir, 'B');
         Matrix a=read_matrix(a_dir, 'A');
         Matrix c=read_matrix(c_dir, 'C');

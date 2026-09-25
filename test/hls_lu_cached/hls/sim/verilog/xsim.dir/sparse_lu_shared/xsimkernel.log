@@ -1,0 +1,7 @@
+Running: xsim.dir/sparse_lu_shared/xsimk -simmode gui -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=sparse_lu_shared_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -wdb sparse_lu_shared.wdb -simrunnum 0 -socket 47081
+Design successfully loaded
+Design Loading Memory Usage: 241304 KB (Peak: 241304 KB)
+Design Loading CPU Usage: 2920 ms
+Simulation completed
+Simulation Memory Usage: 676148 KB (Peak: 741684 KB)
+Simulation CPU Usage: 8770 ms

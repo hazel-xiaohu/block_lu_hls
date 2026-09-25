@@ -1,0 +1,9 @@
+make[1]: Entering directory '/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/sim/wrapc'
+   Build using "/home/huz/software/2025.2/Vitis/lnx64/tools/clang-16/bin/clang++"
+   Compiling apatb_sparse_lu_shared.cpp
+   Compiling sparse_lu_ops.cpp_pre.cpp.tb.cpp
+   Compiling sparse_lu_shared.cpp_pre.cpp.tb.cpp
+   Compiling tb_sparse_lu_shared.cpp_pre.cpp.tb.cpp
+   Compiling apatb_sparse_lu_shared_ir.ll
+   Generating cosim.tv.exe
+make[1]: Leaving directory '/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/sim/wrapc'

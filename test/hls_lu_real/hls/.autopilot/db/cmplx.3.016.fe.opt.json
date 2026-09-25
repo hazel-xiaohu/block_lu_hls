@@ -1,0 +1,94 @@
+{
+  "0": {
+    "basicblocks": 112,
+    "calls": "2 4 2 3 1",
+    "control_depth": 5,
+    "def_use_depth": 7,
+    "file": "sparse_lu_shared_cached.cpp",
+    "fileloc": 345,
+    "instructions": 930,
+    "loads": {
+      "L": 16,
+      "T": 4
+    },
+    "memory_accesses": 102,
+    "name": "sparse_lu_shared",
+    "stores": {
+      "L": 76,
+      "T": 20
+    },
+    "total_instructions": 3093
+  },
+  "1": {
+    "basicblocks": 117,
+    "calls": "2 2",
+    "control_depth": 7,
+    "def_use_depth": 10,
+    "file": "sparse_lu_shared_cached.cpp",
+    "fileloc": 183,
+    "instructions": 622,
+    "loads": {
+      "L": 100
+    },
+    "memory_accesses": 107,
+    "name": "run_cached_getrf",
+    "stores": {
+      "L": 30
+    },
+    "total_instructions": 946
+  },
+  "2": {
+    "basicblocks": 39,
+    "calls": "",
+    "control_depth": 7,
+    "def_use_depth": 7,
+    "file": "sparse_lu_shared_cached.cpp",
+    "fileloc": 60,
+    "instructions": 162,
+    "loads": {
+      "L": 8
+    },
+    "memory_accesses": 11,
+    "name": "cache_triangular_pattern",
+    "stores": {
+      "L": 11
+    },
+    "total_instructions": 162
+  },
+  "3": {
+    "basicblocks": 64,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 6,
+    "file": "sparse_lu_shared_cached.cpp",
+    "fileloc": 270,
+    "instructions": 394,
+    "loads": {
+      "L": 92
+    },
+    "memory_accesses": 100,
+    "name": "run_cached_gessm",
+    "stores": {
+      "L": 17
+    },
+    "total_instructions": 394
+  },
+  "4": {
+    "basicblocks": 96,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 6,
+    "file": "sparse_lu_shared_cached.cpp",
+    "fileloc": 299,
+    "instructions": 499,
+    "loads": {
+      "L": 108
+    },
+    "memory_accesses": 76,
+    "name": "run_cached_tstrf",
+    "stores": {
+      "L": 34
+    },
+    "total_instructions": 499
+  }
+}

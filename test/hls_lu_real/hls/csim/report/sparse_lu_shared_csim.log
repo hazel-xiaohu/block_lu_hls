@@ -1,0 +1,10 @@
+INFO: [SIM 2] *************** CSIM start ***************
+make[1]: Entering directory '/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/csim/build'
+   Compiling ../../../../tb_lu_spmm_cascade.cpp in release mode
+   Generating csim.exe
+make[1]: Leaving directory '/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/csim/build'
+real circuit_3_12127 LU block: global rows/cols 4608:4672 A11_nnz=86 L11_nnz=62 U11_nnz=62 L21_nnz=68 U12_nnz=68
+GETRF residual=4.66047e-09 GESSM residual=8.0781e-10 TSTRF residual=2.80218e-08
+PASS real GETRF/GESSM/TSTRF
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

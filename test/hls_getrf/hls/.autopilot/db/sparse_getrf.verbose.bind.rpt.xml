@@ -1,0 +1,61 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'sparse_getrf'" level="0">
+<item name = "Date">Thu Sep 24 20:30:47 2026
+</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
+<item name = "Project">hls_getrf</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu15eg-ffvb1156-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 5.928 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_sparse_getrf_Pipeline_VITIS_LOOP_84_1_fu_724">sparse_getrf_Pipeline_VITIS_LOOP_84_1, 2, 2050, 10.000 ns, 10.250 us, 0, 0, loop pipeline stp</column>
+<column name="grp_sparse_getrf_Pipeline_VITIS_LOOP_88_2_fu_732">sparse_getrf_Pipeline_VITIS_LOOP_88_2, 2, 2050, 10.000 ns, 10.250 us, 0, 0, loop pipeline stp</column>
+<column name="grp_sparse_getrf_Pipeline_VITIS_LOOP_103_4_fu_740">sparse_getrf_Pipeline_VITIS_LOOP_103_4, 11, 11, 59.180 ns, 59.180 ns, 11, 11, no</column>
+<column name="grp_sparse_getrf_Pipeline_VITIS_LOOP_120_5_fu_755">sparse_getrf_Pipeline_VITIS_LOOP_120_5, 10, 11, 53.800 ns, 59.180 ns, 10, 11, no</column>
+<column name="grp_sparse_getrf_Pipeline_VITIS_LOOP_13_1_fu_767">sparse_getrf_Pipeline_VITIS_LOOP_13_1, 10, 10, 59.280 ns, 59.280 ns, 0, 0, loop pipeline stp</column>
+<column name="grp_sparse_getrf_Pipeline_VITIS_LOOP_13_11_fu_779">sparse_getrf_Pipeline_VITIS_LOOP_13_11, 10, 10, 59.280 ns, 59.280 ns, 0, 0, loop pipeline stp</column>
+<column name="grp_sparse_getrf_Pipeline_VITIS_LOOP_13_12_fu_791">sparse_getrf_Pipeline_VITIS_LOOP_13_12, 10, 10, 59.280 ns, 59.280 ns, 0, 0, loop pipeline stp</column>
+<column name="grp_sparse_getrf_Pipeline_VITIS_LOOP_198_11_fu_803">sparse_getrf_Pipeline_VITIS_LOOP_198_11, ?, ?, ?, ?, 0, 0, loop pipeline stp</column>
+<column name="grp_sparse_getrf_Pipeline_VITIS_LOOP_206_12_fu_815">sparse_getrf_Pipeline_VITIS_LOOP_206_12, ?, ?, ?, ?, 0, 0, loop pipeline stp</column>
+<column name="grp_sparse_getrf_Pipeline_VITIS_LOOP_13_13_fu_827">sparse_getrf_Pipeline_VITIS_LOOP_13_13, 10, 10, 59.280 ns, 59.280 ns, 0, 0, loop pipeline stp</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_93_3">?, ?, 38 ~ 88, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_138_6">0, 24, 51, -, -, 0, no</column>
+<column name="- VITIS_LOOP_163_7">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_167_8">?, ?, ?, -, -, 0, no</column>
+<column name="  ++ VITIS_LOOP_173_9">?, ?, ?, -, -, 0, no</column>
+<column name="   +++ VITIS_LOOP_191_10">?, ?, ?, -, -, 0, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

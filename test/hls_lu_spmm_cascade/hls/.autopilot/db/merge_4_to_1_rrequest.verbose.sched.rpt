@@ -1,0 +1,183 @@
+
+
+================================================================
+== Vitis HLS Report for 'merge_4_to_1_rrequest'
+================================================================
+* Date:           Fri Sep 25 00:04:39 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.534 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%temp_0_0_loc = alloca i64 1"   --->   Operation 4 'alloca' 'temp_0_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%temp_2_0_loc = alloca i64 1"   --->   Operation 5 'alloca' 'temp_2_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%temp_3510_0_loc = alloca i64 1"   --->   Operation 6 'alloca' 'temp_3510_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%temp_4511_0_loc = alloca i64 1"   --->   Operation 7 'alloca' 'temp_4511_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%temp_6_0_loc = alloca i64 1"   --->   Operation 8 'alloca' 'temp_6_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%temp_5_sroa_0_0_loc = alloca i64 1"   --->   Operation 9 'alloca' 'temp_5_sroa_0_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%temp_5_sroa_9_0_loc = alloca i64 1"   --->   Operation 10 'alloca' 'temp_5_sroa_9_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%temp_5_sroa_18_0_loc = alloca i64 1"   --->   Operation 11 'alloca' 'temp_5_sroa_18_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%temp_5_sroa_27_0_loc = alloca i64 1"   --->   Operation 12 'alloca' 'temp_5_sroa_27_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%temp_5_sroa_36_0_loc = alloca i64 1"   --->   Operation 13 'alloca' 'temp_5_sroa_36_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%temp_5_sroa_45_0_loc = alloca i64 1"   --->   Operation 14 'alloca' 'temp_5_sroa_45_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%temp_5_sroa_54_0_loc = alloca i64 1"   --->   Operation 15 'alloca' 'temp_5_sroa_54_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%temp_5_sroa_63_0_loc = alloca i64 1"   --->   Operation 16 'alloca' 'temp_5_sroa_63_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%temp_5_sroa_72_0_loc = alloca i64 1"   --->   Operation 17 'alloca' 'temp_5_sroa_72_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%temp_5_sroa_81_0_loc = alloca i64 1"   --->   Operation 18 'alloca' 'temp_5_sroa_81_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%temp_5_sroa_90_0_loc = alloca i64 1"   --->   Operation 19 'alloca' 'temp_5_sroa_90_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%temp_5_sroa_99_0_loc = alloca i64 1"   --->   Operation 20 'alloca' 'temp_5_sroa_99_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%temp_5_sroa_108_0_loc = alloca i64 1"   --->   Operation 21 'alloca' 'temp_5_sroa_108_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%temp_5_sroa_117_0_loc = alloca i64 1"   --->   Operation 22 'alloca' 'temp_5_sroa_117_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%temp_5_sroa_126_0_loc = alloca i64 1"   --->   Operation 23 'alloca' 'temp_5_sroa_126_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%temp_5_sroa_135_0_loc = alloca i64 1"   --->   Operation 24 'alloca' 'temp_5_sroa_135_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%temp_5_sroa_144_0_loc = alloca i64 1"   --->   Operation 25 'alloca' 'temp_5_sroa_144_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%temp_5_sroa_153_0_loc = alloca i64 1"   --->   Operation 26 'alloca' 'temp_5_sroa_153_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%temp_5_sroa_162_0_loc = alloca i64 1"   --->   Operation 27 'alloca' 'temp_5_sroa_162_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%temp_5_sroa_171_0_loc = alloca i64 1"   --->   Operation 28 'alloca' 'temp_5_sroa_171_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%temp_5_sroa_180_0_loc = alloca i64 1"   --->   Operation 29 'alloca' 'temp_5_sroa_180_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [2/2] (0.00ns)   --->   "%call_ln0 = call void @merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1, i398 %rrequest1, i398 %rrequest2, i398 %rrequest3, i398 %rrequest4, i398 %rrequestf, i8 %temp_5_sroa_180_0_loc, i8 %temp_5_sroa_171_0_loc, i8 %temp_5_sroa_162_0_loc, i8 %temp_5_sroa_153_0_loc, i8 %temp_5_sroa_144_0_loc, i8 %temp_5_sroa_135_0_loc, i8 %temp_5_sroa_126_0_loc, i8 %temp_5_sroa_117_0_loc, i8 %temp_5_sroa_108_0_loc, i8 %temp_5_sroa_99_0_loc, i8 %temp_5_sroa_90_0_loc, i8 %temp_5_sroa_81_0_loc, i8 %temp_5_sroa_72_0_loc, i8 %temp_5_sroa_63_0_loc, i8 %temp_5_sroa_54_0_loc, i8 %temp_5_sroa_45_0_loc, i8 %temp_5_sroa_36_0_loc, i8 %temp_5_sroa_27_0_loc, i8 %temp_5_sroa_18_0_loc, i8 %temp_5_sroa_9_0_loc, i8 %temp_5_sroa_0_0_loc, i160 %temp_6_0_loc, i32 %temp_4511_0_loc, i32 %temp_3510_0_loc, i2 %temp_2_0_loc, i3 %temp_0_0_loc"   --->   Operation 30 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.85>
+ST_2 : Operation 31 [1/2] (0.85ns)   --->   "%call_ln0 = call void @merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1, i398 %rrequest1, i398 %rrequest2, i398 %rrequest3, i398 %rrequest4, i398 %rrequestf, i8 %temp_5_sroa_180_0_loc, i8 %temp_5_sroa_171_0_loc, i8 %temp_5_sroa_162_0_loc, i8 %temp_5_sroa_153_0_loc, i8 %temp_5_sroa_144_0_loc, i8 %temp_5_sroa_135_0_loc, i8 %temp_5_sroa_126_0_loc, i8 %temp_5_sroa_117_0_loc, i8 %temp_5_sroa_108_0_loc, i8 %temp_5_sroa_99_0_loc, i8 %temp_5_sroa_90_0_loc, i8 %temp_5_sroa_81_0_loc, i8 %temp_5_sroa_72_0_loc, i8 %temp_5_sroa_63_0_loc, i8 %temp_5_sroa_54_0_loc, i8 %temp_5_sroa_45_0_loc, i8 %temp_5_sroa_36_0_loc, i8 %temp_5_sroa_27_0_loc, i8 %temp_5_sroa_18_0_loc, i8 %temp_5_sroa_9_0_loc, i8 %temp_5_sroa_0_0_loc, i160 %temp_6_0_loc, i32 %temp_4511_0_loc, i32 %temp_3510_0_loc, i2 %temp_2_0_loc, i3 %temp_0_0_loc"   --->   Operation 31 'call' 'call_ln0' <Predicate = true> <Delay = 0.85> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 1.63>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i398 %rrequestf, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i398 %rrequest4, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i398 %rrequest3, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i398 %rrequest2, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i398 %rrequest1, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%fence_ln85 = fence void @_ssdm_op_Fence, i398 %rrequest1, i398 %rrequest2, i398 %rrequest3, i398 %rrequest4, i398 %rrequestf, i32 4294967295, i398 %rrequestf, i32 0" [util.cpp:85]   --->   Operation 37 'fence' 'fence_ln85' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%temp_5_sroa_180_0_loc_load = load i8 %temp_5_sroa_180_0_loc"   --->   Operation 38 'load' 'temp_5_sroa_180_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%temp_5_sroa_171_0_loc_load = load i8 %temp_5_sroa_171_0_loc"   --->   Operation 39 'load' 'temp_5_sroa_171_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%temp_5_sroa_162_0_loc_load = load i8 %temp_5_sroa_162_0_loc"   --->   Operation 40 'load' 'temp_5_sroa_162_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%temp_5_sroa_153_0_loc_load = load i8 %temp_5_sroa_153_0_loc"   --->   Operation 41 'load' 'temp_5_sroa_153_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%temp_5_sroa_144_0_loc_load = load i8 %temp_5_sroa_144_0_loc"   --->   Operation 42 'load' 'temp_5_sroa_144_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%temp_5_sroa_135_0_loc_load = load i8 %temp_5_sroa_135_0_loc"   --->   Operation 43 'load' 'temp_5_sroa_135_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%temp_5_sroa_126_0_loc_load = load i8 %temp_5_sroa_126_0_loc"   --->   Operation 44 'load' 'temp_5_sroa_126_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%temp_5_sroa_117_0_loc_load = load i8 %temp_5_sroa_117_0_loc"   --->   Operation 45 'load' 'temp_5_sroa_117_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%temp_5_sroa_108_0_loc_load = load i8 %temp_5_sroa_108_0_loc"   --->   Operation 46 'load' 'temp_5_sroa_108_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%temp_5_sroa_99_0_loc_load = load i8 %temp_5_sroa_99_0_loc"   --->   Operation 47 'load' 'temp_5_sroa_99_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%temp_5_sroa_90_0_loc_load = load i8 %temp_5_sroa_90_0_loc"   --->   Operation 48 'load' 'temp_5_sroa_90_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%temp_5_sroa_81_0_loc_load = load i8 %temp_5_sroa_81_0_loc"   --->   Operation 49 'load' 'temp_5_sroa_81_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%temp_5_sroa_72_0_loc_load = load i8 %temp_5_sroa_72_0_loc"   --->   Operation 50 'load' 'temp_5_sroa_72_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%temp_5_sroa_63_0_loc_load = load i8 %temp_5_sroa_63_0_loc"   --->   Operation 51 'load' 'temp_5_sroa_63_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%temp_5_sroa_54_0_loc_load = load i8 %temp_5_sroa_54_0_loc"   --->   Operation 52 'load' 'temp_5_sroa_54_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%temp_5_sroa_45_0_loc_load = load i8 %temp_5_sroa_45_0_loc"   --->   Operation 53 'load' 'temp_5_sroa_45_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%temp_5_sroa_36_0_loc_load = load i8 %temp_5_sroa_36_0_loc"   --->   Operation 54 'load' 'temp_5_sroa_36_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%temp_5_sroa_27_0_loc_load = load i8 %temp_5_sroa_27_0_loc"   --->   Operation 55 'load' 'temp_5_sroa_27_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%temp_5_sroa_18_0_loc_load = load i8 %temp_5_sroa_18_0_loc"   --->   Operation 56 'load' 'temp_5_sroa_18_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%temp_5_sroa_9_0_loc_load = load i8 %temp_5_sroa_9_0_loc"   --->   Operation 57 'load' 'temp_5_sroa_9_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%temp_5_sroa_0_0_loc_load = load i8 %temp_5_sroa_0_0_loc"   --->   Operation 58 'load' 'temp_5_sroa_0_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%temp_6_0_loc_load = load i160 %temp_6_0_loc"   --->   Operation 59 'load' 'temp_6_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%temp_4511_0_loc_load = load i32 %temp_4511_0_loc"   --->   Operation 60 'load' 'temp_4511_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%temp_3510_0_loc_load = load i32 %temp_3510_0_loc"   --->   Operation 61 'load' 'temp_3510_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%temp_2_0_loc_load = load i2 %temp_2_0_loc"   --->   Operation 62 'load' 'temp_2_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%temp_0_0_loc_load = load i3 %temp_0_0_loc"   --->   Operation 63 'load' 'temp_0_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i398 @_ssdm_op_BitConcatenate.i398.i160.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i8.i32.i32.i2.i1.i3, i160 %temp_6_0_loc_load, i8 %temp_5_sroa_180_0_loc_load, i8 %temp_5_sroa_171_0_loc_load, i8 %temp_5_sroa_162_0_loc_load, i8 %temp_5_sroa_153_0_loc_load, i8 %temp_5_sroa_144_0_loc_load, i8 %temp_5_sroa_135_0_loc_load, i8 %temp_5_sroa_126_0_loc_load, i8 %temp_5_sroa_117_0_loc_load, i8 %temp_5_sroa_108_0_loc_load, i8 %temp_5_sroa_99_0_loc_load, i8 %temp_5_sroa_90_0_loc_load, i8 %temp_5_sroa_81_0_loc_load, i8 %temp_5_sroa_72_0_loc_load, i8 %temp_5_sroa_63_0_loc_load, i8 %temp_5_sroa_54_0_loc_load, i8 %temp_5_sroa_45_0_loc_load, i8 %temp_5_sroa_36_0_loc_load, i8 %temp_5_sroa_27_0_loc_load, i8 %temp_5_sroa_18_0_loc_load, i8 %temp_5_sroa_9_0_loc_load, i8 %temp_5_sroa_0_0_loc_load, i32 %temp_4511_0_loc_load, i32 %temp_3510_0_loc_load, i2 %temp_2_0_loc_load, i1 1, i3 %temp_0_0_loc_load" [util.cpp:85]   --->   Operation 64 'bitconcatenate' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] ( I:1.63ns O:1.63ns )   --->   "%write_ln85 = write void @_ssdm_op_Write.ap_fifo.volatile.i398P0A, i398 %rrequestf, i398 %p_0" [util.cpp:85]   --->   Operation 65 'write' 'write_ln85' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 398> <Depth = 4> <FIFO>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%ret_ln86 = ret" [util.cpp:86]   --->   Operation 66 'ret' 'ret_ln86' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 0.854ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1' [37]  (0.854 ns)
+
+ <State 3>: 1.636ns
+The critical path consists of the following:
+	'load' operation 8 bit ('temp_5_sroa_180_0_loc_load') on local variable 'temp_5_sroa_180_0_loc' [39]  (0.000 ns)
+	fifo write operation ('write_ln85', util.cpp:85) on port 'rrequestf' (util.cpp:85) [66]  (1.636 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

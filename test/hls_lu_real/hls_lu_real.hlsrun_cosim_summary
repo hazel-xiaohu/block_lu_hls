@@ -1,0 +1,228 @@
+<ENTRY>
+{
+ "thisFile": "/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls_lu_real.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Sep 25 00:16:24 2026",
+ "timestampMillis": "1790266584438",
+ "buildStep": {
+  "cmdId": "d01dd10e-2878-4aef-a540-4f9b82e60480",
+  "name": "vitis-run",
+  "logFile": "/home/huz/project/SpMM_TCAD/test/hls_lu_real/logs/hls_lu_real.steps.log",
+  "commandLine": "/home/huz/software/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --config /home/huz/project/SpMM_TCAD/test/hls_lu_real_config.cfg --cosim --work_dir hls_lu_real --part xczu15eg-ffvb1156-2-i ",
+  "args": [
+   "--mode",
+   "hls",
+   "--config",
+   "/home/huz/project/SpMM_TCAD/test/hls_lu_real_config.cfg",
+   "--cosim",
+   "--work_dir",
+   "hls_lu_real",
+   "--part",
+   "xczu15eg-ffvb1156-2-i"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/huz/project/SpMM_TCAD/test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 25 00:16:24 2026",
+ "timestampMillis": "1790266584439",
+ "status": {
+  "cmdId": "d01dd10e-2878-4aef-a540-4f9b82e60480",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Sep 25 00:16:29 2026",
+ "timestampMillis": "1790266589205",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "sparse_lu_shared",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/huz/project/SpMM_TCAD/test/sparse_lu_shared_cached.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Sep 25 00:16:29 2026",
+ "timestampMillis": "1790266589207",
+ "buildStep": {
+  "cmdId": "a4b211e0-9f84-4da8-a802-9c5b2e5d6b88",
+  "name": "",
+  "logFile": "/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/huz/project/SpMM_TCAD/test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 25 00:16:29 2026",
+ "timestampMillis": "1790266589207",
+ "status": {
+  "cmdId": "a4b211e0-9f84-4da8-a802-9c5b2e5d6b88",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 25 00:16:29 2026",
+ "timestampMillis": "1790266589208",
+ "report": {
+  "path": "/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/sim/report/sparse_lu_shared_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 25 00:16:29 2026",
+ "timestampMillis": "1790266589208",
+ "report": {
+  "path": "/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 25 00:16:29 2026",
+ "timestampMillis": "1790266589209",
+ "report": {
+  "path": "/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 25 00:16:29 2026",
+ "timestampMillis": "1790266589209",
+ "report": {
+  "path": "/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 25 00:16:29 2026",
+ "timestampMillis": "1790266589210",
+ "report": {
+  "path": "/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 25 00:18:23 2026",
+ "timestampMillis": "1790266703497",
+ "status": {
+  "cmdId": "a4b211e0-9f84-4da8-a802-9c5b2e5d6b88",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Sep 25 00:18:23 2026",
+ "timestampMillis": "1790266703658",
+ "status": {
+  "cmdId": "d01dd10e-2878-4aef-a540-4f9b82e60480",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 25 00:18:23 2026",
+ "timestampMillis": "1790266703659",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Sep 25 00:18:23 2026",
+ "timestampMillis": "1790266703660",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

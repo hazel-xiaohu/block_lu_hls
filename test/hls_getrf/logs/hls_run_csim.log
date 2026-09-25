@@ -1,0 +1,40 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir /home/huz/project/SpMM_TCAD/test/hls_getrf 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/huz/project/SpMM_TCAD/test/hls_getrf/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/huz/project/SpMM_TCAD/test/hls_getrf'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_getrf_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=sparse_getrf.cpp' from hls_getrf_config.cfg(4)
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/sparse_getrf.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_sparse_getrf.cpp' from hls_getrf_config.cfg(5)
+INFO: [HLS 200-10] Adding test bench file '/home/huz/project/SpMM_TCAD/test/tb_sparse_getrf.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=sparse_getrf' from hls_getrf_config.cfg(3)
+INFO: [HLS 200-1465] Applying config ini 'clock=5.0' from hls_getrf_config.cfg(2)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.O=true' from hls_getrf_config.cfg(9)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=none' from hls_getrf_config.cfg(7)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'cosim.wave_debug=false' from hls_getrf_config.cfg(8)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'vivado.flow=impl' from hls_getrf_config.cfg(11)
+INFO: [HLS 200-1465] Applying config ini 'vivado.rtl=verilog' from hls_getrf_config.cfg(12)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/huz/project/SpMM_TCAD/test/hls_getrf/vitis-comp.json
+INFO: [HLS 200-1465] Applying config ini 'part=xczu15eg-ffvb1156-2-i' from command line
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building optimized C Simulation binaries
+make[1]: Entering directory '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/csim/build'
+   Compiling ../../../../tb_sparse_getrf.cpp in release mode
+   Compiling ../../../../sparse_getrf.cpp in release mode
+   Generating csim.exe
+make[1]: Leaving directory '/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/csim/build'
+fixed-panel sparse GETRF: n=12 panel_width=4 A_nnz=40 factor_pattern_nnz=54 symbolic_fill=14
+max factor error=7.45058e-09 max residual=1.6782e-07
+PASS sparse_getrf fixed CSR pattern
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 2.87 seconds. Total CPU system time: 1.18 seconds. Total elapsed time: 6.48 seconds; peak allocated memory: 269.996 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 12s

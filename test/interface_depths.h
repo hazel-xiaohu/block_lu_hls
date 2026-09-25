@@ -15,6 +15,13 @@
 #define SPMM_PACKED_ROW_DEPTH 128
 #define SPMM_PACKED_INPUT_DEPTH 256
 #define SPMM_OUTPUT_DEPTH 16384
+#elif defined(SPMM_COSIM_LU_CASCADE)
+// circuit_3_12127 blocked-LU cascade regression: 32x32 L21/U12/C blocks.
+#define SPMM_ROW_DEPTH 64
+#define SPMM_INPUT_DEPTH 1024
+#define SPMM_PACKED_ROW_DEPTH 16
+#define SPMM_PACKED_INPUT_DEPTH 256
+#define SPMM_OUTPUT_DEPTH 1025
 #elif defined(SPMM_COSIM_RANDOM_EMPTY)
 // random_filter_empty: A=2048x2048 (nnz=2831), B=2048x2048 (nnz=3581),
 // C=2048x2048 (nnz=3626).  Row-pointer ports include one guard entry;

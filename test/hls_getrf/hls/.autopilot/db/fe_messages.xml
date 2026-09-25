@@ -1,0 +1,104 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:4:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="getrf_abs" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:10:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="find_in_row" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:14:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="find_in_row" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:26:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="set_failure" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=sparse_getrf" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:49:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=A_rcsr offset=slave bundle=a_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:50:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1024 port=A_cid offset=slave bundle=a_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:51:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1024 port=A_val offset=slave bundle=a_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:52:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=L_rcsr offset=slave bundle=l_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:53:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=L_cid offset=slave bundle=l_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:54:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=L_val offset=slave bundle=l_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:55:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=U_rcsr offset=slave bundle=u_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:56:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=U_cid offset=slave bundle=u_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:57:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=U_val offset=slave bundle=u_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:59:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=n bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:60:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=a_nnz bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:61:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=l_nnz bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:62:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=u_nnz bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:63:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pivot_eps bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:64:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=status bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:65:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=failed_row bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:66:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:85:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:89:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:104:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:121:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:139:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_getrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_getrf.cpp:73:3" msg_body="Inlining function 'set_failure(unsigned int, unsigned int, unsigned int*, unsigned int*)' into 'sparse_getrf'">
+        <args Callee="set_failure(unsigned int, unsigned int, unsigned int*, unsigned int*)" Callee-DebugLoc="File sparse_getrf.cpp Line 25 Column 0" Caller="sparse_getrf" Caller-DebugLoc="File sparse_getrf.cpp Line 47 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_getrf.cpp:219:6" msg_body="Inlining function 'getrf_abs(float)' into 'sparse_getrf'">
+        <args Callee="getrf_abs(float)" Callee-DebugLoc="File sparse_getrf.cpp Line 3 Column 0" Caller="sparse_getrf" Caller-DebugLoc="File sparse_getrf.cpp Line 47 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_getrf.cpp:217:32" msg_body="Inlining function 'find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)' into 'sparse_getrf'">
+        <args Callee="find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)" Callee-DebugLoc="File sparse_getrf.cpp Line 9 Column 0" Caller="sparse_getrf" Caller-DebugLoc="File sparse_getrf.cpp Line 47 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="sparse_getrf.cpp:13:19" msg_body="Loop 'VITIS_LOOP_13_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_13_1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_getrf.cpp:198:26" msg_body="pipeline   1 sparse_getrf config_compile -pipeline_loops 64VITIS_LOOP_198_11 sparse_getrf.cpp:198:26">
+        <args LoopLoc="sparse_getrf.cpp:198:26" LoopLoc-DebugLoc="File sparse_getrf.cpp Line 198 Column 26" LoopName="VITIS_LOOP_198_11" PragmaFunction="sparse_getrf" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_getrf.cpp:206:26" msg_body="pipeline   1 sparse_getrf config_compile -pipeline_loops 64VITIS_LOOP_206_12 sparse_getrf.cpp:206:26">
+        <args LoopLoc="sparse_getrf.cpp:206:26" LoopLoc-DebugLoc="File sparse_getrf.cpp Line 206 Column 26" LoopName="VITIS_LOOP_206_12" PragmaFunction="sparse_getrf" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-187" msg_severity="WARNING" msg_loc="sparse_getrf.cpp:13:19" msg_body="Cannot unroll loop 'VITIS_LOOP_13_1' (sparse_getrf.cpp:13:19) in function 'sparse_getrf' as it has a variable trip count">
+        <args LoopLoc="sparse_getrf.cpp:13:19" LoopName="VITIS_LOOP_13_1"/>
+    </msg>
+</xilinx:hls_fe_msgs>

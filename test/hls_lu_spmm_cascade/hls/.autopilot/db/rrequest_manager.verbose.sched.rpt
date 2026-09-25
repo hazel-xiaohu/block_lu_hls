@@ -1,0 +1,136 @@
+
+
+================================================================
+== Vitis HLS Report for 'rrequest_manager'
+================================================================
+* Date:           Fri Sep 25 00:04:35 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.252 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%curr_request_6_0_loc = alloca i64 1"   --->   Operation 4 'alloca' 'curr_request_6_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%curr_request_4_0_loc = alloca i64 1"   --->   Operation 5 'alloca' 'curr_request_4_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%curr_request_3_0_loc = alloca i64 1"   --->   Operation 6 'alloca' 'curr_request_3_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%curr_request_0_0_loc = alloca i64 1"   --->   Operation 7 'alloca' 'curr_request_0_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @rrequest_manager_Pipeline_VITIS_LOOP_40_1, i398 %rrequest, i398 %r_first, i3 %curr_request_0_0_loc, i32 %curr_request_3_0_loc, i32 %curr_request_4_0_loc, i160 %curr_request_6_0_loc"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.85>
+ST_2 : Operation 9 [1/2] (0.85ns)   --->   "%call_ln0 = call void @rrequest_manager_Pipeline_VITIS_LOOP_40_1, i398 %rrequest, i398 %r_first, i3 %curr_request_0_0_loc, i32 %curr_request_3_0_loc, i32 %curr_request_4_0_loc, i160 %curr_request_6_0_loc"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 0.85> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 1.82>
+ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i398 %r_first, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i398 %rrequest, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%fence_ln59 = fence void @_ssdm_op_Fence, i398 %rrequest, i398 %r_first, i32 4294967295, i398 %r_first, i32 0" [rcache.cpp:59]   --->   Operation 12 'fence' 'fence_ln59' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%curr_request_0_0_loc_load = load i3 %curr_request_0_0_loc"   --->   Operation 13 'load' 'curr_request_0_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%curr_request_3_0_loc_load = load i32 %curr_request_3_0_loc"   --->   Operation 14 'load' 'curr_request_3_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%curr_request_4_0_loc_load = load i32 %curr_request_4_0_loc"   --->   Operation 15 'load' 'curr_request_4_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%curr_request_6_0_loc_load = load i160 %curr_request_6_0_loc"   --->   Operation 16 'load' 'curr_request_6_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i398 @_ssdm_op_BitConcatenate.i398.i160.i168.i32.i32.i3.i3, i160 %curr_request_6_0_loc_load, i168 0, i32 %curr_request_4_0_loc_load, i32 %curr_request_3_0_loc_load, i3 1, i3 %curr_request_0_0_loc_load" [rcache.cpp:59]   --->   Operation 17 'bitconcatenate' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] ( I:1.82ns O:1.82ns )   --->   "%write_ln59 = write void @_ssdm_op_Write.ap_fifo.volatile.i398P0A, i398 %r_first, i398 %p_0" [rcache.cpp:59]   --->   Operation 18 'write' 'write_ln59' <Predicate = true> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 398> <Depth = 2> <FIFO>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%ret_ln60 = ret" [rcache.cpp:60]   --->   Operation 19 'ret' 'ret_ln60' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 0.854ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'rrequest_manager_Pipeline_VITIS_LOOP_40_1' [9]  (0.854 ns)
+
+ <State 3>: 1.825ns
+The critical path consists of the following:
+	'load' operation 3 bit ('curr_request_0_0_loc_load') on local variable 'curr_request_0_0_loc' [11]  (0.000 ns)
+	fifo write operation ('write_ln59', rcache.cpp:59) on port 'r_first' (rcache.cpp:59) [16]  (1.825 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

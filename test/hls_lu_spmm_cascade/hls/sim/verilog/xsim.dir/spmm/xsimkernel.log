@@ -1,0 +1,7 @@
+Running: xsim.dir/spmm/xsimk -simmode gui -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=spmm_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -wdb spmm.wdb -simrunnum 0 -socket 45671
+Design successfully loaded
+Design Loading Memory Usage: 329200 KB (Peak: 329200 KB)
+Design Loading CPU Usage: 2290 ms
+Simulation completed
+Simulation Memory Usage: 1048324 KB (Peak: 1048324 KB)
+Simulation CPU Usage: 23470 ms

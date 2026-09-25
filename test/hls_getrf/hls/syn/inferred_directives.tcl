@@ -1,0 +1,3 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline sparse_getrf/VITIS_LOOP_198_11
+set_directive_pipeline sparse_getrf/VITIS_LOOP_206_12

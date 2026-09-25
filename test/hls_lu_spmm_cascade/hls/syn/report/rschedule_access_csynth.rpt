@@ -1,0 +1,214 @@
+
+
+================================================================
+== Vitis HLS Report for 'rschedule_access'
+================================================================
+* Date:           Fri Sep 25 00:05:02 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.616 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+        |                                                      |                                           |  Latency (cycles) |   Latency (absolute)  |  Interval |      Pipeline     |
+        |                       Instance                       |                   Module                  |   min   |   max   |    min    |    max    | min | max |        Type       |
+        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+        |grp_rschedule_access_Pipeline_VITIS_LOOP_87_3_fu_247  |rschedule_access_Pipeline_VITIS_LOOP_87_3  |        4|        4|  20.000 ns|  20.000 ns|    0|    0|  loop pipeline stp|
+        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-----+-----+-------------------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_73_1   |        ?|        ?|         ?|          -|          -|     ?|        no|
+        | + VITIS_LOOP_79_2  |        ?|        ?|     2 ~ 9|          -|          -|     ?|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      66|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|      35|     116|    -|
+|Memory           |        0|     -|     256|       4|    0|
+|Multiplexer      |        -|     -|       0|     181|    -|
+|Register         |        -|     -|    1166|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|    1457|     367|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------+-------------------------------------------+---------+----+----+-----+-----+
+    |                       Instance                       |                   Module                  | BRAM_18K| DSP| FF | LUT | URAM|
+    +------------------------------------------------------+-------------------------------------------+---------+----+----+-----+-----+
+    |grp_rschedule_access_Pipeline_VITIS_LOOP_87_3_fu_247  |rschedule_access_Pipeline_VITIS_LOOP_87_3  |        0|   0|  35|  116|    0|
+    +------------------------------------------------------+-------------------------------------------+---------+----+----+-----+-----+
+    |Total                                                 |                                           |        0|   0|  35|  116|    0|
+    +------------------------------------------------------+-------------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +---------+--------------------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |  Memory |                Module                | BRAM_18K|  FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------+--------------------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |Bridx_U  |rschedule_access_Bridx_RAM_AUTO_1R1W  |        0|  256|   4|    0|     2|  128|     1|          256|
+    +---------+--------------------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |Total    |                                      |        0|  256|   4|    0|     2|  128|     1|          256|
+    +---------+--------------------------------------+---------+-----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |add_ln87_fu_303_p2              |         +|   0|  0|  38|          31|           2|
+    |ap_block_state3                 |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op28_read_state2   |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op53_read_state3   |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op75_write_state8  |       and|   0|  0|   2|           1|           1|
+    |tmp_36_nbreadreq_fu_143_p3      |       and|   0|  0|   2|           1|           0|
+    |tmp_s_nbreadreq_fu_122_p3       |       and|   0|  0|   2|           1|           0|
+    |icmp_ln84_fu_370_p2             |      icmp|   0|  0|  10|           3|           2|
+    |ap_block_state1                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state8                 |        or|   0|  0|   2|           1|           1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |Total                           |          |   0|  0|  66|          43|          11|
+    +--------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------+----+-----------+-----+-----------+
+    |              Name              | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------+----+-----------+-----+-----------+
+    |Bridx_address0                  |   9|          2|    1|          2|
+    |Bridx_ce0                       |   9|          2|    1|          2|
+    |Bridx_we0                       |   9|          2|    1|          2|
+    |ap_NS_fsm                       |  54|         10|    1|         10|
+    |ap_done                         |   9|          2|    1|          2|
+    |ap_phi_mux_p_t_1_phi_fu_217_p6  |   9|          2|    1|          2|
+    |enable_reg_189                  |   9|          2|    1|          2|
+    |p_t_reg_200                     |   9|          2|    1|          2|
+    |r_req_blk_n                     |   9|          2|    1|          2|
+    |r_req_din                       |  14|          3|  398|       1194|
+    |roff_blk_n                      |   9|          2|    1|          2|
+    |roff_din                        |  14|          3|  160|        480|
+    |rresponse1_blk_n                |   9|          2|    1|          2|
+    |rscheduler_blk_n                |   9|          2|    1|          2|
+    +--------------------------------+----+-----------+-----+-----------+
+    |Total                           | 181|         38|  570|       1706|
+    +--------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------+-----+----+-----+-----------+
+    |                                Name                               |  FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------+-----+----+-----+-----------+
+    |add_ln87_reg_507                                                   |   31|   0|   31|          0|
+    |ap_CS_fsm                                                          |    9|   0|    9|          0|
+    |ap_done_reg                                                        |    1|   0|    1|          0|
+    |curr_request_0_0_fu_114                                            |    3|   0|    3|          0|
+    |curr_request_3_0_fu_110                                            |   32|   0|   32|          0|
+    |curr_request_4_0_fu_106                                            |   32|   0|   32|          0|
+    |curr_request_6_0_fu_102                                            |  160|   0|  160|          0|
+    |curr_response_data_reg_526                                         |  160|   0|  160|          0|
+    |enable_1_reg_229                                                   |    1|   0|    1|          0|
+    |enable_reg_189                                                     |    1|   0|    1|          0|
+    |grp_rschedule_access_Pipeline_VITIS_LOOP_87_3_fu_247_ap_start_reg  |    1|   0|    1|          0|
+    |icmp_ln84_reg_531                                                  |    1|   0|    1|          0|
+    |p_t_1_reg_211                                                      |    1|   0|    1|          0|
+    |p_t_reg_200                                                        |    1|   0|    1|          0|
+    |rscheduler_read_reg_479                                            |  398|   0|  398|          0|
+    |tmp_36_reg_522                                                     |    1|   0|    1|          0|
+    |tmp_48_reg_512                                                     |    1|   0|    1|          0|
+    |tmp_reg_535                                                        |  232|   0|  232|          0|
+    |trunc_ln76_5_reg_494                                               |   32|   0|   32|          0|
+    |trunc_ln76_reg_484                                                 |    3|   0|    3|          0|
+    |trunc_ln76_s_reg_489                                               |   32|   0|   32|          0|
+    |trunc_ln_reg_502                                                   |   30|   0|   30|          0|
+    |zext_ln101_reg_517                                                 |    3|   0|    4|          1|
+    +-------------------------------------------------------------------+-----+----+-----+-----------+
+    |Total                                                              | 1166|   0| 1167|          1|
+    +-------------------------------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++---------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  rschedule_access|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  rschedule_access|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  rschedule_access|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  rschedule_access|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|  rschedule_access|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  rschedule_access|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  rschedule_access|  return value|
+|rscheduler_dout            |   in|  398|     ap_fifo|        rscheduler|       pointer|
+|rscheduler_empty_n         |   in|    1|     ap_fifo|        rscheduler|       pointer|
+|rscheduler_read            |  out|    1|     ap_fifo|        rscheduler|       pointer|
+|rscheduler_num_data_valid  |   in|    5|     ap_fifo|        rscheduler|       pointer|
+|rscheduler_fifo_cap        |   in|    5|     ap_fifo|        rscheduler|       pointer|
+|rresponse1_dout            |   in|  168|     ap_fifo|        rresponse1|       pointer|
+|rresponse1_empty_n         |   in|    1|     ap_fifo|        rresponse1|       pointer|
+|rresponse1_read            |  out|    1|     ap_fifo|        rresponse1|       pointer|
+|rresponse1_num_data_valid  |   in|    5|     ap_fifo|        rresponse1|       pointer|
+|rresponse1_fifo_cap        |   in|    5|     ap_fifo|        rresponse1|       pointer|
+|roff_din                   |  out|  160|     ap_fifo|              roff|       pointer|
+|roff_full_n                |   in|    1|     ap_fifo|              roff|       pointer|
+|roff_write                 |  out|    1|     ap_fifo|              roff|       pointer|
+|roff_num_data_valid        |   in|    4|     ap_fifo|              roff|       pointer|
+|roff_fifo_cap              |   in|    4|     ap_fifo|              roff|       pointer|
+|off_pointer_address0       |  out|    4|   ap_memory|       off_pointer|         array|
+|off_pointer_ce0            |  out|    1|   ap_memory|       off_pointer|         array|
+|off_pointer_q0             |   in|  128|   ap_memory|       off_pointer|         array|
+|r_req_din                  |  out|  398|     ap_fifo|             r_req|       pointer|
+|r_req_full_n               |   in|    1|     ap_fifo|             r_req|       pointer|
+|r_req_write                |  out|    1|     ap_fifo|             r_req|       pointer|
+|r_req_num_data_valid       |   in|    3|     ap_fifo|             r_req|       pointer|
+|r_req_fifo_cap             |   in|    3|     ap_fifo|             r_req|       pointer|
++---------------------------+-----+-----+------------+------------------+--------------+
+

@@ -1,0 +1,4 @@
+part=xczu15eg-ffvb1156-2-i
+relativeroot=/home/huz/project/SpMM_TCAD/test
+original_argv=--mode hls --config /home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade_config.cfg --cosim --work_dir hls_lu_spmm_cascade --part xczu15eg-ffvb1156-2-i 
+

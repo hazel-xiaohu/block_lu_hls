@@ -1,0 +1,188 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:4:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="lu_abs" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:10:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="getrf_find_in_row" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:25:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gessm_fixed_csr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:56:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tstrf_fixed_csr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:93:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=L_rcsr offset=slave bundle=l_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:94:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=L_cid offset=slave bundle=l_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:95:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=L_val offset=slave bundle=l_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:96:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=B_rcsr offset=slave bundle=b_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:97:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=B_cid offset=slave bundle=b_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:98:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=B_val offset=slave bundle=b_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:99:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_gessm" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:140:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=U_rcsr offset=slave bundle=u_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:141:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=U_cid offset=slave bundle=u_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:142:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=U_val offset=slave bundle=u_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:143:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=B_rcsr offset=slave bundle=b_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:144:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=B_cid offset=slave bundle=b_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:145:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=B_val offset=slave bundle=b_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_ops.cpp:146:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_tstrf" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:5:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="shared_abs" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:11:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="shared_fail" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:18:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="valid_sorted_row" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:37:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="shared_getrf" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=sparse_lu_shared" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:123:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=A_rcsr offset=slave bundle=a_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:124:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1024 port=A_cid offset=slave bundle=a_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:125:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1024 port=A_val offset=slave bundle=a_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:126:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=L_rcsr offset=slave bundle=l_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:127:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=L_cid offset=slave bundle=l_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:128:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=L_val offset=slave bundle=l_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:129:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=U_rcsr offset=slave bundle=u_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:130:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=U_cid offset=slave bundle=u_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:131:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=2048 port=U_val offset=slave bundle=u_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:132:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=64 +1 port=X_rcsr offset=slave bundle=x_row" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:133:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=X_cid offset=slave bundle=x_col" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:134:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=(2048 + 2048) port=X_val offset=slave bundle=x_val" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:135:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=operation bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:136:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=n bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:137:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=a_nnz bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:138:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=l_nnz bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:139:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=u_nnz bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:140:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=x_rows bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:141:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=x_cols bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:142:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=x_nnz bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:143:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pivot_eps bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:144:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=status bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:145:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=failed_row bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="sparse_lu_shared.cpp:146:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="sparse_lu_shared" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_shared.cpp:47:6" msg_body="Inlining function 'valid_sorted_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)' into 'shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)'">
+        <args Callee="valid_sorted_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)" Callee-DebugLoc="File sparse_lu_shared.cpp Line 17 Column 0" Caller="shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)" Caller-DebugLoc="File sparse_lu_shared.cpp Line 36 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_shared.cpp:102:5" msg_body="Inlining function 'shared_abs(float)' into 'shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)'">
+        <args Callee="shared_abs(float)" Callee-DebugLoc="File sparse_lu_shared.cpp Line 4 Column 0" Caller="shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)" Caller-DebugLoc="File sparse_lu_shared.cpp Line 36 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_shared.cpp:100:31" msg_body="Inlining function 'getrf_find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)' into 'shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)'">
+        <args Callee="getrf_find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)" Callee-DebugLoc="File sparse_lu_ops.cpp Line 9 Column 0" Caller="shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)" Caller-DebugLoc="File sparse_lu_shared.cpp Line 36 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_ops.cpp:36:31" msg_body="Inlining function 'getrf_find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)' into 'gessm_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int*)'">
+        <args Callee="getrf_find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)" Callee-DebugLoc="File sparse_lu_ops.cpp Line 9 Column 0" Caller="gessm_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int*)" Caller-DebugLoc="File sparse_lu_ops.cpp Line 24 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_ops.cpp:62:32" msg_body="Inlining function 'getrf_find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)' into 'tstrf_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)'">
+        <args Callee="getrf_find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)" Callee-DebugLoc="File sparse_lu_ops.cpp Line 9 Column 0" Caller="tstrf_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)" Caller-DebugLoc="File sparse_lu_ops.cpp Line 55 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_ops.cpp:65:6" msg_body="Inlining function 'lu_abs(float)' into 'tstrf_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)'">
+        <args Callee="lu_abs(float)" Callee-DebugLoc="File sparse_lu_ops.cpp Line 3 Column 0" Caller="tstrf_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)" Caller-DebugLoc="File sparse_lu_ops.cpp Line 55 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_shared.cpp:153:3" msg_body="Inlining function 'shared_fail(unsigned int, unsigned int, unsigned int*, unsigned int*)' into 'sparse_lu_shared'">
+        <args Callee="shared_fail(unsigned int, unsigned int, unsigned int*, unsigned int*)" Callee-DebugLoc="File sparse_lu_shared.cpp Line 10 Column 0" Caller="sparse_lu_shared" Caller-DebugLoc="File sparse_lu_shared.cpp Line 121 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_shared.cpp:207:13" msg_body="Inlining function 'tstrf_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)' into 'sparse_lu_shared'">
+        <args Callee="tstrf_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)" Callee-DebugLoc="File sparse_lu_ops.cpp Line 55 Column 0" Caller="sparse_lu_shared" Caller-DebugLoc="File sparse_lu_shared.cpp Line 121 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_shared.cpp:201:7" msg_body="Inlining function 'valid_sorted_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)' into 'sparse_lu_shared'">
+        <args Callee="valid_sorted_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)" Callee-DebugLoc="File sparse_lu_shared.cpp Line 17 Column 0" Caller="sparse_lu_shared" Caller-DebugLoc="File sparse_lu_shared.cpp Line 121 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_shared.cpp:189:13" msg_body="Inlining function 'gessm_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int*)' into 'sparse_lu_shared'">
+        <args Callee="gessm_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int*)" Callee-DebugLoc="File sparse_lu_ops.cpp Line 24 Column 0" Caller="sparse_lu_shared" Caller-DebugLoc="File sparse_lu_shared.cpp Line 121 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="sparse_lu_shared.cpp:158:13" msg_body="Inlining function 'shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)' into 'sparse_lu_shared'">
+        <args Callee="shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)" Callee-DebugLoc="File sparse_lu_shared.cpp Line 36 Column 0" Caller="sparse_lu_shared" Caller-DebugLoc="File sparse_lu_shared.cpp Line 121 Column 0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared.cpp:20:19" msg_body="pipeline   1 sparse_lu_shared config_compile -pipeline_loops 64VITIS_LOOP_20_1 sparse_lu_shared.cpp:20:19">
+        <args LoopLoc="sparse_lu_shared.cpp:20:19" LoopLoc-DebugLoc="File sparse_lu_shared.cpp Line 20 Column 19" LoopName="VITIS_LOOP_20_1" PragmaFunction="sparse_lu_shared" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_ops.cpp:11:19" msg_body="pipeline   1 sparse_lu_shared config_compile -pipeline_loops 64VITIS_LOOP_11_1 sparse_lu_ops.cpp:11:19">
+        <args LoopLoc="sparse_lu_ops.cpp:11:19" LoopLoc-DebugLoc="File sparse_lu_ops.cpp Line 11 Column 19" LoopName="VITIS_LOOP_11_1" PragmaFunction="sparse_lu_shared" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared.cpp:41:19" msg_body="pipeline   1 sparse_lu_shared config_compile -pipeline_loops 64VITIS_LOOP_41_1 sparse_lu_shared.cpp:41:19">
+        <args LoopLoc="sparse_lu_shared.cpp:41:19" LoopLoc-DebugLoc="File sparse_lu_shared.cpp Line 41 Column 19" LoopName="VITIS_LOOP_41_1" PragmaFunction="sparse_lu_shared" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="sparse_lu_shared.cpp:42:19" msg_body="pipeline   1 sparse_lu_shared config_compile -pipeline_loops 64VITIS_LOOP_42_2 sparse_lu_shared.cpp:42:19">
+        <args LoopLoc="sparse_lu_shared.cpp:42:19" LoopLoc-DebugLoc="File sparse_lu_shared.cpp Line 42 Column 19" LoopName="VITIS_LOOP_42_2" PragmaFunction="sparse_lu_shared" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+</xilinx:hls_fe_msgs>

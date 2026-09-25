@@ -1,0 +1,195 @@
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:527:2: remark: Added loop label VITIS_LOOP_23_1:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < n; ++row) {
+ ^
+ VITIS_LOOP_23_1: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:527:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:528:3: remark: Added loop label VITIS_LOOP_24_2:   [xilinx-label-all-loops]
+  for (getrf_id_t base = 0; base < n;
+  ^
+  VITIS_LOOP_24_2: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:528:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:531:4: remark: Added loop label VITIS_LOOP_27_3:   [xilinx-label-all-loops]
+   for (getrf_id_t lane = 0; lane < 4; ++lane) {
+   ^
+   VITIS_LOOP_27_3: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:531:4: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:548:2: remark: Added loop label VITIS_LOOP_44_1:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < rows; ++row) {
+ ^
+ VITIS_LOOP_44_1: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:548:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:549:3: remark: Added loop label VITIS_LOOP_45_2:   [xilinx-label-all-loops]
+  for (getrf_id_t base = 0; base < cols;
+  ^
+  VITIS_LOOP_45_2: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:549:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:552:4: remark: Added loop label VITIS_LOOP_48_3:   [xilinx-label-all-loops]
+   for (getrf_id_t lane = 0; lane < 4; ++lane) {
+   ^
+   VITIS_LOOP_48_3: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:552:4: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:572:2: remark: Added loop label VITIS_LOOP_68_1:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < n; ++row) {
+ ^
+ VITIS_LOOP_68_1: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:572:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:580:3: remark: Added loop label VITIS_LOOP_76_2:   [xilinx-label-all-loops]
+  for (getrf_id_t pos = begin; pos < end; ++pos) {
+  ^
+  VITIS_LOOP_76_2: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:580:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:606:2: remark: Added loop label VITIS_LOOP_102_1:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < rows; ++row) {
+ ^
+ VITIS_LOOP_102_1: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:606:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:614:3: remark: Added loop label VITIS_LOOP_110_2:   [xilinx-label-all-loops]
+  for (getrf_id_t pos = begin; pos < end; ++pos) {
+  ^
+  VITIS_LOOP_110_2: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:614:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:632:2: remark: Added loop label VITIS_LOOP_128_1:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < n; ++row) {
+ ^
+ VITIS_LOOP_128_1: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:632:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:633:3: remark: Added loop label VITIS_LOOP_129_2:   [xilinx-label-all-loops]
+  for (getrf_id_t pivot = 0; pivot < row; ++pivot) {
+  ^
+  VITIS_LOOP_129_2: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:633:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:635:4: remark: Added loop label VITIS_LOOP_131_3:   [xilinx-label-all-loops]
+   for (getrf_id_t col = pivot + 1; col < n; ++col) {
+   ^
+   VITIS_LOOP_131_3: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:635:4: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:653:2: remark: Added loop label VITIS_LOOP_149_1:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < n; ++row) {
+ ^
+ VITIS_LOOP_149_1: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:653:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:654:3: remark: Added loop label VITIS_LOOP_150_2:   [xilinx-label-all-loops]
+  for (getrf_id_t source = 0; source < row; ++source) {
+  ^
+  VITIS_LOOP_150_2: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:654:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:656:4: remark: Added loop label VITIS_LOOP_152_3:   [xilinx-label-all-loops]
+   for (getrf_id_t col = 0; col < x_cols; ++col) {
+   ^
+   VITIS_LOOP_152_3: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:656:4: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:672:2: remark: Added loop label VITIS_LOOP_168_1:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < x_rows; ++row) {
+ ^
+ VITIS_LOOP_168_1: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:672:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:673:3: remark: Added loop label VITIS_LOOP_169_2:   [xilinx-label-all-loops]
+  for (getrf_id_t pivot = 0; pivot < n; ++pivot) {
+  ^
+  VITIS_LOOP_169_2: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:673:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:675:4: remark: Added loop label VITIS_LOOP_171_3:   [xilinx-label-all-loops]
+   for (getrf_id_t col = pivot + 1; col < n; ++col) {
+   ^
+   VITIS_LOOP_171_3: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:675:4: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:706:2: remark: Added loop label VITIS_LOOP_202_1:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < n; ++row) {
+ ^
+ VITIS_LOOP_202_1: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:706:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:714:3: remark: Added loop label VITIS_LOOP_210_2:   [xilinx-label-all-loops]
+  for (getrf_id_t pos = begin; pos < end; ++pos) {
+  ^
+  VITIS_LOOP_210_2: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:714:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:733:2: remark: Added loop label VITIS_LOOP_229_3:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < n; ++row) {
+ ^
+ VITIS_LOOP_229_3: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:733:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:734:3: remark: Added loop label VITIS_LOOP_230_4:   [xilinx-label-all-loops]
+  for (getrf_id_t pivot = 0; pivot < row; ++pivot) {
+  ^
+  VITIS_LOOP_230_4: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:734:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:742:4: remark: Added loop label VITIS_LOOP_238_5:   [xilinx-label-all-loops]
+   for (getrf_id_t base = pivot + 1; base < n;
+   ^
+   VITIS_LOOP_238_5: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:742:4: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:746:5: remark: Added loop label VITIS_LOOP_242_6:   [xilinx-label-all-loops]
+    for (getrf_id_t lane = 0; lane < 4; ++lane) {
+    ^
+    VITIS_LOOP_242_6: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:746:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:760:2: remark: Added loop label VITIS_LOOP_256_7:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < n; ++row) {
+ ^
+ VITIS_LOOP_256_7: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:760:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:761:3: remark: Added loop label VITIS_LOOP_257_8:   [xilinx-label-all-loops]
+  for (getrf_id_t pos = L_rcsr[row]; pos < L_rcsr[row + 1]; ++pos) {
+  ^
+  VITIS_LOOP_257_8: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:761:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:766:3: remark: Added loop label VITIS_LOOP_262_9:   [xilinx-label-all-loops]
+  for (getrf_id_t pos = U_rcsr[row]; pos < U_rcsr[row + 1]; ++pos) {
+  ^
+  VITIS_LOOP_262_9: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:766:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:783:2: remark: Added loop label VITIS_LOOP_279_1:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < n; ++row) {
+ ^
+ VITIS_LOOP_279_1: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:783:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:784:3: remark: Added loop label VITIS_LOOP_280_2:   [xilinx-label-all-loops]
+  for (getrf_id_t source = 0; source < row; ++source) {
+  ^
+  VITIS_LOOP_280_2: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:784:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:787:4: remark: Added loop label VITIS_LOOP_283_3:   [xilinx-label-all-loops]
+   for (getrf_id_t base = 0; base < x_cols;
+   ^
+   VITIS_LOOP_283_3: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:787:4: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:791:5: remark: Added loop label VITIS_LOOP_287_4:   [xilinx-label-all-loops]
+    for (getrf_id_t lane = 0; lane < 4; ++lane) {
+    ^
+    VITIS_LOOP_287_4: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:791:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:813:2: remark: Added loop label VITIS_LOOP_309_1:   [xilinx-label-all-loops]
+ for (getrf_id_t pivot = 0; pivot < n; ++pivot) {
+ ^
+ VITIS_LOOP_309_1: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:813:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:818:3: remark: Added loop label VITIS_LOOP_314_2:   [xilinx-label-all-loops]
+  for (getrf_id_t row_base = 0; row_base < x_rows;
+  ^
+  VITIS_LOOP_314_2: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:818:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:824:4: remark: Added loop label VITIS_LOOP_320_3:   [xilinx-label-all-loops]
+   for (getrf_id_t lane = 0; lane < 4; ++lane) {
+   ^
+   VITIS_LOOP_320_3: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:824:4: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:833:4: remark: Added loop label VITIS_LOOP_329_4:   [xilinx-label-all-loops]
+   for (getrf_id_t col = pivot + 1; col < n; ++col) {
+   ^
+   VITIS_LOOP_329_4: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:833:4: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:837:5: remark: Added loop label VITIS_LOOP_333_5:   [xilinx-label-all-loops]
+    for (getrf_id_t lane = 0; lane < 4; ++lane) {
+    ^
+    VITIS_LOOP_333_5: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:837:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:956:2: remark: Added loop label VITIS_LOOP_448_1:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < x_rows; ++row) {
+ ^
+ VITIS_LOOP_448_1: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:956:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:957:3: remark: Added loop label VITIS_LOOP_449_2:   [xilinx-label-all-loops]
+  for (getrf_id_t pos = X_rcsr[row]; pos < X_rcsr[row + 1]; ++pos) {
+  ^
+  VITIS_LOOP_449_2: 
+/home/huz/project/SpMM_TCAD/test/hls_lu_real/hls/.autopilot/db/sparse_lu_shared_cached.pp.0.cpp:957:3: note: FIX-IT applied suggested code changes

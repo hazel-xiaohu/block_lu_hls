@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vitis HLS Report for 'convert_pblock_to_mergeitem_38'
+================================================================
+* Date:           Fri Sep 25 00:04:57 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.494 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_904_1  |        ?|        ?|    2 ~ 13|          -|          -|     ?|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 4 3 
+3 --> 4 
+4 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i263 %p_pe1, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %m_pe1, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.49>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%specpipeline_ln905 = specpipeline void @_ssdm_op_SpecPipeline, i32 0, i32 0, i32 1, i32 0, i32 4294967295, void @empty_117" [util.cpp:905]   --->   Operation 8 'specpipeline' 'specpipeline_ln905' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%specloopname_ln904 = specloopname void @_ssdm_op_SpecLoopName, void @empty_26" [util.cpp:904]   --->   Operation 9 'specloopname' 'specloopname_ln904' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] ( I:0.00ns O:0.00ns )   --->   "%tmp = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i263P0A, i263 %p_pe1, i32 1" [util.cpp:906]   --->   Operation 10 'nbreadreq' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 263> <Depth = 1000> <FIFO>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln906 = br i1 %tmp, void %for.body.backedge, void %if.then" [util.cpp:906]   --->   Operation 11 'br' 'br_ln906' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] ( I:1.74ns O:1.74ns )   --->   "%p_pe1_read = read i263 @_ssdm_op_Read.ap_fifo.volatile.i263P0A, i263 %p_pe1" [util.cpp:907]   --->   Operation 12 'read' 'p_pe1_read' <Predicate = (tmp)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 263> <Depth = 1000> <FIFO>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%temp_data = trunc i263 %p_pe1_read" [util.cpp:907]   --->   Operation 13 'trunc' 'temp_data' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%temp_cid = partselect i128 @_ssdm_op_PartSelect.i128.i263.i32.i32, i263 %p_pe1_read, i32 128, i32 255" [util.cpp:907]   --->   Operation 14 'partselect' 'temp_cid' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%enable = bitselect i1 @_ssdm_op_BitSelect.i1.i263.i32, i263 %p_pe1_read, i32 262" [util.cpp:907]   --->   Operation 15 'bitselect' 'enable' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln909 = br i1 %enable, void %VITIS_LOOP_910_2, void %for.end21" [util.cpp:909]   --->   Operation 16 'br' 'br_ln909' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_s = partselect i3 @_ssdm_op_PartSelect.i3.i263.i32.i32, i263 %p_pe1_read, i32 256, i32 258" [util.cpp:910]   --->   Operation 17 'partselect' 'tmp_s' <Predicate = (tmp & !enable)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_192 = partselect i3 @_ssdm_op_PartSelect.i3.i263.i32.i32, i263 %p_pe1_read, i32 259, i32 261" [util.cpp:910]   --->   Operation 18 'partselect' 'tmp_192' <Predicate = (tmp & !enable)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%fence_ln910 = fence void @_ssdm_op_Fence, i263 %p_pe1, i32 4294967295, i66 %m_pe1, i32 0" [util.cpp:910]   --->   Operation 19 'fence' 'fence_ln910' <Predicate = (tmp & !enable)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] ( I:1.74ns O:1.74ns )   --->   "%write_ln928 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %m_pe1, i66 36893488147419103232" [util.cpp:928]   --->   Operation 20 'write' 'write_ln928' <Predicate = (tmp & enable)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%ret_ln929 = ret" [util.cpp:929]   --->   Operation 21 'ret' 'ret_ln929' <Predicate = (tmp & enable)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln910 = zext i3 %tmp_192" [util.cpp:910]   --->   Operation 22 'zext' 'zext_ln910' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.67ns)   --->   "%add_ln910 = add i4 %zext_ln910, i4 1" [util.cpp:910]   --->   Operation 23 'add' 'add_ln910' <Predicate = true> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 24 [2/2] (1.65ns)   --->   "%call_ln910 = call void @convert_pblock_to_mergeitem.38_Pipeline_VITIS_LOOP_910_2, i3 %tmp_s, i4 %add_ln910, i128 %temp_cid, i128 %temp_data, i66 %m_pe1" [util.cpp:910]   --->   Operation 24 'call' 'call_ln910' <Predicate = true> <Delay = 1.65> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 1.65>
+ST_4 : Operation 25 [1/2] (1.65ns)   --->   "%call_ln910 = call void @convert_pblock_to_mergeitem.38_Pipeline_VITIS_LOOP_910_2, i3 %tmp_s, i4 %add_ln910, i128 %temp_cid, i128 %temp_data, i66 %m_pe1" [util.cpp:910]   --->   Operation 25 'call' 'call_ln910' <Predicate = (tmp)> <Delay = 1.65> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.backedge"   --->   Operation 26 'br' 'br_ln0' <Predicate = (tmp)> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 27 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 3.494ns
+The critical path consists of the following:
+	fifo request operation ('tmp', util.cpp:906) on port 'p_pe1' (util.cpp:906) [9]  (0.000 ns)
+	fifo read operation ('p_pe1_read', util.cpp:907) on port 'p_pe1' (util.cpp:907) [12]  (1.747 ns)
+	fifo write operation ('write_ln928', util.cpp:928) on port 'm_pe1' (util.cpp:928) [28]  (1.747 ns)
+
+ <State 3>: 2.324ns
+The critical path consists of the following:
+	'add' operation 4 bit ('add_ln910', util.cpp:910) [21]  (0.673 ns)
+	'call' operation ('call_ln910', util.cpp:910) to 'convert_pblock_to_mergeitem.38_Pipeline_VITIS_LOOP_910_2' [23]  (1.651 ns)
+
+ <State 4>: 1.651ns
+The critical path consists of the following:
+	'call' operation ('call_ln910', util.cpp:910) to 'convert_pblock_to_mergeitem.38_Pipeline_VITIS_LOOP_910_2' [23]  (1.651 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

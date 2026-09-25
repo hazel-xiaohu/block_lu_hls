@@ -1,0 +1,175 @@
+
+
+================================================================
+== Vitis HLS Report for 'distributer_vcresponse_32'
+================================================================
+* Date:           Fri Sep 25 00:05:29 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.498 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------------+-----------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+        |                                                               |                                                     |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+        |                            Instance                           |                        Module                       |   min   |   max   |    min   |    max   | min | max |        Type       |
+        +---------------------------------------------------------------+-----------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+        |grp_distributer_vcresponse_32_Pipeline_VITIS_LOOP_282_1_fu_68  |distributer_vcresponse_32_Pipeline_VITIS_LOOP_282_1  |        ?|        ?|         ?|         ?|    0|    0|  loop pipeline stp|
+        +---------------------------------------------------------------+-----------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|       4|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|      21|     140|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|     157|    -|
+|Register         |        -|     -|       5|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      26|     301|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------------+-----------------------------------------------------+---------+----+----+-----+-----+
+    |                            Instance                           |                        Module                       | BRAM_18K| DSP| FF | LUT | URAM|
+    +---------------------------------------------------------------+-----------------------------------------------------+---------+----+----+-----+-----+
+    |grp_distributer_vcresponse_32_Pipeline_VITIS_LOOP_282_1_fu_68  |distributer_vcresponse_32_Pipeline_VITIS_LOOP_282_1  |        0|   0|  21|  140|    0|
+    +---------------------------------------------------------------+-----------------------------------------------------+---------+----+----+-----+-----+
+    |Total                                                          |                                                     |        0|   0|  21|  140|    0|
+    +---------------------------------------------------------------+-----------------------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   4|           2|           2|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------+----+-----------+-----+-----------+
+    |       Name       | LUT| Input Size| Bits| Total Bits|
+    +------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm         |  20|          4|    1|          4|
+    |ap_done           |   9|          2|    1|          2|
+    |vresponse1_blk_n  |   9|          2|    1|          2|
+    |vresponse1_din    |   9|          2|    6|         12|
+    |vresponse1_write  |  14|          3|    1|          3|
+    |vresponse2_blk_n  |   9|          2|    1|          2|
+    |vresponse2_din    |   9|          2|    6|         12|
+    |vresponse2_write  |  14|          3|    1|          3|
+    |vresponse3_blk_n  |   9|          2|    1|          2|
+    |vresponse3_din    |   9|          2|    6|         12|
+    |vresponse3_write  |  14|          3|    1|          3|
+    |vresponse4_blk_n  |   9|          2|    1|          2|
+    |vresponse4_din    |   9|          2|    6|         12|
+    |vresponse4_write  |  14|          3|    1|          3|
+    +------------------+----+-----------+-----+-----------+
+    |Total             | 157|         34|   34|         74|
+    +------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------------+---+----+-----+-----------+
+    |                                    Name                                    | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                                   |  3|   0|    3|          0|
+    |ap_done_reg                                                                 |  1|   0|    1|          0|
+    |grp_distributer_vcresponse_32_Pipeline_VITIS_LOOP_282_1_fu_68_ap_start_reg  |  1|   0|    1|          0|
+    +----------------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                                       |  5|   0|    5|          0|
+    +----------------------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+---------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |       Source Object       |    C Type    |
++----------------------------------+-----+-----+------------+---------------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|  distributer_vcresponse.32|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|  distributer_vcresponse.32|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|  distributer_vcresponse.32|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|  distributer_vcresponse.32|  return value|
+|ap_continue                       |   in|    1|  ap_ctrl_hs|  distributer_vcresponse.32|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|  distributer_vcresponse.32|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|  distributer_vcresponse.32|  return value|
+|vcache_res_vfinal_dout            |   in|    6|     ap_fifo|          vcache_res_vfinal|       pointer|
+|vcache_res_vfinal_empty_n         |   in|    1|     ap_fifo|          vcache_res_vfinal|       pointer|
+|vcache_res_vfinal_read            |  out|    1|     ap_fifo|          vcache_res_vfinal|       pointer|
+|vcache_res_vfinal_num_data_valid  |   in|    3|     ap_fifo|          vcache_res_vfinal|       pointer|
+|vcache_res_vfinal_fifo_cap        |   in|    3|     ap_fifo|          vcache_res_vfinal|       pointer|
+|vresponse1_din                    |  out|    6|     ap_fifo|                 vresponse1|       pointer|
+|vresponse1_full_n                 |   in|    1|     ap_fifo|                 vresponse1|       pointer|
+|vresponse1_write                  |  out|    1|     ap_fifo|                 vresponse1|       pointer|
+|vresponse1_num_data_valid         |   in|    3|     ap_fifo|                 vresponse1|       pointer|
+|vresponse1_fifo_cap               |   in|    3|     ap_fifo|                 vresponse1|       pointer|
+|vresponse2_din                    |  out|    6|     ap_fifo|                 vresponse2|       pointer|
+|vresponse2_full_n                 |   in|    1|     ap_fifo|                 vresponse2|       pointer|
+|vresponse2_write                  |  out|    1|     ap_fifo|                 vresponse2|       pointer|
+|vresponse2_num_data_valid         |   in|    3|     ap_fifo|                 vresponse2|       pointer|
+|vresponse2_fifo_cap               |   in|    3|     ap_fifo|                 vresponse2|       pointer|
+|vresponse3_din                    |  out|    6|     ap_fifo|                 vresponse3|       pointer|
+|vresponse3_full_n                 |   in|    1|     ap_fifo|                 vresponse3|       pointer|
+|vresponse3_write                  |  out|    1|     ap_fifo|                 vresponse3|       pointer|
+|vresponse3_num_data_valid         |   in|    3|     ap_fifo|                 vresponse3|       pointer|
+|vresponse3_fifo_cap               |   in|    3|     ap_fifo|                 vresponse3|       pointer|
+|vresponse4_din                    |  out|    6|     ap_fifo|                 vresponse4|       pointer|
+|vresponse4_full_n                 |   in|    1|     ap_fifo|                 vresponse4|       pointer|
+|vresponse4_write                  |  out|    1|     ap_fifo|                 vresponse4|       pointer|
+|vresponse4_num_data_valid         |   in|    3|     ap_fifo|                 vresponse4|       pointer|
+|vresponse4_fifo_cap               |   in|    3|     ap_fifo|                 vresponse4|       pointer|
++----------------------------------+-----+-----+------------+---------------------------+--------------+
+

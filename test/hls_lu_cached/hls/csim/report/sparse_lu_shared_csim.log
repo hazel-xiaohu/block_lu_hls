@@ -1,0 +1,12 @@
+INFO: [SIM 2] *************** CSIM start ***************
+make[1]: Entering directory '/home/huz/project/SpMM_TCAD/test/hls_lu_cached/hls/csim/build'
+   Compiling ../../../../tb_sparse_lu_shared.cpp in release mode
+   Compiling ../../../../sparse_lu_ops.cpp in release mode
+   Compiling ../../../../sparse_lu_shared_cached.cpp in release mode
+   Generating csim.exe
+make[1]: Leaving directory '/home/huz/project/SpMM_TCAD/test/hls_lu_cached/hls/csim/build'
+shared sparse LU kernel: GETRF/GESSM/TSTRF
+GETRF residual=1.11462e-07 GESSM error=0 TSTRF error=0
+PASS shared GETRF/GESSM/TSTRF; SSSSM remains separate
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

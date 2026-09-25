@@ -1,0 +1,3 @@
+shared sparse LU kernel: GETRF/GESSM/TSTRF
+GETRF residual=1.11462e-07 GESSM error=0 TSTRF error=0
+PASS shared GETRF/GESSM/TSTRF; SSSSM remains separate

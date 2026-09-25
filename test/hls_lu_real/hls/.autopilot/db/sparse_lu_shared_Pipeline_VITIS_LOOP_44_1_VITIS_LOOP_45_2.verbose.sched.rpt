@@ -1,0 +1,254 @@
+
+
+================================================================
+== Vitis HLS Report for 'sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2'
+================================================================
+* Date:           Thu Sep 24 23:58:37 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_real
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.594 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval |      Pipeline     |
+    |   min   |   max   |    min    |    max   | min | max |        Type       |
+    +---------+---------+-----------+----------+-----+-----+-------------------+
+    |        3|     1026|  15.000 ns|  5.130 us|    0|    0|  loop pipeline stp|
+    +---------+---------+-----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                                   |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- VITIS_LOOP_44_1_VITIS_LOOP_45_2  |        1|     1024|         1|          1|          1|  1 ~ 1024|       yes|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.59>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%col = alloca i32 1" [sparse_lu_shared_cached.cpp:50->sparse_lu_shared_cached.cpp:422]   --->   Operation 4 'alloca' 'col' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%row = alloca i32 1" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 5 'alloca' 'row' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%indvar_flatten8 = alloca i32 1"   --->   Operation 6 'alloca' 'indvar_flatten8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %empty"   --->   Operation 7 'read' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%mul_ln43_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %mul_ln43"   --->   Operation 8 'read' 'mul_ln43_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.42ns)   --->   "%store_ln0 = store i11 0, i11 %indvar_flatten8"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 10 [1/1] (0.42ns)   --->   "%store_ln44 = store i7 0, i7 %row" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 10 'store' 'store_ln44' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 11 [1/1] (0.42ns)   --->   "%store_ln50 = store i7 0, i7 %col" [sparse_lu_shared_cached.cpp:50->sparse_lu_shared_cached.cpp:422]   --->   Operation 11 'store' 'store_ln50' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %VITIS_LOOP_48_3.i"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%indvar_flatten8_load = load i11 %indvar_flatten8" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 13 'load' 'indvar_flatten8_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.79ns)   --->   "%icmp_ln44 = icmp_eq  i11 %indvar_flatten8_load, i11 %mul_ln43_read" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 14 'icmp' 'icmp_ln44' <Predicate = true> <Delay = 0.79> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 1024, i64 0"   --->   Operation 15 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.79ns)   --->   "%add_ln44_1 = add i11 %indvar_flatten8_load, i11 1" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 16 'add' 'add_ln44_1' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln44 = br i1 %icmp_ln44, void %for.inc19.i, void %_ZL17clear_block_cachePA64_tPA64_fjj.exit.exitStub" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 17 'br' 'br_ln44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%col_load = load i7 %col" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 18 'load' 'col_load' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%row_load = load i7 %row" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 19 'load' 'row_load' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln44 = trunc i7 %col_load" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 20 'trunc' 'trunc_ln44' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.77ns)   --->   "%add_ln44 = add i7 %row_load, i7 1" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 21 'add' 'add_ln44' <Predicate = (!icmp_ln44)> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_44_1_VITIS_LOOP_45_2_str"   --->   Operation 22 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.77ns)   --->   "%icmp_ln45 = icmp_ult  i7 %col_load, i7 %tmp" [sparse_lu_shared_cached.cpp:45->sparse_lu_shared_cached.cpp:422]   --->   Operation 23 'icmp' 'icmp_ln45' <Predicate = (!icmp_ln44)> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.38ns)   --->   "%select_ln44 = select i1 %icmp_ln45, i6 %trunc_ln44, i6 0" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 24 'select' 'select_ln44' <Predicate = (!icmp_ln44)> <Delay = 0.38> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln44 = zext i6 %select_ln44" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 25 'zext' 'zext_ln44' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.36ns)   --->   "%select_ln44_1 = select i1 %icmp_ln45, i7 %row_load, i7 %add_ln44" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 26 'select' 'select_ln44_1' <Predicate = (!icmp_ln44)> <Delay = 0.36> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.36> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln44_1 = trunc i7 %select_ln44_1" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 27 'trunc' 'trunc_ln44_1' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specpipeline_ln47 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, i32 4294967295, void @empty_56" [sparse_lu_shared_cached.cpp:47->sparse_lu_shared_cached.cpp:422]   --->   Operation 28 'specpipeline' 'specpipeline_ln47' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%lshr_ln1 = partselect i4 @_ssdm_op_PartSelect.i4.i6.i32.i32, i6 %select_ln44, i32 2, i32 5" [sparse_lu_shared_cached.cpp:45->sparse_lu_shared_cached.cpp:422]   --->   Operation 29 'partselect' 'lshr_ln1' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_s = partselect i4 @_ssdm_op_PartSelect.i4.i7.i32.i32, i7 %select_ln44_1, i32 2, i32 5" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 30 'partselect' 'tmp_s' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_1 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i4.i4, i4 %tmp_s, i4 %lshr_ln1" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 31 'bitconcatenate' 'tmp_1' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln52 = zext i8 %tmp_1" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 32 'zext' 'zext_ln52' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%block_pos_addr = getelementptr i13 %block_pos, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 33 'getelementptr' 'block_pos_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%block_pos_1_addr = getelementptr i13 %block_pos_1, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 34 'getelementptr' 'block_pos_1_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%block_pos_2_addr = getelementptr i13 %block_pos_2, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 35 'getelementptr' 'block_pos_2_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%block_pos_3_addr = getelementptr i13 %block_pos_3, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 36 'getelementptr' 'block_pos_3_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%block_pos_4_addr = getelementptr i13 %block_pos_4, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 37 'getelementptr' 'block_pos_4_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%block_pos_5_addr = getelementptr i13 %block_pos_5, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 38 'getelementptr' 'block_pos_5_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%block_pos_6_addr = getelementptr i13 %block_pos_6, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 39 'getelementptr' 'block_pos_6_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%block_pos_7_addr = getelementptr i13 %block_pos_7, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 40 'getelementptr' 'block_pos_7_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%block_pos_8_addr = getelementptr i13 %block_pos_8, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 41 'getelementptr' 'block_pos_8_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%block_pos_9_addr = getelementptr i13 %block_pos_9, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 42 'getelementptr' 'block_pos_9_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%block_pos_10_addr = getelementptr i13 %block_pos_10, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 43 'getelementptr' 'block_pos_10_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%block_pos_11_addr = getelementptr i13 %block_pos_11, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 44 'getelementptr' 'block_pos_11_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%block_pos_12_addr = getelementptr i13 %block_pos_12, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 45 'getelementptr' 'block_pos_12_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%block_pos_13_addr = getelementptr i13 %block_pos_13, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 46 'getelementptr' 'block_pos_13_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%block_pos_14_addr = getelementptr i13 %block_pos_14, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 47 'getelementptr' 'block_pos_14_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%block_pos_15_addr = getelementptr i13 %block_pos_15, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 48 'getelementptr' 'block_pos_15_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%block_addr = getelementptr i32 %block_r, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 49 'getelementptr' 'block_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%block_1_addr = getelementptr i32 %block_1, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 50 'getelementptr' 'block_1_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%block_2_addr = getelementptr i32 %block_2, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 51 'getelementptr' 'block_2_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%block_3_addr = getelementptr i32 %block_3, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 52 'getelementptr' 'block_3_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%block_4_addr = getelementptr i32 %block_4, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 53 'getelementptr' 'block_4_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%block_5_addr = getelementptr i32 %block_5, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 54 'getelementptr' 'block_5_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%block_6_addr = getelementptr i32 %block_6, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 55 'getelementptr' 'block_6_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%block_7_addr = getelementptr i32 %block_7, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 56 'getelementptr' 'block_7_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%block_8_addr = getelementptr i32 %block_8, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 57 'getelementptr' 'block_8_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%block_9_addr = getelementptr i32 %block_9, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 58 'getelementptr' 'block_9_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%block_10_addr = getelementptr i32 %block_10, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 59 'getelementptr' 'block_10_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%block_11_addr = getelementptr i32 %block_11, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 60 'getelementptr' 'block_11_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%block_12_addr = getelementptr i32 %block_12, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 61 'getelementptr' 'block_12_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%block_13_addr = getelementptr i32 %block_13, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 62 'getelementptr' 'block_13_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%block_14_addr = getelementptr i32 %block_14, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 63 'getelementptr' 'block_14_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%block_15_addr = getelementptr i32 %block_15, i64 0, i64 %zext_ln52" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 64 'getelementptr' 'block_15_addr' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.54ns)   --->   "%switch_ln52 = switch i2 %trunc_ln44_1, void %arrayidx152.i1945.case.3, i2 0, void %arrayidx152.i1945.case.0, i2 1, void %arrayidx152.i1945.case.1, i2 2, void %arrayidx152.i1945.case.2" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 65 'switch' 'switch_ln52' <Predicate = (!icmp_ln44)> <Delay = 0.54>
+ST_1 : Operation 66 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_8_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 66 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 67 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_8_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 67 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.i1945.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 68 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2)> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_4_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 69 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 70 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_4_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 70 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.i1945.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 71 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 72 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 73 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 73 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.i1945.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 74 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0)> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_12_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 75 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 76 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_12_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 76 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.i1945.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 77 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3)> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i5 @_ssdm_op_PartSelect.i5.i6.i32.i32, i6 %select_ln44, i32 1, i32 5" [sparse_lu_shared_cached.cpp:50->sparse_lu_shared_cached.cpp:422]   --->   Operation 78 'partselect' 'tmp_2' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%or_ln1 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %tmp_2, i1 1" [sparse_lu_shared_cached.cpp:50->sparse_lu_shared_cached.cpp:422]   --->   Operation 79 'bitconcatenate' 'or_ln1' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%zext_ln51 = zext i6 %or_ln1" [sparse_lu_shared_cached.cpp:51->sparse_lu_shared_cached.cpp:422]   --->   Operation 80 'zext' 'zext_ln51' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.77ns)   --->   "%icmp_ln51 = icmp_ult  i7 %zext_ln51, i7 %tmp" [sparse_lu_shared_cached.cpp:51->sparse_lu_shared_cached.cpp:422]   --->   Operation 81 'icmp' 'icmp_ln51' <Predicate = (!icmp_ln44)> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51, void %for.inc.1.i27, void %if.then.1.i25" [sparse_lu_shared_cached.cpp:51->sparse_lu_shared_cached.cpp:422]   --->   Operation 82 'br' 'br_ln51' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.54ns)   --->   "%switch_ln52 = switch i2 %trunc_ln44_1, void %arrayidx152.1.i2451.case.3, i2 0, void %arrayidx152.1.i2451.case.0, i2 1, void %arrayidx152.1.i2451.case.1, i2 2, void %arrayidx152.1.i2451.case.2" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 83 'switch' 'switch_ln52' <Predicate = (!icmp_ln44 & icmp_ln51)> <Delay = 0.54>
+ST_1 : Operation 84 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_9_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 84 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2 & icmp_ln51)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 85 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_9_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 85 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2 & icmp_ln51)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.1.i2451.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 86 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2 & icmp_ln51)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_5_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 87 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1 & icmp_ln51)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 88 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_5_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 88 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1 & icmp_ln51)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.1.i2451.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 89 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1 & icmp_ln51)> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_1_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 90 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0 & icmp_ln51)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 91 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_1_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 91 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0 & icmp_ln51)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.1.i2451.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 92 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0 & icmp_ln51)> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_13_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 93 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3 & icmp_ln51)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 94 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_13_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 94 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3 & icmp_ln51)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.1.i2451.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 95 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3 & icmp_ln51)> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%br_ln54 = br void %for.inc.1.i27" [sparse_lu_shared_cached.cpp:54->sparse_lu_shared_cached.cpp:422]   --->   Operation 96 'br' 'br_ln54' <Predicate = (!icmp_ln44 & icmp_ln51)> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%trunc_ln50 = trunc i6 %select_ln44" [sparse_lu_shared_cached.cpp:50->sparse_lu_shared_cached.cpp:422]   --->   Operation 97 'trunc' 'trunc_ln50' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%or_ln50_1 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i4.i1.i1, i4 %lshr_ln1, i1 1, i1 %trunc_ln50" [sparse_lu_shared_cached.cpp:50->sparse_lu_shared_cached.cpp:422]   --->   Operation 98 'bitconcatenate' 'or_ln50_1' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%zext_ln51_1 = zext i6 %or_ln50_1" [sparse_lu_shared_cached.cpp:51->sparse_lu_shared_cached.cpp:422]   --->   Operation 99 'zext' 'zext_ln51_1' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.77ns)   --->   "%icmp_ln51_1 = icmp_ult  i7 %zext_ln51_1, i7 %tmp" [sparse_lu_shared_cached.cpp:51->sparse_lu_shared_cached.cpp:422]   --->   Operation 100 'icmp' 'icmp_ln51_1' <Predicate = (!icmp_ln44)> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51_1, void %for.inc.2.i32, void %if.then.2.i30" [sparse_lu_shared_cached.cpp:51->sparse_lu_shared_cached.cpp:422]   --->   Operation 101 'br' 'br_ln51' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.54ns)   --->   "%switch_ln52 = switch i2 %trunc_ln44_1, void %arrayidx152.2.i2949.case.3, i2 0, void %arrayidx152.2.i2949.case.0, i2 1, void %arrayidx152.2.i2949.case.1, i2 2, void %arrayidx152.2.i2949.case.2" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 102 'switch' 'switch_ln52' <Predicate = (!icmp_ln44 & icmp_ln51_1)> <Delay = 0.54>
+ST_1 : Operation 103 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_10_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 103 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2 & icmp_ln51_1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 104 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_10_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 104 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2 & icmp_ln51_1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.2.i2949.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 105 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2 & icmp_ln51_1)> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_6_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 106 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1 & icmp_ln51_1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 107 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_6_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 107 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1 & icmp_ln51_1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.2.i2949.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 108 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1 & icmp_ln51_1)> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_2_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 109 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0 & icmp_ln51_1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 110 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_2_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 110 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0 & icmp_ln51_1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.2.i2949.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 111 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0 & icmp_ln51_1)> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_14_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 112 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3 & icmp_ln51_1)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 113 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_14_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 113 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3 & icmp_ln51_1)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.2.i2949.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 114 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3 & icmp_ln51_1)> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%br_ln54 = br void %for.inc.2.i32" [sparse_lu_shared_cached.cpp:54->sparse_lu_shared_cached.cpp:422]   --->   Operation 115 'br' 'br_ln54' <Predicate = (!icmp_ln44 & icmp_ln51_1)> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%or_ln50_2 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i4.i2, i4 %lshr_ln1, i2 3" [sparse_lu_shared_cached.cpp:50->sparse_lu_shared_cached.cpp:422]   --->   Operation 116 'bitconcatenate' 'or_ln50_2' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%zext_ln51_2 = zext i6 %or_ln50_2" [sparse_lu_shared_cached.cpp:51->sparse_lu_shared_cached.cpp:422]   --->   Operation 117 'zext' 'zext_ln51_2' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.77ns)   --->   "%icmp_ln51_2 = icmp_ult  i7 %zext_ln51_2, i7 %tmp" [sparse_lu_shared_cached.cpp:51->sparse_lu_shared_cached.cpp:422]   --->   Operation 118 'icmp' 'icmp_ln51_2' <Predicate = (!icmp_ln44)> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51_2, void %for.inc.3.i38, void %if.then.3.i35" [sparse_lu_shared_cached.cpp:51->sparse_lu_shared_cached.cpp:422]   --->   Operation 119 'br' 'br_ln51' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.54ns)   --->   "%switch_ln52 = switch i2 %trunc_ln44_1, void %arrayidx152.3.i3447.case.3, i2 0, void %arrayidx152.3.i3447.case.0, i2 1, void %arrayidx152.3.i3447.case.1, i2 2, void %arrayidx152.3.i3447.case.2" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 120 'switch' 'switch_ln52' <Predicate = (!icmp_ln44 & icmp_ln51_2)> <Delay = 0.54>
+ST_1 : Operation 121 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_11_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 121 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2 & icmp_ln51_2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 122 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_11_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 122 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2 & icmp_ln51_2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.3.i3447.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 123 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 2 & icmp_ln51_2)> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_7_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 124 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1 & icmp_ln51_2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 125 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_7_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 125 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1 & icmp_ln51_2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.3.i3447.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 126 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 1 & icmp_ln51_2)> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_3_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 127 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0 & icmp_ln51_2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 128 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_3_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 128 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0 & icmp_ln51_2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.3.i3447.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 129 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 0 & icmp_ln51_2)> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln52 = store i13 8191, i8 %block_pos_15_addr" [sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422]   --->   Operation 130 'store' 'store_ln52' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3 & icmp_ln51_2)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 13> <Depth = 256> <RAM>
+ST_1 : Operation 131 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln53 = store i32 0, i8 %block_15_addr" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 131 'store' 'store_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3 & icmp_ln51_2)> <Delay = 1.23> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%br_ln53 = br void %arrayidx152.3.i3447.exit" [sparse_lu_shared_cached.cpp:53->sparse_lu_shared_cached.cpp:422]   --->   Operation 132 'br' 'br_ln53' <Predicate = (!icmp_ln44 & trunc_ln44_1 == 3 & icmp_ln51_2)> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%br_ln54 = br void %for.inc.3.i38" [sparse_lu_shared_cached.cpp:54->sparse_lu_shared_cached.cpp:422]   --->   Operation 133 'br' 'br_ln54' <Predicate = (!icmp_ln44 & icmp_ln51_2)> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.78ns)   --->   "%add_ln46 = add i7 %zext_ln44, i7 4" [sparse_lu_shared_cached.cpp:46->sparse_lu_shared_cached.cpp:422]   --->   Operation 134 'add' 'add_ln46' <Predicate = (!icmp_ln44)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 135 [1/1] (0.42ns)   --->   "%store_ln44 = store i11 %add_ln44_1, i11 %indvar_flatten8" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 135 'store' 'store_ln44' <Predicate = (!icmp_ln44)> <Delay = 0.42>
+ST_1 : Operation 136 [1/1] (0.42ns)   --->   "%store_ln44 = store i7 %select_ln44_1, i7 %row" [sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422]   --->   Operation 136 'store' 'store_ln44' <Predicate = (!icmp_ln44)> <Delay = 0.42>
+ST_1 : Operation 137 [1/1] (0.42ns)   --->   "%store_ln50 = store i7 %add_ln46, i7 %col" [sparse_lu_shared_cached.cpp:50->sparse_lu_shared_cached.cpp:422]   --->   Operation 137 'store' 'store_ln50' <Predicate = (!icmp_ln44)> <Delay = 0.42>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%br_ln45 = br void %VITIS_LOOP_48_3.i" [sparse_lu_shared_cached.cpp:45->sparse_lu_shared_cached.cpp:422]   --->   Operation 138 'br' 'br_ln45' <Predicate = (!icmp_ln44)> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 139 'ret' 'ret_ln0' <Predicate = (icmp_ln44)> <Delay = 0.42>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 3.594ns
+The critical path consists of the following:
+	'store' operation ('store_ln50', sparse_lu_shared_cached.cpp:50->sparse_lu_shared_cached.cpp:422) of constant 0 7 bit on local variable 'col', sparse_lu_shared_cached.cpp:50->sparse_lu_shared_cached.cpp:422 [42]  (0.427 ns)
+	'load' operation 7 bit ('col_load', sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422) on local variable 'col', sparse_lu_shared_cached.cpp:50->sparse_lu_shared_cached.cpp:422 [51]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln45', sparse_lu_shared_cached.cpp:45->sparse_lu_shared_cached.cpp:422) [56]  (0.773 ns)
+	'select' operation 6 bit ('select_ln44', sparse_lu_shared_cached.cpp:44->sparse_lu_shared_cached.cpp:422) [57]  (0.384 ns)
+	'icmp' operation 1 bit ('icmp_ln51_2', sparse_lu_shared_cached.cpp:51->sparse_lu_shared_cached.cpp:422) [170]  (0.773 ns)
+	'store' operation ('store_ln52', sparse_lu_shared_cached.cpp:52->sparse_lu_shared_cached.cpp:422) of constant 8191 13 bit on array 'block_pos_11' [175]  (1.237 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

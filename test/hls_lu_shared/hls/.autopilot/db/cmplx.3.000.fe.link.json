@@ -1,0 +1,143 @@
+{
+  "0": {
+    "basicblocks": 60,
+    "calls": "2 4 4 2 4 1 4 2 4 7 4 4 3 4",
+    "control_depth": 0,
+    "def_use_depth": 5,
+    "file": "sparse_lu_shared.cpp",
+    "fileloc": 110,
+    "instructions": 188,
+    "loads": {
+      "T": 16
+    },
+    "memory_accesses": 0,
+    "name": "sparse_lu_shared",
+    "stores": {
+      "T": 5
+    },
+    "total_instructions": 1430
+  },
+  "1": {
+    "basicblocks": 42,
+    "calls": "8 6 8",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "sparse_lu_ops.cpp",
+    "fileloc": 49,
+    "instructions": 121,
+    "loads": {
+      "L": 10
+    },
+    "memory_accesses": 0,
+    "name": "tstrf_fixed_csr",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 202
+  },
+  "2": {
+    "basicblocks": 15,
+    "calls": "",
+    "control_depth": 6,
+    "def_use_depth": 3,
+    "file": "sparse_lu_shared.cpp",
+    "fileloc": 16,
+    "instructions": 39,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 2,
+    "name": "valid_sorted_row",
+    "total_instructions": 39
+  },
+  "3": {
+    "basicblocks": 105,
+    "calls": "2 2 2 8 8 8 8 8 5 8 5 8 8",
+    "control_depth": 1,
+    "def_use_depth": 5,
+    "file": "sparse_lu_shared.cpp",
+    "fileloc": 29,
+    "instructions": 333,
+    "loads": {
+      "L": 34
+    },
+    "memory_accesses": 2,
+    "name": "shared_getrf",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 760
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "sparse_lu_shared.cpp",
+    "fileloc": 9,
+    "instructions": 3,
+    "memory_accesses": 0,
+    "name": "shared_fail",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 3
+  },
+  "5": {
+    "basicblocks": 4,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "sparse_lu_shared.cpp",
+    "fileloc": 4,
+    "instructions": 7,
+    "memory_accesses": 0,
+    "name": "shared_abs",
+    "total_instructions": 7
+  },
+  "6": {
+    "basicblocks": 4,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "sparse_lu_ops.cpp",
+    "fileloc": 3,
+    "instructions": 7,
+    "memory_accesses": 0,
+    "name": "lu_abs",
+    "total_instructions": 7
+  },
+  "7": {
+    "basicblocks": 38,
+    "calls": "8",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "sparse_lu_ops.cpp",
+    "fileloc": 19,
+    "instructions": 102,
+    "loads": {
+      "L": 9
+    },
+    "memory_accesses": 0,
+    "name": "gessm_fixed_csr",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 139
+  },
+  "8": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 3,
+    "file": "sparse_lu_ops.cpp",
+    "fileloc": 8,
+    "instructions": 37,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 2,
+    "name": "getrf_find_in_row",
+    "total_instructions": 37
+  }
+}

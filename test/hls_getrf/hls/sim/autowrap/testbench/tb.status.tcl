@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/huz/project/SpMM_TCAD/test/hls_getrf/hls/./sim/autowrap/testbench/sparse_getrf.cpp_pre.cpp.tb.cpp

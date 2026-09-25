@@ -1,0 +1,4985 @@
+{
+    "1": {
+        "name": "rschedule_access.98_Pipeline_VITIS_LOOP_87_3",
+        "file": "rcache.cpp",
+        "fileloc": "87",
+        "instructions": "27",
+        "total_instructions": "27",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "request_to_rbanks_Pipeline_VITIS_LOOP_251_1",
+        "file": "rcache.cpp",
+        "fileloc": "241",
+        "instructions": "168",
+        "total_instructions": "168",
+        "calls": "",
+        "basicblocks": "15",
+        "memory_accesses": "32",
+        "control_depth": "6",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "26"
+        },
+        "stores": {
+            "L": "26"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "request_merger.54_Pipeline_VITIS_LOOP_152_1",
+        "file": "vccache.cpp",
+        "fileloc": "147",
+        "instructions": "109",
+        "total_instructions": "109",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "30",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "12"
+        },
+        "stores": {
+            "L": "24"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "schedule_access.101_Pipeline_VITIS_LOOP_112_4",
+        "file": "vccache.cpp",
+        "fileloc": "92",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "10",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "distributer_mi.4_Pipeline_VITIS_LOOP_120_1",
+        "file": "core.cpp",
+        "fileloc": "118",
+        "instructions": "46",
+        "total_instructions": "46",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "8",
+        "control_depth": "7",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "collector_Pipeline_VITIS_LOOP_185_2",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "4",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "merge_4_to_1_vcrequest.27_Pipeline_VITIS_LOOP_214_1",
+        "file": "util.cpp",
+        "fileloc": "202",
+        "instructions": "256",
+        "total_instructions": "256",
+        "calls": "",
+        "basicblocks": "37",
+        "memory_accesses": "68",
+        "control_depth": "18",
+        "def_use_depth": "4",
+        "loads": {
+            "L": "14"
+        },
+        "stores": {
+            "L": "48"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "rcache.2",
+        "file": "rcache.cpp",
+        "fileloc": "286",
+        "instructions": "446",
+        "total_instructions": "553",
+        "calls": "68",
+        "basicblocks": "58",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "65"
+        },
+        "stores": {
+            "L": "47"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "merge_controller",
+        "file": "pe.cpp",
+        "fileloc": "96",
+        "instructions": "17",
+        "total_instructions": "17",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "2",
+        "control_depth": "1",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "merger",
+        "file": "pe.cpp",
+        "fileloc": "328",
+        "instructions": "11",
+        "total_instructions": "2477",
+        "calls": "9 45",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "11": {
+        "name": "request_merger.55_Pipeline_VITIS_LOOP_152_1",
+        "file": "vccache.cpp",
+        "fileloc": "147",
+        "instructions": "109",
+        "total_instructions": "109",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "30",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "12"
+        },
+        "stores": {
+            "L": "24"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
+        "name": "request_merger.62_Pipeline_VITIS_LOOP_152_1",
+        "file": "vccache.cpp",
+        "fileloc": "147",
+        "instructions": "109",
+        "total_instructions": "109",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "30",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "12"
+        },
+        "stores": {
+            "L": "24"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "13": {
+        "name": "schedule_access.105_Pipeline_VITIS_LOOP_112_4",
+        "file": "vccache.cpp",
+        "fileloc": "92",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "10",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "14": {
+        "name": "_merge_temp",
+        "file": "pe.cpp",
+        "fileloc": "110",
+        "instructions": "112",
+        "total_instructions": "112",
+        "calls": "",
+        "basicblocks": "13",
+        "memory_accesses": "35",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "13"
+        },
+        "stores": {
+            "L": "20"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "15": {
+        "name": "request_merger",
+        "file": "vccache.cpp",
+        "fileloc": "145",
+        "instructions": "28",
+        "total_instructions": "137",
+        "calls": "105",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "16": {
+        "name": "collector",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "30",
+        "total_instructions": "74",
+        "calls": "194",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "17": {
+        "name": "schedule_access.104_Pipeline_VITIS_LOOP_105_3",
+        "file": "vccache.cpp",
+        "fileloc": "105",
+        "instructions": "22",
+        "total_instructions": "22",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "18": {
+        "name": "A_element_filter_Pipeline_VITIS_LOOP_64_2",
+        "file": ".\/task_scheduler.h",
+        "fileloc": "64",
+        "instructions": "38",
+        "total_instructions": "38",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "5",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "19": {
+        "name": "rcache",
+        "file": "rcache.cpp",
+        "fileloc": "286",
+        "instructions": "446",
+        "total_instructions": "553",
+        "calls": "231",
+        "basicblocks": "58",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "65"
+        },
+        "stores": {
+            "L": "47"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "20": {
+        "name": "distributer_mi.6_Pipeline_VITIS_LOOP_120_1",
+        "file": "core.cpp",
+        "fileloc": "118",
+        "instructions": "46",
+        "total_instructions": "46",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "8",
+        "control_depth": "7",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "21": {
+        "name": "from_rcache_result_to_B_vcrequest",
+        "file": "util.cpp",
+        "fileloc": "152",
+        "instructions": "50",
+        "total_instructions": "50",
+        "calls": "",
+        "basicblocks": "13",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "22": {
+        "name": "merge_controller",
+        "file": "pe.cpp",
+        "fileloc": "96",
+        "instructions": "17",
+        "total_instructions": "17",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "2",
+        "control_depth": "1",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "23": {
+        "name": "rrequest_manager.84_Pipeline_VITIS_LOOP_40_1",
+        "file": "rcache.cpp",
+        "fileloc": "40",
+        "instructions": "39",
+        "total_instructions": "39",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "7",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "24": {
+        "name": "vcrequest_splitter.58_Pipeline_VITIS_LOOP_12_1",
+        "file": "vccache.cpp",
+        "fileloc": "8",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "11",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "25": {
+        "name": "schedule_access",
+        "file": "vccache.cpp",
+        "fileloc": "74",
+        "instructions": "106",
+        "total_instructions": "172",
+        "calls": "17 87",
+        "basicblocks": "17",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "26": {
+        "name": "ccache.30",
+        "file": "vccache.cpp",
+        "fileloc": "567",
+        "instructions": "734",
+        "total_instructions": "873",
+        "calls": "71",
+        "basicblocks": "113",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "85"
+        },
+        "stores": {
+            "L": "106"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "27": {
+        "name": "rcache.1",
+        "file": "rcache.cpp",
+        "fileloc": "286",
+        "instructions": "446",
+        "total_instructions": "553",
+        "calls": "238",
+        "basicblocks": "58",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "65"
+        },
+        "stores": {
+            "L": "47"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "28": {
+        "name": "schedule_access.102_Pipeline_VITIS_LOOP_112_4",
+        "file": "vccache.cpp",
+        "fileloc": "92",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "10",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "29": {
+        "name": "request_to_vcbanks.20_Pipeline_VITIS_LOOP_243_1",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "85",
+        "total_instructions": "85",
+        "calls": "",
+        "basicblocks": "11",
+        "memory_accesses": "14",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "10"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "30": {
+        "name": "rrequest_splitter",
+        "file": "rcache.cpp",
+        "fileloc": "4",
+        "instructions": "21",
+        "total_instructions": "69",
+        "calls": "99",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "5"
+        }
+    },
+    "31": {
+        "name": "ccache_Pipeline_VITIS_LOOP_617_1",
+        "file": "vccache.cpp",
+        "fileloc": "617",
+        "instructions": "139",
+        "total_instructions": "139",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "50",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "50"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "32": {
+        "name": "rrequest_manager.80_Pipeline_VITIS_LOOP_40_1",
+        "file": "rcache.cpp",
+        "fileloc": "40",
+        "instructions": "39",
+        "total_instructions": "39",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "7",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "33": {
+        "name": "generate_data_Pipeline_VITIS_LOOP_53_2",
+        "file": "core.cpp",
+        "fileloc": "49",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "6",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "34": {
+        "name": "request_manager",
+        "file": "vccache.cpp",
+        "fileloc": "43",
+        "instructions": "14",
+        "total_instructions": "62",
+        "calls": "94",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "35": {
+        "name": "vcrequest_manager",
+        "file": "vccache.cpp",
+        "fileloc": "199",
+        "instructions": "66",
+        "total_instructions": "1023",
+        "calls": "162 34 25 202 169 222 63 179 242",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "36": {
+        "name": "rcrequest_manager",
+        "file": "rcache.cpp",
+        "fileloc": "217",
+        "instructions": "31",
+        "total_instructions": "597",
+        "calls": "206 263 129 118 226",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "37": {
+        "name": "vcrequest_manager",
+        "file": "vccache.cpp",
+        "fileloc": "199",
+        "instructions": "66",
+        "total_instructions": "1023",
+        "calls": "141 114 130 196 104 156 120 86 38",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "38": {
+        "name": "collector",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "30",
+        "total_instructions": "74",
+        "calls": "132",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "39": {
+        "name": "merge_4_to_1_vcrequest",
+        "file": "util.cpp",
+        "fileloc": "193",
+        "instructions": "34",
+        "total_instructions": "290",
+        "calls": "75",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "40": {
+        "name": "rrequest_merger.77_Pipeline_VITIS_LOOP_125_1",
+        "file": "rcache.cpp",
+        "fileloc": "120",
+        "instructions": "221",
+        "total_instructions": "221",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "62",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "28"
+        },
+        "stores": {
+            "L": "56"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "41": {
+        "name": "schedule_access.100_Pipeline_VITIS_LOOP_112_4",
+        "file": "vccache.cpp",
+        "fileloc": "92",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "10",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "42": {
+        "name": "request_merger",
+        "file": "vccache.cpp",
+        "fileloc": "145",
+        "instructions": "28",
+        "total_instructions": "137",
+        "calls": "3",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "43": {
+        "name": "vcrequest_splitter_Pipeline_VITIS_LOOP_12_1",
+        "file": "vccache.cpp",
+        "fileloc": "8",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "11",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "44": {
+        "name": "collector.70_Pipeline_VITIS_LOOP_185_2",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "4",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "45": {
+        "name": "merge_two_sub",
+        "file": "pe.cpp",
+        "fileloc": "188",
+        "instructions": "193",
+        "total_instructions": "2449",
+        "calls": "139 139 139 139 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14",
+        "basicblocks": "47",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "11"
+        },
+        "stores": {
+            "L": "14"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "46": {
+        "name": "generate_data.91_Pipeline_VITIS_LOOP_53_2",
+        "file": "core.cpp",
+        "fileloc": "49",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "6",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "47": {
+        "name": "merge_4_to_1_vcrequest",
+        "file": "util.cpp",
+        "fileloc": "193",
+        "instructions": "34",
+        "total_instructions": "290",
+        "calls": "7",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "48": {
+        "name": "generate_data.92_Pipeline_VITIS_LOOP_53_2",
+        "file": "core.cpp",
+        "fileloc": "49",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "6",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "49": {
+        "name": "distributer_rresponse",
+        "file": "util.cpp",
+        "fileloc": "88",
+        "instructions": "21",
+        "total_instructions": "81",
+        "calls": "188",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "4"
+        }
+    },
+    "50": {
+        "name": "merge_4_to_1_mi",
+        "file": "core.cpp",
+        "fileloc": "74",
+        "instructions": "9",
+        "total_instructions": "84",
+        "calls": "215",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0"
+    },
+    "51": {
+        "name": "pe",
+        "file": "pe.cpp",
+        "fileloc": "3",
+        "instructions": "52",
+        "total_instructions": "122",
+        "calls": "221",
+        "basicblocks": "8",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "52": {
+        "name": "A_row_reader_Pipeline_VITIS_LOOP_13_1",
+        "file": ".\/task_scheduler.h",
+        "fileloc": "10",
+        "instructions": "30",
+        "total_instructions": "30",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "6",
+        "control_depth": "2",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "53": {
+        "name": "merge_2_to_1_vcresponse_Pipeline_VITIS_LOOP_715_1",
+        "file": "util.cpp",
+        "fileloc": "707",
+        "instructions": "78",
+        "total_instructions": "78",
+        "calls": "",
+        "basicblocks": "21",
+        "memory_accesses": "18",
+        "control_depth": "10",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "54": {
+        "name": "schedule_access.102_Pipeline_VITIS_LOOP_105_3",
+        "file": "vccache.cpp",
+        "fileloc": "105",
+        "instructions": "22",
+        "total_instructions": "22",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "55": {
+        "name": "rcache.3",
+        "file": "rcache.cpp",
+        "fileloc": "286",
+        "instructions": "446",
+        "total_instructions": "553",
+        "calls": "159",
+        "basicblocks": "58",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "65"
+        },
+        "stores": {
+            "L": "47"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "56": {
+        "name": "rrequest_manager",
+        "file": "rcache.cpp",
+        "fileloc": "35",
+        "instructions": "15",
+        "total_instructions": "54",
+        "calls": "23",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "4"
+        }
+    },
+    "57": {
+        "name": "merge_2_to_1_vcresponse",
+        "file": "util.cpp",
+        "fileloc": "701",
+        "instructions": "12",
+        "total_instructions": "90",
+        "calls": "76",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "2"
+        }
+    },
+    "58": {
+        "name": "schedule_access.101_Pipeline_VITIS_LOOP_105_3",
+        "file": "vccache.cpp",
+        "fileloc": "105",
+        "instructions": "22",
+        "total_instructions": "22",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "59": {
+        "name": "merge_4_to_1_mi",
+        "file": "core.cpp",
+        "fileloc": "74",
+        "instructions": "9",
+        "total_instructions": "84",
+        "calls": "92",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0"
+    },
+    "60": {
+        "name": "rrequest_merger",
+        "file": "rcache.cpp",
+        "fileloc": "118",
+        "instructions": "60",
+        "total_instructions": "281",
+        "calls": "40",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "26"
+        }
+    },
+    "61": {
+        "name": "rcollector",
+        "file": "rcache.cpp",
+        "fileloc": "147",
+        "instructions": "52",
+        "total_instructions": "52",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "62": {
+        "name": "vcrequest_splitter",
+        "file": "vccache.cpp",
+        "fileloc": "4",
+        "instructions": "23",
+        "total_instructions": "67",
+        "calls": "190",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "63": {
+        "name": "request_merger",
+        "file": "vccache.cpp",
+        "fileloc": "145",
+        "instructions": "28",
+        "total_instructions": "137",
+        "calls": "65",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "64": {
+        "name": "collector.71_Pipeline_VITIS_LOOP_185_2",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "4",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "65": {
+        "name": "request_merger_Pipeline_VITIS_LOOP_152_1",
+        "file": "vccache.cpp",
+        "fileloc": "147",
+        "instructions": "109",
+        "total_instructions": "109",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "30",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "12"
+        },
+        "stores": {
+            "L": "24"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "66": {
+        "name": "merge_two_sub",
+        "file": "pe.cpp",
+        "fileloc": "188",
+        "instructions": "193",
+        "total_instructions": "2449",
+        "calls": "139 139 139 139 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14",
+        "basicblocks": "47",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "11"
+        },
+        "stores": {
+            "L": "14"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "67": {
+        "name": "collector",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "30",
+        "total_instructions": "74",
+        "calls": "44",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "68": {
+        "name": "rcache.2_Pipeline_VITIS_LOOP_330_1",
+        "file": "rcache.cpp",
+        "fileloc": "330",
+        "instructions": "107",
+        "total_instructions": "107",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "34",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "34"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "69": {
+        "name": "collector",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "30",
+        "total_instructions": "74",
+        "calls": "64",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "70": {
+        "name": "request_to_vcbanks.25",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "37",
+        "total_instructions": "122",
+        "calls": "252",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "71": {
+        "name": "ccache.30_Pipeline_VITIS_LOOP_617_1",
+        "file": "vccache.cpp",
+        "fileloc": "617",
+        "instructions": "139",
+        "total_instructions": "139",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "50",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "50"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "72": {
+        "name": "final_merger",
+        "file": "util.cpp",
+        "fileloc": "756",
+        "instructions": "48",
+        "total_instructions": "199",
+        "calls": "266",
+        "basicblocks": "8",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loads": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "73": {
+        "name": "merge_two_sub",
+        "file": "pe.cpp",
+        "fileloc": "188",
+        "instructions": "193",
+        "total_instructions": "2449",
+        "calls": "139 139 139 139 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14",
+        "basicblocks": "47",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "11"
+        },
+        "stores": {
+            "L": "14"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "74": {
+        "name": "distributer_vcresponse",
+        "file": "util.cpp",
+        "fileloc": "278",
+        "instructions": "17",
+        "total_instructions": "71",
+        "calls": "236",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "2"
+        }
+    },
+    "75": {
+        "name": "merge_4_to_1_vcrequest.28_Pipeline_VITIS_LOOP_214_1",
+        "file": "util.cpp",
+        "fileloc": "202",
+        "instructions": "256",
+        "total_instructions": "256",
+        "calls": "",
+        "basicblocks": "37",
+        "memory_accesses": "68",
+        "control_depth": "18",
+        "def_use_depth": "4",
+        "loads": {
+            "L": "14"
+        },
+        "stores": {
+            "L": "48"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "76": {
+        "name": "merge_2_to_1_vcresponse.31_Pipeline_VITIS_LOOP_715_1",
+        "file": "util.cpp",
+        "fileloc": "707",
+        "instructions": "78",
+        "total_instructions": "78",
+        "calls": "",
+        "basicblocks": "21",
+        "memory_accesses": "18",
+        "control_depth": "10",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "77": {
+        "name": "merger",
+        "file": "pe.cpp",
+        "fileloc": "328",
+        "instructions": "11",
+        "total_instructions": "2477",
+        "calls": "184 73",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "78": {
+        "name": "rcollector",
+        "file": "rcache.cpp",
+        "fileloc": "147",
+        "instructions": "52",
+        "total_instructions": "52",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "79": {
+        "name": "A_element_distributor_Pipeline_VITIS_LOOP_96_1",
+        "file": ".\/task_scheduler.h",
+        "fileloc": "84",
+        "instructions": "184",
+        "total_instructions": "184",
+        "calls": "",
+        "basicblocks": "27",
+        "memory_accesses": "67",
+        "control_depth": "18",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "12"
+        },
+        "stores": {
+            "L": "34"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "80": {
+        "name": "schedule_access",
+        "file": "vccache.cpp",
+        "fileloc": "74",
+        "instructions": "106",
+        "total_instructions": "172",
+        "calls": "172 197",
+        "basicblocks": "17",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "81": {
+        "name": "rrequest_splitter.83_Pipeline_VITIS_LOOP_9_1",
+        "file": "rcache.cpp",
+        "fileloc": "9",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "10",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "spmm",
+        "file": "core.cpp",
+        "fileloc": "155",
+        "instructions": "1003",
+        "total_instructions": "30164",
+        "calls": "254 247 84 117 103 154 83 36 145 195 173 27 8 55 19 219 208 142 110 59 124 95 50 158 224 112 49 201 90 131 257 189 21 161 144 121 186 150 160 113 37 115 35 211 178 107 191 227 269 70 147 185 47 39 239 123 109 26 166 57 244 74 133 256 248 134 192 176 265 259 51 137 127 240 171 77 126 10 233 174 212 72 246",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "82": {
+        "name": "rschedule_access",
+        "file": "rcache.cpp",
+        "fileloc": "62",
+        "instructions": "70",
+        "total_instructions": "95",
+        "calls": "122",
+        "basicblocks": "14",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "6"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "83": {
+        "name": "rcrequest_manager",
+        "file": "rcache.cpp",
+        "fileloc": "217",
+        "instructions": "31",
+        "total_instructions": "597",
+        "calls": "205 214 199 60 168",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "84": {
+        "name": "prepare_b_rcsr",
+        "file": "rcache.cpp",
+        "fileloc": "197",
+        "instructions": "17",
+        "total_instructions": "78",
+        "calls": "135 180",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "1"
+        }
+    },
+    "85": {
+        "name": "rrequest_merger.81_Pipeline_VITIS_LOOP_125_1",
+        "file": "rcache.cpp",
+        "fileloc": "120",
+        "instructions": "221",
+        "total_instructions": "221",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "62",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "28"
+        },
+        "stores": {
+            "L": "56"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "86": {
+        "name": "collector",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "30",
+        "total_instructions": "74",
+        "calls": "98",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "87": {
+        "name": "schedule_access.104_Pipeline_VITIS_LOOP_112_4",
+        "file": "vccache.cpp",
+        "fileloc": "92",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "10",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "88": {
+        "name": "pe.35_Pipeline_VITIS_LOOP_35_2",
+        "file": "pe.cpp",
+        "fileloc": "3",
+        "instructions": "70",
+        "total_instructions": "70",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "7",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "89": {
+        "name": "rrequest_splitter.75_Pipeline_VITIS_LOOP_9_1",
+        "file": "rcache.cpp",
+        "fileloc": "9",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "10",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "90": {
+        "name": "merge_4_to_1_rresponse",
+        "file": "util.cpp",
+        "fileloc": "659",
+        "instructions": "79",
+        "total_instructions": "79",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "20",
+        "control_depth": "6",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "91": {
+        "name": "request_manager",
+        "file": "vccache.cpp",
+        "fileloc": "43",
+        "instructions": "14",
+        "total_instructions": "62",
+        "calls": "209",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "92": {
+        "name": "merge_4_to_1_mi.7_Pipeline_VITIS_LOOP_86_1",
+        "file": "core.cpp",
+        "fileloc": "79",
+        "instructions": "75",
+        "total_instructions": "75",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "20",
+        "control_depth": "6",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "93": {
+        "name": "rrequest_splitter",
+        "file": "rcache.cpp",
+        "fileloc": "4",
+        "instructions": "21",
+        "total_instructions": "69",
+        "calls": "81",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "5"
+        }
+    },
+    "94": {
+        "name": "request_manager.72_Pipeline_VITIS_LOOP_48_1",
+        "file": "vccache.cpp",
+        "fileloc": "45",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "6",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "95": {
+        "name": "merge_4_to_1_mi",
+        "file": "core.cpp",
+        "fileloc": "74",
+        "instructions": "9",
+        "total_instructions": "84",
+        "calls": "136",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0"
+    },
+    "96": {
+        "name": "collector.56_Pipeline_VITIS_LOOP_185_2",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "4",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "97": {
+        "name": "merge_4_to_1_vcrequest_Pipeline_VITIS_LOOP_214_1",
+        "file": "util.cpp",
+        "fileloc": "202",
+        "instructions": "256",
+        "total_instructions": "256",
+        "calls": "",
+        "basicblocks": "37",
+        "memory_accesses": "68",
+        "control_depth": "18",
+        "def_use_depth": "4",
+        "loads": {
+            "L": "14"
+        },
+        "stores": {
+            "L": "48"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "98": {
+        "name": "collector.63_Pipeline_VITIS_LOOP_185_2",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "4",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "99": {
+        "name": "rrequest_splitter_Pipeline_VITIS_LOOP_9_1",
+        "file": "rcache.cpp",
+        "fileloc": "9",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "10",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "100": {
+        "name": "request_merger.61_Pipeline_VITIS_LOOP_152_1",
+        "file": "vccache.cpp",
+        "fileloc": "147",
+        "instructions": "109",
+        "total_instructions": "109",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "30",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "12"
+        },
+        "stores": {
+            "L": "24"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "101": {
+        "name": "pe.36_Pipeline_VITIS_LOOP_35_2",
+        "file": "pe.cpp",
+        "fileloc": "3",
+        "instructions": "70",
+        "total_instructions": "70",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "7",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "102": {
+        "name": "merge_two_sub",
+        "file": "pe.cpp",
+        "fileloc": "188",
+        "instructions": "193",
+        "total_instructions": "2449",
+        "calls": "139 139 139 139 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14",
+        "basicblocks": "47",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "11"
+        },
+        "stores": {
+            "L": "14"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "103": {
+        "name": "A_element_distributor",
+        "file": "task_scheduler.h",
+        "fileloc": "84",
+        "instructions": "57",
+        "total_instructions": "241",
+        "calls": "79",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "5"
+        }
+    },
+    "104": {
+        "name": "schedule_access",
+        "file": "vccache.cpp",
+        "fileloc": "74",
+        "instructions": "106",
+        "total_instructions": "172",
+        "calls": "58 4",
+        "basicblocks": "17",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "105": {
+        "name": "request_merger.68_Pipeline_VITIS_LOOP_152_1",
+        "file": "vccache.cpp",
+        "fileloc": "147",
+        "instructions": "109",
+        "total_instructions": "109",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "30",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "12"
+        },
+        "stores": {
+            "L": "24"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "106": {
+        "name": "merge_controller",
+        "file": "pe.cpp",
+        "fileloc": "96",
+        "instructions": "17",
+        "total_instructions": "17",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "2",
+        "control_depth": "1",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "107": {
+        "name": "request_to_vcbanks.21",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "37",
+        "total_instructions": "122",
+        "calls": "207",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "108": {
+        "name": "schedule_access.100_Pipeline_VITIS_LOOP_105_3",
+        "file": "vccache.cpp",
+        "fileloc": "105",
+        "instructions": "22",
+        "total_instructions": "22",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "109": {
+        "name": "vcache",
+        "file": "vccache.cpp",
+        "fileloc": "276",
+        "instructions": "734",
+        "total_instructions": "873",
+        "calls": "151",
+        "basicblocks": "113",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "85"
+        },
+        "stores": {
+            "L": "106"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "110": {
+        "name": "distributer_mi",
+        "file": "core.cpp",
+        "fileloc": "116",
+        "instructions": "17",
+        "total_instructions": "63",
+        "calls": "128",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "2"
+        }
+    },
+    "111": {
+        "name": "request_manager_Pipeline_VITIS_LOOP_48_1",
+        "file": "vccache.cpp",
+        "fileloc": "45",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "6",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "112": {
+        "name": "distributer_rresponse",
+        "file": "util.cpp",
+        "fileloc": "88",
+        "instructions": "21",
+        "total_instructions": "81",
+        "calls": "264",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "4"
+        }
+    },
+    "113": {
+        "name": "vcrequest_manager",
+        "file": "vccache.cpp",
+        "fileloc": "199",
+        "instructions": "66",
+        "total_instructions": "1023",
+        "calls": "243 220 181 258 152 42 138 250 16",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "114": {
+        "name": "request_manager",
+        "file": "vccache.cpp",
+        "fileloc": "43",
+        "instructions": "14",
+        "total_instructions": "62",
+        "calls": "177",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "115": {
+        "name": "vcrequest_manager",
+        "file": "vccache.cpp",
+        "fileloc": "199",
+        "instructions": "66",
+        "total_instructions": "1023",
+        "calls": "62 165 153 91 80 15 155 67 69",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "116": {
+        "name": "merge_2_to_1_vcresult.33_Pipeline_VITIS_LOOP_533_1",
+        "file": "util.cpp",
+        "fileloc": "525",
+        "instructions": "88",
+        "total_instructions": "88",
+        "calls": "",
+        "basicblocks": "21",
+        "memory_accesses": "20",
+        "control_depth": "10",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "117": {
+        "name": "A_element_filter",
+        "file": "task_scheduler.h",
+        "fileloc": "56",
+        "instructions": "41",
+        "total_instructions": "79",
+        "calls": "18",
+        "basicblocks": "4",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "118": {
+        "name": "rrequest_merger",
+        "file": "rcache.cpp",
+        "fileloc": "118",
+        "instructions": "60",
+        "total_instructions": "281",
+        "calls": "85",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "26"
+        }
+    },
+    "119": {
+        "name": "request_to_vcbanks.23_Pipeline_VITIS_LOOP_243_1",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "85",
+        "total_instructions": "85",
+        "calls": "",
+        "basicblocks": "11",
+        "memory_accesses": "14",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "10"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "120": {
+        "name": "request_merger",
+        "file": "vccache.cpp",
+        "fileloc": "145",
+        "instructions": "28",
+        "total_instructions": "137",
+        "calls": "12",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "121": {
+        "name": "generate_data",
+        "file": "core.cpp",
+        "fileloc": "41",
+        "instructions": "52",
+        "total_instructions": "93",
+        "calls": "33",
+        "basicblocks": "7",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "122": {
+        "name": "rschedule_access_Pipeline_VITIS_LOOP_87_3",
+        "file": "rcache.cpp",
+        "fileloc": "87",
+        "instructions": "25",
+        "total_instructions": "25",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "123": {
+        "name": "vcache.29",
+        "file": "vccache.cpp",
+        "fileloc": "276",
+        "instructions": "734",
+        "total_instructions": "873",
+        "calls": "175",
+        "basicblocks": "113",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "85"
+        },
+        "stores": {
+            "L": "106"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "124": {
+        "name": "merge_4_to_1_mi",
+        "file": "core.cpp",
+        "fileloc": "74",
+        "instructions": "9",
+        "total_instructions": "84",
+        "calls": "213",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0"
+    },
+    "125": {
+        "name": "distributer_rresponse.11_Pipeline_VITIS_LOOP_92_1",
+        "file": "util.cpp",
+        "fileloc": "90",
+        "instructions": "60",
+        "total_instructions": "60",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "10",
+        "control_depth": "7",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "126": {
+        "name": "merger",
+        "file": "pe.cpp",
+        "fileloc": "328",
+        "instructions": "11",
+        "total_instructions": "2477",
+        "calls": "22 102",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "127": {
+        "name": "convert_pblock_to_mergeitem",
+        "file": "util.cpp",
+        "fileloc": "900",
+        "instructions": "22",
+        "total_instructions": "48",
+        "calls": "182",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "128": {
+        "name": "distributer_mi_Pipeline_VITIS_LOOP_120_1",
+        "file": "core.cpp",
+        "fileloc": "118",
+        "instructions": "46",
+        "total_instructions": "46",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "8",
+        "control_depth": "7",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "129": {
+        "name": "rschedule_access",
+        "file": "rcache.cpp",
+        "fileloc": "62",
+        "instructions": "83",
+        "total_instructions": "110",
+        "calls": "146",
+        "basicblocks": "14",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "6"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "130": {
+        "name": "schedule_access",
+        "file": "vccache.cpp",
+        "fileloc": "74",
+        "instructions": "106",
+        "total_instructions": "172",
+        "calls": "108 41",
+        "basicblocks": "17",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "131": {
+        "name": "merge_4_to_1_rresponse",
+        "file": "util.cpp",
+        "fileloc": "659",
+        "instructions": "79",
+        "total_instructions": "79",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "20",
+        "control_depth": "6",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "132": {
+        "name": "collector.64_Pipeline_VITIS_LOOP_185_2",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "4",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "133": {
+        "name": "distributer_vcresponse",
+        "file": "util.cpp",
+        "fileloc": "278",
+        "instructions": "17",
+        "total_instructions": "71",
+        "calls": "157",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "2"
+        }
+    },
+    "134": {
+        "name": "distributer_vcresult",
+        "file": "util.cpp",
+        "fileloc": "345",
+        "instructions": "31",
+        "total_instructions": "31",
+        "calls": "",
+        "basicblocks": "14",
+        "memory_accesses": "6",
+        "control_depth": "6",
+        "def_use_depth": "1",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "135": {
+        "name": "prepare_b_rcsr_Pipeline_VITIS_LOOP_199_1",
+        "file": "rcache.cpp",
+        "fileloc": "199",
+        "instructions": "21",
+        "total_instructions": "21",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "136": {
+        "name": "merge_4_to_1_mi.9_Pipeline_VITIS_LOOP_86_1",
+        "file": "core.cpp",
+        "fileloc": "79",
+        "instructions": "75",
+        "total_instructions": "75",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "20",
+        "control_depth": "6",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "137": {
+        "name": "convert_pblock_to_mergeitem",
+        "file": "util.cpp",
+        "fileloc": "900",
+        "instructions": "22",
+        "total_instructions": "48",
+        "calls": "210",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "138": {
+        "name": "request_merger",
+        "file": "vccache.cpp",
+        "fileloc": "145",
+        "instructions": "28",
+        "total_instructions": "137",
+        "calls": "11",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "139": {
+        "name": "flush_three",
+        "file": "pe.cpp",
+        "fileloc": "167",
+        "instructions": "144",
+        "total_instructions": "144",
+        "calls": "",
+        "basicblocks": "13",
+        "memory_accesses": "37",
+        "control_depth": "2",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "15"
+        },
+        "stores": {
+            "L": "30"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "140": {
+        "name": "request_to_vcbanks.22_Pipeline_VITIS_LOOP_243_1",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "85",
+        "total_instructions": "85",
+        "calls": "",
+        "basicblocks": "11",
+        "memory_accesses": "14",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "10"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "141": {
+        "name": "vcrequest_splitter",
+        "file": "vccache.cpp",
+        "fileloc": "4",
+        "instructions": "23",
+        "total_instructions": "67",
+        "calls": "24",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "142": {
+        "name": "distributer_mi",
+        "file": "core.cpp",
+        "fileloc": "116",
+        "instructions": "17",
+        "total_instructions": "63",
+        "calls": "20",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "2"
+        }
+    },
+    "143": {
+        "name": "schedule_access.99_Pipeline_VITIS_LOOP_112_4",
+        "file": "vccache.cpp",
+        "fileloc": "92",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "10",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "144": {
+        "name": "from_rcache_result_to_B_vcrequest",
+        "file": "util.cpp",
+        "fileloc": "152",
+        "instructions": "50",
+        "total_instructions": "50",
+        "calls": "",
+        "basicblocks": "13",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "145": {
+        "name": "rcrequest_manager",
+        "file": "rcache.cpp",
+        "fileloc": "217",
+        "instructions": "31",
+        "total_instructions": "597",
+        "calls": "93 56 234 187 61",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "146": {
+        "name": "rschedule_access.97_Pipeline_VITIS_LOOP_87_3",
+        "file": "rcache.cpp",
+        "fileloc": "87",
+        "instructions": "27",
+        "total_instructions": "27",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "147": {
+        "name": "request_to_vcbanks",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "37",
+        "total_instructions": "122",
+        "calls": "267",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "148": {
+        "name": "schedule_access_Pipeline_VITIS_LOOP_112_4",
+        "file": "vccache.cpp",
+        "fileloc": "92",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "10",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "149": {
+        "name": "convert_pblock_to_mergeitem.40_Pipeline_VITIS_LOOP_910_2",
+        "file": "util.cpp",
+        "fileloc": "910",
+        "instructions": "26",
+        "total_instructions": "26",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "3",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "150": {
+        "name": "generate_data",
+        "file": "core.cpp",
+        "fileloc": "41",
+        "instructions": "52",
+        "total_instructions": "93",
+        "calls": "46",
+        "basicblocks": "7",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "151": {
+        "name": "vcache_Pipeline_VITIS_LOOP_326_1",
+        "file": "vccache.cpp",
+        "fileloc": "326",
+        "instructions": "139",
+        "total_instructions": "139",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "50",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "50"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "152": {
+        "name": "schedule_access",
+        "file": "vccache.cpp",
+        "fileloc": "74",
+        "instructions": "106",
+        "total_instructions": "172",
+        "calls": "268 143",
+        "basicblocks": "17",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "153": {
+        "name": "schedule_access",
+        "file": "vccache.cpp",
+        "fileloc": "74",
+        "instructions": "106",
+        "total_instructions": "172",
+        "calls": "54 28",
+        "basicblocks": "17",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "154": {
+        "name": "rcrequest_manager",
+        "file": "rcache.cpp",
+        "fileloc": "217",
+        "instructions": "29",
+        "total_instructions": "580",
+        "calls": "30 218 82 203 78",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "155": {
+        "name": "request_merger",
+        "file": "vccache.cpp",
+        "fileloc": "145",
+        "instructions": "28",
+        "total_instructions": "137",
+        "calls": "223",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "156": {
+        "name": "request_merger",
+        "file": "vccache.cpp",
+        "fileloc": "145",
+        "instructions": "28",
+        "total_instructions": "137",
+        "calls": "100",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "157": {
+        "name": "distributer_vcresponse_Pipeline_VITIS_LOOP_282_1",
+        "file": "util.cpp",
+        "fileloc": "280",
+        "instructions": "54",
+        "total_instructions": "54",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "8",
+        "control_depth": "7",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "158": {
+        "name": "distributer_rresponse",
+        "file": "util.cpp",
+        "fileloc": "88",
+        "instructions": "21",
+        "total_instructions": "81",
+        "calls": "229",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "4"
+        }
+    },
+    "159": {
+        "name": "rcache.3_Pipeline_VITIS_LOOP_330_1",
+        "file": "rcache.cpp",
+        "fileloc": "330",
+        "instructions": "107",
+        "total_instructions": "107",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "34",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "34"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "160": {
+        "name": "generate_data",
+        "file": "core.cpp",
+        "fileloc": "41",
+        "instructions": "52",
+        "total_instructions": "93",
+        "calls": "48",
+        "basicblocks": "7",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "161": {
+        "name": "from_rcache_result_to_B_vcrequest",
+        "file": "util.cpp",
+        "fileloc": "152",
+        "instructions": "50",
+        "total_instructions": "50",
+        "calls": "",
+        "basicblocks": "13",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "162": {
+        "name": "vcrequest_splitter",
+        "file": "vccache.cpp",
+        "fileloc": "4",
+        "instructions": "23",
+        "total_instructions": "67",
+        "calls": "43",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "163": {
+        "name": "request_manager.60_Pipeline_VITIS_LOOP_48_1",
+        "file": "vccache.cpp",
+        "fileloc": "45",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "6",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "164": {
+        "name": "schedule_access_Pipeline_VITIS_LOOP_105_3",
+        "file": "vccache.cpp",
+        "fileloc": "105",
+        "instructions": "22",
+        "total_instructions": "22",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "165": {
+        "name": "request_manager",
+        "file": "vccache.cpp",
+        "fileloc": "43",
+        "instructions": "14",
+        "total_instructions": "62",
+        "calls": "260",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "166": {
+        "name": "ccache",
+        "file": "vccache.cpp",
+        "fileloc": "567",
+        "instructions": "734",
+        "total_instructions": "873",
+        "calls": "31",
+        "basicblocks": "113",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "85"
+        },
+        "stores": {
+            "L": "106"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "167": {
+        "name": "convert_pblock_to_mergeitem_Pipeline_VITIS_LOOP_910_2",
+        "file": "util.cpp",
+        "fileloc": "910",
+        "instructions": "26",
+        "total_instructions": "26",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "3",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "168": {
+        "name": "rcollector",
+        "file": "rcache.cpp",
+        "fileloc": "147",
+        "instructions": "52",
+        "total_instructions": "52",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "169": {
+        "name": "schedule_access",
+        "file": "vccache.cpp",
+        "fileloc": "74",
+        "instructions": "106",
+        "total_instructions": "172",
+        "calls": "216 13",
+        "basicblocks": "17",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "170": {
+        "name": "rschedule_access.96_Pipeline_VITIS_LOOP_87_3",
+        "file": "rcache.cpp",
+        "fileloc": "87",
+        "instructions": "27",
+        "total_instructions": "27",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "171": {
+        "name": "convert_pblock_to_mergeitem",
+        "file": "util.cpp",
+        "fileloc": "900",
+        "instructions": "22",
+        "total_instructions": "48",
+        "calls": "167",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "172": {
+        "name": "schedule_access.103_Pipeline_VITIS_LOOP_105_3",
+        "file": "vccache.cpp",
+        "fileloc": "105",
+        "instructions": "22",
+        "total_instructions": "22",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "173": {
+        "name": "request_to_rbanks",
+        "file": "rcache.cpp",
+        "fileloc": "241",
+        "instructions": "76",
+        "total_instructions": "244",
+        "calls": "2",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "26"
+        }
+    },
+    "174": {
+        "name": "sub_final_merger",
+        "file": "util.cpp",
+        "fileloc": "829",
+        "instructions": "42",
+        "total_instructions": "180",
+        "calls": "228",
+        "basicblocks": "8",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loads": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "175": {
+        "name": "vcache.29_Pipeline_VITIS_LOOP_326_1",
+        "file": "vccache.cpp",
+        "fileloc": "326",
+        "instructions": "139",
+        "total_instructions": "139",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "50",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "50"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "176": {
+        "name": "pe",
+        "file": "pe.cpp",
+        "fileloc": "3",
+        "instructions": "52",
+        "total_instructions": "122",
+        "calls": "88",
+        "basicblocks": "8",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "177": {
+        "name": "request_manager.59_Pipeline_VITIS_LOOP_48_1",
+        "file": "vccache.cpp",
+        "fileloc": "45",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "6",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "178": {
+        "name": "request_to_vcbanks.20",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "37",
+        "total_instructions": "122",
+        "calls": "29",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "179": {
+        "name": "collector",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "30",
+        "total_instructions": "74",
+        "calls": "262",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "180": {
+        "name": "prepare_b_rcsr_Pipeline_VITIS_LOOP_207_2",
+        "file": "rcache.cpp",
+        "fileloc": "203",
+        "instructions": "40",
+        "total_instructions": "40",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "6",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "181": {
+        "name": "schedule_access",
+        "file": "vccache.cpp",
+        "fileloc": "74",
+        "instructions": "106",
+        "total_instructions": "172",
+        "calls": "164 148",
+        "basicblocks": "17",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "182": {
+        "name": "convert_pblock_to_mergeitem.39_Pipeline_VITIS_LOOP_910_2",
+        "file": "util.cpp",
+        "fileloc": "910",
+        "instructions": "26",
+        "total_instructions": "26",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "3",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "183": {
+        "name": "merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1",
+        "file": "util.cpp",
+        "fileloc": "12",
+        "instructions": "428",
+        "total_instructions": "428",
+        "calls": "",
+        "basicblocks": "37",
+        "memory_accesses": "132",
+        "control_depth": "18",
+        "def_use_depth": "4",
+        "loads": {
+            "L": "30"
+        },
+        "stores": {
+            "L": "112"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "184": {
+        "name": "merge_controller",
+        "file": "pe.cpp",
+        "fileloc": "96",
+        "instructions": "17",
+        "total_instructions": "17",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "2",
+        "control_depth": "1",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "185": {
+        "name": "merge_4_to_1_vcrequest",
+        "file": "util.cpp",
+        "fileloc": "193",
+        "instructions": "34",
+        "total_instructions": "290",
+        "calls": "193",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "186": {
+        "name": "generate_data",
+        "file": "core.cpp",
+        "fileloc": "41",
+        "instructions": "52",
+        "total_instructions": "93",
+        "calls": "249",
+        "basicblocks": "7",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "187": {
+        "name": "rrequest_merger",
+        "file": "rcache.cpp",
+        "fileloc": "118",
+        "instructions": "60",
+        "total_instructions": "281",
+        "calls": "225",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "26"
+        }
+    },
+    "188": {
+        "name": "distributer_rresponse_Pipeline_VITIS_LOOP_92_1",
+        "file": "util.cpp",
+        "fileloc": "90",
+        "instructions": "60",
+        "total_instructions": "60",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "10",
+        "control_depth": "7",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "189": {
+        "name": "from_rcache_result_to_B_vcrequest",
+        "file": "util.cpp",
+        "fileloc": "152",
+        "instructions": "50",
+        "total_instructions": "50",
+        "calls": "",
+        "basicblocks": "13",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "190": {
+        "name": "vcrequest_splitter.65_Pipeline_VITIS_LOOP_12_1",
+        "file": "vccache.cpp",
+        "fileloc": "8",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "11",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "191": {
+        "name": "request_to_vcbanks.22",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "37",
+        "total_instructions": "122",
+        "calls": "140",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "192": {
+        "name": "distributer_vcresult",
+        "file": "util.cpp",
+        "fileloc": "345",
+        "instructions": "31",
+        "total_instructions": "31",
+        "calls": "",
+        "basicblocks": "14",
+        "memory_accesses": "6",
+        "control_depth": "6",
+        "def_use_depth": "1",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "193": {
+        "name": "merge_4_to_1_vcrequest.26_Pipeline_VITIS_LOOP_214_1",
+        "file": "util.cpp",
+        "fileloc": "202",
+        "instructions": "256",
+        "total_instructions": "256",
+        "calls": "",
+        "basicblocks": "37",
+        "memory_accesses": "68",
+        "control_depth": "18",
+        "def_use_depth": "4",
+        "loads": {
+            "L": "14"
+        },
+        "stores": {
+            "L": "48"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "194": {
+        "name": "collector.57_Pipeline_VITIS_LOOP_185_2",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "4",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "195": {
+        "name": "merge_4_to_1_rrequest",
+        "file": "util.cpp",
+        "fileloc": "4",
+        "instructions": "62",
+        "total_instructions": "490",
+        "calls": "183",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "26"
+        }
+    },
+    "196": {
+        "name": "request_manager",
+        "file": "vccache.cpp",
+        "fileloc": "43",
+        "instructions": "14",
+        "total_instructions": "62",
+        "calls": "163",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "197": {
+        "name": "schedule_access.103_Pipeline_VITIS_LOOP_112_4",
+        "file": "vccache.cpp",
+        "fileloc": "92",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "10",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "7"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "198": {
+        "name": "rrequest_manager_Pipeline_VITIS_LOOP_40_1",
+        "file": "rcache.cpp",
+        "fileloc": "40",
+        "instructions": "39",
+        "total_instructions": "39",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "7",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "199": {
+        "name": "rschedule_access",
+        "file": "rcache.cpp",
+        "fileloc": "62",
+        "instructions": "83",
+        "total_instructions": "110",
+        "calls": "170",
+        "basicblocks": "14",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "6"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "200": {
+        "name": "vcrequest_splitter.51_Pipeline_VITIS_LOOP_12_1",
+        "file": "vccache.cpp",
+        "fileloc": "8",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "11",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "201": {
+        "name": "merge_4_to_1_rresponse",
+        "file": "util.cpp",
+        "fileloc": "659",
+        "instructions": "79",
+        "total_instructions": "79",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "20",
+        "control_depth": "6",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "202": {
+        "name": "request_manager",
+        "file": "vccache.cpp",
+        "fileloc": "43",
+        "instructions": "14",
+        "total_instructions": "62",
+        "calls": "111",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "203": {
+        "name": "rrequest_merger",
+        "file": "rcache.cpp",
+        "fileloc": "118",
+        "instructions": "60",
+        "total_instructions": "281",
+        "calls": "261",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "26"
+        }
+    },
+    "204": {
+        "name": "rrequest_splitter.79_Pipeline_VITIS_LOOP_9_1",
+        "file": "rcache.cpp",
+        "fileloc": "9",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "10",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "205": {
+        "name": "rrequest_splitter",
+        "file": "rcache.cpp",
+        "fileloc": "4",
+        "instructions": "21",
+        "total_instructions": "69",
+        "calls": "89",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "5"
+        }
+    },
+    "206": {
+        "name": "rrequest_splitter",
+        "file": "rcache.cpp",
+        "fileloc": "4",
+        "instructions": "21",
+        "total_instructions": "69",
+        "calls": "204",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "5"
+        }
+    },
+    "207": {
+        "name": "request_to_vcbanks.21_Pipeline_VITIS_LOOP_243_1",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "85",
+        "total_instructions": "85",
+        "calls": "",
+        "basicblocks": "11",
+        "memory_accesses": "14",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "10"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "208": {
+        "name": "distributer_mi",
+        "file": "core.cpp",
+        "fileloc": "116",
+        "instructions": "17",
+        "total_instructions": "63",
+        "calls": "255",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "2"
+        }
+    },
+    "209": {
+        "name": "request_manager.67_Pipeline_VITIS_LOOP_48_1",
+        "file": "vccache.cpp",
+        "fileloc": "45",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "6",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "210": {
+        "name": "convert_pblock_to_mergeitem.38_Pipeline_VITIS_LOOP_910_2",
+        "file": "util.cpp",
+        "fileloc": "910",
+        "instructions": "26",
+        "total_instructions": "26",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "3",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "211": {
+        "name": "request_to_vcbanks.19",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "41",
+        "total_instructions": "126",
+        "calls": "235",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "212": {
+        "name": "sub_final_merger",
+        "file": "util.cpp",
+        "fileloc": "829",
+        "instructions": "42",
+        "total_instructions": "180",
+        "calls": "245",
+        "basicblocks": "8",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loads": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "213": {
+        "name": "merge_4_to_1_mi.8_Pipeline_VITIS_LOOP_86_1",
+        "file": "core.cpp",
+        "fileloc": "79",
+        "instructions": "75",
+        "total_instructions": "75",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "20",
+        "control_depth": "6",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "214": {
+        "name": "rrequest_manager",
+        "file": "rcache.cpp",
+        "fileloc": "35",
+        "instructions": "15",
+        "total_instructions": "54",
+        "calls": "253",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "4"
+        }
+    },
+    "215": {
+        "name": "merge_4_to_1_mi_Pipeline_VITIS_LOOP_86_1",
+        "file": "core.cpp",
+        "fileloc": "79",
+        "instructions": "75",
+        "total_instructions": "75",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "20",
+        "control_depth": "6",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "216": {
+        "name": "schedule_access.105_Pipeline_VITIS_LOOP_105_3",
+        "file": "vccache.cpp",
+        "fileloc": "105",
+        "instructions": "22",
+        "total_instructions": "22",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "217": {
+        "name": "request_to_vcbanks.24_Pipeline_VITIS_LOOP_243_1",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "85",
+        "total_instructions": "85",
+        "calls": "",
+        "basicblocks": "11",
+        "memory_accesses": "14",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "10"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "218": {
+        "name": "rrequest_manager",
+        "file": "rcache.cpp",
+        "fileloc": "35",
+        "instructions": "15",
+        "total_instructions": "54",
+        "calls": "198",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "4"
+        }
+    },
+    "219": {
+        "name": "distributer_mi",
+        "file": "core.cpp",
+        "fileloc": "116",
+        "instructions": "17",
+        "total_instructions": "63",
+        "calls": "5",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "2"
+        }
+    },
+    "220": {
+        "name": "request_manager",
+        "file": "vccache.cpp",
+        "fileloc": "43",
+        "instructions": "14",
+        "total_instructions": "62",
+        "calls": "237",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "221": {
+        "name": "pe_Pipeline_VITIS_LOOP_35_2",
+        "file": "pe.cpp",
+        "fileloc": "3",
+        "instructions": "70",
+        "total_instructions": "70",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "7",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "222": {
+        "name": "request_merger",
+        "file": "vccache.cpp",
+        "fileloc": "145",
+        "instructions": "28",
+        "total_instructions": "137",
+        "calls": "251",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "223": {
+        "name": "request_merger.69_Pipeline_VITIS_LOOP_152_1",
+        "file": "vccache.cpp",
+        "fileloc": "147",
+        "instructions": "109",
+        "total_instructions": "109",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "30",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "12"
+        },
+        "stores": {
+            "L": "24"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "224": {
+        "name": "distributer_rresponse",
+        "file": "util.cpp",
+        "fileloc": "88",
+        "instructions": "21",
+        "total_instructions": "81",
+        "calls": "125",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "4"
+        }
+    },
+    "225": {
+        "name": "rrequest_merger.85_Pipeline_VITIS_LOOP_125_1",
+        "file": "rcache.cpp",
+        "fileloc": "120",
+        "instructions": "221",
+        "total_instructions": "221",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "62",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "28"
+        },
+        "stores": {
+            "L": "56"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "226": {
+        "name": "rcollector",
+        "file": "rcache.cpp",
+        "fileloc": "147",
+        "instructions": "52",
+        "total_instructions": "52",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "227": {
+        "name": "request_to_vcbanks.23",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "41",
+        "total_instructions": "126",
+        "calls": "119",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "228": {
+        "name": "sub_final_merger.44_Pipeline_VITIS_LOOP_846_2",
+        "file": "util.cpp",
+        "fileloc": "829",
+        "instructions": "138",
+        "total_instructions": "138",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "42",
+        "control_depth": "4",
+        "def_use_depth": "5",
+        "loads": {
+            "L": "17"
+        },
+        "stores": {
+            "L": "35"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "229": {
+        "name": "distributer_rresponse.10_Pipeline_VITIS_LOOP_92_1",
+        "file": "util.cpp",
+        "fileloc": "90",
+        "instructions": "60",
+        "total_instructions": "60",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "10",
+        "control_depth": "7",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "230": {
+        "name": "merge_2_to_1_vcresult_Pipeline_VITIS_LOOP_533_1",
+        "file": "util.cpp",
+        "fileloc": "525",
+        "instructions": "88",
+        "total_instructions": "88",
+        "calls": "",
+        "basicblocks": "21",
+        "memory_accesses": "20",
+        "control_depth": "10",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "231": {
+        "name": "rcache_Pipeline_VITIS_LOOP_330_1",
+        "file": "rcache.cpp",
+        "fileloc": "330",
+        "instructions": "107",
+        "total_instructions": "107",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "34",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "34"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "232": {
+        "name": "request_manager.53_Pipeline_VITIS_LOOP_48_1",
+        "file": "vccache.cpp",
+        "fileloc": "45",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "6",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "233": {
+        "name": "merger",
+        "file": "pe.cpp",
+        "fileloc": "328",
+        "instructions": "11",
+        "total_instructions": "2477",
+        "calls": "106 66",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "234": {
+        "name": "rschedule_access",
+        "file": "rcache.cpp",
+        "fileloc": "62",
+        "instructions": "83",
+        "total_instructions": "110",
+        "calls": "1",
+        "basicblocks": "14",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "6"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "235": {
+        "name": "request_to_vcbanks.19_Pipeline_VITIS_LOOP_243_1",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "85",
+        "total_instructions": "85",
+        "calls": "",
+        "basicblocks": "11",
+        "memory_accesses": "14",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "10"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "236": {
+        "name": "distributer_vcresponse.32_Pipeline_VITIS_LOOP_282_1",
+        "file": "util.cpp",
+        "fileloc": "280",
+        "instructions": "54",
+        "total_instructions": "54",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "8",
+        "control_depth": "7",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "237": {
+        "name": "request_manager.52_Pipeline_VITIS_LOOP_48_1",
+        "file": "vccache.cpp",
+        "fileloc": "45",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "6",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "238": {
+        "name": "rcache.1_Pipeline_VITIS_LOOP_330_1",
+        "file": "rcache.cpp",
+        "fileloc": "330",
+        "instructions": "107",
+        "total_instructions": "107",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "34",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "34"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "239": {
+        "name": "merge_4_to_1_vcrequest",
+        "file": "util.cpp",
+        "fileloc": "193",
+        "instructions": "34",
+        "total_instructions": "290",
+        "calls": "97",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    },
+    "240": {
+        "name": "convert_pblock_to_mergeitem",
+        "file": "util.cpp",
+        "fileloc": "900",
+        "instructions": "22",
+        "total_instructions": "48",
+        "calls": "149",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "241": {
+        "name": "pe.37_Pipeline_VITIS_LOOP_35_2",
+        "file": "pe.cpp",
+        "fileloc": "3",
+        "instructions": "70",
+        "total_instructions": "70",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "7",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "242": {
+        "name": "collector",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "30",
+        "total_instructions": "74",
+        "calls": "6",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "243": {
+        "name": "vcrequest_splitter",
+        "file": "vccache.cpp",
+        "fileloc": "4",
+        "instructions": "23",
+        "total_instructions": "67",
+        "calls": "200",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "244": {
+        "name": "merge_2_to_1_vcresponse",
+        "file": "util.cpp",
+        "fileloc": "701",
+        "instructions": "12",
+        "total_instructions": "90",
+        "calls": "53",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "2"
+        }
+    },
+    "245": {
+        "name": "sub_final_merger_Pipeline_VITIS_LOOP_846_2",
+        "file": "util.cpp",
+        "fileloc": "829",
+        "instructions": "138",
+        "total_instructions": "138",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "42",
+        "control_depth": "4",
+        "def_use_depth": "5",
+        "loads": {
+            "L": "17"
+        },
+        "stores": {
+            "L": "35"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "246": {
+        "name": "write_C_sub",
+        "file": "util.cpp",
+        "fileloc": "971",
+        "instructions": "100",
+        "total_instructions": "100",
+        "calls": "",
+        "basicblocks": "14",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1",
+            "N": "2"
+        }
+    },
+    "247": {
+        "name": "A_row_reader",
+        "file": "task_scheduler.h",
+        "fileloc": "6",
+        "instructions": "13",
+        "total_instructions": "43",
+        "calls": "52",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2"
+    },
+    "248": {
+        "name": "merge_2_to_1_vcresult",
+        "file": "util.cpp",
+        "fileloc": "519",
+        "instructions": "15",
+        "total_instructions": "103",
+        "calls": "230",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "249": {
+        "name": "generate_data.90_Pipeline_VITIS_LOOP_53_2",
+        "file": "core.cpp",
+        "fileloc": "49",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "6",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "250": {
+        "name": "collector",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "30",
+        "total_instructions": "74",
+        "calls": "96",
+        "basicblocks": "6",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "0",
+        "loops": {
+            "L": "1"
+        }
+    },
+    "251": {
+        "name": "request_merger.73_Pipeline_VITIS_LOOP_152_1",
+        "file": "vccache.cpp",
+        "fileloc": "147",
+        "instructions": "109",
+        "total_instructions": "109",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "30",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "12"
+        },
+        "stores": {
+            "L": "24"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "252": {
+        "name": "request_to_vcbanks.25_Pipeline_VITIS_LOOP_243_1",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "85",
+        "total_instructions": "85",
+        "calls": "",
+        "basicblocks": "11",
+        "memory_accesses": "14",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "10"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "253": {
+        "name": "rrequest_manager.76_Pipeline_VITIS_LOOP_40_1",
+        "file": "rcache.cpp",
+        "fileloc": "40",
+        "instructions": "39",
+        "total_instructions": "39",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "7",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "254": {
+        "name": "entry_proc",
+        "file": "core.cpp",
+        "fileloc": "0",
+        "instructions": "38",
+        "total_instructions": "38",
+        "calls": "",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1"
+    },
+    "255": {
+        "name": "distributer_mi.5_Pipeline_VITIS_LOOP_120_1",
+        "file": "core.cpp",
+        "fileloc": "118",
+        "instructions": "46",
+        "total_instructions": "46",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "8",
+        "control_depth": "7",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "256": {
+        "name": "merge_2_to_1_vcresult",
+        "file": "util.cpp",
+        "fileloc": "519",
+        "instructions": "15",
+        "total_instructions": "103",
+        "calls": "116",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "257": {
+        "name": "merge_4_to_1_rresponse",
+        "file": "util.cpp",
+        "fileloc": "659",
+        "instructions": "79",
+        "total_instructions": "79",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "20",
+        "control_depth": "6",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "258": {
+        "name": "request_manager",
+        "file": "vccache.cpp",
+        "fileloc": "43",
+        "instructions": "14",
+        "total_instructions": "62",
+        "calls": "232",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "3"
+        }
+    },
+    "259": {
+        "name": "pe",
+        "file": "pe.cpp",
+        "fileloc": "3",
+        "instructions": "52",
+        "total_instructions": "122",
+        "calls": "241",
+        "basicblocks": "8",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "260": {
+        "name": "request_manager.66_Pipeline_VITIS_LOOP_48_1",
+        "file": "vccache.cpp",
+        "fileloc": "45",
+        "instructions": "48",
+        "total_instructions": "48",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "6",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "261": {
+        "name": "rrequest_merger_Pipeline_VITIS_LOOP_125_1",
+        "file": "rcache.cpp",
+        "fileloc": "120",
+        "instructions": "221",
+        "total_instructions": "221",
+        "calls": "",
+        "basicblocks": "12",
+        "memory_accesses": "62",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "28"
+        },
+        "stores": {
+            "L": "56"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "262": {
+        "name": "collector.74_Pipeline_VITIS_LOOP_185_2",
+        "file": "vccache.cpp",
+        "fileloc": "174",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "7",
+        "memory_accesses": "4",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "263": {
+        "name": "rrequest_manager",
+        "file": "rcache.cpp",
+        "fileloc": "35",
+        "instructions": "15",
+        "total_instructions": "54",
+        "calls": "32",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "4"
+        }
+    },
+    "264": {
+        "name": "distributer_rresponse.12_Pipeline_VITIS_LOOP_92_1",
+        "file": "util.cpp",
+        "fileloc": "90",
+        "instructions": "60",
+        "total_instructions": "60",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "10",
+        "control_depth": "7",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "265": {
+        "name": "pe",
+        "file": "pe.cpp",
+        "fileloc": "3",
+        "instructions": "52",
+        "total_instructions": "122",
+        "calls": "101",
+        "basicblocks": "8",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "266": {
+        "name": "final_merger_Pipeline_VITIS_LOOP_773_2",
+        "file": "util.cpp",
+        "fileloc": "756",
+        "instructions": "151",
+        "total_instructions": "151",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "48",
+        "control_depth": "4",
+        "def_use_depth": "5",
+        "loads": {
+            "L": "21"
+        },
+        "stores": {
+            "L": "39"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "267": {
+        "name": "request_to_vcbanks_Pipeline_VITIS_LOOP_243_1",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "85",
+        "total_instructions": "85",
+        "calls": "",
+        "basicblocks": "11",
+        "memory_accesses": "14",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "10"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "268": {
+        "name": "schedule_access.99_Pipeline_VITIS_LOOP_105_3",
+        "file": "vccache.cpp",
+        "fileloc": "105",
+        "instructions": "22",
+        "total_instructions": "22",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "269": {
+        "name": "request_to_vcbanks.24",
+        "file": "vccache.cpp",
+        "fileloc": "233",
+        "instructions": "37",
+        "total_instructions": "122",
+        "calls": "217",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "10"
+        }
+    }
+}

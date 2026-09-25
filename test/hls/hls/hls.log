@@ -1,0 +1,46 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+Tool Version Limit: 2025.11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=core.cpp' from hls_config.cfg(5)
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/core.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=pe.cpp' from hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/pe.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=rcache.cpp' from hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/rcache.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=util.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/util.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=vccache.cpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/vccache.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.cflags=-DSPMM_COSIM_RANDOM_EMPTY -DSPMM_C_SUB_AB' from hls_config.cfg(15)
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb.cpp' from hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file '/home/huz/project/SpMM_TCAD/test/tb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.cflags=-DSPMM_COSIM_RANDOM_EMPTY -DSPMM_C_SUB_AB' from hls_config.cfg(16)
+INFO: [HLS 200-1465] Applying config ini 'syn.top=spmm' from hls_config.cfg(4)
+INFO: [HLS 200-1465] Applying config ini 'clock=5.0' from hls_config.cfg(3)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.O=true' from hls_config.cfg(21)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=none' from hls_config.cfg(19)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'cosim.wave_debug=false' from hls_config.cfg(20)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'vivado.flow=impl' from hls_config.cfg(23)
+INFO: [HLS 200-1465] Applying config ini 'vivado.rtl=verilog' from hls_config.cfg(24)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/huz/project/SpMM_TCAD/test/hls/vitis-comp.json
+INFO: [HLS 200-1465] Applying config ini 'part=xczu15eg-ffvb1156-2-i' from command line
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 5.34 seconds. CPU system time: 0.91 seconds. Elapsed time: 7.06 seconds; current allocated memory: 266.809 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'vccache.cpp' ... 
+WARNING: [HLS 207-6020] equality comparison with extraneous parentheses (/usr/include/x86_64-linux-gnu/gmp.h:2142:345)
+INFO: [HLS 207-5159] remove extraneous parentheses around the comparison to silence this warning (/usr/include/x86_64-linux-gnu/gmp.h:2142:345)
+INFO: [HLS 207-5160] use '=' to turn this equality comparison into an assignment (/usr/include/x86_64-linux-gnu/gmp.h:2142:345)
+WARNING: [HLS 207-6020] equality comparison with extraneous parentheses (/usr/include/x86_64-linux-gnu/gmp.h:2142:383)
+INFO: [HLS 207-5159] remove extraneous parentheses around the comparison to silence this warning (/usr/include/x86_64-linux-gnu/gmp.h:2142:383)
+INFO: [HLS 207-5160] use '=' to turn this equality comparison into an assignment (/usr/include

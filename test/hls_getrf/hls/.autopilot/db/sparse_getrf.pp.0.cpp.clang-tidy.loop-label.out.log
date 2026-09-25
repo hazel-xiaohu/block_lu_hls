@@ -1,0 +1,65 @@
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:439:2: remark: Added loop label VITIS_LOOP_13_1:   [xilinx-label-all-loops]
+ for (getrf_id_t pos = begin; pos < end; ++pos) {
+ ^
+ VITIS_LOOP_13_1: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:439:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:514:2: remark: Added loop label VITIS_LOOP_84_1:   [xilinx-label-all-loops]
+ for (getrf_id_t pos = 0; pos < l_nnz; ++pos) {
+ ^
+ VITIS_LOOP_84_1: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:514:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:518:2: remark: Added loop label VITIS_LOOP_88_2:   [xilinx-label-all-loops]
+ for (getrf_id_t pos = 0; pos < u_nnz; ++pos) {
+ ^
+ VITIS_LOOP_88_2: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:518:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:523:2: remark: Added loop label VITIS_LOOP_93_3:   [xilinx-label-all-loops]
+ for (getrf_id_t row = 0; row < n; ++row) {
+ ^
+ VITIS_LOOP_93_3: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:523:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:533:3: remark: Added loop label VITIS_LOOP_103_4:   [xilinx-label-all-loops]
+  for (getrf_id_t pos = L_rcsr[row]; pos < L_rcsr[row + 1]; ++pos) {
+  ^
+  VITIS_LOOP_103_4: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:533:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:550:3: remark: Added loop label VITIS_LOOP_120_5:   [xilinx-label-all-loops]
+  for (getrf_id_t pos = U_rcsr[row]; pos < U_rcsr[row + 1]; ++pos) {
+  ^
+  VITIS_LOOP_120_5: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:550:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:568:3: remark: Added loop label VITIS_LOOP_138_6:   [xilinx-label-all-loops]
+  for (getrf_id_t pos = A_rcsr[row]; pos < A_rcsr[row + 1]; ++pos) {
+  ^
+  VITIS_LOOP_138_6: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:568:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:593:2: remark: Added loop label VITIS_LOOP_163_7:   [xilinx-label-all-loops]
+ for (getrf_id_t panel_begin = 0; panel_begin < n;
+ ^
+ VITIS_LOOP_163_7: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:593:2: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:597:3: remark: Added loop label VITIS_LOOP_167_8:   [xilinx-label-all-loops]
+  for (getrf_id_t row = panel_begin; row < panel_end; ++row) {
+  ^
+  VITIS_LOOP_167_8: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:597:3: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:603:4: remark: Added loop label VITIS_LOOP_173_9:   [xilinx-label-all-loops]
+   for (getrf_id_t l_pos = l_begin; l_pos < l_end; ++l_pos) {
+   ^
+   VITIS_LOOP_173_9: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:603:4: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:621:5: remark: Added loop label VITIS_LOOP_191_10:   [xilinx-label-all-loops]
+    for (getrf_id_t u_pos = U_rcsr[pivot_row];
+    ^
+    VITIS_LOOP_191_10: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:621:5: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:628:7: remark: Added loop label VITIS_LOOP_198_11:   [xilinx-label-all-loops]
+      while (l_target < l_end && L_cid[l_target] < col)
+      ^
+      VITIS_LOOP_198_11: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:628:7: note: FIX-IT applied suggested code changes
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:636:7: remark: Added loop label VITIS_LOOP_206_12:   [xilinx-label-all-loops]
+      while (u_target < u_end && U_cid[u_target] < col)
+      ^
+      VITIS_LOOP_206_12: 
+/home/huz/project/SpMM_TCAD/test/hls_getrf/hls/.autopilot/db/sparse_getrf.pp.0.cpp:636:7: note: FIX-IT applied suggested code changes

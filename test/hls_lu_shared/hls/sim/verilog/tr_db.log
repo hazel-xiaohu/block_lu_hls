@@ -1,0 +1,15 @@
+  CREATE_STREAM @0 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.sparse_lu_shared_virtual_sqr STREAM:19341}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_a_row.vsqr STREAM:20514}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_a_col.vsqr STREAM:20523}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_a_val.vsqr STREAM:20532}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_l_row.vsqr STREAM:20541}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_l_col.vsqr STREAM:20550}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_l_val.vsqr STREAM:20559}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_u_row.vsqr STREAM:20568}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_u_col.vsqr STREAM:20577}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_u_val.vsqr STREAM:20586}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_x_row.vsqr STREAM:20595}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_x_col.vsqr STREAM:20604}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_x_val.vsqr STREAM:20613}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_lite_control.vsqr STREAM:20622}
+  CREATE_STREAM @113000 {NAME:sparse_lu_shared_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_lite_control_r.vsqr STREAM:20637}

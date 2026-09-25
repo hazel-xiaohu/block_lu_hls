@@ -1,0 +1,212 @@
+
+
+================================================================
+== Vitis HLS Report for 'pe_37_Pipeline_VITIS_LOOP_35_2'
+================================================================
+* Date:           Fri Sep 25 00:05:30 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  5.043 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_35_2  |        ?|        ?|         7|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     157|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     8|     712|     532|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|     109|    -|
+|Register         |        -|     -|     565|      64|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     8|    1277|     862|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|    ~0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |               Instance               |             Module             | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |fmul_32ns_32ns_32_5_full_dsp_1_U2161  |fmul_32ns_32ns_32_5_full_dsp_1  |        0|   2|  178|  133|    0|
+    |fmul_32ns_32ns_32_5_full_dsp_1_U2162  |fmul_32ns_32ns_32_5_full_dsp_1  |        0|   2|  178|  133|    0|
+    |fmul_32ns_32ns_32_5_full_dsp_1_U2163  |fmul_32ns_32ns_32_5_full_dsp_1  |        0|   2|  178|  133|    0|
+    |fmul_32ns_32ns_32_5_full_dsp_1_U2164  |fmul_32ns_32ns_32_5_full_dsp_1  |        0|   2|  178|  133|    0|
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+    |Total                                 |                                |        0|   8|  712|  532|    0|
+    +--------------------------------------+--------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln75_fu_275_p2                |         +|   0|  0|  12|           5|           1|
+    |i_14_fu_285_p2                    |         +|   0|  0|  39|          32|          32|
+    |sub_ln75_fu_265_p2                |         -|   0|  0|  12|           4|           4|
+    |ap_predicate_op27_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op29_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op67_read_state6     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op68_read_state6     |       and|   0|  0|   2|           1|           1|
+    |icmp_ln35_fu_193_p2               |      icmp|   0|  0|  39|          32|          32|
+    |icmp_ln38_fu_179_p2               |      icmp|   0|  0|  39|          32|           5|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state6_pp0_stage0_iter5  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 157|         113|          83|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                    | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                                 |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                     |   9|          2|    1|          2|
+    |ap_phi_mux_temp_c_data_in_in_phi_fu_155_p4  |  14|          3|  134|        402|
+    |ap_phi_mux_temp_v_begin_3_in_phi_fu_144_p4  |  14|          3|  134|        402|
+    |ap_sig_allocacmp_i_13                       |   9|          2|   32|         64|
+    |cblock3_blk_n                               |   9|          2|    1|          2|
+    |cblock3d_blk_n                              |   9|          2|    1|          2|
+    |i_fu_94                                     |   9|          2|   32|         64|
+    |p_pe3_blk_n                                 |   9|          2|    1|          2|
+    |vblock3_blk_n                               |   9|          2|    1|          2|
+    |vblock3d_blk_n                              |   9|          2|    1|          2|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |Total                                       | 109|         24|  339|        946|
+    +--------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+-----+----+-----+-----------+
+    |               Name               |  FF | LUT| Bits| Const Bits|
+    +----------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                         |    1|   0|    1|          0|
+    |ap_done_reg                       |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6           |    1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |    1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |    1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |    1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg  |    1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter5_reg  |    1|   0|    1|          0|
+    |i_fu_94                           |   32|   0|   32|          0|
+    |icmp_ln35_reg_372                 |    1|   0|    1|          0|
+    |icmp_ln38_reg_368                 |    1|   0|    1|          0|
+    |mul1_reg_426                      |   32|   0|   32|          0|
+    |mul2_reg_431                      |   32|   0|   32|          0|
+    |mul3_reg_436                      |   32|   0|   32|          0|
+    |mul_reg_421                       |   32|   0|   32|          0|
+    |tmp_58_reg_376                    |   32|   0|   32|          0|
+    |tmp_59_reg_381                    |   32|   0|   32|          0|
+    |tmp_60_reg_386                    |   32|   0|   32|          0|
+    |tmp_61_reg_391                    |   32|   0|   32|          0|
+    |tmp_62_reg_441                    |  128|   0|  128|          0|
+    |trunc_ln73_reg_396                |    6|   0|    6|          0|
+    |icmp_ln35_reg_372                 |   64|  32|    1|          0|
+    |trunc_ln73_reg_396                |   64|  32|    6|          0|
+    +----------------------------------+-----+----+-----+-----------+
+    |Total                             |  565|  64|  444|          0|
+    +----------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+--------------------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++-------------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  pe.37_Pipeline_VITIS_LOOP_35_2|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  pe.37_Pipeline_VITIS_LOOP_35_2|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  pe.37_Pipeline_VITIS_LOOP_35_2|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  pe.37_Pipeline_VITIS_LOOP_35_2|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  pe.37_Pipeline_VITIS_LOOP_35_2|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  pe.37_Pipeline_VITIS_LOOP_35_2|  return value|
+|vblock3d_dout            |   in|  134|     ap_fifo|                        vblock3d|       pointer|
+|vblock3d_empty_n         |   in|    1|     ap_fifo|                        vblock3d|       pointer|
+|vblock3d_read            |  out|    1|     ap_fifo|                        vblock3d|       pointer|
+|vblock3d_num_data_valid  |   in|    8|     ap_fifo|                        vblock3d|       pointer|
+|vblock3d_fifo_cap        |   in|    8|     ap_fifo|                        vblock3d|       pointer|
+|vblock3_dout             |   in|  134|     ap_fifo|                         vblock3|       pointer|
+|vblock3_empty_n          |   in|    1|     ap_fifo|                         vblock3|       pointer|
+|vblock3_read             |  out|    1|     ap_fifo|                         vblock3|       pointer|
+|vblock3_num_data_valid   |   in|    8|     ap_fifo|                         vblock3|       pointer|
+|vblock3_fifo_cap         |   in|    8|     ap_fifo|                         vblock3|       pointer|
+|cblock3d_dout            |   in|  134|     ap_fifo|                        cblock3d|       pointer|
+|cblock3d_empty_n         |   in|    1|     ap_fifo|                        cblock3d|       pointer|
+|cblock3d_read            |  out|    1|     ap_fifo|                        cblock3d|       pointer|
+|cblock3d_num_data_valid  |   in|    8|     ap_fifo|                        cblock3d|       pointer|
+|cblock3d_fifo_cap        |   in|    8|     ap_fifo|                        cblock3d|       pointer|
+|cblock3_dout             |   in|  134|     ap_fifo|                         cblock3|       pointer|
+|cblock3_empty_n          |   in|    1|     ap_fifo|                         cblock3|       pointer|
+|cblock3_read             |  out|    1|     ap_fifo|                         cblock3|       pointer|
+|cblock3_num_data_valid   |   in|    8|     ap_fifo|                         cblock3|       pointer|
+|cblock3_fifo_cap         |   in|    8|     ap_fifo|                         cblock3|       pointer|
+|p_pe3_din                |  out|  263|     ap_fifo|                           p_pe3|       pointer|
+|p_pe3_full_n             |   in|    1|     ap_fifo|                           p_pe3|       pointer|
+|p_pe3_write              |  out|    1|     ap_fifo|                           p_pe3|       pointer|
+|p_pe3_num_data_valid     |   in|   32|     ap_fifo|                           p_pe3|       pointer|
+|p_pe3_fifo_cap           |   in|   32|     ap_fifo|                           p_pe3|       pointer|
+|b_rlen                   |   in|   32|     ap_none|                          b_rlen|        scalar|
+|curr_job_val             |   in|   32|     ap_none|                    curr_job_val|        scalar|
++-------------------------+-----+-----+------------+--------------------------------+--------------+
+

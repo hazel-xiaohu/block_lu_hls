@@ -1,0 +1,496 @@
+---
+MainSourceFile:  '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2142_1:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2142
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          97640
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2142_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2142_2:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2142
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          97788
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2142_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2142_3:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2142
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          98024
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2142_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2142_4:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2142
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          98050
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2142_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2155_1:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2155
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          98424
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2155_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2155_2:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2155
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          98607
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2155_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2155_3:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2155
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          98808
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2155_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2155_4:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2155
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          98834
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2155_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2155_5:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2155
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          99020
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2155_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2155_6:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2155
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          99046
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2155_6: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2168_1:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2168
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          99376
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2168_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2168_2:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2168
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          99472
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2168_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2181_1:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2181
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          99810
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2181_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2197_1:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2197
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          100109
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2197_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2197_2:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2197
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          100257
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2197_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2197_3:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2197
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          100502
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2197_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2197_4:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2197
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          100528
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2197_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2210_1:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2210
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          100902
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2210_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2210_2:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2210
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          101085
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2210_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2210_3:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2210
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          101286
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2210_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2210_4:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2210
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          101312
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2210_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2210_5:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2210
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          101498
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2210_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2210_6:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2210
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          101524
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2210_6: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2222_1:  '
+      FilePath:        '/usr/include/x86_64-linux-gnu/gmp.h'
+      FileOffset:      2222
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          101825
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2222_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        '/home/huz/software/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          379584
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        '/home/huz/software/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          380055
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        '/home/huz/software/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          380527
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        '/home/huz/software/2025.2/Vitis/common/technology/autopilot/etc/ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          723911
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_13_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/task_scheduler.h'
+      FileOffset:      13
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2402106
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_13_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_32_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/task_scheduler.h'
+      FileOffset:      32
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2402588
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_32_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_35_2:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/task_scheduler.h'
+      FileOffset:      35
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2402691
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_35_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_61_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/task_scheduler.h'
+      FileOffset:      61
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2403374
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_61_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_64_2:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/task_scheduler.h'
+      FileOffset:      64
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2403477
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_64_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_96_1:  '
+      FilePath:        '/home/huz/project/SpMM_TCAD/test/task_scheduler.h'
+      FileOffset:      96
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2404583
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_96_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_13_1:  '
+      FilePath:        core.cpp
+      FileOffset:      13
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2407023
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_13_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_22_2:  '
+      FilePath:        core.cpp
+      FileOffset:      22
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2407252
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_22_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_43_1:  '
+      FilePath:        core.cpp
+      FileOffset:      43
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2407900
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_43_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_53_2:  '
+      FilePath:        core.cpp
+      FileOffset:      53
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2408224
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_53_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_86_1:  '
+      FilePath:        core.cpp
+      FileOffset:      86
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2408977
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_86_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_120_1:  '
+      FilePath:        core.cpp
+      FileOffset:      120
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2409812
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_120_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_147_1:  '
+      FilePath:        core.cpp
+      FileOffset:      147
+      Replacements:
+        - FilePath:        '/home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/.autopilot/db/core.pp.0.cpp'
+          Offset:          2410340
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_147_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/huz/project/SpMM_TCAD/test'
+...

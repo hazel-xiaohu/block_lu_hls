@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'request_to_vcbanks_24'
+================================================================
+* Date:           Fri Sep 25 00:04:49 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.162 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.61>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%temp_vcreq_1_0_loc = alloca i64 1"   --->   Operation 4 'alloca' 'temp_vcreq_1_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%temp_vcreq_2_0_loc = alloca i64 1"   --->   Operation 5 'alloca' 'temp_vcreq_2_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%temp_vcreq_3_0_loc = alloca i64 1"   --->   Operation 6 'alloca' 'temp_vcreq_3_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%temp_vcreq_4_0_loc = alloca i64 1"   --->   Operation 7 'alloca' 'temp_vcreq_4_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%temp_vcreq_5_0_loc = alloca i64 1"   --->   Operation 8 'alloca' 'temp_vcreq_5_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%temp_vcreq_6106_0_loc = alloca i64 1"   --->   Operation 9 'alloca' 'temp_vcreq_6106_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%temp_vcreq_7107_0_loc = alloca i64 1"   --->   Operation 10 'alloca' 'temp_vcreq_7107_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%temp_vcreq_9_0_loc = alloca i64 1"   --->   Operation 11 'alloca' 'temp_vcreq_9_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%temp_vcreq_8_sroa_0_0_loc = alloca i64 1"   --->   Operation 12 'alloca' 'temp_vcreq_8_sroa_0_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%temp_vcreq_8_sroa_5_0_loc = alloca i64 1"   --->   Operation 13 'alloca' 'temp_vcreq_8_sroa_5_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] ( I:1.82ns O:1.82ns )   --->   "%base_addr_cid_2 = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %base_addr_cid"   --->   Operation 14 'read' 'base_addr_cid_2' <Predicate = true> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.93> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 8> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%empty = trunc i32 %base_addr_cid_2"   --->   Operation 15 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] ( I:1.82ns O:1.82ns )   --->   "%base_addr_val_4 = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %base_addr_val"   --->   Operation 16 'read' 'base_addr_val_4' <Predicate = true> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.93> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 8> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%empty_555 = trunc i32 %base_addr_val_4"   --->   Operation 17 'trunc' 'empty_555' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (0.78ns)   --->   "%call_ln0 = call void @request_to_vcbanks.24_Pipeline_VITIS_LOOP_243_1, i225 %crequest2, i225 %vccache_re_bank1_pe6, i5 %empty_555, i5 %empty, i225 %vccache_re_bank2_pe6, i8 %temp_vcreq_8_sroa_5_0_loc, i8 %temp_vcreq_8_sroa_0_0_loc, i128 %temp_vcreq_9_0_loc, i32 %temp_vcreq_7107_0_loc, i32 %temp_vcreq_6106_0_loc, i3 %temp_vcreq_5_0_loc, i5 %temp_vcreq_4_0_loc, i3 %temp_vcreq_3_0_loc, i3 %temp_vcreq_2_0_loc, i2 %temp_vcreq_1_0_loc"   --->   Operation 18 'call' 'call_ln0' <Predicate = true> <Delay = 0.78> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.85>
+ST_2 : Operation 19 [1/2] (0.85ns)   --->   "%call_ln0 = call void @request_to_vcbanks.24_Pipeline_VITIS_LOOP_243_1, i225 %crequest2, i225 %vccache_re_bank1_pe6, i5 %empty_555, i5 %empty, i225 %vccache_re_bank2_pe6, i8 %temp_vcreq_8_sroa_5_0_loc, i8 %temp_vcreq_8_sroa_0_0_loc, i128 %temp_vcreq_9_0_loc, i32 %temp_vcreq_7107_0_loc, i32 %temp_vcreq_6106_0_loc, i3 %temp_vcreq_5_0_loc, i5 %temp_vcreq_4_0_loc, i3 %temp_vcreq_3_0_loc, i3 %temp_vcreq_2_0_loc, i2 %temp_vcreq_1_0_loc"   --->   Operation 19 'call' 'call_ln0' <Predicate = true> <Delay = 0.85> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 1.82>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %base_addr_cid, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %base_addr_val, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i225 %vccache_re_bank2_pe6, i64 666, i64 10, i64 18446744073709551615, i1 0"   --->   Operation 22 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i225 %vccache_re_bank1_pe6, i64 666, i64 10, i64 18446744073709551615, i1 0"   --->   Operation 23 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i225 %vccache_re_bank2_pe6, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i225 %vccache_re_bank1_pe6, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i225 %crequest2, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%fence_ln272 = fence void @_ssdm_op_Fence, i225 %crequest2, i225 %vccache_re_bank1_pe6, i225 %vccache_re_bank2_pe6, i32 4294967295, i225 %vccache_re_bank1_pe6, i225 %vccache_re_bank2_pe6, i32 0" [vccache.cpp:272]   --->   Operation 27 'fence' 'fence_ln272' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%temp_vcreq_8_sroa_5_0_loc_load = load i8 %temp_vcreq_8_sroa_5_0_loc"   --->   Operation 28 'load' 'temp_vcreq_8_sroa_5_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%temp_vcreq_8_sroa_0_0_loc_load = load i8 %temp_vcreq_8_sroa_0_0_loc"   --->   Operation 29 'load' 'temp_vcreq_8_sroa_0_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%temp_vcreq_9_0_loc_load = load i128 %temp_vcreq_9_0_loc"   --->   Operation 30 'load' 'temp_vcreq_9_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%temp_vcreq_7107_0_loc_load = load i32 %temp_vcreq_7107_0_loc"   --->   Operation 31 'load' 'temp_vcreq_7107_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%temp_vcreq_6106_0_loc_load = load i32 %temp_vcreq_6106_0_loc"   --->   Operation 32 'load' 'temp_vcreq_6106_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%temp_vcreq_5_0_loc_load = load i3 %temp_vcreq_5_0_loc"   --->   Operation 33 'load' 'temp_vcreq_5_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%temp_vcreq_4_0_loc_load = load i5 %temp_vcreq_4_0_loc"   --->   Operation 34 'load' 'temp_vcreq_4_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%temp_vcreq_3_0_loc_load = load i3 %temp_vcreq_3_0_loc"   --->   Operation 35 'load' 'temp_vcreq_3_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%temp_vcreq_2_0_loc_load = load i3 %temp_vcreq_2_0_loc"   --->   Operation 36 'load' 'temp_vcreq_2_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%temp_vcreq_1_0_loc_load = load i2 %temp_vcreq_1_0_loc"   --->   Operation 37 'load' 'temp_vcreq_1_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i225 @_ssdm_op_BitConcatenate.i225.i128.i8.i8.i32.i32.i3.i5.i3.i3.i2.i1, i128 %temp_vcreq_9_0_loc_load, i8 %temp_vcreq_8_sroa_5_0_loc_load, i8 %temp_vcreq_8_sroa_0_0_loc_load, i32 %temp_vcreq_7107_0_loc_load, i32 %temp_vcreq_6106_0_loc_load, i3 %temp_vcreq_5_0_loc_load, i5 %temp_vcreq_4_0_loc_load, i3 %temp_vcreq_3_0_loc_load, i3 %temp_vcreq_2_0_loc_load, i2 %temp_vcreq_1_0_loc_load, i1 1" [vccache.cpp:272]   --->   Operation 38 'bitconcatenate' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] ( I:1.82ns O:1.82ns )   --->   "%write_ln272 = write void @_ssdm_op_Write.ap_fifo.volatile.i225P0A, i225 %vccache_re_bank1_pe6, i225 %p_0" [vccache.cpp:272]   --->   Operation 39 'write' 'write_ln272' <Predicate = true> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.93> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 225> <Depth = 8> <FIFO>
+ST_3 : Operation 40 [1/1] ( I:1.82ns O:1.82ns )   --->   "%write_ln273 = write void @_ssdm_op_Write.ap_fifo.volatile.i225P0A, i225 %vccache_re_bank2_pe6, i225 %p_0" [vccache.cpp:273]   --->   Operation 40 'write' 'write_ln273' <Predicate = true> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.93> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 225> <Depth = 8> <FIFO>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%ret_ln274 = ret" [vccache.cpp:274]   --->   Operation 41 'ret' 'ret_ln274' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 2.614ns
+The critical path consists of the following:
+	fifo read operation ('base_addr_cid') on port 'base_addr_cid' [17]  (1.825 ns)
+	'call' operation ('call_ln0') to 'request_to_vcbanks.24_Pipeline_VITIS_LOOP_243_1' [27]  (0.789 ns)
+
+ <State 2>: 0.854ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'request_to_vcbanks.24_Pipeline_VITIS_LOOP_243_1' [27]  (0.854 ns)
+
+ <State 3>: 1.825ns
+The critical path consists of the following:
+	'load' operation 8 bit ('temp_vcreq_8_sroa_5_0_loc_load') on local variable 'temp_vcreq_8_sroa_5_0_loc' [29]  (0.000 ns)
+	fifo write operation ('write_ln272', vccache.cpp:272) on port 'vccache_re_bank1_pe6' (vccache.cpp:272) [40]  (1.825 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

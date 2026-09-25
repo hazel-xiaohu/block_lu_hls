@@ -1,0 +1,12 @@
+WARNING [HLS SIM]: hls::stream 'hls::stream<vccache_response, 0>25' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<vccache_response, 0>24' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<vccache_response, 0>23' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<vccache_response, 0>22' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<vccache_response, 0>21' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<vccache_response, 0>20' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<vccache_response, 0>19' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<vccache_response, 0>18' contains leftover data, which may result in RTL simulation hanging.
+real circuit_3_12127 block: global rows/cols 4608:4672 A11_nnz=86 L11_nnz=62 U11_nnz=62 L21_nnz=68 U12_nnz=68 C_nnz=100
+GETRF residual=4.66047e-09 GESSM residual=8.0781e-10 TSTRF residual=2.80218e-08 cascade Schur error=1.6394e-08
+PASS real GETRF->GESSM/TSTRF->SSSSM cascade
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 101

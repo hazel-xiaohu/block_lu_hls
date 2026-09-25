@@ -1,0 +1,28 @@
+<pragmas>
+<pragma file="sparse_getrf.cpp" line="104" pragmaType="pipeline" parentfunction="sparse_getrf" off="0" ii="1" rewind="0" style=""/>
+<pragma file="sparse_getrf.cpp" line="121" pragmaType="pipeline" parentfunction="sparse_getrf" off="0" ii="1" rewind="0" style=""/>
+<pragma file="sparse_getrf.cpp" line="139" pragmaType="pipeline" parentfunction="sparse_getrf" off="0" ii="1" rewind="0" style=""/>
+<pragma file="sparse_getrf.cpp" line="89" pragmaType="pipeline" parentfunction="sparse_getrf" off="0" ii="1" rewind="0" style=""/>
+<pragma file="sparse_getrf.cpp" line="85" pragmaType="pipeline" parentfunction="sparse_getrf" off="0" ii="1" rewind="0" style=""/>
+<pragma file="sparse_getrf.cpp" line="49" pragmaType="interface" parentfunction="sparse_getrf" mode="m_axi" port="A_rcsr" bundle="a_row" offset="slave" name="" depth="65" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="sparse_getrf.cpp" line="50" pragmaType="interface" parentfunction="sparse_getrf" mode="m_axi" port="A_cid" bundle="a_col" offset="slave" name="" depth="1024" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="sparse_getrf.cpp" line="51" pragmaType="interface" parentfunction="sparse_getrf" mode="m_axi" port="A_val" bundle="a_val" offset="slave" name="" depth="1024" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="sparse_getrf.cpp" line="52" pragmaType="interface" parentfunction="sparse_getrf" mode="m_axi" port="L_rcsr" bundle="l_row" offset="slave" name="" depth="65" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="sparse_getrf.cpp" line="53" pragmaType="interface" parentfunction="sparse_getrf" mode="m_axi" port="L_cid" bundle="l_col" offset="slave" name="" depth="2048" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="sparse_getrf.cpp" line="54" pragmaType="interface" parentfunction="sparse_getrf" mode="m_axi" port="L_val" bundle="l_val" offset="slave" name="" depth="2048" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="sparse_getrf.cpp" line="55" pragmaType="interface" parentfunction="sparse_getrf" mode="m_axi" port="U_rcsr" bundle="u_row" offset="slave" name="" depth="65" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="sparse_getrf.cpp" line="56" pragmaType="interface" parentfunction="sparse_getrf" mode="m_axi" port="U_cid" bundle="u_col" offset="slave" name="" depth="2048" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="sparse_getrf.cpp" line="57" pragmaType="interface" parentfunction="sparse_getrf" mode="m_axi" port="U_val" bundle="u_val" offset="slave" name="" depth="2048" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="sparse_getrf.cpp" line="59" pragmaType="interface" parentfunction="sparse_getrf" mode="s_axilite" port="n" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sparse_getrf.cpp" line="60" pragmaType="interface" parentfunction="sparse_getrf" mode="s_axilite" port="a_nnz" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sparse_getrf.cpp" line="61" pragmaType="interface" parentfunction="sparse_getrf" mode="s_axilite" port="l_nnz" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sparse_getrf.cpp" line="62" pragmaType="interface" parentfunction="sparse_getrf" mode="s_axilite" port="u_nnz" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sparse_getrf.cpp" line="63" pragmaType="interface" parentfunction="sparse_getrf" mode="s_axilite" port="pivot_eps" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sparse_getrf.cpp" line="64" pragmaType="interface" parentfunction="sparse_getrf" mode="s_axilite" port="status" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sparse_getrf.cpp" line="65" pragmaType="interface" parentfunction="sparse_getrf" mode="s_axilite" port="failed_row" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sparse_getrf.cpp" line="66" pragmaType="interface" parentfunction="sparse_getrf" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="sparse_getrf.cpp" line="10" pragmaType="inline" parentfunction="find_in_row" off="0" region="0" recursive="0"/>
+<pragma file="sparse_getrf.cpp" line="14" pragmaType="pipeline" parentfunction="find_in_row" off="0" ii="1" rewind="0" style=""/>
+<pragma file="sparse_getrf.cpp" line="4" pragmaType="inline" parentfunction="getrf_abs" off="0" region="0" recursive="0"/>
+<pragma file="sparse_getrf.cpp" line="26" pragmaType="inline" parentfunction="set_failure" off="0" region="0" recursive="0"/>
+</pragmas>

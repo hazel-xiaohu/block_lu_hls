@@ -1,0 +1,185 @@
+
+
+================================================================
+== Vitis HLS Report for 'schedule_access_100_Pipeline_VITIS_LOOP_112_4'
+================================================================
+* Date:           Fri Sep 25 00:04:45 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.650 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_112_4  |        ?|        ?|         3|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_t = alloca i32 1" [vccache.cpp:112]   --->   Operation 6 'alloca' 'p_t' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%begin_block_idx_read = read i30 @_ssdm_op_Read.ap_auto.i30, i30 %begin_block_idx"   --->   Operation 7 'read' 'begin_block_idx_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%trunc_ln40_read = read i3 @_ssdm_op_Read.ap_auto.i3, i3 %trunc_ln40"   --->   Operation 8 'read' 'trunc_ln40_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln112_read = read i60 @_ssdm_op_Read.ap_auto.i60, i60 %sext_ln112"   --->   Operation 9 'read' 'sext_ln112_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%add_ln125_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %add_ln125"   --->   Operation 10 'read' 'add_ln125_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln100_read = read i30 @_ssdm_op_Read.ap_auto.i30, i30 %zext_ln100"   --->   Operation 11 'read' 'zext_ln100_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%ori_request_peID_read = read i3 @_ssdm_op_Read.ap_auto.i3, i3 %ori_request_peID"   --->   Operation 12 'read' 'ori_request_peID_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%add_ln92_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %add_ln92"   --->   Operation 13 'read' 'add_ln92_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%min_idx_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %min_idx"   --->   Operation 14 'read' 'min_idx_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln92_read = read i30 @_ssdm_op_Read.ap_auto.i30, i30 %zext_ln92"   --->   Operation 15 'read' 'zext_ln92_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln112_cast = sext i60 %sext_ln112_read"   --->   Operation 16 'sext' 'sext_ln112_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln100_cast = zext i30 %zext_ln100_read"   --->   Operation 17 'zext' 'zext_ln100_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln92_cast = zext i30 %zext_ln92_read"   --->   Operation 18 'zext' 'zext_ln92_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %bv2, void @empty_156, i32 0, i32 0, void @empty_117, i32 0, i32 256, void @empty_169, void @empty_166, void @empty_117, i32 16, i32 16, i32 16, i32 16, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 16"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i225 %v_req, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %voff, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln92_31 = zext i31 %min_idx_read" [vccache.cpp:92]   --->   Operation 22 'zext' 'zext_ln92_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln92_32 = zext i31 %add_ln92_read" [vccache.cpp:92]   --->   Operation 23 'zext' 'zext_ln92_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.42ns)   --->   "%store_ln112 = store i63 %zext_ln92_cast, i63 %p_t" [vccache.cpp:112]   --->   Operation 24 'store' 'store_ln112' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body28"   --->   Operation 25 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.51>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%p_t_20 = load i63 %p_t" [vccache.cpp:112]   --->   Operation 26 'load' 'p_t_20' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (1.08ns)   --->   "%icmp_ln112 = icmp_eq  i63 %p_t_20, i63 %zext_ln92_32" [vccache.cpp:112]   --->   Operation 27 'icmp' 'icmp_ln112' <Predicate = true> <Delay = 1.08> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln112 = br i1 %icmp_ln112, void %for.body28.split, void %if.end52.loopexit.exitStub" [vccache.cpp:112]   --->   Operation 28 'br' 'br_ln112' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (1.08ns)   --->   "%icmp_ln117 = icmp_ugt  i63 %p_t_20, i63 %zext_ln92_31" [vccache.cpp:117]   --->   Operation 29 'icmp' 'icmp_ln117' <Predicate = (!icmp_ln112)> <Delay = 1.08> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln117 = br i1 %icmp_ln117, void %if.then35, void %for.inc47" [vccache.cpp:117]   --->   Operation 30 'br' 'br_ln117' <Predicate = (!icmp_ln112)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln124 = trunc i63 %p_t_20" [vccache.cpp:124]   --->   Operation 31 'trunc' 'trunc_ln124' <Predicate = (!icmp_ln112 & !icmp_ln117)> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.67ns)   --->   "%sub_ln124 = sub i3 %trunc_ln124, i3 %trunc_ln40_read" [vccache.cpp:124]   --->   Operation 32 'sub' 'sub_ln124' <Predicate = (!icmp_ln112 & !icmp_ln117)> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%store_ln0 = store i32 %add_ln125_read, i32 %curr_request_7_210_out"   --->   Operation 33 'store' 'store_ln0' <Predicate = (!icmp_ln112 & !icmp_ln117)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%store_ln0 = store i32 %zext_ln100_cast, i32 %curr_request_6_29_out"   --->   Operation 34 'store' 'store_ln0' <Predicate = (!icmp_ln112 & !icmp_ln117)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%store_ln124 = store i3 %sub_ln124, i3 %curr_request_5_27_out" [vccache.cpp:124]   --->   Operation 35 'store' 'store_ln124' <Predicate = (!icmp_ln112 & !icmp_ln117)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%store_ln0 = store i3 %ori_request_peID_read, i3 %curr_request_3_26_out"   --->   Operation 36 'store' 'store_ln0' <Predicate = (!icmp_ln112 & !icmp_ln117)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (1.08ns)   --->   "%add_ln112 = add i63 %p_t_20, i63 1" [vccache.cpp:112]   --->   Operation 37 'add' 'add_ln112' <Predicate = (!icmp_ln112)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.42ns)   --->   "%store_ln112 = store i63 %add_ln112, i63 %p_t" [vccache.cpp:112]   --->   Operation 38 'store' 'store_ln112' <Predicate = (!icmp_ln112)> <Delay = 0.42>
+
+State 3 <SV = 2> <Delay = 3.65>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%bv2_addr = getelementptr i128 %bv2, i64 %sext_ln112_cast" [vccache.cpp:112]   --->   Operation 39 'getelementptr' 'bv2_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%specpipeline_ln113 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, i32 4294967295, void @empty_117" [vccache.cpp:113]   --->   Operation 40 'specpipeline' 'specpipeline_ln113' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%specloopname_ln112 = specloopname void @_ssdm_op_SpecLoopName, void @empty_34" [vccache.cpp:112]   --->   Operation 41 'specloopname' 'specloopname_ln112' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] ( I:3.65ns O:3.65ns )   --->   "%bv2_addr_read = read i128 @_ssdm_op_Read.m_axi.i128.p1i128, i128 %bv2_addr" [vccache.cpp:123]   --->   Operation 42 'read' 'bv2_addr_read' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%store_ln123 = store i128 %bv2_addr_read, i128 %curr_request_9_211_out" [vccache.cpp:123]   --->   Operation 43 'store' 'store_ln123' <Predicate = (!icmp_ln117)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 49 'ret' 'ret_ln0' <Predicate = (icmp_ln112)> <Delay = 0.42>
+
+State 4 <SV = 3> <Delay = 1.82>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i225 @_ssdm_op_BitConcatenate.i225.i128.i16.i32.i2.i30.i3.i5.i3.i6, i128 %bv2_addr_read, i16 0, i32 %add_ln125_read, i2 0, i30 %begin_block_idx_read, i3 %sub_ln124, i5 0, i3 %ori_request_peID_read, i6 16" [vccache.cpp:127]   --->   Operation 44 'bitconcatenate' 'p_0' <Predicate = (!icmp_ln117)> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] ( I:1.82ns O:1.82ns )   --->   "%write_ln127 = write void @_ssdm_op_Write.ap_fifo.volatile.i225P0A, i225 %v_req, i225 %p_0" [vccache.cpp:127]   --->   Operation 45 'write' 'write_ln127' <Predicate = (!icmp_ln117)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 225> <Depth = 2> <FIFO>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln128 = br void %for.inc47" [vccache.cpp:128]   --->   Operation 46 'br' 'br_ln128' <Predicate = (!icmp_ln117)> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] ( I:1.82ns O:1.82ns )   --->   "%write_ln130 = write void @_ssdm_op_Write.ap_fifo.volatile.i128P0A, i128 %voff, i128 %bv2_addr_read" [vccache.cpp:130]   --->   Operation 47 'write' 'write_ln130' <Predicate = true> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.93> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 8> <FIFO>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln112 = br void %for.body28" [vccache.cpp:112]   --->   Operation 48 'br' 'br_ln112' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	'alloca' operation 63 bit ('_t', vccache.cpp:112) [18]  (0.000 ns)
+	'store' operation ('store_ln112', vccache.cpp:112) of variable 'zext_ln92_cast' 63 bit on local variable '_t', vccache.cpp:112 [36]  (0.427 ns)
+
+ <State 2>: 1.513ns
+The critical path consists of the following:
+	'load' operation 63 bit ('_t', vccache.cpp:112) on local variable '_t', vccache.cpp:112 [39]  (0.000 ns)
+	'add' operation 63 bit ('add_ln112', vccache.cpp:112) [62]  (1.086 ns)
+	'store' operation ('store_ln112', vccache.cpp:112) of variable 'add_ln112', vccache.cpp:112 63 bit on local variable '_t', vccache.cpp:112 [63]  (0.427 ns)
+
+ <State 3>: 3.650ns
+The critical path consists of the following:
+	'getelementptr' operation 128 bit ('bv2_addr', vccache.cpp:112) [43]  (0.000 ns)
+	bus read operation ('bv2_addr_read', vccache.cpp:123) on port 'bv2' (vccache.cpp:123) [46]  (3.650 ns)
+
+ <State 4>: 1.825ns
+The critical path consists of the following:
+	fifo write operation ('write_ln130', vccache.cpp:130) on port 'voff' (vccache.cpp:130) [61]  (1.825 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

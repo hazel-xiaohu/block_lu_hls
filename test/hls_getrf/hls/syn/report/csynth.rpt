@@ -1,0 +1,547 @@
+
+
+================================================================
+== Synthesis Summary Report of 'sparse_getrf'
+================================================================
++ General Information: 
+    * Date:           Thu Sep 24 20:30:49 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:        hls_getrf
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu15eg-ffvb1156-2-i
+    
+
+* Performance & Resource Estimates: 
++------------------------------------------------+--------+---------------------+----------+---------+------+----------+---------+-----------+-------+---------+---------+------------+------------+-----+
+|                     Modules                    |  Issue |                     | Iteration|         | Trip |          |       Latency       |       |         |         |            |            |     |
+|                     & Loops                    |  Type  |    Violation Type   |  Latency | Interval| Count| Pipelined| (cycles)|    (ns)   | Slack |  BRAM   |   DSP   |     FF     |     LUT    | URAM|
++------------------------------------------------+--------+---------------------+----------+---------+------+----------+---------+-----------+-------+---------+---------+------------+------------+-----+
+|+ sparse_getrf                                  |  Timing|                    -|         -|        -|     -|        no|        -|          -|  -2.28|  18 (1%)|  5 (~0%)|  13738 (2%)|  18656 (5%)|    -|
+| + sparse_getrf_Pipeline_VITIS_LOOP_84_1        |       -|                    -|         -|        -|     -|       yes|     2050|  1.025e+04|   0.00|        -|        -|    15 (~0%)|    87 (~0%)|    -|
+|  o VITIS_LOOP_84_1                             |       -|                    -|         2|        1|  2048|       yes|     2048|  1.024e+04|   3.65|        -|        -|           -|           -|    -|
+| + sparse_getrf_Pipeline_VITIS_LOOP_88_2        |       -|                    -|         -|        -|     -|       yes|     2050|  1.025e+04|   0.00|        -|        -|    15 (~0%)|    87 (~0%)|    -|
+|  o VITIS_LOOP_88_2                             |       -|                    -|         2|        1|  2048|       yes|     2048|  1.024e+04|   3.65|        -|        -|           -|           -|    -|
+| o VITIS_LOOP_93_3                              |       -|                    -|        88|        -|     -|        no|        -|          -|   3.65|        -|        -|           -|           -|    -|
+|  + sparse_getrf_Pipeline_VITIS_LOOP_103_4      |  Timing|                    -|         -|       11|     -|        no|       11|     59.180|  -1.73|        -|        -|   285 (~0%)|   618 (~0%)|    -|
+|   o VITIS_LOOP_103_4                           |      II|  Resource Limitation|        16|        9|     0|       yes|        8|     43.040|   3.65|        -|        -|           -|           -|    -|
+|  + sparse_getrf_Pipeline_VITIS_LOOP_120_5      |  Timing|                    -|         -|       11|     -|        no|       11|     59.180|  -1.73|        -|        -|   112 (~0%)|   484 (~0%)|    -|
+|   o VITIS_LOOP_120_5                           |      II|  Resource Limitation|         9|        9|     0|       yes|        8|     43.040|   3.65|        -|        -|           -|           -|    -|
+|  o VITIS_LOOP_138_6                            |       -|                    -|        51|        -|     0|        no|       24|    142.272|   3.65|        -|        -|           -|           -|    -|
+|   + sparse_getrf_Pipeline_VITIS_LOOP_13_1      |  Timing|                    -|         -|        -|     -|       yes|       10|     59.280|  -2.28|        -|        -|   173 (~0%)|   395 (~0%)|    -|
+|    o VITIS_LOOP_13_1                           |      II|  Resource Limitation|         9|        9|     0|       yes|        8|     47.424|   3.65|        -|        -|           -|           -|    -|
+|   + sparse_getrf_Pipeline_VITIS_LOOP_13_11     |  Timing|                    -|         -|        -|     -|       yes|       10|     59.280|  -2.28|        -|        -|   173 (~0%)|   395 (~0%)|    -|
+|    o VITIS_LOOP_13_1                           |      II|  Resource Limitation|         9|        9|     0|       yes|        8|     47.424|   3.65|        -|        -|           -|           -|    -|
+| o VITIS_LOOP_163_7                             |       -|                    -|         -|        -|     -|        no|        -|          -|   3.65|        -|        -|           -|           -|    -|
+|  o VITIS_LOOP_167_8                            |       -|                    -|         -|        -|     0|        no|        -|          -|   3.65|        -|        -|           -|           -|    -|
+|   + sparse_getrf_Pipeline_VITIS_LOOP_13_13     |  Timing|                    -|         -|        -|     -|       yes|       10|     59.280|  -2.28|        -|        -|   173 (~0%)|   395 (~0%)|    -|
+|    o VITIS_LOOP_13_1                           |      II|  Resource Limitation|         9|        9|     0|       yes|        8|     47.424|   3.65|        -|        -|           -|           -|    -|
+|   o VITIS_LOOP_173_9                           |       -|                    -|         -|        -|     0|        no|        -|          -|   3.65|        -|        -|           -|           -|    -|
+|    + sparse_getrf_Pipeline_VITIS_LOOP_13_12    |  Timing|                    -|         -|        -|     -|       yes|       10|     59.280|  -2.28|        -|        -|   173 (~0%)|   395 (~0%)|    -|
+|     o VITIS_LOOP_13_1                          |      II|  Resource Limitation|         9|        9|     0|       yes|        8|     47.424|   3.65|        -|        -|           -|           -|    -|
+|    o VITIS_LOOP_191_10                         |       -|                    -|         -|        -|     0|        no|        -|          -|   3.65|        -|        -|           -|           -|    -|
+|     + sparse_getrf_Pipeline_VITIS_LOOP_198_11  |       -|                    -|         -|        -|     -|       yes|        -|          -|   0.00|        -|        -|   173 (~0%)|   302 (~0%)|    -|
+|      o VITIS_LOOP_198_11                       |      II|  Resource Limitation|        11|       11|     -|       yes|        -|          -|   3.65|        -|        -|           -|           -|    -|
+|     + sparse_getrf_Pipeline_VITIS_LOOP_206_12  |       -|                    -|         -|        -|     -|       yes|        -|          -|   0.00|        -|        -|   173 (~0%)|   302 (~0%)|    -|
+|      o VITIS_LOOP_206_12                       |      II|  Resource Limitation|        11|       11|     -|       yes|        -|          -|   3.65|        -|        -|           -|           -|    -|
++------------------------------------------------+--------+---------------------+----------+---------+------+----------+---------+-----------+-------+---------+---------+------------+------------+-----+
+    II Violation Information: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_a_col | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_a_row | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_a_val | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_l_col | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_l_row | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_l_val | READ_WRITE | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_u_col | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_u_row | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_u_val | READ_WRITE | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control   | 32         | 7             | 16     | 0        |
+| s_axi_control_r | 32         | 7             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+-----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface       | Register        | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-----------------+-----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control   | CTRL            | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control   | GIER            | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control   | IP_IER          | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control   | IP_ISR          | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control   | n               | 0x10   | 32    | W      | Data signal of n                 |                                                                      |
+| s_axi_control   | a_nnz           | 0x18   | 32    | W      | Data signal of a_nnz             |                                                                      |
+| s_axi_control   | l_nnz           | 0x20   | 32    | W      | Data signal of l_nnz             |                                                                      |
+| s_axi_control   | u_nnz           | 0x28   | 32    | W      | Data signal of u_nnz             |                                                                      |
+| s_axi_control   | pivot_eps       | 0x30   | 32    | W      | Data signal of pivot_eps         |                                                                      |
+| s_axi_control   | status          | 0x38   | 32    | R      | Data signal of status            |                                                                      |
+| s_axi_control   | status_ctrl     | 0x3c   | 32    | R      | Control signal of status         | 0=status_ap_vld                                                      |
+| s_axi_control   | failed_row      | 0x48   | 32    | R      | Data signal of failed_row        |                                                                      |
+| s_axi_control   | failed_row_ctrl | 0x4c   | 32    | R      | Control signal of failed_row     | 0=failed_row_ap_vld                                                  |
+| s_axi_control_r | A_rcsr_1        | 0x10   | 32    | W      | Data signal of A_rcsr            |                                                                      |
+| s_axi_control_r | A_rcsr_2        | 0x14   | 32    | W      | Data signal of A_rcsr            |                                                                      |
+| s_axi_control_r | A_cid_1         | 0x1c   | 32    | W      | Data signal of A_cid             |                                                                      |
+| s_axi_control_r | A_cid_2         | 0x20   | 32    | W      | Data signal of A_cid             |                                                                      |
+| s_axi_control_r | A_val_r_1       | 0x28   | 32    | W      | Data signal of A_val_r           |                                                                      |
+| s_axi_control_r | A_val_r_2       | 0x2c   | 32    | W      | Data signal of A_val_r           |                                                                      |
+| s_axi_control_r | L_rcsr_1        | 0x34   | 32    | W      | Data signal of L_rcsr            |                                                                      |
+| s_axi_control_r | L_rcsr_2        | 0x38   | 32    | W      | Data signal of L_rcsr            |                                                                      |
+| s_axi_control_r | L_cid_1         | 0x40   | 32    | W      | Data signal of L_cid             |                                                                      |
+| s_axi_control_r | L_cid_2         | 0x44   | 32    | W      | Data signal of L_cid             |                                                                      |
+| s_axi_control_r | L_val_r_1       | 0x4c   | 32    | W      | Data signal of L_val_r           |                                                                      |
+| s_axi_control_r | L_val_r_2       | 0x50   | 32    | W      | Data signal of L_val_r           |                                                                      |
+| s_axi_control_r | U_rcsr_1        | 0x58   | 32    | W      | Data signal of U_rcsr            |                                                                      |
+| s_axi_control_r | U_rcsr_2        | 0x5c   | 32    | W      | Data signal of U_rcsr            |                                                                      |
+| s_axi_control_r | U_cid_1         | 0x64   | 32    | W      | Data signal of U_cid             |                                                                      |
+| s_axi_control_r | U_cid_2         | 0x68   | 32    | W      | Data signal of U_cid             |                                                                      |
+| s_axi_control_r | U_val_r_1       | 0x70   | 32    | W      | Data signal of U_val_r           |                                                                      |
+| s_axi_control_r | U_val_r_2       | 0x74   | 32    | W      | Data signal of U_val_r           |                                                                      |
++-----------------+-----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+----------------------+
+| Argument   | Direction | Datatype             |
++------------+-----------+----------------------+
+| A_rcsr     | in        | unsigned int const * |
+| A_cid      | in        | unsigned int const * |
+| A_val      | in        | float const *        |
+| L_rcsr     | in        | unsigned int const * |
+| L_cid      | in        | unsigned int const * |
+| L_val      | inout     | float*               |
+| U_rcsr     | in        | unsigned int const * |
+| U_cid      | in        | unsigned int const * |
+| U_val      | inout     | float*               |
+| n          | in        | unsigned int         |
+| a_nnz      | in        | unsigned int         |
+| l_nnz      | in        | unsigned int         |
+| u_nnz      | in        | unsigned int         |
+| pivot_eps  | in        | float                |
+| status     | out       | unsigned int*        |
+| failed_row | out       | unsigned int*        |
++------------+-----------+----------------------+
+
+* SW-to-HW Mapping
++------------+-----------------+-----------+----------+-------------------------------------------+
+| Argument   | HW Interface    | HW Type   | HW Usage | HW Info                                   |
++------------+-----------------+-----------+----------+-------------------------------------------+
+| A_rcsr     | m_axi_a_row     | interface |          | channel=0                                 |
+| A_rcsr     | s_axi_control_r | register  | offset   | name=A_rcsr_1 offset=0x10 range=32        |
+| A_rcsr     | s_axi_control_r | register  | offset   | name=A_rcsr_2 offset=0x14 range=32        |
+| A_cid      | m_axi_a_col     | interface |          | channel=0                                 |
+| A_cid      | s_axi_control_r | register  | offset   | name=A_cid_1 offset=0x1c range=32         |
+| A_cid      | s_axi_control_r | register  | offset   | name=A_cid_2 offset=0x20 range=32         |
+| A_val      | m_axi_a_val     | interface |          | channel=0                                 |
+| A_val      | s_axi_control_r | register  | offset   | name=A_val_r_1 offset=0x28 range=32       |
+| A_val      | s_axi_control_r | register  | offset   | name=A_val_r_2 offset=0x2c range=32       |
+| L_rcsr     | m_axi_l_row     | interface |          | channel=0                                 |
+| L_rcsr     | s_axi_control_r | register  | offset   | name=L_rcsr_1 offset=0x34 range=32        |
+| L_rcsr     | s_axi_control_r | register  | offset   | name=L_rcsr_2 offset=0x38 range=32        |
+| L_cid      | m_axi_l_col     | interface |          | channel=0                                 |
+| L_cid      | s_axi_control_r | register  | offset   | name=L_cid_1 offset=0x40 range=32         |
+| L_cid      | s_axi_control_r | register  | offset   | name=L_cid_2 offset=0x44 range=32         |
+| L_val      | m_axi_l_val     | interface |          | channel=0                                 |
+| L_val      | s_axi_control_r | register  | offset   | name=L_val_r_1 offset=0x4c range=32       |
+| L_val      | s_axi_control_r | register  | offset   | name=L_val_r_2 offset=0x50 range=32       |
+| U_rcsr     | m_axi_u_row     | interface |          | channel=0                                 |
+| U_rcsr     | s_axi_control_r | register  | offset   | name=U_rcsr_1 offset=0x58 range=32        |
+| U_rcsr     | s_axi_control_r | register  | offset   | name=U_rcsr_2 offset=0x5c range=32        |
+| U_cid      | m_axi_u_col     | interface |          | channel=0                                 |
+| U_cid      | s_axi_control_r | register  | offset   | name=U_cid_1 offset=0x64 range=32         |
+| U_cid      | s_axi_control_r | register  | offset   | name=U_cid_2 offset=0x68 range=32         |
+| U_val      | m_axi_u_val     | interface |          | channel=0                                 |
+| U_val      | s_axi_control_r | register  | offset   | name=U_val_r_1 offset=0x70 range=32       |
+| U_val      | s_axi_control_r | register  | offset   | name=U_val_r_2 offset=0x74 range=32       |
+| n          | s_axi_control   | register  |          | name=n offset=0x10 range=32               |
+| a_nnz      | s_axi_control   | register  |          | name=a_nnz offset=0x18 range=32           |
+| l_nnz      | s_axi_control   | register  |          | name=l_nnz offset=0x20 range=32           |
+| u_nnz      | s_axi_control   | register  |          | name=u_nnz offset=0x28 range=32           |
+| pivot_eps  | s_axi_control   | register  |          | name=pivot_eps offset=0x30 range=32       |
+| status     | s_axi_control   | register  |          | name=status offset=0x38 range=32          |
+| status     | s_axi_control   | register  |          | name=status_ctrl offset=0x3c range=32     |
+| failed_row | s_axi_control   | register  |          | name=failed_row offset=0x48 range=32      |
+| failed_row | s_axi_control   | register  |          | name=failed_row_ctrl offset=0x4c range=32 |
++------------+-----------------+-----------+----------+-------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+----------+-------+-----------------+------------------------+
+| HW Interface | Direction | Length   | Width | Loop            | Loop Location          |
++--------------+-----------+----------+-------+-----------------+------------------------+
+| m_axi_a_row  | read      | 2        | 32    |                 |                        |
+| m_axi_l_row  | read      | 2        | 32    |                 |                        |
+| m_axi_l_val  | write     | variable | 32    | VITIS_LOOP_84_1 | sparse_getrf.cpp:84:19 |
+| m_axi_u_row  | read      | 2        | 32    |                 |                        |
+| m_axi_u_val  | write     | variable | 32    | VITIS_LOOP_88_2 | sparse_getrf.cpp:88:19 |
++--------------+-----------+----------+-------+-----------------+------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+-------------------------+-----------+--------------+----------+------------------+-------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location         | Direction | Burst Status | Length   | Loop             | Loop Location           | Resolution | Problem                                                                                                 |
++--------------+----------+-------------------------+-----------+--------------+----------+------------------+-------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_a_row  | A_rcsr   | sparse_getrf.cpp:94:7   | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_a_row  | A_rcsr   | sparse_getrf.cpp:94:21  | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_a_row  | A_rcsr   | sparse_getrf.cpp:94:7   | read      | Inferred     | 2        | VITIS_LOOP_93_3  | sparse_getrf.cpp:93:19  |            |                                                                                                         |
+| m_axi_a_row  | A_rcsr   | sparse_getrf.cpp:94:21  | read      | Inferred     | 2        | VITIS_LOOP_93_3  | sparse_getrf.cpp:93:19  |            |                                                                                                         |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:11:27  | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:11:27  | read      | Inferred     | 2        | VITIS_LOOP_138_6 | sparse_getrf.cpp:138:21 |            |                                                                                                         |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:12:25  | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:12:25  | read      | Inferred     | 2        | VITIS_LOOP_138_6 | sparse_getrf.cpp:138:21 |            |                                                                                                         |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:95:5   | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:95:19  | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:95:5   | read      | Inferred     | 2        | VITIS_LOOP_93_3  | sparse_getrf.cpp:93:19  |            |                                                                                                         |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:95:19  | read      | Inferred     | 2        | VITIS_LOOP_93_3  | sparse_getrf.cpp:93:19  |            |                                                                                                         |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:168:31 | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:168:31 | read      | Inferred     | 2        | VITIS_LOOP_167_8 | sparse_getrf.cpp:167:21 |            |                                                                                                         |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:169:29 | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_l_row  | L_rcsr   | sparse_getrf.cpp:169:29 | read      | Inferred     | 2        | VITIS_LOOP_167_8 | sparse_getrf.cpp:167:21 |            |                                                                                                         |
+| m_axi_l_val  | L_val    | sparse_getrf.cpp:86:14  | write     | Widen Fail   |          | VITIS_LOOP_84_1  | sparse_getrf.cpp:84:19  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_l_val  | L_val    | sparse_getrf.cpp:86:14  | write     | Inferred     | variable | VITIS_LOOP_84_1  | sparse_getrf.cpp:84:19  |            |                                                                                                         |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:11:27  | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:11:27  | read      | Inferred     | 2        | VITIS_LOOP_173_9 | sparse_getrf.cpp:173:22 |            |                                                                                                         |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:11:27  | read      | Inferred     | 2        | VITIS_LOOP_138_6 | sparse_getrf.cpp:138:21 |            |                                                                                                         |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:12:25  | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:12:25  | read      | Inferred     | 2        | VITIS_LOOP_173_9 | sparse_getrf.cpp:173:22 |            |                                                                                                         |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:12:25  | read      | Inferred     | 2        | VITIS_LOOP_138_6 | sparse_getrf.cpp:138:21 |            |                                                                                                         |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:96:5   | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:96:19  | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:96:5   | read      | Inferred     | 2        | VITIS_LOOP_93_3  | sparse_getrf.cpp:93:19  |            |                                                                                                         |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:96:19  | read      | Inferred     | 2        | VITIS_LOOP_93_3  | sparse_getrf.cpp:93:19  |            |                                                                                                         |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:170:31 | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:170:31 | read      | Inferred     | 2        | VITIS_LOOP_167_8 | sparse_getrf.cpp:167:21 |            |                                                                                                         |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:171:29 | read      | Widen Fail   |          |                  |                         | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   |
+| m_axi_u_row  | U_rcsr   | sparse_getrf.cpp:171:29 | read      | Inferred     | 2        | VITIS_LOOP_167_8 | sparse_getrf.cpp:167:21 |            |                                                                                                         |
+| m_axi_u_val  | U_val    | sparse_getrf.cpp:90:14  | write     | Widen Fail   |          | VITIS_LOOP_88_2  | sparse_getrf.cpp:88:19  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_u_val  | U_val    | sparse_getrf.cpp:90:14  | write     | Inferred     | variable | VITIS_LOOP_88_2  | sparse_getrf.cpp:88:19  |            |                                                                                                         |
++--------------+----------+-------------------------+-----------+--------------+----------+------------------+-------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------+-----+--------+----------------+--------+----------+---------+
+| Name                                       | DSP | Pragma | Variable       | Op     | Impl     | Latency |
++--------------------------------------------+-----+--------+----------------+--------+----------+---------+
+| + sparse_getrf                             | 5   |        |                |        |          |         |
+|   add_ln71_fu_986_p2                       |     |        | add_ln71       | add    | fabric   | 0       |
+|   icmp_ln71_fu_1002_p2                     |     |        | icmp_ln71      | setne  | auto     | 0       |
+|   icmp_ln71_1_fu_1008_p2                   |     |        | icmp_ln71_1    | setgt  | auto     | 0       |
+|   icmp_ln72_fu_1014_p2                     |     |        | icmp_ln72      | setgt  | auto     | 0       |
+|   icmp_ln72_1_fu_1020_p2                   |     |        | icmp_ln72_1    | setgt  | auto     | 0       |
+|   or_ln71_fu_1026_p2                       |     |        | or_ln71        | or     | auto     | 0       |
+|   or_ln71_1_fu_1032_p2                     |     |        | or_ln71_1      | or     | auto     | 0       |
+|   or_ln71_2_fu_1038_p2                     |     |        | or_ln71_2      | or     | auto     | 0       |
+|   icmp_ln76_fu_1064_p2                     |     |        | icmp_ln76      | seteq  | auto     | 0       |
+|   icmp_ln76_1_fu_1090_p2                   |     |        | icmp_ln76_1    | seteq  | auto     | 0       |
+|   icmp_ln76_2_fu_1116_p2                   |     |        | icmp_ln76_2    | seteq  | auto     | 0       |
+|   add_ln77_fu_1133_p2                      |     |        | add_ln77       | add    | fabric   | 0       |
+|   icmp_ln77_fu_1158_p2                     |     |        | icmp_ln77      | seteq  | auto     | 0       |
+|   add_ln77_1_fu_1163_p2                    |     |        | add_ln77_1     | add    | fabric   | 0       |
+|   icmp_ln77_1_fu_1187_p2                   |     |        | icmp_ln77_1    | seteq  | auto     | 0       |
+|   add_ln77_2_fu_1192_p2                    |     |        | add_ln77_2     | add    | fabric   | 0       |
+|   icmp_ln77_2_fu_1216_p2                   |     |        | icmp_ln77_2    | seteq  | auto     | 0       |
+|   icmp_ln93_fu_1275_p2                     |     |        | icmp_ln93      | seteq  | auto     | 0       |
+|   icmp_ln93_1_fu_1288_p2                   |     |        | icmp_ln93_1    | setlt  | auto     | 0       |
+|   add_ln94_3_fu_1293_p2                    |     |        | add_ln94_3     | add    | fabric   | 0       |
+|   add_ln94_fu_1311_p2                      |     |        | add_ln94       | add    | fabric   | 0       |
+|   add_ln94_1_fu_1354_p2                    |     |        | add_ln94_1     | add    | fabric   | 0       |
+|   add_ln94_2_fu_1358_p2                    |     |        | add_ln94_2     | add    | fabric   | 0       |
+|   icmp_ln94_fu_1362_p2                     |     |        | icmp_ln94      | setgt  | auto     | 0       |
+|   icmp_ln95_fu_1387_p2                     |     |        | icmp_ln95      | setgt  | auto     | 0       |
+|   icmp_ln96_fu_1412_p2                     |     |        | icmp_ln96      | setgt  | auto     | 0       |
+|   grp_fu_962_p2                            |     |        | icmp_ln103     | setlt  | auto     | 0       |
+|   grp_fu_968_p2                            |     |        | icmp_ln120     | setlt  | auto     | 0       |
+|   and_ln132_fu_1424_p2                     |     |        | and_ln132      | and    | auto     | 0       |
+|   icmp_ln138_fu_1430_p2                    |     |        | icmp_ln138     | setlt  | auto     | 0       |
+|   icmp_ln138_1_fu_1435_p2                  |     |        | icmp_ln138_1   | setlt  | auto     | 0       |
+|   add_ln140_fu_1452_p2                     |     |        | add_ln140      | add    | fabric   | 0       |
+|   icmp_ln141_fu_1487_p2                    |     |        | icmp_ln141     | setlt  | auto     | 0       |
+|   add_ln138_fu_1477_p2                     |     |        | add_ln138      | add    | fabric   | 0       |
+|   icmp_ln141_1_fu_1491_p2                  |     |        | icmp_ln141_1   | seteq  | auto     | 0       |
+|   icmp_ln141_2_fu_1497_p2                  |     |        | icmp_ln141_2   | setlt  | auto     | 0       |
+|   or_ln141_fu_1502_p2                      |     |        | or_ln141       | or     | auto     | 0       |
+|   icmp_ln145_fu_1508_p2                    |     |        | icmp_ln145     | setgt  | auto     | 0       |
+|   cond723_fu_1518_p2                       |     |        | cond723        | seteq  | auto     | 0       |
+|   grp_fu_974_p2                            |     |        | ult114         | setlt  | auto     | 0       |
+|   rev115_fu_1524_p2                        |     |        | rev115         | xor    | auto     | 0       |
+|   cond72_fu_1529_p2                        |     |        | cond72         | or     | auto     | 0       |
+|   spec_select136_fu_1535_p3                |     |        | spec_select136 | select | auto_sel | 0       |
+|   cond1044_fu_1553_p2                      |     |        | cond1044       | seteq  | auto     | 0       |
+|   ult_fu_1543_p2                           |     |        | ult            | setlt  | auto     | 0       |
+|   rev113_fu_1559_p2                        |     |        | rev113         | xor    | auto     | 0       |
+|   cond104_fu_1564_p2                       |     |        | cond104        | or     | auto     | 0       |
+|   spec_select137_fu_1570_p3                |     |        | spec_select137 | select | auto_sel | 0       |
+|   icmp_ln148_fu_1578_p2                    |     |        | icmp_ln148     | seteq  | auto     | 0       |
+|   add_ln153_fu_1584_p2                     |     |        | add_ln153      | add    | fabric   | 0       |
+|   add_ln155_fu_1620_p2                     |     |        | add_ln155      | add    | fabric   | 0       |
+|   add_ln153_1_fu_1645_p2                   |     |        | add_ln153_1    | add    | fabric   | 0       |
+|   icmp_ln181_3_fu_1343_p2                  |     |        | icmp_ln181_3   | seteq  | auto     | 0       |
+|   icmp_ln165_fu_1678_p2                    |     |        | icmp_ln165     | setlt  | auto     | 0       |
+|   panel_begin_fu_1683_p2                   |     |        | panel_begin    | add    | fabric   | 0       |
+|   icmp_ln165_1_fu_1689_p2                  |     |        | icmp_ln165_1   | setlt  | auto     | 0       |
+|   panel_end_fu_1693_p3                     |     |        | panel_end      | select | auto_sel | 0       |
+|   icmp_ln167_fu_1699_p2                    |     |        | icmp_ln167     | setlt  | auto     | 0       |
+|   icmp_ln167_1_fu_1704_p2                  |     |        | icmp_ln167_1   | setlt  | auto     | 0       |
+|   add_ln168_fu_1721_p2                     |     |        | add_ln168      | add    | fabric   | 0       |
+|   add_ln168_1_fu_1726_p2                   |     |        | add_ln168_1    | add    | fabric   | 0       |
+|   add_ln169_fu_1751_p2                     |     |        | add_ln169      | add    | fabric   | 0       |
+|   grp_fu_962_p2                            |     |        | icmp_ln173     | setlt  | auto     | 0       |
+|   icmp_ln173_1_fu_1781_p2                  |     |        | icmp_ln173_1   | setlt  | auto     | 0       |
+|   add_ln174_fu_1799_p2                     |     |        | add_ln174      | add    | fabric   | 0       |
+|   icmp_ln175_fu_1830_p2                    |     |        | icmp_ln175     | setgt  | auto     | 0       |
+|   add_ln173_fu_1824_p2                     |     |        | add_ln173      | add    | fabric   | 0       |
+|   add_ln11_fu_1846_p2                      |     |        | add_ln11       | add    | fabric   | 0       |
+|   grp_fu_974_p2                            |     |        | icmp_ln13      | setlt  | auto     | 0       |
+|   cond402_fu_1877_p2                       |     |        | cond402        | seteq  | auto     | 0       |
+|   not_cmp_i17127_fu_1883_p2                |     |        | not_cmp_i17127 | xor    | auto     | 0       |
+|   cond40_fu_1889_p2                        |     |        | cond40         | or     | auto     | 0       |
+|   pivot_pos_fu_1895_p3                     |     |        | pivot_pos      | select | auto_sel | 0       |
+|   icmp_ln180_fu_1903_p2                    |     |        | icmp_ln180     | seteq  | auto     | 0       |
+|   add_ln181_fu_1921_p2                     |     |        | add_ln181      | add    | fabric   | 0       |
+|   grp_fu_980_p2                            |     |        | icmp_ln5       | setne  | auto     | 0       |
+|   icmp_ln5_1_fu_1955_p2                    |     |        | icmp_ln5_1     | seteq  | auto     | 0       |
+|   or_ln5_fu_1960_p2                        |     |        | or_ln5         | or     | auto     | 0       |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U66          |     |        | tmp_1          | fcmp   | auto     | 1       |
+|   and_ln5_fu_1964_p2                       |     |        | and_ln5        | and    | auto     | 0       |
+|   xor_ln5_2_fu_1978_p2                     |     |        | xor_ln5_2      | xor    | auto     | 0       |
+|   select_ln5_fu_2000_p3                    |     |        | select_ln5     | select | auto_sel | 0       |
+|   icmp_ln181_fu_2024_p2                    |     |        | icmp_ln181     | setne  | auto     | 0       |
+|   icmp_ln181_1_fu_2030_p2                  |     |        | icmp_ln181_1   | seteq  | auto     | 0       |
+|   or_ln181_fu_2036_p2                      |     |        | or_ln181       | or     | auto     | 0       |
+|   grp_fu_866_p2                            |     |        | icmp_ln181_2   | setne  | auto     | 0       |
+|   or_ln181_1_fu_2040_p2                    |     |        | or_ln181_1     | or     | auto     | 0       |
+|   and_ln181_fu_2044_p2                     |     |        | and_ln181      | and    | auto     | 0       |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U66          |     |        | tmp_4          | fcmp   | auto     | 1       |
+|   and_ln181_1_fu_2050_p2                   |     |        | and_ln181_1    | and    | auto     | 0       |
+|   add_ln186_fu_2056_p2                     |     |        | add_ln186      | add    | fabric   | 0       |
+|   fdiv_32ns_32ns_32_16_no_dsp_1_U65        |     |        | multiplier     | fdiv   | fabric   | 15      |
+|   icmp_ln192_fu_2089_p2                    |     |        | icmp_ln192     | setlt  | auto     | 0       |
+|   add_ln193_fu_2107_p2                     |     |        | add_ln193      | add    | fabric   | 0       |
+|   icmp_ln194_fu_2132_p2                    |     |        | icmp_ln194     | setgt  | auto     | 0       |
+|   icmp_ln197_fu_2136_p2                    |     |        | icmp_ln197     | setgt  | auto     | 0       |
+|   icmp_ln208_fu_2144_p2                    |     |        | icmp_ln208     | seteq  | auto     | 0       |
+|   add_ln208_fu_2162_p2                     |     |        | add_ln208      | add    | fabric   | 0       |
+|   icmp_ln208_1_fu_2187_p2                  |     |        | icmp_ln208_1   | seteq  | auto     | 0       |
+|   grp_fu_882_p2                            |     |        | add_ln212      | add    | fabric   | 0       |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U64        | 3   |        | mul1           | fmul   | maxdsp   | 4       |
+|   add_ln212_1_fu_2201_p2                   |     |        | add_ln212_1    | add    | fabric   | 0       |
+|   fsub_32ns_32ns_32_8_full_dsp_1_U63       | 2   |        | sub1           | fsub   | fulldsp  | 7       |
+|   icmp_ln200_fu_2249_p2                    |     |        | icmp_ln200     | seteq  | auto     | 0       |
+|   add_ln200_fu_2267_p2                     |     |        | add_ln200      | add    | fabric   | 0       |
+|   icmp_ln200_1_fu_2292_p2                  |     |        | icmp_ln200_1   | seteq  | auto     | 0       |
+|   grp_fu_882_p2                            |     |        | add_ln204      | add    | fabric   | 0       |
+|   fmul_32ns_32ns_32_5_max_dsp_1_U64        | 3   |        | mul            | fmul   | maxdsp   | 4       |
+|   add_ln204_1_fu_2306_p2                   |     |        | add_ln204_1    | add    | fabric   | 0       |
+|   fsub_32ns_32ns_32_8_full_dsp_1_U63       | 2   |        | sub            | fsub   | fulldsp  | 7       |
+|   add_ln192_fu_2240_p2                     |     |        | add_ln192      | add    | fabric   | 0       |
+|   cond31_fu_2351_p2                        |     |        | cond31         | seteq  | auto     | 0       |
+|   grp_fu_968_p2                            |     |        | ult116         | setlt  | auto     | 0       |
+|   rev117_fu_2357_p2                        |     |        | rev117         | xor    | auto     | 0       |
+|   cond3_fu_2363_p2                         |     |        | cond3          | or     | auto     | 0       |
+|   diagonal_fu_2369_p3                      |     |        | diagonal       | select | auto_sel | 0       |
+|   icmp_ln218_fu_2377_p2                    |     |        | icmp_ln218     | seteq  | auto     | 0       |
+|   add_ln219_fu_2395_p2                     |     |        | add_ln219      | add    | fabric   | 0       |
+|   grp_fu_980_p2                            |     |        | icmp_ln5_2     | setne  | auto     | 0       |
+|   icmp_ln5_3_fu_2429_p2                    |     |        | icmp_ln5_3     | seteq  | auto     | 0       |
+|   or_ln5_1_fu_2434_p2                      |     |        | or_ln5_1       | or     | auto     | 0       |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U66          |     |        | tmp_6          | fcmp   | auto     | 1       |
+|   and_ln5_1_fu_2438_p2                     |     |        | and_ln5_1      | and    | auto     | 0       |
+|   xor_ln5_3_fu_2452_p2                     |     |        | xor_ln5_3      | xor    | auto     | 0       |
+|   select_ln5_1_fu_2474_p3                  |     |        | select_ln5_1   | select | auto_sel | 0       |
+|   icmp_ln219_fu_2498_p2                    |     |        | icmp_ln219     | setne  | auto     | 0       |
+|   icmp_ln219_1_fu_2504_p2                  |     |        | icmp_ln219_1   | seteq  | auto     | 0       |
+|   or_ln219_fu_2510_p2                      |     |        | or_ln219       | or     | auto     | 0       |
+|   grp_fu_866_p2                            |     |        | icmp_ln219_2   | setne  | auto     | 0       |
+|   or_ln219_1_fu_2514_p2                    |     |        | or_ln219_1     | or     | auto     | 0       |
+|   and_ln219_fu_2518_p2                     |     |        | and_ln219      | and    | auto     | 0       |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U66          |     |        | tmp_9          | fcmp   | auto     | 1       |
+|   and_ln219_1_fu_2524_p2                   |     |        | and_ln219_1    | and    | auto     | 0       |
+|  + sparse_getrf_Pipeline_VITIS_LOOP_84_1   | 0   |        |                |        |          |         |
+|    icmp_ln84_fu_91_p2                      |     |        | icmp_ln84      | seteq  | auto     | 0       |
+|    add_ln84_fu_97_p2                       |     |        | add_ln84       | add    | fabric   | 0       |
+|  + sparse_getrf_Pipeline_VITIS_LOOP_88_2   | 0   |        |                |        |          |         |
+|    icmp_ln88_fu_91_p2                      |     |        | icmp_ln88      | seteq  | auto     | 0       |
+|    add_ln88_fu_97_p2                       |     |        | add_ln88       | add    | fabric   | 0       |
+|  + sparse_getrf_Pipeline_VITIS_LOOP_103_4  | 0   |        |                |        |          |         |
+|    icmp_ln103_fu_222_p2                    |     |        | icmp_ln103     | setlt  | auto     | 0       |
+|    add_ln105_fu_239_p2                     |     |        | add_ln105      | add    | fabric   | 0       |
+|    icmp_ln106_fu_265_p2                    |     |        | icmp_ln106     | setlt  | auto     | 0       |
+|    xor_ln106_fu_270_p2                     |     |        | xor_ln106      | xor    | auto     | 0       |
+|    icmp_ln106_1_fu_276_p2                  |     |        | icmp_ln106_1   | setlt  | auto     | 0       |
+|    or_ln106_fu_281_p2                      |     |        | or_ln106       | or     | auto     | 0       |
+|    add_ln103_fu_287_p2                     |     |        | add_ln103      | add    | fabric   | 0       |
+|    icmp_ln107_fu_295_p2                    |     |        | icmp_ln107     | seteq  | auto     | 0       |
+|    icmp_ln107_1_fu_301_p2                  |     |        | icmp_ln107_1   | setlt  | auto     | 0       |
+|    or_ln107_fu_307_p2                      |     |        | or_ln107       | or     | auto     | 0       |
+|    icmp_ln111_fu_313_p2                    |     |        | icmp_ln111     | seteq  | auto     | 0       |
+|    add_ln113_fu_318_p2                     |     |        | add_ln113      | add    | fabric   | 0       |
+|  + sparse_getrf_Pipeline_VITIS_LOOP_120_5  | 0   |        |                |        |          |         |
+|    icmp_ln120_fu_169_p2                    |     |        | icmp_ln120     | setlt  | auto     | 0       |
+|    add_ln122_fu_186_p2                     |     |        | add_ln122      | add    | fabric   | 0       |
+|    icmp_ln123_fu_212_p2                    |     |        | icmp_ln123     | setlt  | auto     | 0       |
+|    xor_ln123_fu_217_p2                     |     |        | xor_ln123      | xor    | auto     | 0       |
+|    icmp_ln123_1_fu_223_p2                  |     |        | icmp_ln123_1   | setgt  | auto     | 0       |
+|    or_ln123_fu_228_p2                      |     |        | or_ln123       | or     | auto     | 0       |
+|    add_ln120_fu_234_p2                     |     |        | add_ln120      | add    | fabric   | 0       |
+|    icmp_ln124_fu_242_p2                    |     |        | icmp_ln124     | seteq  | auto     | 0       |
+|    icmp_ln124_1_fu_248_p2                  |     |        | icmp_ln124_1   | setlt  | auto     | 0       |
+|    or_ln124_fu_254_p2                      |     |        | or_ln124       | or     | auto     | 0       |
+|    icmp_ln128_fu_260_p2                    |     |        | icmp_ln128     | seteq  | auto     | 0       |
+|    has_u_diag_1_fu_265_p2                  |     |        | has_u_diag_1   | or     | auto     | 0       |
+|  + sparse_getrf_Pipeline_VITIS_LOOP_13_1   | 0   |        |                |        |          |         |
+|    icmp_ln13_fu_169_p2                     |     |        | icmp_ln13      | setlt  | auto     | 0       |
+|    add_ln15_fu_187_p2                      |     |        | add_ln15       | add    | fabric   | 0       |
+|    icmp_ln16_fu_214_p2                     |     |        | icmp_ln16      | seteq  | auto     | 0       |
+|    select_ln16_fu_219_p3                   |     |        | select_ln16    | select | auto_sel | 0       |
+|    icmp_ln16_3_fu_227_p2                   |     |        | icmp_ln16_3    | setlt  | auto     | 0       |
+|    xor_ln16_fu_232_p2                      |     |        | xor_ln16       | xor    | auto     | 0       |
+|    select_ln16_6_fu_238_p3                 |     |        | select_ln16_6  | select | auto_sel | 0       |
+|    select_ln16_7_fu_247_p3                 |     |        | select_ln16_7  | select | auto_sel | 0       |
+|    cond71_fu_254_p2                        |     |        | cond71         | seteq  | auto     | 0       |
+|    add_ln13_fu_260_p2                      |     |        | add_ln13       | add    | fabric   | 0       |
+|  + sparse_getrf_Pipeline_VITIS_LOOP_13_11  | 0   |        |                |        |          |         |
+|    icmp_ln13_fu_169_p2                     |     |        | icmp_ln13      | setlt  | auto     | 0       |
+|    add_ln15_fu_187_p2                      |     |        | add_ln15       | add    | fabric   | 0       |
+|    icmp_ln16_2_fu_214_p2                   |     |        | icmp_ln16_2    | seteq  | auto     | 0       |
+|    select_ln16_fu_219_p3                   |     |        | select_ln16    | select | auto_sel | 0       |
+|    icmp_ln16_fu_227_p2                     |     |        | icmp_ln16      | setlt  | auto     | 0       |
+|    xor_ln16_fu_232_p2                      |     |        | xor_ln16       | xor    | auto     | 0       |
+|    select_ln16_4_fu_238_p3                 |     |        | select_ln16_4  | select | auto_sel | 0       |
+|    select_ln16_5_fu_247_p3                 |     |        | select_ln16_5  | select | auto_sel | 0       |
+|    cond103_fu_254_p2                       |     |        | cond103        | seteq  | auto     | 0       |
+|    add_ln13_fu_260_p2                      |     |        | add_ln13       | add    | fabric   | 0       |
+|  + sparse_getrf_Pipeline_VITIS_LOOP_13_12  | 0   |        |                |        |          |         |
+|    icmp_ln13_fu_169_p2                     |     |        | icmp_ln13      | setlt  | auto     | 0       |
+|    add_ln15_fu_187_p2                      |     |        | add_ln15       | add    | fabric   | 0       |
+|    icmp_ln16_fu_214_p2                     |     |        | icmp_ln16      | seteq  | auto     | 0       |
+|    select_ln16_3_fu_219_p3                 |     |        | select_ln16_3  | select | auto_sel | 0       |
+|    icmp_ln16_2_fu_227_p2                   |     |        | icmp_ln16_2    | setlt  | auto     | 0       |
+|    xor_ln16_fu_232_p2                      |     |        | xor_ln16       | xor    | auto     | 0       |
+|    select_ln16_fu_238_p3                   |     |        | select_ln16    | select | auto_sel | 0       |
+|    select_ln16_1_fu_247_p3                 |     |        | select_ln16_1  | select | auto_sel | 0       |
+|    cond39_fu_254_p2                        |     |        | cond39         | seteq  | auto     | 0       |
+|    add_ln13_fu_260_p2                      |     |        | add_ln13       | add    | fabric   | 0       |
+|  + sparse_getrf_Pipeline_VITIS_LOOP_198_11 | 0   |        |                |        |          |         |
+|    icmp_ln198_fu_119_p2                    |     |        | icmp_ln198     | setlt  | auto     | 0       |
+|    add_ln198_fu_137_p2                     |     |        | add_ln198      | add    | fabric   | 0       |
+|    icmp_ln198_1_fu_163_p2                  |     |        | icmp_ln198_1   | setlt  | auto     | 0       |
+|    add_ln199_fu_167_p2                     |     |        | add_ln199      | add    | fabric   | 0       |
+|  + sparse_getrf_Pipeline_VITIS_LOOP_206_12 | 0   |        |                |        |          |         |
+|    icmp_ln206_fu_119_p2                    |     |        | icmp_ln206     | setlt  | auto     | 0       |
+|    add_ln206_fu_137_p2                     |     |        | add_ln206      | add    | fabric   | 0       |
+|    icmp_ln206_1_fu_163_p2                  |     |        | icmp_ln206_1   | setlt  | auto     | 0       |
+|    add_ln207_fu_167_p2                     |     |        | add_ln207      | add    | fabric   | 0       |
+|  + sparse_getrf_Pipeline_VITIS_LOOP_13_13  | 0   |        |                |        |          |         |
+|    icmp_ln13_fu_169_p2                     |     |        | icmp_ln13      | setlt  | auto     | 0       |
+|    add_ln15_fu_187_p2                      |     |        | add_ln15       | add    | fabric   | 0       |
+|    icmp_ln16_fu_214_p2                     |     |        | icmp_ln16      | seteq  | auto     | 0       |
+|    select_ln16_fu_219_p3                   |     |        | select_ln16    | select | auto_sel | 0       |
+|    icmp_ln16_1_fu_227_p2                   |     |        | icmp_ln16_1    | setlt  | auto     | 0       |
+|    xor_ln16_fu_232_p2                      |     |        | xor_ln16       | xor    | auto     | 0       |
+|    select_ln16_1_fu_238_p3                 |     |        | select_ln16_1  | select | auto_sel | 0       |
+|    select_ln16_2_fu_247_p3                 |     |        | select_ln16_2  | select | auto_sel | 0       |
+|    cond2_fu_254_p2                         |     |        | cond2          | seteq  | auto     | 0       |
+|    add_ln13_fu_260_p2                      |     |        | add_ln13       | add    | fabric   | 0       |
++--------------------------------------------+-----+--------+----------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name                | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                     |           |           |      |      |        |          |      |         | Banks            |
++---------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + sparse_getrf      |           |           | 18   | 0    |        |          |      |         |                  |
+|   control_s_axi_U   | interface | s_axilite |      |      |        |          |      |         |                  |
+|   control_r_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
+|   a_col_m_axi_U     | interface | m_axi     | 2    |      |        |          |      |         |                  |
+|   a_row_m_axi_U     | interface | m_axi     | 2    |      |        |          |      |         |                  |
+|   a_val_m_axi_U     | interface | m_axi     | 2    |      |        |          |      |         |                  |
+|   l_col_m_axi_U     | interface | m_axi     | 2    |      |        |          |      |         |                  |
+|   l_row_m_axi_U     | interface | m_axi     | 2    |      |        |          |      |         |                  |
+|   l_val_m_axi_U     | interface | m_axi     | 2    |      |        |          |      |         |                  |
+|   u_col_m_axi_U     | interface | m_axi     | 2    |      |        |          |      |         |                  |
+|   u_row_m_axi_U     | interface | m_axi     | 2    |      |        |          |      |         |                  |
+|   u_val_m_axi_U     | interface | m_axi     | 2    |      |        |          |      |         |                  |
++---------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Inferred Pragmas
++----------+---------+-----------------------------------------------------------------------------------------+-------------------------------+
+| Type     | Options | Location                                                                                | Inferred From                 |
++----------+---------+-----------------------------------------------------------------------------------------+-------------------------------+
+| PIPELINE |         | loop VITIS_LOOP_198_11 (sparse_getrf.cpp:198:26) in sparse_getrf (sparse_getrf.cpp:198) | syn.compile.pipeline_loops=64 |
+| PIPELINE |         | loop VITIS_LOOP_206_12 (sparse_getrf.cpp:206:26) in sparse_getrf (sparse_getrf.cpp:206) | syn.compile.pipeline_loops=64 |
++----------+---------+-----------------------------------------------------------------------------------------+-------------------------------+
+
+* Valid Pragma Syntax
++-----------+---------------------------------------------------------+----------------------------------------+
+| Type      | Options                                                 | Location                               |
++-----------+---------------------------------------------------------+----------------------------------------+
+| INLINE    |                                                         | in getrf_abs (sparse_getrf.cpp:4)      |
+| INLINE    |                                                         | in find_in_row (sparse_getrf.cpp:10)   |
+| PIPELINE  | ii=1                                                    | in find_in_row (sparse_getrf.cpp:14)   |
+| INLINE    |                                                         | in set_failure (sparse_getrf.cpp:26)   |
+| INTERFACE | m_axi depth=64 +1 port=A_rcsr offset=slave bundle=a_row | in sparse_getrf (sparse_getrf.cpp:49)  |
+| INTERFACE | m_axi depth=1024 port=A_cid offset=slave bundle=a_col   | in sparse_getrf (sparse_getrf.cpp:50)  |
+| INTERFACE | m_axi depth=1024 port=A_val offset=slave bundle=a_val   | in sparse_getrf (sparse_getrf.cpp:51)  |
+| INTERFACE | m_axi depth=64 +1 port=L_rcsr offset=slave bundle=l_row | in sparse_getrf (sparse_getrf.cpp:52)  |
+| INTERFACE | m_axi depth=2048 port=L_cid offset=slave bundle=l_col   | in sparse_getrf (sparse_getrf.cpp:53)  |
+| INTERFACE | m_axi depth=2048 port=L_val offset=slave bundle=l_val   | in sparse_getrf (sparse_getrf.cpp:54)  |
+| INTERFACE | m_axi depth=64 +1 port=U_rcsr offset=slave bundle=u_row | in sparse_getrf (sparse_getrf.cpp:55)  |
+| INTERFACE | m_axi depth=2048 port=U_cid offset=slave bundle=u_col   | in sparse_getrf (sparse_getrf.cpp:56)  |
+| INTERFACE | m_axi depth=2048 port=U_val offset=slave bundle=u_val   | in sparse_getrf (sparse_getrf.cpp:57)  |
+| INTERFACE | s_axilite port=n bundle=control                         | in sparse_getrf (sparse_getrf.cpp:59)  |
+| INTERFACE | s_axilite port=a_nnz bundle=control                     | in sparse_getrf (sparse_getrf.cpp:60)  |
+| INTERFACE | s_axilite port=l_nnz bundle=control                     | in sparse_getrf (sparse_getrf.cpp:61)  |
+| INTERFACE | s_axilite port=u_nnz bundle=control                     | in sparse_getrf (sparse_getrf.cpp:62)  |
+| INTERFACE | s_axilite port=pivot_eps bundle=control                 | in sparse_getrf (sparse_getrf.cpp:63)  |
+| INTERFACE | s_axilite port=status bundle=control                    | in sparse_getrf (sparse_getrf.cpp:64)  |
+| INTERFACE | s_axilite port=failed_row bundle=control                | in sparse_getrf (sparse_getrf.cpp:65)  |
+| INTERFACE | s_axilite port=return bundle=control                    | in sparse_getrf (sparse_getrf.cpp:66)  |
+| PIPELINE  | ii=1                                                    | in sparse_getrf (sparse_getrf.cpp:85)  |
+| PIPELINE  | ii=1                                                    | in sparse_getrf (sparse_getrf.cpp:89)  |
+| PIPELINE  | ii=1                                                    | in sparse_getrf (sparse_getrf.cpp:104) |
+| PIPELINE  | ii=1                                                    | in sparse_getrf (sparse_getrf.cpp:121) |
+| PIPELINE  | ii=1                                                    | in sparse_getrf (sparse_getrf.cpp:139) |
++-----------+---------------------------------------------------------+----------------------------------------+
+
+

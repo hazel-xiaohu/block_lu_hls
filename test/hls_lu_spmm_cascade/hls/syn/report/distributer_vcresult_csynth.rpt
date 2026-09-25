@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'distributer_vcresult'
+================================================================
+* Date:           Fri Sep 25 00:05:30 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.498 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_349_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      32|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|      63|    -|
+|Register         |        -|     -|    1039|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|    1039|      95|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state2_pp0_stage0_iter1_grp1  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1_grp2  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1_grp3  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1_grp4  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op27_write_state2         |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op29_write_state2         |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op31_write_state2         |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op33_write_state2         |       and|   0|  0|   2|           1|           1|
+    |tmp_nbreadreq_fu_64_p3                 |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001_grp1         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp2         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp3         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001_grp4         |        or|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001              |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0       |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                          |       xor|   0|  0|   2|           1|           2|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                  |          |   0|  0|  32|          16|          16|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_done_int                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |cresult1_blk_n               |   9|          2|    1|          2|
+    |cresult2_blk_n               |   9|          2|    1|          2|
+    |cresult3_blk_n               |   9|          2|    1|          2|
+    |cresult4_blk_n               |   9|          2|    1|          2|
+    |vcache_bank1_cresult1_blk_n  |   9|          2|    1|          2|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        |  63|         14|    7|         14|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------+------+----+------+-----------+
+    |                       Name                      |  FF  | LUT| Bits | Const Bits|
+    +-------------------------------------------------+------+----+------+-----------+
+    |ap_CS_fsm                                        |     1|   0|     1|          0|
+    |ap_block_pp0_stage0_subdone_grp1_done_reg        |     1|   0|     1|          0|
+    |ap_block_pp0_stage0_subdone_grp1_done_reg_iter0  |     1|   0|     1|          0|
+    |ap_block_pp0_stage0_subdone_grp2_done_reg        |     1|   0|     1|          0|
+    |ap_block_pp0_stage0_subdone_grp2_done_reg_iter0  |     1|   0|     1|          0|
+    |ap_block_pp0_stage0_subdone_grp3_done_reg        |     1|   0|     1|          0|
+    |ap_block_pp0_stage0_subdone_grp3_done_reg_iter0  |     1|   0|     1|          0|
+    |ap_block_pp0_stage0_subdone_grp4_done_reg        |     1|   0|     1|          0|
+    |ap_block_pp0_stage0_subdone_grp4_done_reg_iter0  |     1|   0|     1|          0|
+    |ap_done_reg                                      |     1|   0|     1|          0|
+    |ap_enable_reg_pp0_iter1                          |     1|   0|     1|          0|
+    |temp_data_reg_149                                |  1024|   0|  1024|          0|
+    |temp_peID_reg_157                                |     3|   0|     3|          0|
+    |tmp_reg_142                                      |     1|   0|     1|          0|
+    +-------------------------------------------------+------+----+------+-----------+
+    |Total                                            |  1039|   0|  1039|          0|
+    +-------------------------------------------------+------+----+------+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------+-----+------+------------+-----------------------+--------------+
+|               RTL Ports              | Dir | Bits |  Protocol  |     Source Object     |    C Type    |
++--------------------------------------+-----+------+------------+-----------------------+--------------+
+|ap_clk                                |   in|     1|  ap_ctrl_hs|   distributer_vcresult|  return value|
+|ap_rst                                |   in|     1|  ap_ctrl_hs|   distributer_vcresult|  return value|
+|ap_start                              |   in|     1|  ap_ctrl_hs|   distributer_vcresult|  return value|
+|ap_done                               |  out|     1|  ap_ctrl_hs|   distributer_vcresult|  return value|
+|ap_continue                           |   in|     1|  ap_ctrl_hs|   distributer_vcresult|  return value|
+|ap_idle                               |  out|     1|  ap_ctrl_hs|   distributer_vcresult|  return value|
+|ap_ready                              |  out|     1|  ap_ctrl_hs|   distributer_vcresult|  return value|
+|vcache_bank1_cresult1_dout            |   in|  1031|     ap_fifo|  vcache_bank1_cresult1|       pointer|
+|vcache_bank1_cresult1_empty_n         |   in|     1|     ap_fifo|  vcache_bank1_cresult1|       pointer|
+|vcache_bank1_cresult1_read            |  out|     1|     ap_fifo|  vcache_bank1_cresult1|       pointer|
+|vcache_bank1_cresult1_num_data_valid  |   in|     4|     ap_fifo|  vcache_bank1_cresult1|       pointer|
+|vcache_bank1_cresult1_fifo_cap        |   in|     4|     ap_fifo|  vcache_bank1_cresult1|       pointer|
+|cresult4_din                          |  out|  1024|     ap_fifo|               cresult4|       pointer|
+|cresult4_full_n                       |   in|     1|     ap_fifo|               cresult4|       pointer|
+|cresult4_write                        |  out|     1|     ap_fifo|               cresult4|       pointer|
+|cresult4_num_data_valid               |   in|     3|     ap_fifo|               cresult4|       pointer|
+|cresult4_fifo_cap                     |   in|     3|     ap_fifo|               cresult4|       pointer|
+|cresult3_din                          |  out|  1024|     ap_fifo|               cresult3|       pointer|
+|cresult3_full_n                       |   in|     1|     ap_fifo|               cresult3|       pointer|
+|cresult3_write                        |  out|     1|     ap_fifo|               cresult3|       pointer|
+|cresult3_num_data_valid               |   in|     3|     ap_fifo|               cresult3|       pointer|
+|cresult3_fifo_cap                     |   in|     3|     ap_fifo|               cresult3|       pointer|
+|cresult2_din                          |  out|  1024|     ap_fifo|               cresult2|       pointer|
+|cresult2_full_n                       |   in|     1|     ap_fifo|               cresult2|       pointer|
+|cresult2_write                        |  out|     1|     ap_fifo|               cresult2|       pointer|
+|cresult2_num_data_valid               |   in|     3|     ap_fifo|               cresult2|       pointer|
+|cresult2_fifo_cap                     |   in|     3|     ap_fifo|               cresult2|       pointer|
+|cresult1_din                          |  out|  1024|     ap_fifo|               cresult1|       pointer|
+|cresult1_full_n                       |   in|     1|     ap_fifo|               cresult1|       pointer|
+|cresult1_write                        |  out|     1|     ap_fifo|               cresult1|       pointer|
+|cresult1_num_data_valid               |   in|     3|     ap_fifo|               cresult1|       pointer|
+|cresult1_fifo_cap                     |   in|     3|     ap_fifo|               cresult1|       pointer|
++--------------------------------------+-----+------+------------+-----------------------+--------------+
+

@@ -1,0 +1,13 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline run_cached_tstrf/VITIS_LOOP_171_3
+set_directive_pipeline run_cached_gessm/VITIS_LOOP_152_3
+set_directive_pipeline cache_triangular_pattern/VITIS_LOOP_76_2
+set_directive_pipeline run_cached_getrf/VITIS_LOOP_210_2
+set_directive_pipeline run_cached_getrf/VITIS_LOOP_131_3
+set_directive_pipeline sparse_lu_shared/VITIS_LOOP_110_2
+# Inferred from performance & pipeline pragmas/directives
+set_directive_loop_flatten sparse_lu_shared/VITIS_LOOP_23_1
+set_directive_loop_flatten sparse_lu_shared/VITIS_LOOP_44_1
+set_directive_loop_flatten run_cached_gessm/VITIS_LOOP_279_1 -off
+set_directive_loop_flatten run_cached_tstrf/VITIS_LOOP_314_2 -off
+set_directive_loop_flatten sparse_lu_shared/VITIS_LOOP_448_1 -off

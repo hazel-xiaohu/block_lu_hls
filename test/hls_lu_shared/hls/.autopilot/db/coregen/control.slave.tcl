@@ -1,0 +1,4 @@
+dict set slaves control {ports {operation {type i_ap_none width 32} n {type i_ap_none width 32} a_nnz {type i_ap_none width 32} l_nnz {type i_ap_none width 32} u_nnz {type i_ap_none width 32} x_rows {type i_ap_none width 32} x_cols {type i_ap_none width 32} x_nnz {type i_ap_none width 32} pivot_eps {type i_ap_none width 32} status {type o_ap_vld width 32} failed_row {type o_ap_vld width 32} ap_start {type ap_ctrl width 1} ap_done {type ap_ctrl width 1} ap_ready {type ap_ctrl width 1} ap_idle {type ap_ctrl width 1}} mems {} has_ctrl 1}
+set datawidth 32
+set addrwidth 64
+set intr_clr_mode TOW

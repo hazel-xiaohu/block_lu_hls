@@ -1,0 +1,631 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir /home/huz/project/SpMM_TCAD/test/hls_lu_shared 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/huz/project/SpMM_TCAD/test/hls_lu_shared/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/huz/project/SpMM_TCAD/test/hls_lu_shared'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_lu_shared_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=sparse_lu_shared.cpp' from hls_lu_shared_config.cfg(4)
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/sparse_lu_shared.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=sparse_lu_ops.cpp' from hls_lu_shared_config.cfg(5)
+INFO: [HLS 200-10] Adding design file '/home/huz/project/SpMM_TCAD/test/sparse_lu_ops.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_sparse_lu_shared.cpp' from hls_lu_shared_config.cfg(6)
+INFO: [HLS 200-10] Adding test bench file '/home/huz/project/SpMM_TCAD/test/tb_sparse_lu_shared.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=sparse_lu_shared' from hls_lu_shared_config.cfg(3)
+INFO: [HLS 200-1465] Applying config ini 'clock=5.0' from hls_lu_shared_config.cfg(2)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.O=true' from hls_lu_shared_config.cfg(10)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=none' from hls_lu_shared_config.cfg(8)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'cosim.wave_debug=false' from hls_lu_shared_config.cfg(9)
+INFO: [HLS 200-1907] Replacing 'config_cosim -O=1' with 'config_sim -O=1' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'vivado.flow=impl' from hls_lu_shared_config.cfg(12)
+INFO: [HLS 200-1465] Applying config ini 'vivado.rtl=verilog' from hls_lu_shared_config.cfg(13)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/huz/project/SpMM_TCAD/test/hls_lu_shared/vitis-comp.json
+INFO: [HLS 200-1465] Applying config ini 'part=xczu15eg-ffvb1156-2-i' from command line
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1.91 seconds. CPU system time: 0.65 seconds. Elapsed time: 3.1 seconds; current allocated memory: 270.043 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'sparse_lu_ops.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'sparse_lu_shared.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.9 seconds. CPU system time: 0.96 seconds. Elapsed time: 4.96 seconds; current allocated memory: 272.176 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,419 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,571 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,030 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,116 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,109 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 944 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 942 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 942 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 942 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,043 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,041 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,009 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 972 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 972 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,223 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,341 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'valid_sorted_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)' into 'shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)' (sparse_lu_shared.cpp:47:6)
+INFO: [HLS 214-131] Inlining function 'shared_abs(float)' into 'shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)' (sparse_lu_shared.cpp:102:5)
+INFO: [HLS 214-131] Inlining function 'getrf_find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)' into 'shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)' (sparse_lu_shared.cpp:100:31)
+INFO: [HLS 214-131] Inlining function 'getrf_find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)' into 'gessm_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int*)' (sparse_lu_ops.cpp:36:31)
+INFO: [HLS 214-131] Inlining function 'getrf_find_in_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)' into 'tstrf_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)' (sparse_lu_ops.cpp:62:32)
+INFO: [HLS 214-131] Inlining function 'lu_abs(float)' into 'tstrf_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)' (sparse_lu_ops.cpp:65:6)
+INFO: [HLS 214-131] Inlining function 'shared_fail(unsigned int, unsigned int, unsigned int*, unsigned int*)' into 'sparse_lu_shared' (sparse_lu_shared.cpp:142:3)
+INFO: [HLS 214-131] Inlining function 'tstrf_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)' into 'sparse_lu_shared' (sparse_lu_shared.cpp:196:13)
+INFO: [HLS 214-131] Inlining function 'valid_sorted_row(unsigned int const*, unsigned int const*, unsigned int, unsigned int)' into 'sparse_lu_shared' (sparse_lu_shared.cpp:190:7)
+INFO: [HLS 214-131] Inlining function 'gessm_fixed_csr(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int*)' into 'sparse_lu_shared' (sparse_lu_shared.cpp:178:13)
+INFO: [HLS 214-131] Inlining function 'shared_getrf(unsigned int const*, unsigned int const*, float const*, unsigned int const*, unsigned int const*, float*, unsigned int const*, unsigned int const*, float*, unsigned int, unsigned int, unsigned int, unsigned int, float, unsigned int*)' into 'sparse_lu_shared' (sparse_lu_shared.cpp:147:13)
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_20_1> at sparse_lu_shared.cpp:20:19 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_11_1> at sparse_lu_ops.cpp:11:19 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_41_1> at sparse_lu_shared.cpp:41:19 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_42_2> at sparse_lu_shared.cpp:42:19 due to pipeline_loops threshold
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'VITIS_LOOP_41_1'(sparse_lu_shared.cpp:41:19) has been inferred on bundle 'l_val'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_shared.cpp:41:19)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'VITIS_LOOP_42_2'(sparse_lu_shared.cpp:42:19) has been inferred on bundle 'u_val'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_shared.cpp:42:19)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'a_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_shared.cpp:45:7)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'l_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_shared.cpp:45:40)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'u_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_shared.cpp:46:5)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'l_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_ops.cpp:11:41)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'u_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_ops.cpp:11:41)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'l_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_shared.cpp:76:41)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'x_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_shared.cpp:158:7)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'l_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_shared.cpp:171:8)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'l_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_ops.cpp:27:41)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'x_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_ops.cpp:32:42)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'x_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_ops.cpp:11:41)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'u_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_shared.cpp:189:8)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'x_row'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (sparse_lu_ops.cpp:58:41)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.43 seconds. CPU system time: 0.77 seconds. Elapsed time: 10.81 seconds; current allocated memory: 276.520 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 276.520 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.19 seconds; current allocated memory: 280.098 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 280.812 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'sparse_lu_shared' (sparse_lu_shared.cpp:5:20)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.87 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.91 seconds; current allocated memory: 312.734 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.92 seconds. CPU system time: 0.13 seconds. Elapsed time: 1.06 seconds; current allocated memory: 484.621 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sparse_lu_shared' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_110' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 484.941 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 484.941 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_113' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 484.941 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 484.941 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_114' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 484.945 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 484.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_115' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 484.945 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 484.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_111' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 485.102 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 485.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_112' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 485.434 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 485.434 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_41_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_41_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 485.555 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 485.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_42_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 485.734 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 485.734 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 486.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 486.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 486.652 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 486.652 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_20_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_20_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 487.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 487.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 487.516 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 487.516 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 487.996 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 487.996 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 488.484 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 488.484 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 488.965 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 488.965 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 489.449 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 489.449 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 489.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 489.898 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_18' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 490.359 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 490.359 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_19' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_11_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 11, loop 'VITIS_LOOP_11_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 490.816 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 490.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sparse_lu_shared' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.53 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.57 seconds; current allocated memory: 519.074 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.55 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.56 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_110' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_110'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.36 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_113' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_113'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_114' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_114'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_115' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_115'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_111' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_111'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.05 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_112' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_112'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1' pipeline 'VITIS_LOOP_41_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1/m_axi_l_val_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_41_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2' pipeline 'VITIS_LOOP_42_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2/m_axi_u_val_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_42_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_20_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 519.074 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 519.980 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 521.434 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_16'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 522.855 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_17'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.05 seconds; current allocated memory: 524.312 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_18' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_18'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 525.734 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_19' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared_Pipeline_VITIS_LOOP_11_19'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 527.156 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sparse_lu_shared' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/a_row' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/a_col' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/a_val' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/l_row' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/l_col' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/l_val' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/u_row' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/u_col' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/u_val' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/x_row' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/x_col' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/x_val' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/operation' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/A_rcsr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/A_cid' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/A_val_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/L_rcsr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/L_cid' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/L_val_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/U_rcsr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/U_cid' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/U_val_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/X_rcsr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/X_cid' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/X_val_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/n' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/a_nnz' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/l_nnz' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/u_nnz' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/x_rows' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/x_cols' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/x_nnz' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/pivot_eps' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/status' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sparse_lu_shared/failed_row' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sparse_lu_shared' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Bundling port 'A_rcsr', 'A_cid', 'A_val_r', 'L_rcsr', 'L_cid', 'L_val_r', 'U_rcsr', 'U_cid', 'U_val_r', 'X_rcsr', 'X_cid' and 'X_val_r' to AXI-Lite port control_r.
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_8_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sparse_lu_shared'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.03 seconds. CPU system time: 0.08 seconds. Elapsed time: 1.15 seconds; current allocated memory: 552.680 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.39 seconds. CPU system time: 0.24 seconds. Elapsed time: 1.64 seconds; current allocated memory: 584.820 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2.5 seconds. CPU system time: 0.06 seconds. Elapsed time: 2.57 seconds; current allocated memory: 597.816 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for sparse_lu_shared.
+INFO: [VLOG 209-307] Generating Verilog RTL for sparse_lu_shared.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 273.97 MHz
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Sep 24 21:01:57 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/hls_data.json outdir=/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip srcdir=/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/misc
+INFO: Copied 39 verilog file(s) to /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/hdl/verilog
+INFO: Copied 39 vhdl file(s) to /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/drivers
+Generating 4 subcores in /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/subcore_prj:
+impl/misc/sparse_lu_shared_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl
+impl/misc/sparse_lu_shared_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl
+impl/misc/sparse_lu_shared_fmul_32ns_32ns_32_5_max_dsp_1_ip.tcl
+impl/misc/sparse_lu_shared_fsub_32ns_32ns_32_8_full_dsp_1_ip.tcl
+INFO: Using COE_DIR=/home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/hdl/verilog
+INFO: Generating sparse_lu_shared_fcmp_32ns_32ns_1_2_no_dsp_1_ip via file impl/misc/sparse_lu_shared_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/huz/software/2025.2/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_lu_shared_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_lu_shared_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: Done generating sparse_lu_shared_fcmp_32ns_32ns_1_2_no_dsp_1_ip via file impl/misc/sparse_lu_shared_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl
+INFO: Generating sparse_lu_shared_fdiv_32ns_32ns_32_16_no_dsp_1_ip via file impl/misc/sparse_lu_shared_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_lu_shared_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_lu_shared_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: Done generating sparse_lu_shared_fdiv_32ns_32ns_32_16_no_dsp_1_ip via file impl/misc/sparse_lu_shared_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl
+INFO: Generating sparse_lu_shared_fmul_32ns_32ns_32_5_max_dsp_1_ip via file impl/misc/sparse_lu_shared_fmul_32ns_32ns_32_5_max_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_lu_shared_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_lu_shared_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+INFO: Done generating sparse_lu_shared_fmul_32ns_32ns_32_5_max_dsp_1_ip via file impl/misc/sparse_lu_shared_fmul_32ns_32ns_32_5_max_dsp_1_ip.tcl
+INFO: Generating sparse_lu_shared_fsub_32ns_32ns_32_8_full_dsp_1_ip via file impl/misc/sparse_lu_shared_fsub_32ns_32ns_32_8_full_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sparse_lu_shared_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sparse_lu_shared_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: Done generating sparse_lu_shared_fsub_32ns_32ns_32_8_full_dsp_1_ip via file impl/misc/sparse_lu_shared_fsub_32ns_32ns_32_8_full_dsp_1_ip.tcl
+INFO: Found 1 unique subcore IP: xilinx.com:ip:floating_point:7.1
+INFO: Copied 4 subcore files: /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/hdl/ip/sparse_lu_shared_fsub_32ns_32ns_32_8_full_dsp_1_ip/sparse_lu_shared_fsub_32ns_32ns_32_8_full_dsp_1_ip.xci /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/hdl/ip/sparse_lu_shared_fdiv_32ns_32ns_32_16_no_dsp_1_ip/sparse_lu_shared_fdiv_32ns_32ns_32_16_no_dsp_1_ip.xci /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/hdl/ip/sparse_lu_shared_fcmp_32ns_32ns_1_2_no_dsp_1_ip/sparse_lu_shared_fcmp_32ns_32ns_1_2_no_dsp_1_ip.xci /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/hdl/ip/sparse_lu_shared_fmul_32ns_32ns_32_5_max_dsp_1_ip/sparse_lu_shared_fmul_32ns_32ns_32_5_max_dsp_1_ip.xci
+INFO: Import ports from HDL: /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/hdl/vhdl/sparse_lu_shared.vhd (sparse_lu_shared)
+INFO: Add axi4lite interface s_axi_control
+INFO: Add axi4lite interface s_axi_control_r
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/huz/software/2025.2/data/ip'.
+INFO: Add axi4full interface m_axi_a_row
+INFO: Add axi4full interface m_axi_a_col
+INFO: Add axi4full interface m_axi_a_val
+INFO: Add axi4full interface m_axi_l_row
+INFO: Add axi4full interface m_axi_l_col
+INFO: Add axi4full interface m_axi_l_val
+INFO: Add axi4full interface m_axi_u_row
+INFO: Add axi4full interface m_axi_u_col
+INFO: Add axi4full interface m_axi_u_val
+INFO: Add axi4full interface m_axi_x_row
+INFO: Add axi4full interface m_axi_x_col
+INFO: Add axi4full interface m_axi_x_val
+INFO: Add data interface operation
+INFO: Add data interface n
+INFO: Add data interface a_nnz
+INFO: Add data interface l_nnz
+INFO: Add data interface u_nnz
+INFO: Add data interface x_rows
+INFO: Add data interface x_cols
+INFO: Add data interface x_nnz
+INFO: Add data interface pivot_eps
+INFO: Add data interface status
+INFO: Add data interface failed_row
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/component.xml
+INFO: Created IP archive /home/huz/project/SpMM_TCAD/test/hls_lu_shared/hls/impl/ip/xilinx_com_hls_sparse_lu_shared_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 24 21:02:11 2026...
+INFO: [HLS 200-802] Generated output file hls_lu_shared/sparse_lu_shared.zip
+INFO: [HLS 200-112] Total CPU user time: 47.15 seconds. Total CPU system time: 7.08 seconds. Total elapsed time: 52.29 seconds; peak allocated memory: 607.645 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 3s

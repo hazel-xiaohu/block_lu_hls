@@ -1,0 +1,107 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 65321, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 45807, user unroll pragmas are applied</column>
+            <column name="">(2) simplification, 27422, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline, 27351, user inline pragmas are applied</column>
+            <column name="">(4) simplification, 26932, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition, 31712, user array partition pragmas are applied</column>
+            <column name="">(2) simplification, 25476, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate, 26559, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape, 56754, apply array reshape pragmas</column>
+            <column name="">(5) access patterns, 58369, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification, 57492, loop and instruction simplification</column>
+            <column name="">(2) parallelization, 56686, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition, 56648, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification, 56648, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering, 55443, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations, 62158, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="spmm" col1="core.cpp:155" col2="65321" col3="26932" col4="58369" col5="56648" col6="62158">
+                    <row id="12" col0="A_row_reader" col1="task_scheduler.h:6" col2="43" col3="25" col4="42" col5="42" col6="42"/>
+                    <row id="46" col0="prepare_b_rcsr" col1="rcache.cpp:197" col2="226" col3="39" col4="42" col5="41" col6="51">
+                        <row id="34" col0="packed_row_ptr" col1="rcache.cpp:189" col2="124" col2_disp="  124 (2 calls)" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="30" col0="A_element_filter" col1="task_scheduler.h:56" col2="147" col3="47" col4="116" col5="116" col6="120"/>
+                    <row id="2" col0="A_element_distributor" col1="task_scheduler.h:84" col2="673" col3="296" col4="1034" col5="1029" col6="939"/>
+                    <row id="26" col0="rcrequest_manager" col1="rcache.cpp:217" col2="4008" col2_disp="4,008 (4 calls)" col3="1924" col3_disp="1,924 (4 calls)" col4="9832" col4_disp="9,832 (4 calls)" col5="9628" col5_disp="9,628 (4 calls)" col6="10908" col6_disp="10,908 (4 calls)">
+                        <row id="35" col0="rrequest_splitter" col1="rcache.cpp:4" col2="400" col2_disp="  400 (4 calls)" col3="200" col3_disp="  200 (4 calls)" col4="1556" col4_disp="1,556 (4 calls)" col5="1536" col5_disp="1,536 (4 calls)" col6="1740" col6_disp="1,740 (4 calls)"/>
+                        <row id="31" col0="rrequest_manager" col1="rcache.cpp:35" col2="408" col2_disp="  408 (4 calls)" col3="164" col3_disp="  164 (4 calls)" col4="1524" col4_disp="1,524 (4 calls)" col5="1508" col5_disp="1,508 (4 calls)" col6="1668" col6_disp="1,668 (4 calls)"/>
+                        <row id="22" col0="rschedule_access" col1="rcache.cpp:62" col2="1576" col2_disp="1,576 (4 calls)" col3="376" col3_disp="  376 (4 calls)" col4="1880" col4_disp="1,880 (4 calls)" col5="1844" col5_disp="1,844 (4 calls)" col6="2068" col6_disp="2,068 (4 calls)"/>
+                        <row id="4" col0="rrequest_merger" col1="rcache.cpp:118" col2="372" col2_disp="  372 (4 calls)" col3="868" col3_disp="  868 (4 calls)" col4="3188" col4_disp="3,188 (4 calls)" col5="3084" col5_disp="3,084 (4 calls)" col6="3580" col6_disp="3,580 (4 calls)"/>
+                        <row id="6" col0="rcollector" col1="rcache.cpp:147" col2="1048" col2_disp="1,048 (4 calls)" col3="232" col3_disp="  232 (4 calls)" col4="1600" col4_disp="1,600 (4 calls)" col5="1572" col5_disp="1,572 (4 calls)" col6="1748" col6_disp="1,748 (4 calls)"/>
+                    </row>
+                    <row id="19" col0="merge_4_to_1_rrequest" col1="util.cpp:4" col2="244" col3="421" col4="1471" col5="1445" col6="1645"/>
+                    <row id="39" col0="request_to_rbanks" col1="rcache.cpp:241" col2="107" col3="172" col4="888" col5="505" col6="603"/>
+                    <row id="33" col0="rcache" col1="rcache.cpp:286" col2="6008" col2_disp="6,008 (4 calls)" col3="3088" col3_disp="3,088 (4 calls)" col4="2760" col4_disp="2,760 (4 calls)" col5="2728" col5_disp="2,728 (4 calls)" col6="2960" col6_disp="2,960 (4 calls)">
+                        <row id="8" col0="find_eviction" col1="util.cpp:118" col2="976" col2_disp="  976 (4 calls)" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="14" col0="distributer_mi" col1="core.cpp:116" col2="840" col2_disp="  840 (4 calls)" col3="192" col3_disp="  192 (4 calls)" col4="536" col4_disp="  536 (4 calls)" col5="528" col5_disp="  528 (4 calls)" col6="548" col6_disp="  548 (4 calls)"/>
+                    <row id="38" col0="merge_4_to_1_mi" col1="core.cpp:74" col2="832" col2_disp="  832 (4 calls)" col3="288" col3_disp="  288 (4 calls)" col4="480" col4_disp="  480 (4 calls)" col5="480" col5_disp="  480 (4 calls)" col6="576" col6_disp="  576 (4 calls)"/>
+                    <row id="44" col0="distributer_rresponse" col1="util.cpp:88" col2="840" col2_disp="  840 (4 calls)" col3="272" col3_disp="  272 (4 calls)" col4="960" col4_disp="  960 (4 calls)" col5="944" col5_disp="  944 (4 calls)" col6="988" col6_disp="  988 (4 calls)"/>
+                    <row id="17" col0="merge_4_to_1_rresponse" col1="util.cpp:659" col2="692" col2_disp="  692 (4 calls)" col3="368" col3_disp="  368 (4 calls)" col4="1260" col4_disp="1,260 (4 calls)" col5="1260" col5_disp="1,260 (4 calls)" col6="1300" col6_disp="1,300 (4 calls)"/>
+                    <row id="20" col0="from_rcache_result_to_B_vcrequest" col1="util.cpp:152" col2="656" col2_disp="  656 (4 calls)" col3="224" col3_disp="  224 (4 calls)" col4="824" col4_disp="  824 (4 calls)" col5="812" col5_disp="  812 (4 calls)" col6="1028" col6_disp="1,028 (4 calls)"/>
+                    <row id="36" col0="generate_data" col1="core.cpp:41" col2="652" col2_disp="  652 (4 calls)" col3="228" col3_disp="  228 (4 calls)" col4="476" col4_disp="  476 (4 calls)" col5="476" col5_disp="  476 (4 calls)" col6="468" col6_disp="  468 (4 calls)"/>
+                    <row id="3" col0="vcrequest_manager" col1="vccache.cpp:199" col2="7752" col2_disp="7,752 (4 calls)" col3="3128" col3_disp="3,128 (4 calls)" col4="8652" col4_disp="8,652 (4 calls)" col5="8392" col5_disp="8,392 (4 calls)" col6="8911" col6_disp="8,911 (4 calls)">
+                        <row id="40" col0="vcrequest_splitter" col1="vccache.cpp:4" col2="488" col2_disp="  488 (4 calls)" col3="192" col3_disp="  192 (4 calls)" col4="396" col4_disp="  396 (4 calls)" col5="384" col5_disp="  384 (4 calls)" col6="504" col6_disp="  504 (4 calls)"/>
+                        <row id="41" col0="request_manager" col1="vccache.cpp:43" col2="1360" col2_disp="1,360 (8 calls)" col3="424" col3_disp="  424 (8 calls)" col4="1512" col4_disp="1,512 (8 calls)" col5="1488" col5_disp="1,488 (8 calls)" col6="1383" col6_disp="1,383 (8 calls)"/>
+                        <row id="42" col0="schedule_access" col1="vccache.cpp:74" col2="2600" col2_disp="2,600 (8 calls)" col3="1112" col3_disp="1,112 (8 calls)" col4="2512" col4_disp="2,512 (8 calls)" col5="2376" col5_disp="2,376 (8 calls)" col6="2408" col6_disp="2,408 (8 calls)"/>
+                        <row id="25" col0="request_merger" col1="vccache.cpp:145" col2="744" col2_disp="  744 (8 calls)" col3="832" col3_disp="  832 (8 calls)" col4="3384" col4_disp="3,384 (8 calls)" col5="3304" col5_disp="3,304 (8 calls)" col6="3648" col6_disp="3,648 (8 calls)"/>
+                        <row id="47" col0="collector" col1="vccache.cpp:174" col2="2112" col2_disp="2,112 (8 calls)" col3="400" col3_disp="  400 (8 calls)" col4="680" col4_disp="  680 (8 calls)" col5="672" col5_disp="  672 (8 calls)" col6="752" col6_disp="  752 (8 calls)"/>
+                    </row>
+                    <row id="11" col0="request_to_vcbanks" col1="vccache.cpp:233" col2="928" col2_disp="  928 (8 calls)" col3="672" col3_disp="  672 (8 calls)" col4="2744" col4_disp="2,744 (8 calls)" col5="2152" col5_disp="2,152 (8 calls)" col6="2408" col6_disp="2,408 (8 calls)"/>
+                    <row id="13" col0="merge_4_to_1_vcrequest" col1="util.cpp:193" col2="976" col2_disp="  976 (4 calls)" col3="912" col3_disp="  912 (4 calls)" col4="3308" col4_disp="3,308 (4 calls)" col5="3268" col5_disp="3,268 (4 calls)" col6="3560" col6_disp="3,560 (4 calls)"/>
+                    <row id="9" col0="vcache" col1="vccache.cpp:276" col2="8188" col2_disp="8,188 (2 calls)" col3="2162" col3_disp="2,162 (2 calls)" col4="2316" col4_disp="2,316 (2 calls)" col5="2302" col5_disp="2,302 (2 calls)" col6="2218" col6_disp="2,218 (2 calls)">
+                        <row id="8" col0="find_eviction" col1="util.cpp:118" col2="488" col2_disp="  488 (2 calls)" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="37" col0="ccache" col1="vccache.cpp:567" col2="8188" col2_disp="8,188 (2 calls)" col3="2162" col3_disp="2,162 (2 calls)" col4="2316" col4_disp="2,316 (2 calls)" col5="2302" col5_disp="2,302 (2 calls)" col6="2218" col6_disp="2,218 (2 calls)">
+                        <row id="8" col0="find_eviction" col1="util.cpp:118" col2="488" col2_disp="  488 (2 calls)" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="15" col0="merge_2_to_1_vcresponse" col1="util.cpp:701" col2="260" col2_disp="  260 (2 calls)" col3="152" col3_disp="  152 (2 calls)" col4="354" col4_disp="  354 (2 calls)" col5="350" col5_disp="  350 (2 calls)" col6="326" col6_disp="  326 (2 calls)"/>
+                    <row id="23" col0="distributer_vcresponse" col1="util.cpp:278" col2="420" col2_disp="  420 (2 calls)" col3="106" col3_disp="  106 (2 calls)" col4="322" col4_disp="  322 (2 calls)" col5="318" col5_disp="  318 (2 calls)" col6="288" col6_disp="  288 (2 calls)"/>
+                    <row id="21" col0="merge_2_to_1_vcresult" col1="util.cpp:519" col2="260" col2_disp="  260 (2 calls)" col3="166" col3_disp="  166 (2 calls)" col4="432" col4_disp="  432 (2 calls)" col5="426" col5_disp="  426 (2 calls)" col6="408" col6_disp="  408 (2 calls)"/>
+                    <row id="45" col0="distributer_vcresult" col1="util.cpp:345" col2="384" col2_disp="  384 (2 calls)" col3="60" col3_disp="   60 (2 calls)" col4="106" col4_disp="  106 (2 calls)" col5="106" col5_disp="  106 (2 calls)" col6="122" col6_disp="  122 (2 calls)"/>
+                    <row id="18" col0="pe" col1="pe.cpp:3" col2="4884" col2_disp="4,884 (4 calls)" col3="516" col3_disp="  516 (4 calls)" col4="1268" col4_disp="1,268 (4 calls)" col5="1264" col5_disp="1,264 (4 calls)" col6="1160" col6_disp="1,160 (4 calls)">
+                        <row id="1" col0="Reinterpret&lt;float, ap_uint&lt;32&gt; &gt;" col1="core.h:222" col2="352" col2_disp="  352 (16 calls)" col3="" col4="" col5="" col6=""/>
+                        <row id="24" col0="Reinterpret&lt;ap_uint&lt;32&gt;, float&gt;" col1="core.h:230" col2="416" col2_disp="  416 (16 calls)" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="16" col0="convert_pblock_to_mergeitem" col1="util.cpp:900" col2="1012" col2_disp="1,012 (4 calls)" col3="168" col3_disp="  168 (4 calls)" col4="424" col4_disp="  424 (4 calls)" col5="420" col5_disp="  420 (4 calls)" col6="392" col6_disp="  392 (4 calls)">
+                        <row id="1" col0="Reinterpret&lt;float, ap_uint&lt;32&gt; &gt;" col1="core.h:222" col2="88" col2_disp="   88 (4 calls)" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="7" col0="merger" col1="pe.cpp:328" col2="13408" col2_disp="13,408 (4 calls)" col3="8088" col3_disp="8,088 (4 calls)" col4="13880" col4_disp="13,880 (4 calls)" col5="13800" col5_disp="13,800 (4 calls)" col6="16076" col6_disp="16,076 (4 calls)">
+                        <row id="5" col0="merge_controller" col1="pe.cpp:96" col2="208" col2_disp="  208 (4 calls)" col3="64" col3_disp="   64 (4 calls)" col4="176" col4_disp="  176 (4 calls)" col5="176" col5_disp="  176 (4 calls)" col6="208" col6_disp="  208 (4 calls)"/>
+                        <row id="28" col0="merge_two_sub" col1="pe.cpp:188" col2="13156" col2_disp="13,156 (4 calls)" col3="8000" col3_disp="8,000 (4 calls)" col4="13680" col4_disp="13,680 (4 calls)" col5="13600" col5_disp="13,600 (4 calls)" col6="15836" col6_disp="15,836 (4 calls)">
+                            <row id="27" col0="flush_three" col1="pe.cpp:167" col2="2928" col2_disp="2,928 (16 calls)" col3="1584" col3_disp="1,584 (16 calls)" col4="2464" col4_disp="2,464 (16 calls)" col5="2464" col5_disp="2,464 (16 calls)" col6="2816" col6_disp="2,816 (16 calls)"/>
+                            <row id="29" col0="_merge_temp" col1="pe.cpp:110" col2="8520" col2_disp="8,520 (60 calls)" col3="5640" col3_disp="5,640 (60 calls)" col4="10260" col4_disp="10,260 (60 calls)" col5="10200" col5_disp="10,200 (60 calls)" col6="12060" col6_disp="12,060 (60 calls)"/>
+                        </row>
+                    </row>
+                    <row id="32" col0="sub_final_merger" col1="util.cpp:829" col2="448" col2_disp="  448 (2 calls)" col3="226" col3_disp="  226 (2 calls)" col4="522" col4_disp="  522 (2 calls)" col5="518" col5_disp="  518 (2 calls)" col6="598" col6_disp="  598 (2 calls)"/>
+                    <row id="10" col0="final_merger" col1="util.cpp:756" col2="246" col3="120" col4="252" col5="249" col6="299"/>
+                    <row id="43" col0="write_C_sub" col1="util.cpp:971" col2="129" col3="59" col4="76" col5="71" col6="101"/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>

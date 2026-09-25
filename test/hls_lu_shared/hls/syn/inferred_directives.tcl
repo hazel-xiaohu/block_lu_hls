@@ -1,0 +1,5 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline sparse_lu_shared/VITIS_LOOP_20_1
+set_directive_pipeline sparse_lu_shared/VITIS_LOOP_11_1
+set_directive_pipeline sparse_lu_shared/VITIS_LOOP_41_1
+set_directive_pipeline sparse_lu_shared/VITIS_LOOP_42_2

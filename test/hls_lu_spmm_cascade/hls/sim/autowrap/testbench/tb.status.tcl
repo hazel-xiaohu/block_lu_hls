@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/huz/project/SpMM_TCAD/test/hls_lu_spmm_cascade/hls/./sim/autowrap/testbench/core.cpp_pre.cpp.tb.cpp

@@ -1,0 +1,12 @@
+{
+  "name": "hls_lu_shared",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": ["..\/hls_lu_shared_config.cfg"],
+    "work_dir": ".",
+    "csim_args": "--part=xczu15eg-ffvb1156-2-i",
+    "csyn_args": "--part=xczu15eg-ffvb1156-2-i",
+    "cosim_args": "--part=xczu15eg-ffvb1156-2-i"
+  }
+}

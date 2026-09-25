@@ -1,0 +1,194 @@
+
+
+================================================================
+== Vitis HLS Report for 'sub_final_merger_44'
+================================================================
+* Date:           Fri Sep 25 00:04:59 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  5.067 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_835_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 6 3 
+3 --> 4 6 
+4 --> 5 
+5 --> 6 
+6 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%temp_global_end_3_loc = alloca i64 1"   --->   Operation 7 'alloca' 'temp_global_end_3_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%temp1_global_end_1_loc = alloca i64 1"   --->   Operation 8 'alloca' 'temp1_global_end_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %final_merger_1, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe2, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe1, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.74>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specpipeline_ln836 = specpipeline void @_ssdm_op_SpecPipeline, i32 0, i32 0, i32 1, i32 0, i32 4294967295, void @empty_117" [util.cpp:836]   --->   Operation 13 'specpipeline' 'specpipeline_ln836' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln835 = specloopname void @_ssdm_op_SpecLoopName, void @empty_39" [util.cpp:835]   --->   Operation 14 'specloopname' 'specloopname_ln835' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] ( I:0.00ns O:0.00ns )   --->   "%tmp = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i66P0A, i66 %result_pe1, i32 1" [util.cpp:838]   --->   Operation 15 'nbreadreq' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln838 = br i1 %tmp, void %for.body.backedge, void %land.lhs.true" [util.cpp:838]   --->   Operation 16 'br' 'br_ln838' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] ( I:0.00ns O:0.00ns )   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i66P0A, i66 %result_pe2, i32 1" [util.cpp:838]   --->   Operation 17 'nbreadreq' 'tmp_s' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln838 = br i1 %tmp_s, void %for.body.backedge, void %if.then" [util.cpp:838]   --->   Operation 18 'br' 'br_ln838' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] ( I:1.74ns O:1.74ns )   --->   "%result_pe1_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %result_pe1" [util.cpp:839]   --->   Operation 19 'read' 'result_pe1_read' <Predicate = (tmp & tmp_s)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln839 = trunc i66 %result_pe1_read" [util.cpp:839]   --->   Operation 20 'trunc' 'trunc_ln839' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%temp_cid = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %result_pe1_read, i32 32, i32 63" [util.cpp:839]   --->   Operation 21 'partselect' 'temp_cid' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%enable_i = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe1_read, i32 64" [util.cpp:839]   --->   Operation 22 'bitselect' 'enable_i' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%temp_global_end = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe1_read, i32 65" [util.cpp:839]   --->   Operation 23 'bitselect' 'temp_global_end' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] ( I:1.74ns O:1.74ns )   --->   "%result_pe2_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %result_pe2" [util.cpp:840]   --->   Operation 24 'read' 'result_pe2_read' <Predicate = (tmp & tmp_s)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln840 = trunc i66 %result_pe2_read" [util.cpp:840]   --->   Operation 25 'trunc' 'trunc_ln840' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%temp1_cid = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %result_pe2_read, i32 32, i32 63" [util.cpp:840]   --->   Operation 26 'partselect' 'temp1_cid' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%enable_j = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe2_read, i32 64" [util.cpp:840]   --->   Operation 27 'bitselect' 'enable_j' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%temp1_global_end = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe2_read, i32 65" [util.cpp:840]   --->   Operation 28 'bitselect' 'temp1_global_end' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.76>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%temp_val = bitcast i32 %trunc_ln839" [util.cpp:839]   --->   Operation 29 'bitcast' 'temp_val' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%temp1_val = bitcast i32 %trunc_ln840" [util.cpp:840]   --->   Operation 30 'bitcast' 'temp1_val' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.28ns)   --->   "%or_ln842 = or i1 %temp_global_end, i1 %temp1_global_end" [util.cpp:842]   --->   Operation 31 'or' 'or_ln842' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node or_ln842_1)   --->   "%xor_ln842 = xor i1 %temp_global_end, i1 1" [util.cpp:842]   --->   Operation 32 'xor' 'xor_ln842' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln842_1 = or i1 %temp1_global_end, i1 %xor_ln842" [util.cpp:842]   --->   Operation 33 'or' 'or_ln842_1' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.42ns)   --->   "%br_ln842 = br i1 %or_ln842, void %for.cond7.preheader, void %if.end44" [util.cpp:842]   --->   Operation 34 'br' 'br_ln842' <Predicate = true> <Delay = 0.42>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%fence_ln846 = fence void @_ssdm_op_Fence, i66 %result_pe1, i66 %result_pe2, i32 4294967295, i66 %result_pe1, i66 %result_pe2, i66 %final_merger_1, i32 0" [util.cpp:846]   --->   Operation 35 'fence' 'fence_ln846' <Predicate = (!or_ln842)> <Delay = 0.00>
+ST_3 : Operation 36 [2/2] (0.47ns)   --->   "%call_ln840 = call void @sub_final_merger.44_Pipeline_VITIS_LOOP_846_2, i1 %enable_j, i32 %temp1_cid, i32 %trunc_ln840, i32 %temp1_val, i1 %enable_i, i32 %temp_cid, i32 %trunc_ln839, i32 %temp_val, i66 %result_pe2, i66 %result_pe1, i66 %final_merger_1, i1 %temp1_global_end_1_loc, i1 %temp_global_end_3_loc" [util.cpp:840]   --->   Operation 36 'call' 'call_ln840' <Predicate = (!or_ln842)> <Delay = 0.47> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 37 [1/2] (0.00ns)   --->   "%call_ln840 = call void @sub_final_merger.44_Pipeline_VITIS_LOOP_846_2, i1 %enable_j, i32 %temp1_cid, i32 %trunc_ln840, i32 %temp1_val, i1 %enable_i, i32 %temp_cid, i32 %trunc_ln839, i32 %temp_val, i66 %result_pe2, i66 %result_pe1, i66 %final_merger_1, i1 %temp1_global_end_1_loc, i1 %temp_global_end_3_loc" [util.cpp:840]   --->   Operation 37 'call' 'call_ln840' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 1.74>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%fence_ln889 = fence void @_ssdm_op_Fence, i66 %result_pe1, i66 %result_pe2, i66 %final_merger_1, i32 4294967295, i66 %final_merger_1, i32 0" [util.cpp:889]   --->   Operation 38 'fence' 'fence_ln889' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%temp1_global_end_1_loc_load = load i1 %temp1_global_end_1_loc"   --->   Operation 39 'load' 'temp1_global_end_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 40 [1/1] (0.00ns)   --->   "%temp_global_end_3_loc_load = load i1 %temp_global_end_3_loc"   --->   Operation 40 'load' 'temp_global_end_3_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 41 [1/1] ( I:1.74ns O:1.74ns )   --->   "%write_ln889 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %final_merger_1, i66 18446744073709551616" [util.cpp:889]   --->   Operation 41 'write' 'write_ln889' <Predicate = true> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_5 : Operation 42 [1/1] (0.42ns)   --->   "%br_ln890 = br void %if.end44" [util.cpp:890]   --->   Operation 42 'br' 'br_ln890' <Predicate = true> <Delay = 0.42>
+
+State 6 <SV = 5> <Delay = 2.03>
+ST_6 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node enable)   --->   "%temp1_global_end_2 = phi i1 %temp1_global_end_1_loc_load, void %for.cond7.preheader, i1 %or_ln842_1, void %if.then" [util.cpp:842]   --->   Operation 43 'phi' 'temp1_global_end_2' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node enable)   --->   "%temp_global_end_2 = phi i1 %temp_global_end_3_loc_load, void %for.cond7.preheader, i1 %temp_global_end, void %if.then"   --->   Operation 44 'phi' 'temp_global_end_2' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.28ns) (out node of the LUT)   --->   "%enable = and i1 %temp_global_end_2, i1 %temp1_global_end_2" [util.cpp:891]   --->   Operation 45 'and' 'enable' <Predicate = (tmp & tmp_s)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln835 = br i1 %enable, void %for.body.backedge, void %for.end48" [util.cpp:835]   --->   Operation 46 'br' 'br_ln835' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 47 'br' 'br_ln0' <Predicate = (!enable) | (!tmp_s) | (!tmp)> <Delay = 0.00>
+ST_6 : Operation 48 [1/1] ( I:1.74ns O:1.74ns )   --->   "%write_ln897 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %final_merger_1, i66 36893488147419103232" [util.cpp:897]   --->   Operation 48 'write' 'write_ln897' <Predicate = (tmp & tmp_s & enable)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%ret_ln898 = ret" [util.cpp:898]   --->   Operation 49 'ret' 'ret_ln898' <Predicate = (tmp & tmp_s & enable)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 1.747ns
+The critical path consists of the following:
+	fifo request operation ('tmp', util.cpp:838) on port 'result_pe1' (util.cpp:838) [13]  (0.000 ns)
+	fifo read operation ('result_pe1_read', util.cpp:839) on port 'result_pe1' (util.cpp:839) [19]  (1.747 ns)
+
+ <State 3>: 0.763ns
+The critical path consists of the following:
+	'or' operation 1 bit ('or_ln842', util.cpp:842) [31]  (0.287 ns)
+	'call' operation ('call_ln840', util.cpp:840) to 'sub_final_merger.44_Pipeline_VITIS_LOOP_846_2' [37]  (0.476 ns)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 1.747ns
+The critical path consists of the following:
+	fifo write operation ('write_ln889', util.cpp:889) on port 'final_merger_1' (util.cpp:889) [41]  (1.747 ns)
+
+ <State 6>: 2.034ns
+The critical path consists of the following:
+	'phi' operation 1 bit ('temp1.global_end', util.cpp:842) with incoming values : ('or_ln842_1', util.cpp:842) ('temp1_global_end_1_loc_load') [44]  (0.000 ns)
+	'and' operation 1 bit ('enable', util.cpp:891) [46]  (0.287 ns)
+	fifo write operation ('write_ln897', util.cpp:897) on port 'final_merger_1' (util.cpp:897) [51]  (1.747 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

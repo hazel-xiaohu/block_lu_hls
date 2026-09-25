@@ -1,0 +1,349 @@
+
+
+================================================================
+== Vitis HLS Report for 'rrequest_merger_77_Pipeline_VITIS_LOOP_125_1'
+================================================================
+* Date:           Fri Sep 25 00:04:36 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.539 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_125_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.25>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%from2_end = alloca i32 1" [rcache.cpp:121]   --->   Operation 5 'alloca' 'from2_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%from1_end = alloca i32 1" [rcache.cpp:120]   --->   Operation 6 'alloca' 'from1_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%temp_0_0 = alloca i32 1"   --->   Operation 7 'alloca' 'temp_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%temp_2_0 = alloca i32 1"   --->   Operation 8 'alloca' 'temp_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%temp_3224_0 = alloca i32 1"   --->   Operation 9 'alloca' 'temp_3224_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%temp_4225_0 = alloca i32 1"   --->   Operation 10 'alloca' 'temp_4225_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%temp_6_0 = alloca i32 1"   --->   Operation 11 'alloca' 'temp_6_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%temp_5_sroa_0_0 = alloca i32 1"   --->   Operation 12 'alloca' 'temp_5_sroa_0_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%temp_5_sroa_5_0 = alloca i32 1"   --->   Operation 13 'alloca' 'temp_5_sroa_5_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%temp_5_sroa_10_0 = alloca i32 1"   --->   Operation 14 'alloca' 'temp_5_sroa_10_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%temp_5_sroa_15_0 = alloca i32 1"   --->   Operation 15 'alloca' 'temp_5_sroa_15_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%temp_5_sroa_20_0 = alloca i32 1"   --->   Operation 16 'alloca' 'temp_5_sroa_20_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%temp_5_sroa_25_0 = alloca i32 1"   --->   Operation 17 'alloca' 'temp_5_sroa_25_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%temp_5_sroa_30_0 = alloca i32 1"   --->   Operation 18 'alloca' 'temp_5_sroa_30_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%temp_5_sroa_35_0 = alloca i32 1"   --->   Operation 19 'alloca' 'temp_5_sroa_35_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%temp_5_sroa_40_0 = alloca i32 1"   --->   Operation 20 'alloca' 'temp_5_sroa_40_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%temp_5_sroa_45_0 = alloca i32 1"   --->   Operation 21 'alloca' 'temp_5_sroa_45_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%temp_5_sroa_50_0 = alloca i32 1"   --->   Operation 22 'alloca' 'temp_5_sroa_50_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%temp_5_sroa_55_0 = alloca i32 1"   --->   Operation 23 'alloca' 'temp_5_sroa_55_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%temp_5_sroa_60_0 = alloca i32 1"   --->   Operation 24 'alloca' 'temp_5_sroa_60_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%temp_5_sroa_65_0 = alloca i32 1"   --->   Operation 25 'alloca' 'temp_5_sroa_65_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%temp_5_sroa_70_0 = alloca i32 1"   --->   Operation 26 'alloca' 'temp_5_sroa_70_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%temp_5_sroa_75_0 = alloca i32 1"   --->   Operation 27 'alloca' 'temp_5_sroa_75_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%temp_5_sroa_80_0 = alloca i32 1"   --->   Operation 28 'alloca' 'temp_5_sroa_80_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%temp_5_sroa_85_0 = alloca i32 1"   --->   Operation 29 'alloca' 'temp_5_sroa_85_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%temp_5_sroa_90_0 = alloca i32 1"   --->   Operation 30 'alloca' 'temp_5_sroa_90_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%temp_5_sroa_95_0 = alloca i32 1"   --->   Operation 31 'alloca' 'temp_5_sroa_95_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%temp_5_sroa_100_0 = alloca i32 1"   --->   Operation 32 'alloca' 'temp_5_sroa_100_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i398 %rrequest2, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i398 %r_first, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i398 %r_req, void @empty_52, i32 0, i32 0, void @empty_117, i32 0, i32 0, void @empty_117, void @empty_117, void @empty_117, i32 0, i32 0, i32 0, i32 0, void @empty_117, void @empty_117, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.42ns)   --->   "%store_ln120 = store i1 0, i1 %from1_end" [rcache.cpp:120]   --->   Operation 36 'store' 'store_ln120' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 37 [1/1] (0.42ns)   --->   "%store_ln121 = store i1 0, i1 %from2_end" [rcache.cpp:121]   --->   Operation 37 'store' 'store_ln121' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 38 [1/1] (0.42ns)   --->   "%br_ln125 = br void %for.cond" [rcache.cpp:125]   --->   Operation 38 'br' 'br_ln125' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%enable = phi i1 0, void %newFuncRoot, i1 %enable_5, void %if.end11"   --->   Operation 39 'phi' 'enable' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln125 = br i1 %enable, void %for.body, void %for.end.exitStub" [rcache.cpp:125]   --->   Operation 40 'br' 'br_ln125' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%specpipeline_ln126 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, i32 4294967295, void @empty_117" [rcache.cpp:126]   --->   Operation 41 'specpipeline' 'specpipeline_ln126' <Predicate = (!enable)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%specloopname_ln125 = specloopname void @_ssdm_op_SpecLoopName, void @empty_23" [rcache.cpp:125]   --->   Operation 42 'specloopname' 'specloopname_ln125' <Predicate = (!enable)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] ( I:0.00ns O:0.00ns )   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i398P0A, i398 %r_first, i32 1" [rcache.cpp:128]   --->   Operation 43 'nbreadreq' 'tmp_s' <Predicate = (!enable)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 398> <Depth = 2> <FIFO>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln128 = br i1 %tmp_s, void %if.else, void %if.then1" [rcache.cpp:128]   --->   Operation 44 'br' 'br_ln128' <Predicate = (!enable)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] ( I:0.00ns O:0.00ns )   --->   "%tmp_40 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i398P0A, i398 %r_req, i32 1" [rcache.cpp:133]   --->   Operation 45 'nbreadreq' 'tmp_40' <Predicate = (!enable & !tmp_s)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 398> <Depth = 2> <FIFO>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln133 = br i1 %tmp_40, void %if.end11, void %if.then4" [rcache.cpp:133]   --->   Operation 46 'br' 'br_ln133' <Predicate = (!enable & !tmp_s)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] ( I:1.82ns O:1.82ns )   --->   "%r_req_read = read i398 @_ssdm_op_Read.ap_fifo.volatile.i398P0A, i398 %r_req" [rcache.cpp:134]   --->   Operation 47 'read' 'r_req_read' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 398> <Depth = 2> <FIFO>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%trunc_ln134 = trunc i398 %r_req_read" [rcache.cpp:134]   --->   Operation 48 'trunc' 'trunc_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%trunc_ln134_s = partselect i32 @_ssdm_op_PartSelect.i32.i398.i32.i32, i398 %r_req_read, i32 6, i32 37" [rcache.cpp:134]   --->   Operation 49 'partselect' 'trunc_ln134_s' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%trunc_ln134_49 = partselect i32 @_ssdm_op_PartSelect.i32.i398.i32.i32, i398 %r_req_read, i32 38, i32 69" [rcache.cpp:134]   --->   Operation 50 'partselect' 'trunc_ln134_49' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%trunc_ln134_50 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 70, i32 77" [rcache.cpp:134]   --->   Operation 51 'partselect' 'trunc_ln134_50' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%trunc_ln134_51 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 78, i32 85" [rcache.cpp:134]   --->   Operation 52 'partselect' 'trunc_ln134_51' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%trunc_ln134_52 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 86, i32 93" [rcache.cpp:134]   --->   Operation 53 'partselect' 'trunc_ln134_52' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%trunc_ln134_53 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 94, i32 101" [rcache.cpp:134]   --->   Operation 54 'partselect' 'trunc_ln134_53' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%trunc_ln134_54 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 102, i32 109" [rcache.cpp:134]   --->   Operation 55 'partselect' 'trunc_ln134_54' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%trunc_ln134_55 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 110, i32 117" [rcache.cpp:134]   --->   Operation 56 'partselect' 'trunc_ln134_55' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%trunc_ln134_56 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 118, i32 125" [rcache.cpp:134]   --->   Operation 57 'partselect' 'trunc_ln134_56' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%trunc_ln134_57 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 126, i32 133" [rcache.cpp:134]   --->   Operation 58 'partselect' 'trunc_ln134_57' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%trunc_ln134_58 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 134, i32 141" [rcache.cpp:134]   --->   Operation 59 'partselect' 'trunc_ln134_58' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%trunc_ln134_59 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 142, i32 149" [rcache.cpp:134]   --->   Operation 60 'partselect' 'trunc_ln134_59' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%trunc_ln134_60 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 150, i32 157" [rcache.cpp:134]   --->   Operation 61 'partselect' 'trunc_ln134_60' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%trunc_ln134_61 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 158, i32 165" [rcache.cpp:134]   --->   Operation 62 'partselect' 'trunc_ln134_61' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%trunc_ln134_62 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 166, i32 173" [rcache.cpp:134]   --->   Operation 63 'partselect' 'trunc_ln134_62' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%trunc_ln134_63 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 174, i32 181" [rcache.cpp:134]   --->   Operation 64 'partselect' 'trunc_ln134_63' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%trunc_ln134_64 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 182, i32 189" [rcache.cpp:134]   --->   Operation 65 'partselect' 'trunc_ln134_64' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%trunc_ln134_65 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 190, i32 197" [rcache.cpp:134]   --->   Operation 66 'partselect' 'trunc_ln134_65' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%trunc_ln134_66 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 198, i32 205" [rcache.cpp:134]   --->   Operation 67 'partselect' 'trunc_ln134_66' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%trunc_ln134_67 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 206, i32 213" [rcache.cpp:134]   --->   Operation 68 'partselect' 'trunc_ln134_67' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%trunc_ln134_68 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 214, i32 221" [rcache.cpp:134]   --->   Operation 69 'partselect' 'trunc_ln134_68' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%trunc_ln134_69 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 222, i32 229" [rcache.cpp:134]   --->   Operation 70 'partselect' 'trunc_ln134_69' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%trunc_ln134_70 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_req_read, i32 230, i32 237" [rcache.cpp:134]   --->   Operation 71 'partselect' 'trunc_ln134_70' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%trunc_ln134_71 = partselect i160 @_ssdm_op_PartSelect.i160.i398.i32.i32, i398 %r_req_read, i32 238, i32 397" [rcache.cpp:134]   --->   Operation 72 'partselect' 'trunc_ln134_71' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%from2_end_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i398.i32, i398 %r_req_read, i32 3" [rcache.cpp:134]   --->   Operation 73 'bitselect' 'from2_end_7' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%trunc_ln134_72 = partselect i2 @_ssdm_op_PartSelect.i2.i398.i32.i32, i398 %r_req_read, i32 4, i32 5" [rcache.cpp:134]   --->   Operation 74 'partselect' 'trunc_ln134_72' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%br_ln136 = br i1 %from2_end_7, void %if.then7, void %if.end8" [rcache.cpp:136]   --->   Operation 75 'br' 'br_ln136' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_45 = partselect i394 @_ssdm_op_PartSelect.i394.i398.i32.i32, i398 %r_req_read, i32 4, i32 397" [rcache.cpp:137]   --->   Operation 76 'partselect' 'tmp_45' <Predicate = (!enable & !tmp_s & tmp_40 & !from2_end_7)> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_70, i8 %temp_5_sroa_100_0" [rcache.cpp:134]   --->   Operation 77 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 78 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_69, i8 %temp_5_sroa_95_0" [rcache.cpp:134]   --->   Operation 78 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 79 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_68, i8 %temp_5_sroa_90_0" [rcache.cpp:134]   --->   Operation 79 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 80 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_67, i8 %temp_5_sroa_85_0" [rcache.cpp:134]   --->   Operation 80 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 81 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_66, i8 %temp_5_sroa_80_0" [rcache.cpp:134]   --->   Operation 81 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 82 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_65, i8 %temp_5_sroa_75_0" [rcache.cpp:134]   --->   Operation 82 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 83 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_64, i8 %temp_5_sroa_70_0" [rcache.cpp:134]   --->   Operation 83 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 84 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_63, i8 %temp_5_sroa_65_0" [rcache.cpp:134]   --->   Operation 84 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 85 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_62, i8 %temp_5_sroa_60_0" [rcache.cpp:134]   --->   Operation 85 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 86 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_61, i8 %temp_5_sroa_55_0" [rcache.cpp:134]   --->   Operation 86 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 87 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_60, i8 %temp_5_sroa_50_0" [rcache.cpp:134]   --->   Operation 87 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 88 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_59, i8 %temp_5_sroa_45_0" [rcache.cpp:134]   --->   Operation 88 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 89 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_58, i8 %temp_5_sroa_40_0" [rcache.cpp:134]   --->   Operation 89 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 90 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_57, i8 %temp_5_sroa_35_0" [rcache.cpp:134]   --->   Operation 90 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 91 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_56, i8 %temp_5_sroa_30_0" [rcache.cpp:134]   --->   Operation 91 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 92 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_55, i8 %temp_5_sroa_25_0" [rcache.cpp:134]   --->   Operation 92 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 93 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_54, i8 %temp_5_sroa_20_0" [rcache.cpp:134]   --->   Operation 93 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 94 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_53, i8 %temp_5_sroa_15_0" [rcache.cpp:134]   --->   Operation 94 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 95 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_52, i8 %temp_5_sroa_10_0" [rcache.cpp:134]   --->   Operation 95 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 96 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_51, i8 %temp_5_sroa_5_0" [rcache.cpp:134]   --->   Operation 96 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 97 [1/1] (0.42ns)   --->   "%store_ln134 = store i8 %trunc_ln134_50, i8 %temp_5_sroa_0_0" [rcache.cpp:134]   --->   Operation 97 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 98 [1/1] (0.42ns)   --->   "%store_ln134 = store i160 %trunc_ln134_71, i160 %temp_6_0" [rcache.cpp:134]   --->   Operation 98 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 99 [1/1] (0.42ns)   --->   "%store_ln134 = store i32 %trunc_ln134_49, i32 %temp_4225_0" [rcache.cpp:134]   --->   Operation 99 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 100 [1/1] (0.42ns)   --->   "%store_ln134 = store i32 %trunc_ln134_s, i32 %temp_3224_0" [rcache.cpp:134]   --->   Operation 100 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 101 [1/1] (0.42ns)   --->   "%store_ln134 = store i2 %trunc_ln134_72, i2 %temp_2_0" [rcache.cpp:134]   --->   Operation 101 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 102 [1/1] (0.42ns)   --->   "%store_ln134 = store i3 %trunc_ln134, i3 %temp_0_0" [rcache.cpp:134]   --->   Operation 102 'store' 'store_ln134' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 103 [1/1] (0.42ns)   --->   "%store_ln121 = store i1 %from2_end_7, i1 %from2_end" [rcache.cpp:121]   --->   Operation 103 'store' 'store_ln121' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.42>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%br_ln138 = br void %if.end11" [rcache.cpp:138]   --->   Operation 104 'br' 'br_ln138' <Predicate = (!enable & !tmp_s & tmp_40)> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] ( I:1.82ns O:1.82ns )   --->   "%r_first_read = read i398 @_ssdm_op_Read.ap_fifo.volatile.i398P0A, i398 %r_first" [rcache.cpp:129]   --->   Operation 105 'read' 'r_first_read' <Predicate = (!enable & tmp_s)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 398> <Depth = 2> <FIFO>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%trunc_ln129 = trunc i398 %r_first_read" [rcache.cpp:129]   --->   Operation 106 'trunc' 'trunc_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%trunc_ln129_s = partselect i32 @_ssdm_op_PartSelect.i32.i398.i32.i32, i398 %r_first_read, i32 6, i32 37" [rcache.cpp:129]   --->   Operation 107 'partselect' 'trunc_ln129_s' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%trunc_ln129_49 = partselect i32 @_ssdm_op_PartSelect.i32.i398.i32.i32, i398 %r_first_read, i32 38, i32 69" [rcache.cpp:129]   --->   Operation 108 'partselect' 'trunc_ln129_49' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%trunc_ln129_50 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 70, i32 77" [rcache.cpp:129]   --->   Operation 109 'partselect' 'trunc_ln129_50' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%trunc_ln129_51 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 78, i32 85" [rcache.cpp:129]   --->   Operation 110 'partselect' 'trunc_ln129_51' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%trunc_ln129_52 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 86, i32 93" [rcache.cpp:129]   --->   Operation 111 'partselect' 'trunc_ln129_52' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%trunc_ln129_53 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 94, i32 101" [rcache.cpp:129]   --->   Operation 112 'partselect' 'trunc_ln129_53' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%trunc_ln129_54 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 102, i32 109" [rcache.cpp:129]   --->   Operation 113 'partselect' 'trunc_ln129_54' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%trunc_ln129_55 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 110, i32 117" [rcache.cpp:129]   --->   Operation 114 'partselect' 'trunc_ln129_55' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%trunc_ln129_56 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 118, i32 125" [rcache.cpp:129]   --->   Operation 115 'partselect' 'trunc_ln129_56' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%trunc_ln129_57 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 126, i32 133" [rcache.cpp:129]   --->   Operation 116 'partselect' 'trunc_ln129_57' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%trunc_ln129_58 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 134, i32 141" [rcache.cpp:129]   --->   Operation 117 'partselect' 'trunc_ln129_58' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%trunc_ln129_59 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 142, i32 149" [rcache.cpp:129]   --->   Operation 118 'partselect' 'trunc_ln129_59' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%trunc_ln129_60 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 150, i32 157" [rcache.cpp:129]   --->   Operation 119 'partselect' 'trunc_ln129_60' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%trunc_ln129_61 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 158, i32 165" [rcache.cpp:129]   --->   Operation 120 'partselect' 'trunc_ln129_61' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%trunc_ln129_62 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 166, i32 173" [rcache.cpp:129]   --->   Operation 121 'partselect' 'trunc_ln129_62' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%trunc_ln129_63 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 174, i32 181" [rcache.cpp:129]   --->   Operation 122 'partselect' 'trunc_ln129_63' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%trunc_ln129_64 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 182, i32 189" [rcache.cpp:129]   --->   Operation 123 'partselect' 'trunc_ln129_64' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%trunc_ln129_65 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 190, i32 197" [rcache.cpp:129]   --->   Operation 124 'partselect' 'trunc_ln129_65' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%trunc_ln129_66 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 198, i32 205" [rcache.cpp:129]   --->   Operation 125 'partselect' 'trunc_ln129_66' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%trunc_ln129_67 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 206, i32 213" [rcache.cpp:129]   --->   Operation 126 'partselect' 'trunc_ln129_67' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%trunc_ln129_68 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 214, i32 221" [rcache.cpp:129]   --->   Operation 127 'partselect' 'trunc_ln129_68' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%trunc_ln129_69 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 222, i32 229" [rcache.cpp:129]   --->   Operation 128 'partselect' 'trunc_ln129_69' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%trunc_ln129_70 = partselect i8 @_ssdm_op_PartSelect.i8.i398.i32.i32, i398 %r_first_read, i32 230, i32 237" [rcache.cpp:129]   --->   Operation 129 'partselect' 'trunc_ln129_70' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%trunc_ln129_71 = partselect i160 @_ssdm_op_PartSelect.i160.i398.i32.i32, i398 %r_first_read, i32 238, i32 397" [rcache.cpp:129]   --->   Operation 130 'partselect' 'trunc_ln129_71' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%from1_end_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i398.i32, i398 %r_first_read, i32 3" [rcache.cpp:129]   --->   Operation 131 'bitselect' 'from1_end_7' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%trunc_ln129_72 = partselect i2 @_ssdm_op_PartSelect.i2.i398.i32.i32, i398 %r_first_read, i32 4, i32 5" [rcache.cpp:129]   --->   Operation 132 'partselect' 'trunc_ln129_72' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%br_ln131 = br i1 %from1_end_7, void %if.then2, void %if.end" [rcache.cpp:131]   --->   Operation 133 'br' 'br_ln131' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%tmp = partselect i394 @_ssdm_op_PartSelect.i394.i398.i32.i32, i398 %r_first_read, i32 4, i32 397" [rcache.cpp:132]   --->   Operation 134 'partselect' 'tmp' <Predicate = (!enable & tmp_s & !from1_end_7)> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_70, i8 %temp_5_sroa_100_0" [rcache.cpp:129]   --->   Operation 135 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 136 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_69, i8 %temp_5_sroa_95_0" [rcache.cpp:129]   --->   Operation 136 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 137 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_68, i8 %temp_5_sroa_90_0" [rcache.cpp:129]   --->   Operation 137 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 138 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_67, i8 %temp_5_sroa_85_0" [rcache.cpp:129]   --->   Operation 138 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 139 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_66, i8 %temp_5_sroa_80_0" [rcache.cpp:129]   --->   Operation 139 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 140 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_65, i8 %temp_5_sroa_75_0" [rcache.cpp:129]   --->   Operation 140 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 141 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_64, i8 %temp_5_sroa_70_0" [rcache.cpp:129]   --->   Operation 141 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 142 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_63, i8 %temp_5_sroa_65_0" [rcache.cpp:129]   --->   Operation 142 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 143 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_62, i8 %temp_5_sroa_60_0" [rcache.cpp:129]   --->   Operation 143 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 144 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_61, i8 %temp_5_sroa_55_0" [rcache.cpp:129]   --->   Operation 144 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 145 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_60, i8 %temp_5_sroa_50_0" [rcache.cpp:129]   --->   Operation 145 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 146 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_59, i8 %temp_5_sroa_45_0" [rcache.cpp:129]   --->   Operation 146 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 147 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_58, i8 %temp_5_sroa_40_0" [rcache.cpp:129]   --->   Operation 147 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 148 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_57, i8 %temp_5_sroa_35_0" [rcache.cpp:129]   --->   Operation 148 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 149 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_56, i8 %temp_5_sroa_30_0" [rcache.cpp:129]   --->   Operation 149 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 150 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_55, i8 %temp_5_sroa_25_0" [rcache.cpp:129]   --->   Operation 150 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 151 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_54, i8 %temp_5_sroa_20_0" [rcache.cpp:129]   --->   Operation 151 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 152 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_53, i8 %temp_5_sroa_15_0" [rcache.cpp:129]   --->   Operation 152 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 153 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_52, i8 %temp_5_sroa_10_0" [rcache.cpp:129]   --->   Operation 153 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 154 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_51, i8 %temp_5_sroa_5_0" [rcache.cpp:129]   --->   Operation 154 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 155 [1/1] (0.42ns)   --->   "%store_ln129 = store i8 %trunc_ln129_50, i8 %temp_5_sroa_0_0" [rcache.cpp:129]   --->   Operation 155 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 156 [1/1] (0.42ns)   --->   "%store_ln129 = store i160 %trunc_ln129_71, i160 %temp_6_0" [rcache.cpp:129]   --->   Operation 156 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 157 [1/1] (0.42ns)   --->   "%store_ln129 = store i32 %trunc_ln129_49, i32 %temp_4225_0" [rcache.cpp:129]   --->   Operation 157 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 158 [1/1] (0.42ns)   --->   "%store_ln129 = store i32 %trunc_ln129_s, i32 %temp_3224_0" [rcache.cpp:129]   --->   Operation 158 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 159 [1/1] (0.42ns)   --->   "%store_ln129 = store i2 %trunc_ln129_72, i2 %temp_2_0" [rcache.cpp:129]   --->   Operation 159 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 160 [1/1] (0.42ns)   --->   "%store_ln129 = store i3 %trunc_ln129, i3 %temp_0_0" [rcache.cpp:129]   --->   Operation 160 'store' 'store_ln129' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 161 [1/1] (0.42ns)   --->   "%store_ln120 = store i1 %from1_end_7, i1 %from1_end" [rcache.cpp:120]   --->   Operation 161 'store' 'store_ln120' <Predicate = (!enable & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%br_ln133 = br void %if.end11" [rcache.cpp:133]   --->   Operation 162 'br' 'br_ln133' <Predicate = (!enable & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%temp_0_0_load = load i3 %temp_0_0"   --->   Operation 173 'load' 'temp_0_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%temp_2_0_load = load i2 %temp_2_0"   --->   Operation 174 'load' 'temp_2_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%temp_3224_0_load = load i32 %temp_3224_0"   --->   Operation 175 'load' 'temp_3224_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%temp_4225_0_load = load i32 %temp_4225_0"   --->   Operation 176 'load' 'temp_4225_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%temp_6_0_load = load i160 %temp_6_0"   --->   Operation 177 'load' 'temp_6_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%temp_5_sroa_0_0_load = load i8 %temp_5_sroa_0_0"   --->   Operation 178 'load' 'temp_5_sroa_0_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%temp_5_sroa_5_0_load = load i8 %temp_5_sroa_5_0"   --->   Operation 179 'load' 'temp_5_sroa_5_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%temp_5_sroa_10_0_load = load i8 %temp_5_sroa_10_0"   --->   Operation 180 'load' 'temp_5_sroa_10_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%temp_5_sroa_15_0_load = load i8 %temp_5_sroa_15_0"   --->   Operation 181 'load' 'temp_5_sroa_15_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%temp_5_sroa_20_0_load = load i8 %temp_5_sroa_20_0"   --->   Operation 182 'load' 'temp_5_sroa_20_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%temp_5_sroa_25_0_load = load i8 %temp_5_sroa_25_0"   --->   Operation 183 'load' 'temp_5_sroa_25_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%temp_5_sroa_30_0_load = load i8 %temp_5_sroa_30_0"   --->   Operation 184 'load' 'temp_5_sroa_30_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%temp_5_sroa_35_0_load = load i8 %temp_5_sroa_35_0"   --->   Operation 185 'load' 'temp_5_sroa_35_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%temp_5_sroa_40_0_load = load i8 %temp_5_sroa_40_0"   --->   Operation 186 'load' 'temp_5_sroa_40_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%temp_5_sroa_45_0_load = load i8 %temp_5_sroa_45_0"   --->   Operation 187 'load' 'temp_5_sroa_45_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%temp_5_sroa_50_0_load = load i8 %temp_5_sroa_50_0"   --->   Operation 188 'load' 'temp_5_sroa_50_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%temp_5_sroa_55_0_load = load i8 %temp_5_sroa_55_0"   --->   Operation 189 'load' 'temp_5_sroa_55_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%temp_5_sroa_60_0_load = load i8 %temp_5_sroa_60_0"   --->   Operation 190 'load' 'temp_5_sroa_60_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%temp_5_sroa_65_0_load = load i8 %temp_5_sroa_65_0"   --->   Operation 191 'load' 'temp_5_sroa_65_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%temp_5_sroa_70_0_load = load i8 %temp_5_sroa_70_0"   --->   Operation 192 'load' 'temp_5_sroa_70_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%temp_5_sroa_75_0_load = load i8 %temp_5_sroa_75_0"   --->   Operation 193 'load' 'temp_5_sroa_75_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%temp_5_sroa_80_0_load = load i8 %temp_5_sroa_80_0"   --->   Operation 194 'load' 'temp_5_sroa_80_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%temp_5_sroa_85_0_load = load i8 %temp_5_sroa_85_0"   --->   Operation 195 'load' 'temp_5_sroa_85_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%temp_5_sroa_90_0_load = load i8 %temp_5_sroa_90_0"   --->   Operation 196 'load' 'temp_5_sroa_90_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%temp_5_sroa_95_0_load = load i8 %temp_5_sroa_95_0"   --->   Operation 197 'load' 'temp_5_sroa_95_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%temp_5_sroa_100_0_load = load i8 %temp_5_sroa_100_0"   --->   Operation 198 'load' 'temp_5_sroa_100_0_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 199 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_100_0_out, i8 %temp_5_sroa_100_0_load"   --->   Operation 199 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_95_0_out, i8 %temp_5_sroa_95_0_load"   --->   Operation 200 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 201 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_90_0_out, i8 %temp_5_sroa_90_0_load"   --->   Operation 201 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 202 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_85_0_out, i8 %temp_5_sroa_85_0_load"   --->   Operation 202 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_80_0_out, i8 %temp_5_sroa_80_0_load"   --->   Operation 203 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_75_0_out, i8 %temp_5_sroa_75_0_load"   --->   Operation 204 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 205 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_70_0_out, i8 %temp_5_sroa_70_0_load"   --->   Operation 205 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_65_0_out, i8 %temp_5_sroa_65_0_load"   --->   Operation 206 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 207 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_60_0_out, i8 %temp_5_sroa_60_0_load"   --->   Operation 207 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 208 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_55_0_out, i8 %temp_5_sroa_55_0_load"   --->   Operation 208 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_50_0_out, i8 %temp_5_sroa_50_0_load"   --->   Operation 209 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 210 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_45_0_out, i8 %temp_5_sroa_45_0_load"   --->   Operation 210 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 211 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_40_0_out, i8 %temp_5_sroa_40_0_load"   --->   Operation 211 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 212 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_35_0_out, i8 %temp_5_sroa_35_0_load"   --->   Operation 212 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 213 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_30_0_out, i8 %temp_5_sroa_30_0_load"   --->   Operation 213 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 214 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_25_0_out, i8 %temp_5_sroa_25_0_load"   --->   Operation 214 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 215 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_20_0_out, i8 %temp_5_sroa_20_0_load"   --->   Operation 215 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 216 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_15_0_out, i8 %temp_5_sroa_15_0_load"   --->   Operation 216 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 217 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_10_0_out, i8 %temp_5_sroa_10_0_load"   --->   Operation 217 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 218 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_5_0_out, i8 %temp_5_sroa_5_0_load"   --->   Operation 218 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 219 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %temp_5_sroa_0_0_out, i8 %temp_5_sroa_0_0_load"   --->   Operation 219 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 220 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i160P0A, i160 %temp_6_0_out, i160 %temp_6_0_load"   --->   Operation 220 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 221 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %temp_4225_0_out, i32 %temp_4225_0_load"   --->   Operation 221 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 222 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %temp_3224_0_out, i32 %temp_3224_0_load"   --->   Operation 222 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 223 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i2P0A, i2 %temp_2_0_out, i2 %temp_2_0_load"   --->   Operation 223 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 224 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i3P0A, i3 %temp_0_0_out, i3 %temp_0_0_load"   --->   Operation 224 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 225 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 225 'ret' 'ret_ln0' <Predicate = (enable)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 2.53>
+ST_2 : Operation 163 [1/1] (0.00ns)   --->   "%or_ln6 = bitconcatenate i398 @_ssdm_op_BitConcatenate.i398.i394.i1.i3, i394 %tmp_45, i1 0, i3 %trunc_ln134" [rcache.cpp:137]   --->   Operation 163 'bitconcatenate' 'or_ln6' <Predicate = (!tmp_s & tmp_40 & !from2_end_7)> <Delay = 0.00>
+ST_2 : Operation 164 [1/1] ( I:1.63ns O:1.63ns )   --->   "%write_ln137 = write void @_ssdm_op_Write.ap_fifo.volatile.i398P0A, i398 %rrequest2, i398 %or_ln6" [rcache.cpp:137]   --->   Operation 164 'write' 'write_ln137' <Predicate = (!tmp_s & tmp_40 & !from2_end_7)> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 398> <Depth = 4> <FIFO>
+ST_2 : Operation 165 [1/1] (0.00ns)   --->   "%br_ln137 = br void %if.end8" [rcache.cpp:137]   --->   Operation 165 'br' 'br_ln137' <Predicate = (!tmp_s & tmp_40 & !from2_end_7)> <Delay = 0.00>
+ST_2 : Operation 166 [1/1] (0.00ns)   --->   "%or_ln5 = bitconcatenate i398 @_ssdm_op_BitConcatenate.i398.i394.i1.i3, i394 %tmp, i1 0, i3 %trunc_ln129" [rcache.cpp:132]   --->   Operation 166 'bitconcatenate' 'or_ln5' <Predicate = (tmp_s & !from1_end_7)> <Delay = 0.00>
+ST_2 : Operation 167 [1/1] ( I:1.63ns O:1.63ns )   --->   "%write_ln132 = write void @_ssdm_op_Write.ap_fifo.volatile.i398P0A, i398 %rrequest2, i398 %or_ln5" [rcache.cpp:132]   --->   Operation 167 'write' 'write_ln132' <Predicate = (tmp_s & !from1_end_7)> <Delay = 1.63> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 398> <Depth = 4> <FIFO>
+ST_2 : Operation 168 [1/1] (0.00ns)   --->   "%br_ln132 = br void %if.end" [rcache.cpp:132]   --->   Operation 168 'br' 'br_ln132' <Predicate = (tmp_s & !from1_end_7)> <Delay = 0.00>
+ST_2 : Operation 169 [1/1] (0.00ns)   --->   "%from2_end_8 = load i1 %from2_end" [rcache.cpp:140]   --->   Operation 169 'load' 'from2_end_8' <Predicate = (!enable)> <Delay = 0.00>
+ST_2 : Operation 170 [1/1] (0.00ns)   --->   "%from1_end_8 = load i1 %from1_end" [rcache.cpp:140]   --->   Operation 170 'load' 'from1_end_8' <Predicate = (!enable)> <Delay = 0.00>
+ST_2 : Operation 171 [1/1] (0.28ns)   --->   "%enable_5 = and i1 %from1_end_8, i1 %from2_end_8" [rcache.cpp:140]   --->   Operation 171 'and' 'enable_5' <Predicate = (!enable)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 172 [1/1] (0.00ns)   --->   "%br_ln125 = br void %for.cond" [rcache.cpp:125]   --->   Operation 172 'br' 'br_ln125' <Predicate = (!enable)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 2.252ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation 1 bit ('enable') with incoming values : ('enable', rcache.cpp:140) [65]  (0.427 ns)
+	'br' operation ('br_ln125', rcache.cpp:125) [63]  (0.427 ns)
+	'phi' operation 1 bit ('enable') with incoming values : ('enable', rcache.cpp:140) [65]  (0.000 ns)
+	fifo read operation ('r_req_read', rcache.cpp:134) on port 'r_req' (rcache.cpp:134) [76]  (1.825 ns)
+
+ <State 2>: 2.539ns
+The critical path consists of the following:
+	'load' operation 1 bit ('from2_end', rcache.cpp:140) on local variable 'from2_end', rcache.cpp:121 [204]  (0.000 ns)
+	'and' operation 1 bit ('enable', rcache.cpp:140) [206]  (0.287 ns)
+	multiplexor before 'phi' operation 1 bit ('enable') with incoming values : ('enable', rcache.cpp:140) [65]  (0.427 ns)
+	'phi' operation 1 bit ('enable') with incoming values : ('enable', rcache.cpp:140) [65]  (0.000 ns)
+	fifo read operation ('r_req_read', rcache.cpp:134) on port 'r_req' (rcache.cpp:134) [76]  (1.825 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

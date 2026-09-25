@@ -1,0 +1,12 @@
+  CREATE_STREAM @0 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.sparse_getrf_virtual_sqr STREAM:15321}
+  CREATE_STREAM @113000 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_a_row.vsqr STREAM:16207}
+  CREATE_STREAM @113000 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_a_col.vsqr STREAM:16216}
+  CREATE_STREAM @113000 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_a_val.vsqr STREAM:16225}
+  CREATE_STREAM @113000 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_l_row.vsqr STREAM:16234}
+  CREATE_STREAM @113000 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_l_col.vsqr STREAM:16243}
+  CREATE_STREAM @113000 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_l_val.vsqr STREAM:16252}
+  CREATE_STREAM @113000 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_u_row.vsqr STREAM:16261}
+  CREATE_STREAM @113000 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_u_col.vsqr STREAM:16270}
+  CREATE_STREAM @113000 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_u_val.vsqr STREAM:16279}
+  CREATE_STREAM @113000 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_lite_control_r.vsqr STREAM:16288}
+  CREATE_STREAM @113000 {NAME:sparse_getrf_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_lite_control.vsqr STREAM:16297}

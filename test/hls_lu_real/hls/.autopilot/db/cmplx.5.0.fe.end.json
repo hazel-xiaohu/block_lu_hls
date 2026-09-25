@@ -1,0 +1,404 @@
+{
+    "1": {
+        "name": "run_cached_gessm_Pipeline_VITIS_LOOP_283_3",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "283",
+        "instructions": "201",
+        "total_instructions": "201",
+        "calls": "",
+        "basicblocks": "35",
+        "memory_accesses": "66",
+        "control_depth": "4",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "49"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "sparse_lu_shared",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "345",
+        "instructions": "347",
+        "total_instructions": "3220",
+        "calls": "9 16 4 6 17 6 12 5 7",
+        "basicblocks": "33",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "7",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "2"
+        }
+    },
+    "2": {
+        "name": "run_cached_tstrf_Pipeline_VITIS_LOOP_329_4",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "299",
+        "instructions": "159",
+        "total_instructions": "159",
+        "calls": "",
+        "basicblocks": "34",
+        "memory_accesses": "54",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "37"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "run_cached_getrf_Pipeline_VITIS_LOOP_262_9",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "262",
+        "instructions": "39",
+        "total_instructions": "39",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "8",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "sparse_lu_shared_Pipeline_VITIS_LOOP_110_2",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "423",
+        "instructions": "149",
+        "total_instructions": "149",
+        "calls": "",
+        "basicblocks": "33",
+        "memory_accesses": "40",
+        "control_depth": "5",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "36"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "sparse_lu_shared_Pipeline_VITIS_LOOP_449_2",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "449",
+        "instructions": "70",
+        "total_instructions": "70",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "20",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "17"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "cache_triangular_pattern",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "61",
+        "instructions": "84",
+        "total_instructions": "176",
+        "calls": "13",
+        "basicblocks": "15",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "5",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "run_cached_getrf",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "184",
+        "instructions": "355",
+        "total_instructions": "1156",
+        "calls": "6 6 14 8 11 15 3",
+        "basicblocks": "53",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "5",
+        "loads": {
+            "L": "24"
+        },
+        "stores": {
+            "L": "12"
+        },
+        "loops": {
+            "L": "4",
+            "N": "2"
+        }
+    },
+    "8": {
+        "name": "run_cached_getrf_Pipeline_VITIS_LOOP_131_3",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "200",
+        "instructions": "62",
+        "total_instructions": "62",
+        "calls": "",
+        "basicblocks": "9",
+        "memory_accesses": "14",
+        "control_depth": "5",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "13"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "sparse_lu_shared_Pipeline_VITIS_LOOP_23_1_VITIS_LOOP_24_2",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "406",
+        "instructions": "76",
+        "total_instructions": "76",
+        "calls": "",
+        "basicblocks": "10",
+        "memory_accesses": "18",
+        "control_depth": "2",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "run_cached_tstrf_Pipeline_VITIS_LOOP_171_3",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "306",
+        "instructions": "75",
+        "total_instructions": "75",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "22",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "21"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "run_cached_getrf_Pipeline_VITIS_LOOP_238_5",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "238",
+        "instructions": "211",
+        "total_instructions": "211",
+        "calls": "",
+        "basicblocks": "35",
+        "memory_accesses": "66",
+        "control_depth": "4",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "49"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "12": {
+        "name": "run_cached_gessm",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "270",
+        "instructions": "96",
+        "total_instructions": "400",
+        "calls": "18 1",
+        "basicblocks": "21",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "14"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "2",
+            "N": "2"
+        }
+    },
+    "13": {
+        "name": "cache_triangular_pattern_Pipeline_VITIS_LOOP_76_2",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "75",
+        "instructions": "92",
+        "total_instructions": "92",
+        "calls": "",
+        "basicblocks": "23",
+        "memory_accesses": "16",
+        "control_depth": "7",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "12"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "14": {
+        "name": "run_cached_getrf_Pipeline_VITIS_LOOP_210_2",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "209",
+        "instructions": "95",
+        "total_instructions": "95",
+        "calls": "",
+        "basicblocks": "17",
+        "memory_accesses": "20",
+        "control_depth": "7",
+        "def_use_depth": "2",
+        "loads": {
+            "L": "10"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "15": {
+        "name": "run_cached_getrf_Pipeline_VITIS_LOOP_257_8",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "257",
+        "instructions": "42",
+        "total_instructions": "42",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "8",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "16": {
+        "name": "sparse_lu_shared_Pipeline_VITIS_LOOP_44_1_VITIS_LOOP_45_2",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "422",
+        "instructions": "136",
+        "total_instructions": "136",
+        "calls": "",
+        "basicblocks": "30",
+        "memory_accesses": "38",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "38"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "17": {
+        "name": "run_cached_tstrf",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "299",
+        "instructions": "300",
+        "total_instructions": "534",
+        "calls": "10 2",
+        "basicblocks": "52",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "56"
+        },
+        "stores": {
+            "L": "22"
+        },
+        "loops": {
+            "L": "2",
+            "N": "2"
+        }
+    },
+    "18": {
+        "name": "run_cached_gessm_Pipeline_VITIS_LOOP_152_3",
+        "file": "sparse_lu_shared_cached.cpp",
+        "fileloc": "276",
+        "instructions": "103",
+        "total_instructions": "103",
+        "calls": "",
+        "basicblocks": "6",
+        "memory_accesses": "34",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "33"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

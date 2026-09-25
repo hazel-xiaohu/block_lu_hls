@@ -1,0 +1,57 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'run_cached_getrf'" level="0">
+<item name = "Date">Thu Sep 24 21:48:48 2026
+</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
+<item name = "Project">hls_lu_cached</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu15eg-ffvb1156-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 3.852 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_cache_triangular_pattern_fu_687">cache_triangular_pattern, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_210_2_fu_741">run_cached_getrf_Pipeline_VITIS_LOOP_210_2, 14, 14, 70.000 ns, 70.000 ns, 14, 14, no</column>
+<column name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_131_3_fu_780">run_cached_getrf_Pipeline_VITIS_LOOP_131_3, ?, ?, ?, ?, 0, 0, loop pipeline stp</column>
+<column name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_238_5_fu_806">run_cached_getrf_Pipeline_VITIS_LOOP_238_5, ?, ?, ?, ?, 0, 0, loop pipeline stp</column>
+<column name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_257_8_fu_831">run_cached_getrf_Pipeline_VITIS_LOOP_257_8, ?, ?, ?, ?, 0, 0, loop pipeline stp</column>
+<column name="grp_run_cached_getrf_Pipeline_VITIS_LOOP_262_9_fu_853">run_cached_getrf_Pipeline_VITIS_LOOP_262_9, ?, ?, ?, ?, 0, 0, loop pipeline stp</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_202_1">?, ?, 13 ~ 28, -, -, ?, no</column>
+<column name="- VITIS_LOOP_128_1">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_129_2">?, ?, ?, -, -, ?, no</column>
+<column name="- VITIS_LOOP_229_3">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_230_4">?, ?, ?, -, -, ?, no</column>
+<column name="- VITIS_LOOP_256_7">?, ?, ?, -, -, 1 ~ ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

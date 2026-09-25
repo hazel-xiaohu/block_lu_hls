@@ -1,0 +1,204 @@
+
+
+================================================================
+== Vitis HLS Report for 'request_to_vcbanks_25_Pipeline_VITIS_LOOP_243_1'
+================================================================
+* Date:           Fri Sep 25 00:05:22 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        hls_lu_spmm_cascade
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.162 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_243_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      50|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|      82|    -|
+|Register         |        -|     -|     457|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     457|     132|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |B_rlen_curr_addr_fu_452_p2             |         +|   0|  0|  12|           5|           5|
+    |ap_block_pp0_stage0_01001_grp1         |       and|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_169                       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_384                       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_391                       |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op29_read_state1          |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op65_write_state2         |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op67_write_state2         |       and|   0|  0|   2|           1|           1|
+    |tmp_s_nbreadreq_fu_196_p3              |       and|   0|  0|   2|           1|           0|
+    |icmp_ln250_fu_422_p2                   |      icmp|   0|  0|   9|           2|           1|
+    |ap_block_pp0_stage0_01001              |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1_grp1  |        or|   0|  0|   2|           1|           1|
+    |select_ln250_fu_444_p3                 |    select|   0|  0|   5|           1|           5|
+    |ap_enable_pp0                          |       xor|   0|  0|   2|           1|           2|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                  |          |   0|  0|  50|          20|          23|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1          |   9|          2|    1|          2|
+    |ap_phi_mux_enable_phi_fu_297_p4  |  14|          3|    1|          3|
+    |crequest3_blk_n                  |   9|          2|    1|          2|
+    |enable_1_reg_305                 |  14|          3|    1|          3|
+    |enable_reg_294                   |   9|          2|    1|          2|
+    |vccache_re_bank1_pe7_blk_n       |   9|          2|    1|          2|
+    |vccache_re_bank2_pe7_blk_n       |   9|          2|    1|          2|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            |  82|         18|    8|         18|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+-----+----+-----+-----------+
+    |                    Name                   |  FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                                  |    1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp1_done_reg  |    1|   0|    1|          0|
+    |ap_done_reg                                |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |    1|   0|    1|          0|
+    |enable_1_reg_305                           |    1|   0|    1|          0|
+    |enable_7_reg_639                           |    1|   0|    1|          0|
+    |enable_reg_294                             |    1|   0|    1|          0|
+    |temp_vcreq_1_0_fu_144                      |    2|   0|    2|          0|
+    |temp_vcreq_2_0_fu_148                      |    3|   0|    3|          0|
+    |temp_vcreq_3_0_fu_152                      |    3|   0|    3|          0|
+    |temp_vcreq_4_0_fu_156                      |    5|   0|    5|          0|
+    |temp_vcreq_5_0_fu_160                      |    3|   0|    3|          0|
+    |temp_vcreq_6106_0_fu_164                   |   32|   0|   32|          0|
+    |temp_vcreq_7107_0_fu_168                   |   32|   0|   32|          0|
+    |temp_vcreq_8_sroa_0_0_fu_176               |    8|   0|    8|          0|
+    |temp_vcreq_8_sroa_5_0_fu_180               |    8|   0|    8|          0|
+    |temp_vcreq_9_0_fu_172                      |  128|   0|  128|          0|
+    |tmp_47_reg_647                             |  224|   0|  224|          0|
+    |tmp_66_reg_643                             |    1|   0|    1|          0|
+    |tmp_s_reg_635                              |    1|   0|    1|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |Total                                      |  457|   0|  457|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------+-----+-----+------------+-------------------------------------------------+--------------+
+|              RTL Ports              | Dir | Bits|  Protocol  |                  Source Object                  |    C Type    |
++-------------------------------------+-----+-----+------------+-------------------------------------------------+--------------+
+|ap_clk                               |   in|    1|  ap_ctrl_hs|  request_to_vcbanks.25_Pipeline_VITIS_LOOP_243_1|  return value|
+|ap_rst                               |   in|    1|  ap_ctrl_hs|  request_to_vcbanks.25_Pipeline_VITIS_LOOP_243_1|  return value|
+|ap_start                             |   in|    1|  ap_ctrl_hs|  request_to_vcbanks.25_Pipeline_VITIS_LOOP_243_1|  return value|
+|ap_done                              |  out|    1|  ap_ctrl_hs|  request_to_vcbanks.25_Pipeline_VITIS_LOOP_243_1|  return value|
+|ap_idle                              |  out|    1|  ap_ctrl_hs|  request_to_vcbanks.25_Pipeline_VITIS_LOOP_243_1|  return value|
+|ap_ready                             |  out|    1|  ap_ctrl_hs|  request_to_vcbanks.25_Pipeline_VITIS_LOOP_243_1|  return value|
+|crequest3_dout                       |   in|  225|     ap_fifo|                                        crequest3|       pointer|
+|crequest3_empty_n                    |   in|    1|     ap_fifo|                                        crequest3|       pointer|
+|crequest3_read                       |  out|    1|     ap_fifo|                                        crequest3|       pointer|
+|crequest3_num_data_valid             |   in|    3|     ap_fifo|                                        crequest3|       pointer|
+|crequest3_fifo_cap                   |   in|    3|     ap_fifo|                                        crequest3|       pointer|
+|vccache_re_bank1_pe7_din             |  out|  225|     ap_fifo|                             vccache_re_bank1_pe7|       pointer|
+|vccache_re_bank1_pe7_full_n          |   in|    1|     ap_fifo|                             vccache_re_bank1_pe7|       pointer|
+|vccache_re_bank1_pe7_write           |  out|    1|     ap_fifo|                             vccache_re_bank1_pe7|       pointer|
+|vccache_re_bank1_pe7_num_data_valid  |   in|    4|     ap_fifo|                             vccache_re_bank1_pe7|       pointer|
+|vccache_re_bank1_pe7_fifo_cap        |   in|    4|     ap_fifo|                             vccache_re_bank1_pe7|       pointer|
+|vccache_re_bank2_pe7_din             |  out|  225|     ap_fifo|                             vccache_re_bank2_pe7|       pointer|
+|vccache_re_bank2_pe7_full_n          |   in|    1|     ap_fifo|                             vccache_re_bank2_pe7|       pointer|
+|vccache_re_bank2_pe7_write           |  out|    1|     ap_fifo|                             vccache_re_bank2_pe7|       pointer|
+|vccache_re_bank2_pe7_num_data_valid  |   in|    4|     ap_fifo|                             vccache_re_bank2_pe7|       pointer|
+|vccache_re_bank2_pe7_fifo_cap        |   in|    4|     ap_fifo|                             vccache_re_bank2_pe7|       pointer|
+|base_addr_val_3                      |   in|    5|     ap_none|                                  base_addr_val_3|        scalar|
+|base_addr_cid_1                      |   in|    5|     ap_none|                                  base_addr_cid_1|        scalar|
+|temp_vcreq_8_sroa_5_0_out            |  out|    8|      ap_vld|                        temp_vcreq_8_sroa_5_0_out|       pointer|
+|temp_vcreq_8_sroa_5_0_out_ap_vld     |  out|    1|      ap_vld|                        temp_vcreq_8_sroa_5_0_out|       pointer|
+|temp_vcreq_8_sroa_0_0_out            |  out|    8|      ap_vld|                        temp_vcreq_8_sroa_0_0_out|       pointer|
+|temp_vcreq_8_sroa_0_0_out_ap_vld     |  out|    1|      ap_vld|                        temp_vcreq_8_sroa_0_0_out|       pointer|
+|temp_vcreq_9_0_out                   |  out|  128|      ap_vld|                               temp_vcreq_9_0_out|       pointer|
+|temp_vcreq_9_0_out_ap_vld            |  out|    1|      ap_vld|                               temp_vcreq_9_0_out|       pointer|
+|temp_vcreq_7107_0_out                |  out|   32|      ap_vld|                            temp_vcreq_7107_0_out|       pointer|
+|temp_vcreq_7107_0_out_ap_vld         |  out|    1|      ap_vld|                            temp_vcreq_7107_0_out|       pointer|
+|temp_vcreq_6106_0_out                |  out|   32|      ap_vld|                            temp_vcreq_6106_0_out|       pointer|
+|temp_vcreq_6106_0_out_ap_vld         |  out|    1|      ap_vld|                            temp_vcreq_6106_0_out|       pointer|
+|temp_vcreq_5_0_out                   |  out|    3|      ap_vld|                               temp_vcreq_5_0_out|       pointer|
+|temp_vcreq_5_0_out_ap_vld            |  out|    1|      ap_vld|                               temp_vcreq_5_0_out|       pointer|
+|temp_vcreq_4_0_out                   |  out|    5|      ap_vld|                               temp_vcreq_4_0_out|       pointer|
+|temp_vcreq_4_0_out_ap_vld            |  out|    1|      ap_vld|                               temp_vcreq_4_0_out|       pointer|
+|temp_vcreq_3_0_out                   |  out|    3|      ap_vld|                               temp_vcreq_3_0_out|       pointer|
+|temp_vcreq_3_0_out_ap_vld            |  out|    1|      ap_vld|                               temp_vcreq_3_0_out|       pointer|
+|temp_vcreq_2_0_out                   |  out|    3|      ap_vld|                               temp_vcreq_2_0_out|       pointer|
+|temp_vcreq_2_0_out_ap_vld            |  out|    1|      ap_vld|                               temp_vcreq_2_0_out|       pointer|
+|temp_vcreq_1_0_out                   |  out|    2|      ap_vld|                               temp_vcreq_1_0_out|       pointer|
+|temp_vcreq_1_0_out_ap_vld            |  out|    1|      ap_vld|                               temp_vcreq_1_0_out|       pointer|
++-------------------------------------+-----+-----+------------+-------------------------------------------------+--------------+
+
