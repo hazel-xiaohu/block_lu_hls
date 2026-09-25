@@ -1,0 +1,16 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make[1]: Entering directory '/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/csim/build'
+   Compiling ../../../../tb.cpp in debug mode
+   Compiling ../../../../core.cpp in debug mode
+   Compiling ../../../../pe.cpp in debug mode
+   Compiling ../../../../rcache.cpp in debug mode
+   Compiling ../../../../util.cpp in debug mode
+   Compiling ../../../../vccache.cpp in debug mode
+   Generating csim.exe
+make[1]: Leaving directory '/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/csim/build'
+RUN benchmark first 50 rows
+PASS benchmark first 50 rows (nnz=0)
+All SpMM checks passed.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

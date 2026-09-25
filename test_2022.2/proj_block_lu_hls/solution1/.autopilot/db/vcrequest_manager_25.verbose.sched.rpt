@@ -1,0 +1,214 @@
+
+
+================================================================
+== Vitis HLS Report for 'vcrequest_manager_25'
+================================================================
+* Date:           Fri Sep 25 15:48:42 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.747 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%v_hit = alloca i64 1" [vccache.cpp:206]   --->   Operation 7 'alloca' 'v_hit' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 16> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%c_hit = alloca i64 1" [vccache.cpp:206]   --->   Operation 8 'alloca' 'c_hit' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 16> <FIFO>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%vcollector = alloca i64 1"   --->   Operation 9 'alloca' 'vcollector' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 68> <Depth = 64> <FIFO>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%ccollector = alloca i64 1"   --->   Operation 10 'alloca' 'ccollector' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 68> <Depth = 64> <FIFO>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%vrequest = alloca i64 1"   --->   Operation 11 'alloca' 'vrequest' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 68> <Depth = 64> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%crequest = alloca i64 1"   --->   Operation 12 'alloca' 'crequest' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 68> <Depth = 64> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%vscheduler = alloca i64 1"   --->   Operation 13 'alloca' 'vscheduler' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 68> <Depth = 64> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%cscheduler = alloca i64 1"   --->   Operation 14 'alloca' 'cscheduler' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 68> <Depth = 64> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%v_first = alloca i64 1"   --->   Operation 15 'alloca' 'v_first' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%c_first = alloca i64 1"   --->   Operation 16 'alloca' 'c_first' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%v_req = alloca i64 1"   --->   Operation 17 'alloca' 'v_req' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%c_req = alloca i64 1"   --->   Operation 18 'alloca' 'c_req' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%voff = alloca i64 1" [vccache.cpp:221]   --->   Operation 19 'alloca' 'voff' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 64> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%coff = alloca i64 1" [vccache.cpp:221]   --->   Operation 20 'alloca' 'coff' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 64> <FIFO>
+ST_1 : Operation 21 [2/2] (0.00ns)   --->   "%call_ln226 = call void @vcrequest_splitter.73, i68 %rcache_result_bank2_b, i68 %vrequest, i68 %crequest, i68 %vcollector, i68 %ccollector, i68 %vscheduler, i68 %cscheduler" [vccache.cpp:226]   --->   Operation 21 'call' 'call_ln226' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 22 [1/2] (0.00ns)   --->   "%call_ln226 = call void @vcrequest_splitter.73, i68 %rcache_result_bank2_b, i68 %vrequest, i68 %crequest, i68 %vcollector, i68 %ccollector, i68 %vscheduler, i68 %cscheduler" [vccache.cpp:226]   --->   Operation 22 'call' 'call_ln226' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%B_cid_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %B_cid"   --->   Operation 23 'read' 'B_cid_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%B_val_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %B_val"   --->   Operation 24 'read' 'B_val_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [2/2] (0.00ns)   --->   "%call_ln228 = call void @request_manager.74, i68 %vrequest, i209 %v_first" [vccache.cpp:228]   --->   Operation 25 'call' 'call_ln228' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 26 [2/2] (0.00ns)   --->   "%call_ln229 = call void @schedule_access.75, i68 %vscheduler, i6 %vresponse2, i128 %voff, i128 %bv2, i64 %B_val_read, i209 %v_req, i1 %v_hit" [vccache.cpp:229]   --->   Operation 26 'call' 'call_ln229' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 27 [2/2] (0.00ns)   --->   "%call_ln231 = call void @request_manager.76, i68 %crequest, i209 %c_first" [vccache.cpp:231]   --->   Operation 27 'call' 'call_ln231' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 28 [2/2] (0.00ns)   --->   "%call_ln232 = call void @schedule_access.77, i68 %cscheduler, i6 %cresponse2, i128 %coff, i128 %bc2, i64 %B_cid_read, i209 %c_req, i1 %c_hit" [vccache.cpp:232]   --->   Operation 28 'call' 'call_ln232' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 29 [1/2] (0.00ns)   --->   "%call_ln228 = call void @request_manager.74, i68 %vrequest, i209 %v_first" [vccache.cpp:228]   --->   Operation 29 'call' 'call_ln228' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 30 [1/2] (0.00ns)   --->   "%call_ln229 = call void @schedule_access.75, i68 %vscheduler, i6 %vresponse2, i128 %voff, i128 %bv2, i64 %B_val_read, i209 %v_req, i1 %v_hit" [vccache.cpp:229]   --->   Operation 30 'call' 'call_ln229' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 31 [1/2] (0.00ns)   --->   "%call_ln231 = call void @request_manager.76, i68 %crequest, i209 %c_first" [vccache.cpp:231]   --->   Operation 31 'call' 'call_ln231' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 32 [1/2] (0.00ns)   --->   "%call_ln232 = call void @schedule_access.77, i68 %cscheduler, i6 %cresponse2, i128 %coff, i128 %bc2, i64 %B_cid_read, i209 %c_req, i1 %c_hit" [vccache.cpp:232]   --->   Operation 32 'call' 'call_ln232' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 33 [2/2] (0.00ns)   --->   "%call_ln234 = call void @request_merger.78, i209 %v_first, i209 %v_req, i209 %vrequest2" [vccache.cpp:234]   --->   Operation 33 'call' 'call_ln234' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 34 [2/2] (0.00ns)   --->   "%call_ln235 = call void @request_merger.79, i209 %c_first, i209 %c_req, i209 %crequest2" [vccache.cpp:235]   --->   Operation 34 'call' 'call_ln235' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 35 [2/2] (0.00ns)   --->   "%call_ln238 = call void @collector.80, i68 %vcollector, i1024 %vresult215, i128 %voff, i134 %vblock2, i1 %v_hit" [vccache.cpp:238]   --->   Operation 35 'call' 'call_ln238' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 36 [2/2] (0.00ns)   --->   "%call_ln239 = call void @collector.81, i68 %ccollector, i1024 %cresult219, i128 %coff, i134 %cblock2, i1 %c_hit" [vccache.cpp:239]   --->   Operation 36 'call' 'call_ln239' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln203 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 1, void @empty_86" [vccache.cpp:203]   --->   Operation 37 'specdataflowpipeline' 'specdataflowpipeline_ln203' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i134 %cblock2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i134 %vblock2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %cresult219, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1024 %vresult215, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %cresponse2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %vresponse2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %crequest2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %vrequest2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i68 %rcache_result_bank2_b, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %bc2, void @empty_106, i32 0, i32 0, void @empty_86, i32 0, i32 896, void @empty_170, void @empty_133, void @empty_86, i32 16, i32 16, i32 16, i32 16, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 47 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %bv2, void @empty_106, i32 0, i32 0, void @empty_86, i32 0, i32 896, void @empty_124, void @empty_133, void @empty_86, i32 16, i32 16, i32 16, i32 16, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @v_hit_str, i32 1, void @p_str, void @p_str, i32 16, i32 16, i1 %v_hit, i1 %v_hit"   --->   Operation 49 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %v_hit, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%empty_285 = specchannel i32 @_ssdm_op_SpecChannel, void @c_hit_str, i32 1, void @p_str, void @p_str, i32 16, i32 16, i1 %c_hit, i1 %c_hit"   --->   Operation 51 'specchannel' 'empty_285' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %c_hit, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 52 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 53 [1/1] (0.00ns)   --->   "%empty_286 = specchannel i32 @_ssdm_op_SpecChannel, void @vcollector_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i68 %vcollector, i68 %vcollector"   --->   Operation 53 'specchannel' 'empty_286' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i68 %vcollector, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 55 [1/1] (0.00ns)   --->   "%empty_287 = specchannel i32 @_ssdm_op_SpecChannel, void @ccollector_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i68 %ccollector, i68 %ccollector"   --->   Operation 55 'specchannel' 'empty_287' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i68 %ccollector, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 57 [1/1] (0.00ns)   --->   "%empty_288 = specchannel i32 @_ssdm_op_SpecChannel, void @vrequest_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i68 %vrequest, i68 %vrequest"   --->   Operation 57 'specchannel' 'empty_288' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i68 %vrequest, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%empty_289 = specchannel i32 @_ssdm_op_SpecChannel, void @crequest_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i68 %crequest, i68 %crequest"   --->   Operation 59 'specchannel' 'empty_289' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i68 %crequest, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 61 [1/1] (0.00ns)   --->   "%empty_290 = specchannel i32 @_ssdm_op_SpecChannel, void @vscheduler_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i68 %vscheduler, i68 %vscheduler"   --->   Operation 61 'specchannel' 'empty_290' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i68 %vscheduler, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%empty_291 = specchannel i32 @_ssdm_op_SpecChannel, void @cscheduler_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i68 %cscheduler, i68 %cscheduler"   --->   Operation 63 'specchannel' 'empty_291' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i68 %cscheduler, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%empty_292 = specchannel i32 @_ssdm_op_SpecChannel, void @v_first_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i209 %v_first, i209 %v_first"   --->   Operation 65 'specchannel' 'empty_292' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %v_first, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%empty_293 = specchannel i32 @_ssdm_op_SpecChannel, void @c_first_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i209 %c_first, i209 %c_first"   --->   Operation 67 'specchannel' 'empty_293' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 68 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %c_first, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 68 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 69 [1/1] (0.00ns)   --->   "%empty_294 = specchannel i32 @_ssdm_op_SpecChannel, void @v_req_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i209 %v_req, i209 %v_req"   --->   Operation 69 'specchannel' 'empty_294' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %v_req, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 71 [1/1] (0.00ns)   --->   "%empty_295 = specchannel i32 @_ssdm_op_SpecChannel, void @c_req_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i209 %c_req, i209 %c_req"   --->   Operation 71 'specchannel' 'empty_295' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 72 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %c_req, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 72 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 73 [1/1] (0.00ns)   --->   "%empty_296 = specchannel i32 @_ssdm_op_SpecChannel, void @voff_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i128 %voff, i128 %voff"   --->   Operation 73 'specchannel' 'empty_296' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %voff, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 74 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 75 [1/1] (0.00ns)   --->   "%empty_297 = specchannel i32 @_ssdm_op_SpecChannel, void @coff_str, i32 1, void @p_str, void @p_str, i32 64, i32 64, i128 %coff, i128 %coff"   --->   Operation 75 'specchannel' 'empty_297' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %coff, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 77 [1/2] (0.00ns)   --->   "%call_ln234 = call void @request_merger.78, i209 %v_first, i209 %v_req, i209 %vrequest2" [vccache.cpp:234]   --->   Operation 77 'call' 'call_ln234' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 78 [1/2] (0.00ns)   --->   "%call_ln235 = call void @request_merger.79, i209 %c_first, i209 %c_req, i209 %crequest2" [vccache.cpp:235]   --->   Operation 78 'call' 'call_ln235' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 79 [1/2] (0.00ns)   --->   "%call_ln238 = call void @collector.80, i68 %vcollector, i1024 %vresult215, i128 %voff, i134 %vblock2, i1 %v_hit" [vccache.cpp:238]   --->   Operation 79 'call' 'call_ln238' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 80 [1/2] (0.00ns)   --->   "%call_ln239 = call void @collector.81, i68 %ccollector, i1024 %cresult219, i128 %coff, i134 %cblock2, i1 %c_hit" [vccache.cpp:239]   --->   Operation 80 'call' 'call_ln239' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 81 [1/1] (0.00ns)   --->   "%ret_ln241 = ret" [vccache.cpp:241]   --->   Operation 81 'ret' 'ret_ln241' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

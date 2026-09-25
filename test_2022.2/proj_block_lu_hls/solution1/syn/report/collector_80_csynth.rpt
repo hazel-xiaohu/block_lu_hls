@@ -1,0 +1,189 @@
+
+
+================================================================
+== Vitis HLS Report for 'collector_80'
+================================================================
+* Date:           Fri Sep 25 15:50:59 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.747 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                  |                                        |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                     Instance                     |                 Module                 |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_collector_80_Pipeline_VITIS_LOOP_185_2_fu_96  |collector_80_Pipeline_VITIS_LOOP_185_2  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +--------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_176_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     114|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|     298|    2412|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      94|    -|
+|Register         |        -|     -|    1195|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|    1493|    2620|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+------+-----+
+    |                     Instance                     |                 Module                 | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+------+-----+
+    |grp_collector_80_Pipeline_VITIS_LOOP_185_2_fu_96  |collector_80_Pipeline_VITIS_LOOP_185_2  |        0|   0|  298|  2412|    0|
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+------+-----+
+    |Total                                             |                                        |        0|   0|  298|  2412|    0|
+    +--------------------------------------------------+----------------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln184_6_fu_167_p2  |         +|   0|  0|  32|          32|          32|
+    |add_ln184_fu_161_p2    |         +|   0|  0|  32|          32|           2|
+    |add_ln185_fu_199_p2    |         +|   0|  0|  38|          31|           1|
+    |empty_fu_193_p2        |         +|   0|  0|   2|           2|           2|
+    |tmp5_fu_187_p2         |         +|   0|  0|   2|           2|           2|
+    |ap_block_state3        |       and|   0|  0|   2|           1|           1|
+    |ap_condition_122       |       and|   0|  0|   2|           1|           1|
+    |ap_block_state1        |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2        |        or|   0|  0|   2|           1|           1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0| 114|         103|          43|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+----+-----------+------+-----------+
+    |        Name       | LUT| Input Size| Bits | Total Bits|
+    +-------------------+----+-----------+------+-----------+
+    |ap_NS_fsm          |  31|          6|     1|          6|
+    |ap_done            |   9|          2|     1|          2|
+    |cached_V_6_reg_84  |   9|          2|  1024|       2048|
+    |v_hit1_blk_n       |   9|          2|     1|          2|
+    |vblock2_write      |   9|          2|     1|          2|
+    |vcollector_blk_n   |   9|          2|     1|          2|
+    |voff3_read         |   9|          2|     1|          2|
+    |vresult215_blk_n   |   9|          2|     1|          2|
+    +-------------------+----+-----------+------+-----------+
+    |Total              |  94|         20|  1031|       2066|
+    +-------------------+----+-----------+------+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------+------+----+------+-----------+
+    |                              Name                             |  FF  | LUT| Bits | Const Bits|
+    +---------------------------------------------------------------+------+----+------+-----------+
+    |add_ln185_reg_247                                              |    31|   0|    31|          0|
+    |ap_CS_fsm                                                      |     5|   0|     5|          0|
+    |ap_done_reg                                                    |     1|   0|     1|          0|
+    |cached_V_6_reg_84                                              |  1024|   0|  1024|          0|
+    |empty_reg_242                                                  |     2|   0|     2|          0|
+    |grp_collector_80_Pipeline_VITIS_LOOP_185_2_fu_96_ap_start_reg  |     1|   0|     1|          0|
+    |hit_reg_217                                                    |     1|   0|     1|          0|
+    |trunc_ln48_reg_227                                             |    30|   0|    30|          0|
+    |trunc_ln49_reg_237                                             |    30|   0|    30|          0|
+    |trunc_ln_reg_232                                               |     2|   0|     2|          0|
+    |vcollector_read_reg_205                                        |    68|   0|    68|          0|
+    +---------------------------------------------------------------+------+----+------+-----------+
+    |Total                                                          |  1195|   0|  1195|          0|
+    +---------------------------------------------------------------+------+----+------+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+------+------------+--------------+--------------+
+|         RTL Ports         | Dir | Bits |  Protocol  | Source Object|    C Type    |
++---------------------------+-----+------+------------+--------------+--------------+
+|ap_clk                     |   in|     1|  ap_ctrl_hs|  collector.80|  return value|
+|ap_rst                     |   in|     1|  ap_ctrl_hs|  collector.80|  return value|
+|ap_start                   |   in|     1|  ap_ctrl_hs|  collector.80|  return value|
+|ap_done                    |  out|     1|  ap_ctrl_hs|  collector.80|  return value|
+|ap_continue                |   in|     1|  ap_ctrl_hs|  collector.80|  return value|
+|ap_idle                    |  out|     1|  ap_ctrl_hs|  collector.80|  return value|
+|ap_ready                   |  out|     1|  ap_ctrl_hs|  collector.80|  return value|
+|vcollector_dout            |   in|    68|     ap_fifo|    vcollector|       pointer|
+|vcollector_num_data_valid  |   in|     7|     ap_fifo|    vcollector|       pointer|
+|vcollector_fifo_cap        |   in|     7|     ap_fifo|    vcollector|       pointer|
+|vcollector_empty_n         |   in|     1|     ap_fifo|    vcollector|       pointer|
+|vcollector_read            |  out|     1|     ap_fifo|    vcollector|       pointer|
+|vresult215_dout            |   in|  1024|     ap_fifo|    vresult215|       pointer|
+|vresult215_num_data_valid  |   in|     6|     ap_fifo|    vresult215|       pointer|
+|vresult215_fifo_cap        |   in|     6|     ap_fifo|    vresult215|       pointer|
+|vresult215_empty_n         |   in|     1|     ap_fifo|    vresult215|       pointer|
+|vresult215_read            |  out|     1|     ap_fifo|    vresult215|       pointer|
+|voff3_dout                 |   in|   128|     ap_fifo|         voff3|       pointer|
+|voff3_num_data_valid       |   in|     7|     ap_fifo|         voff3|       pointer|
+|voff3_fifo_cap             |   in|     7|     ap_fifo|         voff3|       pointer|
+|voff3_empty_n              |   in|     1|     ap_fifo|         voff3|       pointer|
+|voff3_read                 |  out|     1|     ap_fifo|         voff3|       pointer|
+|vblock2_din                |  out|   134|     ap_fifo|       vblock2|       pointer|
+|vblock2_num_data_valid     |   in|     8|     ap_fifo|       vblock2|       pointer|
+|vblock2_fifo_cap           |   in|     8|     ap_fifo|       vblock2|       pointer|
+|vblock2_full_n             |   in|     1|     ap_fifo|       vblock2|       pointer|
+|vblock2_write              |  out|     1|     ap_fifo|       vblock2|       pointer|
+|v_hit1_dout                |   in|     1|     ap_fifo|        v_hit1|       pointer|
+|v_hit1_num_data_valid      |   in|     5|     ap_fifo|        v_hit1|       pointer|
+|v_hit1_fifo_cap            |   in|     5|     ap_fifo|        v_hit1|       pointer|
+|v_hit1_empty_n             |   in|     1|     ap_fifo|        v_hit1|       pointer|
+|v_hit1_read                |  out|     1|     ap_fifo|        v_hit1|       pointer|
++---------------------------+-----+------+------------+--------------+--------------+
+

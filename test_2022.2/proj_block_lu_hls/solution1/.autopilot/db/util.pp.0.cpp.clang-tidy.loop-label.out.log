@@ -1,0 +1,161 @@
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:5339:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:5339:7: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:6313:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:6313:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:6327:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:6327:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:6341:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:6341:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:7940:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:7940:7: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10432:2: warning: Added loop label VITIS_LOOP_24_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_24_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10432:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10500:2: warning: Added loop label VITIS_LOOP_92_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ) {
+ ^~~
+ VITIS_LOOP_92_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10500:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10566:2: warning: Added loop label VITIS_LOOP_158_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_158_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10566:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10622:2: warning: Added loop label VITIS_LOOP_214_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_214_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10622:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10690:2: warning: Added loop label VITIS_LOOP_282_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ) {
+ ^~~
+ VITIS_LOOP_282_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10690:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10721:2: warning: Added loop label VITIS_LOOP_313_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ) {
+ ^~~
+ VITIS_LOOP_313_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10721:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10757:2: warning: Added loop label VITIS_LOOP_349_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ) {
+ ^~~
+ VITIS_LOOP_349_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10757:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10781:2: warning: Added loop label VITIS_LOOP_373_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ) {
+ ^~~
+ VITIS_LOOP_373_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10781:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10822:2: warning: Added loop label VITIS_LOOP_414_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_414_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10822:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10889:2: warning: Added loop label VITIS_LOOP_481_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_481_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10889:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10941:2: warning: Added loop label VITIS_LOOP_533_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_533_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:10941:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11003:2: warning: Added loop label VITIS_LOOP_595_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_595_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11003:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11077:2: warning: Added loop label VITIS_LOOP_669_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_669_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11077:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11123:2: warning: Added loop label VITIS_LOOP_715_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_715_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11123:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11168:2: warning: Added loop label VITIS_LOOP_760_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_760_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11168:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11181:5: warning: Added loop label VITIS_LOOP_773_2:   [xilinx-label-all-loops]
+    for (bool enable_i=temp.end, enable_j=temp1.end; !enable_i || !enable_j; ){
+    ^~~
+    VITIS_LOOP_773_2: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11181:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11211:9: error: Invalid Directive: for current device, fadd + fulldsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=m_result op=fadd impl=fulldsp
+        ^
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11243:2: warning: Added loop label VITIS_LOOP_835_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_835_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11243:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11254:5: warning: Added loop label VITIS_LOOP_846_2:   [xilinx-label-all-loops]
+    for (bool enable_i=temp.end, enable_j=temp1.end; !enable_i || !enable_j; ){
+    ^~~
+    VITIS_LOOP_846_2: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11254:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11282:9: error: Invalid Directive: for current device, fadd + fulldsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=m_result op=fadd impl=fulldsp
+        ^
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11312:2: warning: Added loop label VITIS_LOOP_904_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ){
+ ^~~
+ VITIS_LOOP_904_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11312:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11318:5: warning: Added loop label VITIS_LOOP_910_2:   [xilinx-label-all-loops]
+    for (id_t i=temp.begin; i<=temp.end; i++){
+    ^~~
+    VITIS_LOOP_910_2: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11318:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11343:2: warning: Added loop label VITIS_LOOP_935_1:   [xilinx-label-all-loops]
+ for (id_t i=0; i<crum+1; i++){
+ ^~~
+ VITIS_LOOP_935_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11343:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11358:2: warning: Added loop label VITIS_LOOP_950_1:   [xilinx-label-all-loops]
+ for (; !enable; ){
+ ^~~
+ VITIS_LOOP_950_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11358:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11363:5: warning: Added loop label VITIS_LOOP_955_2:   [xilinx-label-all-loops]
+    for (id_t ttt=counter; ttt<temp_len+counter; ttt++) {
+    ^~~
+    VITIS_LOOP_955_2: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11363:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11385:2: warning: Added loop label VITIS_LOOP_977_1:   [xilinx-label-all-loops]
+ for (id_t row = 0; row < crum; ++row) {
+ ^~~
+ VITIS_LOOP_977_1: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11385:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11392:3: warning: Added loop label VITIS_LOOP_984_2:   [xilinx-label-all-loops]
+  for (id_t i = 0; i < product_len; ++i) {
+  ^~~
+  VITIS_LOOP_984_2: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11392:3: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11395:4: warning: Added loop label VITIS_LOOP_987_3:   [xilinx-label-all-loops]
+   while (cpos < end && C_cid[cpos] < item.cid) ++cpos;
+   ^~~~~
+   VITIS_LOOP_987_3: 
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp:11395:4: note: FIX-IT applied suggested code changes

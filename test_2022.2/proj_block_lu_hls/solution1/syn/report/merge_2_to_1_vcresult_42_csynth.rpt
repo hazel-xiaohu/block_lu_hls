@@ -1,0 +1,159 @@
+
+
+================================================================
+== Vitis HLS Report for 'merge_2_to_1_vcresult_42'
+================================================================
+* Date:           Fri Sep 25 15:51:47 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.719 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------------+----------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                              |                                                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                           Instance                           |                       Module                       |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------------------------+----------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81  |merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +--------------------------------------------------------------+----------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|    2081|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|    3109|     442|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      79|    -|
+|Register         |        -|     -|       5|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|    3114|    2602|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------------+----------------------------------------------------+---------+----+------+-----+-----+
+    |                           Instance                           |                       Module                       | BRAM_18K| DSP|  FF  | LUT | URAM|
+    +--------------------------------------------------------------+----------------------------------------------------+---------+----+------+-----+-----+
+    |grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81  |merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1  |        0|   0|  3109|  442|    0|
+    +--------------------------------------------------------------+----------------------------------------------------+---------+----+------+-----+-----+
+    |Total                                                         |                                                    |        0|   0|  3109|  442|    0|
+    +--------------------------------------------------------------+----------------------------------------------------+---------+----+------+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+------+------------+------------+
+    |     Variable Name    | Operation| DSP| FF|  LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+------+------------+------------+
+    |ap_block_state1       |        or|   0|  0|     2|           1|           1|
+    |or_ln571_4_fu_167_p2  |        or|   0|  0|  1031|        1031|           1|
+    |or_ln571_fu_119_p2    |        or|   0|  0|  1048|        1048|           1|
+    +----------------------+----------+----+---+------+------------+------------+
+    |Total                 |          |   0|  0|  2081|        2080|           3|
+    +----------------------+----------+----+---+------+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+------+-----------+
+    |             Name            | LUT| Input Size| Bits | Total Bits|
+    +-----------------------------+----+-----------+------+-----------+
+    |ap_NS_fsm                    |  20|          4|     1|          4|
+    |ap_done                      |   9|          2|     1|          2|
+    |vcache_bank1_cresult1_blk_n  |   9|          2|     1|          2|
+    |vcache_bank1_cresult1_din    |   9|          2|  1031|       2062|
+    |vcache_bank1_cresult1_write  |  14|          3|     1|          3|
+    |vcache_bank3_result_read     |   9|          2|     1|          2|
+    |vcache_bank4_result_read     |   9|          2|     1|          2|
+    +-----------------------------+----+-----------+------+-----------+
+    |Total                        |  79|         17|  1037|       2077|
+    +-----------------------------+----+-----------+------+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------------+---+----+-----+-----------+
+    |                                    Name                                   | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                                  |  3|   0|    3|          0|
+    |ap_done_reg                                                                |  1|   0|    1|          0|
+    |grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_start_reg  |  1|   0|    1|          0|
+    +---------------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                                      |  5|   0|    5|          0|
+    +---------------------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------+-----+------+------------+--------------------------+--------------+
+|               RTL Ports              | Dir | Bits |  Protocol  |       Source Object      |    C Type    |
++--------------------------------------+-----+------+------------+--------------------------+--------------+
+|ap_clk                                |   in|     1|  ap_ctrl_hs|  merge_2_to_1_vcresult.42|  return value|
+|ap_rst                                |   in|     1|  ap_ctrl_hs|  merge_2_to_1_vcresult.42|  return value|
+|ap_start                              |   in|     1|  ap_ctrl_hs|  merge_2_to_1_vcresult.42|  return value|
+|ap_done                               |  out|     1|  ap_ctrl_hs|  merge_2_to_1_vcresult.42|  return value|
+|ap_continue                           |   in|     1|  ap_ctrl_hs|  merge_2_to_1_vcresult.42|  return value|
+|ap_idle                               |  out|     1|  ap_ctrl_hs|  merge_2_to_1_vcresult.42|  return value|
+|ap_ready                              |  out|     1|  ap_ctrl_hs|  merge_2_to_1_vcresult.42|  return value|
+|vcache_bank3_result_dout              |   in|  1031|     ap_fifo|       vcache_bank3_result|       pointer|
+|vcache_bank3_result_num_data_valid    |   in|     4|     ap_fifo|       vcache_bank3_result|       pointer|
+|vcache_bank3_result_fifo_cap          |   in|     4|     ap_fifo|       vcache_bank3_result|       pointer|
+|vcache_bank3_result_empty_n           |   in|     1|     ap_fifo|       vcache_bank3_result|       pointer|
+|vcache_bank3_result_read              |  out|     1|     ap_fifo|       vcache_bank3_result|       pointer|
+|vcache_bank4_result_dout              |   in|  1031|     ap_fifo|       vcache_bank4_result|       pointer|
+|vcache_bank4_result_num_data_valid    |   in|     4|     ap_fifo|       vcache_bank4_result|       pointer|
+|vcache_bank4_result_fifo_cap          |   in|     4|     ap_fifo|       vcache_bank4_result|       pointer|
+|vcache_bank4_result_empty_n           |   in|     1|     ap_fifo|       vcache_bank4_result|       pointer|
+|vcache_bank4_result_read              |  out|     1|     ap_fifo|       vcache_bank4_result|       pointer|
+|vcache_bank1_cresult1_din             |  out|  1031|     ap_fifo|     vcache_bank1_cresult1|       pointer|
+|vcache_bank1_cresult1_num_data_valid  |   in|     4|     ap_fifo|     vcache_bank1_cresult1|       pointer|
+|vcache_bank1_cresult1_fifo_cap        |   in|     4|     ap_fifo|     vcache_bank1_cresult1|       pointer|
+|vcache_bank1_cresult1_full_n          |   in|     1|     ap_fifo|     vcache_bank1_cresult1|       pointer|
+|vcache_bank1_cresult1_write           |  out|     1|     ap_fifo|     vcache_bank1_cresult1|       pointer|
++--------------------------------------+-----+------+------------+--------------------------+--------------+
+

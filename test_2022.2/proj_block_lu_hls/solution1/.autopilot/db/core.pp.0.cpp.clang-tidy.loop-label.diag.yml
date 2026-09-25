@@ -1,0 +1,256 @@
+---
+MainSourceFile:  /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1211_1:  '
+    FileOffset:      1211
+    FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          153591
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          361111
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          361550
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          361990
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1245_1:  '
+    FileOffset:      1245
+    FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          623867
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1245_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_13_1:  '
+    FileOffset:      13
+    FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          991030
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_13_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_32_1:  '
+    FileOffset:      32
+    FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          991511
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_32_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_2:  '
+    FileOffset:      35
+    FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          991614
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_61_1:  '
+    FileOffset:      61
+    FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          992286
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_61_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_64_2:  '
+    FileOffset:      64
+    FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          992389
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_64_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_96_1:  '
+    FileOffset:      96
+    FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          993484
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_96_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_13_1:  '
+    FileOffset:      13
+    FilePath:        core.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          995917
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_13_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_22_2:  '
+    FileOffset:      22
+    FilePath:        core.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          996145
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_22_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_43_1:  '
+    FileOffset:      43
+    FilePath:        core.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          996793
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_43_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_53_2:  '
+    FileOffset:      53
+    FilePath:        core.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          997116
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_53_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_86_1:  '
+    FileOffset:      86
+    FilePath:        core.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          997869
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_86_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_120_1:  '
+    FileOffset:      120
+    FilePath:        core.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          998703
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_120_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_147_1:  '
+    FileOffset:      147
+    FilePath:        core.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
+        Offset:          999230
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_147_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      404
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      405
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      406
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      407
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      408
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      409
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      410
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      411
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      412
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      413
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      414
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      415
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      416
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      417
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      418
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      419
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      455
+    FilePath:        core.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fifo + srl is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      456
+    FilePath:        core.cpp
+    Replacements:    
+...

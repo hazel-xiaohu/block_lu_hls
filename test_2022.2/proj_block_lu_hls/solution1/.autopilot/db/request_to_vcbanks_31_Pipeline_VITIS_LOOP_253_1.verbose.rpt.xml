@@ -1,0 +1,188 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'request_to_vcbanks_31_Pipeline_VITIS_LOOP_253_1'" level="0">
+<item name = "Date">Fri Sep 25 15:51:26 2026
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">proj_block_lu_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu15eg-ffvb1156-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 2.792 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_253_1">?, ?, 2, 1, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 41, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 117, -</column>
+<column name="Register">-, -, 631, -, -</column>
+<specialColumn name="Available">1488, 3528, 682560, 341280, 112</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="B_rlen_curr_addr_fu_370_p2">+, 0, 0, 12, 5, 5</column>
+<column name="ap_block_state1_pp0_stage0_iter0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_324">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op55_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op57_write_state2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_s_nbreadreq_fu_172_p3">and, 0, 0, 2, 1, 0</column>
+<column name="icmp_ln1019_fu_340_p2">icmp, 0, 0, 8, 2, 1</column>
+<column name="ap_block_pp0_stage0_01001">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state2_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="select_ln260_fu_362_p3">select, 0, 0, 5, 1, 5</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">9, 2, 1, 2</column>
+<column name="crequest1_blk_n">9, 2, 1, 2</column>
+<column name="temp_vcreq_brid_fu_148">9, 2, 32, 64</column>
+<column name="temp_vcreq_brlen_fu_152">9, 2, 32, 64</column>
+<column name="temp_vcreq_data_V_fu_156">9, 2, 128, 256</column>
+<column name="temp_vcreq_dest_V_fu_140">9, 2, 5, 10</column>
+<column name="temp_vcreq_peID_V_fu_136">9, 2, 3, 6</column>
+<column name="temp_vcreq_target_V_fu_128">9, 2, 2, 4</column>
+<column name="temp_vcreq_type_V_fu_132">9, 2, 3, 6</column>
+<column name="temp_vcreq_write_idx_V_fu_144">9, 2, 3, 6</column>
+<column name="vccache_re_bank1_pe5_blk_n">9, 2, 1, 2</column>
+<column name="vccache_re_bank2_pe5_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="enable_reg_567">1, 0, 1, 0</column>
+<column name="temp_vcreq_brid_5_reg_606">32, 0, 32, 0</column>
+<column name="temp_vcreq_brid_fu_148">32, 0, 32, 0</column>
+<column name="temp_vcreq_brlen_5_reg_571">32, 0, 32, 0</column>
+<column name="temp_vcreq_brlen_fu_152">32, 0, 32, 0</column>
+<column name="temp_vcreq_data_V_4_reg_576">128, 0, 128, 0</column>
+<column name="temp_vcreq_data_V_fu_156">128, 0, 128, 0</column>
+<column name="temp_vcreq_dest_V_4_reg_596">5, 0, 5, 0</column>
+<column name="temp_vcreq_dest_V_fu_140">5, 0, 5, 0</column>
+<column name="temp_vcreq_peID_V_4_reg_591">3, 0, 3, 0</column>
+<column name="temp_vcreq_peID_V_fu_136">3, 0, 3, 0</column>
+<column name="temp_vcreq_target_V_4_reg_581">2, 0, 2, 0</column>
+<column name="temp_vcreq_target_V_fu_128">2, 0, 2, 0</column>
+<column name="temp_vcreq_type_V_4_reg_586">3, 0, 3, 0</column>
+<column name="temp_vcreq_type_V_fu_132">3, 0, 3, 0</column>
+<column name="temp_vcreq_write_idx_V_4_reg_601">3, 0, 3, 0</column>
+<column name="temp_vcreq_write_idx_V_fu_144">3, 0, 3, 0</column>
+<column name="tmp_115_reg_615">208, 0, 208, 0</column>
+<column name="tmp_67_reg_611">1, 0, 1, 0</column>
+<column name="tmp_s_reg_563">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, request_to_vcbanks.31_Pipeline_VITIS_LOOP_253_1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, request_to_vcbanks.31_Pipeline_VITIS_LOOP_253_1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, request_to_vcbanks.31_Pipeline_VITIS_LOOP_253_1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, request_to_vcbanks.31_Pipeline_VITIS_LOOP_253_1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, request_to_vcbanks.31_Pipeline_VITIS_LOOP_253_1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, request_to_vcbanks.31_Pipeline_VITIS_LOOP_253_1, return value</column>
+<column name="crequest1_dout">in, 209, ap_fifo, crequest1, pointer</column>
+<column name="crequest1_num_data_valid">in, 7, ap_fifo, crequest1, pointer</column>
+<column name="crequest1_fifo_cap">in, 7, ap_fifo, crequest1, pointer</column>
+<column name="crequest1_empty_n">in, 1, ap_fifo, crequest1, pointer</column>
+<column name="crequest1_read">out, 1, ap_fifo, crequest1, pointer</column>
+<column name="vccache_re_bank1_pe5_din">out, 209, ap_fifo, vccache_re_bank1_pe5, pointer</column>
+<column name="vccache_re_bank1_pe5_num_data_valid">in, 4, ap_fifo, vccache_re_bank1_pe5, pointer</column>
+<column name="vccache_re_bank1_pe5_fifo_cap">in, 4, ap_fifo, vccache_re_bank1_pe5, pointer</column>
+<column name="vccache_re_bank1_pe5_full_n">in, 1, ap_fifo, vccache_re_bank1_pe5, pointer</column>
+<column name="vccache_re_bank1_pe5_write">out, 1, ap_fifo, vccache_re_bank1_pe5, pointer</column>
+<column name="vccache_re_bank2_pe5_din">out, 209, ap_fifo, vccache_re_bank2_pe5, pointer</column>
+<column name="vccache_re_bank2_pe5_num_data_valid">in, 4, ap_fifo, vccache_re_bank2_pe5, pointer</column>
+<column name="vccache_re_bank2_pe5_fifo_cap">in, 4, ap_fifo, vccache_re_bank2_pe5, pointer</column>
+<column name="vccache_re_bank2_pe5_full_n">in, 1, ap_fifo, vccache_re_bank2_pe5, pointer</column>
+<column name="vccache_re_bank2_pe5_write">out, 1, ap_fifo, vccache_re_bank2_pe5, pointer</column>
+<column name="base_addr_val_load">in, 5, ap_none, base_addr_val_load, scalar</column>
+<column name="base_addr_cid_load">in, 5, ap_none, base_addr_cid_load, scalar</column>
+<column name="temp_vcreq_data_V_out">out, 128, ap_vld, temp_vcreq_data_V_out, pointer</column>
+<column name="temp_vcreq_data_V_out_ap_vld">out, 1, ap_vld, temp_vcreq_data_V_out, pointer</column>
+<column name="temp_vcreq_brlen_out">out, 32, ap_vld, temp_vcreq_brlen_out, pointer</column>
+<column name="temp_vcreq_brlen_out_ap_vld">out, 1, ap_vld, temp_vcreq_brlen_out, pointer</column>
+<column name="temp_vcreq_brid_out">out, 32, ap_vld, temp_vcreq_brid_out, pointer</column>
+<column name="temp_vcreq_brid_out_ap_vld">out, 1, ap_vld, temp_vcreq_brid_out, pointer</column>
+<column name="temp_vcreq_write_idx_V_out">out, 3, ap_vld, temp_vcreq_write_idx_V_out, pointer</column>
+<column name="temp_vcreq_write_idx_V_out_ap_vld">out, 1, ap_vld, temp_vcreq_write_idx_V_out, pointer</column>
+<column name="temp_vcreq_dest_V_out">out, 5, ap_vld, temp_vcreq_dest_V_out, pointer</column>
+<column name="temp_vcreq_dest_V_out_ap_vld">out, 1, ap_vld, temp_vcreq_dest_V_out, pointer</column>
+<column name="temp_vcreq_peID_V_out">out, 3, ap_vld, temp_vcreq_peID_V_out, pointer</column>
+<column name="temp_vcreq_peID_V_out_ap_vld">out, 1, ap_vld, temp_vcreq_peID_V_out, pointer</column>
+<column name="temp_vcreq_type_V_out">out, 3, ap_vld, temp_vcreq_type_V_out, pointer</column>
+<column name="temp_vcreq_type_V_out_ap_vld">out, 1, ap_vld, temp_vcreq_type_V_out, pointer</column>
+<column name="temp_vcreq_target_V_out">out, 2, ap_vld, temp_vcreq_target_V_out, pointer</column>
+<column name="temp_vcreq_target_V_out_ap_vld">out, 1, ap_vld, temp_vcreq_target_V_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

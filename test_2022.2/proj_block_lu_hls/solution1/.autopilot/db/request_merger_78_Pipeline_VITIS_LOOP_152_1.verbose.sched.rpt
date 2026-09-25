@@ -1,0 +1,215 @@
+
+
+================================================================
+== Vitis HLS Report for 'request_merger_78_Pipeline_VITIS_LOOP_152_1'
+================================================================
+* Date:           Fri Sep 25 15:48:39 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.984 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_152_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.98>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%from2_end = alloca i32 1"   --->   Operation 5 'alloca' 'from2_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%from1_end = alloca i32 1"   --->   Operation 6 'alloca' 'from1_end' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%temp_target_V = alloca i32 1"   --->   Operation 7 'alloca' 'temp_target_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%temp_type_V = alloca i32 1"   --->   Operation 8 'alloca' 'temp_type_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%temp_peID_V = alloca i32 1"   --->   Operation 9 'alloca' 'temp_peID_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%temp_dest_V = alloca i32 1"   --->   Operation 10 'alloca' 'temp_dest_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%temp_write_idx_V = alloca i32 1"   --->   Operation 11 'alloca' 'temp_write_idx_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%temp_brid = alloca i32 1"   --->   Operation 12 'alloca' 'temp_brid' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%temp_brlen = alloca i32 1"   --->   Operation 13 'alloca' 'temp_brlen' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%temp_data_V = alloca i32 1"   --->   Operation 14 'alloca' 'temp_data_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %vrequest2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %v_first, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %v_req, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.42ns)   --->   "%store_ln0 = store i1 0, i1 %from1_end"   --->   Operation 18 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln0 = store i1 0, i1 %from2_end"   --->   Operation 19 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 20 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specpipeline_ln153 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_86" [vccache.cpp:153]   --->   Operation 21 'specpipeline' 'specpipeline_ln153' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specloopname_ln154 = specloopname void @_ssdm_op_SpecLoopName, void @empty_36" [vccache.cpp:154]   --->   Operation 22 'specloopname' 'specloopname_ln154' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i209P0A, i209 %v_first, i32 1" [vccache.cpp:155]   --->   Operation 23 'nbreadreq' 'tmp_s' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln155 = br i1 %tmp_s, void %if.else, void %if.then1" [vccache.cpp:155]   --->   Operation 24 'br' 'br_ln155' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_79 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i209P0A, i209 %v_req, i32 1" [vccache.cpp:160]   --->   Operation 25 'nbreadreq' 'tmp_79' <Predicate = (!tmp_s)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln160 = br i1 %tmp_79, void %if.end11, void %if.then4" [vccache.cpp:160]   --->   Operation 26 'br' 'br_ln160' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (1.55ns)   --->   "%v_req_read = read i209 @_ssdm_op_Read.ap_fifo.volatile.i209P0A, i209 %v_req" [vccache.cpp:161]   --->   Operation 27 'read' 'v_req_read' <Predicate = (!tmp_s & tmp_79)> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%temp_end_13 = trunc i209 %v_req_read" [vccache.cpp:161]   --->   Operation 28 'trunc' 'temp_end_13' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%temp_brlen_12 = partselect i32 @_ssdm_op_PartSelect.i32.i209.i32.i32, i209 %v_req_read, i32 49, i32 80" [vccache.cpp:161]   --->   Operation 29 'partselect' 'temp_brlen_12' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%temp_data_V_20 = partselect i128 @_ssdm_op_PartSelect.i128.i209.i32.i32, i209 %v_req_read, i32 81, i32 208" [vccache.cpp:161]   --->   Operation 30 'partselect' 'temp_data_V_20' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%temp_target_V_12 = partselect i2 @_ssdm_op_PartSelect.i2.i209.i32.i32, i209 %v_req_read, i32 1, i32 2" [vccache.cpp:161]   --->   Operation 31 'partselect' 'temp_target_V_12' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%temp_type_V_20 = partselect i3 @_ssdm_op_PartSelect.i3.i209.i32.i32, i209 %v_req_read, i32 3, i32 5" [vccache.cpp:161]   --->   Operation 32 'partselect' 'temp_type_V_20' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%temp_peID_V_12 = partselect i3 @_ssdm_op_PartSelect.i3.i209.i32.i32, i209 %v_req_read, i32 6, i32 8" [vccache.cpp:161]   --->   Operation 33 'partselect' 'temp_peID_V_12' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%temp_dest_V_22 = partselect i5 @_ssdm_op_PartSelect.i5.i209.i32.i32, i209 %v_req_read, i32 9, i32 13" [vccache.cpp:161]   --->   Operation 34 'partselect' 'temp_dest_V_22' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%temp_write_idx_V_12 = partselect i3 @_ssdm_op_PartSelect.i3.i209.i32.i32, i209 %v_req_read, i32 14, i32 16" [vccache.cpp:161]   --->   Operation 35 'partselect' 'temp_write_idx_V_12' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%temp_brid_12 = partselect i32 @_ssdm_op_PartSelect.i32.i209.i32.i32, i209 %v_req_read, i32 17, i32 48" [vccache.cpp:161]   --->   Operation 36 'partselect' 'temp_brid_12' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln163 = br i1 %temp_end_13, void %if.then7, void %if.end8" [vccache.cpp:163]   --->   Operation 37 'br' 'br_ln163' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_165 = partselect i208 @_ssdm_op_PartSelect.i208.i209.i32.i32, i209 %v_req_read, i32 1, i32 208" [vccache.cpp:164]   --->   Operation 38 'partselect' 'tmp_165' <Predicate = (!tmp_s & tmp_79 & !temp_end_13)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.42ns)   --->   "%store_ln165 = store i128 %temp_data_V_20, i128 %temp_data_V" [vccache.cpp:165]   --->   Operation 39 'store' 'store_ln165' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.42>
+ST_1 : Operation 40 [1/1] (0.42ns)   --->   "%store_ln165 = store i32 %temp_brlen_12, i32 %temp_brlen" [vccache.cpp:165]   --->   Operation 40 'store' 'store_ln165' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.42>
+ST_1 : Operation 41 [1/1] (0.42ns)   --->   "%store_ln165 = store i32 %temp_brid_12, i32 %temp_brid" [vccache.cpp:165]   --->   Operation 41 'store' 'store_ln165' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.42>
+ST_1 : Operation 42 [1/1] (0.42ns)   --->   "%store_ln165 = store i3 %temp_write_idx_V_12, i3 %temp_write_idx_V" [vccache.cpp:165]   --->   Operation 42 'store' 'store_ln165' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.42>
+ST_1 : Operation 43 [1/1] (0.42ns)   --->   "%store_ln165 = store i5 %temp_dest_V_22, i5 %temp_dest_V" [vccache.cpp:165]   --->   Operation 43 'store' 'store_ln165' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.42>
+ST_1 : Operation 44 [1/1] (0.42ns)   --->   "%store_ln165 = store i3 %temp_peID_V_12, i3 %temp_peID_V" [vccache.cpp:165]   --->   Operation 44 'store' 'store_ln165' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.42>
+ST_1 : Operation 45 [1/1] (0.42ns)   --->   "%store_ln165 = store i3 %temp_type_V_20, i3 %temp_type_V" [vccache.cpp:165]   --->   Operation 45 'store' 'store_ln165' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.42>
+ST_1 : Operation 46 [1/1] (0.42ns)   --->   "%store_ln165 = store i2 %temp_target_V_12, i2 %temp_target_V" [vccache.cpp:165]   --->   Operation 46 'store' 'store_ln165' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.42>
+ST_1 : Operation 47 [1/1] (0.42ns)   --->   "%store_ln165 = store i1 %temp_end_13, i1 %from2_end" [vccache.cpp:165]   --->   Operation 47 'store' 'store_ln165' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.42>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln165 = br void %if.end11" [vccache.cpp:165]   --->   Operation 48 'br' 'br_ln165' <Predicate = (!tmp_s & tmp_79)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (1.55ns)   --->   "%v_first_read = read i209 @_ssdm_op_Read.ap_fifo.volatile.i209P0A, i209 %v_first" [vccache.cpp:156]   --->   Operation 49 'read' 'v_first_read' <Predicate = (tmp_s)> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%temp_end = trunc i209 %v_first_read" [vccache.cpp:156]   --->   Operation 50 'trunc' 'temp_end' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%temp_brlen_11 = partselect i32 @_ssdm_op_PartSelect.i32.i209.i32.i32, i209 %v_first_read, i32 49, i32 80" [vccache.cpp:156]   --->   Operation 51 'partselect' 'temp_brlen_11' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%temp_data_V_19 = partselect i128 @_ssdm_op_PartSelect.i128.i209.i32.i32, i209 %v_first_read, i32 81, i32 208" [vccache.cpp:156]   --->   Operation 52 'partselect' 'temp_data_V_19' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%temp_target_V_11 = partselect i2 @_ssdm_op_PartSelect.i2.i209.i32.i32, i209 %v_first_read, i32 1, i32 2" [vccache.cpp:156]   --->   Operation 53 'partselect' 'temp_target_V_11' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%temp_type_V_19 = partselect i3 @_ssdm_op_PartSelect.i3.i209.i32.i32, i209 %v_first_read, i32 3, i32 5" [vccache.cpp:156]   --->   Operation 54 'partselect' 'temp_type_V_19' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%temp_peID_V_11 = partselect i3 @_ssdm_op_PartSelect.i3.i209.i32.i32, i209 %v_first_read, i32 6, i32 8" [vccache.cpp:156]   --->   Operation 55 'partselect' 'temp_peID_V_11' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%temp_dest_V_21 = partselect i5 @_ssdm_op_PartSelect.i5.i209.i32.i32, i209 %v_first_read, i32 9, i32 13" [vccache.cpp:156]   --->   Operation 56 'partselect' 'temp_dest_V_21' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%temp_write_idx_V_11 = partselect i3 @_ssdm_op_PartSelect.i3.i209.i32.i32, i209 %v_first_read, i32 14, i32 16" [vccache.cpp:156]   --->   Operation 57 'partselect' 'temp_write_idx_V_11' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%temp_brid_11 = partselect i32 @_ssdm_op_PartSelect.i32.i209.i32.i32, i209 %v_first_read, i32 17, i32 48" [vccache.cpp:156]   --->   Operation 58 'partselect' 'temp_brid_11' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln158 = br i1 %temp_end, void %if.then2, void %if.end" [vccache.cpp:158]   --->   Operation 59 'br' 'br_ln158' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_164 = partselect i208 @_ssdm_op_PartSelect.i208.i209.i32.i32, i209 %v_first_read, i32 1, i32 208" [vccache.cpp:159]   --->   Operation 60 'partselect' 'tmp_164' <Predicate = (tmp_s & !temp_end)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.42ns)   --->   "%store_ln160 = store i128 %temp_data_V_19, i128 %temp_data_V" [vccache.cpp:160]   --->   Operation 61 'store' 'store_ln160' <Predicate = (tmp_s)> <Delay = 0.42>
+ST_1 : Operation 62 [1/1] (0.42ns)   --->   "%store_ln160 = store i32 %temp_brlen_11, i32 %temp_brlen" [vccache.cpp:160]   --->   Operation 62 'store' 'store_ln160' <Predicate = (tmp_s)> <Delay = 0.42>
+ST_1 : Operation 63 [1/1] (0.42ns)   --->   "%store_ln160 = store i32 %temp_brid_11, i32 %temp_brid" [vccache.cpp:160]   --->   Operation 63 'store' 'store_ln160' <Predicate = (tmp_s)> <Delay = 0.42>
+ST_1 : Operation 64 [1/1] (0.42ns)   --->   "%store_ln160 = store i3 %temp_write_idx_V_11, i3 %temp_write_idx_V" [vccache.cpp:160]   --->   Operation 64 'store' 'store_ln160' <Predicate = (tmp_s)> <Delay = 0.42>
+ST_1 : Operation 65 [1/1] (0.42ns)   --->   "%store_ln160 = store i5 %temp_dest_V_21, i5 %temp_dest_V" [vccache.cpp:160]   --->   Operation 65 'store' 'store_ln160' <Predicate = (tmp_s)> <Delay = 0.42>
+ST_1 : Operation 66 [1/1] (0.42ns)   --->   "%store_ln160 = store i3 %temp_peID_V_11, i3 %temp_peID_V" [vccache.cpp:160]   --->   Operation 66 'store' 'store_ln160' <Predicate = (tmp_s)> <Delay = 0.42>
+ST_1 : Operation 67 [1/1] (0.42ns)   --->   "%store_ln160 = store i3 %temp_type_V_19, i3 %temp_type_V" [vccache.cpp:160]   --->   Operation 67 'store' 'store_ln160' <Predicate = (tmp_s)> <Delay = 0.42>
+ST_1 : Operation 68 [1/1] (0.42ns)   --->   "%store_ln160 = store i2 %temp_target_V_11, i2 %temp_target_V" [vccache.cpp:160]   --->   Operation 68 'store' 'store_ln160' <Predicate = (tmp_s)> <Delay = 0.42>
+ST_1 : Operation 69 [1/1] (0.42ns)   --->   "%store_ln160 = store i1 %temp_end, i1 %from1_end" [vccache.cpp:160]   --->   Operation 69 'store' 'store_ln160' <Predicate = (tmp_s)> <Delay = 0.42>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln160 = br void %if.end11" [vccache.cpp:160]   --->   Operation 70 'br' 'br_ln160' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%from2_end_22 = load i1 %from2_end" [vccache.cpp:167]   --->   Operation 71 'load' 'from2_end_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%from1_end_22 = load i1 %from1_end" [vccache.cpp:167]   --->   Operation 72 'load' 'from1_end_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.28ns)   --->   "%enable = and i1 %from1_end_22, i1 %from2_end_22" [vccache.cpp:167]   --->   Operation 73 'and' 'enable' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln152 = br i1 %enable, void %for.body, void %for.end.exitStub" [vccache.cpp:152]   --->   Operation 74 'br' 'br_ln152' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.55>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i209 @_ssdm_op_BitConcatenate.i209.i208.i1, i208 %tmp_165, i1 0" [vccache.cpp:164]   --->   Operation 75 'bitconcatenate' 'p_0' <Predicate = (!tmp_s & tmp_79 & !temp_end_13)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (1.55ns)   --->   "%write_ln164 = write void @_ssdm_op_Write.ap_fifo.volatile.i209P0A, i209 %vrequest2, i209 %p_0" [vccache.cpp:164]   --->   Operation 76 'write' 'write_ln164' <Predicate = (!tmp_s & tmp_79 & !temp_end_13)> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln164 = br void %if.end8" [vccache.cpp:164]   --->   Operation 77 'br' 'br_ln164' <Predicate = (!tmp_s & tmp_79 & !temp_end_13)> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%p_s = bitconcatenate i209 @_ssdm_op_BitConcatenate.i209.i208.i1, i208 %tmp_164, i1 0" [vccache.cpp:159]   --->   Operation 78 'bitconcatenate' 'p_s' <Predicate = (tmp_s & !temp_end)> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (1.55ns)   --->   "%write_ln159 = write void @_ssdm_op_Write.ap_fifo.volatile.i209P0A, i209 %vrequest2, i209 %p_s" [vccache.cpp:159]   --->   Operation 79 'write' 'write_ln159' <Predicate = (tmp_s & !temp_end)> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln159 = br void %if.end" [vccache.cpp:159]   --->   Operation 80 'br' 'br_ln159' <Predicate = (tmp_s & !temp_end)> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%temp_target_V_load = load i2 %temp_target_V"   --->   Operation 81 'load' 'temp_target_V_load' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%temp_type_V_load = load i3 %temp_type_V"   --->   Operation 82 'load' 'temp_type_V_load' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%temp_peID_V_load = load i3 %temp_peID_V"   --->   Operation 83 'load' 'temp_peID_V_load' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%temp_dest_V_load = load i5 %temp_dest_V"   --->   Operation 84 'load' 'temp_dest_V_load' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%temp_write_idx_V_load = load i3 %temp_write_idx_V"   --->   Operation 85 'load' 'temp_write_idx_V_load' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%temp_brid_load = load i32 %temp_brid"   --->   Operation 86 'load' 'temp_brid_load' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%temp_brlen_load = load i32 %temp_brlen"   --->   Operation 87 'load' 'temp_brlen_load' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%temp_data_V_load = load i128 %temp_data_V"   --->   Operation 88 'load' 'temp_data_V_load' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i128P0A, i128 %temp_data_V_out, i128 %temp_data_V_load"   --->   Operation 89 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %temp_brlen_out, i32 %temp_brlen_load"   --->   Operation 90 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %temp_brid_out, i32 %temp_brid_load"   --->   Operation 91 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i3P0A, i3 %temp_write_idx_V_out, i3 %temp_write_idx_V_load"   --->   Operation 92 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i5P0A, i5 %temp_dest_V_out, i5 %temp_dest_V_load"   --->   Operation 93 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i3P0A, i3 %temp_peID_V_out, i3 %temp_peID_V_load"   --->   Operation 94 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i3P0A, i3 %temp_type_V_out, i3 %temp_type_V_load"   --->   Operation 95 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i2P0A, i2 %temp_target_V_out, i2 %temp_target_V_load"   --->   Operation 96 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 97 'ret' 'ret_ln0' <Predicate = (enable)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 1.98ns
+The critical path consists of the following:
+	fifo read operation ('v_first_read', vccache.cpp:156) on port 'v_first' (vccache.cpp:156) [65]  (1.56 ns)
+	'store' operation ('store_ln160', vccache.cpp:160) of variable 'temp.data.V', vccache.cpp:156 on local variable 'temp.data.V' [82]  (0.427 ns)
+
+ <State 2>: 1.56ns
+The critical path consists of the following:
+	fifo write operation ('write_ln164', vccache.cpp:164) on port 'vrequest2' (vccache.cpp:164) [51]  (1.56 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

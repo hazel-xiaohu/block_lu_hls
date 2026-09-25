@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/./sim/autowrap/testbench/core.cpp_pre.cpp.tb.cpp

@@ -1,0 +1,317 @@
+
+
+================================================================
+== Vitis HLS Report for 'vcrequest_manager'
+================================================================
+* Date:           Fri Sep 25 15:50:52 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.747 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                       |                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |        Instance       |       Module       |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
+        |vcrequest_splitter_U0  |vcrequest_splitter  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |request_manager_U0     |request_manager     |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |schedule_access_U0     |schedule_access     |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |request_manager_69_U0  |request_manager_69  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |schedule_access_70_U0  |schedule_access_70  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |request_merger_U0      |request_merger      |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |request_merger_71_U0   |request_merger_71   |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |collector_U0           |collector           |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |collector_72_U0        |collector_72        |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-----------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      32|    -|
+|FIFO             |       88|     -|    2058|     722|    -|
+|Instance         |        -|     -|    7127|   12533|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      27|    -|
+|Register         |        -|     -|       9|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       88|     0|    9194|   13314|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        5|     0|       1|       3|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------+--------------------+---------+----+------+------+-----+
+    |        Instance       |       Module       | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-----------------------+--------------------+---------+----+------+------+-----+
+    |collector_U0           |collector           |        0|   0|  1493|  2620|    0|
+    |collector_72_U0        |collector_72        |        0|   0|  1493|  2620|    0|
+    |request_manager_U0     |request_manager     |        0|   0|   166|   503|    0|
+    |request_manager_69_U0  |request_manager_69  |        0|   0|   166|   615|    0|
+    |request_merger_U0      |request_merger      |        0|   0|   640|   733|    0|
+    |request_merger_71_U0   |request_merger_71   |        0|   0|   640|   733|    0|
+    |schedule_access_U0     |schedule_access     |        0|   0|  1193|  2118|    0|
+    |schedule_access_70_U0  |schedule_access_70  |        0|   0|  1193|  2118|    0|
+    |vcrequest_splitter_U0  |vcrequest_splitter  |        0|   0|   143|   473|    0|
+    +-----------------------+--------------------+---------+----+------+------+-----+
+    |Total                  |                    |        0|   0|  7127| 12533|    0|
+    +-----------------------+--------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +--------------+---------+-----+----+-----+------+-----+---------+
+    |     Name     | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +--------------+---------+-----+----+-----+------+-----+---------+
+    |c_first_U     |       12|  155|   0|    -|    64|  209|    13376|
+    |c_hit_U       |        0|   99|   0|    -|    16|    1|       16|
+    |c_req_U       |       12|  155|   0|    -|    64|  209|    13376|
+    |ccollector_U  |        4|  155|   0|    -|    64|   68|     4352|
+    |coff_U        |        8|  155|   0|    -|    64|  128|     8192|
+    |crequest_U    |        4|  155|   0|    -|    64|   68|     4352|
+    |cscheduler_U  |        4|  155|   0|    -|    64|   68|     4352|
+    |v_first_U     |       12|  155|   0|    -|    64|  209|    13376|
+    |v_hit_U       |        0|   99|   0|    -|    16|    1|       16|
+    |v_req_U       |       12|  155|   0|    -|    64|  209|    13376|
+    |vcollector_U  |        4|  155|   0|    -|    64|   68|     4352|
+    |voff_U        |        8|  155|   0|    -|    64|  128|     8192|
+    |vrequest_U    |        4|  155|   0|    -|    64|   68|     4352|
+    |vscheduler_U  |        4|  155|   0|    -|    64|   68|     4352|
+    +--------------+---------+-----+----+-----+------+-----+---------+
+    |Total         |       88| 2058|   0|    0|   800| 1502|    96032|
+    +--------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +----------------------------------------+----------+----+---+----+------------+------------+
+    |              Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------------+----------+----+---+----+------------+------------+
+    |ap_idle                                 |       and|   0|  0|   2|           1|           1|
+    |ap_sync_continue                        |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                            |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                           |       and|   0|  0|   2|           1|           1|
+    |schedule_access_70_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |schedule_access_U0_ap_start             |       and|   0|  0|   2|           1|           1|
+    |vcrequest_splitter_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |ap_sync_schedule_access_70_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_schedule_access_U0_ap_ready     |        or|   0|  0|   2|           1|           1|
+    |ap_sync_vcrequest_splitter_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |collector_72_U0_ap_start                |        or|   0|  0|   2|           1|           1|
+    |collector_U0_ap_start                   |        or|   0|  0|   2|           1|           1|
+    |request_manager_69_U0_ap_start          |        or|   0|  0|   2|           1|           1|
+    |request_manager_U0_ap_start             |        or|   0|  0|   2|           1|           1|
+    |request_merger_71_U0_ap_start           |        or|   0|  0|   2|           1|           1|
+    |request_merger_U0_ap_start              |        or|   0|  0|   2|           1|           1|
+    +----------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                   |          |   0|  0|  32|          16|          16|
+    +----------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                    | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_schedule_access_70_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_schedule_access_U0_ap_ready     |   9|          2|    1|          2|
+    |ap_sync_reg_vcrequest_splitter_U0_ap_ready  |   9|          2|    1|          2|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |Total                                       |  27|          6|    3|          6|
+    +--------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+---+----+-----+-----------+
+    |                    Name                    | FF| LUT| Bits| Const Bits|
+    +--------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_collector_72_U0_ap_start        |  1|   0|    1|          0|
+    |ap_sync_reg_collector_U0_ap_start           |  1|   0|    1|          0|
+    |ap_sync_reg_request_manager_69_U0_ap_start  |  1|   0|    1|          0|
+    |ap_sync_reg_request_manager_U0_ap_start     |  1|   0|    1|          0|
+    |ap_sync_reg_request_merger_71_U0_ap_start   |  1|   0|    1|          0|
+    |ap_sync_reg_request_merger_U0_ap_start      |  1|   0|    1|          0|
+    |ap_sync_reg_schedule_access_70_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_schedule_access_U0_ap_ready     |  1|   0|    1|          0|
+    |ap_sync_reg_vcrequest_splitter_U0_ap_ready  |  1|   0|    1|          0|
+    +--------------------------------------------+---+----+-----+-----------+
+    |Total                                       |  9|   0|    9|          0|
+    +--------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+------+------------+-----------------------+--------------+
+|           RTL Ports           | Dir | Bits |  Protocol  |     Source Object     |    C Type    |
++-------------------------------+-----+------+------------+-----------------------+--------------+
+|rcache_result_bank1_b_dout     |   in|    68|     ap_fifo|  rcache_result_bank1_b|       pointer|
+|rcache_result_bank1_b_empty_n  |   in|     1|     ap_fifo|  rcache_result_bank1_b|       pointer|
+|rcache_result_bank1_b_read     |  out|     1|     ap_fifo|  rcache_result_bank1_b|       pointer|
+|vrequest1_din                  |  out|   209|     ap_fifo|              vrequest1|       pointer|
+|vrequest1_full_n               |   in|     1|     ap_fifo|              vrequest1|       pointer|
+|vrequest1_write                |  out|     1|     ap_fifo|              vrequest1|       pointer|
+|crequest1_din                  |  out|   209|     ap_fifo|              crequest1|       pointer|
+|crequest1_full_n               |   in|     1|     ap_fifo|              crequest1|       pointer|
+|crequest1_write                |  out|     1|     ap_fifo|              crequest1|       pointer|
+|vresponse1_dout                |   in|     6|     ap_fifo|             vresponse1|       pointer|
+|vresponse1_empty_n             |   in|     1|     ap_fifo|             vresponse1|       pointer|
+|vresponse1_read                |  out|     1|     ap_fifo|             vresponse1|       pointer|
+|cresponse1_dout                |   in|     6|     ap_fifo|             cresponse1|       pointer|
+|cresponse1_empty_n             |   in|     1|     ap_fifo|             cresponse1|       pointer|
+|cresponse1_read                |  out|     1|     ap_fifo|             cresponse1|       pointer|
+|vresult114_dout                |   in|  1024|     ap_fifo|             vresult114|       pointer|
+|vresult114_empty_n             |   in|     1|     ap_fifo|             vresult114|       pointer|
+|vresult114_read                |  out|     1|     ap_fifo|             vresult114|       pointer|
+|cresult118_dout                |   in|  1024|     ap_fifo|             cresult118|       pointer|
+|cresult118_empty_n             |   in|     1|     ap_fifo|             cresult118|       pointer|
+|cresult118_read                |  out|     1|     ap_fifo|             cresult118|       pointer|
+|vblock1_din                    |  out|   134|     ap_fifo|                vblock1|       pointer|
+|vblock1_full_n                 |   in|     1|     ap_fifo|                vblock1|       pointer|
+|vblock1_write                  |  out|     1|     ap_fifo|                vblock1|       pointer|
+|cblock1_din                    |  out|   134|     ap_fifo|                cblock1|       pointer|
+|cblock1_full_n                 |   in|     1|     ap_fifo|                cblock1|       pointer|
+|cblock1_write                  |  out|     1|     ap_fifo|                cblock1|       pointer|
+|m_axi_bv1_AWVALID              |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWREADY              |   in|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWADDR               |  out|    64|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWID                 |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWLEN                |  out|    32|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWSIZE               |  out|     3|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWBURST              |  out|     2|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWLOCK               |  out|     2|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWCACHE              |  out|     4|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWPROT               |  out|     3|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWQOS                |  out|     4|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWREGION             |  out|     4|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_AWUSER               |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_WVALID               |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_WREADY               |   in|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_WDATA                |  out|   128|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_WSTRB                |  out|    16|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_WLAST                |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_WID                  |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_WUSER                |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARVALID              |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARREADY              |   in|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARADDR               |  out|    64|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARID                 |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARLEN                |  out|    32|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARSIZE               |  out|     3|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARBURST              |  out|     2|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARLOCK               |  out|     2|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARCACHE              |  out|     4|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARPROT               |  out|     3|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARQOS                |  out|     4|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARREGION             |  out|     4|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_ARUSER               |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_RVALID               |   in|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_RREADY               |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_RDATA                |   in|   128|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_RLAST                |   in|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_RID                  |   in|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_RFIFONUM             |   in|     9|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_RUSER                |   in|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_RRESP                |   in|     2|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_BVALID               |   in|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_BREADY               |  out|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_BRESP                |   in|     2|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_BID                  |   in|     1|       m_axi|                    bv1|       pointer|
+|m_axi_bv1_BUSER                |   in|     1|       m_axi|                    bv1|       pointer|
+|B_val                          |   in|    64|     ap_none|                  B_val|        scalar|
+|B_val_ap_vld                   |   in|     1|     ap_none|                  B_val|        scalar|
+|m_axi_bc1_AWVALID              |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWREADY              |   in|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWADDR               |  out|    64|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWID                 |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWLEN                |  out|    32|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWSIZE               |  out|     3|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWBURST              |  out|     2|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWLOCK               |  out|     2|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWCACHE              |  out|     4|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWPROT               |  out|     3|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWQOS                |  out|     4|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWREGION             |  out|     4|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_AWUSER               |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_WVALID               |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_WREADY               |   in|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_WDATA                |  out|   128|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_WSTRB                |  out|    16|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_WLAST                |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_WID                  |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_WUSER                |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARVALID              |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARREADY              |   in|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARADDR               |  out|    64|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARID                 |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARLEN                |  out|    32|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARSIZE               |  out|     3|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARBURST              |  out|     2|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARLOCK               |  out|     2|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARCACHE              |  out|     4|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARPROT               |  out|     3|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARQOS                |  out|     4|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARREGION             |  out|     4|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_ARUSER               |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_RVALID               |   in|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_RREADY               |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_RDATA                |   in|   128|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_RLAST                |   in|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_RID                  |   in|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_RFIFONUM             |   in|     9|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_RUSER                |   in|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_RRESP                |   in|     2|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_BVALID               |   in|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_BREADY               |  out|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_BRESP                |   in|     2|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_BID                  |   in|     1|       m_axi|                    bc1|       pointer|
+|m_axi_bc1_BUSER                |   in|     1|       m_axi|                    bc1|       pointer|
+|B_cid                          |   in|    64|     ap_none|                  B_cid|        scalar|
+|B_cid_ap_vld                   |   in|     1|     ap_none|                  B_cid|        scalar|
+|ap_clk                         |   in|     1|  ap_ctrl_hs|      vcrequest_manager|  return value|
+|ap_rst                         |   in|     1|  ap_ctrl_hs|      vcrequest_manager|  return value|
+|ap_start                       |   in|     1|  ap_ctrl_hs|      vcrequest_manager|  return value|
+|ap_done                        |  out|     1|  ap_ctrl_hs|      vcrequest_manager|  return value|
+|ap_ready                       |  out|     1|  ap_ctrl_hs|      vcrequest_manager|  return value|
+|ap_idle                        |  out|     1|  ap_ctrl_hs|      vcrequest_manager|  return value|
+|ap_continue                    |   in|     1|  ap_ctrl_hs|      vcrequest_manager|  return value|
++-------------------------------+-----+------+------------+-----------------------+--------------+
+

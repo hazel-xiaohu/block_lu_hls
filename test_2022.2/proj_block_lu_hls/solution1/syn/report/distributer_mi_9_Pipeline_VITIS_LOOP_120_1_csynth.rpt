@@ -1,0 +1,182 @@
+
+
+================================================================
+== Vitis HLS Report for 'distributer_mi_9_Pipeline_VITIS_LOOP_120_1'
+================================================================
+* Date:           Fri Sep 25 15:50:33 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.271 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_120_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      20|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      81|    -|
+|Register         |        -|     -|      14|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      14|     101|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state1_pp0_stage0_iter0  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_253                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op31_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op34_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op37_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op40_write_state2    |       and|   0|  0|   2|           1|           1|
+    |tmp_s_nbreadreq_fu_76_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  20|          10|          10|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                       |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   9|          2|    1|          2|
+    |mi4_1_blk_n                       |   9|          2|    1|          2|
+    |mi4_2_blk_n                       |   9|          2|    1|          2|
+    |mi4_3_blk_n                       |   9|          2|    1|          2|
+    |mi4_4_blk_n                       |   9|          2|    1|          2|
+    |mi4_blk_n                         |   9|          2|    1|          2|
+    |temp_dest_V_fu_68                 |   9|          2|    3|          6|
+    |temp_idle_fu_72                   |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  81|         18|   11|         22|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+---+----+-----+-----------+
+    |               Name               | FF| LUT| Bits| Const Bits|
+    +----------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                         |  1|   0|    1|          0|
+    |ap_done_reg                       |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |  1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |  1|   0|    1|          0|
+    |enable_reg_230                    |  1|   0|    1|          0|
+    |temp_dest_V_50_reg_234            |  3|   0|    3|          0|
+    |temp_dest_V_fu_68                 |  3|   0|    3|          0|
+    |temp_idle_14_reg_239              |  1|   0|    1|          0|
+    |temp_idle_fu_72                   |  1|   0|    1|          0|
+    |tmp_s_reg_226                     |  1|   0|    1|          0|
+    +----------------------------------+---+----+-----+-----------+
+    |Total                             | 14|   0|   14|          0|
+    +----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |                Source Object               |    C Type    |
++------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  distributer_mi.9_Pipeline_VITIS_LOOP_120_1|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  distributer_mi.9_Pipeline_VITIS_LOOP_120_1|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  distributer_mi.9_Pipeline_VITIS_LOOP_120_1|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  distributer_mi.9_Pipeline_VITIS_LOOP_120_1|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  distributer_mi.9_Pipeline_VITIS_LOOP_120_1|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  distributer_mi.9_Pipeline_VITIS_LOOP_120_1|  return value|
+|mi4_dout                |   in|    5|     ap_fifo|                                         mi4|       pointer|
+|mi4_num_data_valid      |   in|    2|     ap_fifo|                                         mi4|       pointer|
+|mi4_fifo_cap            |   in|    2|     ap_fifo|                                         mi4|       pointer|
+|mi4_empty_n             |   in|    1|     ap_fifo|                                         mi4|       pointer|
+|mi4_read                |  out|    1|     ap_fifo|                                         mi4|       pointer|
+|mi4_4_din               |  out|    5|     ap_fifo|                                       mi4_4|       pointer|
+|mi4_4_num_data_valid    |   in|    2|     ap_fifo|                                       mi4_4|       pointer|
+|mi4_4_fifo_cap          |   in|    2|     ap_fifo|                                       mi4_4|       pointer|
+|mi4_4_full_n            |   in|    1|     ap_fifo|                                       mi4_4|       pointer|
+|mi4_4_write             |  out|    1|     ap_fifo|                                       mi4_4|       pointer|
+|mi4_3_din               |  out|    5|     ap_fifo|                                       mi4_3|       pointer|
+|mi4_3_num_data_valid    |   in|    2|     ap_fifo|                                       mi4_3|       pointer|
+|mi4_3_fifo_cap          |   in|    2|     ap_fifo|                                       mi4_3|       pointer|
+|mi4_3_full_n            |   in|    1|     ap_fifo|                                       mi4_3|       pointer|
+|mi4_3_write             |  out|    1|     ap_fifo|                                       mi4_3|       pointer|
+|mi4_2_din               |  out|    5|     ap_fifo|                                       mi4_2|       pointer|
+|mi4_2_num_data_valid    |   in|    2|     ap_fifo|                                       mi4_2|       pointer|
+|mi4_2_fifo_cap          |   in|    2|     ap_fifo|                                       mi4_2|       pointer|
+|mi4_2_full_n            |   in|    1|     ap_fifo|                                       mi4_2|       pointer|
+|mi4_2_write             |  out|    1|     ap_fifo|                                       mi4_2|       pointer|
+|mi4_1_din               |  out|    5|     ap_fifo|                                       mi4_1|       pointer|
+|mi4_1_num_data_valid    |   in|    2|     ap_fifo|                                       mi4_1|       pointer|
+|mi4_1_fifo_cap          |   in|    2|     ap_fifo|                                       mi4_1|       pointer|
+|mi4_1_full_n            |   in|    1|     ap_fifo|                                       mi4_1|       pointer|
+|mi4_1_write             |  out|    1|     ap_fifo|                                       mi4_1|       pointer|
+|temp_idle_out           |  out|    1|      ap_vld|                               temp_idle_out|       pointer|
+|temp_idle_out_ap_vld    |  out|    1|      ap_vld|                               temp_idle_out|       pointer|
+|temp_dest_V_out         |  out|    3|      ap_vld|                             temp_dest_V_out|       pointer|
+|temp_dest_V_out_ap_vld  |  out|    1|      ap_vld|                             temp_dest_V_out|       pointer|
++------------------------+-----+-----+------------+--------------------------------------------+--------------+
+

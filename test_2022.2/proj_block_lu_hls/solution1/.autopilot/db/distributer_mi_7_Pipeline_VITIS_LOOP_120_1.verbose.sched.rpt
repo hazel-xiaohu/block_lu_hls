@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'distributer_mi_7_Pipeline_VITIS_LOOP_120_1'
+================================================================
+* Date:           Fri Sep 25 15:48:17 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.271 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_120_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.27>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%temp_dest_V = alloca i32 1"   --->   Operation 5 'alloca' 'temp_dest_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%temp_idle = alloca i32 1"   --->   Operation 6 'alloca' 'temp_idle' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %mi2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %mi2_1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %mi2_2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %mi2_3, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %mi2_4, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specpipeline_ln121 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_86" [core.cpp:121]   --->   Operation 13 'specpipeline' 'specpipeline_ln121' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln122 = specloopname void @_ssdm_op_SpecLoopName, void @empty_44" [core.cpp:122]   --->   Operation 14 'specloopname' 'specloopname_ln122' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i5P0A, i5 %mi2, i32 1" [core.cpp:122]   --->   Operation 15 'nbreadreq' 'tmp_s' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln122 = br i1 %tmp_s, void %for.body.backedge, void %if.then" [core.cpp:122]   --->   Operation 16 'br' 'br_ln122' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.82ns)   --->   "%mi2_read = read i5 @_ssdm_op_Read.ap_fifo.volatile.i5P0A, i5 %mi2" [core.cpp:123]   --->   Operation 17 'read' 'mi2_read' <Predicate = (tmp_s)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%enable = trunc i5 %mi2_read" [core.cpp:123]   --->   Operation 18 'trunc' 'enable' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%temp_dest_V_52 = partselect i3 @_ssdm_op_PartSelect.i3.i5.i32.i32, i5 %mi2_read, i32 1, i32 3" [core.cpp:123]   --->   Operation 19 'partselect' 'temp_dest_V_52' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%temp_idle_16 = bitselect i1 @_ssdm_op_BitSelect.i1.i5.i32, i5 %mi2_read, i32 4" [core.cpp:123]   --->   Operation 20 'bitselect' 'temp_idle_16' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln124 = br i1 %enable, void %if.then1, void %for.end.exitStub.critedge" [core.cpp:124]   --->   Operation 21 'br' 'br_ln124' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.44ns)   --->   "%switch_ln125 = switch i3 %temp_dest_V_52, void %if.end, i3 1, void %if.then3, i3 2, void %if.then6, i3 3, void %if.then10, i3 4, void %if.then14" [core.cpp:125]   --->   Operation 22 'switch' 'switch_ln125' <Predicate = (tmp_s & !enable)> <Delay = 0.44>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end15"   --->   Operation 23 'br' 'br_ln0' <Predicate = (tmp_s & !enable & temp_dest_V_52 != 1 & temp_dest_V_52 != 2 & temp_dest_V_52 != 3)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end16"   --->   Operation 24 'br' 'br_ln0' <Predicate = (tmp_s & !enable & temp_dest_V_52 != 1 & temp_dest_V_52 != 2)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end17"   --->   Operation 25 'br' 'br_ln0' <Predicate = (tmp_s & !enable & temp_dest_V_52 != 1)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%store_ln136 = store i1 %temp_idle_16, i1 %temp_idle" [core.cpp:136]   --->   Operation 26 'store' 'store_ln136' <Predicate = (tmp_s & !enable)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%store_ln136 = store i3 %temp_dest_V_52, i3 %temp_dest_V" [core.cpp:136]   --->   Operation 27 'store' 'store_ln136' <Predicate = (tmp_s & !enable)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln120 = br i1 %enable, void %for.body.backedge, void %for.end.exitStub.loopexit" [core.cpp:120]   --->   Operation 28 'br' 'br_ln120' <Predicate = (tmp_s & !enable)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 29 'br' 'br_ln0' <Predicate = (!enable) | (!tmp_s)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.82>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%p_05 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i1.i4, i1 %temp_idle_16, i4 8" [core.cpp:132]   --->   Operation 30 'bitconcatenate' 'p_05' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 4)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (1.82ns)   --->   "%write_ln132 = write void @_ssdm_op_Write.ap_fifo.volatile.i5P0A, i5 %mi2_4, i5 %p_05" [core.cpp:132]   --->   Operation 31 'write' 'write_ln132' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 4)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln133 = br void %if.end" [core.cpp:133]   --->   Operation 32 'br' 'br_ln133' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 4)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%p_06 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i1.i4, i1 %temp_idle_16, i4 6" [core.cpp:130]   --->   Operation 33 'bitconcatenate' 'p_06' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 3)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (1.82ns)   --->   "%write_ln130 = write void @_ssdm_op_Write.ap_fifo.volatile.i5P0A, i5 %mi2_3, i5 %p_06" [core.cpp:130]   --->   Operation 34 'write' 'write_ln130' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 3)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln131 = br void %if.end15" [core.cpp:131]   --->   Operation 35 'br' 'br_ln131' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 3)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%p_07 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i1.i4, i1 %temp_idle_16, i4 4" [core.cpp:128]   --->   Operation 36 'bitconcatenate' 'p_07' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 2)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (1.82ns)   --->   "%write_ln128 = write void @_ssdm_op_Write.ap_fifo.volatile.i5P0A, i5 %mi2_2, i5 %p_07" [core.cpp:128]   --->   Operation 37 'write' 'write_ln128' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 2)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln129 = br void %if.end16" [core.cpp:129]   --->   Operation 38 'br' 'br_ln129' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 2)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i1.i4, i1 %temp_idle_16, i4 2" [core.cpp:126]   --->   Operation 39 'bitconcatenate' 'p_0' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 1)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (1.82ns)   --->   "%write_ln126 = write void @_ssdm_op_Write.ap_fifo.volatile.i5P0A, i5 %mi2_1, i5 %p_0" [core.cpp:126]   --->   Operation 40 'write' 'write_ln126' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 1)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 5> <Depth = 2> <FIFO>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln127 = br void %if.end17" [core.cpp:127]   --->   Operation 41 'br' 'br_ln127' <Predicate = (tmp_s & !enable & temp_dest_V_52 == 1)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.end.exitStub"   --->   Operation 42 'br' 'br_ln0' <Predicate = false> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%store_ln136 = store i1 %temp_idle_16, i1 %temp_idle" [core.cpp:136]   --->   Operation 43 'store' 'store_ln136' <Predicate = (tmp_s & enable)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%store_ln136 = store i3 %temp_dest_V_52, i3 %temp_dest_V" [core.cpp:136]   --->   Operation 44 'store' 'store_ln136' <Predicate = (tmp_s & enable)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.end.exitStub"   --->   Operation 45 'br' 'br_ln0' <Predicate = (tmp_s & enable)> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%temp_dest_V_load = load i3 %temp_dest_V"   --->   Operation 46 'load' 'temp_dest_V_load' <Predicate = (tmp_s & enable)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%temp_idle_load = load i1 %temp_idle"   --->   Operation 47 'load' 'temp_idle_load' <Predicate = (tmp_s & enable)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %temp_idle_out, i1 %temp_idle_load"   --->   Operation 48 'write' 'write_ln0' <Predicate = (tmp_s & enable)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i3P0A, i3 %temp_dest_V_out, i3 %temp_dest_V_load"   --->   Operation 49 'write' 'write_ln0' <Predicate = (tmp_s & enable)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 50 'ret' 'ret_ln0' <Predicate = (tmp_s & enable)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 2.27ns
+The critical path consists of the following:
+	fifo read operation ('mi2_read', core.cpp:123) on port 'mi2' (core.cpp:123) [22]  (1.83 ns)
+	blocking operation 0.446 ns on control path)
+
+ <State 2>: 1.83ns
+The critical path consists of the following:
+	fifo write operation ('write_ln126', core.cpp:126) on port 'mi2_1' (core.cpp:126) [43]  (1.83 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

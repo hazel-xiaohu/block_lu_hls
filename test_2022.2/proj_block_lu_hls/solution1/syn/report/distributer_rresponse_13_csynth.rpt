@@ -1,0 +1,178 @@
+
+
+================================================================
+== Vitis HLS Report for 'distributer_rresponse_13'
+================================================================
+* Date:           Fri Sep 25 15:50:37 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.121 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                              |                                                   |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                           Instance                           |                       Module                      |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_distributer_rresponse_13_Pipeline_VITIS_LOOP_92_1_fu_108  |distributer_rresponse_13_Pipeline_VITIS_LOOP_92_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +--------------------------------------------------------------+---------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     364|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|     508|     119|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     166|    -|
+|Register         |        -|     -|       5|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     513|     649|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
+    |                           Instance                           |                       Module                      | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_distributer_rresponse_13_Pipeline_VITIS_LOOP_92_1_fu_108  |distributer_rresponse_13_Pipeline_VITIS_LOOP_92_1  |        0|   0|  508|  119|    0|
+    +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                         |                                                   |        0|   0|  508|  119|    0|
+    +--------------------------------------------------------------+---------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+-----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+-----+------------+------------+
+    |ap_block_state1       |        or|   0|  0|    2|           1|           1|
+    |ap_block_state3       |        or|   0|  0|    2|           1|           1|
+    |or_ln112_3_fu_216_p2  |        or|   0|  0|  168|         168|           1|
+    |or_ln112_fu_158_p2    |        or|   0|  0|  192|         192|           1|
+    +----------------------+----------+----+---+-----+------------+------------+
+    |Total                 |          |   0|  0|  364|         362|           4|
+    +----------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  20|          4|    1|          4|
+    |ap_done                  |   9|          2|    1|          2|
+    |rcache_bank2_res_read    |   9|          2|    1|          2|
+    |rcache_re_bank2_1_blk_n  |   9|          2|    1|          2|
+    |rcache_re_bank2_1_din    |   9|          2|  168|        336|
+    |rcache_re_bank2_1_write  |  14|          3|    1|          3|
+    |rcache_re_bank2_2_blk_n  |   9|          2|    1|          2|
+    |rcache_re_bank2_2_din    |   9|          2|  168|        336|
+    |rcache_re_bank2_2_write  |  14|          3|    1|          3|
+    |rcache_re_bank2_3_blk_n  |   9|          2|    1|          2|
+    |rcache_re_bank2_3_din    |   9|          2|  168|        336|
+    |rcache_re_bank2_3_write  |  14|          3|    1|          3|
+    |rcache_re_bank2_4_blk_n  |   9|          2|    1|          2|
+    |rcache_re_bank2_4_din    |   9|          2|  168|        336|
+    |rcache_re_bank2_4_write  |  14|          3|    1|          3|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 166|         36|  683|       1372|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------------+---+----+-----+-----------+
+    |                                    Name                                   | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                                  |  3|   0|    3|          0|
+    |ap_done_reg                                                                |  1|   0|    1|          0|
+    |grp_distributer_rresponse_13_Pipeline_VITIS_LOOP_92_1_fu_108_ap_start_reg  |  1|   0|    1|          0|
+    +---------------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                                      |  5|   0|    5|          0|
+    +---------------------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|  distributer_rresponse.13|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|  distributer_rresponse.13|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|  distributer_rresponse.13|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|  distributer_rresponse.13|  return value|
+|ap_continue                       |   in|    1|  ap_ctrl_hs|  distributer_rresponse.13|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|  distributer_rresponse.13|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|  distributer_rresponse.13|  return value|
+|rcache_bank2_res_dout             |   in|  168|     ap_fifo|          rcache_bank2_res|       pointer|
+|rcache_bank2_res_num_data_valid   |   in|    4|     ap_fifo|          rcache_bank2_res|       pointer|
+|rcache_bank2_res_fifo_cap         |   in|    4|     ap_fifo|          rcache_bank2_res|       pointer|
+|rcache_bank2_res_empty_n          |   in|    1|     ap_fifo|          rcache_bank2_res|       pointer|
+|rcache_bank2_res_read             |  out|    1|     ap_fifo|          rcache_bank2_res|       pointer|
+|rcache_re_bank2_1_din             |  out|  168|     ap_fifo|         rcache_re_bank2_1|       pointer|
+|rcache_re_bank2_1_num_data_valid  |   in|    2|     ap_fifo|         rcache_re_bank2_1|       pointer|
+|rcache_re_bank2_1_fifo_cap        |   in|    2|     ap_fifo|         rcache_re_bank2_1|       pointer|
+|rcache_re_bank2_1_full_n          |   in|    1|     ap_fifo|         rcache_re_bank2_1|       pointer|
+|rcache_re_bank2_1_write           |  out|    1|     ap_fifo|         rcache_re_bank2_1|       pointer|
+|rcache_re_bank2_2_din             |  out|  168|     ap_fifo|         rcache_re_bank2_2|       pointer|
+|rcache_re_bank2_2_num_data_valid  |   in|    2|     ap_fifo|         rcache_re_bank2_2|       pointer|
+|rcache_re_bank2_2_fifo_cap        |   in|    2|     ap_fifo|         rcache_re_bank2_2|       pointer|
+|rcache_re_bank2_2_full_n          |   in|    1|     ap_fifo|         rcache_re_bank2_2|       pointer|
+|rcache_re_bank2_2_write           |  out|    1|     ap_fifo|         rcache_re_bank2_2|       pointer|
+|rcache_re_bank2_3_din             |  out|  168|     ap_fifo|         rcache_re_bank2_3|       pointer|
+|rcache_re_bank2_3_num_data_valid  |   in|    2|     ap_fifo|         rcache_re_bank2_3|       pointer|
+|rcache_re_bank2_3_fifo_cap        |   in|    2|     ap_fifo|         rcache_re_bank2_3|       pointer|
+|rcache_re_bank2_3_full_n          |   in|    1|     ap_fifo|         rcache_re_bank2_3|       pointer|
+|rcache_re_bank2_3_write           |  out|    1|     ap_fifo|         rcache_re_bank2_3|       pointer|
+|rcache_re_bank2_4_din             |  out|  168|     ap_fifo|         rcache_re_bank2_4|       pointer|
+|rcache_re_bank2_4_num_data_valid  |   in|    2|     ap_fifo|         rcache_re_bank2_4|       pointer|
+|rcache_re_bank2_4_fifo_cap        |   in|    2|     ap_fifo|         rcache_re_bank2_4|       pointer|
+|rcache_re_bank2_4_full_n          |   in|    1|     ap_fifo|         rcache_re_bank2_4|       pointer|
+|rcache_re_bank2_4_write           |  out|    1|     ap_fifo|         rcache_re_bank2_4|       pointer|
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+

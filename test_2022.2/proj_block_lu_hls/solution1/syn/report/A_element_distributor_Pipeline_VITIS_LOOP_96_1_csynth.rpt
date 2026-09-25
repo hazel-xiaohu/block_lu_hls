@@ -1,0 +1,340 @@
+
+
+================================================================
+== Vitis HLS Report for 'A_element_distributor_Pipeline_VITIS_LOOP_96_1'
+================================================================
+* Date:           Fri Sep 25 15:50:09 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.131 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_96_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     434|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     436|    -|
+|Register         |        -|     -|     443|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     443|     870|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_condition_1530                 |       and|   0|  0|   2|           1|           1|
+    |ap_condition_1534                 |       and|   0|  0|   2|           1|           1|
+    |ap_condition_1537                 |       and|   0|  0|   2|           1|           1|
+    |ap_condition_889                  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op117_read_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op198_write_state3   |       and|   0|  0|   2|           1|           1|
+    |grp_nbreadreq_fu_254_p3           |       and|   0|  0|   2|           1|           0|
+    |grp_nbreadreq_fu_262_p3           |       and|   0|  0|   2|           1|           0|
+    |grp_nbreadreq_fu_270_p3           |       and|   0|  0|   2|           1|           0|
+    |grp_nbreadreq_fu_278_p3           |       and|   0|  0|   2|           1|           0|
+    |grp_nbreadreq_fu_286_p3           |       and|   0|  0|   2|           1|           0|
+    |grp_nbreadreq_fu_294_p3           |       and|   0|  0|   2|           1|           0|
+    |grp_nbreadreq_fu_302_p3           |       and|   0|  0|   2|           1|           0|
+    |grp_nbreadreq_fu_310_p3           |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |        or|   0|  0|   2|           1|           1|
+    |ap_condition_211                  |        or|   0|  0|   2|           1|           1|
+    |ap_condition_271                  |        or|   0|  0|   2|           1|           1|
+    |ap_condition_312                  |        or|   0|  0|   2|           1|           1|
+    |ap_condition_343                  |        or|   0|  0|   2|           1|           1|
+    |ap_predicate_op104_read_state2    |        or|   0|  0|   2|           1|           1|
+    |ap_predicate_op137_write_state3   |        or|   0|  0|   2|           1|           1|
+    |ap_predicate_op151_write_state3   |        or|   0|  0|   2|           1|           1|
+    |ap_predicate_op165_write_state3   |        or|   0|  0|   2|           1|           1|
+    |ap_predicate_op179_write_state3   |        or|   0|  0|   2|           1|           1|
+    |or_ln129_1_fu_1031_p2             |        or|   0|  0|  39|          39|           1|
+    |or_ln129_fu_983_p2                |        or|   0|  0|  56|          56|          17|
+    |or_ln136_1_fu_950_p2              |        or|   0|  0|  39|          39|           2|
+    |or_ln136_fu_902_p2                |        or|   0|  0|  56|          56|          17|
+    |or_ln143_1_fu_869_p2              |        or|   0|  0|  39|          39|           2|
+    |or_ln143_fu_821_p2                |        or|   0|  0|  56|          56|          17|
+    |or_ln150_1_fu_788_p2              |        or|   0|  0|  39|          39|           3|
+    |or_ln150_fu_740_p2                |        or|   0|  0|  56|          56|          17|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 434|         407|          96|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                    | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2                      |   9|          2|    1|          2|
+    |ap_phi_mux_temp_avc_end_1_phi_fu_473_p4      |   9|          2|    1|          2|
+    |ap_phi_mux_temp_avc_row_end_1_phi_fu_483_p4  |   9|          2|    1|          2|
+    |empty_1658_fu_196                            |   9|          2|   32|         64|
+    |empty_1659_fu_208                            |  14|          3|   32|         96|
+    |empty_1660_fu_212                            |  14|          3|   32|         96|
+    |empty_1661_fu_216                            |  14|          3|   32|         96|
+    |empty_1662_fu_220                            |  14|          3|   32|         96|
+    |empty_fu_176                                 |   9|          2|   32|         64|
+    |p_A_element_as_blk_n                         |   9|          2|    1|          2|
+    |pe1_idle2_blk_n                              |   9|          2|    1|          2|
+    |pe1_job_blk_n                                |   9|          2|    1|          2|
+    |pe1_job_din                                  |  14|          3|   66|        198|
+    |pe2_idle3_blk_n                              |   9|          2|    1|          2|
+    |pe2_job_blk_n                                |   9|          2|    1|          2|
+    |pe2_job_din                                  |  14|          3|   66|        198|
+    |pe3_idle4_blk_n                              |   9|          2|    1|          2|
+    |pe3_job_blk_n                                |   9|          2|    1|          2|
+    |pe3_job_din                                  |  14|          3|   66|        198|
+    |pe4_idle5_blk_n                              |   9|          2|    1|          2|
+    |pe4_job_blk_n                                |   9|          2|    1|          2|
+    |pe4_job_din                                  |  14|          3|   66|        198|
+    |rcache_stream1_blk_n                         |   9|          2|    1|          2|
+    |rcache_stream2_blk_n                         |   9|          2|    1|          2|
+    |rcache_stream3_blk_n                         |   9|          2|    1|          2|
+    |rcache_stream4_blk_n                         |   9|          2|    1|          2|
+    |rm1_idle6_blk_n                              |   9|          2|    1|          2|
+    |rm2_idle7_blk_n                              |   9|          2|    1|          2|
+    |rm3_idle8_blk_n                              |   9|          2|    1|          2|
+    |rm4_idle9_blk_n                              |   9|          2|    1|          2|
+    |temp_avc_end_1_reg_470                       |   9|          2|    1|          2|
+    |temp_avc_end_2_reg_490                       |  14|          3|    1|          3|
+    |temp_avc_row_end_1_reg_480                   |   9|          2|    1|          2|
+    |temp_avc_row_end_2_reg_507                   |  20|          4|    1|          4|
+    |temp_pe_rid_1_fu_204                         |   9|          2|   32|         64|
+    |temp_pe_rid_fu_180                           |   9|          2|   32|         64|
+    |temp_rcache_request_Acid_1_fu_200            |   9|          2|   32|         64|
+    |temp_rcache_request_Acid_fu_188              |   9|          2|   32|         64|
+    |temp_rcache_request_dest_V_fu_172            |  20|          4|    3|         12|
+    +---------------------------------------------+----+-----------+-----+-----------+
+    |Total                                        | 436|         95|  613|       1627|
+    +---------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+----+----+-----+-----------+
+    |                Name               | FF | LUT| Bits| Const Bits|
+    +-----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                          |   1|   0|    1|          0|
+    |ap_done_reg                        |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |   1|   0|    1|          0|
+    |boundary_rid_reg_1225              |  32|   0|   32|          0|
+    |empty_1658_fu_196                  |  32|   0|   32|          0|
+    |empty_1659_fu_208                  |  32|   0|   32|          0|
+    |empty_1660_fu_212                  |  32|   0|   32|          0|
+    |empty_1661_fu_216                  |  32|   0|   32|          0|
+    |empty_1662_fu_220                  |  32|   0|   32|          0|
+    |empty_fu_176                       |  32|   0|   32|          0|
+    |temp_avc_cid_4_reg_1217            |  32|   0|   32|          0|
+    |temp_avc_end_1_reg_470             |   1|   0|    1|          0|
+    |temp_avc_end_2_reg_490             |   1|   0|    1|          0|
+    |temp_avc_row_end_1_reg_480         |   1|   0|    1|          0|
+    |temp_avc_row_end_2_reg_507         |   1|   0|    1|          0|
+    |temp_pe_rid_1_fu_204               |  32|   0|   32|          0|
+    |temp_pe_rid_fu_180                 |  32|   0|   32|          0|
+    |temp_rcache_request_Acid_1_fu_200  |  32|   0|   32|          0|
+    |temp_rcache_request_Acid_fu_188    |  32|   0|   32|          0|
+    |temp_rcache_request_dest_V_fu_172  |   3|   0|    3|          0|
+    |tmp_239_reg_1234                   |   1|   0|    1|          0|
+    |tmp_240_reg_1238                   |   1|   0|    1|          0|
+    |tmp_241_reg_1242                   |   1|   0|    1|          0|
+    |tmp_242_reg_1246                   |   1|   0|    1|          0|
+    |tmp_243_reg_1250                   |   1|   0|    1|          0|
+    |tmp_244_reg_1254                   |   1|   0|    1|          0|
+    |tmp_245_reg_1258                   |   1|   0|    1|          0|
+    |tmp_246_reg_1262                   |   1|   0|    1|          0|
+    |tmp_247_reg_1266                   |   1|   0|    1|          0|
+    |tmp_248_reg_1270                   |   1|   0|    1|          0|
+    |tmp_249_reg_1274                   |   1|   0|    1|          0|
+    |tmp_252_reg_1278                   |   1|   0|    1|          0|
+    |tmp_253_reg_1282                   |   1|   0|    1|          0|
+    |tmp_256_reg_1286                   |   1|   0|    1|          0|
+    |tmp_257_reg_1290                   |   1|   0|    1|          0|
+    |tmp_260_reg_1294                   |   1|   0|    1|          0|
+    |trunc_ln152_7_reg_1298             |  32|   0|   32|          0|
+    +-----------------------------------+----+----+-----+-----------+
+    |Total                              | 443|   0|  443|          0|
+    +-----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------------+-----+-----+------------+------------------------------------------------+--------------+
+|               RTL Ports               | Dir | Bits|  Protocol  |                  Source Object                 |    C Type    |
++---------------------------------------+-----+-----+------------+------------------------------------------------+--------------+
+|ap_clk                                 |   in|    1|  ap_ctrl_hs|  A_element_distributor_Pipeline_VITIS_LOOP_96_1|  return value|
+|ap_rst                                 |   in|    1|  ap_ctrl_hs|  A_element_distributor_Pipeline_VITIS_LOOP_96_1|  return value|
+|ap_start                               |   in|    1|  ap_ctrl_hs|  A_element_distributor_Pipeline_VITIS_LOOP_96_1|  return value|
+|ap_done                                |  out|    1|  ap_ctrl_hs|  A_element_distributor_Pipeline_VITIS_LOOP_96_1|  return value|
+|ap_idle                                |  out|    1|  ap_ctrl_hs|  A_element_distributor_Pipeline_VITIS_LOOP_96_1|  return value|
+|ap_ready                               |  out|    1|  ap_ctrl_hs|  A_element_distributor_Pipeline_VITIS_LOOP_96_1|  return value|
+|pe4_idle5_dout                         |   in|    1|     ap_fifo|                                       pe4_idle5|       pointer|
+|pe4_idle5_num_data_valid               |   in|    8|     ap_fifo|                                       pe4_idle5|       pointer|
+|pe4_idle5_fifo_cap                     |   in|    8|     ap_fifo|                                       pe4_idle5|       pointer|
+|pe4_idle5_empty_n                      |   in|    1|     ap_fifo|                                       pe4_idle5|       pointer|
+|pe4_idle5_read                         |  out|    1|     ap_fifo|                                       pe4_idle5|       pointer|
+|rm4_idle9_dout                         |   in|    1|     ap_fifo|                                       rm4_idle9|       pointer|
+|rm4_idle9_num_data_valid               |   in|    8|     ap_fifo|                                       rm4_idle9|       pointer|
+|rm4_idle9_fifo_cap                     |   in|    8|     ap_fifo|                                       rm4_idle9|       pointer|
+|rm4_idle9_empty_n                      |   in|    1|     ap_fifo|                                       rm4_idle9|       pointer|
+|rm4_idle9_read                         |  out|    1|     ap_fifo|                                       rm4_idle9|       pointer|
+|pe3_idle4_dout                         |   in|    1|     ap_fifo|                                       pe3_idle4|       pointer|
+|pe3_idle4_num_data_valid               |   in|    8|     ap_fifo|                                       pe3_idle4|       pointer|
+|pe3_idle4_fifo_cap                     |   in|    8|     ap_fifo|                                       pe3_idle4|       pointer|
+|pe3_idle4_empty_n                      |   in|    1|     ap_fifo|                                       pe3_idle4|       pointer|
+|pe3_idle4_read                         |  out|    1|     ap_fifo|                                       pe3_idle4|       pointer|
+|rm3_idle8_dout                         |   in|    1|     ap_fifo|                                       rm3_idle8|       pointer|
+|rm3_idle8_num_data_valid               |   in|    8|     ap_fifo|                                       rm3_idle8|       pointer|
+|rm3_idle8_fifo_cap                     |   in|    8|     ap_fifo|                                       rm3_idle8|       pointer|
+|rm3_idle8_empty_n                      |   in|    1|     ap_fifo|                                       rm3_idle8|       pointer|
+|rm3_idle8_read                         |  out|    1|     ap_fifo|                                       rm3_idle8|       pointer|
+|pe2_idle3_dout                         |   in|    1|     ap_fifo|                                       pe2_idle3|       pointer|
+|pe2_idle3_num_data_valid               |   in|    8|     ap_fifo|                                       pe2_idle3|       pointer|
+|pe2_idle3_fifo_cap                     |   in|    8|     ap_fifo|                                       pe2_idle3|       pointer|
+|pe2_idle3_empty_n                      |   in|    1|     ap_fifo|                                       pe2_idle3|       pointer|
+|pe2_idle3_read                         |  out|    1|     ap_fifo|                                       pe2_idle3|       pointer|
+|rm2_idle7_dout                         |   in|    1|     ap_fifo|                                       rm2_idle7|       pointer|
+|rm2_idle7_num_data_valid               |   in|    8|     ap_fifo|                                       rm2_idle7|       pointer|
+|rm2_idle7_fifo_cap                     |   in|    8|     ap_fifo|                                       rm2_idle7|       pointer|
+|rm2_idle7_empty_n                      |   in|    1|     ap_fifo|                                       rm2_idle7|       pointer|
+|rm2_idle7_read                         |  out|    1|     ap_fifo|                                       rm2_idle7|       pointer|
+|pe1_idle2_dout                         |   in|    1|     ap_fifo|                                       pe1_idle2|       pointer|
+|pe1_idle2_num_data_valid               |   in|    8|     ap_fifo|                                       pe1_idle2|       pointer|
+|pe1_idle2_fifo_cap                     |   in|    8|     ap_fifo|                                       pe1_idle2|       pointer|
+|pe1_idle2_empty_n                      |   in|    1|     ap_fifo|                                       pe1_idle2|       pointer|
+|pe1_idle2_read                         |  out|    1|     ap_fifo|                                       pe1_idle2|       pointer|
+|rm1_idle6_dout                         |   in|    1|     ap_fifo|                                       rm1_idle6|       pointer|
+|rm1_idle6_num_data_valid               |   in|    8|     ap_fifo|                                       rm1_idle6|       pointer|
+|rm1_idle6_fifo_cap                     |   in|    8|     ap_fifo|                                       rm1_idle6|       pointer|
+|rm1_idle6_empty_n                      |   in|    1|     ap_fifo|                                       rm1_idle6|       pointer|
+|rm1_idle6_read                         |  out|    1|     ap_fifo|                                       rm1_idle6|       pointer|
+|p_A_element_as_dout                    |   in|   98|     ap_fifo|                                  p_A_element_as|       pointer|
+|p_A_element_as_num_data_valid          |   in|    9|     ap_fifo|                                  p_A_element_as|       pointer|
+|p_A_element_as_fifo_cap                |   in|    9|     ap_fifo|                                  p_A_element_as|       pointer|
+|p_A_element_as_empty_n                 |   in|    1|     ap_fifo|                                  p_A_element_as|       pointer|
+|p_A_element_as_read                    |  out|    1|     ap_fifo|                                  p_A_element_as|       pointer|
+|pe4_job_din                            |  out|   66|     ap_fifo|                                         pe4_job|       pointer|
+|pe4_job_num_data_valid                 |   in|    8|     ap_fifo|                                         pe4_job|       pointer|
+|pe4_job_fifo_cap                       |   in|    8|     ap_fifo|                                         pe4_job|       pointer|
+|pe4_job_full_n                         |   in|    1|     ap_fifo|                                         pe4_job|       pointer|
+|pe4_job_write                          |  out|    1|     ap_fifo|                                         pe4_job|       pointer|
+|rcache_stream4_din                     |  out|  230|     ap_fifo|                                  rcache_stream4|       pointer|
+|rcache_stream4_num_data_valid          |   in|    7|     ap_fifo|                                  rcache_stream4|       pointer|
+|rcache_stream4_fifo_cap                |   in|    7|     ap_fifo|                                  rcache_stream4|       pointer|
+|rcache_stream4_full_n                  |   in|    1|     ap_fifo|                                  rcache_stream4|       pointer|
+|rcache_stream4_write                   |  out|    1|     ap_fifo|                                  rcache_stream4|       pointer|
+|pe3_job_din                            |  out|   66|     ap_fifo|                                         pe3_job|       pointer|
+|pe3_job_num_data_valid                 |   in|    8|     ap_fifo|                                         pe3_job|       pointer|
+|pe3_job_fifo_cap                       |   in|    8|     ap_fifo|                                         pe3_job|       pointer|
+|pe3_job_full_n                         |   in|    1|     ap_fifo|                                         pe3_job|       pointer|
+|pe3_job_write                          |  out|    1|     ap_fifo|                                         pe3_job|       pointer|
+|rcache_stream3_din                     |  out|  230|     ap_fifo|                                  rcache_stream3|       pointer|
+|rcache_stream3_num_data_valid          |   in|    7|     ap_fifo|                                  rcache_stream3|       pointer|
+|rcache_stream3_fifo_cap                |   in|    7|     ap_fifo|                                  rcache_stream3|       pointer|
+|rcache_stream3_full_n                  |   in|    1|     ap_fifo|                                  rcache_stream3|       pointer|
+|rcache_stream3_write                   |  out|    1|     ap_fifo|                                  rcache_stream3|       pointer|
+|pe2_job_din                            |  out|   66|     ap_fifo|                                         pe2_job|       pointer|
+|pe2_job_num_data_valid                 |   in|    8|     ap_fifo|                                         pe2_job|       pointer|
+|pe2_job_fifo_cap                       |   in|    8|     ap_fifo|                                         pe2_job|       pointer|
+|pe2_job_full_n                         |   in|    1|     ap_fifo|                                         pe2_job|       pointer|
+|pe2_job_write                          |  out|    1|     ap_fifo|                                         pe2_job|       pointer|
+|rcache_stream2_din                     |  out|  230|     ap_fifo|                                  rcache_stream2|       pointer|
+|rcache_stream2_num_data_valid          |   in|    7|     ap_fifo|                                  rcache_stream2|       pointer|
+|rcache_stream2_fifo_cap                |   in|    7|     ap_fifo|                                  rcache_stream2|       pointer|
+|rcache_stream2_full_n                  |   in|    1|     ap_fifo|                                  rcache_stream2|       pointer|
+|rcache_stream2_write                   |  out|    1|     ap_fifo|                                  rcache_stream2|       pointer|
+|pe1_job_din                            |  out|   66|     ap_fifo|                                         pe1_job|       pointer|
+|pe1_job_num_data_valid                 |   in|    8|     ap_fifo|                                         pe1_job|       pointer|
+|pe1_job_fifo_cap                       |   in|    8|     ap_fifo|                                         pe1_job|       pointer|
+|pe1_job_full_n                         |   in|    1|     ap_fifo|                                         pe1_job|       pointer|
+|pe1_job_write                          |  out|    1|     ap_fifo|                                         pe1_job|       pointer|
+|rcache_stream1_din                     |  out|  230|     ap_fifo|                                  rcache_stream1|       pointer|
+|rcache_stream1_num_data_valid          |   in|    7|     ap_fifo|                                  rcache_stream1|       pointer|
+|rcache_stream1_fifo_cap                |   in|    7|     ap_fifo|                                  rcache_stream1|       pointer|
+|rcache_stream1_full_n                  |   in|    1|     ap_fifo|                                  rcache_stream1|       pointer|
+|rcache_stream1_write                   |  out|    1|     ap_fifo|                                  rcache_stream1|       pointer|
+|temp_avc_rid                           |   in|   32|     ap_none|                                    temp_avc_rid|        scalar|
+|temp_avc_cid                           |   in|   32|     ap_none|                                    temp_avc_cid|        scalar|
+|trunc_ln95_1                           |   in|   32|     ap_none|                                    trunc_ln95_1|        scalar|
+|temp_avc_end                           |   in|    1|     ap_none|                                    temp_avc_end|        scalar|
+|temp_avc_row_end                       |   in|    1|     ap_none|                                temp_avc_row_end|        scalar|
+|temp_rcache_request_data_V_out         |  out|  160|      ap_vld|                  temp_rcache_request_data_V_out|       pointer|
+|temp_rcache_request_data_V_out_ap_vld  |  out|    1|      ap_vld|                  temp_rcache_request_data_V_out|       pointer|
+|temp_rcache_request_Acid_out           |  out|   32|      ap_vld|                    temp_rcache_request_Acid_out|       pointer|
+|temp_rcache_request_Acid_out_ap_vld    |  out|    1|      ap_vld|                    temp_rcache_request_Acid_out|       pointer|
+|temp_rcache_request_type_V_out         |  out|    2|      ap_vld|                  temp_rcache_request_type_V_out|       pointer|
+|temp_rcache_request_type_V_out_ap_vld  |  out|    1|      ap_vld|                  temp_rcache_request_type_V_out|       pointer|
+|temp_rcache_request_dest_V_out         |  out|    3|      ap_vld|                  temp_rcache_request_dest_V_out|       pointer|
+|temp_rcache_request_dest_V_out_ap_vld  |  out|    1|      ap_vld|                  temp_rcache_request_dest_V_out|       pointer|
+|temp_pe_rid_out                        |  out|   32|      ap_vld|                                 temp_pe_rid_out|       pointer|
+|temp_pe_rid_out_ap_vld                 |  out|    1|      ap_vld|                                 temp_pe_rid_out|       pointer|
+|p_out                                  |  out|   32|      ap_vld|                                           p_out|       pointer|
+|p_out_ap_vld                           |  out|    1|      ap_vld|                                           p_out|       pointer|
++---------------------------------------+-----+-----+------------+------------------------------------------------+--------------+
+

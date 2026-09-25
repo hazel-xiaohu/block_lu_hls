@@ -1,0 +1,91 @@
+In file included from pe.cpp:1:
+In file included from ./pe.h:4:
+In file included from ./core.h:13:
+In file included from /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed.h:10:
+In file included from /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:16:
+In file included from /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int.h:12:
+/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=and_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=or_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xor_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+pe.cpp:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE off
+        ^
+pe.cpp:36:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+pe.cpp:52:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_op_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=variable=psum1 op=fmul impl=fulldsp_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_OP variable=psum1 op=fmul impl=fulldsp
+        ^
+pe.cpp:54:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_op_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=variable=psum2 op=fmul impl=fulldsp_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_OP variable=psum2 op=fmul impl=fulldsp
+        ^
+pe.cpp:56:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_op_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=variable=psum3 op=fmul impl=fulldsp_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_OP variable=psum3 op=fmul impl=fulldsp
+        ^
+pe.cpp:58:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_op_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pe_XLX_SEP_ PragmaOptions=variable=psum4 op=fmul impl=fulldsp_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_OP variable=psum4 op=fmul impl=fulldsp
+        ^
+pe.cpp:123:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=_merge_temp_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+pe.cpp:149:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_op_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=_merge_temp_XLX_SEP_ PragmaOptions=variable=m_result op=fadd impl=fulldsp_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_OP variable=m_result op=fadd impl=fulldsp
+        ^
+pe.cpp:172:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=flush_three_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+pe.cpp:190:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=allocation_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=function instances=flush_three limit=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ALLOCATION function instances=flush_three limit=1
+        ^
+pe.cpp:193:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=variable=ping depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable=ping depth=1000
+        ^
+pe.cpp:194:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=variable=pong depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable=pong depth=1000
+        ^
+pe.cpp:196:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=variable=ping1 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable=ping1 depth=1000
+        ^
+pe.cpp:197:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=variable=pong1 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS stream variable=pong1 depth=1000
+        ^
+pe.cpp:229:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_two_sub_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE off
+        ^
+pe.cpp:330:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merger_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+pe.cpp:334:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merger_XLX_SEP_ PragmaOptions=variable=mresult depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=mresult depth=8
+        ^
+pe.cpp:344:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=generate_mccontrol_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE off
+        ^
+pe.cpp:353:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=generate_mccontrol_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+pe.cpp:378:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=from_ms_to_val_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+pe.cpp:385:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merger_test_XLX_SEP_ PragmaOptions=m_axi depth=350 port=in offset=slave bundle=in_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=350 port=in offset=slave bundle=in
+        ^
+pe.cpp:386:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merger_test_XLX_SEP_ PragmaOptions=m_axi depth=350 port=out offset=slave bundle=out_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=350 port=out offset=slave bundle=out
+        ^
+pe.cpp:388:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merger_test_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=ctr_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=ctr
+        ^
+pe.cpp:390:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merger_test_XLX_SEP_ PragmaOptions=disable_start_propagation_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW disable_start_propagation
+        ^
+pe.cpp:396:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merger_test_XLX_SEP_ PragmaOptions=variable=ms depth=70_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=ms depth=70
+        ^
+28 warnings generated.

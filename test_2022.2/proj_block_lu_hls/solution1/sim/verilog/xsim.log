@@ -1,0 +1,48 @@
+#-----------------------------------------------------------
+# xsim v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Sep 25 16:00:56 2026
+# Process ID: 32223
+# Current directory: /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/spmm/xsim_script.tcl}
+# Log file: /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/sim/verilog/xsim.log
+# Journal file: /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/sim/verilog/xsim.jou
+# Running On: team-pbscxogbwe8r-main, OS: Linux, CPU Frequency: 1500.000 MHz, CPU Physical cores: 2, Host memory: 100663 MB
+#-----------------------------------------------------------
+source xsim.dir/spmm/xsim_script.tcl
+# xsim {spmm} -autoloadwcfg -tclbatch {spmm.tcl}
+Time resolution is 1 ps
+source spmm.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "113000"
+
+//////////////////////////////////////////////////////////////////////////////
+// ERROR!!! DEADLOCK DETECTED at 110945000 ns! SIMULATION WILL BE STOPPED! //
+//////////////////////////////////////////////////////////////////////////////
+/////////////////////////
+// Dependence cycle 1:
+// (1): Process: spmm.merger_50_U0
+//      Blocked by empty input FIFO 'spmm.mc_pe2_U' written by process 'spmm.pe_44_U0'
+// (2): Process: spmm.pe_44_U0
+//      Blocked by empty input FIFO 'spmm.efinish2_U' written by process 'spmm.merger_50_U0'
+/////////////////////////
+// Dependence cycle 2:
+// (1): Process: spmm.merger_U0
+//      Blocked by empty input FIFO 'spmm.mc_pe1_U' written by process 'spmm.pe_U0'
+// (2): Process: spmm.pe_U0
+//      Blocked by empty input FIFO 'spmm.efinish1_U' written by process 'spmm.merger_U0'
+////////////////////////////////////////////////////////////////////////
+// Totally 2 cycles detected!
+////////////////////////////////////////////////////////////////////////
+$finish called at time : 110985 ns : File "/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/sim/verilog/AESL_deadlock_report_unit.v" Line 15769
+run: Time (s): cpu = 00:00:00.1 ; elapsed = 00:06:07 . Memory (MB): peak = 1365.152 ; gain = 0.000 ; free physical = 89390 ; free virtual = 94900
+## quit
+INFO: xsimkernel Simulation Memory Usage: 284872 KB (Peak: 284872 KB), Simulation CPU Usage: 366280 ms
+INFO: [Common 17-206] Exiting xsim at Fri Sep 25 16:07:06 2026...

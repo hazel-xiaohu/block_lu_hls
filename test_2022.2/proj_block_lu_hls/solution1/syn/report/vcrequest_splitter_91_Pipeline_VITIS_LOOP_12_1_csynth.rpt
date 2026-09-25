@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'vcrequest_splitter_91_Pipeline_VITIS_LOOP_12_1'
+================================================================
+* Date:           Fri Sep 25 15:51:12 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.844 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_12_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      10|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      81|    -|
+|Register         |        -|     -|     138|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     138|      91|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state1_pp0_stage0_iter0  |       and|   0|  0|   2|           1|           1|
+    |tmp_3_nbreadreq_fu_80_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  10|           5|           5|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_done_int                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |ccollector_blk_n             |   9|          2|    1|          2|
+    |crequest_blk_n               |   9|          2|    1|          2|
+    |cscheduler_blk_n             |   9|          2|    1|          2|
+    |rcache_result_bank4_b_blk_n  |   9|          2|    1|          2|
+    |vcollector_blk_n             |   9|          2|    1|          2|
+    |vrequest_blk_n               |   9|          2|    1|          2|
+    |vscheduler_blk_n             |   9|          2|    1|          2|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        |  81|         18|    9|         18|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |tcontrol_bridx_fu_72     |  32|   0|   32|          0|
+    |tcontrol_brlen_fu_68     |  32|   0|   32|          0|
+    |tcontrol_peID_V_fu_76    |   3|   0|    3|          0|
+    |tmp_2_reg_266            |  67|   0|   67|          0|
+    |tmp_3_reg_259            |   1|   0|    1|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 138|   0|  138|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------+-----+-----+------------+------------------------------------------------+--------------+
+|               RTL Ports              | Dir | Bits|  Protocol  |                  Source Object                 |    C Type    |
++--------------------------------------+-----+-----+------------+------------------------------------------------+--------------+
+|ap_clk                                |   in|    1|  ap_ctrl_hs|  vcrequest_splitter.91_Pipeline_VITIS_LOOP_12_1|  return value|
+|ap_rst                                |   in|    1|  ap_ctrl_hs|  vcrequest_splitter.91_Pipeline_VITIS_LOOP_12_1|  return value|
+|ap_start                              |   in|    1|  ap_ctrl_hs|  vcrequest_splitter.91_Pipeline_VITIS_LOOP_12_1|  return value|
+|ap_done                               |  out|    1|  ap_ctrl_hs|  vcrequest_splitter.91_Pipeline_VITIS_LOOP_12_1|  return value|
+|ap_idle                               |  out|    1|  ap_ctrl_hs|  vcrequest_splitter.91_Pipeline_VITIS_LOOP_12_1|  return value|
+|ap_ready                              |  out|    1|  ap_ctrl_hs|  vcrequest_splitter.91_Pipeline_VITIS_LOOP_12_1|  return value|
+|rcache_result_bank4_b_dout            |   in|   68|     ap_fifo|                           rcache_result_bank4_b|       pointer|
+|rcache_result_bank4_b_num_data_valid  |   in|    7|     ap_fifo|                           rcache_result_bank4_b|       pointer|
+|rcache_result_bank4_b_fifo_cap        |   in|    7|     ap_fifo|                           rcache_result_bank4_b|       pointer|
+|rcache_result_bank4_b_empty_n         |   in|    1|     ap_fifo|                           rcache_result_bank4_b|       pointer|
+|rcache_result_bank4_b_read            |  out|    1|     ap_fifo|                           rcache_result_bank4_b|       pointer|
+|vrequest_din                          |  out|   68|     ap_fifo|                                        vrequest|       pointer|
+|vrequest_num_data_valid               |   in|    7|     ap_fifo|                                        vrequest|       pointer|
+|vrequest_fifo_cap                     |   in|    7|     ap_fifo|                                        vrequest|       pointer|
+|vrequest_full_n                       |   in|    1|     ap_fifo|                                        vrequest|       pointer|
+|vrequest_write                        |  out|    1|     ap_fifo|                                        vrequest|       pointer|
+|crequest_din                          |  out|   68|     ap_fifo|                                        crequest|       pointer|
+|crequest_num_data_valid               |   in|    7|     ap_fifo|                                        crequest|       pointer|
+|crequest_fifo_cap                     |   in|    7|     ap_fifo|                                        crequest|       pointer|
+|crequest_full_n                       |   in|    1|     ap_fifo|                                        crequest|       pointer|
+|crequest_write                        |  out|    1|     ap_fifo|                                        crequest|       pointer|
+|vcollector_din                        |  out|   68|     ap_fifo|                                      vcollector|       pointer|
+|vcollector_num_data_valid             |   in|    7|     ap_fifo|                                      vcollector|       pointer|
+|vcollector_fifo_cap                   |   in|    7|     ap_fifo|                                      vcollector|       pointer|
+|vcollector_full_n                     |   in|    1|     ap_fifo|                                      vcollector|       pointer|
+|vcollector_write                      |  out|    1|     ap_fifo|                                      vcollector|       pointer|
+|ccollector_din                        |  out|   68|     ap_fifo|                                      ccollector|       pointer|
+|ccollector_num_data_valid             |   in|    7|     ap_fifo|                                      ccollector|       pointer|
+|ccollector_fifo_cap                   |   in|    7|     ap_fifo|                                      ccollector|       pointer|
+|ccollector_full_n                     |   in|    1|     ap_fifo|                                      ccollector|       pointer|
+|ccollector_write                      |  out|    1|     ap_fifo|                                      ccollector|       pointer|
+|vscheduler_din                        |  out|   68|     ap_fifo|                                      vscheduler|       pointer|
+|vscheduler_num_data_valid             |   in|    7|     ap_fifo|                                      vscheduler|       pointer|
+|vscheduler_fifo_cap                   |   in|    7|     ap_fifo|                                      vscheduler|       pointer|
+|vscheduler_full_n                     |   in|    1|     ap_fifo|                                      vscheduler|       pointer|
+|vscheduler_write                      |  out|    1|     ap_fifo|                                      vscheduler|       pointer|
+|cscheduler_din                        |  out|   68|     ap_fifo|                                      cscheduler|       pointer|
+|cscheduler_num_data_valid             |   in|    7|     ap_fifo|                                      cscheduler|       pointer|
+|cscheduler_fifo_cap                   |   in|    7|     ap_fifo|                                      cscheduler|       pointer|
+|cscheduler_full_n                     |   in|    1|     ap_fifo|                                      cscheduler|       pointer|
+|cscheduler_write                      |  out|    1|     ap_fifo|                                      cscheduler|       pointer|
+|tcontrol_peID_V_out                   |  out|    3|      ap_vld|                             tcontrol_peID_V_out|       pointer|
+|tcontrol_peID_V_out_ap_vld            |  out|    1|      ap_vld|                             tcontrol_peID_V_out|       pointer|
+|tcontrol_bridx_out                    |  out|   32|      ap_vld|                              tcontrol_bridx_out|       pointer|
+|tcontrol_bridx_out_ap_vld             |  out|    1|      ap_vld|                              tcontrol_bridx_out|       pointer|
+|tcontrol_brlen_out                    |  out|   32|      ap_vld|                              tcontrol_brlen_out|       pointer|
+|tcontrol_brlen_out_ap_vld             |  out|    1|      ap_vld|                              tcontrol_brlen_out|       pointer|
++--------------------------------------+-----+-----+------------+------------------------------------------------+--------------+
+

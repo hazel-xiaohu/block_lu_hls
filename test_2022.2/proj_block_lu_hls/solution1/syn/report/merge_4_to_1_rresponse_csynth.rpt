@@ -1,0 +1,211 @@
+
+
+================================================================
+== Vitis HLS Report for 'merge_4_to_1_rresponse'
+================================================================
+* Date:           Fri Sep 25 15:50:39 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.399 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_669_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      50|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     181|    -|
+|Register         |        -|     -|     680|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     680|     231|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |and_ln694_7_fu_297_p2             |       and|   0|  0|   2|           1|           1|
+    |and_ln694_fu_291_p2               |       and|   0|  0|   2|           1|           1|
+    |ap_condition_168                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_232                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_275                  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_49                   |       and|   0|  0|   2|           1|           1|
+    |ap_condition_61                   |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op45_read_state1     |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op70_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op73_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op76_write_state2    |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op79_write_state2    |       and|   0|  0|   2|           1|           1|
+    |enable_fu_303_p2                  |       and|   0|  0|   2|           1|           1|
+    |tmp_164_nbreadreq_fu_80_p3        |       and|   0|  0|   2|           1|           0|
+    |tmp_165_nbreadreq_fu_88_p3        |       and|   0|  0|   2|           1|           0|
+    |tmp_nbreadreq_fu_64_p3            |       and|   0|  0|   2|           1|           0|
+    |tmp_s_nbreadreq_fu_72_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |or_ln675_fu_258_p2                |        or|   0|  0|   2|           1|           1|
+    |or_ln680_fu_225_p2                |        or|   0|  0|   2|           1|           1|
+    |or_ln685_fu_192_p2                |        or|   0|  0|   2|           1|           1|
+    |or_ln690_fu_159_p2                |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  50|          25|          22|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                       |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_from1_end_32     |  14|          3|    1|          3|
+    |ap_sig_allocacmp_from2_end_32     |  14|          3|    1|          3|
+    |ap_sig_allocacmp_from3_end_8      |  14|          3|    1|          3|
+    |ap_sig_allocacmp_from4_end_8      |  14|          3|    1|          3|
+    |from1_end_fu_60                   |   9|          2|    1|          2|
+    |from2_end_fu_56                   |   9|          2|    1|          2|
+    |from3_end_fu_52                   |   9|          2|    1|          2|
+    |from4_end_fu_48                   |   9|          2|    1|          2|
+    |rcache_re_bank1_1_blk_n           |   9|          2|    1|          2|
+    |rcache_re_bank2_1_blk_n           |   9|          2|    1|          2|
+    |rcache_re_bank3_1_blk_n           |   9|          2|    1|          2|
+    |rcache_re_bank4_1_blk_n           |   9|          2|    1|          2|
+    |rresponse1_blk_n                  |   9|          2|    1|          2|
+    |rresponse1_din                    |  26|          5|  168|        840|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             | 181|         39|  183|        874|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+-----+----+-----+-----------+
+    |               Name               |  FF | LUT| Bits| Const Bits|
+    +----------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                         |    1|   0|    1|          0|
+    |ap_done_reg                       |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |    1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |    1|   0|    1|          0|
+    |from1_end_fu_60                   |    1|   0|    1|          0|
+    |from2_end_fu_56                   |    1|   0|    1|          0|
+    |from3_end_fu_52                   |    1|   0|    1|          0|
+    |from4_end_fu_48                   |    1|   0|    1|          0|
+    |or_ln675_reg_412                  |    1|   0|    1|          0|
+    |or_ln680_reg_403                  |    1|   0|    1|          0|
+    |or_ln685_reg_394                  |    1|   0|    1|          0|
+    |or_ln690_reg_385                  |    1|   0|    1|          0|
+    |tmp_164_reg_377                   |    1|   0|    1|          0|
+    |tmp_165_reg_381                   |    1|   0|    1|          0|
+    |tmp_290_reg_416                   |  166|   0|  166|          0|
+    |tmp_291_reg_407                   |  166|   0|  166|          0|
+    |tmp_292_reg_398                   |  166|   0|  166|          0|
+    |tmp_293_reg_389                   |  166|   0|  166|          0|
+    |tmp_reg_369                       |    1|   0|    1|          0|
+    |tmp_s_reg_373                     |    1|   0|    1|          0|
+    +----------------------------------+-----+----+-----+-----------+
+    |Total                             |  680|   0|  680|          0|
+    +----------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++----------------------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|  merge_4_to_1_rresponse|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|  merge_4_to_1_rresponse|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|  merge_4_to_1_rresponse|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|  merge_4_to_1_rresponse|  return value|
+|ap_continue                       |   in|    1|  ap_ctrl_hs|  merge_4_to_1_rresponse|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|  merge_4_to_1_rresponse|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|  merge_4_to_1_rresponse|  return value|
+|rcache_re_bank4_1_dout            |   in|  168|     ap_fifo|       rcache_re_bank4_1|       pointer|
+|rcache_re_bank4_1_num_data_valid  |   in|    2|     ap_fifo|       rcache_re_bank4_1|       pointer|
+|rcache_re_bank4_1_fifo_cap        |   in|    2|     ap_fifo|       rcache_re_bank4_1|       pointer|
+|rcache_re_bank4_1_empty_n         |   in|    1|     ap_fifo|       rcache_re_bank4_1|       pointer|
+|rcache_re_bank4_1_read            |  out|    1|     ap_fifo|       rcache_re_bank4_1|       pointer|
+|rcache_re_bank3_1_dout            |   in|  168|     ap_fifo|       rcache_re_bank3_1|       pointer|
+|rcache_re_bank3_1_num_data_valid  |   in|    2|     ap_fifo|       rcache_re_bank3_1|       pointer|
+|rcache_re_bank3_1_fifo_cap        |   in|    2|     ap_fifo|       rcache_re_bank3_1|       pointer|
+|rcache_re_bank3_1_empty_n         |   in|    1|     ap_fifo|       rcache_re_bank3_1|       pointer|
+|rcache_re_bank3_1_read            |  out|    1|     ap_fifo|       rcache_re_bank3_1|       pointer|
+|rcache_re_bank2_1_dout            |   in|  168|     ap_fifo|       rcache_re_bank2_1|       pointer|
+|rcache_re_bank2_1_num_data_valid  |   in|    2|     ap_fifo|       rcache_re_bank2_1|       pointer|
+|rcache_re_bank2_1_fifo_cap        |   in|    2|     ap_fifo|       rcache_re_bank2_1|       pointer|
+|rcache_re_bank2_1_empty_n         |   in|    1|     ap_fifo|       rcache_re_bank2_1|       pointer|
+|rcache_re_bank2_1_read            |  out|    1|     ap_fifo|       rcache_re_bank2_1|       pointer|
+|rcache_re_bank1_1_dout            |   in|  168|     ap_fifo|       rcache_re_bank1_1|       pointer|
+|rcache_re_bank1_1_num_data_valid  |   in|    2|     ap_fifo|       rcache_re_bank1_1|       pointer|
+|rcache_re_bank1_1_fifo_cap        |   in|    2|     ap_fifo|       rcache_re_bank1_1|       pointer|
+|rcache_re_bank1_1_empty_n         |   in|    1|     ap_fifo|       rcache_re_bank1_1|       pointer|
+|rcache_re_bank1_1_read            |  out|    1|     ap_fifo|       rcache_re_bank1_1|       pointer|
+|rresponse1_din                    |  out|  168|     ap_fifo|              rresponse1|       pointer|
+|rresponse1_num_data_valid         |   in|    5|     ap_fifo|              rresponse1|       pointer|
+|rresponse1_fifo_cap               |   in|    5|     ap_fifo|              rresponse1|       pointer|
+|rresponse1_full_n                 |   in|    1|     ap_fifo|              rresponse1|       pointer|
+|rresponse1_write                  |  out|    1|     ap_fifo|              rresponse1|       pointer|
++----------------------------------+-----+-----+------------+------------------------+--------------+
+

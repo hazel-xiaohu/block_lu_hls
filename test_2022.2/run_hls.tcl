@@ -41,8 +41,27 @@ if {$hls_exec >= 1} {
     csynth_design
 }
 if {$hls_exec >= 2} {
-    # Vitis HLS 2022.2 defines -wave_debug as a flag without a value.
-    cosim_design -trace_level none
+#    cosim_design -trace_level none 
+#    cosim_design -setup
+# 1. 先生成仿真脚本，但不运行
+cosim_design -setup -trace_level none
+set sim_script "proj_block_lu_hls/solution1/sim/verilog/run_xsim.sh"
+if {[file exists $sim_script]} {
+    set fp [open $sim_script r]
+    set content [read $fp]
+    close $fp
+
+    # 在 xelab 所在行末尾加上 -cc gcc（假设 xelab 命令独占一行）
+    regsub -all {(xelab .*)} $content "\\1 -cc gcc" new_content
+
+    set fp [open $sim_script w]
+    puts $fp $new_content
+    close $fp
+    puts "已自动为 run_xsim.sh 添加 -cc gcc 选项"
+}
+
+# 3. 手动执行修改后的脚本，完成仿真
+exec ./$sim_script
 }
 
 exit

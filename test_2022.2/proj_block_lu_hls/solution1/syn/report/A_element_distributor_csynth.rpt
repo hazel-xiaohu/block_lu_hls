@@ -1,0 +1,271 @@
+
+
+================================================================
+== Vitis HLS Report for 'A_element_distributor'
+================================================================
+* Date:           Fri Sep 25 15:50:09 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.131 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------------------+------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                           |                                                |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                          Instance                         |                     Module                     |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-----------------------------------------------------------+------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_A_element_distributor_Pipeline_VITIS_LOOP_96_1_fu_240  |A_element_distributor_Pipeline_VITIS_LOOP_96_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-----------------------------------------------------------+------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     252|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|     443|     870|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     498|    -|
+|Register         |        -|     -|     104|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     547|    1620|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------------------+------------------------------------------------+---------+----+-----+-----+-----+
+    |                          Instance                         |                     Module                     | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-----------------------------------------------------------+------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_A_element_distributor_Pipeline_VITIS_LOOP_96_1_fu_240  |A_element_distributor_Pipeline_VITIS_LOOP_96_1  |        0|   0|  443|  870|    0|
+    +-----------------------------------------------------------+------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                      |                                                |        0|   0|  443|  870|    0|
+    +-----------------------------------------------------------+------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+----+---+-----+------------+------------+
+    |    Variable Name   | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+----+---+-----+------------+------------+
+    |ap_block_state1     |        or|   0|  0|    2|           1|           1|
+    |ap_block_state4     |        or|   0|  0|    2|           1|           1|
+    |or_ln164_fu_381_p2  |        or|   0|  0|  248|         248|           9|
+    +--------------------+----------+----+---+-----+------------+------------+
+    |Total               |          |   0|  0|  252|         250|          11|
+    +--------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm             |  26|          5|    1|          5|
+    |ap_done               |   9|          2|    1|          2|
+    |p_A_element_as_blk_n  |   9|          2|    1|          2|
+    |p_A_element_as_read   |  14|          3|    1|          3|
+    |pe1_idle2_blk_n       |   9|          2|    1|          2|
+    |pe1_idle2_read        |  14|          3|    1|          3|
+    |pe1_job_blk_n         |   9|          2|    1|          2|
+    |pe1_job_din           |   9|          2|   66|        132|
+    |pe1_job_write         |  14|          3|    1|          3|
+    |pe2_idle3_blk_n       |   9|          2|    1|          2|
+    |pe2_idle3_read        |  14|          3|    1|          3|
+    |pe2_job_blk_n         |   9|          2|    1|          2|
+    |pe2_job_din           |   9|          2|   66|        132|
+    |pe2_job_write         |  14|          3|    1|          3|
+    |pe3_idle4_blk_n       |   9|          2|    1|          2|
+    |pe3_idle4_read        |  14|          3|    1|          3|
+    |pe3_job_blk_n         |   9|          2|    1|          2|
+    |pe3_job_din           |   9|          2|   66|        132|
+    |pe3_job_write         |  14|          3|    1|          3|
+    |pe4_idle5_blk_n       |   9|          2|    1|          2|
+    |pe4_idle5_read        |  14|          3|    1|          3|
+    |pe4_job_blk_n         |   9|          2|    1|          2|
+    |pe4_job_din           |   9|          2|   66|        132|
+    |pe4_job_write         |  14|          3|    1|          3|
+    |rcache_stream1_blk_n  |   9|          2|    1|          2|
+    |rcache_stream1_din    |   9|          2|  230|        460|
+    |rcache_stream1_write  |  14|          3|    1|          3|
+    |rcache_stream2_blk_n  |   9|          2|    1|          2|
+    |rcache_stream2_din    |   9|          2|  230|        460|
+    |rcache_stream2_write  |  14|          3|    1|          3|
+    |rcache_stream3_blk_n  |   9|          2|    1|          2|
+    |rcache_stream3_din    |   9|          2|  230|        460|
+    |rcache_stream3_write  |  14|          3|    1|          3|
+    |rcache_stream4_blk_n  |   9|          2|    1|          2|
+    |rcache_stream4_din    |   9|          2|  230|        460|
+    |rcache_stream4_write  |  14|          3|    1|          3|
+    |rm1_idle6_blk_n       |   9|          2|    1|          2|
+    |rm1_idle6_read        |  14|          3|    1|          3|
+    |rm2_idle7_blk_n       |   9|          2|    1|          2|
+    |rm2_idle7_read        |  14|          3|    1|          3|
+    |rm3_idle8_blk_n       |   9|          2|    1|          2|
+    |rm3_idle8_read        |  14|          3|    1|          3|
+    |rm4_idle9_blk_n       |   9|          2|    1|          2|
+    |rm4_idle9_read        |  14|          3|    1|          3|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 | 498|        108| 1220|       2460|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                  Name                                  | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                               |   4|   0|    4|          0|
+    |ap_done_reg                                                             |   1|   0|    1|          0|
+    |grp_A_element_distributor_Pipeline_VITIS_LOOP_96_1_fu_240_ap_start_reg  |   1|   0|    1|          0|
+    |temp_avc_cid_reg_472                                                    |  32|   0|   32|          0|
+    |temp_avc_end_reg_482                                                    |   1|   0|    1|          0|
+    |temp_avc_rid_reg_477                                                    |  32|   0|   32|          0|
+    |temp_avc_row_end_reg_467                                                |   1|   0|    1|          0|
+    |trunc_ln95_1_reg_487                                                    |  32|   0|   32|          0|
+    +------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                   | 104|   0|  104|          0|
+    +------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+-----------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-------------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                         |   in|    1|  ap_ctrl_hs|  A_element_distributor|  return value|
+|ap_rst                         |   in|    1|  ap_ctrl_hs|  A_element_distributor|  return value|
+|ap_start                       |   in|    1|  ap_ctrl_hs|  A_element_distributor|  return value|
+|ap_done                        |  out|    1|  ap_ctrl_hs|  A_element_distributor|  return value|
+|ap_continue                    |   in|    1|  ap_ctrl_hs|  A_element_distributor|  return value|
+|ap_idle                        |  out|    1|  ap_ctrl_hs|  A_element_distributor|  return value|
+|ap_ready                       |  out|    1|  ap_ctrl_hs|  A_element_distributor|  return value|
+|p_A_element_as_dout            |   in|   98|     ap_fifo|         p_A_element_as|       pointer|
+|p_A_element_as_num_data_valid  |   in|    9|     ap_fifo|         p_A_element_as|       pointer|
+|p_A_element_as_fifo_cap        |   in|    9|     ap_fifo|         p_A_element_as|       pointer|
+|p_A_element_as_empty_n         |   in|    1|     ap_fifo|         p_A_element_as|       pointer|
+|p_A_element_as_read            |  out|    1|     ap_fifo|         p_A_element_as|       pointer|
+|pe1_idle2_dout                 |   in|    1|     ap_fifo|              pe1_idle2|       pointer|
+|pe1_idle2_num_data_valid       |   in|    8|     ap_fifo|              pe1_idle2|       pointer|
+|pe1_idle2_fifo_cap             |   in|    8|     ap_fifo|              pe1_idle2|       pointer|
+|pe1_idle2_empty_n              |   in|    1|     ap_fifo|              pe1_idle2|       pointer|
+|pe1_idle2_read                 |  out|    1|     ap_fifo|              pe1_idle2|       pointer|
+|pe2_idle3_dout                 |   in|    1|     ap_fifo|              pe2_idle3|       pointer|
+|pe2_idle3_num_data_valid       |   in|    8|     ap_fifo|              pe2_idle3|       pointer|
+|pe2_idle3_fifo_cap             |   in|    8|     ap_fifo|              pe2_idle3|       pointer|
+|pe2_idle3_empty_n              |   in|    1|     ap_fifo|              pe2_idle3|       pointer|
+|pe2_idle3_read                 |  out|    1|     ap_fifo|              pe2_idle3|       pointer|
+|pe3_idle4_dout                 |   in|    1|     ap_fifo|              pe3_idle4|       pointer|
+|pe3_idle4_num_data_valid       |   in|    8|     ap_fifo|              pe3_idle4|       pointer|
+|pe3_idle4_fifo_cap             |   in|    8|     ap_fifo|              pe3_idle4|       pointer|
+|pe3_idle4_empty_n              |   in|    1|     ap_fifo|              pe3_idle4|       pointer|
+|pe3_idle4_read                 |  out|    1|     ap_fifo|              pe3_idle4|       pointer|
+|pe4_idle5_dout                 |   in|    1|     ap_fifo|              pe4_idle5|       pointer|
+|pe4_idle5_num_data_valid       |   in|    8|     ap_fifo|              pe4_idle5|       pointer|
+|pe4_idle5_fifo_cap             |   in|    8|     ap_fifo|              pe4_idle5|       pointer|
+|pe4_idle5_empty_n              |   in|    1|     ap_fifo|              pe4_idle5|       pointer|
+|pe4_idle5_read                 |  out|    1|     ap_fifo|              pe4_idle5|       pointer|
+|rm1_idle6_dout                 |   in|    1|     ap_fifo|              rm1_idle6|       pointer|
+|rm1_idle6_num_data_valid       |   in|    8|     ap_fifo|              rm1_idle6|       pointer|
+|rm1_idle6_fifo_cap             |   in|    8|     ap_fifo|              rm1_idle6|       pointer|
+|rm1_idle6_empty_n              |   in|    1|     ap_fifo|              rm1_idle6|       pointer|
+|rm1_idle6_read                 |  out|    1|     ap_fifo|              rm1_idle6|       pointer|
+|rm2_idle7_dout                 |   in|    1|     ap_fifo|              rm2_idle7|       pointer|
+|rm2_idle7_num_data_valid       |   in|    8|     ap_fifo|              rm2_idle7|       pointer|
+|rm2_idle7_fifo_cap             |   in|    8|     ap_fifo|              rm2_idle7|       pointer|
+|rm2_idle7_empty_n              |   in|    1|     ap_fifo|              rm2_idle7|       pointer|
+|rm2_idle7_read                 |  out|    1|     ap_fifo|              rm2_idle7|       pointer|
+|rm3_idle8_dout                 |   in|    1|     ap_fifo|              rm3_idle8|       pointer|
+|rm3_idle8_num_data_valid       |   in|    8|     ap_fifo|              rm3_idle8|       pointer|
+|rm3_idle8_fifo_cap             |   in|    8|     ap_fifo|              rm3_idle8|       pointer|
+|rm3_idle8_empty_n              |   in|    1|     ap_fifo|              rm3_idle8|       pointer|
+|rm3_idle8_read                 |  out|    1|     ap_fifo|              rm3_idle8|       pointer|
+|rm4_idle9_dout                 |   in|    1|     ap_fifo|              rm4_idle9|       pointer|
+|rm4_idle9_num_data_valid       |   in|    8|     ap_fifo|              rm4_idle9|       pointer|
+|rm4_idle9_fifo_cap             |   in|    8|     ap_fifo|              rm4_idle9|       pointer|
+|rm4_idle9_empty_n              |   in|    1|     ap_fifo|              rm4_idle9|       pointer|
+|rm4_idle9_read                 |  out|    1|     ap_fifo|              rm4_idle9|       pointer|
+|pe1_job_din                    |  out|   66|     ap_fifo|                pe1_job|       pointer|
+|pe1_job_num_data_valid         |   in|    8|     ap_fifo|                pe1_job|       pointer|
+|pe1_job_fifo_cap               |   in|    8|     ap_fifo|                pe1_job|       pointer|
+|pe1_job_full_n                 |   in|    1|     ap_fifo|                pe1_job|       pointer|
+|pe1_job_write                  |  out|    1|     ap_fifo|                pe1_job|       pointer|
+|pe2_job_din                    |  out|   66|     ap_fifo|                pe2_job|       pointer|
+|pe2_job_num_data_valid         |   in|    8|     ap_fifo|                pe2_job|       pointer|
+|pe2_job_fifo_cap               |   in|    8|     ap_fifo|                pe2_job|       pointer|
+|pe2_job_full_n                 |   in|    1|     ap_fifo|                pe2_job|       pointer|
+|pe2_job_write                  |  out|    1|     ap_fifo|                pe2_job|       pointer|
+|pe3_job_din                    |  out|   66|     ap_fifo|                pe3_job|       pointer|
+|pe3_job_num_data_valid         |   in|    8|     ap_fifo|                pe3_job|       pointer|
+|pe3_job_fifo_cap               |   in|    8|     ap_fifo|                pe3_job|       pointer|
+|pe3_job_full_n                 |   in|    1|     ap_fifo|                pe3_job|       pointer|
+|pe3_job_write                  |  out|    1|     ap_fifo|                pe3_job|       pointer|
+|pe4_job_din                    |  out|   66|     ap_fifo|                pe4_job|       pointer|
+|pe4_job_num_data_valid         |   in|    8|     ap_fifo|                pe4_job|       pointer|
+|pe4_job_fifo_cap               |   in|    8|     ap_fifo|                pe4_job|       pointer|
+|pe4_job_full_n                 |   in|    1|     ap_fifo|                pe4_job|       pointer|
+|pe4_job_write                  |  out|    1|     ap_fifo|                pe4_job|       pointer|
+|rcache_stream1_din             |  out|  230|     ap_fifo|         rcache_stream1|       pointer|
+|rcache_stream1_num_data_valid  |   in|    7|     ap_fifo|         rcache_stream1|       pointer|
+|rcache_stream1_fifo_cap        |   in|    7|     ap_fifo|         rcache_stream1|       pointer|
+|rcache_stream1_full_n          |   in|    1|     ap_fifo|         rcache_stream1|       pointer|
+|rcache_stream1_write           |  out|    1|     ap_fifo|         rcache_stream1|       pointer|
+|rcache_stream2_din             |  out|  230|     ap_fifo|         rcache_stream2|       pointer|
+|rcache_stream2_num_data_valid  |   in|    7|     ap_fifo|         rcache_stream2|       pointer|
+|rcache_stream2_fifo_cap        |   in|    7|     ap_fifo|         rcache_stream2|       pointer|
+|rcache_stream2_full_n          |   in|    1|     ap_fifo|         rcache_stream2|       pointer|
+|rcache_stream2_write           |  out|    1|     ap_fifo|         rcache_stream2|       pointer|
+|rcache_stream3_din             |  out|  230|     ap_fifo|         rcache_stream3|       pointer|
+|rcache_stream3_num_data_valid  |   in|    7|     ap_fifo|         rcache_stream3|       pointer|
+|rcache_stream3_fifo_cap        |   in|    7|     ap_fifo|         rcache_stream3|       pointer|
+|rcache_stream3_full_n          |   in|    1|     ap_fifo|         rcache_stream3|       pointer|
+|rcache_stream3_write           |  out|    1|     ap_fifo|         rcache_stream3|       pointer|
+|rcache_stream4_din             |  out|  230|     ap_fifo|         rcache_stream4|       pointer|
+|rcache_stream4_num_data_valid  |   in|    7|     ap_fifo|         rcache_stream4|       pointer|
+|rcache_stream4_fifo_cap        |   in|    7|     ap_fifo|         rcache_stream4|       pointer|
+|rcache_stream4_full_n          |   in|    1|     ap_fifo|         rcache_stream4|       pointer|
+|rcache_stream4_write           |  out|    1|     ap_fifo|         rcache_stream4|       pointer|
++-------------------------------+-----+-----+------------+-----------------------+--------------+
+
