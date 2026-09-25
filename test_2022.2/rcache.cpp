@@ -220,12 +220,14 @@ void rcrequest_manager(rcache_stream* from, rcache_stream* rrequest_result, rres
     SPMM_DATAFLOW_BEGIN();
 
 	rcache_stream rcollec, rrequest, rscheduler;
-#pragma HLS STREAM variable=rcollec depth=16
-#pragma HLS STREAM variable=rscheduler depth=16
+	#pragma HLS STREAM variable=rcollec depth=64
+	#pragma HLS STREAM variable=rrequest depth=64
+	#pragma HLS STREAM variable=rscheduler depth=64
 	rcache_stream r_first, r_req;
-//#pragma HLS STREAM variable=r_req depth=100
+	#pragma HLS STREAM variable=r_first depth=64
+	#pragma HLS STREAM variable=r_req depth=64
 	rcacheline_stream roff;
-#pragma HLS STREAM variable=roff depth=8
+	#pragma HLS STREAM variable=roff depth=64
 
 	SPMM_STAGE(rrequest_splitter(from, &rrequest, &rcollec, &rscheduler));
 	// send the request in parallel

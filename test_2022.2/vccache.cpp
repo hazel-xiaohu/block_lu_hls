@@ -207,10 +207,20 @@ void vcrequest_manager(B_request_stream* from, vcrequest_stream* vrequest_result
 #pragma HLS STREAM variable=v_hit depth=16
 #pragma HLS STREAM variable=c_hit depth=16
 	internal_control_stream vcollector, ccollector, vrequest, crequest, vscheduler, cscheduler;
+	#pragma HLS STREAM variable=vcollector depth=64
+	#pragma HLS STREAM variable=ccollector depth=64
+	#pragma HLS STREAM variable=vrequest depth=64
+	#pragma HLS STREAM variable=crequest depth=64
+	#pragma HLS STREAM variable=vscheduler depth=64
+	#pragma HLS STREAM variable=cscheduler depth=64
 	vcrequest_stream v_first, c_first, v_req, c_req;
+	#pragma HLS STREAM variable=v_first depth=64
+	#pragma HLS STREAM variable=c_first depth=64
+	#pragma HLS STREAM variable=v_req depth=64
+	#pragma HLS STREAM variable=c_req depth=64
 	B_data_stream voff, coff;
-#pragma HLS STREAM variable=voff depth=8
-#pragma HLS STREAM variable=coff depth=8
+	#pragma HLS STREAM variable=voff depth=64
+	#pragma HLS STREAM variable=coff depth=64
 
 	// split the B access to B_val_access and B_cid_access
 	SPMM_STAGE(vcrequest_splitter(from, &vrequest, &crequest, &vcollector, &ccollector, &vscheduler, &cscheduler));
@@ -854,4 +864,3 @@ void ccache(vcrequest_stream* request, id_t base_addr_cid, vcresponse_stream* cr
 	temp_response.end = true;
 	cres->write(temp_response);
 }
-

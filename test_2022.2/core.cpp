@@ -248,17 +248,27 @@ void spmm(id_t* A_rcsr, id_t* A_cid, val_t* A_val, id_t arnum, id_t atnum,
 
 	// reading A rows
 	rinfo_stream _A_reader_rs;
+#pragma HLS STREAM variable=_A_reader_rs depth=128
 
 	// reading A val and cids
 	avc_stream _A_element_as;
+#pragma HLS STREAM variable=_A_element_as depth=256
 	b_keep_mask_stream _B_keep_col1;
 #pragma HLS STREAM variable=_B_keep_col1 depth=1
 	ap_uint<128> _B_rcsr_copy1[SPMM_PACKED_ROW_DEPTH];
 
 	// indicate the PE is idle
 	bool_stream pe1_idle, pe2_idle, pe3_idle, pe4_idle;
+#pragma HLS STREAM variable=pe1_idle depth=128
+#pragma HLS STREAM variable=pe2_idle depth=128
+#pragma HLS STREAM variable=pe3_idle depth=128
+#pragma HLS STREAM variable=pe4_idle depth=128
 
 	bool_stream rm1_idle, rm2_idle, rm3_idle, rm4_idle;
+#pragma HLS STREAM variable=rm1_idle depth=128
+#pragma HLS STREAM variable=rm2_idle depth=128
+#pragma HLS STREAM variable=rm3_idle depth=128
+#pragma HLS STREAM variable=rm4_idle depth=128
 	bool_stream vcm1_idle, vcm2_idle, vcm3_idle, vcm4_idle;
 
 	mi_stream mi1, mi2, mi3, mi4,
@@ -275,9 +285,17 @@ void spmm(id_t* A_rcsr, id_t* A_cid, val_t* A_val, id_t arnum, id_t atnum,
 
 	// the task stream
 	pe_stream pe1_job, pe2_job, pe3_job, pe4_job;
+#pragma HLS STREAM variable=pe1_job depth=128
+#pragma HLS STREAM variable=pe2_job depth=128
+#pragma HLS STREAM variable=pe3_job depth=128
+#pragma HLS STREAM variable=pe4_job depth=128
 
 	// request to rcache manager
 	rcache_stream rcache_stream1, rcache_stream2, rcache_stream3, rcache_stream4;
+#pragma HLS STREAM variable=rcache_stream1 depth=64
+#pragma HLS STREAM variable=rcache_stream2 depth=64
+#pragma HLS STREAM variable=rcache_stream3 depth=64
+#pragma HLS STREAM variable=rcache_stream4 depth=64
 
 	// rcache manager to rcache
 	rcache_stream rrequest1, rrequest2, rrequest3, rrequest4, rrequestf;
@@ -298,6 +316,10 @@ void spmm(id_t* A_rcsr, id_t* A_cid, val_t* A_val, id_t arnum, id_t atnum,
 
 	// rcache manager final results
 	rcache_stream rblock1, rblock2, rblock3, rblock4;
+#pragma HLS STREAM variable=rblock1 depth=64
+#pragma HLS STREAM variable=rblock2 depth=64
+#pragma HLS STREAM variable=rblock3 depth=64
+#pragma HLS STREAM variable=rblock4 depth=64
 
 	// rcache banks
 	rcache_stream rcache_re_bank1, rcache_re_bank2, rcache_re_bank3, rcache_re_bank4;
@@ -324,13 +346,33 @@ void spmm(id_t* A_rcsr, id_t* A_cid, val_t* A_val, id_t arnum, id_t atnum,
 
 	// rcache results of banks and merge to one stream
 	B_request_stream rcache_result_bank1_b, rcache_result_bank2_b, rcache_result_bank3_b, rcache_result_bank4_b,
-	 	 	 	 	 rcache_result_bank1_d, rcache_result_bank2_d, rcache_result_bank3_d, rcache_result_bank4_d;
+	 	 	 	 	 	 rcache_result_bank1_d, rcache_result_bank2_d, rcache_result_bank3_d, rcache_result_bank4_d;
+#pragma HLS STREAM variable=rcache_result_bank1_b depth=64
+#pragma HLS STREAM variable=rcache_result_bank2_b depth=64
+#pragma HLS STREAM variable=rcache_result_bank3_b depth=64
+#pragma HLS STREAM variable=rcache_result_bank4_b depth=64
+#pragma HLS STREAM variable=rcache_result_bank1_d depth=64
+#pragma HLS STREAM variable=rcache_result_bank2_d depth=64
+#pragma HLS STREAM variable=rcache_result_bank3_d depth=64
+#pragma HLS STREAM variable=rcache_result_bank4_d depth=64
 
 	// B row length to control the merger
 	id_stream B_rlen_pe1, B_rlen_pe2, B_rlen_pe3, B_rlen_pe4;
+#pragma HLS STREAM variable=B_rlen_pe1 depth=64
+#pragma HLS STREAM variable=B_rlen_pe2 depth=64
+#pragma HLS STREAM variable=B_rlen_pe3 depth=64
+#pragma HLS STREAM variable=B_rlen_pe4 depth=64
 
 	// request to vccache and its banks
 	vcrequest_stream vrequest1, vrequest2, vrequest3, vrequest4, crequest1, crequest2, crequest3, crequest4, requests_f;
+#pragma HLS STREAM variable=vrequest1 depth=64
+#pragma HLS STREAM variable=vrequest2 depth=64
+#pragma HLS STREAM variable=vrequest3 depth=64
+#pragma HLS STREAM variable=vrequest4 depth=64
+#pragma HLS STREAM variable=crequest1 depth=64
+#pragma HLS STREAM variable=crequest2 depth=64
+#pragma HLS STREAM variable=crequest3 depth=64
+#pragma HLS STREAM variable=crequest4 depth=64
 #pragma HLS STREAM variable=requests_f depth=8
 
 	vcrequest_stream vccache_re_bank1, vccache_re_bank2, vccache_re_bank3, vccache_re_bank4;
@@ -416,6 +458,22 @@ void spmm(id_t* A_rcsr, id_t* A_cid, val_t* A_val, id_t arnum, id_t atnum,
 	// vresponse and vresult to manager
 	vcresponse_stream vresponse1, vresponse2, vresponse3, vresponse4, cresponse1, cresponse2, cresponse3, cresponse4;
 	cacheline_stream vresult1, vresult2, vresult3, vresult4, cresult1, cresult2, cresult3, cresult4;
+#pragma HLS STREAM variable=vresponse1 depth=64
+#pragma HLS STREAM variable=vresponse2 depth=64
+#pragma HLS STREAM variable=vresponse3 depth=64
+#pragma HLS STREAM variable=vresponse4 depth=64
+#pragma HLS STREAM variable=cresponse1 depth=64
+#pragma HLS STREAM variable=cresponse2 depth=64
+#pragma HLS STREAM variable=cresponse3 depth=64
+#pragma HLS STREAM variable=cresponse4 depth=64
+#pragma HLS STREAM variable=vresult1 depth=32
+#pragma HLS STREAM variable=vresult2 depth=32
+#pragma HLS STREAM variable=vresult3 depth=32
+#pragma HLS STREAM variable=vresult4 depth=32
+#pragma HLS STREAM variable=cresult1 depth=32
+#pragma HLS STREAM variable=cresult2 depth=32
+#pragma HLS STREAM variable=cresult3 depth=32
+#pragma HLS STREAM variable=cresult4 depth=32
 
 	// data block to PEs
 	block_stream vblock1, vblock2, vblock3, vblock4, cblock1, cblock2, cblock3, cblock4;
@@ -441,6 +499,14 @@ void spmm(id_t* A_rcsr, id_t* A_cid, val_t* A_val, id_t arnum, id_t atnum,
 	// merger control messages
 	mcontrol_stream mc_pe1, mc_pe2, mc_pe3, mc_pe4;
 	bool_stream efinish1, efinish2, efinish3, efinish4;
+#pragma HLS STREAM variable=mc_pe1 depth=64
+#pragma HLS STREAM variable=mc_pe2 depth=64
+#pragma HLS STREAM variable=mc_pe3 depth=64
+#pragma HLS STREAM variable=mc_pe4 depth=64
+#pragma HLS STREAM variable=efinish1 depth=64
+#pragma HLS STREAM variable=efinish2 depth=64
+#pragma HLS STREAM variable=efinish3 depth=64
+#pragma HLS STREAM variable=efinish4 depth=64
 
 	merge_stream m_pe1, m_pe2, m_pe3, m_pe4;
 #pragma HLS STREAM variable=m_pe1 depth=1000
@@ -465,8 +531,8 @@ void spmm(id_t* A_rcsr, id_t* A_cid, val_t* A_val, id_t arnum, id_t atnum,
 #pragma HLS STREAM variable=final_merger_1 depth=1000
 #pragma HLS STREAM variable=final_merger_2 depth=1000
 #pragma HLS STREAM variable=final_merger_3 depth=1000
-#pragma HLS STREAM variable=final_len_1 depth=16
-#pragma HLS STREAM variable=final_len_2 depth=16
+#pragma HLS STREAM variable=final_len_1 depth=SPMM_ROW_DEPTH
+#pragma HLS STREAM variable=final_len_2 depth=SPMM_ROW_DEPTH
 
 	// read A's row infos: rid, rlen, ridx
 	SPMM_STAGE(A_row_reader(A_rcsr, arnum, &_A_reader_rs));

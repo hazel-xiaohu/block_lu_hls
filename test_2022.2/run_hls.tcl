@@ -41,7 +41,8 @@ if {$hls_exec >= 1} {
     csynth_design
 }
 if {$hls_exec >= 2} {
-    cosim_design -trace_level none -wave_debug false
+    # Vitis HLS 2022.2 defines -wave_debug as a flag without a value.
+    cosim_design -trace_level none
 }
 
 exit
