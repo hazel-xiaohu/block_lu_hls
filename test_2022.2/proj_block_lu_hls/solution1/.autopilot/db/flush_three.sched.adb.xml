@@ -293,9 +293,9 @@ entry:11 %z_cid = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="0" op_0_bw="0" op_1_bw="66" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<Node id="20" bw="0" op_0_bw="0" op_1_bw="80" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:12 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %ping1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+entry:12 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i80 %ping1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -308,9 +308,9 @@ entry:12 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %p
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="0" op_0_bw="0" op_1_bw="66" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<Node id="21" bw="0" op_0_bw="0" op_1_bw="80" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:13 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %pong, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+entry:13 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i80 %pong, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -323,9 +323,9 @@ entry:13 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %p
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="0" op_0_bw="0" op_1_bw="66" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<Node id="22" bw="0" op_0_bw="0" op_1_bw="80" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:14 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %ping, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+entry:14 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i80 %ping, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -340,7 +340,7 @@ entry:14 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %p
 
 <Node id="23" bw="0" op_0_bw="0" op_1_bw="66" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:15 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe4, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+entry:15 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -768,7 +768,7 @@ while.body:3 %icmp_ln171_2 = icmp_ne  i32 %nc_assign_load, i32 0
 
 <Node id="53" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-while.body:4 %specpipeline_ln172 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_86
+while.body:4 %specpipeline_ln172 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_141
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln172"/></StgValue>
@@ -784,7 +784,7 @@ while.body:4 %specpipeline_ln172 = specpipeline void @_ssdm_op_SpecPipeline, i32
 
 <Node id="54" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-while.body:5 %specloopname_ln173 = specloopname void @_ssdm_op_SpecLoopName, void @empty_94
+while.body:5 %specloopname_ln173 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln173"/></StgValue>
@@ -863,9 +863,9 @@ while.body:9 %br_ln173 = br i1 %or_ln173, void %if.then, void %while.body.if.end
 </and_exp></or_exp>
 </condition>
 
-<Node id="60" bw="66" op_0_bw="66" op_1_bw="66">
+<Node id="60" bw="80" op_0_bw="80" op_1_bw="80">
 <![CDATA[
-if.then:0 %ping_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %ping
+if.then:0 %ping_read = read i80 @_ssdm_op_Read.ap_fifo.volatile.i80P0A, i80 %ping
 
 ]]></Node>
 <StgValue><ssdm name="ping_read"/></StgValue>
@@ -880,9 +880,9 @@ if.then:0 %ping_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %pin
 </and_exp></or_exp>
 </condition>
 
-<Node id="61" bw="32" op_0_bw="66">
+<Node id="61" bw="32" op_0_bw="80">
 <![CDATA[
-if.then:1 %trunc_ln173 = trunc i66 %ping_read
+if.then:1 %trunc_ln173 = trunc i80 %ping_read
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln173"/></StgValue>
@@ -897,12 +897,12 @@ if.then:1 %trunc_ln173 = trunc i66 %ping_read
 </and_exp></or_exp>
 </condition>
 
-<Node id="62" bw="32" op_0_bw="32" op_1_bw="66" op_2_bw="32" op_3_bw="32">
+<Node id="62" bw="32" op_0_bw="32">
 <![CDATA[
-if.then:2 %x_cid_1 = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %ping_read, i32 32, i32 63
+if.then:2 %x_val_1 = bitcast i32 %trunc_ln173
 
 ]]></Node>
-<StgValue><ssdm name="x_cid_1"/></StgValue>
+<StgValue><ssdm name="x_val_1"/></StgValue>
 </operation>
 
 <operation id="71" st_id="2" stage="1" lat="1">
@@ -914,12 +914,12 @@ if.then:2 %x_cid_1 = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %p
 </and_exp></or_exp>
 </condition>
 
-<Node id="63" bw="32" op_0_bw="32">
+<Node id="63" bw="32" op_0_bw="32" op_1_bw="80" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-if.then:3 %x_val_1 = bitcast i32 %trunc_ln173
+if.then:3 %x_cid_1 = partselect i32 @_ssdm_op_PartSelect.i32.i80.i32.i32, i80 %ping_read, i32 32, i32 63
 
 ]]></Node>
-<StgValue><ssdm name="x_val_1"/></StgValue>
+<StgValue><ssdm name="x_cid_1"/></StgValue>
 </operation>
 
 <operation id="72" st_id="2" stage="1" lat="1">
@@ -1129,9 +1129,9 @@ if.end:5 %br_ln174 = br i1 %or_ln174, void %if.then6, void %if.end.if.end8_crit_
 </and_exp></or_exp>
 </condition>
 
-<Node id="79" bw="66" op_0_bw="66" op_1_bw="66">
+<Node id="79" bw="80" op_0_bw="80" op_1_bw="80">
 <![CDATA[
-if.then6:0 %ping1_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %ping1
+if.then6:0 %ping1_read = read i80 @_ssdm_op_Read.ap_fifo.volatile.i80P0A, i80 %ping1
 
 ]]></Node>
 <StgValue><ssdm name="ping1_read"/></StgValue>
@@ -1146,9 +1146,9 @@ if.then6:0 %ping1_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %p
 </and_exp></or_exp>
 </condition>
 
-<Node id="80" bw="32" op_0_bw="66">
+<Node id="80" bw="32" op_0_bw="80">
 <![CDATA[
-if.then6:1 %trunc_ln174 = trunc i66 %ping1_read
+if.then6:1 %trunc_ln174 = trunc i80 %ping1_read
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln174"/></StgValue>
@@ -1163,12 +1163,12 @@ if.then6:1 %trunc_ln174 = trunc i66 %ping1_read
 </and_exp></or_exp>
 </condition>
 
-<Node id="81" bw="32" op_0_bw="32" op_1_bw="66" op_2_bw="32" op_3_bw="32">
+<Node id="81" bw="32" op_0_bw="32">
 <![CDATA[
-if.then6:2 %y_cid_1 = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %ping1_read, i32 32, i32 63
+if.then6:2 %y_val_1 = bitcast i32 %trunc_ln174
 
 ]]></Node>
-<StgValue><ssdm name="y_cid_1"/></StgValue>
+<StgValue><ssdm name="y_val_1"/></StgValue>
 </operation>
 
 <operation id="87" st_id="2" stage="1" lat="1">
@@ -1180,12 +1180,12 @@ if.then6:2 %y_cid_1 = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %
 </and_exp></or_exp>
 </condition>
 
-<Node id="82" bw="32" op_0_bw="32">
+<Node id="82" bw="32" op_0_bw="32" op_1_bw="80" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-if.then6:3 %y_val_1 = bitcast i32 %trunc_ln174
+if.then6:3 %y_cid_1 = partselect i32 @_ssdm_op_PartSelect.i32.i80.i32.i32, i80 %ping1_read, i32 32, i32 63
 
 ]]></Node>
-<StgValue><ssdm name="y_val_1"/></StgValue>
+<StgValue><ssdm name="y_cid_1"/></StgValue>
 </operation>
 
 <operation id="88" st_id="2" stage="1" lat="1">
@@ -1395,9 +1395,9 @@ if.end8:5 %br_ln175 = br i1 %or_ln175, void %if.then11, void %if.end8.if.end13_i
 </and_exp></or_exp>
 </condition>
 
-<Node id="98" bw="66" op_0_bw="66" op_1_bw="66">
+<Node id="98" bw="80" op_0_bw="80" op_1_bw="80">
 <![CDATA[
-if.then11:0 %pong_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %pong
+if.then11:0 %pong_read = read i80 @_ssdm_op_Read.ap_fifo.volatile.i80P0A, i80 %pong
 
 ]]></Node>
 <StgValue><ssdm name="pong_read"/></StgValue>
@@ -1412,9 +1412,9 @@ if.then11:0 %pong_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %p
 </and_exp></or_exp>
 </condition>
 
-<Node id="99" bw="32" op_0_bw="66">
+<Node id="99" bw="32" op_0_bw="80">
 <![CDATA[
-if.then11:1 %trunc_ln175 = trunc i66 %pong_read
+if.then11:1 %trunc_ln175 = trunc i80 %pong_read
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln175"/></StgValue>
@@ -1429,12 +1429,12 @@ if.then11:1 %trunc_ln175 = trunc i66 %pong_read
 </and_exp></or_exp>
 </condition>
 
-<Node id="100" bw="32" op_0_bw="32" op_1_bw="66" op_2_bw="32" op_3_bw="32">
+<Node id="100" bw="32" op_0_bw="32">
 <![CDATA[
-if.then11:2 %z_cid_1 = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %pong_read, i32 32, i32 63
+if.then11:2 %z_val_1 = bitcast i32 %trunc_ln175
 
 ]]></Node>
-<StgValue><ssdm name="z_cid_1"/></StgValue>
+<StgValue><ssdm name="z_val_1"/></StgValue>
 </operation>
 
 <operation id="103" st_id="2" stage="1" lat="1">
@@ -1446,12 +1446,12 @@ if.then11:2 %z_cid_1 = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 
 </and_exp></or_exp>
 </condition>
 
-<Node id="101" bw="32" op_0_bw="32">
+<Node id="101" bw="32" op_0_bw="32" op_1_bw="80" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-if.then11:3 %z_val_1 = bitcast i32 %trunc_ln175
+if.then11:3 %z_cid_1 = partselect i32 @_ssdm_op_PartSelect.i32.i80.i32.i32, i80 %pong_read, i32 32, i32 63
 
 ]]></Node>
-<StgValue><ssdm name="z_val_1"/></StgValue>
+<StgValue><ssdm name="z_cid_1"/></StgValue>
 </operation>
 
 <operation id="104" st_id="2" stage="1" lat="1">
@@ -2645,7 +2645,7 @@ if.end13_ifconv:43 %zext_ln184 = zext i64 %tmp
 
 <Node id="154" bw="0" op_0_bw="0" op_1_bw="66" op_2_bw="66">
 <![CDATA[
-if.end13_ifconv:44 %write_ln184 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %result_pe4, i66 %zext_ln184
+if.end13_ifconv:44 %write_ln184 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %result_pe1, i66 %zext_ln184
 
 ]]></Node>
 <StgValue><ssdm name="write_ln184"/></StgValue>

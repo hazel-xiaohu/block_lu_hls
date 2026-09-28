@@ -1,0 +1,7 @@
+Running: xsim.dir/large_getrf/xsimk -simmode gui -wdb large_getrf.wdb -simrunnum 0 -socket 58255
+Design successfully loaded
+Design Loading Memory Usage: 62832 KB (Peak: 62832 KB)
+Design Loading CPU Usage: 80 ms
+Simulation completed
+Simulation Memory Usage: 513004 KB (Peak: 577540 KB)
+Simulation CPU Usage: 11670 ms

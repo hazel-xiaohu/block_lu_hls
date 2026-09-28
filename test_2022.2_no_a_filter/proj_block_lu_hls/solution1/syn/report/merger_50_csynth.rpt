@@ -1,0 +1,161 @@
+
+
+================================================================
+== Vitis HLS Report for 'merger_50'
+================================================================
+* Date:           Sat Sep 26 11:02:16 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  7.357 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+---------------+---------+---------+----------+----------+-----+-----+---------+
+        |                         |               |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |         Instance        |     Module    |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------+---------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_merge_two_sub_fu_20  |merge_two_sub  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-------------------------+---------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|       2|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |       20|     6|    4299|    4485|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      59|    -|
+|Register         |        -|     -|       4|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       20|     6|    4303|    4546|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        1|    ~0|      ~0|       1|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+---------------+---------+----+------+------+-----+
+    |         Instance        |     Module    | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------+---------------+---------+----+------+------+-----+
+    |grp_merge_two_sub_fu_20  |merge_two_sub  |       20|   6|  4299|  4485|    0|
+    +-------------------------+---------------+---------+----+------+------+-----+
+    |Total                    |               |       20|   6|  4299|  4485|    0|
+    +-------------------------+---------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------+----+-----------+-----+-----------+
+    |       Name       | LUT| Input Size| Bits| Total Bits|
+    +------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm         |  14|          3|    1|          3|
+    |ap_done           |   9|          2|    1|          2|
+    |efinish222_write  |   9|          2|    1|          2|
+    |m_pe2_read        |   9|          2|    1|          2|
+    |mc_pe2_read       |   9|          2|    1|          2|
+    |result_pe2_write  |   9|          2|    1|          2|
+    +------------------+----+-----------+-----+-----------+
+    |Total             |  59|         13|    6|         13|
+    +------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+---+----+-----+-----------+
+    |                 Name                 | FF| LUT| Bits| Const Bits|
+    +--------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                             |  2|   0|    2|          0|
+    |ap_done_reg                           |  1|   0|    1|          0|
+    |grp_merge_two_sub_fu_20_ap_start_reg  |  1|   0|    1|          0|
+    +--------------------------------------+---+----+-----+-----------+
+    |Total                                 |  4|   0|    4|          0|
+    +--------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+--------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|     merger.50|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|     merger.50|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|     merger.50|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|     merger.50|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|     merger.50|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|     merger.50|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|     merger.50|  return value|
+|mc_pe2_dout                |   in|   66|     ap_fifo|        mc_pe2|       pointer|
+|mc_pe2_num_data_valid      |   in|    7|     ap_fifo|        mc_pe2|       pointer|
+|mc_pe2_fifo_cap            |   in|    7|     ap_fifo|        mc_pe2|       pointer|
+|mc_pe2_empty_n             |   in|    1|     ap_fifo|        mc_pe2|       pointer|
+|mc_pe2_read                |  out|    1|     ap_fifo|        mc_pe2|       pointer|
+|m_pe2_dout                 |   in|   66|     ap_fifo|         m_pe2|       pointer|
+|m_pe2_num_data_valid       |   in|   11|     ap_fifo|         m_pe2|       pointer|
+|m_pe2_fifo_cap             |   in|   11|     ap_fifo|         m_pe2|       pointer|
+|m_pe2_empty_n              |   in|    1|     ap_fifo|         m_pe2|       pointer|
+|m_pe2_read                 |  out|    1|     ap_fifo|         m_pe2|       pointer|
+|result_pe2_din             |  out|   66|     ap_fifo|    result_pe2|       pointer|
+|result_pe2_num_data_valid  |   in|   11|     ap_fifo|    result_pe2|       pointer|
+|result_pe2_fifo_cap        |   in|   11|     ap_fifo|    result_pe2|       pointer|
+|result_pe2_full_n          |   in|    1|     ap_fifo|    result_pe2|       pointer|
+|result_pe2_write           |  out|    1|     ap_fifo|    result_pe2|       pointer|
+|efinish222_din             |  out|    1|     ap_fifo|    efinish222|       pointer|
+|efinish222_num_data_valid  |   in|    7|     ap_fifo|    efinish222|       pointer|
+|efinish222_fifo_cap        |   in|    7|     ap_fifo|    efinish222|       pointer|
+|efinish222_full_n          |   in|    1|     ap_fifo|    efinish222|       pointer|
+|efinish222_write           |  out|    1|     ap_fifo|    efinish222|       pointer|
++---------------------------+-----+-----+------------+--------------+--------------+
+

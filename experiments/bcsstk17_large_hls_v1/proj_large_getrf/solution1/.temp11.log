@@ -1,0 +1,3 @@
+CAL_GETRF n=32 muladds=10416 divisions=496 status=0
+CAL_GETRF n=4 muladds=14 divisions=6 status=0
+CAL_GETRF n=8 muladds=140 divisions=28 status=0

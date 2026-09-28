@@ -1,15 +1,5 @@
 # This script segment is generated automatically by AutoPilot
 
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler spmm_fifo_w36_d8_S_x0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {mresult_U}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler spmm_start_for_merge_two_sub_103_U0 BINDTYPE {storage} TYPE {fifo} IMPL {srl} ALLOW_PRAGMA 1 INSTNAME {start_for_merge_two_sub_103_U0_U}
-}
-
-
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -20,7 +10,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2036 \
+    id 2008 \
     name mc_pe3 \
     type fifo \
     dir I \
@@ -28,14 +18,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_mc_pe3 \
     op interface \
-    ports { mc_pe3_dout { I 66 vector } mc_pe3_empty_n { I 1 bit } mc_pe3_read { O 1 bit } } \
+    ports { mc_pe3_dout { I 66 vector } mc_pe3_num_data_valid { I 7 vector } mc_pe3_fifo_cap { I 7 vector } mc_pe3_empty_n { I 1 bit } mc_pe3_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2037 \
+    id 2009 \
     name m_pe3 \
     type fifo \
     dir I \
@@ -43,14 +33,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_m_pe3 \
     op interface \
-    ports { m_pe3_dout { I 66 vector } m_pe3_empty_n { I 1 bit } m_pe3_read { O 1 bit } } \
+    ports { m_pe3_dout { I 66 vector } m_pe3_num_data_valid { I 11 vector } m_pe3_fifo_cap { I 11 vector } m_pe3_empty_n { I 1 bit } m_pe3_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2038 \
+    id 2010 \
     name result_pe3 \
     type fifo \
     dir O \
@@ -58,14 +48,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_result_pe3 \
     op interface \
-    ports { result_pe3_din { O 66 vector } result_pe3_full_n { I 1 bit } result_pe3_write { O 1 bit } } \
+    ports { result_pe3_din { O 66 vector } result_pe3_num_data_valid { I 11 vector } result_pe3_fifo_cap { I 11 vector } result_pe3_full_n { I 1 bit } result_pe3_write { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 2039 \
+    id 2011 \
     name efinish324 \
     type fifo \
     dir O \
@@ -73,7 +63,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_efinish324 \
     op interface \
-    ports { efinish324_din { O 1 vector } efinish324_full_n { I 1 bit } efinish324_write { O 1 bit } } \
+    ports { efinish324_din { O 1 vector } efinish324_num_data_valid { I 7 vector } efinish324_fifo_cap { I 7 vector } efinish324_full_n { I 1 bit } efinish324_write { O 1 bit } } \
 } "
 }
 

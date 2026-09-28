@@ -1,0 +1,194 @@
+
+
+================================================================
+== Vitis HLS Report for 'vcrequest_splitter'
+================================================================
+* Date:           Sat Sep 26 11:01:04 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  1.844 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                        |                                             |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                        Instance                        |                    Module                   |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_vcrequest_splitter_Pipeline_VITIS_LOOP_12_1_fu_112  |vcrequest_splitter_Pipeline_VITIS_LOOP_12_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +--------------------------------------------------------+---------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     152|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|     138|      91|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     230|    -|
+|Register         |        -|     -|       5|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     143|     473|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+----+-----+
+    |                        Instance                        |                    Module                   | BRAM_18K| DSP|  FF | LUT| URAM|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+----+-----+
+    |grp_vcrequest_splitter_Pipeline_VITIS_LOOP_12_1_fu_112  |vcrequest_splitter_Pipeline_VITIS_LOOP_12_1  |        0|   0|  138|  91|    0|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+----+-----+
+    |Total                                                   |                                             |        0|   0|  138|  91|    0|
+    +--------------------------------------------------------+---------------------------------------------+---------+----+-----+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |ap_block_state1      |        or|   0|  0|   2|           1|           1|
+    |ap_block_state3      |        or|   0|  0|   2|           1|           1|
+    |or_ln35_5_fu_192_p2  |        or|   0|  0|  68|          68|           1|
+    |or_ln35_fu_156_p2    |        or|   0|  0|  80|          80|           1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0| 152|         150|           4|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                   |  20|          4|    1|          4|
+    |ap_done                     |   9|          2|    1|          2|
+    |ccollector_blk_n            |   9|          2|    1|          2|
+    |ccollector_din              |   9|          2|   68|        136|
+    |ccollector_write            |  14|          3|    1|          3|
+    |crequest_blk_n              |   9|          2|    1|          2|
+    |crequest_din                |   9|          2|   68|        136|
+    |crequest_write              |  14|          3|    1|          3|
+    |cscheduler_blk_n            |   9|          2|    1|          2|
+    |cscheduler_din              |   9|          2|   68|        136|
+    |cscheduler_write            |  14|          3|    1|          3|
+    |rcache_result_bank1_b_read  |   9|          2|    1|          2|
+    |vcollector_blk_n            |   9|          2|    1|          2|
+    |vcollector_din              |   9|          2|   68|        136|
+    |vcollector_write            |  14|          3|    1|          3|
+    |vrequest_blk_n              |   9|          2|    1|          2|
+    |vrequest_din                |   9|          2|   68|        136|
+    |vrequest_write              |  14|          3|    1|          3|
+    |vscheduler_blk_n            |   9|          2|    1|          2|
+    |vscheduler_din              |   9|          2|   68|        136|
+    |vscheduler_write            |  14|          3|    1|          3|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       | 230|         50|  423|        854|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------+---+----+-----+-----------+
+    |                                 Name                                | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                            |  3|   0|    3|          0|
+    |ap_done_reg                                                          |  1|   0|    1|          0|
+    |grp_vcrequest_splitter_Pipeline_VITIS_LOOP_12_1_fu_112_ap_start_reg  |  1|   0|    1|          0|
+    +---------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                                |  5|   0|    5|          0|
+    +---------------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------+-----+-----+------------+-----------------------+--------------+
+|               RTL Ports              | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++--------------------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                                |   in|    1|  ap_ctrl_hs|     vcrequest_splitter|  return value|
+|ap_rst                                |   in|    1|  ap_ctrl_hs|     vcrequest_splitter|  return value|
+|ap_start                              |   in|    1|  ap_ctrl_hs|     vcrequest_splitter|  return value|
+|ap_done                               |  out|    1|  ap_ctrl_hs|     vcrequest_splitter|  return value|
+|ap_continue                           |   in|    1|  ap_ctrl_hs|     vcrequest_splitter|  return value|
+|ap_idle                               |  out|    1|  ap_ctrl_hs|     vcrequest_splitter|  return value|
+|ap_ready                              |  out|    1|  ap_ctrl_hs|     vcrequest_splitter|  return value|
+|rcache_result_bank1_b_dout            |   in|   68|     ap_fifo|  rcache_result_bank1_b|       pointer|
+|rcache_result_bank1_b_num_data_valid  |   in|    7|     ap_fifo|  rcache_result_bank1_b|       pointer|
+|rcache_result_bank1_b_fifo_cap        |   in|    7|     ap_fifo|  rcache_result_bank1_b|       pointer|
+|rcache_result_bank1_b_empty_n         |   in|    1|     ap_fifo|  rcache_result_bank1_b|       pointer|
+|rcache_result_bank1_b_read            |  out|    1|     ap_fifo|  rcache_result_bank1_b|       pointer|
+|vrequest_din                          |  out|   68|     ap_fifo|               vrequest|       pointer|
+|vrequest_num_data_valid               |   in|    7|     ap_fifo|               vrequest|       pointer|
+|vrequest_fifo_cap                     |   in|    7|     ap_fifo|               vrequest|       pointer|
+|vrequest_full_n                       |   in|    1|     ap_fifo|               vrequest|       pointer|
+|vrequest_write                        |  out|    1|     ap_fifo|               vrequest|       pointer|
+|crequest_din                          |  out|   68|     ap_fifo|               crequest|       pointer|
+|crequest_num_data_valid               |   in|    7|     ap_fifo|               crequest|       pointer|
+|crequest_fifo_cap                     |   in|    7|     ap_fifo|               crequest|       pointer|
+|crequest_full_n                       |   in|    1|     ap_fifo|               crequest|       pointer|
+|crequest_write                        |  out|    1|     ap_fifo|               crequest|       pointer|
+|vcollector_din                        |  out|   68|     ap_fifo|             vcollector|       pointer|
+|vcollector_num_data_valid             |   in|    7|     ap_fifo|             vcollector|       pointer|
+|vcollector_fifo_cap                   |   in|    7|     ap_fifo|             vcollector|       pointer|
+|vcollector_full_n                     |   in|    1|     ap_fifo|             vcollector|       pointer|
+|vcollector_write                      |  out|    1|     ap_fifo|             vcollector|       pointer|
+|ccollector_din                        |  out|   68|     ap_fifo|             ccollector|       pointer|
+|ccollector_num_data_valid             |   in|    7|     ap_fifo|             ccollector|       pointer|
+|ccollector_fifo_cap                   |   in|    7|     ap_fifo|             ccollector|       pointer|
+|ccollector_full_n                     |   in|    1|     ap_fifo|             ccollector|       pointer|
+|ccollector_write                      |  out|    1|     ap_fifo|             ccollector|       pointer|
+|vscheduler_din                        |  out|   68|     ap_fifo|             vscheduler|       pointer|
+|vscheduler_num_data_valid             |   in|    7|     ap_fifo|             vscheduler|       pointer|
+|vscheduler_fifo_cap                   |   in|    7|     ap_fifo|             vscheduler|       pointer|
+|vscheduler_full_n                     |   in|    1|     ap_fifo|             vscheduler|       pointer|
+|vscheduler_write                      |  out|    1|     ap_fifo|             vscheduler|       pointer|
+|cscheduler_din                        |  out|   68|     ap_fifo|             cscheduler|       pointer|
+|cscheduler_num_data_valid             |   in|    7|     ap_fifo|             cscheduler|       pointer|
+|cscheduler_fifo_cap                   |   in|    7|     ap_fifo|             cscheduler|       pointer|
+|cscheduler_full_n                     |   in|    1|     ap_fifo|             cscheduler|       pointer|
+|cscheduler_write                      |  out|    1|     ap_fifo|             cscheduler|       pointer|
++--------------------------------------+-----+-----+------------+-----------------------+--------------+
+

@@ -1,7 +1,7 @@
 WARNING: [COSIM-384] This design has internal non-blocking FIFO/Stream accesses, which may result in mismatches or simulation hanging.
 INFO: [COSIM-47] Using XSIM for RTL simulation.
 INFO: [COSIM-14] Instrumenting C test bench ...
-   Build using "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Build using "/usr/bin/g++"
    Compiling apatb_spmm.cpp
    Compiling core.cpp_pre.cpp.tb.cpp
    Compiling pe.cpp_pre.cpp.tb.cpp

@@ -262,7 +262,7 @@ newFuncRoot:14 %zext_ln92_cast = zext i30 %zext_ln92_read
 
 <Node id="34" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:15 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %bv1, void @empty_106, i32 0, i32 0, void @empty_86, i32 0, i32 896, void @empty_128, void @empty_133, void @empty_86, i32 16, i32 16, i32 16, i32 16, void @empty_86, void @empty_86, i32 4294967295, i32 0
+newFuncRoot:15 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %bv1, void @empty_153, i32 0, i32 0, void @empty_141, i32 0, i32 896, void @empty_167, void @empty_139, void @empty_141, i32 16, i32 16, i32 16, i32 16, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -277,7 +277,7 @@ newFuncRoot:15 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, 
 
 <Node id="35" bw="0" op_0_bw="0" op_1_bw="209" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:16 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %v_req, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+newFuncRoot:16 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %v_req, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -292,7 +292,7 @@ newFuncRoot:16 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, 
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="128" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:17 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %voff3, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+newFuncRoot:17 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %voff3, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -570,7 +570,7 @@ for.body28:1 %bv1_addr = getelementptr i128 %bv1, i64 %sext_ln112_cast
 
 <Node id="45" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body28.split:0 %specpipeline_ln113 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_86
+for.body28.split:0 %specpipeline_ln113 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_141
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln113"/></StgValue>
@@ -586,7 +586,7 @@ for.body28.split:0 %specpipeline_ln113 = specpipeline void @_ssdm_op_SpecPipelin
 
 <Node id="46" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body28.split:1 %specloopname_ln78 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5
+for.body28.split:1 %specloopname_ln78 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln78"/></StgValue>

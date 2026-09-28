@@ -1,0 +1,127 @@
+{
+  "matrix": "/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/input/bcsstk17.mtx",
+  "n": 10974,
+  "split": [
+    5487,
+    5487
+  ],
+  "load_seconds": 0.04434446804225445,
+  "arrays": {
+    "whole_A": {
+      "format": "csr",
+      "rows": 10974,
+      "cols": 10974,
+      "nnz": 428650
+    },
+    "whole_L": {
+      "format": "csr",
+      "rows": 10974,
+      "cols": 10974,
+      "nnz": 1596240
+    },
+    "whole_U": {
+      "format": "csr",
+      "rows": 10974,
+      "cols": 10974,
+      "nnz": 1596240
+    },
+    "A11": {
+      "format": "csr",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 191595
+    },
+    "L11": {
+      "format": "csr",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 486353
+    },
+    "U11": {
+      "format": "csr",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 486353
+    },
+    "L11_csc": {
+      "format": "csc",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 486353
+    },
+    "U11_csc": {
+      "format": "csc",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 486353
+    },
+    "A12": {
+      "format": "csc",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 3257
+    },
+    "U12": {
+      "format": "csc",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 31698
+    },
+    "U12_csr": {
+      "format": "csr",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 31698
+    },
+    "A21": {
+      "format": "csr",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 3257
+    },
+    "L21": {
+      "format": "csr",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 31698
+    },
+    "A22": {
+      "format": "csr",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 230541
+    },
+    "Schur": {
+      "format": "csr",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 285015
+    },
+    "L22": {
+      "format": "csr",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 1078189
+    },
+    "U22": {
+      "format": "csr",
+      "rows": 5487,
+      "cols": 5487,
+      "nnz": 1078189
+    }
+  },
+  "reference_seconds": {
+    "whole_getrf": 0.17174084694124758,
+    "getrf_1": 0.04230451490730047,
+    "gessm": 0.490175070008263,
+    "tstrf": 2.5635558229405433,
+    "ssssm": 0.01593132095877081,
+    "getrf_2": 0.12431448907591403,
+    "blocked_total": 3.2362812178907916
+  },
+  "active_rhs": {
+    "gessm_columns": 243,
+    "tstrf_rows": 243
+  },
+  "reference": "SciPy SuperLU, NATURAL ordering, pivot threshold 0, equilibration disabled"
+}

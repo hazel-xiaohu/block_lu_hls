@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Sep 26 11:11:27 2026
+# Process ID: 89360
+# Current directory: /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/spmm/xsim_script.tcl}
+# Log file: /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/sim/verilog/xsim.log
+# Journal file: /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/sim/verilog/xsim.jou
+# Running On: team-fceo5ww5pmwf-main, OS: Linux, CPU Frequency: 1500.000 MHz, CPU Physical cores: 2, Host memory: 100663 MB
+#-----------------------------------------------------------
+source xsim.dir/spmm/xsim_script.tcl
+# xsim {spmm} -autoloadwcfg -tclbatch {spmm.tcl}
+Time resolution is 1 ps
+source spmm.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "113000"
+// RTL Simulation : 1 / 1 [n/a] @ "1088358000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 1088387500 ps : File "/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/sim/verilog/spmm.autotb.v" Line 4544
+run: Time (s): cpu = 00:00:00.79 ; elapsed = 00:53:29 . Memory (MB): peak = 1364.852 ; gain = 0.000 ; free physical = 84309 ; free virtual = 89014
+## quit
+INFO: xsimkernel Simulation Memory Usage: 662692 KB (Peak: 664744 KB), Simulation CPU Usage: 3208560 ms
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 12:05:00 2026...

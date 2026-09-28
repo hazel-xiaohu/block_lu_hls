@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'sub_final_merger'
 ================================================================
-* Date:           Fri Sep 25 15:52:05 2026
+* Date:           Sat Sep 26 09:32:06 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -38,7 +38,7 @@
         |                                                       |                                            |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
         |                        Instance                       |                   Module                   |   min   |   max   |    min   |    max   | min | max |   Type  |
         +-------------------------------------------------------+--------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
-        |grp_sub_final_merger_Pipeline_VITIS_LOOP_846_2_fu_115  |sub_final_merger_Pipeline_VITIS_LOOP_846_2  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |grp_sub_final_merger_Pipeline_VITIS_LOOP_842_2_fu_115  |sub_final_merger_Pipeline_VITIS_LOOP_842_2  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
         +-------------------------------------------------------+--------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
@@ -46,7 +46,7 @@
         |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_835_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        |- VITIS_LOOP_831_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -78,7 +78,7 @@
     +-------------------------------------------------------+--------------------------------------------+---------+----+------+------+-----+
     |                        Instance                       |                   Module                   | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +-------------------------------------------------------+--------------------------------------------+---------+----+------+------+-----+
-    |grp_sub_final_merger_Pipeline_VITIS_LOOP_846_2_fu_115  |sub_final_merger_Pipeline_VITIS_LOOP_846_2  |        0|   2|  1452|  1114|    0|
+    |grp_sub_final_merger_Pipeline_VITIS_LOOP_842_2_fu_115  |sub_final_merger_Pipeline_VITIS_LOOP_842_2  |        0|   2|  1452|  1114|    0|
     +-------------------------------------------------------+--------------------------------------------+---------+----+------+------+-----+
     |Total                                                  |                                            |        0|   2|  1452|  1114|    0|
     +-------------------------------------------------------+--------------------------------------------+---------+----+------+------+-----+
@@ -104,9 +104,9 @@
     |tmp_s_nbreadreq_fu_68_p3        |       and|   0|  0|   2|           1|           0|
     |ap_block_state1                 |        or|   0|  0|   2|           1|           1|
     |ap_block_state2                 |        or|   0|  0|   2|           1|           1|
-    |or_ln842_2_fu_212_p2            |        or|   0|  0|   2|           1|           1|
-    |or_ln842_fu_203_p2              |        or|   0|  0|   2|           1|           1|
-    |xor_ln842_fu_207_p2             |       xor|   0|  0|   2|           1|           2|
+    |or_ln838_2_fu_212_p2            |        or|   0|  0|   2|           1|           1|
+    |or_ln838_fu_203_p2              |        or|   0|  0|   2|           1|           1|
+    |xor_ln838_fu_207_p2             |       xor|   0|  0|   2|           1|           2|
     +--------------------------------+----------+----+---+----+------------+------------+
     |Total                           |          |   0|  0|  22|          11|          10|
     +--------------------------------+----------+----+---+----+------------+------------+
@@ -138,7 +138,7 @@
     |ap_done_reg                                                         |   1|   0|    1|          0|
     |enable_i_reg_255                                                    |   1|   0|    1|          0|
     |enable_j_reg_278                                                    |   1|   0|    1|          0|
-    |grp_sub_final_merger_Pipeline_VITIS_LOOP_846_2_fu_115_ap_start_reg  |   1|   0|    1|          0|
+    |grp_sub_final_merger_Pipeline_VITIS_LOOP_842_2_fu_115_ap_start_reg  |   1|   0|    1|          0|
     |temp1_cid_reg_289                                                   |  32|   0|   32|          0|
     |temp1_global_end_2_reg_97                                           |   1|   0|    1|          0|
     |temp1_global_end_reg_283                                            |   1|   0|    1|          0|
@@ -149,8 +149,8 @@
     |temp_val_reg_294                                                    |  32|   0|   32|          0|
     |tmp_reg_241                                                         |   1|   0|    1|          0|
     |tmp_s_reg_245                                                       |   1|   0|    1|          0|
-    |trunc_ln839_reg_249                                                 |  32|   0|   32|          0|
-    |trunc_ln840_reg_272                                                 |  32|   0|   32|          0|
+    |trunc_ln835_reg_249                                                 |  32|   0|   32|          0|
+    |trunc_ln836_reg_272                                                 |  32|   0|   32|          0|
     +--------------------------------------------------------------------+----+----+-----+-----------+
     |Total                                                               | 208|   0|  208|          0|
     +--------------------------------------------------------------------+----+----+-----+-----------+
@@ -231,56 +231,56 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%temp_global_end_5_loc = alloca i64 1"   --->   Operation 7 'alloca' 'temp_global_end_5_loc' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%temp1_global_end_4_loc = alloca i64 1"   --->   Operation 8 'alloca' 'temp1_global_end_4_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %final_merger_1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %final_merger_1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe2, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 2.03>
-ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specloopname_ln838 = specloopname void @_ssdm_op_SpecLoopName, void @empty_49" [util.cpp:838]   --->   Operation 13 'specloopname' 'specloopname_ln838' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%tmp = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i66P0A, i66 %result_pe1, i32 1" [util.cpp:838]   --->   Operation 14 'nbreadreq' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
-ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln838 = br i1 %tmp, void %for.body.backedge, void %land.lhs.true" [util.cpp:838]   --->   Operation 15 'br' 'br_ln838' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i66P0A, i66 %result_pe2, i32 1" [util.cpp:838]   --->   Operation 16 'nbreadreq' 'tmp_s' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
-ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln838 = br i1 %tmp_s, void %for.body.backedge, void %if.then" [util.cpp:838]   --->   Operation 17 'br' 'br_ln838' <Predicate = (tmp)> <Delay = 0.00>
-ST_2 : Operation 18 [1/1] (1.74ns)   --->   "%result_pe1_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %result_pe1" [util.cpp:839]   --->   Operation 18 'read' 'result_pe1_read' <Predicate = (tmp & tmp_s)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
-ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln839 = trunc i66 %result_pe1_read" [util.cpp:839]   --->   Operation 19 'trunc' 'trunc_ln839' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
-ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%enable_i = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe1_read, i32 64" [util.cpp:839]   --->   Operation 20 'bitselect' 'enable_i' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
-ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%temp_global_end = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe1_read, i32 65" [util.cpp:839]   --->   Operation 21 'bitselect' 'temp_global_end' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
-ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%temp_cid = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %result_pe1_read, i32 32, i32 63" [util.cpp:839]   --->   Operation 22 'partselect' 'temp_cid' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
-ST_2 : Operation 23 [1/1] (1.74ns)   --->   "%result_pe2_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %result_pe2" [util.cpp:840]   --->   Operation 23 'read' 'result_pe2_read' <Predicate = (tmp & tmp_s)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
-ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln840 = trunc i66 %result_pe2_read" [util.cpp:840]   --->   Operation 24 'trunc' 'trunc_ln840' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
-ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%enable_j = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe2_read, i32 64" [util.cpp:840]   --->   Operation 25 'bitselect' 'enable_j' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
-ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%temp1_global_end = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe2_read, i32 65" [util.cpp:840]   --->   Operation 26 'bitselect' 'temp1_global_end' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
-ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%temp1_cid = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %result_pe2_read, i32 32, i32 63" [util.cpp:840]   --->   Operation 27 'partselect' 'temp1_cid' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specloopname_ln834 = specloopname void @_ssdm_op_SpecLoopName, void @empty_46" [util.cpp:834]   --->   Operation 13 'specloopname' 'specloopname_ln834' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%tmp = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i66P0A, i66 %result_pe1, i32 1" [util.cpp:834]   --->   Operation 14 'nbreadreq' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln834 = br i1 %tmp, void %for.body.backedge, void %land.lhs.true" [util.cpp:834]   --->   Operation 15 'br' 'br_ln834' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i66P0A, i66 %result_pe2, i32 1" [util.cpp:834]   --->   Operation 16 'nbreadreq' 'tmp_s' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln834 = br i1 %tmp_s, void %for.body.backedge, void %if.then" [util.cpp:834]   --->   Operation 17 'br' 'br_ln834' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.74ns)   --->   "%result_pe1_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %result_pe1" [util.cpp:835]   --->   Operation 18 'read' 'result_pe1_read' <Predicate = (tmp & tmp_s)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln835 = trunc i66 %result_pe1_read" [util.cpp:835]   --->   Operation 19 'trunc' 'trunc_ln835' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%enable_i = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe1_read, i32 64" [util.cpp:835]   --->   Operation 20 'bitselect' 'enable_i' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%temp_global_end = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe1_read, i32 65" [util.cpp:835]   --->   Operation 21 'bitselect' 'temp_global_end' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%temp_cid = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %result_pe1_read, i32 32, i32 63" [util.cpp:835]   --->   Operation 22 'partselect' 'temp_cid' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (1.74ns)   --->   "%result_pe2_read = read i66 @_ssdm_op_Read.ap_fifo.volatile.i66P0A, i66 %result_pe2" [util.cpp:836]   --->   Operation 23 'read' 'result_pe2_read' <Predicate = (tmp & tmp_s)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln836 = trunc i66 %result_pe2_read" [util.cpp:836]   --->   Operation 24 'trunc' 'trunc_ln836' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%enable_j = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe2_read, i32 64" [util.cpp:836]   --->   Operation 25 'bitselect' 'enable_j' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%temp1_global_end = bitselect i1 @_ssdm_op_BitSelect.i1.i66.i32, i66 %result_pe2_read, i32 65" [util.cpp:836]   --->   Operation 26 'bitselect' 'temp1_global_end' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%temp1_cid = partselect i32 @_ssdm_op_PartSelect.i32.i66.i32.i32, i66 %result_pe2_read, i32 32, i32 63" [util.cpp:836]   --->   Operation 27 'partselect' 'temp1_cid' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 0.76>
-ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%temp_val = bitcast i32 %trunc_ln839" [util.cpp:839]   --->   Operation 28 'bitcast' 'temp_val' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%temp1_val = bitcast i32 %trunc_ln840" [util.cpp:840]   --->   Operation 29 'bitcast' 'temp1_val' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 30 [1/1] (0.28ns)   --->   "%or_ln842 = or i1 %temp_global_end, i1 %temp1_global_end" [util.cpp:842]   --->   Operation 30 'or' 'or_ln842' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node or_ln842_2)   --->   "%xor_ln842 = xor i1 %temp_global_end, i1 1" [util.cpp:842]   --->   Operation 31 'xor' 'xor_ln842' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 32 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln842_2 = or i1 %temp1_global_end, i1 %xor_ln842" [util.cpp:842]   --->   Operation 32 'or' 'or_ln842_2' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 33 [1/1] (0.42ns)   --->   "%br_ln842 = br i1 %or_ln842, void %for.cond7.preheader, void %if.end44" [util.cpp:842]   --->   Operation 33 'br' 'br_ln842' <Predicate = true> <Delay = 0.42>
-ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 34 'wait' 'empty' <Predicate = (!or_ln842)> <Delay = 0.00>
-ST_3 : Operation 35 [2/2] (0.47ns)   --->   "%call_ln840 = call void @sub_final_merger_Pipeline_VITIS_LOOP_846_2, i1 %enable_j, i32 %temp1_cid, i32 %trunc_ln840, i32 %temp1_val, i1 %enable_i, i32 %temp_cid, i32 %trunc_ln839, i32 %temp_val, i66 %result_pe2, i66 %result_pe1, i66 %final_merger_1, i1 %temp1_global_end_4_loc, i1 %temp_global_end_5_loc" [util.cpp:840]   --->   Operation 35 'call' 'call_ln840' <Predicate = (!or_ln842)> <Delay = 0.47> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%temp_val = bitcast i32 %trunc_ln835" [util.cpp:835]   --->   Operation 28 'bitcast' 'temp_val' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%temp1_val = bitcast i32 %trunc_ln836" [util.cpp:836]   --->   Operation 29 'bitcast' 'temp1_val' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.28ns)   --->   "%or_ln838 = or i1 %temp_global_end, i1 %temp1_global_end" [util.cpp:838]   --->   Operation 30 'or' 'or_ln838' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node or_ln838_2)   --->   "%xor_ln838 = xor i1 %temp_global_end, i1 1" [util.cpp:838]   --->   Operation 31 'xor' 'xor_ln838' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (0.28ns) (out node of the LUT)   --->   "%or_ln838_2 = or i1 %temp1_global_end, i1 %xor_ln838" [util.cpp:838]   --->   Operation 32 'or' 'or_ln838_2' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.42ns)   --->   "%br_ln838 = br i1 %or_ln838, void %for.cond7.preheader, void %if.end44" [util.cpp:838]   --->   Operation 33 'br' 'br_ln838' <Predicate = true> <Delay = 0.42>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 34 'wait' 'empty' <Predicate = (!or_ln838)> <Delay = 0.00>
+ST_3 : Operation 35 [2/2] (0.47ns)   --->   "%call_ln836 = call void @sub_final_merger_Pipeline_VITIS_LOOP_842_2, i1 %enable_j, i32 %temp1_cid, i32 %trunc_ln836, i32 %temp1_val, i1 %enable_i, i32 %temp_cid, i32 %trunc_ln835, i32 %temp_val, i66 %result_pe2, i66 %result_pe1, i66 %final_merger_1, i1 %temp1_global_end_4_loc, i1 %temp_global_end_5_loc" [util.cpp:836]   --->   Operation 35 'call' 'call_ln836' <Predicate = (!or_ln838)> <Delay = 0.47> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 36 [1/2] (0.00ns)   --->   "%call_ln840 = call void @sub_final_merger_Pipeline_VITIS_LOOP_846_2, i1 %enable_j, i32 %temp1_cid, i32 %trunc_ln840, i32 %temp1_val, i1 %enable_i, i32 %temp_cid, i32 %trunc_ln839, i32 %temp_val, i66 %result_pe2, i66 %result_pe1, i66 %final_merger_1, i1 %temp1_global_end_4_loc, i1 %temp_global_end_5_loc" [util.cpp:840]   --->   Operation 36 'call' 'call_ln840' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 36 [1/2] (0.00ns)   --->   "%call_ln836 = call void @sub_final_merger_Pipeline_VITIS_LOOP_842_2, i1 %enable_j, i32 %temp1_cid, i32 %trunc_ln836, i32 %temp1_val, i1 %enable_i, i32 %temp_cid, i32 %trunc_ln835, i32 %temp_val, i66 %result_pe2, i66 %result_pe1, i66 %final_merger_1, i1 %temp1_global_end_4_loc, i1 %temp_global_end_5_loc" [util.cpp:836]   --->   Operation 36 'call' 'call_ln836' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 1.74>
 ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%temp1_global_end_4_loc_load = load i1 %temp1_global_end_4_loc"   --->   Operation 37 'load' 'temp1_global_end_4_loc_load' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%temp_global_end_5_loc_load = load i1 %temp_global_end_5_loc"   --->   Operation 38 'load' 'temp_global_end_5_loc_load' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%empty_314 = wait i32 @_ssdm_op_Wait"   --->   Operation 39 'wait' 'empty_314' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 40 [1/1] (1.74ns)   --->   "%write_ln889 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %final_merger_1, i66 18446744073709551616" [util.cpp:889]   --->   Operation 40 'write' 'write_ln889' <Predicate = true> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
-ST_5 : Operation 41 [1/1] (0.42ns)   --->   "%br_ln890 = br void %if.end44" [util.cpp:890]   --->   Operation 41 'br' 'br_ln890' <Predicate = true> <Delay = 0.42>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%empty_310 = wait i32 @_ssdm_op_Wait"   --->   Operation 39 'wait' 'empty_310' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 40 [1/1] (1.74ns)   --->   "%write_ln885 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %final_merger_1, i66 18446744073709551616" [util.cpp:885]   --->   Operation 40 'write' 'write_ln885' <Predicate = true> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_5 : Operation 41 [1/1] (0.42ns)   --->   "%br_ln886 = br void %if.end44" [util.cpp:886]   --->   Operation 41 'br' 'br_ln886' <Predicate = true> <Delay = 0.42>
 
 State 6 <SV = 5> <Delay = 2.03>
-ST_6 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node enable)   --->   "%temp1_global_end_2 = phi i1 %temp1_global_end_4_loc_load, void %for.cond7.preheader, i1 %or_ln842_2, void %if.then" [util.cpp:842]   --->   Operation 42 'phi' 'temp1_global_end_2' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node enable)   --->   "%temp1_global_end_2 = phi i1 %temp1_global_end_4_loc_load, void %for.cond7.preheader, i1 %or_ln838_2, void %if.then" [util.cpp:838]   --->   Operation 42 'phi' 'temp1_global_end_2' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
 ST_6 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node enable)   --->   "%temp_global_end_2 = phi i1 %temp_global_end_5_loc_load, void %for.cond7.preheader, i1 %temp_global_end, void %if.then"   --->   Operation 43 'phi' 'temp_global_end_2' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
-ST_6 : Operation 44 [1/1] (0.28ns) (out node of the LUT)   --->   "%enable = and i1 %temp_global_end_2, i1 %temp1_global_end_2" [util.cpp:891]   --->   Operation 44 'and' 'enable' <Predicate = (tmp & tmp_s)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln835 = br i1 %enable, void %for.body.backedge, void %for.end48" [util.cpp:835]   --->   Operation 45 'br' 'br_ln835' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.28ns) (out node of the LUT)   --->   "%enable = and i1 %temp_global_end_2, i1 %temp1_global_end_2" [util.cpp:887]   --->   Operation 44 'and' 'enable' <Predicate = (tmp & tmp_s)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln831 = br i1 %enable, void %for.body.backedge, void %for.end48" [util.cpp:831]   --->   Operation 45 'br' 'br_ln831' <Predicate = (tmp & tmp_s)> <Delay = 0.00>
 ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 46 'br' 'br_ln0' <Predicate = (!enable) | (!tmp_s) | (!tmp)> <Delay = 0.00>
-ST_6 : Operation 47 [1/1] (1.74ns)   --->   "%write_ln897 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %final_merger_1, i66 36893488147419103232" [util.cpp:897]   --->   Operation 47 'write' 'write_ln897' <Predicate = (tmp & tmp_s & enable)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
-ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%ret_ln898 = ret" [util.cpp:898]   --->   Operation 48 'ret' 'ret_ln898' <Predicate = (tmp & tmp_s & enable)> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (1.74ns)   --->   "%write_ln893 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %final_merger_1, i66 36893488147419103232" [util.cpp:893]   --->   Operation 47 'write' 'write_ln893' <Predicate = (tmp & tmp_s & enable)> <Delay = 1.74> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 1000> <FIFO>
+ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%ret_ln894 = ret" [util.cpp:894]   --->   Operation 48 'ret' 'ret_ln894' <Predicate = (tmp & tmp_s & enable)> <Delay = 0.00>
 
 
 ============================================================
@@ -309,41 +309,41 @@ specinterface_ln0           (specinterface) [ 0000000]
 specinterface_ln0           (specinterface) [ 0000000]
 specinterface_ln0           (specinterface) [ 0000000]
 br_ln0                      (br           ) [ 0000000]
-specloopname_ln838          (specloopname ) [ 0000000]
+specloopname_ln834          (specloopname ) [ 0000000]
 tmp                         (nbreadreq    ) [ 0011111]
-br_ln838                    (br           ) [ 0000000]
+br_ln834                    (br           ) [ 0000000]
 tmp_s                       (nbreadreq    ) [ 0011111]
-br_ln838                    (br           ) [ 0000000]
+br_ln834                    (br           ) [ 0000000]
 result_pe1_read             (read         ) [ 0000000]
-trunc_ln839                 (trunc        ) [ 0001100]
+trunc_ln835                 (trunc        ) [ 0001100]
 enable_i                    (bitselect    ) [ 0001100]
 temp_global_end             (bitselect    ) [ 0001111]
 temp_cid                    (partselect   ) [ 0001100]
 result_pe2_read             (read         ) [ 0000000]
-trunc_ln840                 (trunc        ) [ 0001100]
+trunc_ln836                 (trunc        ) [ 0001100]
 enable_j                    (bitselect    ) [ 0001100]
 temp1_global_end            (bitselect    ) [ 0001000]
 temp1_cid                   (partselect   ) [ 0001100]
 temp_val                    (bitcast      ) [ 0000100]
 temp1_val                   (bitcast      ) [ 0000100]
-or_ln842                    (or           ) [ 0011111]
-xor_ln842                   (xor          ) [ 0000000]
-or_ln842_2                  (or           ) [ 0011111]
-br_ln842                    (br           ) [ 0011111]
+or_ln838                    (or           ) [ 0011111]
+xor_ln838                   (xor          ) [ 0000000]
+or_ln838_2                  (or           ) [ 0011111]
+br_ln838                    (br           ) [ 0011111]
 empty                       (wait         ) [ 0000000]
-call_ln840                  (call         ) [ 0000000]
+call_ln836                  (call         ) [ 0000000]
 temp1_global_end_4_loc_load (load         ) [ 0011111]
 temp_global_end_5_loc_load  (load         ) [ 0011111]
-empty_314                   (wait         ) [ 0000000]
-write_ln889                 (write        ) [ 0000000]
-br_ln890                    (br           ) [ 0011111]
+empty_310                   (wait         ) [ 0000000]
+write_ln885                 (write        ) [ 0000000]
+br_ln886                    (br           ) [ 0011111]
 temp1_global_end_2          (phi          ) [ 0000001]
 temp_global_end_2           (phi          ) [ 0000001]
 enable                      (and          ) [ 0011111]
-br_ln835                    (br           ) [ 0000000]
+br_ln831                    (br           ) [ 0000000]
 br_ln0                      (br           ) [ 0000000]
-write_ln897                 (write        ) [ 0000000]
-ret_ln898                   (ret          ) [ 0000000]
+write_ln893                 (write        ) [ 0000000]
+ret_ln894                   (ret          ) [ 0000000]
 </LifeTime>
 
 <model>
@@ -399,7 +399,7 @@ ret_ln898                   (ret          ) [ 0000000]
 <pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_56"/></StgValue>
+<StgValue><ssdm name="empty_91"/></StgValue>
 </bind>
 </comp>
 
@@ -417,7 +417,7 @@ ret_ln898                   (ret          ) [ 0000000]
 <pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_86"/></StgValue>
+<StgValue><ssdm name="empty_141"/></StgValue>
 </bind>
 </comp>
 
@@ -444,7 +444,7 @@ ret_ln898                   (ret          ) [ 0000000]
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_49"/></StgValue>
+<StgValue><ssdm name="empty_46"/></StgValue>
 </bind>
 </comp>
 
@@ -552,7 +552,7 @@ ret_ln898                   (ret          ) [ 0000000]
 <pin id="45" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="sub_final_merger_Pipeline_VITIS_LOOP_846_2"/></StgValue>
+<StgValue><ssdm name="sub_final_merger_Pipeline_VITIS_LOOP_842_2"/></StgValue>
 </bind>
 </comp>
 
@@ -664,7 +664,7 @@ ret_ln898                   (ret          ) [ 0000000]
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln889/5 write_ln897/6 "/>
+<opset="write_ln885/5 write_ln893/6 "/>
 </bind>
 </comp>
 
@@ -716,7 +716,7 @@ ret_ln898                   (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="115" class="1004" name="grp_sub_final_merger_Pipeline_VITIS_LOOP_846_2_fu_115">
+<comp id="115" class="1004" name="grp_sub_final_merger_Pipeline_VITIS_LOOP_842_2_fu_115">
 <pin_list>
 <pin id="116" dir="0" index="0" bw="0" slack="0"/>
 <pin id="117" dir="0" index="1" bw="1" slack="1"/>
@@ -736,18 +736,18 @@ ret_ln898                   (ret          ) [ 0000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln840/3 "/>
+<opset="call_ln836/3 "/>
 </bind>
 </comp>
 
-<comp id="135" class="1004" name="trunc_ln839_fu_135">
+<comp id="135" class="1004" name="trunc_ln835_fu_135">
 <pin_list>
 <pin id="136" dir="0" index="0" bw="66" slack="0"/>
 <pin id="137" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln839/2 "/>
+<opset="trunc_ln835/2 "/>
 </bind>
 </comp>
 
@@ -791,14 +791,14 @@ ret_ln898                   (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="165" class="1004" name="trunc_ln840_fu_165">
+<comp id="165" class="1004" name="trunc_ln836_fu_165">
 <pin_list>
 <pin id="166" dir="0" index="0" bw="66" slack="0"/>
 <pin id="167" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln840/2 "/>
+<opset="trunc_ln836/2 "/>
 </bind>
 </comp>
 
@@ -864,7 +864,7 @@ ret_ln898                   (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="203" class="1004" name="or_ln842_fu_203">
+<comp id="203" class="1004" name="or_ln838_fu_203">
 <pin_list>
 <pin id="204" dir="0" index="0" bw="1" slack="1"/>
 <pin id="205" dir="0" index="1" bw="1" slack="1"/>
@@ -872,11 +872,11 @@ ret_ln898                   (ret          ) [ 0000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln842/3 "/>
+<opset="or_ln838/3 "/>
 </bind>
 </comp>
 
-<comp id="207" class="1004" name="xor_ln842_fu_207">
+<comp id="207" class="1004" name="xor_ln838_fu_207">
 <pin_list>
 <pin id="208" dir="0" index="0" bw="1" slack="1"/>
 <pin id="209" dir="0" index="1" bw="1" slack="0"/>
@@ -884,11 +884,11 @@ ret_ln898                   (ret          ) [ 0000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="xor_ln842/3 "/>
+<opset="xor_ln838/3 "/>
 </bind>
 </comp>
 
-<comp id="212" class="1004" name="or_ln842_2_fu_212">
+<comp id="212" class="1004" name="or_ln838_2_fu_212">
 <pin_list>
 <pin id="213" dir="0" index="0" bw="1" slack="1"/>
 <pin id="214" dir="0" index="1" bw="1" slack="0"/>
@@ -896,7 +896,7 @@ ret_ln898                   (ret          ) [ 0000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln842_2/3 "/>
+<opset="or_ln838_2/3 "/>
 </bind>
 </comp>
 
@@ -974,13 +974,13 @@ ret_ln898                   (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="249" class="1005" name="trunc_ln839_reg_249">
+<comp id="249" class="1005" name="trunc_ln835_reg_249">
 <pin_list>
 <pin id="250" dir="0" index="0" bw="32" slack="1"/>
 <pin id="251" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="trunc_ln839 "/>
+<opset="trunc_ln835 "/>
 </bind>
 </comp>
 
@@ -1014,13 +1014,13 @@ ret_ln898                   (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="272" class="1005" name="trunc_ln840_reg_272">
+<comp id="272" class="1005" name="trunc_ln836_reg_272">
 <pin_list>
 <pin id="273" dir="0" index="0" bw="32" slack="1"/>
 <pin id="274" dir="1" index="1" bw="32" slack="1"/>
 </pin_list>
 <bind>
-<opset="trunc_ln840 "/>
+<opset="trunc_ln836 "/>
 </bind>
 </comp>
 
@@ -1074,13 +1074,13 @@ ret_ln898                   (ret          ) [ 0000000]
 </bind>
 </comp>
 
-<comp id="307" class="1005" name="or_ln842_2_reg_307">
+<comp id="307" class="1005" name="or_ln838_2_reg_307">
 <pin_list>
 <pin id="308" dir="0" index="0" bw="1" slack="3"/>
 <pin id="309" dir="1" index="1" bw="1" slack="3"/>
 </pin_list>
 <bind>
-<opset="or_ln842_2 "/>
+<opset="or_ln838_2 "/>
 </bind>
 </comp>
 
@@ -1268,12 +1268,12 @@ ret_ln898                   (ret          ) [ 0000000]
 	State 1
 	State 2
 	State 3
-		call_ln840 : 1
+		call_ln836 : 1
 	State 4
 	State 5
 	State 6
 		enable : 1
-		br_ln835 : 1
+		br_ln831 : 1
 
 
 ============================================================
@@ -1284,12 +1284,12 @@ ret_ln898                   (ret          ) [ 0000000]
 |----------|-------------------------------------------------------|---------|---------|---------|---------|
 | Operation|                    Functional Unit                    |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|-------------------------------------------------------|---------|---------|---------|---------|
-|   call   | grp_sub_final_merger_Pipeline_VITIS_LOOP_846_2_fu_115 |    2    |   1.33  |   763   |   419   |
+|   call   | grp_sub_final_merger_Pipeline_VITIS_LOOP_842_2_fu_115 |    2    |   1.33  |   763   |   419   |
 |----------|-------------------------------------------------------|---------|---------|---------|---------|
-|    or    |                    or_ln842_fu_203                    |    0    |    0    |    0    |    2    |
-|          |                   or_ln842_2_fu_212                   |    0    |    0    |    0    |    2    |
+|    or    |                    or_ln838_fu_203                    |    0    |    0    |    0    |    2    |
+|          |                   or_ln838_2_fu_212                   |    0    |    0    |    0    |    2    |
 |----------|-------------------------------------------------------|---------|---------|---------|---------|
-|    xor   |                    xor_ln842_fu_207                   |    0    |    0    |    0    |    2    |
+|    xor   |                    xor_ln838_fu_207                   |    0    |    0    |    0    |    2    |
 |----------|-------------------------------------------------------|---------|---------|---------|---------|
 |    and   |                     enable_fu_223                     |    0    |    0    |    0    |    2    |
 |----------|-------------------------------------------------------|---------|---------|---------|---------|
@@ -1301,8 +1301,8 @@ ret_ln898                   (ret          ) [ 0000000]
 |----------|-------------------------------------------------------|---------|---------|---------|---------|
 |   write  |                    grp_write_fu_88                    |    0    |    0    |    0    |    0    |
 |----------|-------------------------------------------------------|---------|---------|---------|---------|
-|   trunc  |                   trunc_ln839_fu_135                  |    0    |    0    |    0    |    0    |
-|          |                   trunc_ln840_fu_165                  |    0    |    0    |    0    |    0    |
+|   trunc  |                   trunc_ln835_fu_135                  |    0    |    0    |    0    |    0    |
+|          |                   trunc_ln836_fu_165                  |    0    |    0    |    0    |    0    |
 |----------|-------------------------------------------------------|---------|---------|---------|---------|
 |          |                    enable_i_fu_139                    |    0    |    0    |    0    |    0    |
 | bitselect|                 temp_global_end_fu_147                |    0    |    0    |    0    |    0    |
@@ -1324,7 +1324,7 @@ N/A
 +------------------------------+--------+
 |       enable_i_reg_255       |    1   |
 |       enable_j_reg_278       |    1   |
-|      or_ln842_2_reg_307      |    1   |
+|      or_ln838_2_reg_307      |    1   |
 |       temp1_cid_reg_289      |   32   |
 |   temp1_global_end_2_reg_97  |    1   |
 |temp1_global_end_4_loc_reg_235|    1   |
@@ -1337,8 +1337,8 @@ N/A
 |       temp_val_reg_294       |   32   |
 |          tmp_reg_241         |    1   |
 |         tmp_s_reg_245        |    1   |
-|      trunc_ln839_reg_249     |   32   |
-|      trunc_ln840_reg_272     |   32   |
+|      trunc_ln835_reg_249     |   32   |
+|      trunc_ln836_reg_272     |   32   |
 +------------------------------+--------+
 |             Total            |   203  |
 +------------------------------+--------+
@@ -1348,8 +1348,8 @@ N/A
 |                          Comp                         |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
 |-------------------------------------------------------|------|------|------|--------||---------||---------|
 |                    grp_write_fu_88                    |  p2  |   2  |  66  |   132  |
-| grp_sub_final_merger_Pipeline_VITIS_LOOP_846_2_fu_115 |  p4  |   2  |  32  |   64   ||    9    |
-| grp_sub_final_merger_Pipeline_VITIS_LOOP_846_2_fu_115 |  p8  |   2  |  32  |   64   ||    9    |
+| grp_sub_final_merger_Pipeline_VITIS_LOOP_842_2_fu_115 |  p4  |   2  |  32  |   64   ||    9    |
+| grp_sub_final_merger_Pipeline_VITIS_LOOP_842_2_fu_115 |  p8  |   2  |  32  |   64   ||    9    |
 |-------------------------------------------------------|------|------|------|--------||---------||---------|
 |                         Total                         |      |      |      |   260  ||  1.281  ||    18   |
 |-------------------------------------------------------|------|------|------|--------||---------||---------|

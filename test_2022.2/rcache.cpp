@@ -80,6 +80,10 @@ void rschedule_access(rcache_stream* schedule, rresponse_stream* response, rcach
 			#pragma HLS PIPELINE off
 					if (!response->empty()) {
 						curr_response = response->read();
+                        // CACHE_WRITE acknowledgements are not responses to the
+                        // outstanding first-read request; consume them without
+                        // advancing the schedule transaction.
+                        if (curr_response.no_use) continue;
 
 						if (curr_response.result == CACHE_FIRST_MISS) {
 							id_t access_idx = ori_request.Acid / 4;
@@ -495,7 +499,7 @@ void rcache(rcache_stream* request, id_t base_addr_rcsr, rresponse_stream* rres,
 					}
 				}
 
-				rres->write(temp_response);
+				if (temp_request.type == CACHE_FIRST_READ) rres->write(temp_response);
 				ms->write(temp_mi);
 
 				count += 1;

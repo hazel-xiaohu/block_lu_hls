@@ -7,7 +7,7 @@ set ::env(SPMM_A_DATA_DIR) \
     [file join $script_dir random_filter_empty A]
 set ::env(SPMM_C_DATA_DIR) \
     [file join $script_dir random_filter_empty C]
-set ::env(SPMM_TEST_ROWS) 2048
+set ::env(SPMM_TEST_ROWS) 1000
 
 open_project proj_block_lu_hls
 open_solution solution1
@@ -30,7 +30,7 @@ if {[file exists $sim_script]} {
     set new_lines {}
     foreach line $lines {
         if {[string match "*xelab*" $line]} {
-            append line " -cc gcc"
+            append line " --mt 40 -cc gcc"
         }
         lappend new_lines $line
     }

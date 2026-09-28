@@ -103,10 +103,10 @@ reg   [30:0] ap_sig_allocacmp_i_33;
 reg    ap_block_pp0_stage0_01001;
 wire   [30:0] zext_ln184_cast_fu_138_p1;
 wire   [30:0] sub_ln190_fu_172_p2;
-wire   [27:0] tmp_149_fu_178_p4;
+wire   [27:0] tmp_141_fu_178_p4;
 wire   [0:0] icmp_ln190_fu_188_p2;
 wire   [2:0] trunc_ln628_fu_200_p1;
-wire   [9:0] tmp_150_fu_204_p3;
+wire   [9:0] tmp_142_fu_204_p3;
 wire   [1023:0] zext_ln628_fu_212_p1;
 wire   [1023:0] lshr_ln628_fu_216_p2;
 wire   [1:0] output_begin_V_fu_237_p3;
@@ -385,7 +385,7 @@ assign icmp_ln188_fu_160_p2 = ((ap_sig_allocacmp_i_33 == zext_ln183_cast_fu_142_
 
 assign icmp_ln189_fu_166_p2 = ((ap_sig_allocacmp_i_33 == zext_ln184_cast_fu_138_p1) ? 1'b1 : 1'b0);
 
-assign icmp_ln190_fu_188_p2 = ((tmp_149_fu_178_p4 == 28'd0) ? 1'b1 : 1'b0);
+assign icmp_ln190_fu_188_p2 = ((tmp_141_fu_178_p4 == 28'd0) ? 1'b1 : 1'b0);
 
 assign lshr_ln628_fu_216_p2 = cached_V_6 >> zext_ln628_fu_212_p1;
 
@@ -397,9 +397,9 @@ assign output_end_V_fu_247_p3 = ((icmp_ln189_reg_294_pp0_iter1_reg[0:0] == 1'b1)
 
 assign sub_ln190_fu_172_p2 = (ap_sig_allocacmp_i_33 - zext_ln183_cast_fu_142_p1);
 
-assign tmp_149_fu_178_p4 = {{sub_ln190_fu_172_p2[30:3]}};
+assign tmp_141_fu_178_p4 = {{sub_ln190_fu_172_p2[30:3]}};
 
-assign tmp_150_fu_204_p3 = {{trunc_ln628_fu_200_p1}, {7'd0}};
+assign tmp_142_fu_204_p3 = {{trunc_ln628_fu_200_p1}, {7'd0}};
 
 assign trunc_ln628_fu_200_p1 = sub_ln190_fu_172_p2[2:0];
 
@@ -411,6 +411,6 @@ assign zext_ln187_3_fu_253_p1 = output_end_V_fu_247_p3;
 
 assign zext_ln187_fu_243_p1 = output_begin_V_fu_237_p3;
 
-assign zext_ln628_fu_212_p1 = tmp_150_fu_204_p3;
+assign zext_ln628_fu_212_p1 = tmp_142_fu_204_p3;
 
 endmodule //spmm_collector_90_Pipeline_VITIS_LOOP_185_2

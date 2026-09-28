@@ -836,7 +836,7 @@ for.inc82.split:20 %p_lru_count_8_addr_25 = getelementptr i32 %p_lru_count_8, i6
 
 <Node id="96" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc82.split:21 %specpipeline_ln628 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_86
+for.inc82.split:21 %specpipeline_ln628 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_141
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln628"/></StgValue>
@@ -852,7 +852,7 @@ for.inc82.split:21 %specpipeline_ln628 = specpipeline void @_ssdm_op_SpecPipelin
 
 <Node id="97" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc82.split:22 %specloopname_ln627 = specloopname void @_ssdm_op_SpecLoopName, void @empty_70
+for.inc82.split:22 %specloopname_ln627 = specloopname void @_ssdm_op_SpecLoopName, void @empty_37
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln627"/></StgValue>

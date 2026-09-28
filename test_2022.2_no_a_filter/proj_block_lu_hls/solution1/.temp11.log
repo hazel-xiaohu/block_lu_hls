@@ -1,0 +1,3 @@
+RUN benchmark first 2048 rows
+PASS benchmark first 2048 rows (nnz=3626)
+All SpMM checks passed.

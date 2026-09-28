@@ -1,0 +1,2892 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_333_5
+  - String:          ''' ('
+  - LoopLoc:         'large_sparse_lu.cpp:333:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          large_tstrf_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_364_11
+  - String:          ''' ('
+  - LoopLoc:         'large_sparse_lu.cpp:364:28'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          large_tstrf_v2
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 351, Column: 0 }
+Function:        _ZNK9fp_structIfE8to_floatEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::data() const'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 338, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<float>::to_float() const'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 351, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 375, Column: 0 }
+Function:        _ZNK9fp_structIfE7to_ieeeEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::to_float() const'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 351, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 375, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                   Line: 10, Column: 0 }
+Function:        _Z16generic_copysignIfET_S0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 312, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                   Line: 10, Column: 0 }
+Function:        _Z16generic_copysignIfET_S0_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 375, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z12generic_fabsIfET_S0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float generic_copysign<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h, 
+                       Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float generic_fabs<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c/fabsfloat.cpp, 
+                   Line: 7, Column: 0 }
+Function:        fabsf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float generic_fabs<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          fabsf
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c/fabsfloat.cpp, 
+                       Line: 7, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 315, Column: 16 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          w
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 328, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc20.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        u_diag_posseq
+  - String:          ' '
+  - ArrayName:       u_diag_pos
+  - String:          ' '
+  - BundleName:      v2tu4
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_328_2
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:328:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 329, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc43.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        u_row_idxseq
+  - String:          ' '
+  - ArrayName:       u_row_idx
+  - String:          ' '
+  - BundleName:      v2tu1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_329_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:329:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 329, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc43.load.9
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        u_csc_to_csrseq
+  - String:          ' '
+  - ArrayName:       u_csc_to_csr
+  - String:          ' '
+  - BundleName:      v2tu3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_329_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:329:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_343_7.load.6
+  - String:          ', '
+  - String:          VITIS_LOOP_343_7.load.11
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx81seq
+  - String:          ' '
+  - ArrayName:       b_ptr
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_332_4
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:332:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc98.load.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       b_val
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc98.load.14
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep197seq
+  - String:          ' '
+  - ArrayName:       b_idx
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_359_10.load.7
+  - String:          ', '
+  - String:          VITIS_LOOP_359_10.load.10
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx165seq
+  - String:          ' '
+  - ArrayName:       x_ptr
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_332_4
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:332:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc181.load.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep198seq
+  - String:          ' '
+  - ArrayName:       x_idx
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc181.store.17
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep201seq
+  - String:          ' '
+  - ArrayName:       x_val
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_343_7.1.load.6
+  - String:          ', '
+  - String:          VITIS_LOOP_343_7.1.load.11
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx81.1seq
+  - String:          ' '
+  - ArrayName:       b_ptr
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_332_4
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:332:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc98.1.load.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep202seq
+  - String:          ' '
+  - ArrayName:       b_val
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc98.1.load.14
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep205seq
+  - String:          ' '
+  - ArrayName:       b_idx
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_359_10.1.load.7
+  - String:          ', '
+  - String:          VITIS_LOOP_359_10.1.load.10
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx165.1seq
+  - String:          ' '
+  - ArrayName:       x_ptr
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_332_4
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:332:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc181.1.load.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep206seq
+  - String:          ' '
+  - ArrayName:       x_idx
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc181.1.store.17
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep209seq
+  - String:          ' '
+  - ArrayName:       x_val
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_343_7.2.load.6
+  - String:          ', '
+  - String:          VITIS_LOOP_343_7.2.load.11
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx81.2seq
+  - String:          ' '
+  - ArrayName:       b_ptr
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_332_4
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:332:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc98.2.load.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep210seq
+  - String:          ' '
+  - ArrayName:       b_val
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc98.2.load.14
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep213seq
+  - String:          ' '
+  - ArrayName:       b_idx
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_359_10.2.load.7
+  - String:          ', '
+  - String:          VITIS_LOOP_359_10.2.load.10
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx165.2seq
+  - String:          ' '
+  - ArrayName:       x_ptr
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_332_4
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:332:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc181.2.load.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep214seq
+  - String:          ' '
+  - ArrayName:       x_idx
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc181.2.store.17
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep217seq
+  - String:          ' '
+  - ArrayName:       x_val
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_343_7.3.load.6
+  - String:          ', '
+  - String:          VITIS_LOOP_343_7.3.load.11
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx81.3seq
+  - String:          ' '
+  - ArrayName:       b_ptr
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_332_4
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:332:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc98.3.load.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep218seq
+  - String:          ' '
+  - ArrayName:       b_val
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc98.3.load.14
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep221seq
+  - String:          ' '
+  - ArrayName:       b_idx
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_359_10.3.load.7
+  - String:          ', '
+  - String:          VITIS_LOOP_359_10.3.load.10
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx165.3seq
+  - String:          ' '
+  - ArrayName:       x_ptr
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_332_4
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:332:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc181.3.load.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep222seq
+  - String:          ' '
+  - ArrayName:       x_idx
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc181.3.store.17
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep225seq
+  - String:          ' '
+  - ArrayName:       x_val
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 326, Column: 20 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_326_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:326:20'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 348, Column: 35 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_348_9
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:348:35'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 348, Column: 35 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_348_9
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:348:35'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 348, Column: 35 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_348_9
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:348:35'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 348, Column: 35 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_348_9
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:348:35'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 332, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_332_4
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:332:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 330, Column: 35 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc43.load.12
+  - String:          ' '
+  - ArrayName:       u_csr_val
+  - String:          ' '
+  - BundleName:      v2tu2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_329_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:329:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep222seq
+  - String:          ' '
+  - ArrayName:       x_idx
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep225seq
+  - String:          ' '
+  - ArrayName:       x_val
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx165.3seq
+  - String:          ' '
+  - ArrayName:       x_ptr
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep218seq
+  - String:          ' '
+  - ArrayName:       b_val
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep221seq
+  - String:          ' '
+  - ArrayName:       b_idx
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx81.3seq
+  - String:          ' '
+  - ArrayName:       b_ptr
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep214seq
+  - String:          ' '
+  - ArrayName:       x_idx
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep217seq
+  - String:          ' '
+  - ArrayName:       x_val
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx165.2seq
+  - String:          ' '
+  - ArrayName:       x_ptr
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep210seq
+  - String:          ' '
+  - ArrayName:       b_val
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep213seq
+  - String:          ' '
+  - ArrayName:       b_idx
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx81.2seq
+  - String:          ' '
+  - ArrayName:       b_ptr
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep206seq
+  - String:          ' '
+  - ArrayName:       x_idx
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep209seq
+  - String:          ' '
+  - ArrayName:       x_val
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx165.1seq
+  - String:          ' '
+  - ArrayName:       x_ptr
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep202seq
+  - String:          ' '
+  - ArrayName:       b_val
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep205seq
+  - String:          ' '
+  - ArrayName:       b_idx
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx81.1seq
+  - String:          ' '
+  - ArrayName:       b_ptr
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep198seq
+  - String:          ' '
+  - ArrayName:       x_idx
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep201seq
+  - String:          ' '
+  - ArrayName:       x_val
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_359_10
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:359:32'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx165seq
+  - String:          ' '
+  - ArrayName:       x_ptr
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       b_val
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep197seq
+  - String:          ' '
+  - ArrayName:       b_idx
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_343_7
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:343:31'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx81seq
+  - String:          ' '
+  - ArrayName:       b_ptr
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 329, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        u_row_idxseq
+  - String:          ' '
+  - ArrayName:       u_row_idx
+  - String:          ' '
+  - BundleName:      v2tu1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_329_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:329:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 329, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        u_csc_to_csrseq
+  - String:          ' '
+  - ArrayName:       u_csc_to_csr
+  - String:          ' '
+  - BundleName:      v2tu3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_329_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:329:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 328, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        u_diag_posseq
+  - String:          ' '
+  - ArrayName:       u_diag_pos
+  - String:          ' '
+  - BundleName:      v2tu4
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_328_2
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:328:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 328, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tu4
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_328_2
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:328:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 328, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_328_2
+  - String:          '''('
+  - LoopLoc:         'large_sparse_lu.cpp:328:23'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tu4
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 329, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tu1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_329_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:329:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 329, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_329_3
+  - String:          '''('
+  - LoopLoc:         'large_sparse_lu.cpp:329:23'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tu1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 329, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tu3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_329_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:329:23'
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 329, Column: 23 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_329_3
+  - String:          '''('
+  - LoopLoc:         'large_sparse_lu.cpp:329:23'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tu3
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq6
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq7
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq8
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq9
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq10
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq11
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq12
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq13
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq14
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq15
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq16
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq17
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq18
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq19
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq20
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq21
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 48 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq22
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb2
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq23
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tb1
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 343, Column: 31 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tb1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq24
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx0
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 49 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq25
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx1
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq26
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      v2tx2
+  - String:          ' '
+  - Function:        large_tstrf_v2
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 294, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 359, Column: 32 }
+Function:        large_tstrf_v2
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      v2tx2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

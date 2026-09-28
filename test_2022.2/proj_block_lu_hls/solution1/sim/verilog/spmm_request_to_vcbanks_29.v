@@ -101,8 +101,8 @@ wire    ap_CS_fsm_state4;
 reg    vccache_re_bank2_pe3_blk_n;
 wire   [4:0] empty_fu_174_p1;
 reg   [4:0] empty_reg_378;
-wire   [4:0] empty_567_fu_178_p1;
-reg   [4:0] empty_567_reg_383;
+wire   [4:0] empty_563_fu_178_p1;
+reg   [4:0] empty_563_reg_383;
 wire    grp_request_to_vcbanks_29_Pipeline_VITIS_LOOP_253_1_fu_154_ap_start;
 wire    grp_request_to_vcbanks_29_Pipeline_VITIS_LOOP_253_1_fu_154_ap_done;
 wire    grp_request_to_vcbanks_29_Pipeline_VITIS_LOOP_253_1_fu_154_ap_idle;
@@ -179,7 +179,7 @@ spmm_request_to_vcbanks_29_Pipeline_VITIS_LOOP_253_1 grp_request_to_vcbanks_29_P
     .vccache_re_bank2_pe3_fifo_cap(4'd0),
     .vccache_re_bank2_pe3_full_n(vccache_re_bank2_pe3_full_n),
     .vccache_re_bank2_pe3_write(grp_request_to_vcbanks_29_Pipeline_VITIS_LOOP_253_1_fu_154_vccache_re_bank2_pe3_write),
-    .base_addr_val_load(empty_567_reg_383),
+    .base_addr_val_load(empty_563_reg_383),
     .base_addr_cid_load(empty_reg_378),
     .temp_vcreq_data_V_out(grp_request_to_vcbanks_29_Pipeline_VITIS_LOOP_253_1_fu_154_temp_vcreq_data_V_out),
     .temp_vcreq_data_V_out_ap_vld(grp_request_to_vcbanks_29_Pipeline_VITIS_LOOP_253_1_fu_154_temp_vcreq_data_V_out_ap_vld),
@@ -233,7 +233,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        empty_567_reg_383 <= empty_567_fu_178_p1;
+        empty_563_reg_383 <= empty_563_fu_178_p1;
         empty_reg_378 <= empty_fu_174_p1;
     end
 end
@@ -432,7 +432,7 @@ always @ (*) begin
     ap_block_state4 = ((vccache_re_bank2_pe3_full_n == 1'b0) | (vccache_re_bank1_pe3_full_n == 1'b0));
 end
 
-assign empty_567_fu_178_p1 = base_addr_val_dout[4:0];
+assign empty_563_fu_178_p1 = base_addr_val_dout[4:0];
 
 assign empty_fu_174_p1 = base_addr_cid_dout[4:0];
 

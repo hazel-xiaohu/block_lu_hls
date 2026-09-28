@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'A_element_filter_Pipeline_VITIS_LOOP_64_2'
 ================================================================
-* Date:           Fri Sep 25 15:50:08 2026
+* Date:           Sat Sep 26 09:30:10 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -313,9 +313,9 @@ ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%sext_ln64_read = read i62 @_ssdm_o
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sext_ln64_1_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln64_1"   --->   Operation 13 'read' 'sext_ln64_1_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%sext_ln64_cast = sext i62 %sext_ln64_read"   --->   Operation 14 'sext' 'sext_ln64_cast' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%sext_ln64_1_cast = sext i62 %sext_ln64_1_read"   --->   Operation 15 'sext' 'sext_ln64_1_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %acid, void @empty_106, i32 0, i32 0, void @empty_86, i32 0, i32 2831, void @empty_131, void @empty_133, void @empty_86, i32 16, i32 16, i32 16, i32 16, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %aval, void @empty_106, i32 0, i32 0, void @empty_86, i32 0, i32 2831, void @empty_141, void @empty_133, void @empty_86, i32 16, i32 16, i32 16, i32 16, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i98 %p_A_element_as, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %acid, void @empty_153, i32 0, i32 0, void @empty_141, i32 0, i32 2831, void @empty_138, void @empty_139, void @empty_141, i32 16, i32 16, i32 16, i32 16, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %aval, void @empty_153, i32 0, i32 0, void @empty_141, i32 0, i32 2831, void @empty_137, void @empty_139, void @empty_141, i32 16, i32 16, i32 16, i32 16, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i98 %p_A_element_as, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 0, i32 %j"   --->   Operation 19 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln0 = br void %memset.loop7"   --->   Operation 20 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%j_6 = load i32 %j" [./task_scheduler.h:64]   --->   Operation 21 'load' 'j_6' <Predicate = true> <Delay = 0.00>
@@ -331,8 +331,8 @@ ST_2 : Operation 28 [1/1] (3.65ns)   --->   "%item_cid = read i32 @_ssdm_op_Read
 
 State 3 <SV = 2> <Delay = 3.65>
 ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%aval_addr = getelementptr i32 %aval, i64 %sext_ln64_1_cast" [./task_scheduler.h:64]   --->   Operation 29 'getelementptr' 'aval_addr' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%specpipeline_ln65 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_86" [./task_scheduler.h:65]   --->   Operation 30 'specpipeline' 'specpipeline_ln65' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%specloopname_ln64 = specloopname void @_ssdm_op_SpecLoopName, void @empty_40" [./task_scheduler.h:64]   --->   Operation 31 'specloopname' 'specloopname_ln64' <Predicate = (!icmp_ln64)> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%specpipeline_ln65 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_141" [./task_scheduler.h:65]   --->   Operation 30 'specpipeline' 'specpipeline_ln65' <Predicate = (!icmp_ln64)> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%specloopname_ln64 = specloopname void @_ssdm_op_SpecLoopName, void @empty_43" [./task_scheduler.h:64]   --->   Operation 31 'specloopname' 'specloopname_ln64' <Predicate = (!icmp_ln64)> <Delay = 0.00>
 ST_3 : Operation 32 [1/1] (3.65ns)   --->   "%item_val = read i32 @_ssdm_op_Read.m_axi.p1i32, i64 %aval_addr" [./task_scheduler.h:69]   --->   Operation 32 'read' 'item_val' <Predicate = (!icmp_ln64)> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_3 : Operation 33 [1/1] (0.99ns)   --->   "%icmp_ln71 = icmp_ult  i32 %item_cid, i32 %brnum_read" [./task_scheduler.h:71]   --->   Operation 33 'icmp' 'icmp_ln71' <Predicate = (!icmp_ln64)> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 34 [1/1] (0.99ns)   --->   "%icmp_ln71_1 = icmp_ult  i32 %item_cid, i32 2831" [./task_scheduler.h:71]   --->   Operation 34 'icmp' 'icmp_ln71_1' <Predicate = (!icmp_ln64)> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
@@ -558,7 +558,7 @@ ret_ln0           (ret           ) [ 00000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_106"/></StgValue>
+<StgValue><ssdm name="empty_153"/></StgValue>
 </bind>
 </comp>
 
@@ -576,7 +576,7 @@ ret_ln0           (ret           ) [ 00000]
 <pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_86"/></StgValue>
+<StgValue><ssdm name="empty_141"/></StgValue>
 </bind>
 </comp>
 
@@ -594,7 +594,7 @@ ret_ln0           (ret           ) [ 00000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_131"/></StgValue>
+<StgValue><ssdm name="empty_138"/></StgValue>
 </bind>
 </comp>
 
@@ -603,7 +603,7 @@ ret_ln0           (ret           ) [ 00000]
 <pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_133"/></StgValue>
+<StgValue><ssdm name="empty_139"/></StgValue>
 </bind>
 </comp>
 
@@ -630,7 +630,7 @@ ret_ln0           (ret           ) [ 00000]
 <pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_141"/></StgValue>
+<StgValue><ssdm name="empty_137"/></StgValue>
 </bind>
 </comp>
 
@@ -639,7 +639,7 @@ ret_ln0           (ret           ) [ 00000]
 <pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_56"/></StgValue>
+<StgValue><ssdm name="empty_91"/></StgValue>
 </bind>
 </comp>
 
@@ -675,7 +675,7 @@ ret_ln0           (ret           ) [ 00000]
 <pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_40"/></StgValue>
+<StgValue><ssdm name="empty_43"/></StgValue>
 </bind>
 </comp>
 

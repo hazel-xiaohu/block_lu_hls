@@ -1,0 +1,207 @@
+
+
+================================================================
+== Vitis HLS Report for 'A_row_reader'
+================================================================
+* Date:           Sat Sep 26 10:58:28 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.650 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.01>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%rnum_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %rnum" [./task_scheduler.h:6]   --->   Operation 12 'read' 'rnum_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.01ns)   --->   "%add = add i32 %rnum_read, i32 1" [./task_scheduler.h:6]   --->   Operation 13 'add' 'add' <Predicate = true> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 3.65>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%A_rcsr_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %A_rcsr" [./task_scheduler.h:6]   --->   Operation 14 'read' 'A_rcsr_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%trunc_ln13 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %A_rcsr_read, i32 2, i32 63" [./task_scheduler.h:13]   --->   Operation 15 'partselect' 'trunc_ln13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln13 = sext i62 %trunc_ln13" [./task_scheduler.h:13]   --->   Operation 16 'sext' 'sext_ln13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%arcsr_addr = getelementptr i32 %arcsr, i64 %sext_ln13" [./task_scheduler.h:13]   --->   Operation 17 'getelementptr' 'arcsr_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [7/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 18 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 3.65>
+ST_3 : Operation 19 [6/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 19 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 3.65>
+ST_4 : Operation 20 [5/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 20 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 3.65>
+ST_5 : Operation 21 [4/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 21 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 3.65>
+ST_6 : Operation 22 [3/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 22 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 3.65>
+ST_7 : Operation 23 [2/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 23 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 3.65>
+ST_8 : Operation 24 [1/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 24 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 1.41>
+ST_9 : Operation 25 [1/1] (0.00ns)   --->   "%empty_1626 = wait i32 @_ssdm_op_Wait"   --->   Operation 25 'wait' 'empty_1626' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 26 [2/2] (1.41ns)   --->   "%call_ln13 = call void @A_row_reader_Pipeline_VITIS_LOOP_13_1, i32 %arcsr, i62 %trunc_ln13, i32 %add, i64 %p_A_reader_rs" [./task_scheduler.h:13]   --->   Operation 26 'call' 'call_ln13' <Predicate = true> <Delay = 1.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln13 = call void @A_row_reader_Pipeline_VITIS_LOOP_13_1, i32 %arcsr, i62 %trunc_ln13, i32 %add, i64 %p_A_reader_rs" [./task_scheduler.h:13]   --->   Operation 27 'call' 'call_ln13' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 1.64>
+ST_11 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %p_A_reader_rs, void @empty_47, i32 0, i32 0, void @empty_157, i32 0, i32 0, void @empty_157, void @empty_157, void @empty_157, i32 0, i32 0, i32 0, i32 0, void @empty_157, void @empty_157, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %arcsr, void @empty_21, i32 0, i32 0, void @empty_157, i32 0, i32 2050, void @empty_167, void @empty_134, void @empty_157, i32 16, i32 16, i32 16, i32 16, void @empty_157, void @empty_157, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 30 [1/1] (0.00ns)   --->   "%empty_1627 = wait i32 @_ssdm_op_Wait"   --->   Operation 30 'wait' 'empty_1627' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 31 [1/1] (1.64ns)   --->   "%write_ln27 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %p_A_reader_rs, i64 4294967295" [./task_scheduler.h:27]   --->   Operation 31 'write' 'write_ln27' <Predicate = true> <Delay = 1.64> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.64> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 128> <FIFO>
+ST_11 : Operation 32 [1/1] (0.00ns)   --->   "%ret_ln28 = ret" [./task_scheduler.h:28]   --->   Operation 32 'ret' 'ret_ln28' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 1.02ns
+The critical path consists of the following:
+	wire read operation ('rnum_read', ./task_scheduler.h:6) on port 'rnum' (./task_scheduler.h:6) [7]  (0 ns)
+	'add' operation ('add', ./task_scheduler.h:6) [9]  (1.02 ns)
+
+ <State 2>: 3.65ns
+The critical path consists of the following:
+	wire read operation ('A_rcsr_read', ./task_scheduler.h:6) on port 'A_rcsr' (./task_scheduler.h:6) [8]  (0 ns)
+	'getelementptr' operation ('arcsr_addr', ./task_scheduler.h:13) [12]  (0 ns)
+	bus request operation ('empty', ./task_scheduler.h:13) on port 'arcsr' (./task_scheduler.h:13) [13]  (3.65 ns)
+
+ <State 3>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', ./task_scheduler.h:13) on port 'arcsr' (./task_scheduler.h:13) [13]  (3.65 ns)
+
+ <State 4>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', ./task_scheduler.h:13) on port 'arcsr' (./task_scheduler.h:13) [13]  (3.65 ns)
+
+ <State 5>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', ./task_scheduler.h:13) on port 'arcsr' (./task_scheduler.h:13) [13]  (3.65 ns)
+
+ <State 6>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', ./task_scheduler.h:13) on port 'arcsr' (./task_scheduler.h:13) [13]  (3.65 ns)
+
+ <State 7>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', ./task_scheduler.h:13) on port 'arcsr' (./task_scheduler.h:13) [13]  (3.65 ns)
+
+ <State 8>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', ./task_scheduler.h:13) on port 'arcsr' (./task_scheduler.h:13) [13]  (3.65 ns)
+
+ <State 9>: 1.42ns
+The critical path consists of the following:
+	'call' operation ('call_ln13', ./task_scheduler.h:13) to 'A_row_reader_Pipeline_VITIS_LOOP_13_1' [15]  (1.42 ns)
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 1.65ns
+The critical path consists of the following:
+	fifo write operation ('write_ln27', ./task_scheduler.h:27) on port 'p_A_reader_rs' (./task_scheduler.h:27) [17]  (1.65 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

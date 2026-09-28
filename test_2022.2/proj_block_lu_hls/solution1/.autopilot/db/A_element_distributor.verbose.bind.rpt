@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'A_element_distributor'
 ================================================================
-* Date:           Fri Sep 25 15:48:00 2026
+* Date:           Sat Sep 26 09:28:04 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -104,41 +104,41 @@ State 3 <SV = 2> <Delay = 0.00>
 ST_3 : Operation 19 [1/2] (0.00ns)   --->   "%call_ln95 = call void @A_element_distributor_Pipeline_VITIS_LOOP_96_1, i32 %temp_avc_rid, i32 %temp_avc_cid, i32 %trunc_ln95_1, i1 %temp_avc_end, i1 %temp_avc_row_end, i66 %pe1_job, i66 %pe2_job, i66 %pe3_job, i66 %pe4_job, i98 %p_A_element_as, i1 %pe4_idle5, i1 %pe3_idle4, i1 %pe2_idle3, i1 %pe1_idle2, i1 %rm1_idle6, i1 %rm2_idle7, i1 %rm3_idle8, i1 %rm4_idle9, i230 %rcache_stream1, i230 %rcache_stream2, i230 %rcache_stream3, i230 %rcache_stream4, i160 %temp_rcache_request_data_V_loc, i32 %temp_rcache_request_Acid_loc, i2 %temp_rcache_request_type_V_loc, i3 %temp_rcache_request_dest_V_loc, i32 %temp_pe_rid_loc, i32 %p_loc" [./task_scheduler.h:95]   --->   Operation 19 'call' 'call_ln95' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 1.82>
-ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rcache_stream4, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rcache_stream3, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rcache_stream2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rcache_stream1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %pe4_job, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %pe3_job, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %pe2_job, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %pe1_job, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rm4_idle9, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rm3_idle8, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rm2_idle7, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rm1_idle6, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %pe4_idle5, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %pe3_idle4, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %pe2_idle3, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %pe1_idle2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i98 %p_A_element_as, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rcache_stream4, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rcache_stream3, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rcache_stream2, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rcache_stream1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %pe4_job, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %pe3_job, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %pe2_job, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %pe1_job, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rm4_idle9, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rm3_idle8, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rm2_idle7, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %rm1_idle6, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %pe4_idle5, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %pe3_idle4, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %pe2_idle3, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %pe1_idle2, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i98 %p_A_element_as, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%temp_rcache_request_data_V_loc_load = load i160 %temp_rcache_request_data_V_loc"   --->   Operation 37 'load' 'temp_rcache_request_data_V_loc_load' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%temp_rcache_request_Acid_loc_load = load i32 %temp_rcache_request_Acid_loc"   --->   Operation 38 'load' 'temp_rcache_request_Acid_loc_load' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%temp_rcache_request_type_V_loc_load = load i2 %temp_rcache_request_type_V_loc"   --->   Operation 39 'load' 'temp_rcache_request_type_V_loc_load' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%temp_rcache_request_dest_V_loc_load = load i3 %temp_rcache_request_dest_V_loc"   --->   Operation 40 'load' 'temp_rcache_request_dest_V_loc_load' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%temp_pe_rid_loc_load = load i32 %temp_pe_rid_loc"   --->   Operation 41 'load' 'temp_pe_rid_loc_load' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%p_loc_load = load i32 %p_loc"   --->   Operation 42 'load' 'p_loc_load' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%empty_1663 = wait i32 @_ssdm_op_Wait"   --->   Operation 43 'wait' 'empty_1663' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%empty_1653 = wait i32 @_ssdm_op_Wait"   --->   Operation 43 'wait' 'empty_1653' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%p_s = bitconcatenate i66 @_ssdm_op_BitConcatenate.i66.i2.i32.i32, i2 2, i32 %temp_pe_rid_loc_load, i32 %p_loc_load" [./task_scheduler.h:158]   --->   Operation 44 'bitconcatenate' 'p_s' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 45 [1/1] (1.64ns)   --->   "%write_ln158 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %pe1_job, i66 %p_s" [./task_scheduler.h:158]   --->   Operation 45 'write' 'write_ln158' <Predicate = true> <Delay = 1.64> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.64> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 128> <FIFO>
 ST_4 : Operation 46 [1/1] (1.64ns)   --->   "%write_ln159 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %pe2_job, i66 %p_s" [./task_scheduler.h:159]   --->   Operation 46 'write' 'write_ln159' <Predicate = true> <Delay = 1.64> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.64> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 128> <FIFO>
 ST_4 : Operation 47 [1/1] (1.64ns)   --->   "%write_ln160 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %pe3_job, i66 %p_s" [./task_scheduler.h:160]   --->   Operation 47 'write' 'write_ln160' <Predicate = true> <Delay = 1.64> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.64> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 128> <FIFO>
 ST_4 : Operation 48 [1/1] (1.64ns)   --->   "%write_ln161 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %pe4_job, i66 %p_s" [./task_scheduler.h:161]   --->   Operation 48 'write' 'write_ln161' <Predicate = true> <Delay = 1.64> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.64> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 128> <FIFO>
-ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_234 = bitconcatenate i248 @_ssdm_op_BitConcatenate.i248.i160.i32.i32.i6.i2.i13.i3, i160 %temp_rcache_request_data_V_loc_load, i32 0, i32 %temp_rcache_request_Acid_loc_load, i6 0, i2 %temp_rcache_request_type_V_loc_load, i13 0, i3 %temp_rcache_request_dest_V_loc_load" [./task_scheduler.h:164]   --->   Operation 49 'bitconcatenate' 'tmp_234' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%or_ln164 = or i248 %tmp_234, i248 256" [./task_scheduler.h:164]   --->   Operation 50 'or' 'or_ln164' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_230 = bitconcatenate i248 @_ssdm_op_BitConcatenate.i248.i160.i32.i32.i6.i2.i13.i3, i160 %temp_rcache_request_data_V_loc_load, i32 0, i32 %temp_rcache_request_Acid_loc_load, i6 0, i2 %temp_rcache_request_type_V_loc_load, i13 0, i3 %temp_rcache_request_dest_V_loc_load" [./task_scheduler.h:164]   --->   Operation 49 'bitconcatenate' 'tmp_230' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%or_ln164 = or i248 %tmp_230, i248 256" [./task_scheduler.h:164]   --->   Operation 50 'or' 'or_ln164' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i248.i32, i248 %or_ln164, i32 8" [./task_scheduler.h:164]   --->   Operation 51 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_236 = partselect i2 @_ssdm_op_PartSelect.i2.i248.i32.i32, i248 %or_ln164, i32 16, i32 17" [./task_scheduler.h:164]   --->   Operation 52 'partselect' 'tmp_236' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_237 = partselect i224 @_ssdm_op_PartSelect.i224.i248.i32.i32, i248 %or_ln164, i32 24, i32 247" [./task_scheduler.h:164]   --->   Operation 53 'partselect' 'tmp_237' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i230 @_ssdm_op_BitConcatenate.i230.i224.i2.i1.i3, i224 %tmp_237, i2 %tmp_236, i1 %tmp, i3 %temp_rcache_request_dest_V_loc_load" [./task_scheduler.h:164]   --->   Operation 54 'bitconcatenate' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_232 = partselect i2 @_ssdm_op_PartSelect.i2.i248.i32.i32, i248 %or_ln164, i32 16, i32 17" [./task_scheduler.h:164]   --->   Operation 52 'partselect' 'tmp_232' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_233 = partselect i224 @_ssdm_op_PartSelect.i224.i248.i32.i32, i248 %or_ln164, i32 24, i32 247" [./task_scheduler.h:164]   --->   Operation 53 'partselect' 'tmp_233' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i230 @_ssdm_op_BitConcatenate.i230.i224.i2.i1.i3, i224 %tmp_233, i2 %tmp_232, i1 %tmp, i3 %temp_rcache_request_dest_V_loc_load" [./task_scheduler.h:164]   --->   Operation 54 'bitconcatenate' 'p_0' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 55 [1/1] (1.55ns)   --->   "%write_ln164 = write void @_ssdm_op_Write.ap_fifo.volatile.i230P0A, i230 %rcache_stream1, i230 %p_0" [./task_scheduler.h:164]   --->   Operation 55 'write' 'write_ln164' <Predicate = true> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 230> <Depth = 64> <FIFO>
 ST_4 : Operation 56 [1/1] (1.55ns)   --->   "%write_ln165 = write void @_ssdm_op_Write.ap_fifo.volatile.i230P0A, i230 %rcache_stream2, i230 %p_0" [./task_scheduler.h:165]   --->   Operation 56 'write' 'write_ln165' <Predicate = true> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 230> <Depth = 64> <FIFO>
 ST_4 : Operation 57 [1/1] (1.55ns)   --->   "%write_ln166 = write void @_ssdm_op_Write.ap_fifo.volatile.i230P0A, i230 %rcache_stream3, i230 %p_0" [./task_scheduler.h:166]   --->   Operation 57 'write' 'write_ln166' <Predicate = true> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 230> <Depth = 64> <FIFO>
@@ -225,17 +225,17 @@ temp_rcache_request_type_V_loc_load (load          ) [ 00000]
 temp_rcache_request_dest_V_loc_load (load          ) [ 00000]
 temp_pe_rid_loc_load                (load          ) [ 00000]
 p_loc_load                          (load          ) [ 00000]
-empty_1663                          (wait          ) [ 00000]
+empty_1653                          (wait          ) [ 00000]
 p_s                                 (bitconcatenate) [ 00000]
 write_ln158                         (write         ) [ 00000]
 write_ln159                         (write         ) [ 00000]
 write_ln160                         (write         ) [ 00000]
 write_ln161                         (write         ) [ 00000]
-tmp_234                             (bitconcatenate) [ 00000]
+tmp_230                             (bitconcatenate) [ 00000]
 or_ln164                            (or            ) [ 00000]
 tmp                                 (bitselect     ) [ 00000]
-tmp_236                             (partselect    ) [ 00000]
-tmp_237                             (partselect    ) [ 00000]
+tmp_232                             (partselect    ) [ 00000]
+tmp_233                             (partselect    ) [ 00000]
 p_0                                 (bitconcatenate) [ 00000]
 write_ln164                         (write         ) [ 00000]
 write_ln165                         (write         ) [ 00000]
@@ -539,7 +539,7 @@ ret_ln172                           (ret           ) [ 00000]
 <pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_56"/></StgValue>
+<StgValue><ssdm name="empty_91"/></StgValue>
 </bind>
 </comp>
 
@@ -557,7 +557,7 @@ ret_ln172                           (ret           ) [ 00000]
 <pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_86"/></StgValue>
+<StgValue><ssdm name="empty_141"/></StgValue>
 </bind>
 </comp>
 
@@ -1195,7 +1195,7 @@ ret_ln172                           (ret           ) [ 00000]
 </bind>
 </comp>
 
-<comp id="363" class="1004" name="tmp_234_fu_363">
+<comp id="363" class="1004" name="tmp_230_fu_363">
 <pin_list>
 <pin id="364" dir="0" index="0" bw="248" slack="0"/>
 <pin id="365" dir="0" index="1" bw="160" slack="0"/>
@@ -1209,7 +1209,7 @@ ret_ln172                           (ret           ) [ 00000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="tmp_234/4 "/>
+<opset="tmp_230/4 "/>
 </bind>
 </comp>
 
@@ -1238,7 +1238,7 @@ ret_ln172                           (ret           ) [ 00000]
 </bind>
 </comp>
 
-<comp id="395" class="1004" name="tmp_236_fu_395">
+<comp id="395" class="1004" name="tmp_232_fu_395">
 <pin_list>
 <pin id="396" dir="0" index="0" bw="2" slack="0"/>
 <pin id="397" dir="0" index="1" bw="248" slack="0"/>
@@ -1248,11 +1248,11 @@ ret_ln172                           (ret           ) [ 00000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_236/4 "/>
+<opset="tmp_232/4 "/>
 </bind>
 </comp>
 
-<comp id="405" class="1004" name="tmp_237_fu_405">
+<comp id="405" class="1004" name="tmp_233_fu_405">
 <pin_list>
 <pin id="406" dir="0" index="0" bw="224" slack="0"/>
 <pin id="407" dir="0" index="1" bw="248" slack="0"/>
@@ -1262,7 +1262,7 @@ ret_ln172                           (ret           ) [ 00000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_237/4 "/>
+<opset="tmp_233/4 "/>
 </bind>
 </comp>
 
@@ -1709,11 +1709,11 @@ ret_ln172                           (ret           ) [ 00000]
 		write_ln159 : 2
 		write_ln160 : 2
 		write_ln161 : 2
-		tmp_234 : 1
+		tmp_230 : 1
 		or_ln164 : 2
 		tmp : 2
-		tmp_236 : 2
-		tmp_237 : 2
+		tmp_232 : 2
+		tmp_233 : 2
 		p_0 : 3
 		write_ln164 : 4
 		write_ln165 : 4
@@ -1755,14 +1755,14 @@ ret_ln172                           (ret           ) [ 00000]
 |          |                    temp_avc_cid_fu_293                    |    0    |    0    |    0    |
 |          |                    temp_avc_rid_fu_303                    |    0    |    0    |    0    |
 |partselect|                    trunc_ln95_1_fu_321                    |    0    |    0    |    0    |
-|          |                       tmp_236_fu_395                      |    0    |    0    |    0    |
-|          |                       tmp_237_fu_405                      |    0    |    0    |    0    |
+|          |                       tmp_232_fu_395                      |    0    |    0    |    0    |
+|          |                       tmp_233_fu_405                      |    0    |    0    |    0    |
 |----------|-----------------------------------------------------------|---------|---------|---------|
 | bitselect|                    temp_avc_end_fu_313                    |    0    |    0    |    0    |
 |          |                         tmp_fu_387                        |    0    |    0    |    0    |
 |----------|-----------------------------------------------------------|---------|---------|---------|
 |          |                         p_s_fu_349                        |    0    |    0    |    0    |
-|bitconcatenate|                       tmp_234_fu_363                      |    0    |    0    |    0    |
+|bitconcatenate|                       tmp_230_fu_363                      |    0    |    0    |    0    |
 |          |                         p_0_fu_415                        |    0    |    0    |    0    |
 |----------|-----------------------------------------------------------|---------|---------|---------|
 |    or    |                      or_ln164_fu_381                      |    0    |    0    |    0    |

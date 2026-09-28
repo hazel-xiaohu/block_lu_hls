@@ -1,0 +1,293 @@
+---
+MainSourceFile:  /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1211_1:  '
+    FileOffset:      1211
+    FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          153910
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          361430
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          361869
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          362309
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1245_1:  '
+    FileOffset:      1245
+    FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          624186
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1245_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_24_1:  '
+    FileOffset:      24
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          989765
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_24_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_92_1:  '
+    FileOffset:      92
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          991388
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_92_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_162_1:  '
+    FileOffset:      162
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          993496
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_162_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_210_1:  '
+    FileOffset:      210
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          994514
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_210_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_278_1:  '
+    FileOffset:      278
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          996144
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_278_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_309_1:  '
+    FileOffset:      309
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          996876
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_309_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_345_1:  '
+    FileOffset:      345
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          997773
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_345_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_369_1:  '
+    FileOffset:      369
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          998356
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_369_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_410_1:  '
+    FileOffset:      410
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          999321
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_410_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_477_1:  '
+    FileOffset:      477
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1000854
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_477_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_529_1:  '
+    FileOffset:      529
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1001828
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_529_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_591_1:  '
+    FileOffset:      591
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1003029
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_591_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_665_1:  '
+    FileOffset:      665
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1004615
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_665_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_711_1:  '
+    FileOffset:      711
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1005623
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_711_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_756_1:  '
+    FileOffset:      756
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1006506
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_756_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_769_2:  '
+    FileOffset:      769
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1006789
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_769_2: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fadd + fulldsp is invalid combination for bind_op'
+    FileOffset:      799
+    FilePath:        util.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_831_1:  '
+    FileOffset:      831
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1008152
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_831_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_842_2:  '
+    FileOffset:      842
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1008412
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_842_2: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, fadd + fulldsp is invalid combination for bind_op'
+    FileOffset:      870
+    FilePath:        util.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_900_1:  '
+    FileOffset:      900
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1009712
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_900_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_906_2:  '
+    FileOffset:      906
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1009848
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_906_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_931_1:  '
+    FileOffset:      931
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1010356
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_931_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_946_1:  '
+    FileOffset:      946
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1010651
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_946_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_951_2:  '
+    FileOffset:      951
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1010800
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_951_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_973_1:  '
+    FileOffset:      973
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1011288
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_973_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_980_2:  '
+    FileOffset:      980
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1011519
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_980_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_983_3:  '
+    FileOffset:      983
+    FilePath:        util.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/util.pp.0.cpp
+        Offset:          1011636
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_983_3: '
+...

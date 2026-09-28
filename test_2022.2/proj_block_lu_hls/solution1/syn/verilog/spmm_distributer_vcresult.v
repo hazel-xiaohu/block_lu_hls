@@ -111,7 +111,7 @@ reg    vresult215_blk_n;
 reg    vresult316_blk_n;
 reg    vresult417_blk_n;
 reg    ap_block_pp0_stage0_11001;
-reg   [1023:0] trunc_ln352_4_reg_139;
+reg   [1023:0] trunc_ln348_4_reg_139;
 reg    ap_block_pp0_stage0_01001;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -179,7 +179,7 @@ end
 always @ (posedge ap_clk) begin
     if (((tmp_nbreadreq_fu_62_p3 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         temp_peID_V_reg_135 <= {{vcache_bank1_vresult1_dout[6:4]}};
-        trunc_ln352_4_reg_139 <= {{vcache_bank1_vresult1_dout[1030:7]}};
+        trunc_ln348_4_reg_139 <= {{vcache_bank1_vresult1_dout[1030:7]}};
     end
 end
 
@@ -370,12 +370,12 @@ assign enable_fu_104_p1 = vcache_bank1_vresult1_dout[0:0];
 
 assign tmp_nbreadreq_fu_62_p3 = vcache_bank1_vresult1_empty_n;
 
-assign vresult114_din = trunc_ln352_4_reg_139;
+assign vresult114_din = trunc_ln348_4_reg_139;
 
-assign vresult215_din = trunc_ln352_4_reg_139;
+assign vresult215_din = trunc_ln348_4_reg_139;
 
-assign vresult316_din = trunc_ln352_4_reg_139;
+assign vresult316_din = trunc_ln348_4_reg_139;
 
-assign vresult417_din = trunc_ln352_4_reg_139;
+assign vresult417_din = trunc_ln348_4_reg_139;
 
 endmodule //spmm_distributer_vcresult

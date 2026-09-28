@@ -6,7 +6,7 @@
         logic [1:0] pre_states_valid;
         logic [FSM_WIDTH-1:0] pre_loop_state0;
         logic [FSM_WIDTH-1:0] pre_loop_state1;
-        logic [14:0] post_states_valid;
+        logic [13:0] post_states_valid;
         logic [FSM_WIDTH-1:0] post_loop_state0;
         logic [FSM_WIDTH-1:0] post_loop_state1;
         logic [FSM_WIDTH-1:0] post_loop_state2;
@@ -21,7 +21,6 @@
         logic [FSM_WIDTH-1:0] post_loop_state11;
         logic [FSM_WIDTH-1:0] post_loop_state12;
         logic [FSM_WIDTH-1:0] post_loop_state13;
-        logic [FSM_WIDTH-1:0] post_loop_state14;
         logic [1:0] quit_states_valid;
         logic [FSM_WIDTH-1:0] quit_loop_state0;
         logic [FSM_WIDTH-1:0] quit_loop_state1;

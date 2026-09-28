@@ -4,14 +4,6 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
     input dl_reset,
     input dl_clock,
     input [PROC_NUM - 1:0] dl_in_vec,
-    input [15:0] trans_in_cnt_0,
-    input [15:0] trans_out_cnt_0,
-    input [15:0] trans_in_cnt_1,
-    input [15:0] trans_out_cnt_1,
-    input [15:0] trans_in_cnt_2,
-    input [15:0] trans_out_cnt_2,
-    input [15:0] trans_in_cnt_3,
-    input [15:0] trans_out_cnt_3,
     input ap_done_reg_0,
     input ap_done_reg_1,
     input ap_done_reg_2,
@@ -656,48 +648,24 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                     proc_path = "spmm.merger_U0";
                 end
                 132 : begin
-                    proc_path = "spmm.merger_U0.merge_controller_U0";
-                end
-                133 : begin
-                    proc_path = "spmm.merger_U0.merge_two_sub_U0";
-                end
-                134 : begin
                     proc_path = "spmm.merger_50_U0";
                 end
-                135 : begin
-                    proc_path = "spmm.merger_50_U0.merge_controller_100_U0";
-                end
-                136 : begin
-                    proc_path = "spmm.merger_50_U0.merge_two_sub_101_U0";
-                end
-                137 : begin
+                133 : begin
                     proc_path = "spmm.merger_51_U0";
                 end
-                138 : begin
-                    proc_path = "spmm.merger_51_U0.merge_controller_102_U0";
-                end
-                139 : begin
-                    proc_path = "spmm.merger_51_U0.merge_two_sub_103_U0";
-                end
-                140 : begin
+                134 : begin
                     proc_path = "spmm.merger_52_U0";
                 end
-                141 : begin
-                    proc_path = "spmm.merger_52_U0.merge_controller_104_U0";
-                end
-                142 : begin
-                    proc_path = "spmm.merger_52_U0.merge_two_sub_105_U0";
-                end
-                143 : begin
+                135 : begin
                     proc_path = "spmm.sub_final_merger_U0";
                 end
-                144 : begin
+                136 : begin
                     proc_path = "spmm.sub_final_merger_53_U0";
                 end
-                145 : begin
+                137 : begin
                     proc_path = "spmm.final_merger_U0";
                 end
-                146 : begin
+                138 : begin
                     proc_path = "spmm.write_C_sub_U0";
                 end
                 default : begin
@@ -751,7 +719,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
 
     // print one channel component in the cycle
     task print_cycle_chan_comp(input [PROC_NUM - 1:0] dl_vec1, input [PROC_NUM - 1:0] dl_vec2);
-        reg [480:0] chan_path;
+        reg [408:0] chan_path;
         integer index1;
         integer index2;
         begin
@@ -1052,7 +1020,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_entry_proc_U0_ap_ready & AESL_inst_spmm.entry_proc_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -1140,7 +1108,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_A_row_reader_U0_ap_ready & AESL_inst_spmm.A_row_reader_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -1245,7 +1213,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_prepare_b_rcsr_U0_ap_ready & AESL_inst_spmm.prepare_b_rcsr_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -1362,7 +1330,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_A_element_filter_U0_ap_ready & AESL_inst_spmm.A_element_filter_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -1628,7 +1596,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     29: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_U0.rrequest_merger_U0.grp_rrequest_merger_Pipeline_VITIS_LOOP_125_1_fu_77.rrequest1_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_U0.rrequest_merger_U0.grp_rrequest_merger_Pipeline_VITIS_LOOP_129_1_fu_77.rrequest1_blk_n) begin
                             if (~AESL_inst_spmm.rrequest1_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rrequest1_U' written by process 'spmm.merge_4_to_1_rrequest_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rrequest1_U");
@@ -1857,7 +1825,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 9 : begin
                     case(index2)
                     7: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_U0.rrequest_merger_U0.grp_rrequest_merger_Pipeline_VITIS_LOOP_125_1_fu_77.r_first_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_U0.rrequest_merger_U0.grp_rrequest_merger_Pipeline_VITIS_LOOP_129_1_fu_77.r_first_blk_n) begin
                             if (~AESL_inst_spmm.rcrequest_manager_U0.r_first_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rcrequest_manager_U0.r_first_U' written by process 'spmm.rcrequest_manager_U0.rrequest_manager_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rcrequest_manager_U0.r_first_U");
@@ -1871,7 +1839,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     8: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_U0.rrequest_merger_U0.grp_rrequest_merger_Pipeline_VITIS_LOOP_125_1_fu_77.r_req_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_U0.rrequest_merger_U0.grp_rrequest_merger_Pipeline_VITIS_LOOP_129_1_fu_77.r_req_blk_n) begin
                             if (~AESL_inst_spmm.rcrequest_manager_U0.r_req_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rcrequest_manager_U0.r_req_U' written by process 'spmm.rcrequest_manager_U0.rschedule_access_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rcrequest_manager_U0.r_req_U");
@@ -1973,7 +1941,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     29: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_1_U0.rrequest_merger_57_U0.grp_rrequest_merger_57_Pipeline_VITIS_LOOP_125_1_fu_77.rrequest2_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_1_U0.rrequest_merger_57_U0.grp_rrequest_merger_57_Pipeline_VITIS_LOOP_129_1_fu_77.rrequest2_blk_n) begin
                             if (~AESL_inst_spmm.rrequest2_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rrequest2_U' written by process 'spmm.merge_4_to_1_rrequest_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rrequest2_U");
@@ -2084,7 +2052,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_rcrequest_manager_1_U0_ap_ready & AESL_inst_spmm.rcrequest_manager_1_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -2249,7 +2217,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 15 : begin
                     case(index2)
                     13: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_1_U0.rrequest_merger_57_U0.grp_rrequest_merger_57_Pipeline_VITIS_LOOP_125_1_fu_77.r_first_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_1_U0.rrequest_merger_57_U0.grp_rrequest_merger_57_Pipeline_VITIS_LOOP_129_1_fu_77.r_first_blk_n) begin
                             if (~AESL_inst_spmm.rcrequest_manager_1_U0.r_first_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rcrequest_manager_1_U0.r_first_U' written by process 'spmm.rcrequest_manager_1_U0.rrequest_manager_55_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rcrequest_manager_1_U0.r_first_U");
@@ -2263,7 +2231,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     14: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_1_U0.rrequest_merger_57_U0.grp_rrequest_merger_57_Pipeline_VITIS_LOOP_125_1_fu_77.r_req_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_1_U0.rrequest_merger_57_U0.grp_rrequest_merger_57_Pipeline_VITIS_LOOP_129_1_fu_77.r_req_blk_n) begin
                             if (~AESL_inst_spmm.rcrequest_manager_1_U0.r_req_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rcrequest_manager_1_U0.r_req_U' written by process 'spmm.rcrequest_manager_1_U0.rschedule_access_56_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rcrequest_manager_1_U0.r_req_U");
@@ -2365,7 +2333,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     29: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_2_U0.rrequest_merger_62_U0.grp_rrequest_merger_62_Pipeline_VITIS_LOOP_125_1_fu_77.rrequest3_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_2_U0.rrequest_merger_62_U0.grp_rrequest_merger_62_Pipeline_VITIS_LOOP_129_1_fu_77.rrequest3_blk_n) begin
                             if (~AESL_inst_spmm.rrequest3_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rrequest3_U' written by process 'spmm.merge_4_to_1_rrequest_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rrequest3_U");
@@ -2476,7 +2444,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_rcrequest_manager_2_U0_ap_ready & AESL_inst_spmm.rcrequest_manager_2_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -2641,7 +2609,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 21 : begin
                     case(index2)
                     19: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_2_U0.rrequest_merger_62_U0.grp_rrequest_merger_62_Pipeline_VITIS_LOOP_125_1_fu_77.r_first_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_2_U0.rrequest_merger_62_U0.grp_rrequest_merger_62_Pipeline_VITIS_LOOP_129_1_fu_77.r_first_blk_n) begin
                             if (~AESL_inst_spmm.rcrequest_manager_2_U0.r_first_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rcrequest_manager_2_U0.r_first_U' written by process 'spmm.rcrequest_manager_2_U0.rrequest_manager_60_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rcrequest_manager_2_U0.r_first_U");
@@ -2655,7 +2623,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     20: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_2_U0.rrequest_merger_62_U0.grp_rrequest_merger_62_Pipeline_VITIS_LOOP_125_1_fu_77.r_req_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_2_U0.rrequest_merger_62_U0.grp_rrequest_merger_62_Pipeline_VITIS_LOOP_129_1_fu_77.r_req_blk_n) begin
                             if (~AESL_inst_spmm.rcrequest_manager_2_U0.r_req_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rcrequest_manager_2_U0.r_req_U' written by process 'spmm.rcrequest_manager_2_U0.rschedule_access_61_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rcrequest_manager_2_U0.r_req_U");
@@ -2757,7 +2725,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     29: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_3_U0.rrequest_merger_67_U0.grp_rrequest_merger_67_Pipeline_VITIS_LOOP_125_1_fu_77.rrequest4_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_3_U0.rrequest_merger_67_U0.grp_rrequest_merger_67_Pipeline_VITIS_LOOP_129_1_fu_77.rrequest4_blk_n) begin
                             if (~AESL_inst_spmm.rrequest4_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rrequest4_U' written by process 'spmm.merge_4_to_1_rrequest_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rrequest4_U");
@@ -2868,7 +2836,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_rcrequest_manager_3_U0_ap_ready & AESL_inst_spmm.rcrequest_manager_3_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -3033,7 +3001,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 27 : begin
                     case(index2)
                     25: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_3_U0.rrequest_merger_67_U0.grp_rrequest_merger_67_Pipeline_VITIS_LOOP_125_1_fu_77.r_first_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_3_U0.rrequest_merger_67_U0.grp_rrequest_merger_67_Pipeline_VITIS_LOOP_129_1_fu_77.r_first_blk_n) begin
                             if (~AESL_inst_spmm.rcrequest_manager_3_U0.r_first_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rcrequest_manager_3_U0.r_first_U' written by process 'spmm.rcrequest_manager_3_U0.rrequest_manager_65_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rcrequest_manager_3_U0.r_first_U");
@@ -3047,7 +3015,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     26: begin
-                        if (~AESL_inst_spmm.rcrequest_manager_3_U0.rrequest_merger_67_U0.grp_rrequest_merger_67_Pipeline_VITIS_LOOP_125_1_fu_77.r_req_blk_n) begin
+                        if (~AESL_inst_spmm.rcrequest_manager_3_U0.rrequest_merger_67_U0.grp_rrequest_merger_67_Pipeline_VITIS_LOOP_129_1_fu_77.r_req_blk_n) begin
                             if (~AESL_inst_spmm.rcrequest_manager_3_U0.r_req_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rcrequest_manager_3_U0.r_req_U' written by process 'spmm.rcrequest_manager_3_U0.rschedule_access_66_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rcrequest_manager_3_U0.r_req_U");
@@ -3265,7 +3233,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 30 : begin
                     case(index2)
                     29: begin
-                        if (~AESL_inst_spmm.request_to_rbanks_U0.grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162.rrequestf_blk_n) begin
+                        if (~AESL_inst_spmm.request_to_rbanks_U0.grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162.rrequestf_blk_n) begin
                             if (~AESL_inst_spmm.rrequestf_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.rrequestf_U' written by process 'spmm.merge_4_to_1_rrequest_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.rrequestf_U");
@@ -3521,7 +3489,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_3 & AESL_inst_spmm.rcache_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -3699,7 +3667,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_4 & AESL_inst_spmm.rcache_4_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -3877,7 +3845,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_5 & AESL_inst_spmm.rcache_5_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -4055,7 +4023,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_6 & AESL_inst_spmm.rcache_6_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -4545,7 +4513,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_7 & AESL_inst_spmm.merge_4_to_1_mi_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -4739,7 +4707,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_8 & AESL_inst_spmm.merge_4_to_1_mi_10_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -4933,7 +4901,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_9 & AESL_inst_spmm.merge_4_to_1_mi_11_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -5127,7 +5095,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_10 & AESL_inst_spmm.merge_4_to_1_mi_12_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -5631,7 +5599,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_11 & AESL_inst_spmm.merge_4_to_1_rresponse_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -5839,7 +5807,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_12 & AESL_inst_spmm.merge_4_to_1_rresponse_16_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -6047,7 +6015,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_13 & AESL_inst_spmm.merge_4_to_1_rresponse_17_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -6255,7 +6223,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_14 & AESL_inst_spmm.merge_4_to_1_rresponse_18_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -6726,7 +6694,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_generate_data_U0_ap_ready & AESL_inst_spmm.generate_data_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -6845,7 +6813,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_generate_data_22_U0_ap_ready & AESL_inst_spmm.generate_data_22_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -6964,7 +6932,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_generate_data_23_U0_ap_ready & AESL_inst_spmm.generate_data_23_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -7083,7 +7051,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_generate_data_24_U0_ap_ready & AESL_inst_spmm.generate_data_24_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -7286,7 +7254,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_vcrequest_manager_U0_ap_ready & AESL_inst_spmm.vcrequest_manager_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -8087,7 +8055,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_vcrequest_manager_25_U0_ap_ready & AESL_inst_spmm.vcrequest_manager_25_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -8888,7 +8856,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_27_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_vcrequest_manager_26_U0_ap_ready & AESL_inst_spmm.vcrequest_manager_26_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -9689,7 +9657,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by input sync logic with process : 'spmm.vcrequest_manager_26_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (AESL_inst_spmm.ap_sync_vcrequest_manager_27_U0_ap_ready & AESL_inst_spmm.vcrequest_manager_27_U0.ap_idle & ~AESL_inst_spmm.ap_sync_write_C_sub_U0_ap_ready) begin
                             $display("//      Blocked by input sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -11041,7 +11009,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 107 : begin
                     case(index2)
                     99: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_U0.grp_merge_4_to_1_vcrequest_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank1_pe1_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_U0.grp_merge_4_to_1_vcrequest_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank1_pe1_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank1_pe1_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank1_pe1_U' written by process 'spmm.request_to_vcbanks_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank1_pe1_U");
@@ -11055,7 +11023,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     100: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_U0.grp_merge_4_to_1_vcrequest_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank1_pe2_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_U0.grp_merge_4_to_1_vcrequest_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank1_pe2_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank1_pe2_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank1_pe2_U' written by process 'spmm.request_to_vcbanks_28_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank1_pe2_U");
@@ -11069,7 +11037,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     101: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_U0.grp_merge_4_to_1_vcrequest_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank1_pe3_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_U0.grp_merge_4_to_1_vcrequest_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank1_pe3_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank1_pe3_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank1_pe3_U' written by process 'spmm.request_to_vcbanks_29_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank1_pe3_U");
@@ -11083,7 +11051,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     102: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_U0.grp_merge_4_to_1_vcrequest_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank1_pe4_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_U0.grp_merge_4_to_1_vcrequest_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank1_pe4_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank1_pe4_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank1_pe4_U' written by process 'spmm.request_to_vcbanks_30_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank1_pe4_U");
@@ -11115,7 +11083,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 108 : begin
                     case(index2)
                     99: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_35_U0.grp_merge_4_to_1_vcrequest_35_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank2_pe1_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_35_U0.grp_merge_4_to_1_vcrequest_35_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank2_pe1_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank2_pe1_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank2_pe1_U' written by process 'spmm.request_to_vcbanks_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank2_pe1_U");
@@ -11129,7 +11097,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     100: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_35_U0.grp_merge_4_to_1_vcrequest_35_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank2_pe2_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_35_U0.grp_merge_4_to_1_vcrequest_35_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank2_pe2_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank2_pe2_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank2_pe2_U' written by process 'spmm.request_to_vcbanks_28_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank2_pe2_U");
@@ -11143,7 +11111,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     101: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_35_U0.grp_merge_4_to_1_vcrequest_35_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank2_pe3_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_35_U0.grp_merge_4_to_1_vcrequest_35_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank2_pe3_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank2_pe3_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank2_pe3_U' written by process 'spmm.request_to_vcbanks_29_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank2_pe3_U");
@@ -11157,7 +11125,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     102: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_35_U0.grp_merge_4_to_1_vcrequest_35_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank2_pe4_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_35_U0.grp_merge_4_to_1_vcrequest_35_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank2_pe4_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank2_pe4_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank2_pe4_U' written by process 'spmm.request_to_vcbanks_30_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank2_pe4_U");
@@ -11189,7 +11157,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 109 : begin
                     case(index2)
                     103: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_36_U0.grp_merge_4_to_1_vcrequest_36_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank1_pe5_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_36_U0.grp_merge_4_to_1_vcrequest_36_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank1_pe5_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank1_pe5_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank1_pe5_U' written by process 'spmm.request_to_vcbanks_31_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank1_pe5_U");
@@ -11203,7 +11171,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     104: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_36_U0.grp_merge_4_to_1_vcrequest_36_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank1_pe6_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_36_U0.grp_merge_4_to_1_vcrequest_36_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank1_pe6_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank1_pe6_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank1_pe6_U' written by process 'spmm.request_to_vcbanks_32_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank1_pe6_U");
@@ -11217,7 +11185,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     105: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_36_U0.grp_merge_4_to_1_vcrequest_36_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank1_pe7_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_36_U0.grp_merge_4_to_1_vcrequest_36_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank1_pe7_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank1_pe7_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank1_pe7_U' written by process 'spmm.request_to_vcbanks_33_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank1_pe7_U");
@@ -11231,7 +11199,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     106: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_36_U0.grp_merge_4_to_1_vcrequest_36_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank1_pe8_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_36_U0.grp_merge_4_to_1_vcrequest_36_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank1_pe8_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank1_pe8_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank1_pe8_U' written by process 'spmm.request_to_vcbanks_34_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank1_pe8_U");
@@ -11263,7 +11231,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 110 : begin
                     case(index2)
                     103: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_37_U0.grp_merge_4_to_1_vcrequest_37_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank2_pe5_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_37_U0.grp_merge_4_to_1_vcrequest_37_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank2_pe5_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank2_pe5_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank2_pe5_U' written by process 'spmm.request_to_vcbanks_31_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank2_pe5_U");
@@ -11277,7 +11245,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     104: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_37_U0.grp_merge_4_to_1_vcrequest_37_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank2_pe6_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_37_U0.grp_merge_4_to_1_vcrequest_37_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank2_pe6_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank2_pe6_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank2_pe6_U' written by process 'spmm.request_to_vcbanks_32_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank2_pe6_U");
@@ -11291,7 +11259,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     105: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_37_U0.grp_merge_4_to_1_vcrequest_37_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank2_pe7_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_37_U0.grp_merge_4_to_1_vcrequest_37_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank2_pe7_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank2_pe7_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank2_pe7_U' written by process 'spmm.request_to_vcbanks_33_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank2_pe7_U");
@@ -11305,7 +11273,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     106: begin
-                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_37_U0.grp_merge_4_to_1_vcrequest_37_Pipeline_VITIS_LOOP_214_1_fu_125.vccache_re_bank2_pe8_blk_n) begin
+                        if (~AESL_inst_spmm.merge_4_to_1_vcrequest_37_U0.grp_merge_4_to_1_vcrequest_37_Pipeline_VITIS_LOOP_210_1_fu_125.vccache_re_bank2_pe8_blk_n) begin
                             if (~AESL_inst_spmm.vccache_re_bank2_pe8_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vccache_re_bank2_pe8_U' written by process 'spmm.request_to_vcbanks_34_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vccache_re_bank2_pe8_U");
@@ -11507,7 +11475,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_15 & AESL_inst_spmm.vcache_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -11687,7 +11655,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_16 & AESL_inst_spmm.vcache_38_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -11867,7 +11835,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_17 & AESL_inst_spmm.ccache_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -12047,7 +12015,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_18 & AESL_inst_spmm.ccache_39_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -12057,7 +12025,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 115 : begin
                     case(index2)
                     111: begin
-                        if (~AESL_inst_spmm.merge_2_to_1_vcresponse_U0.grp_merge_2_to_1_vcresponse_Pipeline_VITIS_LOOP_715_1_fu_57.vcache_bank1_vres_blk_n) begin
+                        if (~AESL_inst_spmm.merge_2_to_1_vcresponse_U0.grp_merge_2_to_1_vcresponse_Pipeline_VITIS_LOOP_711_1_fu_57.vcache_bank1_vres_blk_n) begin
                             if (~AESL_inst_spmm.vcache_bank1_vres_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vcache_bank1_vres_U' written by process 'spmm.vcache_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vcache_bank1_vres_U");
@@ -12071,7 +12039,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     112: begin
-                        if (~AESL_inst_spmm.merge_2_to_1_vcresponse_U0.grp_merge_2_to_1_vcresponse_Pipeline_VITIS_LOOP_715_1_fu_57.vcache_bank2_vres_blk_n) begin
+                        if (~AESL_inst_spmm.merge_2_to_1_vcresponse_U0.grp_merge_2_to_1_vcresponse_Pipeline_VITIS_LOOP_711_1_fu_57.vcache_bank2_vres_blk_n) begin
                             if (~AESL_inst_spmm.vcache_bank2_vres_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vcache_bank2_vres_U' written by process 'spmm.vcache_38_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vcache_bank2_vres_U");
@@ -12103,7 +12071,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 116 : begin
                     case(index2)
                     113: begin
-                        if (~AESL_inst_spmm.merge_2_to_1_vcresponse_40_U0.grp_merge_2_to_1_vcresponse_40_Pipeline_VITIS_LOOP_715_1_fu_57.vcache_bank3_cres_blk_n) begin
+                        if (~AESL_inst_spmm.merge_2_to_1_vcresponse_40_U0.grp_merge_2_to_1_vcresponse_40_Pipeline_VITIS_LOOP_711_1_fu_57.vcache_bank3_cres_blk_n) begin
                             if (~AESL_inst_spmm.vcache_bank3_cres_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vcache_bank3_cres_U' written by process 'spmm.ccache_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vcache_bank3_cres_U");
@@ -12117,7 +12085,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     114: begin
-                        if (~AESL_inst_spmm.merge_2_to_1_vcresponse_40_U0.grp_merge_2_to_1_vcresponse_40_Pipeline_VITIS_LOOP_715_1_fu_57.vcache_bank4_cres_blk_n) begin
+                        if (~AESL_inst_spmm.merge_2_to_1_vcresponse_40_U0.grp_merge_2_to_1_vcresponse_40_Pipeline_VITIS_LOOP_711_1_fu_57.vcache_bank4_cres_blk_n) begin
                             if (~AESL_inst_spmm.vcache_bank4_cres_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vcache_bank4_cres_U' written by process 'spmm.ccache_39_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vcache_bank4_cres_U");
@@ -12149,7 +12117,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 117 : begin
                     case(index2)
                     115: begin
-                        if (~AESL_inst_spmm.distributer_vcresponse_U0.grp_distributer_vcresponse_Pipeline_VITIS_LOOP_282_1_fu_82.vcache_res_vfinal_blk_n) begin
+                        if (~AESL_inst_spmm.distributer_vcresponse_U0.grp_distributer_vcresponse_Pipeline_VITIS_LOOP_278_1_fu_82.vcache_res_vfinal_blk_n) begin
                             if (~AESL_inst_spmm.vcache_res_vfinal_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vcache_res_vfinal_U' written by process 'spmm.merge_2_to_1_vcresponse_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vcache_res_vfinal_U");
@@ -12389,7 +12357,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_19 & AESL_inst_spmm.distributer_vcresponse_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -12399,7 +12367,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 118 : begin
                     case(index2)
                     116: begin
-                        if (~AESL_inst_spmm.distributer_vcresponse_41_U0.grp_distributer_vcresponse_41_Pipeline_VITIS_LOOP_282_1_fu_82.vcache_res_cfinal_blk_n) begin
+                        if (~AESL_inst_spmm.distributer_vcresponse_41_U0.grp_distributer_vcresponse_41_Pipeline_VITIS_LOOP_278_1_fu_82.vcache_res_cfinal_blk_n) begin
                             if (~AESL_inst_spmm.vcache_res_cfinal_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vcache_res_cfinal_U' written by process 'spmm.merge_2_to_1_vcresponse_40_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vcache_res_cfinal_U");
@@ -12639,7 +12607,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_20 & AESL_inst_spmm.distributer_vcresponse_41_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -12649,7 +12617,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 119 : begin
                     case(index2)
                     111: begin
-                        if (~AESL_inst_spmm.merge_2_to_1_vcresult_U0.grp_merge_2_to_1_vcresult_Pipeline_VITIS_LOOP_533_1_fu_81.vcache_bank1_result_blk_n) begin
+                        if (~AESL_inst_spmm.merge_2_to_1_vcresult_U0.grp_merge_2_to_1_vcresult_Pipeline_VITIS_LOOP_529_1_fu_81.vcache_bank1_result_blk_n) begin
                             if (~AESL_inst_spmm.vcache_bank1_result_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vcache_bank1_result_U' written by process 'spmm.vcache_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vcache_bank1_result_U");
@@ -12663,7 +12631,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     112: begin
-                        if (~AESL_inst_spmm.merge_2_to_1_vcresult_U0.grp_merge_2_to_1_vcresult_Pipeline_VITIS_LOOP_533_1_fu_81.vcache_bank2_result_blk_n) begin
+                        if (~AESL_inst_spmm.merge_2_to_1_vcresult_U0.grp_merge_2_to_1_vcresult_Pipeline_VITIS_LOOP_529_1_fu_81.vcache_bank2_result_blk_n) begin
                             if (~AESL_inst_spmm.vcache_bank2_result_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vcache_bank2_result_U' written by process 'spmm.vcache_38_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vcache_bank2_result_U");
@@ -12695,7 +12663,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 120 : begin
                     case(index2)
                     113: begin
-                        if (~AESL_inst_spmm.merge_2_to_1_vcresult_42_U0.grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81.vcache_bank3_result_blk_n) begin
+                        if (~AESL_inst_spmm.merge_2_to_1_vcresult_42_U0.grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81.vcache_bank3_result_blk_n) begin
                             if (~AESL_inst_spmm.vcache_bank3_result_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vcache_bank3_result_U' written by process 'spmm.ccache_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vcache_bank3_result_U");
@@ -12709,7 +12677,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     114: begin
-                        if (~AESL_inst_spmm.merge_2_to_1_vcresult_42_U0.grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81.vcache_bank4_result_blk_n) begin
+                        if (~AESL_inst_spmm.merge_2_to_1_vcresult_42_U0.grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81.vcache_bank4_result_blk_n) begin
                             if (~AESL_inst_spmm.vcache_bank4_result_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.vcache_bank4_result_U' written by process 'spmm.ccache_39_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.vcache_bank4_result_U");
@@ -12981,7 +12949,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_21 & AESL_inst_spmm.distributer_vcresult_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -13231,7 +13199,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_22 & AESL_inst_spmm.distributer_vcresult_43_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -13400,34 +13368,6 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    132: begin
-                        if (~AESL_inst_spmm.pe_U0.mc_pe1_blk_n) begin
-                            if (~AESL_inst_spmm.mc_pe1_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe1_U' written by process 'spmm.merger_U0.merge_controller_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe1_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.mc_pe1_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.mc_pe1_U' read by process 'spmm.merger_U0.merge_controller_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe1_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    133: begin
-                        if (~AESL_inst_spmm.pe_U0.efinish122_blk_n) begin
-                            if (~AESL_inst_spmm.efinish1_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.efinish1_U' written by process 'spmm.merger_U0.merge_two_sub_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish1_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.efinish1_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.efinish1_U' read by process 'spmm.merger_U0.merge_two_sub_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish1_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
                     31: begin
                         if (ap_done_reg_23 & AESL_inst_spmm.pe_U0.ap_done & ~AESL_inst_spmm.rcache_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.rcache_U0'");
@@ -13543,7 +13483,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_23 & AESL_inst_spmm.pe_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -13686,7 +13626,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    134: begin
+                    132: begin
                         if (~AESL_inst_spmm.pe_44_U0.mc_pe2_blk_n) begin
                             if (~AESL_inst_spmm.mc_pe2_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.mc_pe2_U' written by process 'spmm.merger_50_U0'");
@@ -13707,34 +13647,6 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                             else if (~AESL_inst_spmm.efinish2_U.if_full_n) begin
                                 $display("//      Blocked by full output FIFO 'spmm.efinish2_U' read by process 'spmm.merger_50_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish2_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    135: begin
-                        if (~AESL_inst_spmm.pe_44_U0.mc_pe2_blk_n) begin
-                            if (~AESL_inst_spmm.mc_pe2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe2_U' written by process 'spmm.merger_50_U0.merge_controller_100_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.mc_pe2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.mc_pe2_U' read by process 'spmm.merger_50_U0.merge_controller_100_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    136: begin
-                        if (~AESL_inst_spmm.pe_44_U0.efinish223_blk_n) begin
-                            if (~AESL_inst_spmm.efinish2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.efinish2_U' written by process 'spmm.merger_50_U0.merge_two_sub_101_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish2_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.efinish2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.efinish2_U' read by process 'spmm.merger_50_U0.merge_two_sub_101_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.efinish2_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -13855,7 +13767,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_24 & AESL_inst_spmm.pe_44_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -13998,7 +13910,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    137: begin
+                    133: begin
                         if (~AESL_inst_spmm.pe_45_U0.mc_pe3_blk_n) begin
                             if (~AESL_inst_spmm.mc_pe3_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.mc_pe3_U' written by process 'spmm.merger_51_U0'");
@@ -14019,34 +13931,6 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                             else if (~AESL_inst_spmm.efinish3_U.if_full_n) begin
                                 $display("//      Blocked by full output FIFO 'spmm.efinish3_U' read by process 'spmm.merger_51_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    138: begin
-                        if (~AESL_inst_spmm.pe_45_U0.mc_pe3_blk_n) begin
-                            if (~AESL_inst_spmm.mc_pe3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe3_U' written by process 'spmm.merger_51_U0.merge_controller_102_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.mc_pe3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.mc_pe3_U' read by process 'spmm.merger_51_U0.merge_controller_102_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    139: begin
-                        if (~AESL_inst_spmm.pe_45_U0.efinish324_blk_n) begin
-                            if (~AESL_inst_spmm.efinish3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.efinish3_U' written by process 'spmm.merger_51_U0.merge_two_sub_103_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.efinish3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.efinish3_U' read by process 'spmm.merger_51_U0.merge_two_sub_103_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.efinish3_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -14167,7 +14051,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_46_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_25 & AESL_inst_spmm.pe_45_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -14310,7 +14194,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    140: begin
+                    134: begin
                         if (~AESL_inst_spmm.pe_46_U0.mc_pe4_blk_n) begin
                             if (~AESL_inst_spmm.mc_pe4_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.mc_pe4_U' written by process 'spmm.merger_52_U0'");
@@ -14331,34 +14215,6 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                             else if (~AESL_inst_spmm.efinish4_U.if_full_n) begin
                                 $display("//      Blocked by full output FIFO 'spmm.efinish4_U' read by process 'spmm.merger_52_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    141: begin
-                        if (~AESL_inst_spmm.pe_46_U0.mc_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.mc_pe4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe4_U' written by process 'spmm.merger_52_U0.merge_controller_104_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.mc_pe4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.mc_pe4_U' read by process 'spmm.merger_52_U0.merge_controller_104_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    142: begin
-                        if (~AESL_inst_spmm.pe_46_U0.efinish425_blk_n) begin
-                            if (~AESL_inst_spmm.efinish4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.efinish4_U' written by process 'spmm.merger_52_U0.merge_two_sub_105_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.efinish4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.efinish4_U' read by process 'spmm.merger_52_U0.merge_two_sub_105_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.efinish4_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -14479,7 +14335,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             $display("//      Blocked by output sync logic with process : 'spmm.pe_45_U0'");
                         end
                     end
-                    146: begin
+                    138: begin
                         if (ap_done_reg_26 & AESL_inst_spmm.pe_46_U0.ap_done & ~AESL_inst_spmm.write_C_sub_U0.ap_done) begin
                             $display("//      Blocked by output sync logic with process : 'spmm.write_C_sub_U0'");
                         end
@@ -14516,20 +14372,6 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    133: begin
-                        if (~AESL_inst_spmm.convert_pblock_to_mergeitem_U0.m_pe1_blk_n) begin
-                            if (~AESL_inst_spmm.m_pe1_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.m_pe1_U' written by process 'spmm.merger_U0.merge_two_sub_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe1_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.m_pe1_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.m_pe1_U' read by process 'spmm.merger_U0.merge_two_sub_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe1_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
                     endcase
                 end
                 128 : begin
@@ -14548,7 +14390,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    134: begin
+                    132: begin
                         if (~AESL_inst_spmm.convert_pblock_to_mergeitem_47_U0.m_pe2_blk_n) begin
                             if (~AESL_inst_spmm.m_pe2_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.m_pe2_U' written by process 'spmm.merger_50_U0'");
@@ -14557,20 +14399,6 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                             else if (~AESL_inst_spmm.m_pe2_U.if_full_n) begin
                                 $display("//      Blocked by full output FIFO 'spmm.m_pe2_U' read by process 'spmm.merger_50_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    136: begin
-                        if (~AESL_inst_spmm.convert_pblock_to_mergeitem_47_U0.m_pe2_blk_n) begin
-                            if (~AESL_inst_spmm.m_pe2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.m_pe2_U' written by process 'spmm.merger_50_U0.merge_two_sub_101_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.m_pe2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.m_pe2_U' read by process 'spmm.merger_50_U0.merge_two_sub_101_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.m_pe2_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -14594,7 +14422,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    137: begin
+                    133: begin
                         if (~AESL_inst_spmm.convert_pblock_to_mergeitem_48_U0.m_pe3_blk_n) begin
                             if (~AESL_inst_spmm.m_pe3_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.m_pe3_U' written by process 'spmm.merger_51_U0'");
@@ -14603,20 +14431,6 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                             else if (~AESL_inst_spmm.m_pe3_U.if_full_n) begin
                                 $display("//      Blocked by full output FIFO 'spmm.m_pe3_U' read by process 'spmm.merger_51_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    139: begin
-                        if (~AESL_inst_spmm.convert_pblock_to_mergeitem_48_U0.m_pe3_blk_n) begin
-                            if (~AESL_inst_spmm.m_pe3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.m_pe3_U' written by process 'spmm.merger_51_U0.merge_two_sub_103_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.m_pe3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.m_pe3_U' read by process 'spmm.merger_51_U0.merge_two_sub_103_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.m_pe3_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
@@ -14640,7 +14454,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    140: begin
+                    134: begin
                         if (~AESL_inst_spmm.convert_pblock_to_mergeitem_49_U0.m_pe4_blk_n) begin
                             if (~AESL_inst_spmm.m_pe4_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.m_pe4_U' written by process 'spmm.merger_52_U0'");
@@ -14654,26 +14468,12 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    142: begin
-                        if (~AESL_inst_spmm.convert_pblock_to_mergeitem_49_U0.m_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.m_pe4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.m_pe4_U' written by process 'spmm.merger_52_U0.merge_two_sub_105_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.m_pe4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.m_pe4_U' read by process 'spmm.merger_52_U0.merge_two_sub_105_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
                     endcase
                 end
                 131 : begin
                     case(index2)
                     123: begin
-                        if (~AESL_inst_spmm.merger_U0.merge_controller_U0.mc_pe1_blk_n) begin
+                        if (~AESL_inst_spmm.merger_U0.grp_merge_two_sub_fu_20.mc_pe4_blk_n) begin
                             if (~AESL_inst_spmm.mc_pe1_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.mc_pe1_U' written by process 'spmm.pe_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe1_U");
@@ -14685,7 +14485,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (~AESL_inst_spmm.merger_U0.merge_two_sub_U0.efinish122_blk_n) begin
+                        if (~AESL_inst_spmm.merger_U0.grp_merge_two_sub_fu_20.efinish425_blk_n) begin
                             if (~AESL_inst_spmm.efinish1_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.efinish1_U' written by process 'spmm.pe_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.efinish1_U");
@@ -14699,7 +14499,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                         end
                     end
                     127: begin
-                        if (~AESL_inst_spmm.merger_U0.merge_two_sub_U0.grp_p_merge_temp_fu_594.m_pe4_blk_n) begin
+                        if (~AESL_inst_spmm.merger_U0.grp_merge_two_sub_fu_20.grp_p_merge_temp_fu_573.m_pe1_blk_n) begin
                             if (~AESL_inst_spmm.m_pe1_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.m_pe1_U' written by process 'spmm.convert_pblock_to_mergeitem_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.m_pe1_U");
@@ -14712,8 +14512,8 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    143: begin
-                        if (~AESL_inst_spmm.merger_U0.merge_two_sub_U0.grp_flush_three_fu_546.result_pe4_blk_n) begin
+                    135: begin
+                        if (~AESL_inst_spmm.merger_U0.grp_merge_two_sub_fu_20.grp_flush_three_fu_525.result_pe1_blk_n) begin
                             if (~AESL_inst_spmm.result_pe1_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.result_pe1_U' written by process 'spmm.sub_final_merger_U0'");
                                 $fdisplay(fp, "Dependence_Channel_path spmm.result_pe1_U");
@@ -14730,96 +14530,114 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 end
                 132 : begin
                     case(index2)
-                    123: begin
-                        if (~AESL_inst_spmm.merger_U0.merge_controller_U0.mc_pe1_blk_n) begin
-                            if (~AESL_inst_spmm.mc_pe1_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe1_U' written by process 'spmm.pe_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe1_U");
+                    124: begin
+                        if (~AESL_inst_spmm.merger_50_U0.grp_merge_two_sub_fu_20.mc_pe4_blk_n) begin
+                            if (~AESL_inst_spmm.mc_pe2_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe2_U' written by process 'spmm.pe_44_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe2_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~AESL_inst_spmm.mc_pe1_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.mc_pe1_U' read by process 'spmm.pe_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe1_U");
+                            else if (~AESL_inst_spmm.mc_pe2_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.mc_pe2_U' read by process 'spmm.pe_44_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe2_U");
+                                $fdisplay(fp, "Dependence_Channel_status FULL");
+                            end
+                        end
+                        if (~AESL_inst_spmm.merger_50_U0.grp_merge_two_sub_fu_20.efinish425_blk_n) begin
+                            if (~AESL_inst_spmm.efinish2_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.efinish2_U' written by process 'spmm.pe_44_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish2_U");
+                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
+                            end
+                            else if (~AESL_inst_spmm.efinish2_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.efinish2_U' read by process 'spmm.pe_44_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish2_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
-                    133: begin
-                        if (~AESL_inst_spmm.merger_U0.merge_controller_U0.mresult_blk_n) begin
-                            if (~AESL_inst_spmm.merger_U0.mresult_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.merger_U0.mresult_U' written by process 'spmm.merger_U0.merge_two_sub_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_U0.mresult_U");
+                    128: begin
+                        if (~AESL_inst_spmm.merger_50_U0.grp_merge_two_sub_fu_20.grp_p_merge_temp_fu_573.m_pe1_blk_n) begin
+                            if (~AESL_inst_spmm.m_pe2_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.m_pe2_U' written by process 'spmm.convert_pblock_to_mergeitem_47_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe2_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~AESL_inst_spmm.merger_U0.mresult_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.merger_U0.mresult_U' read by process 'spmm.merger_U0.merge_two_sub_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_U0.mresult_U");
+                            else if (~AESL_inst_spmm.m_pe2_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.m_pe2_U' read by process 'spmm.convert_pblock_to_mergeitem_47_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe2_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (~AESL_inst_spmm.merger_U0.start_for_merge_two_sub_U0_U.if_full_n & AESL_inst_spmm.merger_U0.merge_controller_U0.ap_start & ~AESL_inst_spmm.merger_U0.merge_controller_U0.real_start & (trans_in_cnt_0 == trans_out_cnt_0) & ~AESL_inst_spmm.merger_U0.start_for_merge_two_sub_U0_U.if_read) begin
-                            $display("//      Blocked by full output start propagation FIFO 'spmm.merger_U0.start_for_merge_two_sub_U0_U' read by process 'spmm.merger_U0.merge_two_sub_U0',");
+                    end
+                    135: begin
+                        if (~AESL_inst_spmm.merger_50_U0.grp_merge_two_sub_fu_20.grp_flush_three_fu_525.result_pe1_blk_n) begin
+                            if (~AESL_inst_spmm.result_pe2_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.result_pe2_U' written by process 'spmm.sub_final_merger_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe2_U");
+                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
+                            end
+                            else if (~AESL_inst_spmm.result_pe2_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.result_pe2_U' read by process 'spmm.sub_final_merger_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe2_U");
+                                $fdisplay(fp, "Dependence_Channel_status FULL");
+                            end
                         end
                     end
                     endcase
                 end
                 133 : begin
                     case(index2)
-                    132: begin
-                        if (~AESL_inst_spmm.merger_U0.merge_two_sub_U0.mresult_blk_n) begin
-                            if (~AESL_inst_spmm.merger_U0.mresult_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.merger_U0.mresult_U' written by process 'spmm.merger_U0.merge_controller_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_U0.mresult_U");
+                    125: begin
+                        if (~AESL_inst_spmm.merger_51_U0.grp_merge_two_sub_fu_20.mc_pe4_blk_n) begin
+                            if (~AESL_inst_spmm.mc_pe3_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe3_U' written by process 'spmm.pe_45_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe3_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~AESL_inst_spmm.merger_U0.mresult_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.merger_U0.mresult_U' read by process 'spmm.merger_U0.merge_controller_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_U0.mresult_U");
+                            else if (~AESL_inst_spmm.mc_pe3_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.mc_pe3_U' read by process 'spmm.pe_45_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe3_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (~AESL_inst_spmm.merger_U0.start_for_merge_two_sub_U0_U.if_empty_n & AESL_inst_spmm.merger_U0.merge_two_sub_U0.ap_idle & ~AESL_inst_spmm.merger_U0.start_for_merge_two_sub_U0_U.if_write) begin
-                            $display("//      Blocked by missing 'ap_start' from start propagation FIFO 'spmm.merger_U0.start_for_merge_two_sub_U0_U' written by process 'spmm.merger_U0.merge_controller_U0',");
-                        end
-                    end
-                    143: begin
-                        if (~AESL_inst_spmm.merger_U0.merge_two_sub_U0.result_pe1_blk_n) begin
-                            if (~AESL_inst_spmm.result_pe1_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.result_pe1_U' written by process 'spmm.sub_final_merger_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe1_U");
+                        if (~AESL_inst_spmm.merger_51_U0.grp_merge_two_sub_fu_20.efinish425_blk_n) begin
+                            if (~AESL_inst_spmm.efinish3_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.efinish3_U' written by process 'spmm.pe_45_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish3_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~AESL_inst_spmm.result_pe1_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.result_pe1_U' read by process 'spmm.sub_final_merger_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe1_U");
+                            else if (~AESL_inst_spmm.efinish3_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.efinish3_U' read by process 'spmm.pe_45_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish3_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
-                    127: begin
-                        if (~AESL_inst_spmm.merger_U0.merge_two_sub_U0.m_pe1_blk_n) begin
-                            if (~AESL_inst_spmm.m_pe1_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.m_pe1_U' written by process 'spmm.convert_pblock_to_mergeitem_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe1_U");
+                    129: begin
+                        if (~AESL_inst_spmm.merger_51_U0.grp_merge_two_sub_fu_20.grp_p_merge_temp_fu_573.m_pe1_blk_n) begin
+                            if (~AESL_inst_spmm.m_pe3_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.m_pe3_U' written by process 'spmm.convert_pblock_to_mergeitem_48_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe3_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~AESL_inst_spmm.m_pe1_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.m_pe1_U' read by process 'spmm.convert_pblock_to_mergeitem_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe1_U");
+                            else if (~AESL_inst_spmm.m_pe3_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.m_pe3_U' read by process 'spmm.convert_pblock_to_mergeitem_48_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe3_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
-                    123: begin
-                        if (~AESL_inst_spmm.merger_U0.merge_two_sub_U0.efinish122_blk_n) begin
-                            if (~AESL_inst_spmm.efinish1_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.efinish1_U' written by process 'spmm.pe_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish1_U");
+                    136: begin
+                        if (~AESL_inst_spmm.merger_51_U0.grp_merge_two_sub_fu_20.grp_flush_three_fu_525.result_pe1_blk_n) begin
+                            if (~AESL_inst_spmm.result_pe3_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.result_pe3_U' written by process 'spmm.sub_final_merger_53_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe3_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~AESL_inst_spmm.efinish1_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.efinish1_U' read by process 'spmm.pe_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish1_U");
+                            else if (~AESL_inst_spmm.result_pe3_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.result_pe3_U' read by process 'spmm.sub_final_merger_53_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe3_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -14828,56 +14646,56 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                 end
                 134 : begin
                     case(index2)
-                    124: begin
-                        if (~AESL_inst_spmm.merger_50_U0.merge_controller_100_U0.mc_pe2_blk_n) begin
-                            if (~AESL_inst_spmm.mc_pe2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe2_U' written by process 'spmm.pe_44_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe2_U");
+                    126: begin
+                        if (~AESL_inst_spmm.merger_52_U0.grp_merge_two_sub_fu_20.mc_pe4_blk_n) begin
+                            if (~AESL_inst_spmm.mc_pe4_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe4_U' written by process 'spmm.pe_46_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe4_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~AESL_inst_spmm.mc_pe2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.mc_pe2_U' read by process 'spmm.pe_44_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe2_U");
+                            else if (~AESL_inst_spmm.mc_pe4_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.mc_pe4_U' read by process 'spmm.pe_46_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe4_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
-                        if (~AESL_inst_spmm.merger_50_U0.merge_two_sub_101_U0.efinish223_blk_n) begin
-                            if (~AESL_inst_spmm.efinish2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.efinish2_U' written by process 'spmm.pe_44_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish2_U");
+                        if (~AESL_inst_spmm.merger_52_U0.grp_merge_two_sub_fu_20.efinish425_blk_n) begin
+                            if (~AESL_inst_spmm.efinish4_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.efinish4_U' written by process 'spmm.pe_46_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish4_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~AESL_inst_spmm.efinish2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.efinish2_U' read by process 'spmm.pe_44_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish2_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    128: begin
-                        if (~AESL_inst_spmm.merger_50_U0.merge_two_sub_101_U0.grp_p_merge_temp_fu_594.m_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.m_pe2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.m_pe2_U' written by process 'spmm.convert_pblock_to_mergeitem_47_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.m_pe2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.m_pe2_U' read by process 'spmm.convert_pblock_to_mergeitem_47_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe2_U");
+                            else if (~AESL_inst_spmm.efinish4_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.efinish4_U' read by process 'spmm.pe_46_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish4_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
                     end
-                    143: begin
-                        if (~AESL_inst_spmm.merger_50_U0.merge_two_sub_101_U0.grp_flush_three_fu_546.result_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.result_pe2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.result_pe2_U' written by process 'spmm.sub_final_merger_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe2_U");
+                    130: begin
+                        if (~AESL_inst_spmm.merger_52_U0.grp_merge_two_sub_fu_20.grp_p_merge_temp_fu_573.m_pe1_blk_n) begin
+                            if (~AESL_inst_spmm.m_pe4_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.m_pe4_U' written by process 'spmm.convert_pblock_to_mergeitem_49_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe4_U");
                                 $fdisplay(fp, "Dependence_Channel_status EMPTY");
                             end
-                            else if (~AESL_inst_spmm.result_pe2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.result_pe2_U' read by process 'spmm.sub_final_merger_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe2_U");
+                            else if (~AESL_inst_spmm.m_pe4_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.m_pe4_U' read by process 'spmm.convert_pblock_to_mergeitem_49_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe4_U");
+                                $fdisplay(fp, "Dependence_Channel_status FULL");
+                            end
+                        end
+                    end
+                    136: begin
+                        if (~AESL_inst_spmm.merger_52_U0.grp_merge_two_sub_fu_20.grp_flush_three_fu_525.result_pe1_blk_n) begin
+                            if (~AESL_inst_spmm.result_pe4_U.if_empty_n) begin
+                                $display("//      Blocked by empty input FIFO 'spmm.result_pe4_U' written by process 'spmm.sub_final_merger_53_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe4_U");
+                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
+                            end
+                            else if (~AESL_inst_spmm.result_pe4_U.if_full_n) begin
+                                $display("//      Blocked by full output FIFO 'spmm.result_pe4_U' read by process 'spmm.sub_final_merger_53_U0'");
+                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe4_U");
                                 $fdisplay(fp, "Dependence_Channel_status FULL");
                             end
                         end
@@ -14885,416 +14703,6 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                     endcase
                 end
                 135 : begin
-                    case(index2)
-                    124: begin
-                        if (~AESL_inst_spmm.merger_50_U0.merge_controller_100_U0.mc_pe2_blk_n) begin
-                            if (~AESL_inst_spmm.mc_pe2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe2_U' written by process 'spmm.pe_44_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.mc_pe2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.mc_pe2_U' read by process 'spmm.pe_44_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    136: begin
-                        if (~AESL_inst_spmm.merger_50_U0.merge_controller_100_U0.mresult_blk_n) begin
-                            if (~AESL_inst_spmm.merger_50_U0.mresult_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.merger_50_U0.mresult_U' written by process 'spmm.merger_50_U0.merge_two_sub_101_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_50_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.merger_50_U0.mresult_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.merger_50_U0.mresult_U' read by process 'spmm.merger_50_U0.merge_two_sub_101_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_50_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                        if (~AESL_inst_spmm.merger_50_U0.start_for_merge_two_sub_101_U0_U.if_full_n & AESL_inst_spmm.merger_50_U0.merge_controller_100_U0.ap_start & ~AESL_inst_spmm.merger_50_U0.merge_controller_100_U0.real_start & (trans_in_cnt_1 == trans_out_cnt_1) & ~AESL_inst_spmm.merger_50_U0.start_for_merge_two_sub_101_U0_U.if_read) begin
-                            $display("//      Blocked by full output start propagation FIFO 'spmm.merger_50_U0.start_for_merge_two_sub_101_U0_U' read by process 'spmm.merger_50_U0.merge_two_sub_101_U0',");
-                        end
-                    end
-                    endcase
-                end
-                136 : begin
-                    case(index2)
-                    135: begin
-                        if (~AESL_inst_spmm.merger_50_U0.merge_two_sub_101_U0.mresult_blk_n) begin
-                            if (~AESL_inst_spmm.merger_50_U0.mresult_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.merger_50_U0.mresult_U' written by process 'spmm.merger_50_U0.merge_controller_100_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_50_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.merger_50_U0.mresult_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.merger_50_U0.mresult_U' read by process 'spmm.merger_50_U0.merge_controller_100_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_50_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                        if (~AESL_inst_spmm.merger_50_U0.start_for_merge_two_sub_101_U0_U.if_empty_n & AESL_inst_spmm.merger_50_U0.merge_two_sub_101_U0.ap_idle & ~AESL_inst_spmm.merger_50_U0.start_for_merge_two_sub_101_U0_U.if_write) begin
-                            $display("//      Blocked by missing 'ap_start' from start propagation FIFO 'spmm.merger_50_U0.start_for_merge_two_sub_101_U0_U' written by process 'spmm.merger_50_U0.merge_controller_100_U0',");
-                        end
-                    end
-                    143: begin
-                        if (~AESL_inst_spmm.merger_50_U0.merge_two_sub_101_U0.result_pe2_blk_n) begin
-                            if (~AESL_inst_spmm.result_pe2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.result_pe2_U' written by process 'spmm.sub_final_merger_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.result_pe2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.result_pe2_U' read by process 'spmm.sub_final_merger_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    128: begin
-                        if (~AESL_inst_spmm.merger_50_U0.merge_two_sub_101_U0.m_pe2_blk_n) begin
-                            if (~AESL_inst_spmm.m_pe2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.m_pe2_U' written by process 'spmm.convert_pblock_to_mergeitem_47_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.m_pe2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.m_pe2_U' read by process 'spmm.convert_pblock_to_mergeitem_47_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    124: begin
-                        if (~AESL_inst_spmm.merger_50_U0.merge_two_sub_101_U0.efinish223_blk_n) begin
-                            if (~AESL_inst_spmm.efinish2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.efinish2_U' written by process 'spmm.pe_44_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish2_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.efinish2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.efinish2_U' read by process 'spmm.pe_44_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish2_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    endcase
-                end
-                137 : begin
-                    case(index2)
-                    125: begin
-                        if (~AESL_inst_spmm.merger_51_U0.merge_controller_102_U0.mc_pe3_blk_n) begin
-                            if (~AESL_inst_spmm.mc_pe3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe3_U' written by process 'spmm.pe_45_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.mc_pe3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.mc_pe3_U' read by process 'spmm.pe_45_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                        if (~AESL_inst_spmm.merger_51_U0.merge_two_sub_103_U0.efinish324_blk_n) begin
-                            if (~AESL_inst_spmm.efinish3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.efinish3_U' written by process 'spmm.pe_45_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.efinish3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.efinish3_U' read by process 'spmm.pe_45_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    129: begin
-                        if (~AESL_inst_spmm.merger_51_U0.merge_two_sub_103_U0.grp_p_merge_temp_fu_594.m_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.m_pe3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.m_pe3_U' written by process 'spmm.convert_pblock_to_mergeitem_48_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.m_pe3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.m_pe3_U' read by process 'spmm.convert_pblock_to_mergeitem_48_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    144: begin
-                        if (~AESL_inst_spmm.merger_51_U0.merge_two_sub_103_U0.grp_flush_three_fu_546.result_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.result_pe3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.result_pe3_U' written by process 'spmm.sub_final_merger_53_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.result_pe3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.result_pe3_U' read by process 'spmm.sub_final_merger_53_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    endcase
-                end
-                138 : begin
-                    case(index2)
-                    125: begin
-                        if (~AESL_inst_spmm.merger_51_U0.merge_controller_102_U0.mc_pe3_blk_n) begin
-                            if (~AESL_inst_spmm.mc_pe3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe3_U' written by process 'spmm.pe_45_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.mc_pe3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.mc_pe3_U' read by process 'spmm.pe_45_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    139: begin
-                        if (~AESL_inst_spmm.merger_51_U0.merge_controller_102_U0.mresult_blk_n) begin
-                            if (~AESL_inst_spmm.merger_51_U0.mresult_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.merger_51_U0.mresult_U' written by process 'spmm.merger_51_U0.merge_two_sub_103_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_51_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.merger_51_U0.mresult_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.merger_51_U0.mresult_U' read by process 'spmm.merger_51_U0.merge_two_sub_103_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_51_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                        if (~AESL_inst_spmm.merger_51_U0.start_for_merge_two_sub_103_U0_U.if_full_n & AESL_inst_spmm.merger_51_U0.merge_controller_102_U0.ap_start & ~AESL_inst_spmm.merger_51_U0.merge_controller_102_U0.real_start & (trans_in_cnt_2 == trans_out_cnt_2) & ~AESL_inst_spmm.merger_51_U0.start_for_merge_two_sub_103_U0_U.if_read) begin
-                            $display("//      Blocked by full output start propagation FIFO 'spmm.merger_51_U0.start_for_merge_two_sub_103_U0_U' read by process 'spmm.merger_51_U0.merge_two_sub_103_U0',");
-                        end
-                    end
-                    endcase
-                end
-                139 : begin
-                    case(index2)
-                    138: begin
-                        if (~AESL_inst_spmm.merger_51_U0.merge_two_sub_103_U0.mresult_blk_n) begin
-                            if (~AESL_inst_spmm.merger_51_U0.mresult_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.merger_51_U0.mresult_U' written by process 'spmm.merger_51_U0.merge_controller_102_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_51_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.merger_51_U0.mresult_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.merger_51_U0.mresult_U' read by process 'spmm.merger_51_U0.merge_controller_102_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_51_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                        if (~AESL_inst_spmm.merger_51_U0.start_for_merge_two_sub_103_U0_U.if_empty_n & AESL_inst_spmm.merger_51_U0.merge_two_sub_103_U0.ap_idle & ~AESL_inst_spmm.merger_51_U0.start_for_merge_two_sub_103_U0_U.if_write) begin
-                            $display("//      Blocked by missing 'ap_start' from start propagation FIFO 'spmm.merger_51_U0.start_for_merge_two_sub_103_U0_U' written by process 'spmm.merger_51_U0.merge_controller_102_U0',");
-                        end
-                    end
-                    144: begin
-                        if (~AESL_inst_spmm.merger_51_U0.merge_two_sub_103_U0.result_pe3_blk_n) begin
-                            if (~AESL_inst_spmm.result_pe3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.result_pe3_U' written by process 'spmm.sub_final_merger_53_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.result_pe3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.result_pe3_U' read by process 'spmm.sub_final_merger_53_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    129: begin
-                        if (~AESL_inst_spmm.merger_51_U0.merge_two_sub_103_U0.m_pe3_blk_n) begin
-                            if (~AESL_inst_spmm.m_pe3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.m_pe3_U' written by process 'spmm.convert_pblock_to_mergeitem_48_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.m_pe3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.m_pe3_U' read by process 'spmm.convert_pblock_to_mergeitem_48_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    125: begin
-                        if (~AESL_inst_spmm.merger_51_U0.merge_two_sub_103_U0.efinish324_blk_n) begin
-                            if (~AESL_inst_spmm.efinish3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.efinish3_U' written by process 'spmm.pe_45_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.efinish3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.efinish3_U' read by process 'spmm.pe_45_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    endcase
-                end
-                140 : begin
-                    case(index2)
-                    126: begin
-                        if (~AESL_inst_spmm.merger_52_U0.merge_controller_104_U0.mc_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.mc_pe4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe4_U' written by process 'spmm.pe_46_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.mc_pe4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.mc_pe4_U' read by process 'spmm.pe_46_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                        if (~AESL_inst_spmm.merger_52_U0.merge_two_sub_105_U0.efinish425_blk_n) begin
-                            if (~AESL_inst_spmm.efinish4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.efinish4_U' written by process 'spmm.pe_46_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.efinish4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.efinish4_U' read by process 'spmm.pe_46_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    130: begin
-                        if (~AESL_inst_spmm.merger_52_U0.merge_two_sub_105_U0.grp_p_merge_temp_fu_594.m_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.m_pe4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.m_pe4_U' written by process 'spmm.convert_pblock_to_mergeitem_49_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.m_pe4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.m_pe4_U' read by process 'spmm.convert_pblock_to_mergeitem_49_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    144: begin
-                        if (~AESL_inst_spmm.merger_52_U0.merge_two_sub_105_U0.grp_flush_three_fu_546.result_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.result_pe4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.result_pe4_U' written by process 'spmm.sub_final_merger_53_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.result_pe4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.result_pe4_U' read by process 'spmm.sub_final_merger_53_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    endcase
-                end
-                141 : begin
-                    case(index2)
-                    126: begin
-                        if (~AESL_inst_spmm.merger_52_U0.merge_controller_104_U0.mc_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.mc_pe4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.mc_pe4_U' written by process 'spmm.pe_46_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.mc_pe4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.mc_pe4_U' read by process 'spmm.pe_46_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.mc_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    142: begin
-                        if (~AESL_inst_spmm.merger_52_U0.merge_controller_104_U0.mresult_blk_n) begin
-                            if (~AESL_inst_spmm.merger_52_U0.mresult_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.merger_52_U0.mresult_U' written by process 'spmm.merger_52_U0.merge_two_sub_105_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_52_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.merger_52_U0.mresult_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.merger_52_U0.mresult_U' read by process 'spmm.merger_52_U0.merge_two_sub_105_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_52_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                        if (~AESL_inst_spmm.merger_52_U0.start_for_merge_two_sub_105_U0_U.if_full_n & AESL_inst_spmm.merger_52_U0.merge_controller_104_U0.ap_start & ~AESL_inst_spmm.merger_52_U0.merge_controller_104_U0.real_start & (trans_in_cnt_3 == trans_out_cnt_3) & ~AESL_inst_spmm.merger_52_U0.start_for_merge_two_sub_105_U0_U.if_read) begin
-                            $display("//      Blocked by full output start propagation FIFO 'spmm.merger_52_U0.start_for_merge_two_sub_105_U0_U' read by process 'spmm.merger_52_U0.merge_two_sub_105_U0',");
-                        end
-                    end
-                    endcase
-                end
-                142 : begin
-                    case(index2)
-                    141: begin
-                        if (~AESL_inst_spmm.merger_52_U0.merge_two_sub_105_U0.mresult_blk_n) begin
-                            if (~AESL_inst_spmm.merger_52_U0.mresult_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.merger_52_U0.mresult_U' written by process 'spmm.merger_52_U0.merge_controller_104_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_52_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.merger_52_U0.mresult_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.merger_52_U0.mresult_U' read by process 'spmm.merger_52_U0.merge_controller_104_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.merger_52_U0.mresult_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                        if (~AESL_inst_spmm.merger_52_U0.start_for_merge_two_sub_105_U0_U.if_empty_n & AESL_inst_spmm.merger_52_U0.merge_two_sub_105_U0.ap_idle & ~AESL_inst_spmm.merger_52_U0.start_for_merge_two_sub_105_U0_U.if_write) begin
-                            $display("//      Blocked by missing 'ap_start' from start propagation FIFO 'spmm.merger_52_U0.start_for_merge_two_sub_105_U0_U' written by process 'spmm.merger_52_U0.merge_controller_104_U0',");
-                        end
-                    end
-                    144: begin
-                        if (~AESL_inst_spmm.merger_52_U0.merge_two_sub_105_U0.result_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.result_pe4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.result_pe4_U' written by process 'spmm.sub_final_merger_53_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.result_pe4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.result_pe4_U' read by process 'spmm.sub_final_merger_53_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    130: begin
-                        if (~AESL_inst_spmm.merger_52_U0.merge_two_sub_105_U0.m_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.m_pe4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.m_pe4_U' written by process 'spmm.convert_pblock_to_mergeitem_49_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.m_pe4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.m_pe4_U' read by process 'spmm.convert_pblock_to_mergeitem_49_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.m_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    126: begin
-                        if (~AESL_inst_spmm.merger_52_U0.merge_two_sub_105_U0.efinish425_blk_n) begin
-                            if (~AESL_inst_spmm.efinish4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.efinish4_U' written by process 'spmm.pe_46_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.efinish4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.efinish4_U' read by process 'spmm.pe_46_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.efinish4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    endcase
-                end
-                143 : begin
                     case(index2)
                     131: begin
                         if (~AESL_inst_spmm.sub_final_merger_U0.result_pe1_blk_n) begin
@@ -15310,21 +14718,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    133: begin
-                        if (~AESL_inst_spmm.sub_final_merger_U0.result_pe1_blk_n) begin
-                            if (~AESL_inst_spmm.result_pe1_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.result_pe1_U' written by process 'spmm.merger_U0.merge_two_sub_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe1_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.result_pe1_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.result_pe1_U' read by process 'spmm.merger_U0.merge_two_sub_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe1_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    134: begin
+                    132: begin
                         if (~AESL_inst_spmm.sub_final_merger_U0.result_pe2_blk_n) begin
                             if (~AESL_inst_spmm.result_pe2_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.result_pe2_U' written by process 'spmm.merger_50_U0'");
@@ -15338,21 +14732,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    136: begin
-                        if (~AESL_inst_spmm.sub_final_merger_U0.result_pe2_blk_n) begin
-                            if (~AESL_inst_spmm.result_pe2_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.result_pe2_U' written by process 'spmm.merger_50_U0.merge_two_sub_101_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.result_pe2_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.result_pe2_U' read by process 'spmm.merger_50_U0.merge_two_sub_101_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe2_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    145: begin
+                    137: begin
                         if (~AESL_inst_spmm.sub_final_merger_U0.final_merger_1_blk_n) begin
                             if (~AESL_inst_spmm.final_merger_1_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.final_merger_1_U' written by process 'spmm.final_merger_U0'");
@@ -15368,9 +14748,9 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                     end
                     endcase
                 end
-                144 : begin
+                136 : begin
                     case(index2)
-                    137: begin
+                    133: begin
                         if (~AESL_inst_spmm.sub_final_merger_53_U0.result_pe3_blk_n) begin
                             if (~AESL_inst_spmm.result_pe3_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.result_pe3_U' written by process 'spmm.merger_51_U0'");
@@ -15384,21 +14764,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    139: begin
-                        if (~AESL_inst_spmm.sub_final_merger_53_U0.result_pe3_blk_n) begin
-                            if (~AESL_inst_spmm.result_pe3_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.result_pe3_U' written by process 'spmm.merger_51_U0.merge_two_sub_103_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.result_pe3_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.result_pe3_U' read by process 'spmm.merger_51_U0.merge_two_sub_103_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe3_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    140: begin
+                    134: begin
                         if (~AESL_inst_spmm.sub_final_merger_53_U0.result_pe4_blk_n) begin
                             if (~AESL_inst_spmm.result_pe4_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.result_pe4_U' written by process 'spmm.merger_52_U0'");
@@ -15412,21 +14778,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    142: begin
-                        if (~AESL_inst_spmm.sub_final_merger_53_U0.result_pe4_blk_n) begin
-                            if (~AESL_inst_spmm.result_pe4_U.if_empty_n) begin
-                                $display("//      Blocked by empty input FIFO 'spmm.result_pe4_U' written by process 'spmm.merger_52_U0.merge_two_sub_105_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status EMPTY");
-                            end
-                            else if (~AESL_inst_spmm.result_pe4_U.if_full_n) begin
-                                $display("//      Blocked by full output FIFO 'spmm.result_pe4_U' read by process 'spmm.merger_52_U0.merge_two_sub_105_U0'");
-                                $fdisplay(fp, "Dependence_Channel_path spmm.result_pe4_U");
-                                $fdisplay(fp, "Dependence_Channel_status FULL");
-                            end
-                        end
-                    end
-                    145: begin
+                    137: begin
                         if (~AESL_inst_spmm.sub_final_merger_53_U0.final_merger_2_blk_n) begin
                             if (~AESL_inst_spmm.final_merger_2_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.final_merger_2_U' written by process 'spmm.final_merger_U0'");
@@ -15442,9 +14794,9 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                     end
                     endcase
                 end
-                145 : begin
+                137 : begin
                     case(index2)
-                    143: begin
+                    135: begin
                         if (~AESL_inst_spmm.final_merger_U0.final_merger_1_blk_n) begin
                             if (~AESL_inst_spmm.final_merger_1_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.final_merger_1_U' written by process 'spmm.sub_final_merger_U0'");
@@ -15458,7 +14810,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    144: begin
+                    136: begin
                         if (~AESL_inst_spmm.final_merger_U0.final_merger_2_blk_n) begin
                             if (~AESL_inst_spmm.final_merger_2_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.final_merger_2_U' written by process 'spmm.sub_final_merger_53_U0'");
@@ -15472,7 +14824,7 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                             end
                         end
                     end
-                    146: begin
+                    138: begin
                         if (~AESL_inst_spmm.final_merger_U0.final_merger_3_blk_n) begin
                             if (~AESL_inst_spmm.final_merger_3_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.final_merger_3_U' written by process 'spmm.write_C_sub_U0'");
@@ -15500,9 +14852,9 @@ module AESL_deadlock_report_unit #( parameter PROC_NUM = 4 ) (
                     end
                     endcase
                 end
-                146 : begin
+                138 : begin
                     case(index2)
-                    145: begin
+                    137: begin
                         if (~AESL_inst_spmm.write_C_sub_U0.final_merger_3_blk_n) begin
                             if (~AESL_inst_spmm.final_merger_3_U.if_empty_n) begin
                                 $display("//      Blocked by empty input FIFO 'spmm.final_merger_3_U' written by process 'spmm.final_merger_U0'");

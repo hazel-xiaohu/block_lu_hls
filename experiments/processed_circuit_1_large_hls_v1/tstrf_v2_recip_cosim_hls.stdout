@@ -1,0 +1,91 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'root' on host 'team-fceo5ww5pmwf-main' (Linux_x86_64 version 6.8.0-138-generic) on Sun Sep 27 12:22:05 +0000 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.3 LTS
+INFO: [HLS 200-10] In directory '/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1'
+WARNING: [HLS 200-40] Environment variable 'C_INCLUDE_PATH' is set to /output/xilinx_compat/usr/include:/output/xilinx_compat/usr/include/x86_64-linux-gnu.
+WARNING: [HLS 200-40] Environment variable 'CPLUS_INCLUDE_PATH' is set to /output/xilinx_compat/usr/include:/output/xilinx_compat/usr/include/x86_64-linux-gnu.
+Sourcing Tcl script 'run_cosim_tstrf_v2_recip_full.tcl'
+INFO: [HLS 200-1510] Running: open_project proj_large_tstrf_v2_recip 
+INFO: [HLS 200-10] Opening project '/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip'.
+INFO: [HLS 200-1510] Running: add_files -tb tb_large_sparse_lu_v2.cpp 
+INFO: [HLS 200-10] Adding test bench file 'tb_large_sparse_lu_v2.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top large_tstrf_v2 
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Opening solution '/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: cosim_design -setup -trace_level none -argv /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/prepared/ 
+Running Dispatch Server on port: 37359
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_large_tstrf_v2.cpp
+   Compiling large_sparse_lu.cpp_pre.cpp.tb.cpp
+   Compiling tb_large_sparse_lu_v2.cpp_pre.cpp.tb.cpp
+   Compiling apatb_large_tstrf_v2_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+whole status=0 ms=2.69156 muladds=462552 divs=21500
+whole_L rel_l2=1.87251e-12 max_rel=7.34084e-05 nonfinite=0
+whole_U rel_l2=7.47051e-12 max_rel=8.7998e-05 nonfinite=0
+getrf1 status=0 ms=0.160878 muladds=7819 divs=2837
+L11 rel_l2=1.3143e-13 max_rel=2.60543e-06 nonfinite=0
+U11 rel_l2=3.44461e-14 max_rel=1.11006e-06 nonfinite=0
+gessm status=0 ms=1.57223 active=82 muladds=232634
+U12 rel_l2=4.34339e-16 max_rel=1.05605e-06 nonfinite=0
+gessm_v2 status=0 ms=1.56883 active=82 muladds=232634
+U12_v2 rel_l2=4.34339e-16 max_rel=1.05605e-06 nonfinite=0
+U12_v2_csr rel_l2=4.34339e-16 max_rel=1.05605e-06 nonfinite=0
+tstrf status=0 ms=2.05298 active=82 muladds=232634 divs=107584
+L21 rel_l2=1.09167e-07 max_rel=4.14512e-06 nonfinite=0
+tstrf_v2 status=0 ms=25.2974 active=82 muladds=232634 divs=1312
+L21_v2 rel_l2=1.15744e-07 max_rel=4.14512e-06 nonfinite=0
+ssssm status=0 ms=0.880978 muladds=135228
+Schur rel_l2=2.09495e-06 max_rel=1.01946e-05 nonfinite=0
+getrf2 status=0 ms=1.5678 muladds=278936 divs=11600
+L22 rel_l2=2.67475e-12 max_rel=7.34084e-05 nonfinite=0
+U22 rel_l2=1.4941e-11 max_rel=8.7998e-05 nonfinite=0
+SUMMARY whole_ms=2.69156 blocked_ms=6.23487 ratio_blocked_over_whole=2.31646
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_vivado_gen_ip.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/openbayes/home/tools/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'large_tstrf_v2_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_tstrf_v2_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_tstrf_v2_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'large_tstrf_v2_fmul_32ns_32ns_32_5_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_tstrf_v2_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_tstrf_v2_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'large_tstrf_v2_fdiv_32ns_32ns_32_16_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_tstrf_v2_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_tstrf_v2_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'large_tstrf_v2_fsub_32ns_32ns_32_8_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_tstrf_v2_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_tstrf_v2_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'large_tstrf_v2_fadd_32ns_32ns_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_tstrf_v2_fadd_32ns_32ns_32_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_tstrf_v2_fadd_32ns_32ns_32_6_no_dsp_1_ip'...
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 27 12:22:40 2026...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 20.62 seconds. CPU system time: 4.38 seconds. Elapsed time: 35.19 seconds; current allocated memory: 21.660 MB.
+INFO: [HLS 200-112] Total CPU user time: 1651.83 seconds. Total CPU system time: 35.74 seconds. Total elapsed time: 1656.6 seconds; peak allocated memory: 218.852 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Sep 27 12:49:41 2026...

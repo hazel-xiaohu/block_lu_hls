@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="spmm_spmm,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu15eg-ffvb1156-2-i,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.357000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=2274,HLS_SYN_DSP=0,HLS_SYN_FF=193945,HLS_SYN_LUT=352534,HLS_VERSION=2022_2}" *)
+(* CORE_GENERATION_INFO="spmm_spmm,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu15eg-ffvb1156-2-i,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.357000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=2290,HLS_SYN_DSP=0,HLS_SYN_FF=193125,HLS_SYN_LUT=352239,HLS_VERSION=2022_2}" *)
 
 module spmm (
         ap_clk,
@@ -4910,53 +4910,53 @@ wire    convert_pblock_to_mergeitem_49_U0_p_pe4_read;
 wire   [65:0] convert_pblock_to_mergeitem_49_U0_m_pe4_din;
 wire    convert_pblock_to_mergeitem_49_U0_m_pe4_write;
 reg    ap_sync_reg_convert_pblock_to_mergeitem_49_U0_ap_start;
+wire    merger_U0_ap_start;
+wire    merger_U0_ap_done;
+wire    merger_U0_ap_continue;
+wire    merger_U0_ap_idle;
+wire    merger_U0_ap_ready;
 wire    merger_U0_mc_pe1_read;
 wire    merger_U0_m_pe1_read;
 wire   [65:0] merger_U0_result_pe1_din;
 wire    merger_U0_result_pe1_write;
 wire   [0:0] merger_U0_efinish122_din;
 wire    merger_U0_efinish122_write;
-wire    merger_U0_ap_start;
-wire    merger_U0_ap_done;
-wire    merger_U0_ap_ready;
-wire    merger_U0_ap_idle;
-wire    merger_U0_ap_continue;
 reg    ap_sync_reg_merger_U0_ap_start;
+wire    merger_50_U0_ap_start;
+wire    merger_50_U0_ap_done;
+wire    merger_50_U0_ap_continue;
+wire    merger_50_U0_ap_idle;
+wire    merger_50_U0_ap_ready;
 wire    merger_50_U0_mc_pe2_read;
 wire    merger_50_U0_m_pe2_read;
 wire   [65:0] merger_50_U0_result_pe2_din;
 wire    merger_50_U0_result_pe2_write;
 wire   [0:0] merger_50_U0_efinish223_din;
 wire    merger_50_U0_efinish223_write;
-wire    merger_50_U0_ap_start;
-wire    merger_50_U0_ap_done;
-wire    merger_50_U0_ap_ready;
-wire    merger_50_U0_ap_idle;
-wire    merger_50_U0_ap_continue;
 reg    ap_sync_reg_merger_50_U0_ap_start;
+wire    merger_51_U0_ap_start;
+wire    merger_51_U0_ap_done;
+wire    merger_51_U0_ap_continue;
+wire    merger_51_U0_ap_idle;
+wire    merger_51_U0_ap_ready;
 wire    merger_51_U0_mc_pe3_read;
 wire    merger_51_U0_m_pe3_read;
 wire   [65:0] merger_51_U0_result_pe3_din;
 wire    merger_51_U0_result_pe3_write;
 wire   [0:0] merger_51_U0_efinish324_din;
 wire    merger_51_U0_efinish324_write;
-wire    merger_51_U0_ap_start;
-wire    merger_51_U0_ap_done;
-wire    merger_51_U0_ap_ready;
-wire    merger_51_U0_ap_idle;
-wire    merger_51_U0_ap_continue;
 reg    ap_sync_reg_merger_51_U0_ap_start;
+wire    merger_52_U0_ap_start;
+wire    merger_52_U0_ap_done;
+wire    merger_52_U0_ap_continue;
+wire    merger_52_U0_ap_idle;
+wire    merger_52_U0_ap_ready;
 wire    merger_52_U0_mc_pe4_read;
 wire    merger_52_U0_m_pe4_read;
 wire   [65:0] merger_52_U0_result_pe4_din;
 wire    merger_52_U0_result_pe4_write;
 wire   [0:0] merger_52_U0_efinish425_din;
 wire    merger_52_U0_efinish425_write;
-wire    merger_52_U0_ap_start;
-wire    merger_52_U0_ap_done;
-wire    merger_52_U0_ap_ready;
-wire    merger_52_U0_ap_idle;
-wire    merger_52_U0_ap_continue;
 reg    ap_sync_reg_merger_52_U0_ap_start;
 wire    sub_final_merger_U0_ap_start;
 wire    sub_final_merger_U0_ap_done;
@@ -12546,91 +12546,123 @@ spmm_convert_pblock_to_mergeitem_49 convert_pblock_to_mergeitem_49_U0(
 );
 
 spmm_merger merger_U0(
-    .mc_pe1_dout(mc_pe1_dout),
-    .mc_pe1_empty_n(mc_pe1_empty_n),
-    .mc_pe1_read(merger_U0_mc_pe1_read),
-    .m_pe1_dout(m_pe1_dout),
-    .m_pe1_empty_n(m_pe1_empty_n),
-    .m_pe1_read(merger_U0_m_pe1_read),
-    .result_pe1_din(merger_U0_result_pe1_din),
-    .result_pe1_full_n(result_pe1_full_n),
-    .result_pe1_write(merger_U0_result_pe1_write),
-    .efinish122_din(merger_U0_efinish122_din),
-    .efinish122_full_n(efinish1_full_n),
-    .efinish122_write(merger_U0_efinish122_write),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
     .ap_start(merger_U0_ap_start),
     .ap_done(merger_U0_ap_done),
-    .ap_ready(merger_U0_ap_ready),
+    .ap_continue(merger_U0_ap_continue),
     .ap_idle(merger_U0_ap_idle),
-    .ap_continue(merger_U0_ap_continue)
+    .ap_ready(merger_U0_ap_ready),
+    .mc_pe1_dout(mc_pe1_dout),
+    .mc_pe1_num_data_valid(mc_pe1_num_data_valid),
+    .mc_pe1_fifo_cap(mc_pe1_fifo_cap),
+    .mc_pe1_empty_n(mc_pe1_empty_n),
+    .mc_pe1_read(merger_U0_mc_pe1_read),
+    .m_pe1_dout(m_pe1_dout),
+    .m_pe1_num_data_valid(m_pe1_num_data_valid),
+    .m_pe1_fifo_cap(m_pe1_fifo_cap),
+    .m_pe1_empty_n(m_pe1_empty_n),
+    .m_pe1_read(merger_U0_m_pe1_read),
+    .result_pe1_din(merger_U0_result_pe1_din),
+    .result_pe1_num_data_valid(result_pe1_num_data_valid),
+    .result_pe1_fifo_cap(result_pe1_fifo_cap),
+    .result_pe1_full_n(result_pe1_full_n),
+    .result_pe1_write(merger_U0_result_pe1_write),
+    .efinish122_din(merger_U0_efinish122_din),
+    .efinish122_num_data_valid(efinish1_num_data_valid),
+    .efinish122_fifo_cap(efinish1_fifo_cap),
+    .efinish122_full_n(efinish1_full_n),
+    .efinish122_write(merger_U0_efinish122_write)
 );
 
 spmm_merger_50 merger_50_U0(
-    .mc_pe2_dout(mc_pe2_dout),
-    .mc_pe2_empty_n(mc_pe2_empty_n),
-    .mc_pe2_read(merger_50_U0_mc_pe2_read),
-    .m_pe2_dout(m_pe2_dout),
-    .m_pe2_empty_n(m_pe2_empty_n),
-    .m_pe2_read(merger_50_U0_m_pe2_read),
-    .result_pe2_din(merger_50_U0_result_pe2_din),
-    .result_pe2_full_n(result_pe2_full_n),
-    .result_pe2_write(merger_50_U0_result_pe2_write),
-    .efinish223_din(merger_50_U0_efinish223_din),
-    .efinish223_full_n(efinish2_full_n),
-    .efinish223_write(merger_50_U0_efinish223_write),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
     .ap_start(merger_50_U0_ap_start),
     .ap_done(merger_50_U0_ap_done),
-    .ap_ready(merger_50_U0_ap_ready),
+    .ap_continue(merger_50_U0_ap_continue),
     .ap_idle(merger_50_U0_ap_idle),
-    .ap_continue(merger_50_U0_ap_continue)
+    .ap_ready(merger_50_U0_ap_ready),
+    .mc_pe2_dout(mc_pe2_dout),
+    .mc_pe2_num_data_valid(mc_pe2_num_data_valid),
+    .mc_pe2_fifo_cap(mc_pe2_fifo_cap),
+    .mc_pe2_empty_n(mc_pe2_empty_n),
+    .mc_pe2_read(merger_50_U0_mc_pe2_read),
+    .m_pe2_dout(m_pe2_dout),
+    .m_pe2_num_data_valid(m_pe2_num_data_valid),
+    .m_pe2_fifo_cap(m_pe2_fifo_cap),
+    .m_pe2_empty_n(m_pe2_empty_n),
+    .m_pe2_read(merger_50_U0_m_pe2_read),
+    .result_pe2_din(merger_50_U0_result_pe2_din),
+    .result_pe2_num_data_valid(result_pe2_num_data_valid),
+    .result_pe2_fifo_cap(result_pe2_fifo_cap),
+    .result_pe2_full_n(result_pe2_full_n),
+    .result_pe2_write(merger_50_U0_result_pe2_write),
+    .efinish223_din(merger_50_U0_efinish223_din),
+    .efinish223_num_data_valid(efinish2_num_data_valid),
+    .efinish223_fifo_cap(efinish2_fifo_cap),
+    .efinish223_full_n(efinish2_full_n),
+    .efinish223_write(merger_50_U0_efinish223_write)
 );
 
 spmm_merger_51 merger_51_U0(
-    .mc_pe3_dout(mc_pe3_dout),
-    .mc_pe3_empty_n(mc_pe3_empty_n),
-    .mc_pe3_read(merger_51_U0_mc_pe3_read),
-    .m_pe3_dout(m_pe3_dout),
-    .m_pe3_empty_n(m_pe3_empty_n),
-    .m_pe3_read(merger_51_U0_m_pe3_read),
-    .result_pe3_din(merger_51_U0_result_pe3_din),
-    .result_pe3_full_n(result_pe3_full_n),
-    .result_pe3_write(merger_51_U0_result_pe3_write),
-    .efinish324_din(merger_51_U0_efinish324_din),
-    .efinish324_full_n(efinish3_full_n),
-    .efinish324_write(merger_51_U0_efinish324_write),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
     .ap_start(merger_51_U0_ap_start),
     .ap_done(merger_51_U0_ap_done),
-    .ap_ready(merger_51_U0_ap_ready),
+    .ap_continue(merger_51_U0_ap_continue),
     .ap_idle(merger_51_U0_ap_idle),
-    .ap_continue(merger_51_U0_ap_continue)
+    .ap_ready(merger_51_U0_ap_ready),
+    .mc_pe3_dout(mc_pe3_dout),
+    .mc_pe3_num_data_valid(mc_pe3_num_data_valid),
+    .mc_pe3_fifo_cap(mc_pe3_fifo_cap),
+    .mc_pe3_empty_n(mc_pe3_empty_n),
+    .mc_pe3_read(merger_51_U0_mc_pe3_read),
+    .m_pe3_dout(m_pe3_dout),
+    .m_pe3_num_data_valid(m_pe3_num_data_valid),
+    .m_pe3_fifo_cap(m_pe3_fifo_cap),
+    .m_pe3_empty_n(m_pe3_empty_n),
+    .m_pe3_read(merger_51_U0_m_pe3_read),
+    .result_pe3_din(merger_51_U0_result_pe3_din),
+    .result_pe3_num_data_valid(result_pe3_num_data_valid),
+    .result_pe3_fifo_cap(result_pe3_fifo_cap),
+    .result_pe3_full_n(result_pe3_full_n),
+    .result_pe3_write(merger_51_U0_result_pe3_write),
+    .efinish324_din(merger_51_U0_efinish324_din),
+    .efinish324_num_data_valid(efinish3_num_data_valid),
+    .efinish324_fifo_cap(efinish3_fifo_cap),
+    .efinish324_full_n(efinish3_full_n),
+    .efinish324_write(merger_51_U0_efinish324_write)
 );
 
 spmm_merger_52 merger_52_U0(
-    .mc_pe4_dout(mc_pe4_dout),
-    .mc_pe4_empty_n(mc_pe4_empty_n),
-    .mc_pe4_read(merger_52_U0_mc_pe4_read),
-    .m_pe4_dout(m_pe4_dout),
-    .m_pe4_empty_n(m_pe4_empty_n),
-    .m_pe4_read(merger_52_U0_m_pe4_read),
-    .result_pe4_din(merger_52_U0_result_pe4_din),
-    .result_pe4_full_n(result_pe4_full_n),
-    .result_pe4_write(merger_52_U0_result_pe4_write),
-    .efinish425_din(merger_52_U0_efinish425_din),
-    .efinish425_full_n(efinish4_full_n),
-    .efinish425_write(merger_52_U0_efinish425_write),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
     .ap_start(merger_52_U0_ap_start),
     .ap_done(merger_52_U0_ap_done),
-    .ap_ready(merger_52_U0_ap_ready),
+    .ap_continue(merger_52_U0_ap_continue),
     .ap_idle(merger_52_U0_ap_idle),
-    .ap_continue(merger_52_U0_ap_continue)
+    .ap_ready(merger_52_U0_ap_ready),
+    .mc_pe4_dout(mc_pe4_dout),
+    .mc_pe4_num_data_valid(mc_pe4_num_data_valid),
+    .mc_pe4_fifo_cap(mc_pe4_fifo_cap),
+    .mc_pe4_empty_n(mc_pe4_empty_n),
+    .mc_pe4_read(merger_52_U0_mc_pe4_read),
+    .m_pe4_dout(m_pe4_dout),
+    .m_pe4_num_data_valid(m_pe4_num_data_valid),
+    .m_pe4_fifo_cap(m_pe4_fifo_cap),
+    .m_pe4_empty_n(m_pe4_empty_n),
+    .m_pe4_read(merger_52_U0_m_pe4_read),
+    .result_pe4_din(merger_52_U0_result_pe4_din),
+    .result_pe4_num_data_valid(result_pe4_num_data_valid),
+    .result_pe4_fifo_cap(result_pe4_fifo_cap),
+    .result_pe4_full_n(result_pe4_full_n),
+    .result_pe4_write(merger_52_U0_result_pe4_write),
+    .efinish425_din(merger_52_U0_efinish425_din),
+    .efinish425_num_data_valid(efinish4_num_data_valid),
+    .efinish425_fifo_cap(efinish4_fifo_cap),
+    .efinish425_full_n(efinish4_full_n),
+    .efinish425_write(merger_52_U0_efinish425_write)
 );
 
 spmm_sub_final_merger sub_final_merger_U0(
@@ -15842,7 +15874,7 @@ spmm_fifo_w1_d64_S efinish4_U(
     .if_read(pe_46_U0_efinish425_read)
 );
 
-spmm_fifo_w66_d1000_A_x2 m_pe1_U(
+spmm_fifo_w66_d1000_A m_pe1_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -15857,7 +15889,7 @@ spmm_fifo_w66_d1000_A_x2 m_pe1_U(
     .if_read(merger_U0_m_pe1_read)
 );
 
-spmm_fifo_w66_d1000_A_x2 m_pe2_U(
+spmm_fifo_w66_d1000_A m_pe2_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -15872,7 +15904,7 @@ spmm_fifo_w66_d1000_A_x2 m_pe2_U(
     .if_read(merger_50_U0_m_pe2_read)
 );
 
-spmm_fifo_w66_d1000_A_x2 m_pe3_U(
+spmm_fifo_w66_d1000_A m_pe3_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -15887,7 +15919,7 @@ spmm_fifo_w66_d1000_A_x2 m_pe3_U(
     .if_read(merger_51_U0_m_pe3_read)
 );
 
-spmm_fifo_w66_d1000_A_x2 m_pe4_U(
+spmm_fifo_w66_d1000_A m_pe4_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -15902,7 +15934,7 @@ spmm_fifo_w66_d1000_A_x2 m_pe4_U(
     .if_read(merger_52_U0_m_pe4_read)
 );
 
-spmm_fifo_w66_d1000_A_x2 result_pe1_U(
+spmm_fifo_w66_d1000_A result_pe1_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -15917,7 +15949,7 @@ spmm_fifo_w66_d1000_A_x2 result_pe1_U(
     .if_read(sub_final_merger_U0_result_pe1_read)
 );
 
-spmm_fifo_w66_d1000_A_x2 result_pe2_U(
+spmm_fifo_w66_d1000_A result_pe2_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -15932,7 +15964,7 @@ spmm_fifo_w66_d1000_A_x2 result_pe2_U(
     .if_read(sub_final_merger_U0_result_pe2_read)
 );
 
-spmm_fifo_w66_d1000_A_x2 result_pe3_U(
+spmm_fifo_w66_d1000_A result_pe3_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -15947,7 +15979,7 @@ spmm_fifo_w66_d1000_A_x2 result_pe3_U(
     .if_read(sub_final_merger_53_U0_result_pe3_read)
 );
 
-spmm_fifo_w66_d1000_A_x2 result_pe4_U(
+spmm_fifo_w66_d1000_A result_pe4_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -15962,7 +15994,7 @@ spmm_fifo_w66_d1000_A_x2 result_pe4_U(
     .if_read(sub_final_merger_53_U0_result_pe4_read)
 );
 
-spmm_fifo_w66_d1000_A_x2 final_merger_1_U(
+spmm_fifo_w66_d1000_A final_merger_1_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -15977,7 +16009,7 @@ spmm_fifo_w66_d1000_A_x2 final_merger_1_U(
     .if_read(final_merger_U0_final_merger_1_read)
 );
 
-spmm_fifo_w66_d1000_A_x2 final_merger_2_U(
+spmm_fifo_w66_d1000_A final_merger_2_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -15992,7 +16024,7 @@ spmm_fifo_w66_d1000_A_x2 final_merger_2_U(
     .if_read(final_merger_U0_final_merger_2_read)
 );
 
-spmm_fifo_w66_d1000_A_x2 final_merger_3_U(
+spmm_fifo_w66_d1000_A final_merger_3_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),

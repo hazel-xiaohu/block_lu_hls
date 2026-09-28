@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vitis HLS Report for 'request_to_vcbanks_28'
+================================================================
+* Date:           Sat Sep 26 11:01:43 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.792 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------------+-------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                            |                                                 |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                          Instance                          |                      Module                     |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +------------------------------------------------------------+-------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_request_to_vcbanks_28_Pipeline_VITIS_LOOP_253_1_fu_154  |request_to_vcbanks_28_Pipeline_VITIS_LOOP_253_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +------------------------------------------------------------+-------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|     453|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|     631|     158|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     126|    -|
+|Register         |        -|     -|      16|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     647|     737|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+-----+-----+-----+
+    |                          Instance                          |                      Module                     | BRAM_18K| DSP|  FF | LUT | URAM|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_request_to_vcbanks_28_Pipeline_VITIS_LOOP_253_1_fu_154  |request_to_vcbanks_28_Pipeline_VITIS_LOOP_253_1  |        0|   0|  631|  158|    0|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                       |                                                 |        0|   0|  631|  158|    0|
+    +------------------------------------------------------------+-------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+-----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+-----+------------+------------+
+    |ap_block_state1       |        or|   0|  0|    2|           1|           1|
+    |ap_block_state4       |        or|   0|  0|    2|           1|           1|
+    |or_ln282_7_fu_322_p2  |        or|   0|  0|  209|         209|           1|
+    |or_ln282_fu_238_p2    |        or|   0|  0|  240|         240|           1|
+    +----------------------+----------+----+---+-----+------------+------------+
+    |Total                 |          |   0|  0|  453|         451|           4|
+    +----------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                   |  26|          5|    1|          5|
+    |ap_done                     |   9|          2|    1|          2|
+    |base_addr_cid_blk_n         |   9|          2|    1|          2|
+    |base_addr_val_blk_n         |   9|          2|    1|          2|
+    |vccache_re_bank1_pe2_blk_n  |   9|          2|    1|          2|
+    |vccache_re_bank1_pe2_din    |   9|          2|  209|        418|
+    |vccache_re_bank1_pe2_write  |  14|          3|    1|          3|
+    |vccache_re_bank2_pe2_blk_n  |   9|          2|    1|          2|
+    |vccache_re_bank2_pe2_din    |   9|          2|  209|        418|
+    |vccache_re_bank2_pe2_write  |  14|          3|    1|          3|
+    |vrequest2_read              |   9|          2|    1|          2|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       | 126|         27|  427|        859|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------------+---+----+-----+-----------+
+    |                                   Name                                  | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                                |  4|   0|    4|          0|
+    |ap_done_reg                                                              |  1|   0|    1|          0|
+    |empty_561_reg_383                                                        |  5|   0|    5|          0|
+    |empty_reg_378                                                            |  5|   0|    5|          0|
+    |grp_request_to_vcbanks_28_Pipeline_VITIS_LOOP_253_1_fu_154_ap_start_reg  |  1|   0|    1|          0|
+    +-------------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                                    | 16|   0|   16|          0|
+    +-------------------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------+-----+-----+------------+-----------------------+--------------+
+|              RTL Ports              | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-------------------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                               |   in|    1|  ap_ctrl_hs|  request_to_vcbanks.28|  return value|
+|ap_rst                               |   in|    1|  ap_ctrl_hs|  request_to_vcbanks.28|  return value|
+|ap_start                             |   in|    1|  ap_ctrl_hs|  request_to_vcbanks.28|  return value|
+|ap_done                              |  out|    1|  ap_ctrl_hs|  request_to_vcbanks.28|  return value|
+|ap_continue                          |   in|    1|  ap_ctrl_hs|  request_to_vcbanks.28|  return value|
+|ap_idle                              |  out|    1|  ap_ctrl_hs|  request_to_vcbanks.28|  return value|
+|ap_ready                             |  out|    1|  ap_ctrl_hs|  request_to_vcbanks.28|  return value|
+|vrequest2_dout                       |   in|  209|     ap_fifo|              vrequest2|       pointer|
+|vrequest2_num_data_valid             |   in|    7|     ap_fifo|              vrequest2|       pointer|
+|vrequest2_fifo_cap                   |   in|    7|     ap_fifo|              vrequest2|       pointer|
+|vrequest2_empty_n                    |   in|    1|     ap_fifo|              vrequest2|       pointer|
+|vrequest2_read                       |  out|    1|     ap_fifo|              vrequest2|       pointer|
+|base_addr_val_dout                   |   in|   32|     ap_fifo|          base_addr_val|       pointer|
+|base_addr_val_num_data_valid         |   in|    4|     ap_fifo|          base_addr_val|       pointer|
+|base_addr_val_fifo_cap               |   in|    4|     ap_fifo|          base_addr_val|       pointer|
+|base_addr_val_empty_n                |   in|    1|     ap_fifo|          base_addr_val|       pointer|
+|base_addr_val_read                   |  out|    1|     ap_fifo|          base_addr_val|       pointer|
+|base_addr_cid_dout                   |   in|   32|     ap_fifo|          base_addr_cid|       pointer|
+|base_addr_cid_num_data_valid         |   in|    4|     ap_fifo|          base_addr_cid|       pointer|
+|base_addr_cid_fifo_cap               |   in|    4|     ap_fifo|          base_addr_cid|       pointer|
+|base_addr_cid_empty_n                |   in|    1|     ap_fifo|          base_addr_cid|       pointer|
+|base_addr_cid_read                   |  out|    1|     ap_fifo|          base_addr_cid|       pointer|
+|vccache_re_bank1_pe2_din             |  out|  209|     ap_fifo|   vccache_re_bank1_pe2|       pointer|
+|vccache_re_bank1_pe2_num_data_valid  |   in|    4|     ap_fifo|   vccache_re_bank1_pe2|       pointer|
+|vccache_re_bank1_pe2_fifo_cap        |   in|    4|     ap_fifo|   vccache_re_bank1_pe2|       pointer|
+|vccache_re_bank1_pe2_full_n          |   in|    1|     ap_fifo|   vccache_re_bank1_pe2|       pointer|
+|vccache_re_bank1_pe2_write           |  out|    1|     ap_fifo|   vccache_re_bank1_pe2|       pointer|
+|vccache_re_bank2_pe2_din             |  out|  209|     ap_fifo|   vccache_re_bank2_pe2|       pointer|
+|vccache_re_bank2_pe2_num_data_valid  |   in|    4|     ap_fifo|   vccache_re_bank2_pe2|       pointer|
+|vccache_re_bank2_pe2_fifo_cap        |   in|    4|     ap_fifo|   vccache_re_bank2_pe2|       pointer|
+|vccache_re_bank2_pe2_full_n          |   in|    1|     ap_fifo|   vccache_re_bank2_pe2|       pointer|
+|vccache_re_bank2_pe2_write           |  out|    1|     ap_fifo|   vccache_re_bank2_pe2|       pointer|
++-------------------------------------+-----+-----+------------+-----------------------+--------------+
+

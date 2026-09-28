@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'merge_2_to_1_vcresult_42'
 ================================================================
-* Date:           Fri Sep 25 15:49:29 2026
+* Date:           Sat Sep 26 09:29:36 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -38,7 +38,7 @@
         |                                                              |                                                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
         |                           Instance                           |                       Module                       |   min   |   max   |    min   |    max   | min | max |   Type  |
         +--------------------------------------------------------------+----------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
-        |grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81  |merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81  |merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
         +--------------------------------------------------------------+----------------------------------------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
@@ -86,29 +86,29 @@ ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%temp_type_V_loc = alloca i64 1"   -
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%temp_peID_V_loc = alloca i64 1"   --->   Operation 5 'alloca' 'temp_peID_V_loc' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%temp_data_V_loc = alloca i64 1"   --->   Operation 6 'alloca' 'temp_data_V_loc' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 7 'wait' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @merge_2_to_1_vcresult.42_Pipeline_VITIS_LOOP_533_1, i1031 %vcache_bank3_result, i1031 %vcache_bank4_result, i1031 %vcache_bank1_cresult1, i1024 %temp_data_V_loc, i3 %temp_peID_V_loc, i3 %temp_type_V_loc"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @merge_2_to_1_vcresult.42_Pipeline_VITIS_LOOP_529_1, i1031 %vcache_bank3_result, i1031 %vcache_bank4_result, i1031 %vcache_bank1_cresult1, i1024 %temp_data_V_loc, i3 %temp_peID_V_loc, i3 %temp_type_V_loc"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.42>
-ST_2 : Operation 9 [1/2] (0.42ns)   --->   "%call_ln0 = call void @merge_2_to_1_vcresult.42_Pipeline_VITIS_LOOP_533_1, i1031 %vcache_bank3_result, i1031 %vcache_bank4_result, i1031 %vcache_bank1_cresult1, i1024 %temp_data_V_loc, i3 %temp_peID_V_loc, i3 %temp_type_V_loc"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 0.42> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 9 [1/2] (0.42ns)   --->   "%call_ln0 = call void @merge_2_to_1_vcresult.42_Pipeline_VITIS_LOOP_529_1, i1031 %vcache_bank3_result, i1031 %vcache_bank4_result, i1031 %vcache_bank1_cresult1, i1024 %temp_data_V_loc, i3 %temp_peID_V_loc, i3 %temp_type_V_loc"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 0.42> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 1.82>
 ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1031 %vcache_bank1_cresult1, i64 666, i64 10, i64 18446744073709551615"   --->   Operation 10 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1031 %vcache_bank1_cresult1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1031 %vcache_bank4_result, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1031 %vcache_bank3_result, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1031 %vcache_bank1_cresult1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1031 %vcache_bank4_result, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1031 %vcache_bank3_result, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%temp_data_V_loc_load = load i1024 %temp_data_V_loc"   --->   Operation 14 'load' 'temp_data_V_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%temp_peID_V_loc_load = load i3 %temp_peID_V_loc"   --->   Operation 15 'load' 'temp_peID_V_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%temp_type_V_loc_load = load i3 %temp_type_V_loc"   --->   Operation 16 'load' 'temp_type_V_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%empty_722 = wait i32 @_ssdm_op_Wait"   --->   Operation 17 'wait' 'empty_722' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%or_ln571_s = bitconcatenate i1048 @_ssdm_op_BitConcatenate.i1048.i1024.i5.i3.i5.i3.i8, i1024 %temp_data_V_loc_load, i5 0, i3 %temp_peID_V_loc_load, i5 0, i3 %temp_type_V_loc_load, i8 0" [util.cpp:571]   --->   Operation 18 'bitconcatenate' 'or_ln571_s' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%or_ln571 = or i1048 %or_ln571_s, i1048 1" [util.cpp:571]   --->   Operation 19 'or' 'or_ln571' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_s = partselect i3 @_ssdm_op_PartSelect.i3.i1048.i32.i32, i1048 %or_ln571, i32 8, i32 10" [util.cpp:571]   --->   Operation 20 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%tmp2 = partselect i3 @_ssdm_op_PartSelect.i3.i1048.i32.i32, i1048 %or_ln571, i32 16, i32 18" [util.cpp:571]   --->   Operation 21 'partselect' 'tmp2' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_301 = partselect i1024 @_ssdm_op_PartSelect.i1024.i1048.i32.i32, i1048 %or_ln571, i32 24, i32 1047" [util.cpp:571]   --->   Operation 22 'partselect' 'tmp_301' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%or_ln571_1 = bitconcatenate i1031 @_ssdm_op_BitConcatenate.i1031.i1024.i3.i3.i1, i1024 %tmp_301, i3 %tmp2, i3 %tmp_s, i1 0" [util.cpp:571]   --->   Operation 23 'bitconcatenate' 'or_ln571_1' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%or_ln571_4 = or i1031 %or_ln571_1, i1031 1" [util.cpp:571]   --->   Operation 24 'or' 'or_ln571_4' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 25 [1/1] (1.82ns)   --->   "%write_ln571 = write void @_ssdm_op_Write.ap_fifo.volatile.i1031P0A, i1031 %vcache_bank1_cresult1, i1031 %or_ln571_4" [util.cpp:571]   --->   Operation 25 'write' 'write_ln571' <Predicate = true> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.93> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1031> <Depth = 8> <FIFO>
-ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln572 = ret" [util.cpp:572]   --->   Operation 26 'ret' 'ret_ln572' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%empty_709 = wait i32 @_ssdm_op_Wait"   --->   Operation 17 'wait' 'empty_709' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%or_ln567_1 = bitconcatenate i1048 @_ssdm_op_BitConcatenate.i1048.i1024.i5.i3.i5.i3.i8, i1024 %temp_data_V_loc_load, i5 0, i3 %temp_peID_V_loc_load, i5 0, i3 %temp_type_V_loc_load, i8 0" [util.cpp:567]   --->   Operation 18 'bitconcatenate' 'or_ln567_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%or_ln567 = or i1048 %or_ln567_1, i1048 1" [util.cpp:567]   --->   Operation 19 'or' 'or_ln567' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_s = partselect i3 @_ssdm_op_PartSelect.i3.i1048.i32.i32, i1048 %or_ln567, i32 8, i32 10" [util.cpp:567]   --->   Operation 20 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%tmp2 = partselect i3 @_ssdm_op_PartSelect.i3.i1048.i32.i32, i1048 %or_ln567, i32 16, i32 18" [util.cpp:567]   --->   Operation 21 'partselect' 'tmp2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_301 = partselect i1024 @_ssdm_op_PartSelect.i1024.i1048.i32.i32, i1048 %or_ln567, i32 24, i32 1047" [util.cpp:567]   --->   Operation 22 'partselect' 'tmp_301' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%or_ln567_4 = bitconcatenate i1031 @_ssdm_op_BitConcatenate.i1031.i1024.i3.i3.i1, i1024 %tmp_301, i3 %tmp2, i3 %tmp_s, i1 0" [util.cpp:567]   --->   Operation 23 'bitconcatenate' 'or_ln567_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%or_ln567_2 = or i1031 %or_ln567_4, i1031 1" [util.cpp:567]   --->   Operation 24 'or' 'or_ln567_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (1.82ns)   --->   "%write_ln567 = write void @_ssdm_op_Write.ap_fifo.volatile.i1031P0A, i1031 %vcache_bank1_cresult1, i1031 %or_ln567_2" [util.cpp:567]   --->   Operation 25 'write' 'write_ln567' <Predicate = true> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.93> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1031> <Depth = 8> <FIFO>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln568 = ret" [util.cpp:568]   --->   Operation 26 'ret' 'ret_ln568' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -143,16 +143,16 @@ specinterface_ln0    (specinterface ) [ 0000]
 temp_data_V_loc_load (load          ) [ 0000]
 temp_peID_V_loc_load (load          ) [ 0000]
 temp_type_V_loc_load (load          ) [ 0000]
-empty_722            (wait          ) [ 0000]
-or_ln571_s           (bitconcatenate) [ 0000]
-or_ln571             (or            ) [ 0000]
+empty_709            (wait          ) [ 0000]
+or_ln567_1           (bitconcatenate) [ 0000]
+or_ln567             (or            ) [ 0000]
 tmp_s                (partselect    ) [ 0000]
 tmp2                 (partselect    ) [ 0000]
 tmp_301              (partselect    ) [ 0000]
-or_ln571_1           (bitconcatenate) [ 0000]
-or_ln571_4           (or            ) [ 0000]
-write_ln571          (write         ) [ 0000]
-ret_ln572            (ret           ) [ 0000]
+or_ln567_4           (bitconcatenate) [ 0000]
+or_ln567_2           (or            ) [ 0000]
+write_ln567          (write         ) [ 0000]
+ret_ln568            (ret           ) [ 0000]
 </LifeTime>
 
 <model>
@@ -208,7 +208,7 @@ ret_ln572            (ret           ) [ 0000]
 <pin id="11" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="merge_2_to_1_vcresult.42_Pipeline_VITIS_LOOP_533_1"/></StgValue>
+<StgValue><ssdm name="merge_2_to_1_vcresult.42_Pipeline_VITIS_LOOP_529_1"/></StgValue>
 </bind>
 </comp>
 
@@ -262,7 +262,7 @@ ret_ln572            (ret           ) [ 0000]
 <pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_56"/></StgValue>
+<StgValue><ssdm name="empty_91"/></StgValue>
 </bind>
 </comp>
 
@@ -280,7 +280,7 @@ ret_ln572            (ret           ) [ 0000]
 <pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_86"/></StgValue>
+<StgValue><ssdm name="empty_141"/></StgValue>
 </bind>
 </comp>
 
@@ -470,7 +470,7 @@ ret_ln572            (ret           ) [ 0000]
 </bind>
 </comp>
 
-<comp id="74" class="1004" name="write_ln571_write_fu_74">
+<comp id="74" class="1004" name="write_ln567_write_fu_74">
 <pin_list>
 <pin id="75" dir="0" index="0" bw="0" slack="0"/>
 <pin id="76" dir="0" index="1" bw="1031" slack="0"/>
@@ -479,11 +479,11 @@ ret_ln572            (ret           ) [ 0000]
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln571/3 "/>
+<opset="write_ln567/3 "/>
 </bind>
 </comp>
 
-<comp id="81" class="1004" name="grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81">
+<comp id="81" class="1004" name="grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81">
 <pin_list>
 <pin id="82" dir="0" index="0" bw="0" slack="0"/>
 <pin id="83" dir="0" index="1" bw="1031" slack="0"/>
@@ -533,7 +533,7 @@ ret_ln572            (ret           ) [ 0000]
 </bind>
 </comp>
 
-<comp id="103" class="1004" name="or_ln571_s_fu_103">
+<comp id="103" class="1004" name="or_ln567_1_fu_103">
 <pin_list>
 <pin id="104" dir="0" index="0" bw="1048" slack="0"/>
 <pin id="105" dir="0" index="1" bw="1024" slack="0"/>
@@ -546,11 +546,11 @@ ret_ln572            (ret           ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="or_ln571_s/3 "/>
+<opset="or_ln567_1/3 "/>
 </bind>
 </comp>
 
-<comp id="119" class="1004" name="or_ln571_fu_119">
+<comp id="119" class="1004" name="or_ln567_fu_119">
 <pin_list>
 <pin id="120" dir="0" index="0" bw="1048" slack="0"/>
 <pin id="121" dir="0" index="1" bw="1" slack="0"/>
@@ -558,7 +558,7 @@ ret_ln572            (ret           ) [ 0000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln571/3 "/>
+<opset="or_ln567/3 "/>
 </bind>
 </comp>
 
@@ -604,7 +604,7 @@ ret_ln572            (ret           ) [ 0000]
 </bind>
 </comp>
 
-<comp id="155" class="1004" name="or_ln571_1_fu_155">
+<comp id="155" class="1004" name="or_ln567_4_fu_155">
 <pin_list>
 <pin id="156" dir="0" index="0" bw="1031" slack="0"/>
 <pin id="157" dir="0" index="1" bw="1024" slack="0"/>
@@ -615,11 +615,11 @@ ret_ln572            (ret           ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="or_ln571_1/3 "/>
+<opset="or_ln567_4/3 "/>
 </bind>
 </comp>
 
-<comp id="167" class="1004" name="or_ln571_4_fu_167">
+<comp id="167" class="1004" name="or_ln567_2_fu_167">
 <pin_list>
 <pin id="168" dir="0" index="0" bw="1031" slack="0"/>
 <pin id="169" dir="0" index="1" bw="1" slack="0"/>
@@ -627,7 +627,7 @@ ret_ln572            (ret           ) [ 0000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln571_4/3 "/>
+<opset="or_ln567_2/3 "/>
 </bind>
 </comp>
 
@@ -774,14 +774,14 @@ ret_ln572            (ret           ) [ 0000]
 		call_ln0 : 1
 	State 2
 	State 3
-		or_ln571_s : 1
-		or_ln571 : 2
+		or_ln567_1 : 1
+		or_ln567 : 2
 		tmp_s : 2
 		tmp2 : 2
 		tmp_301 : 2
-		or_ln571_1 : 3
-		or_ln571_4 : 4
-		write_ln571 : 4
+		or_ln567_4 : 3
+		or_ln567_2 : 4
+		write_ln567 : 4
 
 
 ============================================================
@@ -792,15 +792,15 @@ ret_ln572            (ret           ) [ 0000]
 |----------|--------------------------------------------------------------|---------|---------|---------|
 | Operation|                        Functional Unit                       |  Delay  |    FF   |   LUT   |
 |----------|--------------------------------------------------------------|---------|---------|---------|
-|   call   | grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81 |  0.427  |   3113  |    11   |
+|   call   | grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81 |  0.427  |   3113  |    11   |
 |----------|--------------------------------------------------------------|---------|---------|---------|
-|   write  |                    write_ln571_write_fu_74                   |    0    |    0    |    0    |
+|   write  |                    write_ln567_write_fu_74                   |    0    |    0    |    0    |
 |----------|--------------------------------------------------------------|---------|---------|---------|
-|bitconcatenate|                       or_ln571_s_fu_103                      |    0    |    0    |    0    |
-|          |                       or_ln571_1_fu_155                      |    0    |    0    |    0    |
+|bitconcatenate|                       or_ln567_1_fu_103                      |    0    |    0    |    0    |
+|          |                       or_ln567_4_fu_155                      |    0    |    0    |    0    |
 |----------|--------------------------------------------------------------|---------|---------|---------|
-|    or    |                        or_ln571_fu_119                       |    0    |    0    |    0    |
-|          |                       or_ln571_4_fu_167                      |    0    |    0    |    0    |
+|    or    |                        or_ln567_fu_119                       |    0    |    0    |    0    |
+|          |                       or_ln567_2_fu_167                      |    0    |    0    |    0    |
 |----------|--------------------------------------------------------------|---------|---------|---------|
 |          |                         tmp_s_fu_125                         |    0    |    0    |    0    |
 |partselect|                          tmp2_fu_135                         |    0    |    0    |    0    |

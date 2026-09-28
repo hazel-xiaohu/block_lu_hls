@@ -1,0 +1,125 @@
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6870:5: warning: Added loop label VITIS_LOOP_29_1:   [xilinx-label-all-loops]
+    for (lslu_id_t i=0; i<n; ++i) {
+    ^~~
+    VITIS_LOOP_29_1: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6870:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6872:9: warning: Added loop label VITIS_LOOP_31_2:   [xilinx-label-all-loops]
+        for (lslu_id_t p=l_ptr[i]; p<l_ptr[i+1]; ++p) {
+        ^~~
+        VITIS_LOOP_31_2: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6872:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6876:9: warning: Added loop label VITIS_LOOP_35_3:   [xilinx-label-all-loops]
+        for (lslu_id_t p=u_ptr[i]; p<u_ptr[i+1]; ++p) {
+        ^~~
+        VITIS_LOOP_35_3: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6876:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6880:9: warning: Added loop label VITIS_LOOP_39_4:   [xilinx-label-all-loops]
+        for (lslu_id_t p=a_ptr[i]; p<a_ptr[i+1]; ++p) {
+        ^~~
+        VITIS_LOOP_39_4: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6880:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6886:9: warning: Added loop label VITIS_LOOP_45_5:   [xilinx-label-all-loops]
+        for (lslu_id_t p=l_ptr[i]; p<l_ptr[i+1]; ++p) {
+        ^~~
+        VITIS_LOOP_45_5: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6886:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6893:13: warning: Added loop label VITIS_LOOP_52_6:   [xilinx-label-all-loops]
+            for (lslu_id_t q=u_diag_pos[k]+1; q<u_ptr[k+1]; ++q) {
+            ^~~
+            VITIS_LOOP_52_6: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6893:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6900:9: warning: Added loop label VITIS_LOOP_59_7:   [xilinx-label-all-loops]
+        for (lslu_id_t p=u_ptr[i]; p<u_ptr[i+1]; ++p) {
+        ^~~
+        VITIS_LOOP_59_7: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6900:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6932:5: warning: Added loop label VITIS_LOOP_91_1:   [xilinx-label-all-loops]
+    for (lslu_id_t ac=0; ac<active_count; ++ac) {
+    ^~~
+    VITIS_LOOP_91_1: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6932:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6934:9: warning: Added loop label VITIS_LOOP_93_2:   [xilinx-label-all-loops]
+        for (lslu_id_t i=0;i<n;++i) work[i]=0;
+        ^~~
+        VITIS_LOOP_93_2: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6934:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6935:9: warning: Added loop label VITIS_LOOP_94_3:   [xilinx-label-all-loops]
+        for (lslu_id_t p=b_ptr[col];p<b_ptr[col+1];++p) work[b_idx[p]]+=b_val[p];
+        ^~~
+        VITIS_LOOP_94_3: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6935:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6936:9: warning: Added loop label VITIS_LOOP_95_4:   [xilinx-label-all-loops]
+        for (lslu_id_t i=0;i<n;++i)
+        ^~~
+        VITIS_LOOP_95_4: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6936:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6937:13: warning: Added loop label VITIS_LOOP_96_5:   [xilinx-label-all-loops]
+            for (lslu_id_t p=l_ptr[i];p<l_ptr[i+1];++p) {
+            ^~~
+            VITIS_LOOP_96_5: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6937:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6941:9: warning: Added loop label VITIS_LOOP_100_6:   [xilinx-label-all-loops]
+        for (lslu_id_t p=x_ptr[col];p<x_ptr[col+1];++p) {
+        ^~~
+        VITIS_LOOP_100_6: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6941:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6972:5: warning: Added loop label VITIS_LOOP_131_1:   [xilinx-label-all-loops]
+    for (lslu_id_t ar=0; ar<active_count; ++ar) {
+    ^~~
+    VITIS_LOOP_131_1: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6972:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6974:9: warning: Added loop label VITIS_LOOP_133_2:   [xilinx-label-all-loops]
+        for (lslu_id_t j=0;j<n;++j) work[j]=0;
+        ^~~
+        VITIS_LOOP_133_2: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6974:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6975:9: warning: Added loop label VITIS_LOOP_134_3:   [xilinx-label-all-loops]
+        for (lslu_id_t p=b_ptr[row];p<b_ptr[row+1];++p) work[b_idx[p]]+=b_val[p];
+        ^~~
+        VITIS_LOOP_134_3: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6975:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6976:9: warning: Added loop label VITIS_LOOP_135_4:   [xilinx-label-all-loops]
+        for (lslu_id_t j=0;j<n;++j) {
+        ^~~
+        VITIS_LOOP_135_4: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6976:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6977:13: warning: Added loop label VITIS_LOOP_136_5:   [xilinx-label-all-loops]
+            for (lslu_id_t p=u_col_ptr[j];p<u_col_ptr[j+1];++p) {
+            ^~~
+            VITIS_LOOP_136_5: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6977:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6985:9: warning: Added loop label VITIS_LOOP_144_6:   [xilinx-label-all-loops]
+        for (lslu_id_t p=x_ptr[row];p<x_ptr[row+1];++p) x_val[p]=work[x_idx[p]];
+        ^~~
+        VITIS_LOOP_144_6: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6985:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7016:5: warning: Added loop label VITIS_LOOP_171_1:   [xilinx-label-all-loops]
+    for (lslu_id_t i=0;i<rows;++i) {
+    ^~~
+    VITIS_LOOP_171_1: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7016:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7018:9: warning: Added loop label VITIS_LOOP_173_2:   [xilinx-label-all-loops]
+        for (lslu_id_t p=s_ptr[i];p<s_ptr[i+1];++p) {
+        ^~~
+        VITIS_LOOP_173_2: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7018:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7021:9: warning: Added loop label VITIS_LOOP_176_3:   [xilinx-label-all-loops]
+        for (lslu_id_t p=a_ptr[i];p<a_ptr[i+1];++p) {
+        ^~~
+        VITIS_LOOP_176_3: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7021:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7026:9: warning: Added loop label VITIS_LOOP_181_4:   [xilinx-label-all-loops]
+        for (lslu_id_t p=l_ptr[i];p<l_ptr[i+1];++p) {
+        ^~~
+        VITIS_LOOP_181_4: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7026:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7028:13: warning: Added loop label VITIS_LOOP_183_5:   [xilinx-label-all-loops]
+            for (lslu_id_t q=u_ptr[k];q<u_ptr[k+1];++q) {
+            ^~~
+            VITIS_LOOP_183_5: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7028:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7034:9: warning: Added loop label VITIS_LOOP_189_6:   [xilinx-label-all-loops]
+        for (lslu_id_t p=s_ptr[i];p<s_ptr[i+1];++p) s_val[p]=work[s_idx[p]];
+        ^~~
+        VITIS_LOOP_189_6: 
+/output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_ssssm/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7034:9: note: FIX-IT applied suggested code changes

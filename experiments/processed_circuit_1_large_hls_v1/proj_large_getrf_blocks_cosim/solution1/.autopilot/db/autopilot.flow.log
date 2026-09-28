@@ -1,0 +1,939 @@
+INFO-FLOW: Workspace /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1 opened at Sun Sep 27 14:45:28 +0000 2026
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vivado' config_interface -m_axi_latency=0 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+Execute       config_interface -m_axi_latency=0 
+Command     open_solution done; 0.11 sec.
+Execute     set_part xczu15eg-ffvb1156-2-i 
+INFO: [HLS 200-1510] Running: set_part xczu15eg-ffvb1156-2-i 
+Execute       create_platform xczu15eg-ffvb1156-2-i -board  
+DBG:HLSDevice: Trying to load device library: /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /openbayes/home/tools/Xilinx/Vivado/2022.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+Command       create_platform done; 0.41 sec.
+Execute       source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xczu15eg-ffvb1156-2-i -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.51 sec.
+Execute     create_clock -period 5.0 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 5.0 -name default 
+Execute       ap_set_clock -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 197.508 MB.
+INFO: [HLS 200-10] Analyzing design file 'large_sparse_lu.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling large_sparse_lu.cpp as C++
+Execute         ap_part_info -name xczu15eg-ffvb1156-2-i -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang large_sparse_lu.cpp -foptimization-record-file=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp -hls-platform-db-name=/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_1488.000000_DSP_3528.000000_FF_682560.000000_LUT_341280.000000_SLICE_42660.000000_URAM_112.000000 -device-name-info=xczu15eg-ffvb1156-2-i > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.cpp.clang.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.cpp.clang.err.log 
+Command         ap_eval done; 0.25 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+Execute         set_directive_top large_getrf -name=large_getrf 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute         ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp -hls-platform-db-name=/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_1488.000000_DSP_3528.000000_FF_682560.000000_LUT_341280.000000_SLICE_42660.000000_URAM_112.000000 -device-name-info=xczu15eg-ffvb1156-2-i > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/clang.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/clang.err.log 
+Command         ap_eval done; 0.25 sec.
+Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp std=gnu++14 -target fpga  -directive=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/.systemc_flag -fix-errors /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp std=gnu++14 -target fpga  -directive=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/all.directive.json -fix-errors /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Execute         clang_tidy xilinx-remove-assert -desc remove-assert /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp.clang-tidy.loop-label.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command           ap_eval done; 0.17 sec.
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command         clang_tidy done; 0.34 sec.
+Execute         ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Execute         ap_part_info -name xczu15eg-ffvb1156-2-i -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.bc -hls-platform-db-name=/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_1488.000000_DSP_3528.000000_FF_682560.000000_LUT_341280.000000_SLICE_42660.000000_URAM_112.000000 -device-name-info=xczu15eg-ffvb1156-2-i > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp.clang.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp.clang.err.log 
+Command         ap_eval done; 0.27 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.76 seconds. CPU system time: 0.76 seconds. Elapsed time: 1.59 seconds; current allocated memory: 205.223 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.0.bc -args  "/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.g.bc"  
+Execute           ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_sparse_lu.g.bc -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.0.bc > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute           ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.1.lower.bc > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc 
+Execute           ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.2.m1.bc > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command           ap_eval done; 2.3 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 2.3 sec.
+Execute         run_link_or_opt -opt -out /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=large_getrf -reflow-float-conversion 
+Execute           ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=large_getrf -reflow-float-conversion -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command           ap_eval done; 0.86 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.87 sec.
+Execute         run_link_or_opt -out /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc 
+Execute           ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.4.m2.bc > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+Command           ap_eval done; 0.12 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.13 sec.
+Execute         run_link_or_opt -opt -out /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=large_getrf 
+Execute           ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=large_getrf -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+Command           ap_eval done; 0.11 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.11 sec.
+Execute         send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute         is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+Execute         ap_eval exec -ignorestderr /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=large_getrf -mllvm -hls-db-dir -mllvm /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=5 -x ir /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_1488.000000_DSP_3528.000000_FF_682560.000000_LUT_341280.000000_SLICE_42660.000000_URAM_112.000000 -device-name-info=xczu15eg-ffvb1156-2-i > /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command         ap_eval done; 0.86 sec.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const' into 'fp_struct<float>::to_float() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:351:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:375:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'float generic_copysign<float>(float, float)' into 'float generic_fabs<float>(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h:12:0)
+INFO: [HLS 214-178] Inlining function 'float generic_fabs<float>(float)' into 'fabsf' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c/fabsfloat.cpp:7:0)
+INFO: [HLS 214-178] Inlining function 'fabsf' into 'large_getrf' (large_sparse_lu.cpp:13:0)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'l0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:31:43)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_31_2'(large_sparse_lu.cpp:31:26) has been inferred on bundle 'l1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:31:26)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'u0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:35:43)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 has been inferred on bundle 'u1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:35:26)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'a0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:39:43)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 has been inferred on bundle 'u1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:59:26)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 has been inferred on bundle 'u2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:59:26)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.76 seconds. CPU system time: 0.88 seconds. Elapsed time: 4.75 seconds; current allocated memory: 205.812 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 205.812 MB.
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top large_getrf -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.0.bc -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command           transform done; 0.13 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.11 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.14 seconds; current allocated memory: 232.598 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.1.bc -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command           transform done; 0.15 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.2.prechk.bc -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command           transform done; 0.13 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.24 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.29 seconds; current allocated memory: 270.484 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.g.1.bc to /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.o.1.bc -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+Command           transform done; 0.23 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.o.1.tmp.bc -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command           transform done; 0.18 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.37 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.41 seconds; current allocated memory: 328.914 MB.
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.o.2.bc -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_45_5' (large_sparse_lu.cpp:45:41) in function 'large_getrf' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_29_1' (large_sparse_lu.cpp:29:37) in function 'large_getrf' more than one sub loop.
+Command           transform done; 0.29 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.24 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.3 seconds; current allocated memory: 384.816 MB.
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 1.17 sec.
+Command       elaborate done; 7.52 sec.
+Execute       ap_eval exec zip -j /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'large_getrf' ...
+Execute         ap_set_top_model large_getrf 
+Execute         get_model_list large_getrf -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model large_getrf 
+Execute         preproc_iomode -model large_getrf_Pipeline_VITIS_LOOP_59_7 
+Execute         preproc_iomode -model large_getrf_Pipeline_VITIS_LOOP_52_6 
+Execute         preproc_iomode -model large_getrf_Pipeline_VITIS_LOOP_39_4 
+Execute         preproc_iomode -model large_getrf_Pipeline_VITIS_LOOP_35_3 
+Execute         preproc_iomode -model large_getrf_Pipeline_VITIS_LOOP_31_2 
+Execute         get_model_list large_getrf -filter all-wo-channel 
+INFO-FLOW: Model list for configure: large_getrf_Pipeline_VITIS_LOOP_31_2 large_getrf_Pipeline_VITIS_LOOP_35_3 large_getrf_Pipeline_VITIS_LOOP_39_4 large_getrf_Pipeline_VITIS_LOOP_52_6 large_getrf_Pipeline_VITIS_LOOP_59_7 large_getrf
+INFO-FLOW: Configuring Module : large_getrf_Pipeline_VITIS_LOOP_31_2 ...
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_31_2 
+Execute         apply_spec_resource_limit large_getrf_Pipeline_VITIS_LOOP_31_2 
+INFO-FLOW: Configuring Module : large_getrf_Pipeline_VITIS_LOOP_35_3 ...
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_35_3 
+Execute         apply_spec_resource_limit large_getrf_Pipeline_VITIS_LOOP_35_3 
+INFO-FLOW: Configuring Module : large_getrf_Pipeline_VITIS_LOOP_39_4 ...
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_39_4 
+Execute         apply_spec_resource_limit large_getrf_Pipeline_VITIS_LOOP_39_4 
+INFO-FLOW: Configuring Module : large_getrf_Pipeline_VITIS_LOOP_52_6 ...
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_52_6 
+Execute         apply_spec_resource_limit large_getrf_Pipeline_VITIS_LOOP_52_6 
+INFO-FLOW: Configuring Module : large_getrf_Pipeline_VITIS_LOOP_59_7 ...
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_59_7 
+Execute         apply_spec_resource_limit large_getrf_Pipeline_VITIS_LOOP_59_7 
+INFO-FLOW: Configuring Module : large_getrf ...
+Execute         set_default_model large_getrf 
+Execute         apply_spec_resource_limit large_getrf 
+INFO-FLOW: Model list for preprocess: large_getrf_Pipeline_VITIS_LOOP_31_2 large_getrf_Pipeline_VITIS_LOOP_35_3 large_getrf_Pipeline_VITIS_LOOP_39_4 large_getrf_Pipeline_VITIS_LOOP_52_6 large_getrf_Pipeline_VITIS_LOOP_59_7 large_getrf
+INFO-FLOW: Preprocessing Module: large_getrf_Pipeline_VITIS_LOOP_31_2 ...
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_31_2 
+Execute         cdfg_preprocess -model large_getrf_Pipeline_VITIS_LOOP_31_2 
+Execute         rtl_gen_preprocess large_getrf_Pipeline_VITIS_LOOP_31_2 
+INFO-FLOW: Preprocessing Module: large_getrf_Pipeline_VITIS_LOOP_35_3 ...
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_35_3 
+Execute         cdfg_preprocess -model large_getrf_Pipeline_VITIS_LOOP_35_3 
+Execute         rtl_gen_preprocess large_getrf_Pipeline_VITIS_LOOP_35_3 
+INFO-FLOW: Preprocessing Module: large_getrf_Pipeline_VITIS_LOOP_39_4 ...
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_39_4 
+Execute         cdfg_preprocess -model large_getrf_Pipeline_VITIS_LOOP_39_4 
+Execute         rtl_gen_preprocess large_getrf_Pipeline_VITIS_LOOP_39_4 
+INFO-FLOW: Preprocessing Module: large_getrf_Pipeline_VITIS_LOOP_52_6 ...
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_52_6 
+Execute         cdfg_preprocess -model large_getrf_Pipeline_VITIS_LOOP_52_6 
+Execute         rtl_gen_preprocess large_getrf_Pipeline_VITIS_LOOP_52_6 
+INFO-FLOW: Preprocessing Module: large_getrf_Pipeline_VITIS_LOOP_59_7 ...
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_59_7 
+Execute         cdfg_preprocess -model large_getrf_Pipeline_VITIS_LOOP_59_7 
+Execute         rtl_gen_preprocess large_getrf_Pipeline_VITIS_LOOP_59_7 
+INFO-FLOW: Preprocessing Module: large_getrf ...
+Execute         set_default_model large_getrf 
+Execute         cdfg_preprocess -model large_getrf 
+Execute         rtl_gen_preprocess large_getrf 
+INFO-FLOW: Model list for synthesis: large_getrf_Pipeline_VITIS_LOOP_31_2 large_getrf_Pipeline_VITIS_LOOP_35_3 large_getrf_Pipeline_VITIS_LOOP_39_4 large_getrf_Pipeline_VITIS_LOOP_52_6 large_getrf_Pipeline_VITIS_LOOP_59_7 large_getrf
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_Pipeline_VITIS_LOOP_31_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_31_2 
+Execute         schedule -model large_getrf_Pipeline_VITIS_LOOP_31_2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_31_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'VITIS_LOOP_31_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.22 seconds; current allocated memory: 384.816 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_31_2.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_31_2.sched.adb -f 
+INFO-FLOW: Finish scheduling large_getrf_Pipeline_VITIS_LOOP_31_2.
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_31_2 
+Execute         bind -model large_getrf_Pipeline_VITIS_LOOP_31_2 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 388.816 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_31_2.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_31_2.bind.adb -f 
+INFO-FLOW: Finish binding large_getrf_Pipeline_VITIS_LOOP_31_2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_Pipeline_VITIS_LOOP_35_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_35_3 
+Execute         schedule -model large_getrf_Pipeline_VITIS_LOOP_35_3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_35_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'VITIS_LOOP_35_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 388.816 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_35_3.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_35_3.sched.adb -f 
+INFO-FLOW: Finish scheduling large_getrf_Pipeline_VITIS_LOOP_35_3.
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_35_3 
+Execute         bind -model large_getrf_Pipeline_VITIS_LOOP_35_3 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 388.816 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_35_3.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_35_3.bind.adb -f 
+INFO-FLOW: Finish binding large_getrf_Pipeline_VITIS_LOOP_35_3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_Pipeline_VITIS_LOOP_39_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_39_4 
+Execute         schedule -model large_getrf_Pipeline_VITIS_LOOP_39_4 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_39_4'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln42', large_sparse_lu.cpp:42)) in the first pipeline iteration (II = 1 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln42', large_sparse_lu.cpp:42)) in the first pipeline iteration (II = 2 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln42', large_sparse_lu.cpp:42)) in the first pipeline iteration (II = 3 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln42', large_sparse_lu.cpp:42)) in the first pipeline iteration (II = 4 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln42', large_sparse_lu.cpp:42)) in the first pipeline iteration (II = 11 cycles).
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_Pipeline_VITIS_LOOP_39_4' (loop 'VITIS_LOOP_39_4'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between bus response operation ('w0_addr_2_resp', large_sparse_lu.cpp:43) on port 'w0' (large_sparse_lu.cpp:43) and bus request operation ('w0_load_req', large_sparse_lu.cpp:43) on port 'w0' (large_sparse_lu.cpp:43).
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_Pipeline_VITIS_LOOP_39_4' (loop 'VITIS_LOOP_39_4'): Unable to enforce a carried dependence constraint (II = 17, distance = 1, offset = 1) between bus response operation ('w0_addr_2_resp', large_sparse_lu.cpp:43) on port 'w0' (large_sparse_lu.cpp:43) and bus request operation ('w0_load_req', large_sparse_lu.cpp:43) on port 'w0' (large_sparse_lu.cpp:43).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 18, Depth = 36, loop 'VITIS_LOOP_39_4'
+WARNING: [HLS 200-871] Estimated clock period (6.598ns) exceeds the target (target clock period: 5ns, clock uncertainty: 1.35ns, effective delay budget: 3.65ns).
+WARNING: [HLS 200-1016] The critical path in module 'large_getrf_Pipeline_VITIS_LOOP_39_4' consists of the following:	bus read operation ('a2_addr_read', large_sparse_lu.cpp:43) on port 'a2' (large_sparse_lu.cpp:43) [63]  (3.65 ns)
+	'fadd' operation ('add', large_sparse_lu.cpp:43) [72]  (2.95 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.16 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 388.816 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_39_4.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_39_4.sched.adb -f 
+INFO-FLOW: Finish scheduling large_getrf_Pipeline_VITIS_LOOP_39_4.
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_39_4 
+Execute         bind -model large_getrf_Pipeline_VITIS_LOOP_39_4 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 388.816 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_39_4.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_39_4.bind.adb -f 
+INFO-FLOW: Finish binding large_getrf_Pipeline_VITIS_LOOP_39_4.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_Pipeline_VITIS_LOOP_52_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_52_6 
+Execute         schedule -model large_getrf_Pipeline_VITIS_LOOP_52_6 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_52_6'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln55', large_sparse_lu.cpp:55)) in the first pipeline iteration (II = 1 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln55', large_sparse_lu.cpp:55)) in the first pipeline iteration (II = 2 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln55', large_sparse_lu.cpp:55)) in the first pipeline iteration (II = 3 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln55', large_sparse_lu.cpp:55)) in the first pipeline iteration (II = 4 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln55', large_sparse_lu.cpp:55)) in the first pipeline iteration (II = 11 cycles).
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_Pipeline_VITIS_LOOP_52_6' (loop 'VITIS_LOOP_52_6'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between bus response operation ('w0_addr_5_resp', large_sparse_lu.cpp:56) on port 'w0' (large_sparse_lu.cpp:56) and bus request operation ('w0_load_3_req', large_sparse_lu.cpp:56) on port 'w0' (large_sparse_lu.cpp:56).
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_Pipeline_VITIS_LOOP_52_6' (loop 'VITIS_LOOP_52_6'): Unable to enforce a carried dependence constraint (II = 17, distance = 1, offset = 1) between bus response operation ('w0_addr_5_resp', large_sparse_lu.cpp:56) on port 'w0' (large_sparse_lu.cpp:56) and bus request operation ('w0_load_3_req', large_sparse_lu.cpp:56) on port 'w0' (large_sparse_lu.cpp:56).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 18, Depth = 39, loop 'VITIS_LOOP_52_6'
+WARNING: [HLS 200-871] Estimated clock period (6.826ns) exceeds the target (target clock period: 5ns, clock uncertainty: 1.35ns, effective delay budget: 3.65ns).
+WARNING: [HLS 200-1016] The critical path in module 'large_getrf_Pipeline_VITIS_LOOP_52_6' consists of the following:	bus read operation ('u2_addr_read', large_sparse_lu.cpp:56) on port 'u2' (large_sparse_lu.cpp:56) [72]  (3.65 ns)
+	'fmul' operation ('mul', large_sparse_lu.cpp:56) [74]  (3.18 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.2 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 388.816 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_52_6.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.12 sec.
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_52_6.sched.adb -f 
+INFO-FLOW: Finish scheduling large_getrf_Pipeline_VITIS_LOOP_52_6.
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_52_6 
+Execute         bind -model large_getrf_Pipeline_VITIS_LOOP_52_6 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 388.816 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_52_6.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_52_6.bind.adb -f 
+INFO-FLOW: Finish binding large_getrf_Pipeline_VITIS_LOOP_52_6.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_Pipeline_VITIS_LOOP_59_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_59_7 
+Execute         schedule -model large_getrf_Pipeline_VITIS_LOOP_59_7 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_59_7'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 13, loop 'VITIS_LOOP_59_7'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 388.816 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_59_7.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_59_7.sched.adb -f 
+INFO-FLOW: Finish scheduling large_getrf_Pipeline_VITIS_LOOP_59_7.
+Execute         set_default_model large_getrf_Pipeline_VITIS_LOOP_59_7 
+Execute         bind -model large_getrf_Pipeline_VITIS_LOOP_59_7 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 388.816 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_59_7.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_59_7.bind.adb -f 
+INFO-FLOW: Finish binding large_getrf_Pipeline_VITIS_LOOP_59_7.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model large_getrf 
+Execute         schedule -model large_getrf 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (5.207ns) exceeds the target (target clock period: 5ns, clock uncertainty: 1.35ns, effective delay budget: 3.65ns).
+WARNING: [HLS 200-1016] The critical path in module 'large_getrf' consists of the following:	'call' operation ('targetBlock', large_sparse_lu.cpp:39) to 'large_getrf_Pipeline_VITIS_LOOP_39_4' [177]  (5.21 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.31 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 388.816 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.31 sec.
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.sched.adb -f 
+INFO-FLOW: Finish scheduling large_getrf.
+Execute         set_default_model large_getrf 
+Execute         bind -model large_getrf 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.2 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.5 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 390.328 MB.
+Execute         syn_report -verbosereport -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.29 sec.
+Execute         db_write -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.bind.adb -f 
+INFO-FLOW: Finish binding large_getrf.
+Execute         get_model_list large_getrf -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess large_getrf_Pipeline_VITIS_LOOP_31_2 
+Execute         rtl_gen_preprocess large_getrf_Pipeline_VITIS_LOOP_35_3 
+Execute         rtl_gen_preprocess large_getrf_Pipeline_VITIS_LOOP_39_4 
+Execute         rtl_gen_preprocess large_getrf_Pipeline_VITIS_LOOP_52_6 
+Execute         rtl_gen_preprocess large_getrf_Pipeline_VITIS_LOOP_59_7 
+Execute         rtl_gen_preprocess large_getrf 
+INFO-FLOW: Model list for RTL generation: large_getrf_Pipeline_VITIS_LOOP_31_2 large_getrf_Pipeline_VITIS_LOOP_35_3 large_getrf_Pipeline_VITIS_LOOP_39_4 large_getrf_Pipeline_VITIS_LOOP_52_6 large_getrf_Pipeline_VITIS_LOOP_59_7 large_getrf
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_Pipeline_VITIS_LOOP_31_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model large_getrf_Pipeline_VITIS_LOOP_31_2 -top_prefix large_getrf_ -sub_prefix large_getrf_ -mg_file /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_31_2.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_Pipeline_VITIS_LOOP_31_2' pipeline 'VITIS_LOOP_31_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_Pipeline_VITIS_LOOP_31_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.32 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.41 seconds; current allocated memory: 390.605 MB.
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.rtl_wrap.cfg.tcl 
+Execute         gen_rtl large_getrf_Pipeline_VITIS_LOOP_31_2 -style xilinx -f -lang vhdl -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/vhdl/large_getrf_large_getrf_Pipeline_VITIS_LOOP_31_2 
+Execute         gen_rtl large_getrf_Pipeline_VITIS_LOOP_31_2 -style xilinx -f -lang vlog -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/verilog/large_getrf_large_getrf_Pipeline_VITIS_LOOP_31_2 
+Execute         syn_report -csynth -model large_getrf_Pipeline_VITIS_LOOP_31_2 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_Pipeline_VITIS_LOOP_31_2_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model large_getrf_Pipeline_VITIS_LOOP_31_2 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_Pipeline_VITIS_LOOP_31_2_csynth.xml 
+Execute         syn_report -verbosereport -model large_getrf_Pipeline_VITIS_LOOP_31_2 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_31_2.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model large_getrf_Pipeline_VITIS_LOOP_31_2 -f -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_31_2.adb 
+Execute         db_write -model large_getrf_Pipeline_VITIS_LOOP_31_2 -bindview -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info large_getrf_Pipeline_VITIS_LOOP_31_2 -p /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_31_2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_Pipeline_VITIS_LOOP_35_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model large_getrf_Pipeline_VITIS_LOOP_35_3 -top_prefix large_getrf_ -sub_prefix large_getrf_ -mg_file /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_35_3.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_Pipeline_VITIS_LOOP_35_3' pipeline 'VITIS_LOOP_35_3' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_Pipeline_VITIS_LOOP_35_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 395.375 MB.
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.rtl_wrap.cfg.tcl 
+Execute         gen_rtl large_getrf_Pipeline_VITIS_LOOP_35_3 -style xilinx -f -lang vhdl -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/vhdl/large_getrf_large_getrf_Pipeline_VITIS_LOOP_35_3 
+Execute         gen_rtl large_getrf_Pipeline_VITIS_LOOP_35_3 -style xilinx -f -lang vlog -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/verilog/large_getrf_large_getrf_Pipeline_VITIS_LOOP_35_3 
+Execute         syn_report -csynth -model large_getrf_Pipeline_VITIS_LOOP_35_3 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_Pipeline_VITIS_LOOP_35_3_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model large_getrf_Pipeline_VITIS_LOOP_35_3 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_Pipeline_VITIS_LOOP_35_3_csynth.xml 
+Execute         syn_report -verbosereport -model large_getrf_Pipeline_VITIS_LOOP_35_3 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_35_3.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model large_getrf_Pipeline_VITIS_LOOP_35_3 -f -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_35_3.adb 
+Execute         db_write -model large_getrf_Pipeline_VITIS_LOOP_35_3 -bindview -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info large_getrf_Pipeline_VITIS_LOOP_35_3 -p /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_35_3 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_Pipeline_VITIS_LOOP_39_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model large_getrf_Pipeline_VITIS_LOOP_39_4 -top_prefix large_getrf_ -sub_prefix large_getrf_ -mg_file /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_39_4.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_Pipeline_VITIS_LOOP_39_4' pipeline 'VITIS_LOOP_39_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_Pipeline_VITIS_LOOP_39_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 395.375 MB.
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.rtl_wrap.cfg.tcl 
+Execute         gen_rtl large_getrf_Pipeline_VITIS_LOOP_39_4 -style xilinx -f -lang vhdl -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/vhdl/large_getrf_large_getrf_Pipeline_VITIS_LOOP_39_4 
+Execute         gen_rtl large_getrf_Pipeline_VITIS_LOOP_39_4 -style xilinx -f -lang vlog -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/verilog/large_getrf_large_getrf_Pipeline_VITIS_LOOP_39_4 
+Execute         syn_report -csynth -model large_getrf_Pipeline_VITIS_LOOP_39_4 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_Pipeline_VITIS_LOOP_39_4_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model large_getrf_Pipeline_VITIS_LOOP_39_4 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_Pipeline_VITIS_LOOP_39_4_csynth.xml 
+Execute         syn_report -verbosereport -model large_getrf_Pipeline_VITIS_LOOP_39_4 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_39_4.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model large_getrf_Pipeline_VITIS_LOOP_39_4 -f -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_39_4.adb 
+Execute         db_write -model large_getrf_Pipeline_VITIS_LOOP_39_4 -bindview -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info large_getrf_Pipeline_VITIS_LOOP_39_4 -p /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_39_4 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_Pipeline_VITIS_LOOP_52_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model large_getrf_Pipeline_VITIS_LOOP_52_6 -top_prefix large_getrf_ -sub_prefix large_getrf_ -mg_file /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_52_6.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_Pipeline_VITIS_LOOP_52_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 395.375 MB.
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.rtl_wrap.cfg.tcl 
+Execute         gen_rtl large_getrf_Pipeline_VITIS_LOOP_52_6 -style xilinx -f -lang vhdl -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/vhdl/large_getrf_large_getrf_Pipeline_VITIS_LOOP_52_6 
+Execute         gen_rtl large_getrf_Pipeline_VITIS_LOOP_52_6 -style xilinx -f -lang vlog -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/verilog/large_getrf_large_getrf_Pipeline_VITIS_LOOP_52_6 
+Execute         syn_report -csynth -model large_getrf_Pipeline_VITIS_LOOP_52_6 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_Pipeline_VITIS_LOOP_52_6_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model large_getrf_Pipeline_VITIS_LOOP_52_6 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_Pipeline_VITIS_LOOP_52_6_csynth.xml 
+Execute         syn_report -verbosereport -model large_getrf_Pipeline_VITIS_LOOP_52_6 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_52_6.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model large_getrf_Pipeline_VITIS_LOOP_52_6 -f -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_52_6.adb 
+Execute         db_write -model large_getrf_Pipeline_VITIS_LOOP_52_6 -bindview -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info large_getrf_Pipeline_VITIS_LOOP_52_6 -p /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_52_6 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_Pipeline_VITIS_LOOP_59_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model large_getrf_Pipeline_VITIS_LOOP_59_7 -top_prefix large_getrf_ -sub_prefix large_getrf_ -mg_file /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_59_7.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_Pipeline_VITIS_LOOP_59_7' pipeline 'VITIS_LOOP_59_7' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_Pipeline_VITIS_LOOP_59_7'.
+Command         create_rtl_model done; 0.12 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.39 seconds; current allocated memory: 397.926 MB.
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.rtl_wrap.cfg.tcl 
+Execute         gen_rtl large_getrf_Pipeline_VITIS_LOOP_59_7 -style xilinx -f -lang vhdl -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/vhdl/large_getrf_large_getrf_Pipeline_VITIS_LOOP_59_7 
+Execute         gen_rtl large_getrf_Pipeline_VITIS_LOOP_59_7 -style xilinx -f -lang vlog -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/verilog/large_getrf_large_getrf_Pipeline_VITIS_LOOP_59_7 
+Execute         syn_report -csynth -model large_getrf_Pipeline_VITIS_LOOP_59_7 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_Pipeline_VITIS_LOOP_59_7_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model large_getrf_Pipeline_VITIS_LOOP_59_7 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_Pipeline_VITIS_LOOP_59_7_csynth.xml 
+Execute         syn_report -verbosereport -model large_getrf_Pipeline_VITIS_LOOP_59_7 -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_59_7.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         db_write -model large_getrf_Pipeline_VITIS_LOOP_59_7 -f -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_59_7.adb 
+Execute         db_write -model large_getrf_Pipeline_VITIS_LOOP_59_7 -bindview -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info large_getrf_Pipeline_VITIS_LOOP_59_7 -p /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_59_7 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         create_rtl_model large_getrf -top_prefix  -sub_prefix large_getrf_ -mg_file /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/a0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/a1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/a2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/l0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/l1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/l2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/u0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/u1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/u2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/u3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/w0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/w1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/a_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/a_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/a_val' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/l_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/l_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/l_val' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/u_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/u_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/u_val' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/u_diag_pos' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/work' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/mark' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/n' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/pivot_eps' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/status' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/muladds' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf/divisions' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'large_getrf' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'a_ptr', 'a_idx', 'a_val', 'l_ptr', 'l_idx', 'l_val', 'u_ptr', 'u_idx', 'u_val', 'u_diag_pos', 'work', 'mark' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf'.
+Command         create_rtl_model done; 0.31 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.43 seconds; current allocated memory: 410.129 MB.
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.rtl_wrap.cfg.tcl 
+Execute         gen_rtl large_getrf -istop -style xilinx -f -lang vhdl -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/vhdl/large_getrf 
+Command         gen_rtl done; 0.11 sec.
+Execute         gen_rtl large_getrf -istop -style xilinx -f -lang vlog -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/verilog/large_getrf 
+Execute         syn_report -csynth -model large_getrf -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -rtlxml -model large_getrf -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/large_getrf_csynth.xml 
+Execute         syn_report -verbosereport -model large_getrf -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Command         syn_report done; 0.35 sec.
+Execute         db_write -model large_getrf -f -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.adb 
+Execute         db_write -model large_getrf -bindview -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/design.bindinfo.xml 
+Execute         gen_tb_info large_getrf -p /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf 
+Execute         export_constraint_db -f -tool general -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.constraint.tcl 
+Execute         syn_report -designview -model large_getrf -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.design.xml 
+Command         syn_report done; 0.28 sec.
+Execute         syn_report -csynthDesign -model large_getrf -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute         syn_report -wcfg -model large_getrf -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model large_getrf -o /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.protoinst 
+Execute         sc_get_clocks large_getrf 
+Execute         sc_get_portdomain large_getrf 
+INFO-FLOW: Model list for RTL component generation: large_getrf_Pipeline_VITIS_LOOP_31_2 large_getrf_Pipeline_VITIS_LOOP_35_3 large_getrf_Pipeline_VITIS_LOOP_39_4 large_getrf_Pipeline_VITIS_LOOP_52_6 large_getrf_Pipeline_VITIS_LOOP_59_7 large_getrf
+INFO-FLOW: Handling components in module [large_getrf_Pipeline_VITIS_LOOP_31_2] ... 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_31_2.compgen.tcl 
+INFO-FLOW: Found component large_getrf_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model large_getrf_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [large_getrf_Pipeline_VITIS_LOOP_35_3] ... 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_35_3.compgen.tcl 
+INFO-FLOW: Found component large_getrf_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model large_getrf_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [large_getrf_Pipeline_VITIS_LOOP_39_4] ... 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_39_4.compgen.tcl 
+INFO-FLOW: Found component large_getrf_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model large_getrf_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [large_getrf_Pipeline_VITIS_LOOP_52_6] ... 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_52_6.compgen.tcl 
+INFO-FLOW: Found component large_getrf_fmul_32ns_32ns_32_5_max_dsp_1.
+INFO-FLOW: Append model large_getrf_fmul_32ns_32ns_32_5_max_dsp_1
+INFO-FLOW: Handling components in module [large_getrf_Pipeline_VITIS_LOOP_59_7] ... 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_59_7.compgen.tcl 
+INFO-FLOW: Found component large_getrf_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model large_getrf_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [large_getrf] ... 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.compgen.tcl 
+INFO-FLOW: Found component large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1.
+INFO-FLOW: Append model large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1
+INFO-FLOW: Found component large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1.
+INFO-FLOW: Append model large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO-FLOW: Found component large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1.
+INFO-FLOW: Append model large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1
+INFO-FLOW: Found component large_getrf_a0_m_axi.
+INFO-FLOW: Append model large_getrf_a0_m_axi
+INFO-FLOW: Found component large_getrf_a1_m_axi.
+INFO-FLOW: Append model large_getrf_a1_m_axi
+INFO-FLOW: Found component large_getrf_a2_m_axi.
+INFO-FLOW: Append model large_getrf_a2_m_axi
+INFO-FLOW: Found component large_getrf_l0_m_axi.
+INFO-FLOW: Append model large_getrf_l0_m_axi
+INFO-FLOW: Found component large_getrf_l1_m_axi.
+INFO-FLOW: Append model large_getrf_l1_m_axi
+INFO-FLOW: Found component large_getrf_l2_m_axi.
+INFO-FLOW: Append model large_getrf_l2_m_axi
+INFO-FLOW: Found component large_getrf_u0_m_axi.
+INFO-FLOW: Append model large_getrf_u0_m_axi
+INFO-FLOW: Found component large_getrf_u1_m_axi.
+INFO-FLOW: Append model large_getrf_u1_m_axi
+INFO-FLOW: Found component large_getrf_u2_m_axi.
+INFO-FLOW: Append model large_getrf_u2_m_axi
+INFO-FLOW: Found component large_getrf_u3_m_axi.
+INFO-FLOW: Append model large_getrf_u3_m_axi
+INFO-FLOW: Found component large_getrf_w0_m_axi.
+INFO-FLOW: Append model large_getrf_w0_m_axi
+INFO-FLOW: Found component large_getrf_w1_m_axi.
+INFO-FLOW: Append model large_getrf_w1_m_axi
+INFO-FLOW: Found component large_getrf_control_s_axi.
+INFO-FLOW: Append model large_getrf_control_s_axi
+INFO-FLOW: Append model large_getrf_Pipeline_VITIS_LOOP_31_2
+INFO-FLOW: Append model large_getrf_Pipeline_VITIS_LOOP_35_3
+INFO-FLOW: Append model large_getrf_Pipeline_VITIS_LOOP_39_4
+INFO-FLOW: Append model large_getrf_Pipeline_VITIS_LOOP_52_6
+INFO-FLOW: Append model large_getrf_Pipeline_VITIS_LOOP_59_7
+INFO-FLOW: Append model large_getrf
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: large_getrf_flow_control_loop_pipe_sequential_init large_getrf_flow_control_loop_pipe_sequential_init large_getrf_flow_control_loop_pipe_sequential_init large_getrf_fmul_32ns_32ns_32_5_max_dsp_1 large_getrf_flow_control_loop_pipe_sequential_init large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1 large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1 large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1 large_getrf_a0_m_axi large_getrf_a1_m_axi large_getrf_a2_m_axi large_getrf_l0_m_axi large_getrf_l1_m_axi large_getrf_l2_m_axi large_getrf_u0_m_axi large_getrf_u1_m_axi large_getrf_u2_m_axi large_getrf_u3_m_axi large_getrf_w0_m_axi large_getrf_w1_m_axi large_getrf_control_s_axi large_getrf_Pipeline_VITIS_LOOP_31_2 large_getrf_Pipeline_VITIS_LOOP_35_3 large_getrf_Pipeline_VITIS_LOOP_39_4 large_getrf_Pipeline_VITIS_LOOP_52_6 large_getrf_Pipeline_VITIS_LOOP_59_7 large_getrf
+INFO-FLOW: Generating /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model large_getrf_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model large_getrf_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model large_getrf_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model large_getrf_fmul_32ns_32ns_32_5_max_dsp_1
+INFO-FLOW: To file: write model large_getrf_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1
+INFO-FLOW: To file: write model large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO-FLOW: To file: write model large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1
+INFO-FLOW: To file: write model large_getrf_a0_m_axi
+INFO-FLOW: To file: write model large_getrf_a1_m_axi
+INFO-FLOW: To file: write model large_getrf_a2_m_axi
+INFO-FLOW: To file: write model large_getrf_l0_m_axi
+INFO-FLOW: To file: write model large_getrf_l1_m_axi
+INFO-FLOW: To file: write model large_getrf_l2_m_axi
+INFO-FLOW: To file: write model large_getrf_u0_m_axi
+INFO-FLOW: To file: write model large_getrf_u1_m_axi
+INFO-FLOW: To file: write model large_getrf_u2_m_axi
+INFO-FLOW: To file: write model large_getrf_u3_m_axi
+INFO-FLOW: To file: write model large_getrf_w0_m_axi
+INFO-FLOW: To file: write model large_getrf_w1_m_axi
+INFO-FLOW: To file: write model large_getrf_control_s_axi
+INFO-FLOW: To file: write model large_getrf_Pipeline_VITIS_LOOP_31_2
+INFO-FLOW: To file: write model large_getrf_Pipeline_VITIS_LOOP_35_3
+INFO-FLOW: To file: write model large_getrf_Pipeline_VITIS_LOOP_39_4
+INFO-FLOW: To file: write model large_getrf_Pipeline_VITIS_LOOP_52_6
+INFO-FLOW: To file: write model large_getrf_Pipeline_VITIS_LOOP_59_7
+INFO-FLOW: To file: write model large_getrf
+INFO-FLOW: Generating /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/common.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=5.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/vhdl' dstVlogDir='/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/vlog' tclDir='/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db' modelList='large_getrf_flow_control_loop_pipe_sequential_init
+large_getrf_flow_control_loop_pipe_sequential_init
+large_getrf_flow_control_loop_pipe_sequential_init
+large_getrf_fmul_32ns_32ns_32_5_max_dsp_1
+large_getrf_flow_control_loop_pipe_sequential_init
+large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1
+large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1
+large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1
+large_getrf_a0_m_axi
+large_getrf_a1_m_axi
+large_getrf_a2_m_axi
+large_getrf_l0_m_axi
+large_getrf_l1_m_axi
+large_getrf_l2_m_axi
+large_getrf_u0_m_axi
+large_getrf_u1_m_axi
+large_getrf_u2_m_axi
+large_getrf_u3_m_axi
+large_getrf_w0_m_axi
+large_getrf_w1_m_axi
+large_getrf_control_s_axi
+large_getrf_Pipeline_VITIS_LOOP_31_2
+large_getrf_Pipeline_VITIS_LOOP_35_3
+large_getrf_Pipeline_VITIS_LOOP_39_4
+large_getrf_Pipeline_VITIS_LOOP_52_6
+large_getrf_Pipeline_VITIS_LOOP_59_7
+large_getrf
+' expOnly='0'
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xczu15eg-ffvb1156-2-i -data names -quiet 
+Execute         ap_part_info -name xczu15eg-ffvb1156-2-i -data info -quiet 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_31_2.compgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_35_3.compgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_39_4.compgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_52_6.compgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_59_7.compgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.compgen.tcl 
+Execute           source ./control.slave.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.16 seconds. CPU system time: 0.12 seconds. Elapsed time: 1.37 seconds; current allocated memory: 426.355 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='large_getrf_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='large_getrf_flow_control_loop_pipe_sequential_init
+large_getrf_flow_control_loop_pipe_sequential_init
+large_getrf_flow_control_loop_pipe_sequential_init
+large_getrf_fmul_32ns_32ns_32_5_max_dsp_1
+large_getrf_flow_control_loop_pipe_sequential_init
+large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1
+large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1
+large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1
+large_getrf_a0_m_axi
+large_getrf_a1_m_axi
+large_getrf_a2_m_axi
+large_getrf_l0_m_axi
+large_getrf_l1_m_axi
+large_getrf_l2_m_axi
+large_getrf_u0_m_axi
+large_getrf_u1_m_axi
+large_getrf_u2_m_axi
+large_getrf_u3_m_axi
+large_getrf_w0_m_axi
+large_getrf_w1_m_axi
+large_getrf_control_s_axi
+large_getrf_Pipeline_VITIS_LOOP_31_2
+large_getrf_Pipeline_VITIS_LOOP_35_3
+large_getrf_Pipeline_VITIS_LOOP_39_4
+large_getrf_Pipeline_VITIS_LOOP_52_6
+large_getrf_Pipeline_VITIS_LOOP_59_7
+large_getrf
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/top-io-be.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.compgen.dataonly.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.compgen.dataonly.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.rtl_wrap.cfg.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.compgen.dataonly.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_31_2.tbgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_35_3.tbgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_39_4.tbgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_52_6.tbgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf_Pipeline_VITIS_LOOP_59_7.tbgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xczu15eg-ffvb1156-2-i -data names -quiet 
+Execute         ap_part_info -name xczu15eg-ffvb1156-2-i -data info -quiet 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.constraint.tcl 
+Execute         sc_get_clocks large_getrf 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/impl/misc/large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1_ip.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/impl/misc/large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/impl/misc/large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl 
+Execute         source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/impl/misc/large_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME a0_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME a0 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME a1_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME a1 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME a2_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME a2 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME l0_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME l0 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME l1_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME l1 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME l2_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME l2 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME u0_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME u0 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME u1_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME u1 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME u2_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME u2 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME u3_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME u3 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME w0_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME w0 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME w1_m_axi_U SOURCE {} VARIABLE {} MODULE large_getrf LOOP {} BUNDLEDNAME w1 DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST large_getrf MODULE2INSTS {large_getrf large_getrf large_getrf_Pipeline_VITIS_LOOP_31_2 grp_large_getrf_Pipeline_VITIS_LOOP_31_2_fu_557 large_getrf_Pipeline_VITIS_LOOP_35_3 grp_large_getrf_Pipeline_VITIS_LOOP_35_3_fu_573 large_getrf_Pipeline_VITIS_LOOP_39_4 grp_large_getrf_Pipeline_VITIS_LOOP_39_4_fu_589 large_getrf_Pipeline_VITIS_LOOP_52_6 grp_large_getrf_Pipeline_VITIS_LOOP_52_6_fu_608 large_getrf_Pipeline_VITIS_LOOP_59_7 grp_large_getrf_Pipeline_VITIS_LOOP_59_7_fu_632} INST2MODULE {large_getrf large_getrf grp_large_getrf_Pipeline_VITIS_LOOP_31_2_fu_557 large_getrf_Pipeline_VITIS_LOOP_31_2 grp_large_getrf_Pipeline_VITIS_LOOP_35_3_fu_573 large_getrf_Pipeline_VITIS_LOOP_35_3 grp_large_getrf_Pipeline_VITIS_LOOP_39_4_fu_589 large_getrf_Pipeline_VITIS_LOOP_39_4 grp_large_getrf_Pipeline_VITIS_LOOP_52_6_fu_608 large_getrf_Pipeline_VITIS_LOOP_52_6 grp_large_getrf_Pipeline_VITIS_LOOP_59_7_fu_632 large_getrf_Pipeline_VITIS_LOOP_59_7} INSTDATA {large_getrf {DEPTH 1 CHILDREN {grp_large_getrf_Pipeline_VITIS_LOOP_31_2_fu_557 grp_large_getrf_Pipeline_VITIS_LOOP_35_3_fu_573 grp_large_getrf_Pipeline_VITIS_LOOP_39_4_fu_589 grp_large_getrf_Pipeline_VITIS_LOOP_52_6_fu_608 grp_large_getrf_Pipeline_VITIS_LOOP_59_7_fu_632}} grp_large_getrf_Pipeline_VITIS_LOOP_31_2_fu_557 {DEPTH 2 CHILDREN {}} grp_large_getrf_Pipeline_VITIS_LOOP_35_3_fu_573 {DEPTH 2 CHILDREN {}} grp_large_getrf_Pipeline_VITIS_LOOP_39_4_fu_589 {DEPTH 2 CHILDREN {}} grp_large_getrf_Pipeline_VITIS_LOOP_52_6_fu_608 {DEPTH 2 CHILDREN {}} grp_large_getrf_Pipeline_VITIS_LOOP_59_7_fu_632 {DEPTH 2 CHILDREN {}}} MODULEDATA {large_getrf_Pipeline_VITIS_LOOP_31_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln33_fu_211_p2 SOURCE large_sparse_lu.cpp:33 VARIABLE add_ln33 LOOP VITIS_LOOP_31_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln33_1_fu_236_p2 SOURCE large_sparse_lu.cpp:33 VARIABLE add_ln33_1 LOOP VITIS_LOOP_31_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln31_fu_183_p2 SOURCE large_sparse_lu.cpp:31 VARIABLE add_ln31 LOOP VITIS_LOOP_31_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} large_getrf_Pipeline_VITIS_LOOP_35_3 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln37_fu_211_p2 SOURCE large_sparse_lu.cpp:37 VARIABLE add_ln37 LOOP VITIS_LOOP_35_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln37_1_fu_236_p2 SOURCE large_sparse_lu.cpp:37 VARIABLE add_ln37_1 LOOP VITIS_LOOP_35_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln35_fu_183_p2 SOURCE large_sparse_lu.cpp:35 VARIABLE add_ln35 LOOP VITIS_LOOP_35_3 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} large_getrf_Pipeline_VITIS_LOOP_39_4 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln41_fu_239_p2 SOURCE large_sparse_lu.cpp:41 VARIABLE add_ln41 LOOP VITIS_LOOP_39_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln42_fu_275_p2 SOURCE large_sparse_lu.cpp:42 VARIABLE add_ln42 LOOP VITIS_LOOP_39_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_fu_310_p2 SOURCE large_sparse_lu.cpp:43 VARIABLE add_ln43 LOOP VITIS_LOOP_39_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln43_1_fu_334_p2 SOURCE large_sparse_lu.cpp:43 VARIABLE add_ln43_1 LOOP VITIS_LOOP_39_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln39_fu_358_p2 SOURCE large_sparse_lu.cpp:39 VARIABLE add_ln39 LOOP VITIS_LOOP_39_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} large_getrf_Pipeline_VITIS_LOOP_52_6 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln54_fu_296_p2 SOURCE large_sparse_lu.cpp:54 VARIABLE add_ln54 LOOP VITIS_LOOP_52_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln55_fu_332_p2 SOURCE large_sparse_lu.cpp:55 VARIABLE add_ln55 LOOP VITIS_LOOP_52_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln56_fu_367_p2 SOURCE large_sparse_lu.cpp:56 VARIABLE add_ln56 LOOP VITIS_LOOP_52_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 4 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_5_max_dsp_1_U32 SOURCE large_sparse_lu.cpp:56 VARIABLE mul LOOP VITIS_LOOP_52_6 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln56_1_fu_391_p2 SOURCE large_sparse_lu.cpp:56 VARIABLE add_ln56_1 LOOP VITIS_LOOP_52_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME muladds SOURCE large_sparse_lu.cpp:56 VARIABLE add_ln56_2 LOOP VITIS_LOOP_52_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln52_fu_422_p2 SOURCE large_sparse_lu.cpp:52 VARIABLE add_ln52 LOOP VITIS_LOOP_52_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 3 BRAM 0 URAM 0}} large_getrf_Pipeline_VITIS_LOOP_59_7 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln61_fu_194_p2 SOURCE large_sparse_lu.cpp:61 VARIABLE add_ln61 LOOP VITIS_LOOP_59_7 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_fu_166_p2 SOURCE large_sparse_lu.cpp:59 VARIABLE add_ln59 LOOP VITIS_LOOP_59_7 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} large_getrf {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_fu_732_p2 SOURCE large_sparse_lu.cpp:30 VARIABLE add_ln30 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_1_fu_737_p2 SOURCE large_sparse_lu.cpp:30 VARIABLE add_ln30_1 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_2_fu_742_p2 SOURCE large_sparse_lu.cpp:30 VARIABLE add_ln30_2 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln30_3_fu_921_p2 SOURCE large_sparse_lu.cpp:30 VARIABLE add_ln30_3 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln31_fu_815_p2 SOURCE large_sparse_lu.cpp:31 VARIABLE sub_ln31 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln31_fu_830_p2 SOURCE large_sparse_lu.cpp:31 VARIABLE add_ln31 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_50_fu_915_p2 SOURCE large_sparse_lu.cpp:30 VARIABLE empty_50 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln35_fu_857_p2 SOURCE large_sparse_lu.cpp:35 VARIABLE sub_ln35 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln35_fu_872_p2 SOURCE large_sparse_lu.cpp:35 VARIABLE add_ln35 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_947_p2 SOURCE large_sparse_lu.cpp:46 VARIABLE add_ln46 LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln49_fu_1034_p2 SOURCE large_sparse_lu.cpp:49 VARIABLE add_ln49 LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln49_1_fu_1080_p2 SOURCE large_sparse_lu.cpp:49 VARIABLE add_ln49_1 LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln51_fu_1168_p2 SOURCE large_sparse_lu.cpp:51 VARIABLE add_ln51 LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 15 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_16_no_dsp_1_U57 SOURCE large_sparse_lu.cpp:51 VARIABLE lik LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_670_p2 SOURCE large_sparse_lu.cpp:51 VARIABLE add_ln51_1 LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln51_2_fu_1255_p2 SOURCE large_sparse_lu.cpp:51 VARIABLE add_ln51_2 LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME q_fu_1262_p2 SOURCE large_sparse_lu.cpp:52 VARIABLE q LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add98_fu_1202_p2 SOURCE large_sparse_lu.cpp:46 VARIABLE add98 LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_55_fu_1219_p2 SOURCE large_sparse_lu.cpp:46 VARIABLE empty_55 LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_670_p2 SOURCE large_sparse_lu.cpp:47 VARIABLE add_ln47 LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln45_fu_1303_p2 SOURCE large_sparse_lu.cpp:45 VARIABLE add_ln45 LOOP VITIS_LOOP_45_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_fu_972_p2 SOURCE large_sparse_lu.cpp:59 VARIABLE add_ln59 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln63_fu_986_p2 SOURCE large_sparse_lu.cpp:63 VARIABLE add_ln63 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln63_1_fu_1344_p2 SOURCE large_sparse_lu.cpp:63 VARIABLE add_ln63_1 LOOP VITIS_LOOP_29_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 3 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+Execute         send_msg_by_id INFO @200-1603@%s  and missed bursts 
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 4.76 seconds. CPU system time: 0.07 seconds. Elapsed time: 4.88 seconds; current allocated memory: 434.855 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for large_getrf.
+INFO: [VLOG 209-307] Generating Verilog RTL for large_getrf.
+Execute         syn_report -model large_getrf -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 146.50 MHz
+Command       autosyn done; 10.52 sec.
+Command     csynth_design done; 18.14 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 14.63 seconds. CPU system time: 2.21 seconds. Elapsed time: 18.14 seconds; current allocated memory: 237.348 MB.
+Execute     cosim_design -setup -trace_level none -argv /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/prepared/ 
+INFO: [HLS 200-1510] Running: cosim_design -setup -trace_level none -argv /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/prepared/ 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl
+Execute       source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/common.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op.gen 
+Execute       source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xczu15eg-ffvb1156-2-i -data names -quiet 
+Execute       ap_part_info -name xczu15eg-ffvb1156-2-i -data info -quiet 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.rtl_wrap.cfg.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute       ap_part_info -name xczu15eg-ffvb1156-2-i -data info 
+INFO-FLOW: TB processing: /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/tb_large_sparse_lu_getrf_blocks.cpp /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/./sim/autowrap/testbench/tb_large_sparse_lu_getrf_blocks.cpp_pre.cpp
+Execute       clang_tidy xilinx-tb-process -desc tb-process /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/./sim/autowrap/testbench/tb_large_sparse_lu_getrf_blocks.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/./sim/autowrap/testbench/tb_large_sparse_lu_getrf_blocks.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command       clang_tidy done; 0.42 sec.
+Execute       ap_part_info -name xczu15eg-ffvb1156-2-i -data info 
+INFO-FLOW: TB processing: /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/large_sparse_lu.cpp /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/./sim/autowrap/testbench/large_sparse_lu.cpp_pre.cpp
+Execute       clang_tidy xilinx-tb-process -desc tb-process /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/./sim/autowrap/testbench/large_sparse_lu.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/./sim/autowrap/testbench/large_sparse_lu.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command       clang_tidy done; 0.13 sec.
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/./sim/autowrap/testbench/tb.status.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.rtl_wrap.cfg.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.rtl_wrap.cfg.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.rtl_wrap.cfg.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       ap_part_info -name xczu15eg-ffvb1156-2-i -data info 
+Execute       source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command       ap_source done; 0.2 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute       source ../tv/cdatafile/ref.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source ../tv/cdatafile/ref.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       source /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_blocks_cosim/solution1/.autopilot/db/large_getrf.tbgen.tcl 
+Execute       ap_part_info -name xczu15eg-ffvb1156-2-i -data names -quiet 
+Execute       ap_part_info -name xczu15eg-ffvb1156-2-i -data info -quiet 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Command     cosim_design done; 34.1 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 19.3 seconds. CPU system time: 4.95 seconds. Elapsed time: 34.1 seconds; current allocated memory: 13.293 MB.
+Execute     cleanup_all 

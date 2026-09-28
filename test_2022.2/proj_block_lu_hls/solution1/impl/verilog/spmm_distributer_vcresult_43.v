@@ -111,7 +111,7 @@ reg    cresult219_blk_n;
 reg    cresult320_blk_n;
 reg    cresult421_blk_n;
 reg    ap_block_pp0_stage0_11001;
-reg   [1023:0] trunc_ln352_2_reg_139;
+reg   [1023:0] trunc_ln371_2_reg_139;
 reg    ap_block_pp0_stage0_01001;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -179,7 +179,7 @@ end
 always @ (posedge ap_clk) begin
     if (((tmp_nbreadreq_fu_62_p3 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
         temp_peID_V_reg_135 <= {{vcache_bank1_cresult1_dout[6:4]}};
-        trunc_ln352_2_reg_139 <= {{vcache_bank1_cresult1_dout[1030:7]}};
+        trunc_ln371_2_reg_139 <= {{vcache_bank1_cresult1_dout[1030:7]}};
     end
 end
 
@@ -366,13 +366,13 @@ always @ (*) begin
     ap_predicate_op33_write_state2 = ((temp_peID_V_reg_135 == 3'd1) & (tmp_reg_128 == 1'd1));
 end
 
-assign cresult118_din = trunc_ln352_2_reg_139;
+assign cresult118_din = trunc_ln371_2_reg_139;
 
-assign cresult219_din = trunc_ln352_2_reg_139;
+assign cresult219_din = trunc_ln371_2_reg_139;
 
-assign cresult320_din = trunc_ln352_2_reg_139;
+assign cresult320_din = trunc_ln371_2_reg_139;
 
-assign cresult421_din = trunc_ln352_2_reg_139;
+assign cresult421_din = trunc_ln371_2_reg_139;
 
 assign enable_fu_104_p1 = vcache_bank1_cresult1_dout[0:0];
 

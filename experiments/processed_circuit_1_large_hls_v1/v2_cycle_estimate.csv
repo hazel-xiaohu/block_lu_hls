@@ -1,0 +1,3 @@
+kernel,v1_cycles,v2_optimistic_cycles,assumptions
+GESSM,6551085,about 0.80e6,21 batches; 4 lanes; update II=13; excludes dynamic AXI/control
+TSTRF,8272462,about 1.25e6,21 batches; 4 lanes; update II=13; one shared divider; excludes dynamic AXI/control

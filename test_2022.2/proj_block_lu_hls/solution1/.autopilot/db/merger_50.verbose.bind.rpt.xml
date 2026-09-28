@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'merger_50'" level="0">
-<item name = "Date">Fri Sep 25 15:49:45 2026
+<item name = "Date">Sat Sep 26 09:29:51 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">proj_block_lu_hls</item>
@@ -24,15 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_merge_controller_100_fu_40">merge_controller_100, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_merge_two_sub_101_fu_47">merge_two_sub_101, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_merge_two_sub_fu_20">merge_two_sub, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

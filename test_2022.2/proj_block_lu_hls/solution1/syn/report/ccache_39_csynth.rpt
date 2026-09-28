@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'ccache_39'
 ================================================================
-* Date:           Fri Sep 25 15:51:41 2026
+* Date:           Sat Sep 26 09:31:47 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -191,7 +191,7 @@
     |ret_V_44_fu_2287_p2               |       and|   0|  0|     8|           8|           8|
     |ret_V_45_fu_2308_p2               |       and|   0|  0|     8|           8|           8|
     |ret_V_fu_1679_p2                  |       and|   0|  0|     8|           8|           8|
-    |tmp_226_nbreadreq_fu_478_p3       |       and|   0|  0|     2|           1|           0|
+    |tmp_222_nbreadreq_fu_478_p3       |       and|   0|  0|     2|           1|           0|
     |grp_fu_1300_p2                    |      icmp|   0|  0|     8|           3|           1|
     |icmp_ln1019_135_fu_1674_p2        |      icmp|   0|  0|    15|          21|          21|
     |icmp_ln1019_136_fu_1685_p2        |      icmp|   0|  0|    11|           8|           8|
@@ -693,7 +693,7 @@
     |temp_result_data_V_fu_288                                     |  1024|   0|  1024|          0|
     |temp_result_peID_V_fu_292                                     |     3|   0|     3|          0|
     |temp_result_type_V_fu_296                                     |     2|   0|     3|          1|
-    |tmp_226_reg_3389                                              |     1|   0|     1|          0|
+    |tmp_222_reg_3389                                              |     1|   0|     1|          0|
     |trunc_ln662_reg_3384                                          |    11|   0|    11|          0|
     |trunc_ln669_1_reg_3870                                        |     1|   0|     1|          0|
     |trunc_ln669_reg_3865                                          |     4|   0|     4|          0|

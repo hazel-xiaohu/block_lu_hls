@@ -215,9 +215,9 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>/output/block_lu_hls/test_2022.2/run_hls.tcl</string>
+      <string>/output/block_lu_hls/test_2022.2/run_only_csynth.tcl</string>
       <key>line</key>
-      <integer>41</integer>
+      <integer>12</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

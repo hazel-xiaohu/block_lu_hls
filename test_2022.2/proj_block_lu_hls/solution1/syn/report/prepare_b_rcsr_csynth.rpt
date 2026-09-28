@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'prepare_b_rcsr'
 ================================================================
-* Date:           Fri Sep 25 15:50:07 2026
+* Date:           Sat Sep 26 09:30:09 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -38,8 +38,8 @@
         |                                                    |                                          |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
         |                      Instance                      |                  Module                  |   min   |   max   |    min    |    max    |  min |  max |   Type  |
         +----------------------------------------------------+------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
-        |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_199_1_fu_84  |prepare_b_rcsr_Pipeline_VITIS_LOOP_199_1  |      516|      516|   2.580 us|   2.580 us|   516|   516|       no|
-        |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_207_2_fu_93  |prepare_b_rcsr_Pipeline_VITIS_LOOP_207_2  |     2833|     2833|  14.165 us|  14.165 us|  2833|  2833|       no|
+        |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_203_1_fu_84  |prepare_b_rcsr_Pipeline_VITIS_LOOP_203_1  |      516|      516|   2.580 us|   2.580 us|   516|   516|       no|
+        |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_211_2_fu_93  |prepare_b_rcsr_Pipeline_VITIS_LOOP_211_2  |     2833|     2833|  14.165 us|  14.165 us|  2833|  2833|       no|
         +----------------------------------------------------+------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
 
         * Loop: 
@@ -74,8 +74,8 @@
     +----------------------------------------------------+------------------------------------------+---------+----+------+-----+-----+
     |                      Instance                      |                  Module                  | BRAM_18K| DSP|  FF  | LUT | URAM|
     +----------------------------------------------------+------------------------------------------+---------+----+------+-----+-----+
-    |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_199_1_fu_84  |prepare_b_rcsr_Pipeline_VITIS_LOOP_199_1  |        0|   0|   164|   79|    0|
-    |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_207_2_fu_93  |prepare_b_rcsr_Pipeline_VITIS_LOOP_207_2  |        0|   0|  2859|  967|    0|
+    |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_203_1_fu_84  |prepare_b_rcsr_Pipeline_VITIS_LOOP_203_1  |        0|   0|   164|   79|    0|
+    |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_211_2_fu_93  |prepare_b_rcsr_Pipeline_VITIS_LOOP_211_2  |        0|   0|  2859|  967|    0|
     +----------------------------------------------------+------------------------------------------+---------+----+------+-----+-----+
     |Total                                               |                                          |        0|   0|  3023| 1046|    0|
     +----------------------------------------------------+------------------------------------------+---------+----+------+-----+-----+
@@ -93,7 +93,7 @@
     +----------------------+----------+----+---+----+------------+------------+
     |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------+----------+----+---+----+------------+------------+
-    |icmp_ln205_fu_126_p2  |      icmp|   0|  0|  20|          32|          12|
+    |icmp_ln209_fu_126_p2  |      icmp|   0|  0|  20|          32|          12|
     |ap_block_state1       |        or|   0|  0|   2|           1|           1|
     |limit_fu_132_p3       |    select|   0|  0|  11|           1|          12|
     +----------------------+----------+----+---+----+------------+------------+
@@ -135,8 +135,8 @@
     +-----------------------------------------------------------------+----+----+-----+-----------+
     |ap_CS_fsm                                                        |  12|   0|   12|          0|
     |ap_done_reg                                                      |   1|   0|    1|          0|
-    |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_199_1_fu_84_ap_start_reg  |   1|   0|    1|          0|
-    |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_207_2_fu_93_ap_start_reg  |   1|   0|    1|          0|
+    |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_203_1_fu_84_ap_start_reg  |   1|   0|    1|          0|
+    |grp_prepare_b_rcsr_Pipeline_VITIS_LOOP_211_2_fu_93_ap_start_reg  |   1|   0|    1|          0|
     |limit_reg_161                                                    |  12|   0|   12|          0|
     |trunc_ln_reg_151                                                 |  60|   0|   60|          0|
     +-----------------------------------------------------------------+----+----+-----+-----------+

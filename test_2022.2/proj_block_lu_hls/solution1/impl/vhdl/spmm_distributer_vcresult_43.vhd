@@ -94,7 +94,7 @@ attribute shreg_extract : string;
     signal cresult320_blk_n : STD_LOGIC;
     signal cresult421_blk_n : STD_LOGIC;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
-    signal trunc_ln352_2_reg_139 : STD_LOGIC_VECTOR (1023 downto 0);
+    signal trunc_ln371_2_reg_139 : STD_LOGIC_VECTOR (1023 downto 0);
     signal ap_block_pp0_stage0_01001 : BOOLEAN;
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -192,7 +192,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((tmp_nbreadreq_fu_62_p3 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001))) then
                 temp_peID_V_reg_135 <= vcache_bank1_cresult1_dout(6 downto 4);
-                trunc_ln352_2_reg_139 <= vcache_bank1_cresult1_dout(1030 downto 7);
+                trunc_ln371_2_reg_139 <= vcache_bank1_cresult1_dout(1030 downto 7);
             end if;
         end if;
     end process;
@@ -333,7 +333,7 @@ begin
         end if; 
     end process;
 
-    cresult118_din <= trunc_ln352_2_reg_139;
+    cresult118_din <= trunc_ln371_2_reg_139;
 
     cresult118_write_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_predicate_op33_write_state2, ap_block_pp0_stage0_11001)
     begin
@@ -354,7 +354,7 @@ begin
         end if; 
     end process;
 
-    cresult219_din <= trunc_ln352_2_reg_139;
+    cresult219_din <= trunc_ln371_2_reg_139;
 
     cresult219_write_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_predicate_op31_write_state2, ap_block_pp0_stage0_11001)
     begin
@@ -375,7 +375,7 @@ begin
         end if; 
     end process;
 
-    cresult320_din <= trunc_ln352_2_reg_139;
+    cresult320_din <= trunc_ln371_2_reg_139;
 
     cresult320_write_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_predicate_op29_write_state2, ap_block_pp0_stage0_11001)
     begin
@@ -396,7 +396,7 @@ begin
         end if; 
     end process;
 
-    cresult421_din <= trunc_ln352_2_reg_139;
+    cresult421_din <= trunc_ln371_2_reg_139;
 
     cresult421_write_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_predicate_op27_write_state2, ap_block_pp0_stage0_11001)
     begin

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'rrequest_manager'
 ================================================================
-* Date:           Fri Sep 25 15:50:10 2026
+* Date:           Sat Sep 26 09:30:13 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -199,13 +199,13 @@ State 2 <SV = 1> <Delay = 1.55>
 ST_2 : Operation 10 [1/2] (1.55ns)   --->   "%call_ln0 = call void @rrequest_manager_Pipeline_VITIS_LOOP_40_1, i230 %rrequest, i230 %r_first, i3 %curr_request_dest_V_loc, i32 %curr_request_Acid_loc, i32 %curr_request_Acid1_loc, i160 %curr_request_data_V_loc"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 1.55> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 1.55>
-ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %r_first, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rrequest, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %r_first, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rrequest, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%curr_request_dest_V_loc_load = load i3 %curr_request_dest_V_loc"   --->   Operation 13 'load' 'curr_request_dest_V_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%curr_request_Acid_loc_load = load i32 %curr_request_Acid_loc"   --->   Operation 14 'load' 'curr_request_Acid_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%curr_request_Acid1_loc_load = load i32 %curr_request_Acid1_loc"   --->   Operation 15 'load' 'curr_request_Acid1_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%curr_request_data_V_loc_load = load i160 %curr_request_data_V_loc"   --->   Operation 16 'load' 'curr_request_data_V_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%empty_551 = wait i32 @_ssdm_op_Wait"   --->   Operation 17 'wait' 'empty_551' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%empty_547 = wait i32 @_ssdm_op_Wait"   --->   Operation 17 'wait' 'empty_547' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%or_ln59_8 = bitconcatenate i248 @_ssdm_op_BitConcatenate.i248.i160.i32.i32.i21.i3, i160 %curr_request_data_V_loc_load, i32 %curr_request_Acid1_loc_load, i32 %curr_request_Acid_loc_load, i21 0, i3 %curr_request_dest_V_loc_load" [rcache.cpp:59]   --->   Operation 18 'bitconcatenate' 'or_ln59_8' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%or_ln59 = or i248 %or_ln59_8, i248 256" [rcache.cpp:59]   --->   Operation 19 'or' 'or_ln59' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i248.i32, i248 %or_ln59, i32 8" [rcache.cpp:59]   --->   Operation 20 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
@@ -247,7 +247,7 @@ curr_request_dest_V_loc_load (load          ) [ 0000]
 curr_request_Acid_loc_load   (load          ) [ 0000]
 curr_request_Acid1_loc_load  (load          ) [ 0000]
 curr_request_data_V_loc_load (load          ) [ 0000]
-empty_551                    (wait          ) [ 0000]
+empty_547                    (wait          ) [ 0000]
 or_ln59_8                    (bitconcatenate) [ 0000]
 or_ln59                      (or            ) [ 0000]
 tmp                          (bitselect     ) [ 0000]
@@ -320,7 +320,7 @@ ret_ln60                     (ret           ) [ 0000]
 <pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_56"/></StgValue>
+<StgValue><ssdm name="empty_91"/></StgValue>
 </bind>
 </comp>
 
@@ -338,7 +338,7 @@ ret_ln60                     (ret           ) [ 0000]
 <pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_86"/></StgValue>
+<StgValue><ssdm name="empty_141"/></StgValue>
 </bind>
 </comp>
 

@@ -1,0 +1,8 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb_getrf_cosim_calibration.cpp in debug mode
+   Compiling ../../../../large_sparse_lu.cpp in debug mode
+   Generating csim.exe
+CAL_GETRF n=4 muladds=14 divisions=6 status=0
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

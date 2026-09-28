@@ -19,3 +19,48 @@ All SpMM checks passed.
 RUN benchmark first 2048 rows
 PASS benchmark first 2048 rows (nnz=3626)
 All SpMM checks passed.
+RUN benchmark first 2048 rows
+PASS benchmark first 2048 rows (nnz=3626)
+All SpMM checks passed.
+RUN benchmark first 2048 rows
+PASS benchmark first 2048 rows (nnz=3626)
+All SpMM checks passed.
+RUN benchmark first 2048 rows
+PASS benchmark first 2048 rows (nnz=3626)
+All SpMM checks passed.
+RUN benchmark first 64 rows
+PASS benchmark first 64 rows (nnz=0)
+All SpMM checks passed.
+RUN benchmark first 2048 rows
+PASS benchmark first 2048 rows (nnz=3626)
+All SpMM checks passed.
+RUN benchmark first 2048 rows
+PASS benchmark first 2048 rows (nnz=3626)
+All SpMM checks passed.
+RUN benchmark first 2048 rows
+PASS benchmark first 2048 rows (nnz=3626)
+All SpMM checks passed.
+RUN benchmark first 1 rows
+PASS benchmark first 1 rows (nnz=0)
+All SpMM checks passed.
+RUN benchmark first 2048 rows
+PASS benchmark first 2048 rows (nnz=3626)
+All SpMM checks passed.
+RUN benchmark first 978 rows
+PASS benchmark first 978 rows (nnz=6)
+All SpMM checks passed.
+RUN benchmark first 978 rows
+PASS benchmark first 978 rows (nnz=6)
+All SpMM checks passed.
+RUN benchmark first 1000 rows
+PASS benchmark first 1000 rows (nnz=94)
+All SpMM checks passed.
+RUN benchmark first 978 rows
+PASS benchmark first 978 rows (nnz=6)
+All SpMM checks passed.
+RUN benchmark first 978 rows
+PASS benchmark first 978 rows (nnz=6)
+All SpMM checks passed.
+RUN benchmark first 2048 rows
+PASS benchmark first 2048 rows (nnz=3626)
+All SpMM checks passed.

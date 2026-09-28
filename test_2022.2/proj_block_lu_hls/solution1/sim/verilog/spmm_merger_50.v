@@ -8,186 +8,274 @@
 `timescale 1 ns / 1 ps 
 
 module spmm_merger_50 (
-        mc_pe2_dout,
-        mc_pe2_empty_n,
-        mc_pe2_read,
-        m_pe2_dout,
-        m_pe2_empty_n,
-        m_pe2_read,
-        result_pe2_din,
-        result_pe2_full_n,
-        result_pe2_write,
-        efinish223_din,
-        efinish223_full_n,
-        efinish223_write,
         ap_clk,
         ap_rst,
         ap_start,
         ap_done,
-        ap_ready,
+        ap_continue,
         ap_idle,
-        ap_continue
+        ap_ready,
+        mc_pe2_dout,
+        mc_pe2_num_data_valid,
+        mc_pe2_fifo_cap,
+        mc_pe2_empty_n,
+        mc_pe2_read,
+        m_pe2_dout,
+        m_pe2_num_data_valid,
+        m_pe2_fifo_cap,
+        m_pe2_empty_n,
+        m_pe2_read,
+        result_pe2_din,
+        result_pe2_num_data_valid,
+        result_pe2_fifo_cap,
+        result_pe2_full_n,
+        result_pe2_write,
+        efinish223_din,
+        efinish223_num_data_valid,
+        efinish223_fifo_cap,
+        efinish223_full_n,
+        efinish223_write
 );
 
+parameter    ap_ST_fsm_state1 = 2'd1;
+parameter    ap_ST_fsm_state2 = 2'd2;
 
-input  [65:0] mc_pe2_dout;
-input   mc_pe2_empty_n;
-output   mc_pe2_read;
-input  [65:0] m_pe2_dout;
-input   m_pe2_empty_n;
-output   m_pe2_read;
-output  [65:0] result_pe2_din;
-input   result_pe2_full_n;
-output   result_pe2_write;
-output  [0:0] efinish223_din;
-input   efinish223_full_n;
-output   efinish223_write;
 input   ap_clk;
 input   ap_rst;
 input   ap_start;
 output   ap_done;
-output   ap_ready;
-output   ap_idle;
 input   ap_continue;
+output   ap_idle;
+output   ap_ready;
+input  [65:0] mc_pe2_dout;
+input  [6:0] mc_pe2_num_data_valid;
+input  [6:0] mc_pe2_fifo_cap;
+input   mc_pe2_empty_n;
+output   mc_pe2_read;
+input  [65:0] m_pe2_dout;
+input  [10:0] m_pe2_num_data_valid;
+input  [10:0] m_pe2_fifo_cap;
+input   m_pe2_empty_n;
+output   m_pe2_read;
+output  [65:0] result_pe2_din;
+input  [10:0] result_pe2_num_data_valid;
+input  [10:0] result_pe2_fifo_cap;
+input   result_pe2_full_n;
+output   result_pe2_write;
+output  [0:0] efinish223_din;
+input  [6:0] efinish223_num_data_valid;
+input  [6:0] efinish223_fifo_cap;
+input   efinish223_full_n;
+output   efinish223_write;
 
-wire    merge_controller_100_U0_ap_start;
-wire    merge_controller_100_U0_ap_done;
-wire    merge_controller_100_U0_ap_continue;
-wire    merge_controller_100_U0_ap_idle;
-wire    merge_controller_100_U0_ap_ready;
-wire    merge_controller_100_U0_mc_pe2_read;
-wire   [35:0] merge_controller_100_U0_mresult_din;
-wire    merge_controller_100_U0_mresult_write;
-wire    merge_controller_100_U0_start_out;
-wire    merge_controller_100_U0_start_write;
-wire    merge_two_sub_101_U0_ap_start;
-wire    merge_two_sub_101_U0_ap_done;
-wire    merge_two_sub_101_U0_ap_continue;
-wire    merge_two_sub_101_U0_ap_idle;
-wire    merge_two_sub_101_U0_ap_ready;
-wire    merge_two_sub_101_U0_mresult_read;
-wire   [65:0] merge_two_sub_101_U0_result_pe2_din;
-wire    merge_two_sub_101_U0_result_pe2_write;
-wire    merge_two_sub_101_U0_m_pe2_read;
-wire   [0:0] merge_two_sub_101_U0_efinish223_din;
-wire    merge_two_sub_101_U0_efinish223_write;
-wire    mresult_full_n;
-wire   [35:0] mresult_dout;
-wire   [3:0] mresult_num_data_valid;
-wire   [3:0] mresult_fifo_cap;
-wire    mresult_empty_n;
-wire   [0:0] start_for_merge_two_sub_101_U0_din;
-wire    start_for_merge_two_sub_101_U0_full_n;
-wire   [0:0] start_for_merge_two_sub_101_U0_dout;
-wire    start_for_merge_two_sub_101_U0_empty_n;
+reg ap_done;
+reg ap_idle;
+reg ap_ready;
+reg mc_pe2_read;
+reg m_pe2_read;
+reg result_pe2_write;
+reg efinish223_write;
 
-spmm_merge_controller_100 merge_controller_100_U0(
+reg    ap_done_reg;
+(* fsm_encoding = "none" *) reg   [1:0] ap_CS_fsm;
+wire    ap_CS_fsm_state1;
+wire    grp_merge_two_sub_fu_20_ap_start;
+wire    grp_merge_two_sub_fu_20_ap_done;
+wire    grp_merge_two_sub_fu_20_ap_idle;
+wire    grp_merge_two_sub_fu_20_ap_ready;
+wire    grp_merge_two_sub_fu_20_mc_pe4_read;
+wire   [65:0] grp_merge_two_sub_fu_20_result_pe4_din;
+wire    grp_merge_two_sub_fu_20_result_pe4_write;
+wire    grp_merge_two_sub_fu_20_m_pe4_read;
+wire   [0:0] grp_merge_two_sub_fu_20_efinish425_din;
+wire    grp_merge_two_sub_fu_20_efinish425_write;
+reg    grp_merge_two_sub_fu_20_ap_start_reg;
+reg    ap_block_state1_ignore_call4;
+wire    ap_CS_fsm_state2;
+reg   [1:0] ap_NS_fsm;
+reg    ap_block_state1;
+reg    ap_ST_fsm_state1_blk;
+reg    ap_ST_fsm_state2_blk;
+wire    ap_ce_reg;
+
+// power-on initialization
+initial begin
+#0 ap_done_reg = 1'b0;
+#0 ap_CS_fsm = 2'd1;
+#0 grp_merge_two_sub_fu_20_ap_start_reg = 1'b0;
+end
+
+spmm_merge_two_sub grp_merge_two_sub_fu_20(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(merge_controller_100_U0_ap_start),
-    .start_full_n(start_for_merge_two_sub_101_U0_full_n),
-    .ap_done(merge_controller_100_U0_ap_done),
-    .ap_continue(merge_controller_100_U0_ap_continue),
-    .ap_idle(merge_controller_100_U0_ap_idle),
-    .ap_ready(merge_controller_100_U0_ap_ready),
-    .mc_pe2_dout(mc_pe2_dout),
-    .mc_pe2_num_data_valid(7'd0),
-    .mc_pe2_fifo_cap(7'd0),
-    .mc_pe2_empty_n(mc_pe2_empty_n),
-    .mc_pe2_read(merge_controller_100_U0_mc_pe2_read),
-    .mresult_din(merge_controller_100_U0_mresult_din),
-    .mresult_num_data_valid(mresult_num_data_valid),
-    .mresult_fifo_cap(mresult_fifo_cap),
-    .mresult_full_n(mresult_full_n),
-    .mresult_write(merge_controller_100_U0_mresult_write),
-    .start_out(merge_controller_100_U0_start_out),
-    .start_write(merge_controller_100_U0_start_write)
+    .ap_start(grp_merge_two_sub_fu_20_ap_start),
+    .ap_done(grp_merge_two_sub_fu_20_ap_done),
+    .ap_idle(grp_merge_two_sub_fu_20_ap_idle),
+    .ap_ready(grp_merge_two_sub_fu_20_ap_ready),
+    .mc_pe4_dout(mc_pe2_dout),
+    .mc_pe4_num_data_valid(7'd0),
+    .mc_pe4_fifo_cap(7'd0),
+    .mc_pe4_empty_n(mc_pe2_empty_n),
+    .mc_pe4_read(grp_merge_two_sub_fu_20_mc_pe4_read),
+    .result_pe4_din(grp_merge_two_sub_fu_20_result_pe4_din),
+    .result_pe4_num_data_valid(11'd0),
+    .result_pe4_fifo_cap(11'd0),
+    .result_pe4_full_n(result_pe2_full_n),
+    .result_pe4_write(grp_merge_two_sub_fu_20_result_pe4_write),
+    .m_pe4_dout(m_pe2_dout),
+    .m_pe4_num_data_valid(11'd0),
+    .m_pe4_fifo_cap(11'd0),
+    .m_pe4_empty_n(m_pe2_empty_n),
+    .m_pe4_read(grp_merge_two_sub_fu_20_m_pe4_read),
+    .efinish425_din(grp_merge_two_sub_fu_20_efinish425_din),
+    .efinish425_num_data_valid(7'd0),
+    .efinish425_fifo_cap(7'd0),
+    .efinish425_full_n(efinish223_full_n),
+    .efinish425_write(grp_merge_two_sub_fu_20_efinish425_write)
 );
 
-spmm_merge_two_sub_101 merge_two_sub_101_U0(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(merge_two_sub_101_U0_ap_start),
-    .ap_done(merge_two_sub_101_U0_ap_done),
-    .ap_continue(merge_two_sub_101_U0_ap_continue),
-    .ap_idle(merge_two_sub_101_U0_ap_idle),
-    .ap_ready(merge_two_sub_101_U0_ap_ready),
-    .mresult_dout(mresult_dout),
-    .mresult_num_data_valid(mresult_num_data_valid),
-    .mresult_fifo_cap(mresult_fifo_cap),
-    .mresult_empty_n(mresult_empty_n),
-    .mresult_read(merge_two_sub_101_U0_mresult_read),
-    .result_pe2_din(merge_two_sub_101_U0_result_pe2_din),
-    .result_pe2_num_data_valid(11'd0),
-    .result_pe2_fifo_cap(11'd0),
-    .result_pe2_full_n(result_pe2_full_n),
-    .result_pe2_write(merge_two_sub_101_U0_result_pe2_write),
-    .m_pe2_dout(m_pe2_dout),
-    .m_pe2_num_data_valid(11'd0),
-    .m_pe2_fifo_cap(11'd0),
-    .m_pe2_empty_n(m_pe2_empty_n),
-    .m_pe2_read(merge_two_sub_101_U0_m_pe2_read),
-    .efinish223_din(merge_two_sub_101_U0_efinish223_din),
-    .efinish223_num_data_valid(7'd0),
-    .efinish223_fifo_cap(7'd0),
-    .efinish223_full_n(efinish223_full_n),
-    .efinish223_write(merge_two_sub_101_U0_efinish223_write)
-);
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_CS_fsm <= ap_ST_fsm_state1;
+    end else begin
+        ap_CS_fsm <= ap_NS_fsm;
+    end
+end
 
-spmm_fifo_w36_d8_S_x mresult_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(merge_controller_100_U0_mresult_din),
-    .if_full_n(mresult_full_n),
-    .if_write(merge_controller_100_U0_mresult_write),
-    .if_dout(mresult_dout),
-    .if_num_data_valid(mresult_num_data_valid),
-    .if_fifo_cap(mresult_fifo_cap),
-    .if_empty_n(mresult_empty_n),
-    .if_read(merge_two_sub_101_U0_mresult_read)
-);
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_done_reg <= 1'b0;
+    end else begin
+        if ((ap_continue == 1'b1)) begin
+            ap_done_reg <= 1'b0;
+        end else if (((grp_merge_two_sub_fu_20_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            ap_done_reg <= 1'b1;
+        end
+    end
+end
 
-spmm_start_for_merge_two_sub_101_U0 start_for_merge_two_sub_101_U0_U(
-    .clk(ap_clk),
-    .reset(ap_rst),
-    .if_read_ce(1'b1),
-    .if_write_ce(1'b1),
-    .if_din(start_for_merge_two_sub_101_U0_din),
-    .if_full_n(start_for_merge_two_sub_101_U0_full_n),
-    .if_write(merge_controller_100_U0_start_write),
-    .if_dout(start_for_merge_two_sub_101_U0_dout),
-    .if_empty_n(start_for_merge_two_sub_101_U0_empty_n),
-    .if_read(merge_two_sub_101_U0_ap_ready)
-);
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        grp_merge_two_sub_fu_20_ap_start_reg <= 1'b0;
+    end else begin
+        if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+            grp_merge_two_sub_fu_20_ap_start_reg <= 1'b1;
+        end else if ((grp_merge_two_sub_fu_20_ap_ready == 1'b1)) begin
+            grp_merge_two_sub_fu_20_ap_start_reg <= 1'b0;
+        end
+    end
+end
 
-assign ap_done = merge_two_sub_101_U0_ap_done;
+always @ (*) begin
+    if (((ap_start == 1'b0) | (ap_done_reg == 1'b1))) begin
+        ap_ST_fsm_state1_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state1_blk = 1'b0;
+    end
+end
 
-assign ap_idle = (merge_two_sub_101_U0_ap_idle & merge_controller_100_U0_ap_idle);
+always @ (*) begin
+    if ((grp_merge_two_sub_fu_20_ap_done == 1'b0)) begin
+        ap_ST_fsm_state2_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state2_blk = 1'b0;
+    end
+end
 
-assign ap_ready = merge_controller_100_U0_ap_ready;
+always @ (*) begin
+    if (((grp_merge_two_sub_fu_20_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        ap_done = 1'b1;
+    end else begin
+        ap_done = ap_done_reg;
+    end
+end
 
-assign efinish223_din = merge_two_sub_101_U0_efinish223_din;
+always @ (*) begin
+    if (((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
+        ap_idle = 1'b1;
+    end else begin
+        ap_idle = 1'b0;
+    end
+end
 
-assign efinish223_write = merge_two_sub_101_U0_efinish223_write;
+always @ (*) begin
+    if (((grp_merge_two_sub_fu_20_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+        ap_ready = 1'b1;
+    end else begin
+        ap_ready = 1'b0;
+    end
+end
 
-assign m_pe2_read = merge_two_sub_101_U0_m_pe2_read;
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        efinish223_write = grp_merge_two_sub_fu_20_efinish425_write;
+    end else begin
+        efinish223_write = 1'b0;
+    end
+end
 
-assign mc_pe2_read = merge_controller_100_U0_mc_pe2_read;
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        m_pe2_read = grp_merge_two_sub_fu_20_m_pe4_read;
+    end else begin
+        m_pe2_read = 1'b0;
+    end
+end
 
-assign merge_controller_100_U0_ap_continue = 1'b1;
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        mc_pe2_read = grp_merge_two_sub_fu_20_mc_pe4_read;
+    end else begin
+        mc_pe2_read = 1'b0;
+    end
+end
 
-assign merge_controller_100_U0_ap_start = ap_start;
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        result_pe2_write = grp_merge_two_sub_fu_20_result_pe4_write;
+    end else begin
+        result_pe2_write = 1'b0;
+    end
+end
 
-assign merge_two_sub_101_U0_ap_continue = ap_continue;
+always @ (*) begin
+    case (ap_CS_fsm)
+        ap_ST_fsm_state1 : begin
+            if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end
+        end
+        ap_ST_fsm_state2 : begin
+            if (((grp_merge_two_sub_fu_20_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state2;
+            end
+        end
+        default : begin
+            ap_NS_fsm = 'bx;
+        end
+    endcase
+end
 
-assign merge_two_sub_101_U0_ap_start = start_for_merge_two_sub_101_U0_empty_n;
+assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign result_pe2_din = merge_two_sub_101_U0_result_pe2_din;
+assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
-assign result_pe2_write = merge_two_sub_101_U0_result_pe2_write;
+always @ (*) begin
+    ap_block_state1 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
+end
 
-assign start_for_merge_two_sub_101_U0_din = 1'b1;
+always @ (*) begin
+    ap_block_state1_ignore_call4 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
+end
+
+assign efinish223_din = grp_merge_two_sub_fu_20_efinish425_din;
+
+assign grp_merge_two_sub_fu_20_ap_start = grp_merge_two_sub_fu_20_ap_start_reg;
+
+assign result_pe2_din = grp_merge_two_sub_fu_20_result_pe4_din;
 
 endmodule //spmm_merger_50

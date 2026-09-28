@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb.cpp in debug mode
+   Compiling ../../../../core.cpp in debug mode
+   Compiling ../../../../pe.cpp in debug mode
+   Compiling ../../../../rcache.cpp in debug mode
+   Compiling ../../../../util.cpp in debug mode
+   Compiling ../../../../vccache.cpp in debug mode
+   Generating csim.exe
+RUN benchmark first 2048 rows
+PASS benchmark first 2048 rows (nnz=3626)
+All SpMM checks passed.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

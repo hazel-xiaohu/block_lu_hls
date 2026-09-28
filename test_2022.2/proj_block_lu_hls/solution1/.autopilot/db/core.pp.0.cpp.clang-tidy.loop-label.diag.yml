@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          153591
+        Offset:          153910
         Length:          0
         ReplacementText: 'VITIS_LOOP_1211_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          361111
+        Offset:          361430
         Length:          0
         ReplacementText: 'VITIS_LOOP_676_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -25,7 +25,7 @@ Diagnostics:
     FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          361550
+        Offset:          361869
         Length:          0
         ReplacementText: 'VITIS_LOOP_690_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -34,7 +34,7 @@ Diagnostics:
     FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          361990
+        Offset:          362309
         Length:          0
         ReplacementText: 'VITIS_LOOP_704_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -43,7 +43,7 @@ Diagnostics:
     FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          623867
+        Offset:          624186
         Length:          0
         ReplacementText: 'VITIS_LOOP_1245_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          991030
+        Offset:          991349
         Length:          0
         ReplacementText: 'VITIS_LOOP_13_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -61,7 +61,7 @@ Diagnostics:
     FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          991511
+        Offset:          991830
         Length:          0
         ReplacementText: 'VITIS_LOOP_32_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -70,7 +70,7 @@ Diagnostics:
     FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          991614
+        Offset:          991933
         Length:          0
         ReplacementText: 'VITIS_LOOP_35_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -79,7 +79,7 @@ Diagnostics:
     FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          992286
+        Offset:          992605
         Length:          0
         ReplacementText: 'VITIS_LOOP_61_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -88,7 +88,7 @@ Diagnostics:
     FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          992389
+        Offset:          992708
         Length:          0
         ReplacementText: 'VITIS_LOOP_64_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -97,7 +97,7 @@ Diagnostics:
     FilePath:        /output/block_lu_hls/test_2022.2/task_scheduler.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          993484
+        Offset:          993803
         Length:          0
         ReplacementText: 'VITIS_LOOP_96_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -106,7 +106,7 @@ Diagnostics:
     FilePath:        core.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          995917
+        Offset:          996236
         Length:          0
         ReplacementText: 'VITIS_LOOP_13_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -115,7 +115,7 @@ Diagnostics:
     FilePath:        core.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          996145
+        Offset:          996464
         Length:          0
         ReplacementText: 'VITIS_LOOP_22_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -124,7 +124,7 @@ Diagnostics:
     FilePath:        core.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          996793
+        Offset:          997112
         Length:          0
         ReplacementText: 'VITIS_LOOP_43_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -133,7 +133,7 @@ Diagnostics:
     FilePath:        core.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          997116
+        Offset:          997435
         Length:          0
         ReplacementText: 'VITIS_LOOP_53_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -142,7 +142,7 @@ Diagnostics:
     FilePath:        core.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          997869
+        Offset:          998188
         Length:          0
         ReplacementText: 'VITIS_LOOP_86_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -151,7 +151,7 @@ Diagnostics:
     FilePath:        core.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          998703
+        Offset:          999022
         Length:          0
         ReplacementText: 'VITIS_LOOP_120_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -160,7 +160,7 @@ Diagnostics:
     FilePath:        core.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/core.pp.0.cpp
-        Offset:          999230
+        Offset:          999549
         Length:          0
         ReplacementText: 'VITIS_LOOP_147_1: '
   - DiagnosticName:  clang-diagnostic-error

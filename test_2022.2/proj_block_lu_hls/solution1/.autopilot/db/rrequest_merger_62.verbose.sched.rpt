@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'rrequest_merger_62'
 ================================================================
-* Date:           Fri Sep 25 15:48:06 2026
+* Date:           Sat Sep 26 09:28:11 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -83,29 +83,29 @@ ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%temp_Acid_loc = alloca i64 1"   ---
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%temp_Acid1_loc = alloca i64 1"   --->   Operation 7 'alloca' 'temp_Acid1_loc' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%temp_data_V_loc = alloca i64 1"   --->   Operation 8 'alloca' 'temp_data_V_loc' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 9 'wait' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln0 = call void @rrequest_merger.62_Pipeline_VITIS_LOOP_125_1, i230 %r_first, i230 %rrequest3, i230 %r_req, i160 %temp_data_V_loc, i32 %temp_Acid1_loc, i32 %temp_Acid_loc, i2 %temp_type_V_loc, i3 %temp_dest_V_loc"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln0 = call void @rrequest_merger.62_Pipeline_VITIS_LOOP_129_1, i230 %r_first, i230 %rrequest3, i230 %r_req, i160 %temp_data_V_loc, i32 %temp_Acid1_loc, i32 %temp_Acid_loc, i2 %temp_type_V_loc, i3 %temp_dest_V_loc"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 11 [1/2] (0.00ns)   --->   "%call_ln0 = call void @rrequest_merger.62_Pipeline_VITIS_LOOP_125_1, i230 %r_first, i230 %rrequest3, i230 %r_req, i160 %temp_data_V_loc, i32 %temp_Acid1_loc, i32 %temp_Acid_loc, i2 %temp_type_V_loc, i3 %temp_dest_V_loc"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 11 [1/2] (0.00ns)   --->   "%call_ln0 = call void @rrequest_merger.62_Pipeline_VITIS_LOOP_129_1, i230 %r_first, i230 %rrequest3, i230 %r_req, i160 %temp_data_V_loc, i32 %temp_Acid1_loc, i32 %temp_Acid_loc, i2 %temp_type_V_loc, i3 %temp_dest_V_loc"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 1.82>
-ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %r_req, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %r_first, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rrequest3, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %r_req, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %r_first, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rrequest3, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%temp_data_V_loc_load = load i160 %temp_data_V_loc"   --->   Operation 15 'load' 'temp_data_V_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%temp_Acid1_loc_load = load i32 %temp_Acid1_loc"   --->   Operation 16 'load' 'temp_Acid1_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%temp_Acid_loc_load = load i32 %temp_Acid_loc"   --->   Operation 17 'load' 'temp_Acid_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%temp_type_V_loc_load = load i2 %temp_type_V_loc"   --->   Operation 18 'load' 'temp_type_V_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%temp_dest_V_loc_load = load i3 %temp_dest_V_loc"   --->   Operation 19 'load' 'temp_dest_V_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%empty_545 = wait i32 @_ssdm_op_Wait"   --->   Operation 20 'wait' 'empty_545' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i248 @_ssdm_op_BitConcatenate.i248.i160.i32.i32.i6.i2.i13.i3, i160 %temp_data_V_loc_load, i32 %temp_Acid1_loc_load, i32 %temp_Acid_loc_load, i6 0, i2 %temp_type_V_loc_load, i13 0, i3 %temp_dest_V_loc_load" [rcache.cpp:144]   --->   Operation 21 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%or_ln144 = or i248 %tmp, i248 256" [rcache.cpp:144]   --->   Operation 22 'or' 'or_ln144' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_55 = bitselect i1 @_ssdm_op_BitSelect.i1.i248.i32, i248 %or_ln144, i32 8" [rcache.cpp:144]   --->   Operation 23 'bitselect' 'tmp_55' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_48 = partselect i2 @_ssdm_op_PartSelect.i2.i248.i32.i32, i248 %or_ln144, i32 16, i32 17" [rcache.cpp:144]   --->   Operation 24 'partselect' 'tmp_48' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_49 = partselect i224 @_ssdm_op_PartSelect.i224.i248.i32.i32, i248 %or_ln144, i32 24, i32 247" [rcache.cpp:144]   --->   Operation 25 'partselect' 'tmp_49' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i230 @_ssdm_op_BitConcatenate.i230.i224.i2.i1.i3, i224 %tmp_49, i2 %tmp_48, i1 %tmp_55, i3 %temp_dest_V_loc_load" [rcache.cpp:144]   --->   Operation 26 'bitconcatenate' 'p_0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 27 [1/1] (1.82ns)   --->   "%write_ln144 = write void @_ssdm_op_Write.ap_fifo.volatile.i230P0A, i230 %rrequest3, i230 %p_0" [rcache.cpp:144]   --->   Operation 27 'write' 'write_ln144' <Predicate = true> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 230> <Depth = 4> <FIFO>
-ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln145 = ret" [rcache.cpp:145]   --->   Operation 28 'ret' 'ret_ln145' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%empty_541 = wait i32 @_ssdm_op_Wait"   --->   Operation 20 'wait' 'empty_541' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i248 @_ssdm_op_BitConcatenate.i248.i160.i32.i32.i6.i2.i13.i3, i160 %temp_data_V_loc_load, i32 %temp_Acid1_loc_load, i32 %temp_Acid_loc_load, i6 0, i2 %temp_type_V_loc_load, i13 0, i3 %temp_dest_V_loc_load" [rcache.cpp:148]   --->   Operation 21 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%or_ln148 = or i248 %tmp, i248 256" [rcache.cpp:148]   --->   Operation 22 'or' 'or_ln148' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_59 = bitselect i1 @_ssdm_op_BitSelect.i1.i248.i32, i248 %or_ln148, i32 8" [rcache.cpp:148]   --->   Operation 23 'bitselect' 'tmp_59' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_48 = partselect i2 @_ssdm_op_PartSelect.i2.i248.i32.i32, i248 %or_ln148, i32 16, i32 17" [rcache.cpp:148]   --->   Operation 24 'partselect' 'tmp_48' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_49 = partselect i224 @_ssdm_op_PartSelect.i224.i248.i32.i32, i248 %or_ln148, i32 24, i32 247" [rcache.cpp:148]   --->   Operation 25 'partselect' 'tmp_49' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i230 @_ssdm_op_BitConcatenate.i230.i224.i2.i1.i3, i224 %tmp_49, i2 %tmp_48, i1 %tmp_59, i3 %temp_dest_V_loc_load" [rcache.cpp:148]   --->   Operation 26 'bitconcatenate' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (1.82ns)   --->   "%write_ln148 = write void @_ssdm_op_Write.ap_fifo.volatile.i230P0A, i230 %rrequest3, i230 %p_0" [rcache.cpp:148]   --->   Operation 27 'write' 'write_ln148' <Predicate = true> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 230> <Depth = 4> <FIFO>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln149 = ret" [rcache.cpp:149]   --->   Operation 28 'ret' 'ret_ln149' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -122,8 +122,8 @@ The critical path consists of the following:
  <State 3>: 1.83ns
 The critical path consists of the following:
 	'load' operation ('temp_data_V_loc_load') on local variable 'temp_data_V_loc' [14]  (0 ns)
-	'or' operation ('or_ln144', rcache.cpp:144) [21]  (0 ns)
-	fifo write operation ('write_ln144', rcache.cpp:144) on port 'rrequest3' (rcache.cpp:144) [26]  (1.83 ns)
+	'or' operation ('or_ln148', rcache.cpp:148) [21]  (0 ns)
+	fifo write operation ('write_ln148', rcache.cpp:148) on port 'rrequest3' (rcache.cpp:148) [26]  (1.83 ns)
 
 
 ============================================================

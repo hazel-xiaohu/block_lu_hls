@@ -1,0 +1,5 @@
+kernel,version,lanes,factor_cache,work_cache,clock_est_ns,bram18k,dsp,ff,lut,uram,update_loop_ii
+GESSM,v1,1,external,external,3.65,0,5,14519,22369,0,27
+GESSM,v2,4,BRAM,BRAM,3.65,72,5,21018,30355,0,13
+TSTRF,v1,1,external,external,3.65,0,5,15174,23211,0,27
+TSTRF,v2,4,BRAM,BRAM,3.65,80,5,22278,31344,0,13

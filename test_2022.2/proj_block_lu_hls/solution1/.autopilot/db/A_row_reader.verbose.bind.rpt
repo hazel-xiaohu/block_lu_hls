@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'A_row_reader'
 ================================================================
-* Date:           Fri Sep 25 15:47:58 2026
+* Date:           Sat Sep 26 09:28:02 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -119,16 +119,16 @@ State 8 <SV = 7> <Delay = 3.65>
 ST_8 : Operation 24 [1/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 24 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 9 <SV = 8> <Delay = 1.41>
-ST_9 : Operation 25 [1/1] (0.00ns)   --->   "%empty_1653 = wait i32 @_ssdm_op_Wait"   --->   Operation 25 'wait' 'empty_1653' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 25 [1/1] (0.00ns)   --->   "%empty_1643 = wait i32 @_ssdm_op_Wait"   --->   Operation 25 'wait' 'empty_1643' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 26 [2/2] (1.41ns)   --->   "%call_ln13 = call void @A_row_reader_Pipeline_VITIS_LOOP_13_1, i32 %arcsr, i62 %trunc_ln13, i32 %add, i64 %p_A_reader_rs" [./task_scheduler.h:13]   --->   Operation 26 'call' 'call_ln13' <Predicate = true> <Delay = 1.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 10 <SV = 9> <Delay = 0.00>
 ST_10 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln13 = call void @A_row_reader_Pipeline_VITIS_LOOP_13_1, i32 %arcsr, i62 %trunc_ln13, i32 %add, i64 %p_A_reader_rs" [./task_scheduler.h:13]   --->   Operation 27 'call' 'call_ln13' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 11 <SV = 10> <Delay = 1.64>
-ST_11 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %p_A_reader_rs, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %arcsr, void @empty_106, i32 0, i32 0, void @empty_86, i32 0, i32 2050, void @empty_144, void @empty_133, void @empty_86, i32 16, i32 16, i32 16, i32 16, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 30 [1/1] (0.00ns)   --->   "%empty_1654 = wait i32 @_ssdm_op_Wait"   --->   Operation 30 'wait' 'empty_1654' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %p_A_reader_rs, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %arcsr, void @empty_153, i32 0, i32 0, void @empty_141, i32 0, i32 2050, void @empty_129, void @empty_139, void @empty_141, i32 16, i32 16, i32 16, i32 16, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 30 [1/1] (0.00ns)   --->   "%empty_1644 = wait i32 @_ssdm_op_Wait"   --->   Operation 30 'wait' 'empty_1644' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 31 [1/1] (1.64ns)   --->   "%write_ln27 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %p_A_reader_rs, i64 4294967295" [./task_scheduler.h:27]   --->   Operation 31 'write' 'write_ln27' <Predicate = true> <Delay = 1.64> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.64> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 128> <FIFO>
 ST_11 : Operation 32 [1/1] (0.00ns)   --->   "%ret_ln28 = ret" [./task_scheduler.h:28]   --->   Operation 32 'ret' 'ret_ln28' <Predicate = true> <Delay = 0.00>
 
@@ -161,11 +161,11 @@ trunc_ln13        (partselect   ) [ 000111111110]
 sext_ln13         (sext         ) [ 000000000000]
 arcsr_addr        (getelementptr) [ 000111111000]
 empty             (readreq      ) [ 000000000000]
-empty_1653        (wait         ) [ 000000000000]
+empty_1643        (wait         ) [ 000000000000]
 call_ln13         (call         ) [ 000000000000]
 specinterface_ln0 (specinterface) [ 000000000000]
 specinterface_ln0 (specinterface) [ 000000000000]
-empty_1654        (wait         ) [ 000000000000]
+empty_1644        (wait         ) [ 000000000000]
 write_ln27        (write        ) [ 000000000000]
 ret_ln28          (ret          ) [ 000000000000]
 </LifeTime>
@@ -304,7 +304,7 @@ ret_ln28          (ret          ) [ 000000000000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_56"/></StgValue>
+<StgValue><ssdm name="empty_91"/></StgValue>
 </bind>
 </comp>
 
@@ -322,7 +322,7 @@ ret_ln28          (ret          ) [ 000000000000]
 <pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_86"/></StgValue>
+<StgValue><ssdm name="empty_141"/></StgValue>
 </bind>
 </comp>
 
@@ -340,7 +340,7 @@ ret_ln28          (ret          ) [ 000000000000]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_106"/></StgValue>
+<StgValue><ssdm name="empty_153"/></StgValue>
 </bind>
 </comp>
 
@@ -358,7 +358,7 @@ ret_ln28          (ret          ) [ 000000000000]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_144"/></StgValue>
+<StgValue><ssdm name="empty_129"/></StgValue>
 </bind>
 </comp>
 
@@ -367,7 +367,7 @@ ret_ln28          (ret          ) [ 000000000000]
 <pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_133"/></StgValue>
+<StgValue><ssdm name="empty_139"/></StgValue>
 </bind>
 </comp>
 

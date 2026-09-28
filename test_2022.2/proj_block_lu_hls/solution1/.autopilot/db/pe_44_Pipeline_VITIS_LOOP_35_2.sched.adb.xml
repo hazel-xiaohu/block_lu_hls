@@ -64,7 +64,7 @@ newFuncRoot:0 %i = alloca i32 1
 
 <Node id="10" bw="0" op_0_bw="0" op_1_bw="134" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i134 %vblock2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i134 %vblock2, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -79,7 +79,7 @@ newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="11" bw="0" op_0_bw="0" op_1_bw="134" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i134 %cblock2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+newFuncRoot:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i134 %cblock2, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -94,7 +94,7 @@ newFuncRoot:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="12" bw="0" op_0_bw="0" op_1_bw="134" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i134 %vblock2d, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i134 %vblock2d, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -109,7 +109,7 @@ newFuncRoot:3 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="13" bw="0" op_0_bw="0" op_1_bw="134" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i134 %cblock2d, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i134 %cblock2d, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -124,7 +124,7 @@ newFuncRoot:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="263" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i263 %p_pe2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+newFuncRoot:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i263 %p_pe2, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -260,7 +260,7 @@ for.cond9:2 %br_ln35 = br i1 %icmp_ln35, void %for.end.exitStub, void %for.body1
 
 <Node id="25" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body11:0 %specpipeline_ln36 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_86
+for.body11:0 %specpipeline_ln36 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_141
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln36"/></StgValue>
@@ -1026,7 +1026,7 @@ for.end.exitStub:0 %ret_ln0 = ret
 
 <Node id="49" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-fpga_resource_hint.if.end.13:12 %rbegin7 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_155
+fpga_resource_hint.if.end.13:12 %rbegin7 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_148
 
 ]]></Node>
 <StgValue><ssdm name="rbegin7"/></StgValue>
@@ -1071,7 +1071,7 @@ fpga_resource_hint.if.end.13:14 %specfucore_ln52 = specfucore void @_ssdm_op_Spe
 
 <Node id="52" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-fpga_resource_hint.if.end.13:15 %rend8 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_155, i32 %rbegin7
+fpga_resource_hint.if.end.13:15 %rend8 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_148, i32 %rbegin7
 
 ]]></Node>
 <StgValue><ssdm name="rend8"/></StgValue>
@@ -1086,7 +1086,7 @@ fpga_resource_hint.if.end.13:15 %rend8 = specregionend i32 @_ssdm_op_SpecRegionE
 
 <Node id="53" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-fpga_resource_hint.if.end.13:16 %rbegin5 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_167
+fpga_resource_hint.if.end.13:16 %rbegin5 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_149
 
 ]]></Node>
 <StgValue><ssdm name="rbegin5"/></StgValue>
@@ -1131,7 +1131,7 @@ fpga_resource_hint.if.end.13:18 %specfucore_ln54 = specfucore void @_ssdm_op_Spe
 
 <Node id="56" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-fpga_resource_hint.if.end.13:19 %rend6 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_167, i32 %rbegin5
+fpga_resource_hint.if.end.13:19 %rend6 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_149, i32 %rbegin5
 
 ]]></Node>
 <StgValue><ssdm name="rend6"/></StgValue>
@@ -1146,7 +1146,7 @@ fpga_resource_hint.if.end.13:19 %rend6 = specregionend i32 @_ssdm_op_SpecRegionE
 
 <Node id="57" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-fpga_resource_hint.if.end.13:20 %rbegin3 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_125
+fpga_resource_hint.if.end.13:20 %rbegin3 = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_163
 
 ]]></Node>
 <StgValue><ssdm name="rbegin3"/></StgValue>
@@ -1191,7 +1191,7 @@ fpga_resource_hint.if.end.13:22 %specfucore_ln56 = specfucore void @_ssdm_op_Spe
 
 <Node id="60" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-fpga_resource_hint.if.end.13:23 %rend4 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_125, i32 %rbegin3
+fpga_resource_hint.if.end.13:23 %rend4 = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_163, i32 %rbegin3
 
 ]]></Node>
 <StgValue><ssdm name="rend4"/></StgValue>
@@ -1206,7 +1206,7 @@ fpga_resource_hint.if.end.13:23 %rend4 = specregionend i32 @_ssdm_op_SpecRegionE
 
 <Node id="61" bw="32" op_0_bw="32" op_1_bw="0">
 <![CDATA[
-fpga_resource_hint.if.end.13:24 %rbegin = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_26
+fpga_resource_hint.if.end.13:24 %rbegin = specregionbegin i32 @_ssdm_op_SpecRegionBegin, void @empty_151
 
 ]]></Node>
 <StgValue><ssdm name="rbegin"/></StgValue>
@@ -1251,7 +1251,7 @@ fpga_resource_hint.if.end.13:26 %specfucore_ln58 = specfucore void @_ssdm_op_Spe
 
 <Node id="64" bw="32" op_0_bw="32" op_1_bw="0" op_2_bw="32">
 <![CDATA[
-fpga_resource_hint.if.end.13:27 %rend = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_26, i32 %rbegin
+fpga_resource_hint.if.end.13:27 %rend = specregionend i32 @_ssdm_op_SpecRegionEnd, void @empty_151, i32 %rbegin
 
 ]]></Node>
 <StgValue><ssdm name="rend"/></StgValue>
@@ -1281,10 +1281,10 @@ fpga_resource_hint.if.end.13:28 %empty = bitcast i32 %mul
 
 <Node id="66" bw="32" op_0_bw="32">
 <![CDATA[
-fpga_resource_hint.if.end.13:29 %empty_626 = bitcast i32 %mul7
+fpga_resource_hint.if.end.13:29 %empty_622 = bitcast i32 %mul7
 
 ]]></Node>
-<StgValue><ssdm name="empty_626"/></StgValue>
+<StgValue><ssdm name="empty_622"/></StgValue>
 </operation>
 
 <operation id="88" st_id="6" stage="1" lat="1">
@@ -1296,10 +1296,10 @@ fpga_resource_hint.if.end.13:29 %empty_626 = bitcast i32 %mul7
 
 <Node id="67" bw="32" op_0_bw="32">
 <![CDATA[
-fpga_resource_hint.if.end.13:30 %empty_627 = bitcast i32 %mul8
+fpga_resource_hint.if.end.13:30 %empty_623 = bitcast i32 %mul8
 
 ]]></Node>
-<StgValue><ssdm name="empty_627"/></StgValue>
+<StgValue><ssdm name="empty_623"/></StgValue>
 </operation>
 
 <operation id="89" st_id="6" stage="1" lat="1">
@@ -1311,10 +1311,10 @@ fpga_resource_hint.if.end.13:30 %empty_627 = bitcast i32 %mul8
 
 <Node id="68" bw="32" op_0_bw="32">
 <![CDATA[
-fpga_resource_hint.if.end.13:31 %empty_628 = bitcast i32 %mul9
+fpga_resource_hint.if.end.13:31 %empty_624 = bitcast i32 %mul9
 
 ]]></Node>
-<StgValue><ssdm name="empty_628"/></StgValue>
+<StgValue><ssdm name="empty_624"/></StgValue>
 </operation>
 
 <operation id="90" st_id="6" stage="1" lat="1">
@@ -1326,7 +1326,7 @@ fpga_resource_hint.if.end.13:31 %empty_628 = bitcast i32 %mul9
 
 <Node id="71" bw="263" op_0_bw="263" op_1_bw="1" op_2_bw="6" op_3_bw="128" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32">
 <![CDATA[
-fpga_resource_hint.if.end.13:34 %p_0 = bitconcatenate i263 @_ssdm_op_BitConcatenate.i263.i1.i6.i128.i32.i32.i32.i32, i1 0, i6 %trunc_ln73, i128 %tmp_263, i32 %empty_628, i32 %empty_627, i32 %empty_626, i32 %empty
+fpga_resource_hint.if.end.13:34 %p_0 = bitconcatenate i263 @_ssdm_op_BitConcatenate.i263.i1.i6.i128.i32.i32.i32.i32, i1 0, i6 %trunc_ln73, i128 %tmp_263, i32 %empty_624, i32 %empty_623, i32 %empty_622, i32 %empty
 
 ]]></Node>
 <StgValue><ssdm name="p_0"/></StgValue>

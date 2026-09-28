@@ -1,0 +1,547 @@
+
+
+================================================================
+== Synthesis Summary Report of 'large_tstrf_v2'
+================================================================
++ General Information: 
+    * Date:           Sun Sep 27 11:06:07 2026
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        proj_large_tstrf_v2
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu15eg-ffvb1156-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+------------+------------+-----+
+    |                     Modules                     | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |         |            |            |     |
+    |                     & Loops                     | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF     |     LUT    | URAM|
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+------------+------------+-----+
+    |+ large_tstrf_v2                                 |     -|  0.00|        -|          -|         -|        -|     -|        no|  80 (5%)|  5 (~0%)|  22278 (3%)|  31344 (9%)|    -|
+    | + large_tstrf_v2_Pipeline_VITIS_LOOP_326_1      |     -|  0.00|        -|          -|         -|        -|     -|        no|        -|        -|   243 (~0%)|   220 (~0%)|    -|
+    |  o VITIS_LOOP_326_1                             |     -|  3.65|        -|          -|        10|        1|     -|       yes|        -|        -|           -|           -|    -|
+    | + large_tstrf_v2_Pipeline_VITIS_LOOP_328_2      |     -|  0.00|        -|          -|         -|        -|     -|        no|        -|        -|    74 (~0%)|    90 (~0%)|    -|
+    |  o VITIS_LOOP_328_2                             |     -|  3.65|        -|          -|         3|        1|     -|       yes|        -|        -|           -|           -|    -|
+    | + large_tstrf_v2_Pipeline_VITIS_LOOP_329_3      |     -|  0.00|        -|          -|         -|        -|     -|        no|        -|        -|   304 (~0%)|   214 (~0%)|    -|
+    |  o VITIS_LOOP_329_3                             |     -|  3.65|        -|          -|        12|        1|     -|       yes|        -|        -|           -|           -|    -|
+    | o VITIS_LOOP_332_4                              |     -|  3.65|        -|          -|         -|        -|     -|        no|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_339_6     |     -|  1.42|     4097|  2.048e+04|         -|     4097|     -|        no|        -|        -|    14 (~0%)|    66 (~0%)|    -|
+    |   o VITIS_LOOP_339_6                            |     -|  3.65|     4095|  2.048e+04|         1|        1|  4095|       yes|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_343_7     |     -|  0.00|        -|          -|         -|        -|     -|        no|        -|        -|   356 (~0%)|   297 (~0%)|    -|
+    |   o VITIS_LOOP_343_7                            |    II|  3.65|        -|          -|        11|        5|     -|       yes|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_359_10    |     -|  0.00|        -|          -|         -|        -|     -|        no|        -|        -|   235 (~0%)|   194 (~0%)|    -|
+    |   o VITIS_LOOP_359_10                           |     -|  3.65|        -|          -|         5|        1|     -|       yes|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_339_61    |     -|  1.42|     4097|  2.048e+04|         -|     4097|     -|        no|        -|        -|    14 (~0%)|    66 (~0%)|    -|
+    |   o VITIS_LOOP_339_6                            |     -|  3.65|     4095|  2.048e+04|         1|        1|  4095|       yes|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_343_72    |     -|  0.00|        -|          -|         -|        -|     -|        no|        -|        -|   356 (~0%)|   297 (~0%)|    -|
+    |   o VITIS_LOOP_343_7                            |    II|  3.65|        -|          -|        11|        5|     -|       yes|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_359_104   |     -|  0.00|        -|          -|         -|        -|     -|        no|        -|        -|   235 (~0%)|   194 (~0%)|    -|
+    |   o VITIS_LOOP_359_10                           |     -|  3.65|        -|          -|         5|        1|     -|       yes|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_339_65    |     -|  1.42|     4097|  2.048e+04|         -|     4097|     -|        no|        -|        -|    14 (~0%)|    66 (~0%)|    -|
+    |   o VITIS_LOOP_339_6                            |     -|  3.65|     4095|  2.048e+04|         1|        1|  4095|       yes|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_343_76    |     -|  0.00|        -|          -|         -|        -|     -|        no|        -|        -|   356 (~0%)|   297 (~0%)|    -|
+    |   o VITIS_LOOP_343_7                            |    II|  3.65|        -|          -|        11|        5|     -|       yes|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_359_108   |     -|  0.00|        -|          -|         -|        -|     -|        no|        -|        -|   235 (~0%)|   194 (~0%)|    -|
+    |   o VITIS_LOOP_359_10                           |     -|  3.65|        -|          -|         5|        1|     -|       yes|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_339_69    |     -|  1.42|     4097|  2.048e+04|         -|     4097|     -|        no|        -|        -|    14 (~0%)|    66 (~0%)|    -|
+    |   o VITIS_LOOP_339_6                            |     -|  3.65|     4095|  2.048e+04|         1|        1|  4095|       yes|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_343_710   |     -|  0.00|        -|          -|         -|        -|     -|        no|        -|        -|   356 (~0%)|   297 (~0%)|    -|
+    |   o VITIS_LOOP_343_7                            |    II|  3.65|        -|          -|        11|        5|     -|       yes|        -|        -|           -|           -|    -|
+    |  + large_tstrf_v2_Pipeline_VITIS_LOOP_359_1012  |     -|  0.00|        -|          -|         -|        -|     -|        no|        -|        -|   235 (~0%)|   194 (~0%)|    -|
+    |   o VITIS_LOOP_359_10                           |     -|  3.65|        -|          -|         5|        1|     -|       yes|        -|        -|           -|           -|    -|
+    |  o VITIS_LOOP_347_8                             |     -|  3.65|        -|          -|         -|        -|     -|        no|        -|        -|           -|           -|    -|
+    |   + large_tstrf_v2_Pipeline_VITIS_LOOP_348_9    |     -|  0.02|        -|          -|         -|        -|     -|        no|        -|        -|   580 (~0%)|   500 (~0%)|    -|
+    |    o VITIS_LOOP_348_9                           |    II|  3.65|        -|          -|        17|       13|     -|       yes|        -|        -|           -|           -|    -|
+    |  o VITIS_LOOP_347_8                             |     -|  3.65|        -|          -|         -|        -|     -|        no|        -|        -|           -|           -|    -|
+    |   + large_tstrf_v2_Pipeline_VITIS_LOOP_348_93   |     -|  0.02|        -|          -|         -|        -|     -|        no|        -|        -|   580 (~0%)|   500 (~0%)|    -|
+    |    o VITIS_LOOP_348_9                           |    II|  3.65|        -|          -|        17|       13|     -|       yes|        -|        -|           -|           -|    -|
+    |  o VITIS_LOOP_347_8                             |     -|  3.65|        -|          -|         -|        -|     -|        no|        -|        -|           -|           -|    -|
+    |   + large_tstrf_v2_Pipeline_VITIS_LOOP_348_97   |     -|  0.02|        -|          -|         -|        -|     -|        no|        -|        -|   580 (~0%)|   500 (~0%)|    -|
+    |    o VITIS_LOOP_348_9                           |    II|  3.65|        -|          -|        17|       13|     -|       yes|        -|        -|           -|           -|    -|
+    |  o VITIS_LOOP_347_8                             |     -|  3.65|        -|          -|         -|        -|     -|        no|        -|        -|           -|           -|    -|
+    |   + large_tstrf_v2_Pipeline_VITIS_LOOP_348_911  |     -|  0.02|        -|          -|         -|        -|     -|        no|        -|        -|   580 (~0%)|   500 (~0%)|    -|
+    |    o VITIS_LOOP_348_9                           |    II|  3.65|        -|          -|        17|       13|     -|       yes|        -|        -|           -|           -|    -|
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_v2ta0 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tb0 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tb1 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tb2 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tu0 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tu1 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tu2 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tu3 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tu4 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tw0 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tx0 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tx1 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_v2tx2 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 8             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register       | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL           | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER           | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER         | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR         | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | u_col_ptr_1    | 0x10   | 32    | W      | Data signal of u_col_ptr         |                                                                      |
+| s_axi_control | u_col_ptr_2    | 0x14   | 32    | W      | Data signal of u_col_ptr         |                                                                      |
+| s_axi_control | u_row_idx_1    | 0x1c   | 32    | W      | Data signal of u_row_idx         |                                                                      |
+| s_axi_control | u_row_idx_2    | 0x20   | 32    | W      | Data signal of u_row_idx         |                                                                      |
+| s_axi_control | u_csr_val_1    | 0x28   | 32    | W      | Data signal of u_csr_val         |                                                                      |
+| s_axi_control | u_csr_val_2    | 0x2c   | 32    | W      | Data signal of u_csr_val         |                                                                      |
+| s_axi_control | u_csc_to_csr_1 | 0x34   | 32    | W      | Data signal of u_csc_to_csr      |                                                                      |
+| s_axi_control | u_csc_to_csr_2 | 0x38   | 32    | W      | Data signal of u_csc_to_csr      |                                                                      |
+| s_axi_control | u_diag_pos_1   | 0x40   | 32    | W      | Data signal of u_diag_pos        |                                                                      |
+| s_axi_control | u_diag_pos_2   | 0x44   | 32    | W      | Data signal of u_diag_pos        |                                                                      |
+| s_axi_control | b_ptr_1        | 0x4c   | 32    | W      | Data signal of b_ptr             |                                                                      |
+| s_axi_control | b_ptr_2        | 0x50   | 32    | W      | Data signal of b_ptr             |                                                                      |
+| s_axi_control | b_idx_1        | 0x58   | 32    | W      | Data signal of b_idx             |                                                                      |
+| s_axi_control | b_idx_2        | 0x5c   | 32    | W      | Data signal of b_idx             |                                                                      |
+| s_axi_control | b_val_1        | 0x64   | 32    | W      | Data signal of b_val             |                                                                      |
+| s_axi_control | b_val_2        | 0x68   | 32    | W      | Data signal of b_val             |                                                                      |
+| s_axi_control | x_ptr_1        | 0x70   | 32    | W      | Data signal of x_ptr             |                                                                      |
+| s_axi_control | x_ptr_2        | 0x74   | 32    | W      | Data signal of x_ptr             |                                                                      |
+| s_axi_control | x_idx_1        | 0x7c   | 32    | W      | Data signal of x_idx             |                                                                      |
+| s_axi_control | x_idx_2        | 0x80   | 32    | W      | Data signal of x_idx             |                                                                      |
+| s_axi_control | x_val_1        | 0x88   | 32    | W      | Data signal of x_val             |                                                                      |
+| s_axi_control | x_val_2        | 0x8c   | 32    | W      | Data signal of x_val             |                                                                      |
+| s_axi_control | active_rows_1  | 0x94   | 32    | W      | Data signal of active_rows       |                                                                      |
+| s_axi_control | active_rows_2  | 0x98   | 32    | W      | Data signal of active_rows       |                                                                      |
+| s_axi_control | work_1         | 0xa0   | 32    | W      | Data signal of work              |                                                                      |
+| s_axi_control | work_2         | 0xa4   | 32    | W      | Data signal of work              |                                                                      |
++---------------+----------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* Other Ports
++--------------+---------+----------+
+| Interface    | Mode    | Bitwidth |
++--------------+---------+----------+
+| active_count | ap_none | 32       |
+| divisions    | ap_vld  | 64       |
+| muladds      | ap_vld  | 64       |
+| n            | ap_none | 32       |
+| pivot_eps    | ap_none | 32       |
+| status       | ap_vld  | 32       |
++--------------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------+-----------+----------------------+
+| Argument     | Direction | Datatype             |
++--------------+-----------+----------------------+
+| u_col_ptr    | in        | unsigned int const * |
+| u_row_idx    | in        | unsigned int const * |
+| u_csr_val    | in        | float const *        |
+| u_csc_to_csr | in        | unsigned int const * |
+| u_diag_pos   | in        | unsigned int const * |
+| b_ptr        | in        | unsigned int const * |
+| b_idx        | in        | unsigned int const * |
+| b_val        | in        | float const *        |
+| x_ptr        | in        | unsigned int const * |
+| x_idx        | in        | unsigned int const * |
+| x_val        | out       | float*               |
+| active_rows  | in        | unsigned int const * |
+| active_count | in        | unsigned int         |
+| work         | unused    | float*               |
+| n            | in        | unsigned int         |
+| pivot_eps    | in        | float                |
+| status       | out       | unsigned int*        |
+| muladds      | out       | long unsigned int*   |
+| divisions    | out       | long unsigned int*   |
++--------------+-----------+----------------------+
+
+* SW-to-HW Mapping
++--------------+------------------+-----------+----------+------------------------------------------+
+| Argument     | HW Interface     | HW Type   | HW Usage | HW Info                                  |
++--------------+------------------+-----------+----------+------------------------------------------+
+| u_col_ptr    | m_axi_v2tu0      | interface |          |                                          |
+| u_col_ptr    | s_axi_control    | register  | offset   | name=u_col_ptr_1 offset=0x10 range=32    |
+| u_col_ptr    | s_axi_control    | register  | offset   | name=u_col_ptr_2 offset=0x14 range=32    |
+| u_row_idx    | m_axi_v2tu1      | interface |          |                                          |
+| u_row_idx    | s_axi_control    | register  | offset   | name=u_row_idx_1 offset=0x1c range=32    |
+| u_row_idx    | s_axi_control    | register  | offset   | name=u_row_idx_2 offset=0x20 range=32    |
+| u_csr_val    | m_axi_v2tu2      | interface |          |                                          |
+| u_csr_val    | s_axi_control    | register  | offset   | name=u_csr_val_1 offset=0x28 range=32    |
+| u_csr_val    | s_axi_control    | register  | offset   | name=u_csr_val_2 offset=0x2c range=32    |
+| u_csc_to_csr | m_axi_v2tu3      | interface |          |                                          |
+| u_csc_to_csr | s_axi_control    | register  | offset   | name=u_csc_to_csr_1 offset=0x34 range=32 |
+| u_csc_to_csr | s_axi_control    | register  | offset   | name=u_csc_to_csr_2 offset=0x38 range=32 |
+| u_diag_pos   | m_axi_v2tu4      | interface |          |                                          |
+| u_diag_pos   | s_axi_control    | register  | offset   | name=u_diag_pos_1 offset=0x40 range=32   |
+| u_diag_pos   | s_axi_control    | register  | offset   | name=u_diag_pos_2 offset=0x44 range=32   |
+| b_ptr        | m_axi_v2tb0      | interface |          |                                          |
+| b_ptr        | s_axi_control    | register  | offset   | name=b_ptr_1 offset=0x4c range=32        |
+| b_ptr        | s_axi_control    | register  | offset   | name=b_ptr_2 offset=0x50 range=32        |
+| b_idx        | m_axi_v2tb1      | interface |          |                                          |
+| b_idx        | s_axi_control    | register  | offset   | name=b_idx_1 offset=0x58 range=32        |
+| b_idx        | s_axi_control    | register  | offset   | name=b_idx_2 offset=0x5c range=32        |
+| b_val        | m_axi_v2tb2      | interface |          |                                          |
+| b_val        | s_axi_control    | register  | offset   | name=b_val_1 offset=0x64 range=32        |
+| b_val        | s_axi_control    | register  | offset   | name=b_val_2 offset=0x68 range=32        |
+| x_ptr        | m_axi_v2tx0      | interface |          |                                          |
+| x_ptr        | s_axi_control    | register  | offset   | name=x_ptr_1 offset=0x70 range=32        |
+| x_ptr        | s_axi_control    | register  | offset   | name=x_ptr_2 offset=0x74 range=32        |
+| x_idx        | m_axi_v2tx1      | interface |          |                                          |
+| x_idx        | s_axi_control    | register  | offset   | name=x_idx_1 offset=0x7c range=32        |
+| x_idx        | s_axi_control    | register  | offset   | name=x_idx_2 offset=0x80 range=32        |
+| x_val        | m_axi_v2tx2      | interface |          |                                          |
+| x_val        | s_axi_control    | register  | offset   | name=x_val_1 offset=0x88 range=32        |
+| x_val        | s_axi_control    | register  | offset   | name=x_val_2 offset=0x8c range=32        |
+| active_rows  | m_axi_v2ta0      | interface |          |                                          |
+| active_rows  | s_axi_control    | register  | offset   | name=active_rows_1 offset=0x94 range=32  |
+| active_rows  | s_axi_control    | register  | offset   | name=active_rows_2 offset=0x98 range=32  |
+| active_count | active_count     | port      |          |                                          |
+| work         | m_axi_v2tw0      | interface |          |                                          |
+| work         | s_axi_control    | register  | offset   | name=work_1 offset=0xa0 range=32         |
+| work         | s_axi_control    | register  | offset   | name=work_2 offset=0xa4 range=32         |
+| n            | n                | port      |          |                                          |
+| pivot_eps    | pivot_eps        | port      |          |                                          |
+| status       | status           | port      |          |                                          |
+| status       | status_ap_vld    | port      |          |                                          |
+| muladds      | muladds          | port      |          |                                          |
+| muladds      | muladds_ap_vld   | port      |          |                                          |
+| divisions    | divisions        | port      |          |                                          |
+| divisions    | divisions_ap_vld | port      |          |                                          |
++--------------+------------------+-----------+----------+------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+------------------+-----------+----------+-------+----------------------------+
+| HW Interface | Loop             | Direction | Length   | Width | Location                   |
++--------------+------------------+-----------+----------+-------+----------------------------+
+| m_axi_v2tu4  | VITIS_LOOP_328_2 | read      | variable | 32    | large_sparse_lu.cpp:328:23 |
+| m_axi_v2tu1  | VITIS_LOOP_329_3 | read      | variable | 32    | large_sparse_lu.cpp:329:23 |
+| m_axi_v2tu3  | VITIS_LOOP_329_3 | read      | variable | 32    | large_sparse_lu.cpp:329:23 |
+| m_axi_v2tb0  |                  | read      | 2        | 32    | large_sparse_lu.cpp:343:48 |
+| m_axi_v2tb2  |                  | read      | variable | 32    | large_sparse_lu.cpp:343:31 |
+| m_axi_v2tb1  |                  | read      | variable | 32    | large_sparse_lu.cpp:343:31 |
+| m_axi_v2tx0  |                  | read      | 2        | 32    | large_sparse_lu.cpp:359:49 |
+| m_axi_v2tx1  |                  | read      | variable | 32    | large_sparse_lu.cpp:359:32 |
+| m_axi_v2tx2  |                  | write     | variable | 32    | large_sparse_lu.cpp:359:32 |
++--------------+------------------+-----------+----------+-------+----------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+--------------+-------------------+---------------------------------------------------------------------------------------------------------+------------+----------------------------+
+| HW Interface | Variable     | Loop              | Problem                                                                                                 | Resolution | Location                   |
++--------------+--------------+-------------------+---------------------------------------------------------------------------------------------------------+------------+----------------------------+
+| m_axi_v2tu2  | u_csr_val    | VITIS_LOOP_329_3  | Could not analyze pattern                                                                               | 214-229    | large_sparse_lu.cpp:329:23 |
+| m_axi_v2tx1  | x_idx        | VITIS_LOOP_359_10 | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:359:32 |
+| m_axi_v2tx2  | x_val        | VITIS_LOOP_359_10 | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | large_sparse_lu.cpp:359:32 |
+| m_axi_v2tx0  | x_ptr        |                   | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:359:49 |
+| m_axi_v2tb2  | b_val        | VITIS_LOOP_343_7  | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | large_sparse_lu.cpp:343:31 |
+| m_axi_v2tb1  | b_idx        | VITIS_LOOP_343_7  | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:343:31 |
+| m_axi_v2tb0  | b_ptr        |                   | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:343:48 |
+| m_axi_v2tx1  | x_idx        | VITIS_LOOP_359_10 | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:359:32 |
+| m_axi_v2tx2  | x_val        | VITIS_LOOP_359_10 | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | large_sparse_lu.cpp:359:32 |
+| m_axi_v2tx0  | x_ptr        |                   | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:359:49 |
+| m_axi_v2tb2  | b_val        | VITIS_LOOP_343_7  | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | large_sparse_lu.cpp:343:31 |
+| m_axi_v2tb1  | b_idx        | VITIS_LOOP_343_7  | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:343:31 |
+| m_axi_v2tb0  | b_ptr        |                   | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:343:48 |
+| m_axi_v2tx1  | x_idx        | VITIS_LOOP_359_10 | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:359:32 |
+| m_axi_v2tx2  | x_val        | VITIS_LOOP_359_10 | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | large_sparse_lu.cpp:359:32 |
+| m_axi_v2tx0  | x_ptr        |                   | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:359:49 |
+| m_axi_v2tb2  | b_val        | VITIS_LOOP_343_7  | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | large_sparse_lu.cpp:343:31 |
+| m_axi_v2tb1  | b_idx        | VITIS_LOOP_343_7  | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:343:31 |
+| m_axi_v2tb0  | b_ptr        |                   | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:343:48 |
+| m_axi_v2tx1  | x_idx        | VITIS_LOOP_359_10 | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:359:32 |
+| m_axi_v2tx2  | x_val        | VITIS_LOOP_359_10 | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | large_sparse_lu.cpp:359:32 |
+| m_axi_v2tx0  | x_ptr        |                   | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:359:49 |
+| m_axi_v2tb2  | b_val        | VITIS_LOOP_343_7  | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | large_sparse_lu.cpp:343:31 |
+| m_axi_v2tb1  | b_idx        | VITIS_LOOP_343_7  | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:343:31 |
+| m_axi_v2tb0  | b_ptr        |                   | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:343:48 |
+| m_axi_v2tu1  | u_row_idx    | VITIS_LOOP_329_3  | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:329:23 |
+| m_axi_v2tu3  | u_csc_to_csr | VITIS_LOOP_329_3  | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:329:23 |
+| m_axi_v2tu4  | u_diag_pos   | VITIS_LOOP_328_2  | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0   | 214-353    | large_sparse_lu.cpp:328:23 |
++--------------+--------------+-------------------+---------------------------------------------------------------------------------------------------------+------------+----------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------------+-----+--------+--------------------+------+--------+---------+
+| Name                                           | DSP | Pragma | Variable           | Op   | Impl   | Latency |
++------------------------------------------------+-----+--------+--------------------+------+--------+---------+
+| + large_tstrf_v2                               | 5   |        |                    |      |        |         |
+|   add_ln310_fu_1547_p2                         | -   |        | add_ln310          | add  | fabric | 0       |
+|   add_ln326_fu_1570_p2                         | -   |        | add_ln326          | add  | fabric | 0       |
+|   add_ln337_fu_1710_p2                         | -   |        | add_ln337          | add  | fabric | 0       |
+|   add_ln343_fu_1750_p2                         | -   |        | add_ln343          | add  | fabric | 0       |
+|   sub_ln343_fu_1779_p2                         | -   |        | sub_ln343          | sub  | fabric | 0       |
+|   add_ln343_1_fu_1794_p2                       | -   |        | add_ln343_1        | add  | fabric | 0       |
+|   add_ln343_2_fu_1817_p2                       | -   |        | add_ln343_2        | add  | fabric | 0       |
+|   indvars_iv_next99_fu_1861_p2                 | -   |        | indvars_iv_next99  | add  | fabric | 0       |
+|   fdiv_32ns_32ns_32_16_no_dsp_1_U130           | -   |        | div                | fdiv | fabric | 15      |
+|   add_ln357_fu_1984_p2                         | -   |        | add_ln357          | add  | fabric | 0       |
+|   add_ln359_fu_1874_p2                         | -   |        | add_ln359          | add  | fabric | 0       |
+|   sub_ln359_fu_1994_p2                         | -   |        | sub_ln359          | sub  | fabric | 0       |
+|   add_ln359_1_fu_2009_p2                       | -   |        | add_ln359_1        | add  | fabric | 0       |
+|   add_ln359_2_fu_2032_p2                       | -   |        | add_ln359_2        | add  | fabric | 0       |
+|   add_ln337_1_fu_2093_p2                       | -   |        | add_ln337_1        | add  | fabric | 0       |
+|   add_ln343_3_fu_2133_p2                       | -   |        | add_ln343_3        | add  | fabric | 0       |
+|   sub_ln343_1_fu_2162_p2                       | -   |        | sub_ln343_1        | sub  | fabric | 0       |
+|   add_ln343_4_fu_2177_p2                       | -   |        | add_ln343_4        | add  | fabric | 0       |
+|   add_ln343_5_fu_2200_p2                       | -   |        | add_ln343_5        | add  | fabric | 0       |
+|   indvars_iv_next117_fu_2244_p2                | -   |        | indvars_iv_next117 | add  | fabric | 0       |
+|   fdiv_32ns_32ns_32_16_no_dsp_1_U130           | -   |        | div_1              | fdiv | fabric | 15      |
+|   add_ln357_1_fu_2367_p2                       | -   |        | add_ln357_1        | add  | fabric | 0       |
+|   add_ln359_3_fu_2257_p2                       | -   |        | add_ln359_3        | add  | fabric | 0       |
+|   sub_ln359_1_fu_2377_p2                       | -   |        | sub_ln359_1        | sub  | fabric | 0       |
+|   add_ln359_4_fu_2392_p2                       | -   |        | add_ln359_4        | add  | fabric | 0       |
+|   add_ln359_5_fu_2415_p2                       | -   |        | add_ln359_5        | add  | fabric | 0       |
+|   add_ln337_2_fu_2476_p2                       | -   |        | add_ln337_2        | add  | fabric | 0       |
+|   add_ln343_6_fu_2516_p2                       | -   |        | add_ln343_6        | add  | fabric | 0       |
+|   sub_ln343_2_fu_2545_p2                       | -   |        | sub_ln343_2        | sub  | fabric | 0       |
+|   add_ln343_7_fu_2560_p2                       | -   |        | add_ln343_7        | add  | fabric | 0       |
+|   add_ln343_8_fu_2583_p2                       | -   |        | add_ln343_8        | add  | fabric | 0       |
+|   indvars_iv_next135_fu_2627_p2                | -   |        | indvars_iv_next135 | add  | fabric | 0       |
+|   fdiv_32ns_32ns_32_16_no_dsp_1_U130           | -   |        | div_2              | fdiv | fabric | 15      |
+|   add_ln357_2_fu_2750_p2                       | -   |        | add_ln357_2        | add  | fabric | 0       |
+|   add_ln359_6_fu_2640_p2                       | -   |        | add_ln359_6        | add  | fabric | 0       |
+|   sub_ln359_2_fu_2760_p2                       | -   |        | sub_ln359_2        | sub  | fabric | 0       |
+|   add_ln359_7_fu_2775_p2                       | -   |        | add_ln359_7        | add  | fabric | 0       |
+|   add_ln359_8_fu_2798_p2                       | -   |        | add_ln359_8        | add  | fabric | 0       |
+|   add_ln337_3_fu_2859_p2                       | -   |        | add_ln337_3        | add  | fabric | 0       |
+|   add_ln343_9_fu_2899_p2                       | -   |        | add_ln343_9        | add  | fabric | 0       |
+|   sub_ln343_3_fu_2969_p2                       | -   |        | sub_ln343_3        | sub  | fabric | 0       |
+|   add_ln343_10_fu_2935_p2                      | -   |        | add_ln343_10       | add  | fabric | 0       |
+|   add_ln343_11_fu_2950_p2                      | -   |        | add_ln343_11       | add  | fabric | 0       |
+|   indvars_iv_next153_fu_3010_p2                | -   |        | indvars_iv_next153 | add  | fabric | 0       |
+|   fdiv_32ns_32ns_32_16_no_dsp_1_U130           | -   |        | div_3              | fdiv | fabric | 15      |
+|   add_ln357_3_fu_3132_p2                       | -   |        | add_ln357_3        | add  | fabric | 0       |
+|   add_ln359_9_fu_3023_p2                       | -   |        | add_ln359_9        | add  | fabric | 0       |
+|   sub_ln359_3_fu_3184_p2                       | -   |        | sub_ln359_3        | sub  | fabric | 0       |
+|   add_ln359_10_fu_3150_p2                      | -   |        | add_ln359_10       | add  | fabric | 0       |
+|   add_ln359_11_fu_3165_p2                      | -   |        | add_ln359_11       | add  | fabric | 0       |
+|   add_ln366_fu_3216_p2                         | -   |        | add_ln366          | add  | fabric | 0       |
+|   add_ln366_1_fu_3238_p2                       | -   |        | add_ln366_1        | add  | fabric | 0       |
+|   add_ln366_4_fu_3222_p2                       | -   |        | add_ln366_4        | add  | fabric | 0       |
+|   add_ln366_5_fu_3254_p2                       | -   |        | add_ln366_5        | add  | fabric | 0       |
+|   base_3_fu_3228_p2                            | -   |        | base_3             | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_326_1    | 0   |        |                    |      |        |         |
+|    j_5_fu_121_p2                               | -   |        | j_5                | add  | fabric | 0       |
+|    add_ln326_1_fu_139_p2                       | -   |        | add_ln326_1        | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_328_2    | 0   |        |                    |      |        |         |
+|    add_ln328_fu_114_p2                         | -   |        | add_ln328          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_329_3    | 0   |        |                    |      |        |         |
+|    add_ln329_fu_186_p2                         | -   |        | add_ln329          | add  | fabric | 0       |
+|    add_ln330_fu_224_p2                         | -   |        | add_ln330          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_339_6    | 0   |        |                    |      |        |         |
+|    add_ln339_fu_84_p2                          | -   |        | add_ln339          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_343_7    | 0   |        |                    |      |        |         |
+|    add_ln343_fu_170_p2                         | -   |        | add_ln343          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_348_9    | 0   |        |                    |      |        |         |
+|    add_ln352_fu_247_p2                         | -   |        | add_ln352          | add  | fabric | 0       |
+|    add_ln348_fu_277_p2                         | -   |        | add_ln348          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_359_10   | 0   |        |                    |      |        |         |
+|    add_ln359_fu_149_p2                         | -   |        | add_ln359          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_339_61   | 0   |        |                    |      |        |         |
+|    add_ln339_fu_84_p2                          | -   |        | add_ln339          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_343_72   | 0   |        |                    |      |        |         |
+|    add_ln343_fu_170_p2                         | -   |        | add_ln343          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_348_93   | 0   |        |                    |      |        |         |
+|    add_ln352_fu_247_p2                         | -   |        | add_ln352          | add  | fabric | 0       |
+|    add_ln348_fu_277_p2                         | -   |        | add_ln348          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_359_104  | 0   |        |                    |      |        |         |
+|    add_ln359_fu_149_p2                         | -   |        | add_ln359          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_339_65   | 0   |        |                    |      |        |         |
+|    add_ln339_fu_84_p2                          | -   |        | add_ln339          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_343_76   | 0   |        |                    |      |        |         |
+|    add_ln343_fu_170_p2                         | -   |        | add_ln343          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_348_97   | 0   |        |                    |      |        |         |
+|    add_ln352_fu_247_p2                         | -   |        | add_ln352          | add  | fabric | 0       |
+|    add_ln348_fu_277_p2                         | -   |        | add_ln348          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_359_108  | 0   |        |                    |      |        |         |
+|    add_ln359_fu_149_p2                         | -   |        | add_ln359          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_339_69   | 0   |        |                    |      |        |         |
+|    add_ln339_fu_84_p2                          | -   |        | add_ln339          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_343_710  | 0   |        |                    |      |        |         |
+|    add_ln343_fu_170_p2                         | -   |        | add_ln343          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_348_911  | 0   |        |                    |      |        |         |
+|    add_ln352_fu_247_p2                         | -   |        | add_ln352          | add  | fabric | 0       |
+|    add_ln348_fu_277_p2                         | -   |        | add_ln348          | add  | fabric | 0       |
+|  + large_tstrf_v2_Pipeline_VITIS_LOOP_359_1012 | 0   |        |                    |      |        |         |
+|    add_ln359_fu_149_p2                         | -   |        | add_ln359          | add  | fabric | 0       |
++------------------------------------------------+-----+--------+--------------------+------+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++------------------+------+------+--------+----------+---------+------+---------+
+| Name             | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++------------------+------+------+--------+----------+---------+------+---------+
+| + large_tstrf_v2 | 80   | 0    |        |          |         |      |         |
+|   up_U           | 8    | -    | yes    | up       | ram_1p  | bram | 1       |
+|   ur_U           | 16   | -    | yes    | ur       | ram_1p  | bram | 1       |
+|   ud_U           | 8    | -    | yes    | ud       | ram_1p  | bram | 1       |
+|   uv_U           | 16   | -    | yes    | uv       | ram_1p  | bram | 1       |
+|   w_U            | 8    | -    | yes    | w        | ram_2p  | bram | 1       |
+|   w_1_U          | 8    | -    | yes    | w_1      | ram_2p  | bram | 1       |
+|   w_2_U          | 8    | -    | yes    | w_2      | ram_2p  | bram | 1       |
+|   w_3_U          | 8    | -    | yes    | w_3      | ram_2p  | bram | 1       |
++------------------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-------------------------------------------------+---------------------------------------------------------+
+| Type            | Options                                         | Location                                                |
++-----------------+-------------------------------------------------+---------------------------------------------------------+
+| interface       | m_axi port=a_ptr bundle=a0 depth=2625           | large_sparse_lu.cpp:14 in large_getrf, a_ptr            |
+| interface       | m_axi port=a_idx bundle=a1 depth=45624          | large_sparse_lu.cpp:15 in large_getrf, a_idx            |
+| interface       | m_axi port=a_val bundle=a2 depth=45624          | large_sparse_lu.cpp:16 in large_getrf, a_val            |
+| interface       | m_axi port=l_ptr bundle=l0 depth=2625           | large_sparse_lu.cpp:17 in large_getrf, l_ptr            |
+| interface       | m_axi port=l_idx bundle=l1 depth=24036          | large_sparse_lu.cpp:18 in large_getrf, l_idx            |
+| interface       | m_axi port=l_val bundle=l2 depth=24036          | large_sparse_lu.cpp:19 in large_getrf, l_val            |
+| interface       | m_axi port=u_ptr bundle=u0 depth=2625           | large_sparse_lu.cpp:20 in large_getrf, u_ptr            |
+| interface       | m_axi port=u_idx bundle=u1 depth=23994          | large_sparse_lu.cpp:21 in large_getrf, u_idx            |
+| interface       | m_axi port=u_val bundle=u2 depth=23994          | large_sparse_lu.cpp:22 in large_getrf, u_val            |
+| interface       | m_axi port=u_diag_pos bundle=u3 depth=2624      | large_sparse_lu.cpp:23 in large_getrf, u_diag_pos       |
+| interface       | m_axi port=work bundle=w0 depth=2624            | large_sparse_lu.cpp:24 in large_getrf, work             |
+| interface       | m_axi port=mark bundle=w1 depth=2624            | large_sparse_lu.cpp:25 in large_getrf, mark             |
+| interface       | s_axilite port=return bundle=control            | large_sparse_lu.cpp:26 in large_getrf, return           |
+| pipeline        | II=1                                            | large_sparse_lu.cpp:32 in large_getrf                   |
+| pipeline        | II=1                                            | large_sparse_lu.cpp:36 in large_getrf                   |
+| pipeline        | II=1                                            | large_sparse_lu.cpp:40 in large_getrf                   |
+| pipeline        | II=1                                            | large_sparse_lu.cpp:53 in large_getrf                   |
+| pipeline        | II=1                                            | large_sparse_lu.cpp:60 in large_getrf                   |
+| interface       | m_axi port=l_ptr bundle=gl0 depth=1313          | large_sparse_lu.cpp:76 in large_gessm, l_ptr            |
+| interface       | m_axi port=l_idx bundle=gl1 depth=4106          | large_sparse_lu.cpp:77 in large_gessm, l_idx            |
+| interface       | m_axi port=l_val bundle=gl2 depth=4106          | large_sparse_lu.cpp:78 in large_gessm, l_val            |
+| interface       | m_axi port=b_ptr bundle=gb0 depth=1313          | large_sparse_lu.cpp:79 in large_gessm, b_ptr            |
+| interface       | m_axi port=b_idx bundle=gb1 depth=7063          | large_sparse_lu.cpp:80 in large_gessm, b_idx            |
+| interface       | m_axi port=b_val bundle=gb2 depth=7063          | large_sparse_lu.cpp:81 in large_gessm, b_val            |
+| interface       | m_axi port=x_ptr bundle=gx0 depth=1313          | large_sparse_lu.cpp:82 in large_gessm, x_ptr            |
+| interface       | m_axi port=x_idx bundle=gx1 depth=6997          | large_sparse_lu.cpp:83 in large_gessm, x_idx            |
+| interface       | m_axi port=x_val_csc bundle=gx2 depth=6997      | large_sparse_lu.cpp:84 in large_gessm, x_val_csc        |
+| interface       | m_axi port=x_csc_to_csr bundle=gx3 depth=6997   | large_sparse_lu.cpp:85 in large_gessm, x_csc_to_csr     |
+| interface       | m_axi port=x_val_csr bundle=gx4 depth=6997      | large_sparse_lu.cpp:86 in large_gessm, x_val_csr        |
+| interface       | m_axi port=active_cols bundle=ga0 depth=1312    | large_sparse_lu.cpp:87 in large_gessm, active_cols      |
+| interface       | m_axi port=work bundle=gw0 depth=1312           | large_sparse_lu.cpp:88 in large_gessm, work             |
+| interface       | s_axilite port=return bundle=control            | large_sparse_lu.cpp:89 in large_gessm, return           |
+| interface       | m_axi port=u_col_ptr bundle=tu0 depth=1313      | large_sparse_lu.cpp:116 in large_tstrf, u_col_ptr       |
+| interface       | m_axi port=u_row_idx bundle=tu1 depth=4146      | large_sparse_lu.cpp:117 in large_tstrf, u_row_idx       |
+| interface       | m_axi port=u_csr_val bundle=tu2 depth=4146      | large_sparse_lu.cpp:118 in large_tstrf, u_csr_val       |
+| interface       | m_axi port=u_csc_to_csr bundle=tu3 depth=4146   | large_sparse_lu.cpp:119 in large_tstrf, u_csc_to_csr    |
+| interface       | m_axi port=u_diag_pos bundle=tu4 depth=1312     | large_sparse_lu.cpp:120 in large_tstrf, u_diag_pos      |
+| interface       | m_axi port=b_ptr bundle=tb0 depth=1313          | large_sparse_lu.cpp:121 in large_tstrf, b_ptr           |
+| interface       | m_axi port=b_idx bundle=tb1 depth=7063          | large_sparse_lu.cpp:122 in large_tstrf, b_idx           |
+| interface       | m_axi port=b_val bundle=tb2 depth=7063          | large_sparse_lu.cpp:123 in large_tstrf, b_val           |
+| interface       | m_axi port=x_ptr bundle=tx0 depth=1313          | large_sparse_lu.cpp:124 in large_tstrf, x_ptr           |
+| interface       | m_axi port=x_idx bundle=tx1 depth=7030          | large_sparse_lu.cpp:125 in large_tstrf, x_idx           |
+| interface       | m_axi port=x_val bundle=tx2 depth=7030          | large_sparse_lu.cpp:126 in large_tstrf, x_val           |
+| interface       | m_axi port=active_rows bundle=ta0 depth=1312    | large_sparse_lu.cpp:127 in large_tstrf, active_rows     |
+| interface       | m_axi port=work bundle=tw0 depth=1312           | large_sparse_lu.cpp:128 in large_tstrf, work            |
+| interface       | s_axilite port=return bundle=control            | large_sparse_lu.cpp:129 in large_tstrf, return          |
+| interface       | m_axi port=a_ptr bundle=sa0 depth=1313          | large_sparse_lu.cpp:155 in large_ssssm, a_ptr           |
+| interface       | m_axi port=a_idx bundle=sa1 depth=24512         | large_sparse_lu.cpp:156 in large_ssssm, a_idx           |
+| interface       | m_axi port=a_val bundle=sa2 depth=24512         | large_sparse_lu.cpp:157 in large_ssssm, a_val           |
+| interface       | m_axi port=l_ptr bundle=sl0 depth=1313          | large_sparse_lu.cpp:158 in large_ssssm, l_ptr           |
+| interface       | m_axi port=l_idx bundle=sl1 depth=7030          | large_sparse_lu.cpp:159 in large_ssssm, l_idx           |
+| interface       | m_axi port=l_val bundle=sl2 depth=7030          | large_sparse_lu.cpp:160 in large_ssssm, l_val           |
+| interface       | m_axi port=u_ptr bundle=su0 depth=1313          | large_sparse_lu.cpp:161 in large_ssssm, u_ptr           |
+| interface       | m_axi port=u_idx bundle=su1 depth=6997          | large_sparse_lu.cpp:162 in large_ssssm, u_idx           |
+| interface       | m_axi port=u_val bundle=su2 depth=6997          | large_sparse_lu.cpp:163 in large_ssssm, u_val           |
+| interface       | m_axi port=s_ptr bundle=ss0 depth=1313          | large_sparse_lu.cpp:164 in large_ssssm, s_ptr           |
+| interface       | m_axi port=s_idx bundle=ss1 depth=21306         | large_sparse_lu.cpp:165 in large_ssssm, s_idx           |
+| interface       | m_axi port=s_val bundle=ss2 depth=21306         | large_sparse_lu.cpp:166 in large_ssssm, s_val           |
+| interface       | m_axi port=work bundle=sw0 depth=1312           | large_sparse_lu.cpp:167 in large_ssssm, work            |
+| interface       | m_axi port=mark bundle=sw1 depth=1312           | large_sparse_lu.cpp:168 in large_ssssm, mark            |
+| interface       | s_axilite port=return bundle=control            | large_sparse_lu.cpp:169 in large_ssssm, return          |
+| interface       | m_axi port=l_ptr bundle=v2gl0 depth=2625        | large_sparse_lu.cpp:218 in large_gessm_v2, l_ptr        |
+| interface       | m_axi port=l_idx bundle=v2gl1 depth=8192        | large_sparse_lu.cpp:219 in large_gessm_v2, l_idx        |
+| interface       | m_axi port=l_val bundle=v2gl2 depth=8192        | large_sparse_lu.cpp:220 in large_gessm_v2, l_val        |
+| interface       | m_axi port=b_ptr bundle=v2gb0 depth=2625        | large_sparse_lu.cpp:221 in large_gessm_v2, b_ptr        |
+| interface       | m_axi port=b_idx bundle=v2gb1 depth=8192        | large_sparse_lu.cpp:222 in large_gessm_v2, b_idx        |
+| interface       | m_axi port=b_val bundle=v2gb2 depth=8192        | large_sparse_lu.cpp:223 in large_gessm_v2, b_val        |
+| interface       | m_axi port=x_ptr bundle=v2gx0 depth=2625        | large_sparse_lu.cpp:224 in large_gessm_v2, x_ptr        |
+| interface       | m_axi port=x_idx bundle=v2gx1 depth=8192        | large_sparse_lu.cpp:225 in large_gessm_v2, x_idx        |
+| interface       | m_axi port=x_val_csc bundle=v2gx2 depth=8192    | large_sparse_lu.cpp:226 in large_gessm_v2, x_val_csc    |
+| interface       | m_axi port=x_csc_to_csr bundle=v2gx3 depth=8192 | large_sparse_lu.cpp:227 in large_gessm_v2, x_csc_to_csr |
+| interface       | m_axi port=x_val_csr bundle=v2gx4 depth=8192    | large_sparse_lu.cpp:228 in large_gessm_v2, x_val_csr    |
+| interface       | m_axi port=active_cols bundle=v2ga0 depth=2624  | large_sparse_lu.cpp:229 in large_gessm_v2, active_cols  |
+| interface       | m_axi port=work bundle=v2gw0 depth=2624         | large_sparse_lu.cpp:230 in large_gessm_v2, work         |
+| interface       | s_axilite port=return bundle=control            | large_sparse_lu.cpp:231 in large_gessm_v2, return       |
+| bind_storage    | variable=lp type=ram_1p impl=bram               | large_sparse_lu.cpp:241 in large_gessm_v2, lp           |
+| bind_storage    | variable=li type=ram_1p impl=bram               | large_sparse_lu.cpp:242 in large_gessm_v2, li           |
+| bind_storage    | variable=lv type=ram_1p impl=bram               | large_sparse_lu.cpp:243 in large_gessm_v2, lv           |
+| bind_storage    | variable=w type=ram_2p impl=bram                | large_sparse_lu.cpp:244 in large_gessm_v2, w            |
+| array_partition | variable=w complete dim=1                       | large_sparse_lu.cpp:245 in large_gessm_v2, w            |
+| array_partition | variable=lane_ma complete dim=1                 | large_sparse_lu.cpp:246 in large_gessm_v2, lane_ma      |
+| unroll          |                                                 | large_sparse_lu.cpp:252 in large_gessm_v2               |
+| pipeline        | II=1                                            | large_sparse_lu.cpp:258 in large_gessm_v2               |
+| pipeline        | II=1                                            | large_sparse_lu.cpp:262 in large_gessm_v2               |
+| pipeline        | II=1                                            | large_sparse_lu.cpp:274 in large_gessm_v2               |
+| unroll          |                                                 | large_sparse_lu.cpp:280 in large_gessm_v2               |
+| interface       | m_axi port=u_col_ptr bundle=v2tu0 depth=2625    | large_sparse_lu.cpp:295 in large_tstrf_v2, u_col_ptr    |
+| interface       | m_axi port=u_row_idx bundle=v2tu1 depth=8192    | large_sparse_lu.cpp:296 in large_tstrf_v2, u_row_idx    |
+| interface       | m_axi port=u_csr_val bundle=v2tu2 depth=8192    | large_sparse_lu.cpp:297 in large_tstrf_v2, u_csr_val    |
+| interface       | m_axi port=u_csc_to_csr bundle=v2tu3 depth=8192 | large_sparse_lu.cpp:298 in large_tstrf_v2, u_csc_to_csr |
+| interface       | m_axi port=u_diag_pos bundle=v2tu4 depth=2624   | large_sparse_lu.cpp:299 in large_tstrf_v2, u_diag_pos   |
+| interface       | m_axi port=b_ptr bundle=v2tb0 depth=2625        | large_sparse_lu.cpp:300 in large_tstrf_v2, b_ptr        |
+| interface       | m_axi port=b_idx bundle=v2tb1 depth=8192        | large_sparse_lu.cpp:301 in large_tstrf_v2, b_idx        |
+| interface       | m_axi port=b_val bundle=v2tb2 depth=8192        | large_sparse_lu.cpp:302 in large_tstrf_v2, b_val        |
+| interface       | m_axi port=x_ptr bundle=v2tx0 depth=2625        | large_sparse_lu.cpp:303 in large_tstrf_v2, x_ptr        |
+| interface       | m_axi port=x_idx bundle=v2tx1 depth=8192        | large_sparse_lu.cpp:304 in large_tstrf_v2, x_idx        |
+| interface       | m_axi port=x_val bundle=v2tx2 depth=8192        | large_sparse_lu.cpp:305 in large_tstrf_v2, x_val        |
+| interface       | m_axi port=active_rows bundle=v2ta0 depth=2624  | large_sparse_lu.cpp:306 in large_tstrf_v2, active_rows  |
+| interface       | m_axi port=work bundle=v2tw0 depth=2624         | large_sparse_lu.cpp:307 in large_tstrf_v2, work         |
+| interface       | s_axilite port=return bundle=control            | large_sparse_lu.cpp:308 in large_tstrf_v2, return       |
+| bind_storage    | variable=up type=ram_1p impl=bram               | large_sparse_lu.cpp:317 in large_tstrf_v2, up           |
+| bind_storage    | variable=ur type=ram_1p impl=bram               | large_sparse_lu.cpp:318 in large_tstrf_v2, ur           |
+| bind_storage    | variable=um type=ram_1p impl=bram               | large_sparse_lu.cpp:319 in large_tstrf_v2, um           |
+| bind_storage    | variable=ud type=ram_1p impl=bram               | large_sparse_lu.cpp:320 in large_tstrf_v2, ud           |
+| bind_storage    | variable=uv type=ram_1p impl=bram               | large_sparse_lu.cpp:321 in large_tstrf_v2, uv           |
+| bind_storage    | variable=w type=ram_2p impl=bram                | large_sparse_lu.cpp:322 in large_tstrf_v2, w            |
+| array_partition | variable=w complete dim=1                       | large_sparse_lu.cpp:323 in large_tstrf_v2, w            |
+| array_partition | variable=lane_ma complete dim=1                 | large_sparse_lu.cpp:324 in large_tstrf_v2, lane_ma      |
+| array_partition | variable=lane_dv complete dim=1                 | large_sparse_lu.cpp:325 in large_tstrf_v2, lane_dv      |
+| unroll          |                                                 | large_sparse_lu.cpp:334 in large_tstrf_v2               |
+| pipeline        | II=1                                            | large_sparse_lu.cpp:340 in large_tstrf_v2               |
+| pipeline        | II=1                                            | large_sparse_lu.cpp:344 in large_tstrf_v2               |
+| pipeline        | II=1                                            | large_sparse_lu.cpp:360 in large_tstrf_v2               |
+| unroll          |                                                 | large_sparse_lu.cpp:365 in large_tstrf_v2               |
++-----------------+-------------------------------------------------+---------------------------------------------------------+
+
+

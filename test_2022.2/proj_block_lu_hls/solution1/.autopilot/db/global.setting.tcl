@@ -56,7 +56,7 @@ set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_ga
 set TBTVFileNotFound {}
 set AppFile ../hls.app
 set ApsFile solution1.aps
-set AvePath ../..
+set AvePath {}
 set DefaultPlatform DefaultPlatform
 set multiClockList {}
 set SCPortClockMap {}

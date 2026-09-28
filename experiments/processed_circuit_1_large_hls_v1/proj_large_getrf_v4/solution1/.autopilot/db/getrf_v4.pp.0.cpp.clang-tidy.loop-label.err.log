@@ -1,0 +1,4 @@
+1 warning and 6 errors generated.
+Error while processing /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp.
+clang-tidy applied 14 of 14 suggested fixes.
+Suppressed 1 warnings (1 with check filters).

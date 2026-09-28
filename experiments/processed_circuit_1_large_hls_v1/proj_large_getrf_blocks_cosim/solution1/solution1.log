@@ -1,0 +1,216 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu15eg-ffvb1156-2-i 
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+INFO: [HLS 200-1510] Running: create_clock -period 5.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 197.508 MB.
+INFO: [HLS 200-10] Analyzing design file 'large_sparse_lu.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.76 seconds. CPU system time: 0.76 seconds. Elapsed time: 1.59 seconds; current allocated memory: 205.223 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const' into 'fp_struct<float>::to_float() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:351:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:375:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'float generic_copysign<float>(float, float)' into 'float generic_fabs<float>(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h:12:0)
+INFO: [HLS 214-178] Inlining function 'float generic_fabs<float>(float)' into 'fabsf' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c/fabsfloat.cpp:7:0)
+INFO: [HLS 214-178] Inlining function 'fabsf' into 'large_getrf' (large_sparse_lu.cpp:13:0)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'l0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:31:43)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_31_2'(large_sparse_lu.cpp:31:26) has been inferred on bundle 'l1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:31:26)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'u0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:35:43)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 has been inferred on bundle 'u1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:35:26)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'a0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:39:43)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 has been inferred on bundle 'u1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:59:26)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 has been inferred on bundle 'u2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:59:26)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.76 seconds. CPU system time: 0.88 seconds. Elapsed time: 4.75 seconds; current allocated memory: 205.812 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 205.812 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.11 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.14 seconds; current allocated memory: 232.598 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.24 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.29 seconds; current allocated memory: 270.484 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.37 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.41 seconds; current allocated memory: 328.914 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_45_5' (large_sparse_lu.cpp:45:41) in function 'large_getrf' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_29_1' (large_sparse_lu.cpp:29:37) in function 'large_getrf' more than one sub loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.24 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.3 seconds; current allocated memory: 384.816 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'large_getrf' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_Pipeline_VITIS_LOOP_31_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_31_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'VITIS_LOOP_31_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.22 seconds; current allocated memory: 384.816 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 388.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_Pipeline_VITIS_LOOP_35_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_35_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'VITIS_LOOP_35_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 388.816 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 388.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_Pipeline_VITIS_LOOP_39_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_39_4'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln42', large_sparse_lu.cpp:42)) in the first pipeline iteration (II = 1 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln42', large_sparse_lu.cpp:42)) in the first pipeline iteration (II = 2 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln42', large_sparse_lu.cpp:42)) in the first pipeline iteration (II = 3 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln42', large_sparse_lu.cpp:42)) in the first pipeline iteration (II = 4 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln42', large_sparse_lu.cpp:42)) in the first pipeline iteration (II = 11 cycles).
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_Pipeline_VITIS_LOOP_39_4' (loop 'VITIS_LOOP_39_4'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between bus response operation ('w0_addr_2_resp', large_sparse_lu.cpp:43) on port 'w0' (large_sparse_lu.cpp:43) and bus request operation ('w0_load_req', large_sparse_lu.cpp:43) on port 'w0' (large_sparse_lu.cpp:43).
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_Pipeline_VITIS_LOOP_39_4' (loop 'VITIS_LOOP_39_4'): Unable to enforce a carried dependence constraint (II = 17, distance = 1, offset = 1) between bus response operation ('w0_addr_2_resp', large_sparse_lu.cpp:43) on port 'w0' (large_sparse_lu.cpp:43) and bus request operation ('w0_load_req', large_sparse_lu.cpp:43) on port 'w0' (large_sparse_lu.cpp:43).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 18, Depth = 36, loop 'VITIS_LOOP_39_4'
+WARNING: [HLS 200-871] Estimated clock period (6.598ns) exceeds the target (target clock period: 5ns, clock uncertainty: 1.35ns, effective delay budget: 3.65ns).
+WARNING: [HLS 200-1016] The critical path in module 'large_getrf_Pipeline_VITIS_LOOP_39_4' consists of the following:	bus read operation ('a2_addr_read', large_sparse_lu.cpp:43) on port 'a2' (large_sparse_lu.cpp:43) [63]  (3.65 ns)
+	'fadd' operation ('add', large_sparse_lu.cpp:43) [72]  (2.95 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 388.816 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 388.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_Pipeline_VITIS_LOOP_52_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_52_6'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln55', large_sparse_lu.cpp:55)) in the first pipeline iteration (II = 1 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln55', large_sparse_lu.cpp:55)) in the first pipeline iteration (II = 2 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln55', large_sparse_lu.cpp:55)) in the first pipeline iteration (II = 3 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln55', large_sparse_lu.cpp:55)) in the first pipeline iteration (II = 4 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln55', large_sparse_lu.cpp:55)) in the first pipeline iteration (II = 11 cycles).
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_Pipeline_VITIS_LOOP_52_6' (loop 'VITIS_LOOP_52_6'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between bus response operation ('w0_addr_5_resp', large_sparse_lu.cpp:56) on port 'w0' (large_sparse_lu.cpp:56) and bus request operation ('w0_load_3_req', large_sparse_lu.cpp:56) on port 'w0' (large_sparse_lu.cpp:56).
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_Pipeline_VITIS_LOOP_52_6' (loop 'VITIS_LOOP_52_6'): Unable to enforce a carried dependence constraint (II = 17, distance = 1, offset = 1) between bus response operation ('w0_addr_5_resp', large_sparse_lu.cpp:56) on port 'w0' (large_sparse_lu.cpp:56) and bus request operation ('w0_load_3_req', large_sparse_lu.cpp:56) on port 'w0' (large_sparse_lu.cpp:56).
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 18, Depth = 39, loop 'VITIS_LOOP_52_6'
+WARNING: [HLS 200-871] Estimated clock period (6.826ns) exceeds the target (target clock period: 5ns, clock uncertainty: 1.35ns, effective delay budget: 3.65ns).
+WARNING: [HLS 200-1016] The critical path in module 'large_getrf_Pipeline_VITIS_LOOP_52_6' consists of the following:	bus read operation ('u2_addr_read', large_sparse_lu.cpp:56) on port 'u2' (large_sparse_lu.cpp:56) [72]  (3.65 ns)
+	'fmul' operation ('mul', large_sparse_lu.cpp:56) [74]  (3.18 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 388.816 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 388.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_Pipeline_VITIS_LOOP_59_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_59_7'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 13, loop 'VITIS_LOOP_59_7'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 388.816 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 388.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (5.207ns) exceeds the target (target clock period: 5ns, clock uncertainty: 1.35ns, effective delay budget: 3.65ns).
+WARNING: [HLS 200-1016] The critical path in module 'large_getrf' consists of the following:	'call' operation ('targetBlock', large_sparse_lu.cpp:39) to 'large_getrf_Pipeline_VITIS_LOOP_39_4' [177]  (5.21 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 388.816 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.5 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 390.328 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_Pipeline_VITIS_LOOP_31_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_Pipeline_VITIS_LOOP_31_2' pipeline 'VITIS_LOOP_31_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_31_2/m_axi_l1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_Pipeline_VITIS_LOOP_31_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.32 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.41 seconds; current allocated memory: 390.605 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_Pipeline_VITIS_LOOP_35_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_Pipeline_VITIS_LOOP_35_3' pipeline 'VITIS_LOOP_35_3' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_35_3/m_axi_u1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_Pipeline_VITIS_LOOP_35_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 395.375 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_Pipeline_VITIS_LOOP_39_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_Pipeline_VITIS_LOOP_39_4' pipeline 'VITIS_LOOP_39_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_Pipeline_VITIS_LOOP_39_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 395.375 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_Pipeline_VITIS_LOOP_52_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_Pipeline_VITIS_LOOP_52_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 395.375 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_Pipeline_VITIS_LOOP_59_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_Pipeline_VITIS_LOOP_59_7' pipeline 'VITIS_LOOP_59_7' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u1_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_Pipeline_VITIS_LOOP_59_7/m_axi_u2_AWVALID' to 0.

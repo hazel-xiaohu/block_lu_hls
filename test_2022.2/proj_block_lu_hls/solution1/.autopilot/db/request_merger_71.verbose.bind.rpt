@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'request_merger_71'
 ================================================================
-* Date:           Fri Sep 25 15:48:32 2026
+* Date:           Sat Sep 26 09:28:38 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -97,9 +97,9 @@ State 2 <SV = 1> <Delay = 0.00>
 ST_2 : Operation 14 [1/2] (0.00ns)   --->   "%call_ln0 = call void @request_merger.71_Pipeline_VITIS_LOOP_152_1, i209 %c_first, i209 %crequest1, i209 %c_req, i128 %temp_data_V_loc, i32 %temp_brlen_loc, i32 %temp_brid_loc, i3 %temp_write_idx_V_loc, i5 %temp_dest_V_loc, i3 %temp_peID_V_loc, i3 %temp_type_V_loc, i2 %temp_target_V_loc"   --->   Operation 14 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 1.55>
-ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %c_req, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %c_first, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %crequest1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %c_req, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %c_first, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %crequest1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%temp_data_V_loc_load = load i128 %temp_data_V_loc"   --->   Operation 18 'load' 'temp_data_V_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%temp_brlen_loc_load = load i32 %temp_brlen_loc"   --->   Operation 19 'load' 'temp_brlen_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%temp_brid_loc_load = load i32 %temp_brid_loc"   --->   Operation 20 'load' 'temp_brid_loc_load' <Predicate = true> <Delay = 0.00>
@@ -108,7 +108,7 @@ ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%temp_dest_V_loc_load = load i5 %te
 ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%temp_peID_V_loc_load = load i3 %temp_peID_V_loc"   --->   Operation 23 'load' 'temp_peID_V_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%temp_type_V_loc_load = load i3 %temp_type_V_loc"   --->   Operation 24 'load' 'temp_type_V_loc_load' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%temp_target_V_loc_load = load i2 %temp_target_V_loc"   --->   Operation 25 'load' 'temp_target_V_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%empty_584 = wait i32 @_ssdm_op_Wait"   --->   Operation 26 'wait' 'empty_584' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%empty_580 = wait i32 @_ssdm_op_Wait"   --->   Operation 26 'wait' 'empty_580' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%or_ln171_s = bitconcatenate i240 @_ssdm_op_BitConcatenate.i240.i128.i32.i32.i5.i3.i3.i5.i5.i3.i5.i3.i6.i2.i8, i128 %temp_data_V_loc_load, i32 %temp_brlen_loc_load, i32 %temp_brid_loc_load, i5 0, i3 %temp_write_idx_V_loc_load, i3 0, i5 %temp_dest_V_loc_load, i5 0, i3 %temp_peID_V_loc_load, i5 0, i3 %temp_type_V_loc_load, i6 0, i2 %temp_target_V_loc_load, i8 0" [vccache.cpp:171]   --->   Operation 27 'bitconcatenate' 'or_ln171_s' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%or_ln171 = or i240 %or_ln171_s, i240 1" [vccache.cpp:171]   --->   Operation 28 'or' 'or_ln171' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_s = partselect i2 @_ssdm_op_PartSelect.i2.i240.i32.i32, i240 %or_ln171, i32 8, i32 9" [vccache.cpp:171]   --->   Operation 29 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
@@ -164,7 +164,7 @@ temp_dest_V_loc_load      (load          ) [ 0000]
 temp_peID_V_loc_load      (load          ) [ 0000]
 temp_type_V_loc_load      (load          ) [ 0000]
 temp_target_V_loc_load    (load          ) [ 0000]
-empty_584                 (wait          ) [ 0000]
+empty_580                 (wait          ) [ 0000]
 or_ln171_s                (bitconcatenate) [ 0000]
 or_ln171                  (or            ) [ 0000]
 tmp_s                     (partselect    ) [ 0000]
@@ -250,7 +250,7 @@ ret_ln172                 (ret           ) [ 0000]
 <pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_56"/></StgValue>
+<StgValue><ssdm name="empty_91"/></StgValue>
 </bind>
 </comp>
 
@@ -268,7 +268,7 @@ ret_ln172                 (ret           ) [ 0000]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_86"/></StgValue>
+<StgValue><ssdm name="empty_141"/></StgValue>
 </bind>
 </comp>
 

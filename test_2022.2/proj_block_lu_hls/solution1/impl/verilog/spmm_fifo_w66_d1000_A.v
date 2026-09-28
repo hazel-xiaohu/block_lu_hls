@@ -25,6 +25,8 @@ module spmm_fifo_w66_d1000_A
     input  wire [DATA_WIDTH-1:0] if_din,
     
     // read 
+    output reg  [ADDR_WIDTH:0]   if_num_data_valid, // for FRP
+    output wire [ADDR_WIDTH:0]   if_fifo_cap,       // for FRP
     output wire                  if_empty_n,
     input  wire                  if_read_ce,
     input  wire                  if_read,
@@ -66,7 +68,8 @@ module spmm_fifo_w66_d1000_A
 //------------------------Task and function--------------
 
 //------------------------Body---------------------------
-    // has num_data_valid ?  no 
+    // has num_data_valid ? 
+    assign if_fifo_cap = DEPTH + 1; // yes  
 
     // has almost full ? 
     assign if_full_n  = full_n; //no 
@@ -131,6 +134,16 @@ module spmm_fifo_w66_d1000_A
     end
 
     // if_num_data_valid 
+    always @(posedge clk ) begin
+        if (reset == 1'b1)
+            if_num_data_valid <= 'b0;
+        else if (pop)
+            if_num_data_valid <= mOutPtr + push;
+        else if (~(if_read_ce & if_read) & dout_vld)
+            if_num_data_valid <= mOutPtr + push + 1;
+        else
+            if_num_data_valid <= 'b0;
+    end // 
 
     // dout_vld 
     always @(posedge clk ) begin

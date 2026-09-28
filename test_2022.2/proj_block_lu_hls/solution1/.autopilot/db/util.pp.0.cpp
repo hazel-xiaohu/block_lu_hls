@@ -160,8 +160,8 @@ extern "C" {
 
 
 
-# 1 "/usr/local/include/gmp.h" 1 3
-# 35 "/usr/local/include/gmp.h" 3
+# 1 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 1 3
+# 34 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 # 1 "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/iosfwd" 1 3
 # 37 "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/iosfwd" 3
 
@@ -1417,7 +1417,7 @@ namespace __cxx11 {
 
 
 }
-# 36 "/usr/local/include/gmp.h" 2 3
+# 35 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 2 3
 # 1 "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cstdio" 1 3
 # 40 "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cstdio" 3
 
@@ -2309,8 +2309,8 @@ namespace std
   using ::__gnu_cxx::vsnprintf;
   using ::__gnu_cxx::vsscanf;
 }
-# 37 "/usr/local/include/gmp.h" 2 3
-# 56 "/usr/local/include/gmp.h" 3
+# 36 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 2 3
+# 55 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 # 1 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stddef.h" 1 3
 # 51 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stddef.h" 3
 typedef long int ptrdiff_t;
@@ -2324,7 +2324,7 @@ typedef struct {
       __attribute__((__aligned__(__alignof__(long double))));
 } max_align_t;
 # 119 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stddef.h" 2 3
-# 57 "/usr/local/include/gmp.h" 2 3
+# 56 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 2 3
 # 1 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/limits.h" 1 3
 # 37 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/limits.h" 3
 # 1 "/usr/include/limits.h" 1 3 4
@@ -2364,8 +2364,8 @@ extern long int __sysconf (int __name) noexcept (true);
 # 65 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 2 3 4
 # 204 "/usr/include/limits.h" 2 3 4
 # 38 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/limits.h" 2 3
-# 58 "/usr/local/include/gmp.h" 2 3
-# 142 "/usr/local/include/gmp.h" 3
+# 57 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 2 3
+# 141 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 typedef unsigned long int mp_limb_t;
 typedef long int mp_limb_signed_t;
 
@@ -2455,9 +2455,7 @@ typedef const __mpf_struct *mpf_srcptr;
 typedef __mpf_struct *mpf_ptr;
 typedef const __mpq_struct *mpq_srcptr;
 typedef __mpq_struct *mpq_ptr;
-typedef __gmp_randstate_struct *gmp_randstate_ptr;
-typedef const __gmp_randstate_struct *gmp_randstate_srcptr;
-# 476 "/usr/local/include/gmp.h" 3
+# 472 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 extern "C" {
 using std::FILE;
 
@@ -2486,37 +2484,37 @@ using std::FILE;
 
 
 
-               void __gmp_randinit (gmp_randstate_ptr, gmp_randalg_t, ...);
+               void __gmp_randinit (gmp_randstate_t, gmp_randalg_t, ...);
 
 
-               void __gmp_randinit_default (gmp_randstate_ptr);
+               void __gmp_randinit_default (gmp_randstate_t);
 
 
-               void __gmp_randinit_lc_2exp (gmp_randstate_ptr, mpz_srcptr, unsigned long int, mp_bitcnt_t);
+               void __gmp_randinit_lc_2exp (gmp_randstate_t, mpz_srcptr, unsigned long int, mp_bitcnt_t);
 
 
-               int __gmp_randinit_lc_2exp_size (gmp_randstate_ptr, mp_bitcnt_t);
+               int __gmp_randinit_lc_2exp_size (gmp_randstate_t, mp_bitcnt_t);
 
 
-               void __gmp_randinit_mt (gmp_randstate_ptr);
+               void __gmp_randinit_mt (gmp_randstate_t);
 
 
-               void __gmp_randinit_set (gmp_randstate_ptr, gmp_randstate_srcptr);
+               void __gmp_randinit_set (gmp_randstate_t, const __gmp_randstate_struct *);
 
 
-               void __gmp_randseed (gmp_randstate_ptr, mpz_srcptr);
+               void __gmp_randseed (gmp_randstate_t, mpz_srcptr);
 
 
-               void __gmp_randseed_ui (gmp_randstate_ptr, unsigned long int);
+               void __gmp_randseed_ui (gmp_randstate_t, unsigned long int);
 
 
-               void __gmp_randclear (gmp_randstate_ptr);
+               void __gmp_randclear (gmp_randstate_t);
 
 
-               unsigned long __gmp_urandomb_ui (gmp_randstate_ptr, unsigned long);
+               unsigned long __gmp_urandomb_ui (gmp_randstate_t, unsigned long);
 
 
-               unsigned long __gmp_urandomm_ui (gmp_randstate_ptr, unsigned long);
+               unsigned long __gmp_urandomm_ui (gmp_randstate_t, unsigned long);
 
 
 
@@ -2527,7 +2525,7 @@ using std::FILE;
 
 
                int __gmp_fprintf (FILE *, const char *, ...);
-# 558 "/usr/local/include/gmp.h" 3
+# 554 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
                int __gmp_printf (const char *, ...);
 
 
@@ -2925,9 +2923,6 @@ using std::FILE;
                void __gmpz_nextprime (mpz_ptr, mpz_srcptr);
 
 
-               int __gmpz_prevprime (mpz_ptr, mpz_srcptr);
-
-
 
                size_t __gmpz_out_raw (FILE *, mpz_srcptr);
 
@@ -2984,7 +2979,7 @@ using std::FILE;
                void __gmpz_rootrem (mpz_ptr, mpz_ptr, mpz_srcptr, unsigned long int);
 
 
-               void __gmpz_rrandomb (mpz_ptr, gmp_randstate_ptr, mp_bitcnt_t);
+               void __gmpz_rrandomb (mpz_ptr, gmp_randstate_t, mp_bitcnt_t);
 
 
                mp_bitcnt_t __gmpz_scan0 (mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
@@ -3084,10 +3079,10 @@ using std::FILE;
                void __gmpz_ui_pow_ui (mpz_ptr, unsigned long int, unsigned long int);
 
 
-               void __gmpz_urandomb (mpz_ptr, gmp_randstate_ptr, mp_bitcnt_t);
+               void __gmpz_urandomb (mpz_ptr, gmp_randstate_t, mp_bitcnt_t);
 
 
-               void __gmpz_urandomm (mpz_ptr, gmp_randstate_ptr, mpz_srcptr);
+               void __gmpz_urandomm (mpz_ptr, gmp_randstate_t, mpz_srcptr);
 
 
 
@@ -3433,8 +3428,8 @@ using std::FILE;
                void __gmpf_ui_sub (mpf_ptr, unsigned long int, mpf_srcptr);
 
 
-               void __gmpf_urandomb (mpf_ptr, gmp_randstate_ptr, mp_bitcnt_t);
-# 1472 "/usr/local/include/gmp.h" 3
+               void __gmpf_urandomb (mpf_t, gmp_randstate_t, mp_bitcnt_t);
+# 1465 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
                mp_limb_t __gmpn_add (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
 
 
@@ -3665,7 +3660,7 @@ using std::FILE;
                int __gmpn_sec_invert (mp_ptr, mp_ptr, mp_srcptr, mp_size_t, mp_bitcnt_t, mp_ptr);
 
                mp_size_t __gmpn_sec_invert_itch (mp_size_t) __attribute__ ((__pure__));
-# 1721 "/usr/local/include/gmp.h" 3
+# 1714 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 extern __inline__ __attribute__ ((__gnu_inline__)) void
 __gmpz_abs (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
 {
@@ -3673,7 +3668,7 @@ __gmpz_abs (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
     __gmpz_set (__gmp_w, __gmp_u);
   __gmp_w->_mp_size = ((__gmp_w->_mp_size) >= 0 ? (__gmp_w->_mp_size) : -(__gmp_w->_mp_size));
 }
-# 1745 "/usr/local/include/gmp.h" 3
+# 1738 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 extern __inline__ __attribute__ ((__gnu_inline__))
 
 int
@@ -3722,7 +3717,7 @@ __gmpz_get_ui (mpz_srcptr __gmp_z) noexcept
 
 
   return (__gmp_n != 0 ? __gmp_l : 0);
-# 1801 "/usr/local/include/gmp.h" 3
+# 1794 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 }
 
 
@@ -3829,7 +3824,7 @@ __gmpq_neg (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
     __gmpq_set (__gmp_w, __gmp_u);
   __gmp_w->_mp_num._mp_size = - __gmp_w->_mp_num._mp_size;
 }
-# 2143 "/usr/local/include/gmp.h" 3
+# 2136 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 extern __inline__ __attribute__ ((__gnu_inline__))
 
 mp_limb_t
@@ -3935,22 +3930,21 @@ __gmpn_neg (mp_ptr __gmp_rp, mp_srcptr __gmp_up, mp_size_t __gmp_n)
 
 
 }
-# 2292 "/usr/local/include/gmp.h" 3
+# 2285 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
                   std::ostream& operator<< (std::ostream &, mpz_srcptr);
                   std::ostream& operator<< (std::ostream &, mpq_srcptr);
                   std::ostream& operator<< (std::ostream &, mpf_srcptr);
                   std::istream& operator>> (std::istream &, mpz_ptr);
                   std::istream& operator>> (std::istream &, mpq_ptr);
                   std::istream& operator>> (std::istream &, mpf_ptr);
-# 2323 "/usr/local/include/gmp.h" 3
+# 2316 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 enum
 {
   GMP_ERROR_NONE = 0,
   GMP_ERROR_UNSUPPORTED_ARGUMENT = 1,
   GMP_ERROR_DIVISION_BY_ZERO = 2,
   GMP_ERROR_SQRT_OF_NEGATIVE = 4,
-  GMP_ERROR_INVALID_ARGUMENT = 8,
-  GMP_ERROR_MPZ_OVERFLOW = 16
+  GMP_ERROR_INVALID_ARGUMENT = 8
 };
 # 5 "./core.h" 2
 # 1 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 1 3
@@ -10559,39 +10553,35 @@ void find_eviction(lru_struct in1, lru_struct in2, lru_struct in3, lru_struct in
 
 void from_rcache_result_to_B_vcrequest(rcache_stream* from1, B_request_stream* to1, B_request_stream* to2, id_stream* B_len){
 
- rcache_request temp, temp1;
- id_t first_idx, second_idx;
- B_row_request temp_result;
 
- VITIS_LOOP_158_1: for (bool enable=false; !enable; ){
+
+
+
+
+
+ rcache_request pending = {};
+ B_row_request temp_result = {};
+ VITIS_LOOP_162_1: for (;;) {
 #pragma HLS PIPELINE off
- if (!from1->empty() && !to2->full()) {
-   temp = from1->read();
+ pending = from1->read();
+  if (pending.dest == 7)
+   break;
 
-   if (temp.dest != 7) {
+  temp_result.peID = pending.dest;
+  temp_result.bridx = pending.Acid;
+  temp_result.brlen = pending.Acid1 - pending.Acid;
+  temp_result.end = false;
+
+  if (temp_result.brlen > 16)
+   to1->write(temp_result);
+  else if (temp_result.brlen != 0)
+   to2->write(temp_result);
 
 
 
-
-    first_idx = temp.Acid;
-    second_idx = temp.Acid1;
-
-    temp_result.peID = temp.dest;
-    temp_result.bridx = first_idx;
-    temp_result.brlen = second_idx - first_idx;
-    temp_result.end = false;
-
-    if ((second_idx - first_idx) > 16)
-     to1->write(temp_result);
-    else if (second_idx != first_idx)
-     to2->write(temp_result);
-
-    B_len->write(second_idx - first_idx);
-   }
-
-   enable = temp.dest == 7;
-  }
+  B_len->write(temp_result.brlen);
  }
+
 
  temp_result.end = true;
  to1->write(temp_result);
@@ -10619,7 +10609,7 @@ void merge_4_to_1_vcrequest(vcrequest_stream* cache_result1, vcrequest_stream* c
 
  vccache_request temp;
 
- VITIS_LOOP_214_1: for (bool enable=false; !enable; ){
+ VITIS_LOOP_210_1: for (bool enable=false; !enable; ){
 #pragma HLS PIPELINE II=1
  if (!enable) {
    if ((have_read1 || cache_result1->empty()) && (have_read2 || cache_result2->empty()) &&
@@ -10687,7 +10677,7 @@ void distributer_vcresponse(vcresponse_stream* from1, vcresponse_stream* to1, vc
 
  vccache_response temp;
 
- VITIS_LOOP_282_1: for (bool enable=false; !enable; ) {
+ VITIS_LOOP_278_1: for (bool enable=false; !enable; ) {
 #pragma HLS PIPELINE II=1
  if (!from1->empty()) {
    temp = from1->read();
@@ -10718,7 +10708,7 @@ void distributer_vcresult(vcresult_stream* from1, B_data_stream* val1, B_data_st
 
  vccache_result temp;
 
- VITIS_LOOP_313_1: for (bool enable=false; !enable; ) {
+ VITIS_LOOP_309_1: for (bool enable=false; !enable; ) {
 #pragma HLS PIPELINE II=1
  if (!from1->empty()) {
    temp = from1->read();
@@ -10754,7 +10744,7 @@ void distributer_vcresult(vcresult_stream* from1, cacheline_stream* val1, cachel
 
  vccache_result temp;
 
- VITIS_LOOP_349_1: for (bool enable=false; !enable; ) {
+ VITIS_LOOP_345_1: for (bool enable=false; !enable; ) {
 #pragma HLS PIPELINE II=1
  if (!from1->empty()) {
    temp = from1->read();
@@ -10778,7 +10768,7 @@ void distributer_vcresult(vcresult_stream* from1, vcresult_stream* val1, vcresul
 
  vccache_result temp;
 
- VITIS_LOOP_373_1: for (bool enable=false; !enable; ) {
+ VITIS_LOOP_369_1: for (bool enable=false; !enable; ) {
 #pragma HLS PIPELINE II=1
  if (!from1->empty()) {
    temp = from1->read();
@@ -10819,7 +10809,7 @@ void merge_8_to_1_vcresult(vcresult_stream* from1, vcresult_stream* from2, vcres
 
  vccache_result temp;
 
- VITIS_LOOP_414_1: for (bool enable=false; !enable; ){
+ VITIS_LOOP_410_1: for (bool enable=false; !enable; ){
 #pragma HLS PIPELINE II=1
  if (!enable) {
    if (!from1->empty()) {
@@ -10886,7 +10876,7 @@ void merge_2_to_1_vcresult(vcresult_stream* from1, vcresult_stream* from2, cache
 
  vccache_result temp;
 
- VITIS_LOOP_481_1: for (bool enable=false; !enable; ){
+ VITIS_LOOP_477_1: for (bool enable=false; !enable; ){
 #pragma HLS PIPELINE II=1
  if (!enable) {
    if ((have_read1 || from1->empty()) && (have_read2 || from2->empty())){
@@ -10938,7 +10928,7 @@ void merge_2_to_1_vcresult(vcresult_stream* from1, vcresult_stream* from2, vcres
 
  vccache_result temp;
 
- VITIS_LOOP_533_1: for (bool enable=false; !enable; ){
+ VITIS_LOOP_529_1: for (bool enable=false; !enable; ){
 #pragma HLS PIPELINE II=1
  if (!enable) {
    if ((have_read1 || from1->empty()) && (have_read2 || from2->empty())){
@@ -11000,7 +10990,7 @@ void merge_4_to_1_vcresult(vcresult_stream* from1, vcresult_stream* from2, vcres
 
  vccache_result temp;
 
- VITIS_LOOP_595_1: for (bool enable=false; !enable; ){
+ VITIS_LOOP_591_1: for (bool enable=false; !enable; ){
 #pragma HLS PIPELINE II=1
  if (!enable) {
    if ((have_read1 || from1->empty()) && (have_read2 || from2->empty()) &&
@@ -11074,7 +11064,7 @@ void merge_4_to_1_rresponse(rresponse_stream* from1, rresponse_stream* from2, rr
 
  rcache_response temp;
 
- VITIS_LOOP_669_1: for (bool enable=false; !enable; ){
+ VITIS_LOOP_665_1: for (bool enable=false; !enable; ){
 #pragma HLS PIPELINE II=1
  if (!enable) {
    if (!from1->empty()) {
@@ -11120,7 +11110,7 @@ void merge_2_to_1_vcresponse(vcresponse_stream* from1, vcresponse_stream* from2,
 
  vccache_response temp;
 
- VITIS_LOOP_715_1: for (bool enable=false; !enable; ){
+ VITIS_LOOP_711_1: for (bool enable=false; !enable; ){
 #pragma HLS PIPELINE II=1
  if (!enable) {
    if ((have_read1 || from1->empty()) && (have_read2 || from2->empty())){
@@ -11165,7 +11155,7 @@ void final_merger(merge_stream* from1, merge_stream* from2, merge_stream* result
 
  merge_item temp, temp1;
 
- VITIS_LOOP_760_1: for (bool enable=false; !enable; ){
+ VITIS_LOOP_756_1: for (bool enable=false; !enable; ){
 #pragma HLS PIPELINE off
 
  if (!from1->empty() && !from2->empty()) {
@@ -11178,7 +11168,7 @@ void final_merger(merge_stream* from1, merge_stream* from2, merge_stream* result
 
     id_t counter = 0;
 
-    VITIS_LOOP_773_2: for (bool enable_i=temp.end, enable_j=temp1.end; !enable_i || !enable_j; ){
+    VITIS_LOOP_769_2: for (bool enable_i=temp.end, enable_j=temp1.end; !enable_i || !enable_j; ){
 #pragma HLS PIPELINE II=1
  if (!hold_s1 && !enable_i){
       temp = from1->read();
@@ -11240,7 +11230,7 @@ void sub_final_merger(merge_stream* from1, merge_stream* from2, merge_stream* re
 
 
 
- VITIS_LOOP_835_1: for (bool enable=false; !enable; ){
+ VITIS_LOOP_831_1: for (bool enable=false; !enable; ){
 #pragma HLS PIPELINE off
 
  if (!from1->empty() && !from2->empty()) {
@@ -11251,7 +11241,7 @@ void sub_final_merger(merge_stream* from1, merge_stream* from2, merge_stream* re
 
     bool hold_s1 = true;
     bool hold_s2 = true;
-    VITIS_LOOP_846_2: for (bool enable_i=temp.end, enable_j=temp1.end; !enable_i || !enable_j; ){
+    VITIS_LOOP_842_2: for (bool enable_i=temp.end, enable_j=temp1.end; !enable_i || !enable_j; ){
 #pragma HLS PIPELINE II=1
  if (!hold_s1 && !enable_i){
       temp = from1->read();
@@ -11309,13 +11299,13 @@ void convert_pblock_to_mergeitem(partial_stream* from, merge_stream* to){
 
  partial_block temp;
 
- VITIS_LOOP_904_1: for (bool enable=false; !enable; ){
+ VITIS_LOOP_900_1: for (bool enable=false; !enable; ){
 #pragma HLS PIPELINE off
  if (!from->empty()) {
    temp = from->read();
 
    if (!temp.finish) {
-    VITIS_LOOP_910_2: for (id_t i=temp.begin; i<=temp.end; i++){
+    VITIS_LOOP_906_2: for (id_t i=temp.begin; i<=temp.end; i++){
 #pragma HLS PIPELINE II=1
  merge_item temp_m;
      temp_m.cid = temp.cid(i*32+31, i*32);
@@ -11340,7 +11330,7 @@ void write_C_rid_rlen(id_stream* rlen, id_t* C_rcsr, id_t crum){
 
  id_t curr_idx = 0;
 
- VITIS_LOOP_935_1: for (id_t i=0; i<crum+1; i++){
+ VITIS_LOOP_931_1: for (id_t i=0; i<crum+1; i++){
 #pragma HLS PIPELINE II=1
  if (i>=1) {
    curr_idx += rlen->read();
@@ -11355,12 +11345,12 @@ void write_C_val_cid(merge_stream* final_result, val_t* C_val, id_t* C_cid, id_t
  bool enable = false;
  id_t counter = 0;
 
- VITIS_LOOP_950_1: for (; !enable; ){
+ VITIS_LOOP_946_1: for (; !enable; ){
 #pragma HLS PIPELINE off
  if (!result_len->empty()) {
    id_t temp_len = result_len->read();
    if (temp_len != 0xFFFFFFFF) {
-    VITIS_LOOP_955_2: for (id_t ttt=counter; ttt<temp_len+counter; ttt++) {
+    VITIS_LOOP_951_2: for (id_t ttt=counter; ttt<temp_len+counter; ttt++) {
 #pragma HLS PIPELINE II=1
  merge_item t_mi = final_result->read();
      C_val[ttt] = t_mi.val;
@@ -11382,17 +11372,17 @@ void write_C_sub(merge_stream* final_result, id_t* C_rcsr, id_t* C_cid, val_t* C
 
 
 
- VITIS_LOOP_977_1: for (id_t row = 0; row < crum; ++row) {
+ VITIS_LOOP_973_1: for (id_t row = 0; row < crum; ++row) {
 #pragma HLS PIPELINE off
  const id_t product_len = result_len->read();
   (void)drain_len->read();
   const id_t start = C_rcsr[row];
   const id_t end = C_rcsr[row + 1];
   id_t cpos = start;
-  VITIS_LOOP_984_2: for (id_t i = 0; i < product_len; ++i) {
+  VITIS_LOOP_980_2: for (id_t i = 0; i < product_len; ++i) {
 #pragma HLS PIPELINE II=1
  const merge_item item = final_result->read();
-   VITIS_LOOP_987_3: while (cpos < end && C_cid[cpos] < item.cid) ++cpos;
+   VITIS_LOOP_983_3: while (cpos < end && C_cid[cpos] < item.cid) ++cpos;
    if (cpos < end && C_cid[cpos] == item.cid) {
     C_val[cpos] -= item.val;
     ++cpos;

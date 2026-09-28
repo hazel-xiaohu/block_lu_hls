@@ -11,74 +11,80 @@ use IEEE.numeric_std.all;
 
 entity spmm_merger_52 is
 port (
-    mc_pe4_dout : IN STD_LOGIC_VECTOR (65 downto 0);
-    mc_pe4_empty_n : IN STD_LOGIC;
-    mc_pe4_read : OUT STD_LOGIC;
-    m_pe4_dout : IN STD_LOGIC_VECTOR (65 downto 0);
-    m_pe4_empty_n : IN STD_LOGIC;
-    m_pe4_read : OUT STD_LOGIC;
-    result_pe4_din : OUT STD_LOGIC_VECTOR (65 downto 0);
-    result_pe4_full_n : IN STD_LOGIC;
-    result_pe4_write : OUT STD_LOGIC;
-    efinish425_din : OUT STD_LOGIC_VECTOR (0 downto 0);
-    efinish425_full_n : IN STD_LOGIC;
-    efinish425_write : OUT STD_LOGIC;
     ap_clk : IN STD_LOGIC;
     ap_rst : IN STD_LOGIC;
     ap_start : IN STD_LOGIC;
     ap_done : OUT STD_LOGIC;
-    ap_ready : OUT STD_LOGIC;
+    ap_continue : IN STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
-    ap_continue : IN STD_LOGIC );
+    ap_ready : OUT STD_LOGIC;
+    mc_pe4_dout : IN STD_LOGIC_VECTOR (65 downto 0);
+    mc_pe4_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+    mc_pe4_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+    mc_pe4_empty_n : IN STD_LOGIC;
+    mc_pe4_read : OUT STD_LOGIC;
+    m_pe4_dout : IN STD_LOGIC_VECTOR (65 downto 0);
+    m_pe4_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+    m_pe4_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
+    m_pe4_empty_n : IN STD_LOGIC;
+    m_pe4_read : OUT STD_LOGIC;
+    result_pe4_din : OUT STD_LOGIC_VECTOR (65 downto 0);
+    result_pe4_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+    result_pe4_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
+    result_pe4_full_n : IN STD_LOGIC;
+    result_pe4_write : OUT STD_LOGIC;
+    efinish425_din : OUT STD_LOGIC_VECTOR (0 downto 0);
+    efinish425_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+    efinish425_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+    efinish425_full_n : IN STD_LOGIC;
+    efinish425_write : OUT STD_LOGIC );
 end;
 
 
 architecture behav of spmm_merger_52 is 
     constant ap_const_logic_1 : STD_LOGIC := '1';
+    constant ap_const_logic_0 : STD_LOGIC := '0';
+    constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (1 downto 0) := "01";
+    constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (1 downto 0) := "10";
+    constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
+    constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv7_0 : STD_LOGIC_VECTOR (6 downto 0) := "0000000";
     constant ap_const_lv11_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
-    constant ap_const_logic_0 : STD_LOGIC := '0';
+    constant ap_const_boolean_1 : BOOLEAN := true;
 
 attribute shreg_extract : string;
-    signal merge_controller_104_U0_ap_start : STD_LOGIC;
-    signal merge_controller_104_U0_ap_done : STD_LOGIC;
-    signal merge_controller_104_U0_ap_continue : STD_LOGIC;
-    signal merge_controller_104_U0_ap_idle : STD_LOGIC;
-    signal merge_controller_104_U0_ap_ready : STD_LOGIC;
-    signal merge_controller_104_U0_mc_pe4_read : STD_LOGIC;
-    signal merge_controller_104_U0_mresult_din : STD_LOGIC_VECTOR (35 downto 0);
-    signal merge_controller_104_U0_mresult_write : STD_LOGIC;
-    signal merge_controller_104_U0_start_out : STD_LOGIC;
-    signal merge_controller_104_U0_start_write : STD_LOGIC;
-    signal merge_two_sub_105_U0_ap_start : STD_LOGIC;
-    signal merge_two_sub_105_U0_ap_done : STD_LOGIC;
-    signal merge_two_sub_105_U0_ap_continue : STD_LOGIC;
-    signal merge_two_sub_105_U0_ap_idle : STD_LOGIC;
-    signal merge_two_sub_105_U0_ap_ready : STD_LOGIC;
-    signal merge_two_sub_105_U0_mresult_read : STD_LOGIC;
-    signal merge_two_sub_105_U0_result_pe4_din : STD_LOGIC_VECTOR (65 downto 0);
-    signal merge_two_sub_105_U0_result_pe4_write : STD_LOGIC;
-    signal merge_two_sub_105_U0_m_pe4_read : STD_LOGIC;
-    signal merge_two_sub_105_U0_efinish425_din : STD_LOGIC_VECTOR (0 downto 0);
-    signal merge_two_sub_105_U0_efinish425_write : STD_LOGIC;
-    signal mresult_full_n : STD_LOGIC;
-    signal mresult_dout : STD_LOGIC_VECTOR (35 downto 0);
-    signal mresult_num_data_valid : STD_LOGIC_VECTOR (3 downto 0);
-    signal mresult_fifo_cap : STD_LOGIC_VECTOR (3 downto 0);
-    signal mresult_empty_n : STD_LOGIC;
-    signal start_for_merge_two_sub_105_U0_din : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_merge_two_sub_105_U0_full_n : STD_LOGIC;
-    signal start_for_merge_two_sub_105_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_merge_two_sub_105_U0_empty_n : STD_LOGIC;
+    signal ap_done_reg : STD_LOGIC := '0';
+    signal ap_CS_fsm : STD_LOGIC_VECTOR (1 downto 0) := "01";
+    attribute fsm_encoding : string;
+    attribute fsm_encoding of ap_CS_fsm : signal is "none";
+    signal ap_CS_fsm_state1 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
+    signal grp_merge_two_sub_fu_20_ap_start : STD_LOGIC;
+    signal grp_merge_two_sub_fu_20_ap_done : STD_LOGIC;
+    signal grp_merge_two_sub_fu_20_ap_idle : STD_LOGIC;
+    signal grp_merge_two_sub_fu_20_ap_ready : STD_LOGIC;
+    signal grp_merge_two_sub_fu_20_mc_pe4_read : STD_LOGIC;
+    signal grp_merge_two_sub_fu_20_result_pe4_din : STD_LOGIC_VECTOR (65 downto 0);
+    signal grp_merge_two_sub_fu_20_result_pe4_write : STD_LOGIC;
+    signal grp_merge_two_sub_fu_20_m_pe4_read : STD_LOGIC;
+    signal grp_merge_two_sub_fu_20_efinish425_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_merge_two_sub_fu_20_efinish425_write : STD_LOGIC;
+    signal grp_merge_two_sub_fu_20_ap_start_reg : STD_LOGIC := '0';
+    signal ap_block_state1_ignore_call4 : BOOLEAN;
+    signal ap_CS_fsm_state2 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
+    signal ap_NS_fsm : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_block_state1 : BOOLEAN;
+    signal ap_ST_fsm_state1_blk : STD_LOGIC;
+    signal ap_ST_fsm_state2_blk : STD_LOGIC;
+    signal ap_ce_reg : STD_LOGIC;
 
-    component spmm_merge_controller_104 IS
+    component spmm_merge_two_sub IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
         ap_start : IN STD_LOGIC;
-        start_full_n : IN STD_LOGIC;
         ap_done : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
         mc_pe4_dout : IN STD_LOGIC_VECTOR (65 downto 0);
@@ -86,30 +92,6 @@ attribute shreg_extract : string;
         mc_pe4_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
         mc_pe4_empty_n : IN STD_LOGIC;
         mc_pe4_read : OUT STD_LOGIC;
-        mresult_din : OUT STD_LOGIC_VECTOR (35 downto 0);
-        mresult_num_data_valid : IN STD_LOGIC_VECTOR (3 downto 0);
-        mresult_fifo_cap : IN STD_LOGIC_VECTOR (3 downto 0);
-        mresult_full_n : IN STD_LOGIC;
-        mresult_write : OUT STD_LOGIC;
-        start_out : OUT STD_LOGIC;
-        start_write : OUT STD_LOGIC );
-    end component;
-
-
-    component spmm_merge_two_sub_105 IS
-    port (
-        ap_clk : IN STD_LOGIC;
-        ap_rst : IN STD_LOGIC;
-        ap_start : IN STD_LOGIC;
-        ap_done : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC;
-        ap_idle : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
-        mresult_dout : IN STD_LOGIC_VECTOR (35 downto 0);
-        mresult_num_data_valid : IN STD_LOGIC_VECTOR (3 downto 0);
-        mresult_fifo_cap : IN STD_LOGIC_VECTOR (3 downto 0);
-        mresult_empty_n : IN STD_LOGIC;
-        mresult_read : OUT STD_LOGIC;
         result_pe4_din : OUT STD_LOGIC_VECTOR (65 downto 0);
         result_pe4_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
         result_pe4_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
@@ -128,136 +110,209 @@ attribute shreg_extract : string;
     end component;
 
 
-    component spmm_fifo_w36_d8_S_x1 IS
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        if_read_ce : IN STD_LOGIC;
-        if_write_ce : IN STD_LOGIC;
-        if_din : IN STD_LOGIC_VECTOR (35 downto 0);
-        if_full_n : OUT STD_LOGIC;
-        if_write : IN STD_LOGIC;
-        if_dout : OUT STD_LOGIC_VECTOR (35 downto 0);
-        if_num_data_valid : OUT STD_LOGIC_VECTOR (3 downto 0);
-        if_fifo_cap : OUT STD_LOGIC_VECTOR (3 downto 0);
-        if_empty_n : OUT STD_LOGIC;
-        if_read : IN STD_LOGIC );
-    end component;
-
-
-    component spmm_start_for_merge_two_sub_105_U0 IS
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        if_read_ce : IN STD_LOGIC;
-        if_write_ce : IN STD_LOGIC;
-        if_din : IN STD_LOGIC_VECTOR (0 downto 0);
-        if_full_n : OUT STD_LOGIC;
-        if_write : IN STD_LOGIC;
-        if_dout : OUT STD_LOGIC_VECTOR (0 downto 0);
-        if_empty_n : OUT STD_LOGIC;
-        if_read : IN STD_LOGIC );
-    end component;
-
-
 
 begin
-    merge_controller_104_U0 : component spmm_merge_controller_104
+    grp_merge_two_sub_fu_20 : component spmm_merge_two_sub
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => merge_controller_104_U0_ap_start,
-        start_full_n => start_for_merge_two_sub_105_U0_full_n,
-        ap_done => merge_controller_104_U0_ap_done,
-        ap_continue => merge_controller_104_U0_ap_continue,
-        ap_idle => merge_controller_104_U0_ap_idle,
-        ap_ready => merge_controller_104_U0_ap_ready,
+        ap_start => grp_merge_two_sub_fu_20_ap_start,
+        ap_done => grp_merge_two_sub_fu_20_ap_done,
+        ap_idle => grp_merge_two_sub_fu_20_ap_idle,
+        ap_ready => grp_merge_two_sub_fu_20_ap_ready,
         mc_pe4_dout => mc_pe4_dout,
         mc_pe4_num_data_valid => ap_const_lv7_0,
         mc_pe4_fifo_cap => ap_const_lv7_0,
         mc_pe4_empty_n => mc_pe4_empty_n,
-        mc_pe4_read => merge_controller_104_U0_mc_pe4_read,
-        mresult_din => merge_controller_104_U0_mresult_din,
-        mresult_num_data_valid => mresult_num_data_valid,
-        mresult_fifo_cap => mresult_fifo_cap,
-        mresult_full_n => mresult_full_n,
-        mresult_write => merge_controller_104_U0_mresult_write,
-        start_out => merge_controller_104_U0_start_out,
-        start_write => merge_controller_104_U0_start_write);
-
-    merge_two_sub_105_U0 : component spmm_merge_two_sub_105
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst,
-        ap_start => merge_two_sub_105_U0_ap_start,
-        ap_done => merge_two_sub_105_U0_ap_done,
-        ap_continue => merge_two_sub_105_U0_ap_continue,
-        ap_idle => merge_two_sub_105_U0_ap_idle,
-        ap_ready => merge_two_sub_105_U0_ap_ready,
-        mresult_dout => mresult_dout,
-        mresult_num_data_valid => mresult_num_data_valid,
-        mresult_fifo_cap => mresult_fifo_cap,
-        mresult_empty_n => mresult_empty_n,
-        mresult_read => merge_two_sub_105_U0_mresult_read,
-        result_pe4_din => merge_two_sub_105_U0_result_pe4_din,
+        mc_pe4_read => grp_merge_two_sub_fu_20_mc_pe4_read,
+        result_pe4_din => grp_merge_two_sub_fu_20_result_pe4_din,
         result_pe4_num_data_valid => ap_const_lv11_0,
         result_pe4_fifo_cap => ap_const_lv11_0,
         result_pe4_full_n => result_pe4_full_n,
-        result_pe4_write => merge_two_sub_105_U0_result_pe4_write,
+        result_pe4_write => grp_merge_two_sub_fu_20_result_pe4_write,
         m_pe4_dout => m_pe4_dout,
         m_pe4_num_data_valid => ap_const_lv11_0,
         m_pe4_fifo_cap => ap_const_lv11_0,
         m_pe4_empty_n => m_pe4_empty_n,
-        m_pe4_read => merge_two_sub_105_U0_m_pe4_read,
-        efinish425_din => merge_two_sub_105_U0_efinish425_din,
+        m_pe4_read => grp_merge_two_sub_fu_20_m_pe4_read,
+        efinish425_din => grp_merge_two_sub_fu_20_efinish425_din,
         efinish425_num_data_valid => ap_const_lv7_0,
         efinish425_fifo_cap => ap_const_lv7_0,
         efinish425_full_n => efinish425_full_n,
-        efinish425_write => merge_two_sub_105_U0_efinish425_write);
-
-    mresult_U : component spmm_fifo_w36_d8_S_x1
-    port map (
-        clk => ap_clk,
-        reset => ap_rst,
-        if_read_ce => ap_const_logic_1,
-        if_write_ce => ap_const_logic_1,
-        if_din => merge_controller_104_U0_mresult_din,
-        if_full_n => mresult_full_n,
-        if_write => merge_controller_104_U0_mresult_write,
-        if_dout => mresult_dout,
-        if_num_data_valid => mresult_num_data_valid,
-        if_fifo_cap => mresult_fifo_cap,
-        if_empty_n => mresult_empty_n,
-        if_read => merge_two_sub_105_U0_mresult_read);
-
-    start_for_merge_two_sub_105_U0_U : component spmm_start_for_merge_two_sub_105_U0
-    port map (
-        clk => ap_clk,
-        reset => ap_rst,
-        if_read_ce => ap_const_logic_1,
-        if_write_ce => ap_const_logic_1,
-        if_din => start_for_merge_two_sub_105_U0_din,
-        if_full_n => start_for_merge_two_sub_105_U0_full_n,
-        if_write => merge_controller_104_U0_start_write,
-        if_dout => start_for_merge_two_sub_105_U0_dout,
-        if_empty_n => start_for_merge_two_sub_105_U0_empty_n,
-        if_read => merge_two_sub_105_U0_ap_ready);
+        efinish425_write => grp_merge_two_sub_fu_20_efinish425_write);
 
 
 
 
-    ap_done <= merge_two_sub_105_U0_ap_done;
-    ap_idle <= (merge_two_sub_105_U0_ap_idle and merge_controller_104_U0_ap_idle);
-    ap_ready <= merge_controller_104_U0_ap_ready;
-    efinish425_din <= merge_two_sub_105_U0_efinish425_din;
-    efinish425_write <= merge_two_sub_105_U0_efinish425_write;
-    m_pe4_read <= merge_two_sub_105_U0_m_pe4_read;
-    mc_pe4_read <= merge_controller_104_U0_mc_pe4_read;
-    merge_controller_104_U0_ap_continue <= ap_const_logic_1;
-    merge_controller_104_U0_ap_start <= ap_start;
-    merge_two_sub_105_U0_ap_continue <= ap_continue;
-    merge_two_sub_105_U0_ap_start <= start_for_merge_two_sub_105_U0_empty_n;
-    result_pe4_din <= merge_two_sub_105_U0_result_pe4_din;
-    result_pe4_write <= merge_two_sub_105_U0_result_pe4_write;
-    start_for_merge_two_sub_105_U0_din <= (0=>ap_const_logic_1, others=>'-');
+
+    ap_CS_fsm_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_CS_fsm <= ap_ST_fsm_state1;
+            else
+                ap_CS_fsm <= ap_NS_fsm;
+            end if;
+        end if;
+    end process;
+
+
+    ap_done_reg_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_done_reg <= ap_const_logic_0;
+            else
+                if ((ap_continue = ap_const_logic_1)) then 
+                    ap_done_reg <= ap_const_logic_0;
+                elsif (((grp_merge_two_sub_fu_20_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+                    ap_done_reg <= ap_const_logic_1;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    grp_merge_two_sub_fu_20_ap_start_reg_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                grp_merge_two_sub_fu_20_ap_start_reg <= ap_const_logic_0;
+            else
+                if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+                    grp_merge_two_sub_fu_20_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_merge_two_sub_fu_20_ap_ready = ap_const_logic_1)) then 
+                    grp_merge_two_sub_fu_20_ap_start_reg <= ap_const_logic_0;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, grp_merge_two_sub_fu_20_ap_done, ap_CS_fsm_state2)
+    begin
+        case ap_CS_fsm is
+            when ap_ST_fsm_state1 => 
+                if ((not(((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
+                    ap_NS_fsm <= ap_ST_fsm_state2;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state1;
+                end if;
+            when ap_ST_fsm_state2 => 
+                if (((grp_merge_two_sub_fu_20_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
+                    ap_NS_fsm <= ap_ST_fsm_state1;
+                else
+                    ap_NS_fsm <= ap_ST_fsm_state2;
+                end if;
+            when others =>  
+                ap_NS_fsm <= "XX";
+        end case;
+    end process;
+    ap_CS_fsm_state1 <= ap_CS_fsm(0);
+    ap_CS_fsm_state2 <= ap_CS_fsm(1);
+
+    ap_ST_fsm_state1_blk_assign_proc : process(ap_start, ap_done_reg)
+    begin
+        if (((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) then 
+            ap_ST_fsm_state1_blk <= ap_const_logic_1;
+        else 
+            ap_ST_fsm_state1_blk <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    ap_ST_fsm_state2_blk_assign_proc : process(grp_merge_two_sub_fu_20_ap_done)
+    begin
+        if ((grp_merge_two_sub_fu_20_ap_done = ap_const_logic_0)) then 
+            ap_ST_fsm_state2_blk <= ap_const_logic_1;
+        else 
+            ap_ST_fsm_state2_blk <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    ap_block_state1_assign_proc : process(ap_start, ap_done_reg)
+    begin
+                ap_block_state1 <= ((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
+    end process;
+
+
+    ap_block_state1_ignore_call4_assign_proc : process(ap_start, ap_done_reg)
+    begin
+                ap_block_state1_ignore_call4 <= ((ap_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1));
+    end process;
+
+
+    ap_done_assign_proc : process(ap_done_reg, grp_merge_two_sub_fu_20_ap_done, ap_CS_fsm_state2)
+    begin
+        if (((grp_merge_two_sub_fu_20_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+            ap_done <= ap_const_logic_1;
+        else 
+            ap_done <= ap_done_reg;
+        end if; 
+    end process;
+
+
+    ap_idle_assign_proc : process(ap_start, ap_CS_fsm_state1)
+    begin
+        if (((ap_start = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
+            ap_idle <= ap_const_logic_1;
+        else 
+            ap_idle <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    ap_ready_assign_proc : process(grp_merge_two_sub_fu_20_ap_done, ap_CS_fsm_state2)
+    begin
+        if (((grp_merge_two_sub_fu_20_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+            ap_ready <= ap_const_logic_1;
+        else 
+            ap_ready <= ap_const_logic_0;
+        end if; 
+    end process;
+
+    efinish425_din <= grp_merge_two_sub_fu_20_efinish425_din;
+
+    efinish425_write_assign_proc : process(grp_merge_two_sub_fu_20_efinish425_write, ap_CS_fsm_state2)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
+            efinish425_write <= grp_merge_two_sub_fu_20_efinish425_write;
+        else 
+            efinish425_write <= ap_const_logic_0;
+        end if; 
+    end process;
+
+    grp_merge_two_sub_fu_20_ap_start <= grp_merge_two_sub_fu_20_ap_start_reg;
+
+    m_pe4_read_assign_proc : process(grp_merge_two_sub_fu_20_m_pe4_read, ap_CS_fsm_state2)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
+            m_pe4_read <= grp_merge_two_sub_fu_20_m_pe4_read;
+        else 
+            m_pe4_read <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    mc_pe4_read_assign_proc : process(grp_merge_two_sub_fu_20_mc_pe4_read, ap_CS_fsm_state2)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
+            mc_pe4_read <= grp_merge_two_sub_fu_20_mc_pe4_read;
+        else 
+            mc_pe4_read <= ap_const_logic_0;
+        end if; 
+    end process;
+
+    result_pe4_din <= grp_merge_two_sub_fu_20_result_pe4_din;
+
+    result_pe4_write_assign_proc : process(grp_merge_two_sub_fu_20_result_pe4_write, ap_CS_fsm_state2)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
+            result_pe4_write <= grp_merge_two_sub_fu_20_result_pe4_write;
+        else 
+            result_pe4_write <= ap_const_logic_0;
+        end if; 
+    end process;
+
 end behav;

@@ -401,7 +401,7 @@ wire   [63:0] add_ln64_1_fu_227_p2;
 wire   [127:0] shl_ln7_fu_273_p3;
 wire   [127:0] or_ln77_fu_280_p2;
 wire   [95:0] tmp_fu_294_p4;
-wire   [0:0] tmp_175_fu_286_p3;
+wire   [0:0] tmp_166_fu_286_p3;
 wire   [97:0] or_ln77_3_fu_304_p4;
 reg   [12:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
@@ -1174,7 +1174,7 @@ assign m_axi_aval_WVALID = 1'b0;
 
 assign or_ln77_1_fu_314_p2 = (or_ln77_3_fu_304_p4 | 98'd1);
 
-assign or_ln77_3_fu_304_p4 = {{{tmp_fu_294_p4}, {tmp_175_fu_286_p3}}, {1'd0}};
+assign or_ln77_3_fu_304_p4 = {{{tmp_fu_294_p4}, {tmp_166_fu_286_p3}}, {1'd0}};
 
 assign or_ln77_fu_280_p2 = (shl_ln7_fu_273_p3 | 128'd1);
 
@@ -1190,7 +1190,7 @@ assign shl_ln7_fu_273_p3 = {{row_rid_reg_348}, {96'd0}};
 
 assign shl_ln_fu_200_p3 = {{index_fu_96}, {2'd0}};
 
-assign tmp_175_fu_286_p3 = or_ln77_fu_280_p2[128'd8];
+assign tmp_166_fu_286_p3 = or_ln77_fu_280_p2[128'd8];
 
 assign tmp_fu_294_p4 = {{or_ln77_fu_280_p2[127:32]}};
 

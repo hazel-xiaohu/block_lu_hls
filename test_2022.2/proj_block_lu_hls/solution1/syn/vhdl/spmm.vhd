@@ -1515,7 +1515,7 @@ end;
 architecture behav of spmm is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "spmm_spmm,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu15eg-ffvb1156-2-i,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.357000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=2274,HLS_SYN_DSP=0,HLS_SYN_FF=193945,HLS_SYN_LUT=352534,HLS_VERSION=2022_2}";
+    "spmm_spmm,hls_ip_2022_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu15eg-ffvb1156-2-i,HLS_INPUT_CLOCK=5.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.357000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=2290,HLS_SYN_DSP=0,HLS_SYN_FF=193401,HLS_SYN_LUT=352167,HLS_VERSION=2022_2}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
     constant C_M_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
@@ -3689,53 +3689,53 @@ architecture behav of spmm is
     signal convert_pblock_to_mergeitem_49_U0_m_pe4_din : STD_LOGIC_VECTOR (65 downto 0);
     signal convert_pblock_to_mergeitem_49_U0_m_pe4_write : STD_LOGIC;
     signal ap_sync_reg_convert_pblock_to_mergeitem_49_U0_ap_start : STD_LOGIC := '0';
+    signal merger_U0_ap_start : STD_LOGIC;
+    signal merger_U0_ap_done : STD_LOGIC;
+    signal merger_U0_ap_continue : STD_LOGIC;
+    signal merger_U0_ap_idle : STD_LOGIC;
+    signal merger_U0_ap_ready : STD_LOGIC;
     signal merger_U0_mc_pe1_read : STD_LOGIC;
     signal merger_U0_m_pe1_read : STD_LOGIC;
     signal merger_U0_result_pe1_din : STD_LOGIC_VECTOR (65 downto 0);
     signal merger_U0_result_pe1_write : STD_LOGIC;
     signal merger_U0_efinish122_din : STD_LOGIC_VECTOR (0 downto 0);
     signal merger_U0_efinish122_write : STD_LOGIC;
-    signal merger_U0_ap_start : STD_LOGIC;
-    signal merger_U0_ap_done : STD_LOGIC;
-    signal merger_U0_ap_ready : STD_LOGIC;
-    signal merger_U0_ap_idle : STD_LOGIC;
-    signal merger_U0_ap_continue : STD_LOGIC;
     signal ap_sync_reg_merger_U0_ap_start : STD_LOGIC := '0';
+    signal merger_50_U0_ap_start : STD_LOGIC;
+    signal merger_50_U0_ap_done : STD_LOGIC;
+    signal merger_50_U0_ap_continue : STD_LOGIC;
+    signal merger_50_U0_ap_idle : STD_LOGIC;
+    signal merger_50_U0_ap_ready : STD_LOGIC;
     signal merger_50_U0_mc_pe2_read : STD_LOGIC;
     signal merger_50_U0_m_pe2_read : STD_LOGIC;
     signal merger_50_U0_result_pe2_din : STD_LOGIC_VECTOR (65 downto 0);
     signal merger_50_U0_result_pe2_write : STD_LOGIC;
     signal merger_50_U0_efinish223_din : STD_LOGIC_VECTOR (0 downto 0);
     signal merger_50_U0_efinish223_write : STD_LOGIC;
-    signal merger_50_U0_ap_start : STD_LOGIC;
-    signal merger_50_U0_ap_done : STD_LOGIC;
-    signal merger_50_U0_ap_ready : STD_LOGIC;
-    signal merger_50_U0_ap_idle : STD_LOGIC;
-    signal merger_50_U0_ap_continue : STD_LOGIC;
     signal ap_sync_reg_merger_50_U0_ap_start : STD_LOGIC := '0';
+    signal merger_51_U0_ap_start : STD_LOGIC;
+    signal merger_51_U0_ap_done : STD_LOGIC;
+    signal merger_51_U0_ap_continue : STD_LOGIC;
+    signal merger_51_U0_ap_idle : STD_LOGIC;
+    signal merger_51_U0_ap_ready : STD_LOGIC;
     signal merger_51_U0_mc_pe3_read : STD_LOGIC;
     signal merger_51_U0_m_pe3_read : STD_LOGIC;
     signal merger_51_U0_result_pe3_din : STD_LOGIC_VECTOR (65 downto 0);
     signal merger_51_U0_result_pe3_write : STD_LOGIC;
     signal merger_51_U0_efinish324_din : STD_LOGIC_VECTOR (0 downto 0);
     signal merger_51_U0_efinish324_write : STD_LOGIC;
-    signal merger_51_U0_ap_start : STD_LOGIC;
-    signal merger_51_U0_ap_done : STD_LOGIC;
-    signal merger_51_U0_ap_ready : STD_LOGIC;
-    signal merger_51_U0_ap_idle : STD_LOGIC;
-    signal merger_51_U0_ap_continue : STD_LOGIC;
     signal ap_sync_reg_merger_51_U0_ap_start : STD_LOGIC := '0';
+    signal merger_52_U0_ap_start : STD_LOGIC;
+    signal merger_52_U0_ap_done : STD_LOGIC;
+    signal merger_52_U0_ap_continue : STD_LOGIC;
+    signal merger_52_U0_ap_idle : STD_LOGIC;
+    signal merger_52_U0_ap_ready : STD_LOGIC;
     signal merger_52_U0_mc_pe4_read : STD_LOGIC;
     signal merger_52_U0_m_pe4_read : STD_LOGIC;
     signal merger_52_U0_result_pe4_din : STD_LOGIC_VECTOR (65 downto 0);
     signal merger_52_U0_result_pe4_write : STD_LOGIC;
     signal merger_52_U0_efinish425_din : STD_LOGIC_VECTOR (0 downto 0);
     signal merger_52_U0_efinish425_write : STD_LOGIC;
-    signal merger_52_U0_ap_start : STD_LOGIC;
-    signal merger_52_U0_ap_done : STD_LOGIC;
-    signal merger_52_U0_ap_ready : STD_LOGIC;
-    signal merger_52_U0_ap_idle : STD_LOGIC;
-    signal merger_52_U0_ap_continue : STD_LOGIC;
     signal ap_sync_reg_merger_52_U0_ap_start : STD_LOGIC := '0';
     signal sub_final_merger_U0_ap_start : STD_LOGIC;
     signal sub_final_merger_U0_ap_done : STD_LOGIC;
@@ -8871,97 +8871,129 @@ architecture behav of spmm is
 
     component spmm_merger IS
     port (
-        mc_pe1_dout : IN STD_LOGIC_VECTOR (65 downto 0);
-        mc_pe1_empty_n : IN STD_LOGIC;
-        mc_pe1_read : OUT STD_LOGIC;
-        m_pe1_dout : IN STD_LOGIC_VECTOR (65 downto 0);
-        m_pe1_empty_n : IN STD_LOGIC;
-        m_pe1_read : OUT STD_LOGIC;
-        result_pe1_din : OUT STD_LOGIC_VECTOR (65 downto 0);
-        result_pe1_full_n : IN STD_LOGIC;
-        result_pe1_write : OUT STD_LOGIC;
-        efinish122_din : OUT STD_LOGIC_VECTOR (0 downto 0);
-        efinish122_full_n : IN STD_LOGIC;
-        efinish122_write : OUT STD_LOGIC;
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
         ap_start : IN STD_LOGIC;
         ap_done : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC );
+        ap_ready : OUT STD_LOGIC;
+        mc_pe1_dout : IN STD_LOGIC_VECTOR (65 downto 0);
+        mc_pe1_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+        mc_pe1_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        mc_pe1_empty_n : IN STD_LOGIC;
+        mc_pe1_read : OUT STD_LOGIC;
+        m_pe1_dout : IN STD_LOGIC_VECTOR (65 downto 0);
+        m_pe1_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        m_pe1_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
+        m_pe1_empty_n : IN STD_LOGIC;
+        m_pe1_read : OUT STD_LOGIC;
+        result_pe1_din : OUT STD_LOGIC_VECTOR (65 downto 0);
+        result_pe1_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        result_pe1_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
+        result_pe1_full_n : IN STD_LOGIC;
+        result_pe1_write : OUT STD_LOGIC;
+        efinish122_din : OUT STD_LOGIC_VECTOR (0 downto 0);
+        efinish122_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+        efinish122_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        efinish122_full_n : IN STD_LOGIC;
+        efinish122_write : OUT STD_LOGIC );
     end component;
 
 
     component spmm_merger_50 IS
     port (
-        mc_pe2_dout : IN STD_LOGIC_VECTOR (65 downto 0);
-        mc_pe2_empty_n : IN STD_LOGIC;
-        mc_pe2_read : OUT STD_LOGIC;
-        m_pe2_dout : IN STD_LOGIC_VECTOR (65 downto 0);
-        m_pe2_empty_n : IN STD_LOGIC;
-        m_pe2_read : OUT STD_LOGIC;
-        result_pe2_din : OUT STD_LOGIC_VECTOR (65 downto 0);
-        result_pe2_full_n : IN STD_LOGIC;
-        result_pe2_write : OUT STD_LOGIC;
-        efinish223_din : OUT STD_LOGIC_VECTOR (0 downto 0);
-        efinish223_full_n : IN STD_LOGIC;
-        efinish223_write : OUT STD_LOGIC;
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
         ap_start : IN STD_LOGIC;
         ap_done : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC );
+        ap_ready : OUT STD_LOGIC;
+        mc_pe2_dout : IN STD_LOGIC_VECTOR (65 downto 0);
+        mc_pe2_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+        mc_pe2_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        mc_pe2_empty_n : IN STD_LOGIC;
+        mc_pe2_read : OUT STD_LOGIC;
+        m_pe2_dout : IN STD_LOGIC_VECTOR (65 downto 0);
+        m_pe2_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        m_pe2_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
+        m_pe2_empty_n : IN STD_LOGIC;
+        m_pe2_read : OUT STD_LOGIC;
+        result_pe2_din : OUT STD_LOGIC_VECTOR (65 downto 0);
+        result_pe2_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        result_pe2_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
+        result_pe2_full_n : IN STD_LOGIC;
+        result_pe2_write : OUT STD_LOGIC;
+        efinish223_din : OUT STD_LOGIC_VECTOR (0 downto 0);
+        efinish223_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+        efinish223_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        efinish223_full_n : IN STD_LOGIC;
+        efinish223_write : OUT STD_LOGIC );
     end component;
 
 
     component spmm_merger_51 IS
     port (
-        mc_pe3_dout : IN STD_LOGIC_VECTOR (65 downto 0);
-        mc_pe3_empty_n : IN STD_LOGIC;
-        mc_pe3_read : OUT STD_LOGIC;
-        m_pe3_dout : IN STD_LOGIC_VECTOR (65 downto 0);
-        m_pe3_empty_n : IN STD_LOGIC;
-        m_pe3_read : OUT STD_LOGIC;
-        result_pe3_din : OUT STD_LOGIC_VECTOR (65 downto 0);
-        result_pe3_full_n : IN STD_LOGIC;
-        result_pe3_write : OUT STD_LOGIC;
-        efinish324_din : OUT STD_LOGIC_VECTOR (0 downto 0);
-        efinish324_full_n : IN STD_LOGIC;
-        efinish324_write : OUT STD_LOGIC;
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
         ap_start : IN STD_LOGIC;
         ap_done : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC );
+        ap_ready : OUT STD_LOGIC;
+        mc_pe3_dout : IN STD_LOGIC_VECTOR (65 downto 0);
+        mc_pe3_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+        mc_pe3_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        mc_pe3_empty_n : IN STD_LOGIC;
+        mc_pe3_read : OUT STD_LOGIC;
+        m_pe3_dout : IN STD_LOGIC_VECTOR (65 downto 0);
+        m_pe3_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        m_pe3_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
+        m_pe3_empty_n : IN STD_LOGIC;
+        m_pe3_read : OUT STD_LOGIC;
+        result_pe3_din : OUT STD_LOGIC_VECTOR (65 downto 0);
+        result_pe3_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        result_pe3_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
+        result_pe3_full_n : IN STD_LOGIC;
+        result_pe3_write : OUT STD_LOGIC;
+        efinish324_din : OUT STD_LOGIC_VECTOR (0 downto 0);
+        efinish324_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+        efinish324_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        efinish324_full_n : IN STD_LOGIC;
+        efinish324_write : OUT STD_LOGIC );
     end component;
 
 
     component spmm_merger_52 IS
     port (
-        mc_pe4_dout : IN STD_LOGIC_VECTOR (65 downto 0);
-        mc_pe4_empty_n : IN STD_LOGIC;
-        mc_pe4_read : OUT STD_LOGIC;
-        m_pe4_dout : IN STD_LOGIC_VECTOR (65 downto 0);
-        m_pe4_empty_n : IN STD_LOGIC;
-        m_pe4_read : OUT STD_LOGIC;
-        result_pe4_din : OUT STD_LOGIC_VECTOR (65 downto 0);
-        result_pe4_full_n : IN STD_LOGIC;
-        result_pe4_write : OUT STD_LOGIC;
-        efinish425_din : OUT STD_LOGIC_VECTOR (0 downto 0);
-        efinish425_full_n : IN STD_LOGIC;
-        efinish425_write : OUT STD_LOGIC;
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
         ap_start : IN STD_LOGIC;
         ap_done : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC );
+        ap_ready : OUT STD_LOGIC;
+        mc_pe4_dout : IN STD_LOGIC_VECTOR (65 downto 0);
+        mc_pe4_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+        mc_pe4_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        mc_pe4_empty_n : IN STD_LOGIC;
+        mc_pe4_read : OUT STD_LOGIC;
+        m_pe4_dout : IN STD_LOGIC_VECTOR (65 downto 0);
+        m_pe4_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        m_pe4_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
+        m_pe4_empty_n : IN STD_LOGIC;
+        m_pe4_read : OUT STD_LOGIC;
+        result_pe4_din : OUT STD_LOGIC_VECTOR (65 downto 0);
+        result_pe4_num_data_valid : IN STD_LOGIC_VECTOR (10 downto 0);
+        result_pe4_fifo_cap : IN STD_LOGIC_VECTOR (10 downto 0);
+        result_pe4_full_n : IN STD_LOGIC;
+        result_pe4_write : OUT STD_LOGIC;
+        efinish425_din : OUT STD_LOGIC_VECTOR (0 downto 0);
+        efinish425_num_data_valid : IN STD_LOGIC_VECTOR (6 downto 0);
+        efinish425_fifo_cap : IN STD_LOGIC_VECTOR (6 downto 0);
+        efinish425_full_n : IN STD_LOGIC;
+        efinish425_write : OUT STD_LOGIC );
     end component;
 
 
@@ -9770,7 +9802,7 @@ architecture behav of spmm is
     end component;
 
 
-    component spmm_fifo_w66_d1000_A_x2 IS
+    component spmm_fifo_w66_d1000_A IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -18625,91 +18657,123 @@ begin
 
     merger_U0 : component spmm_merger
     port map (
-        mc_pe1_dout => mc_pe1_dout,
-        mc_pe1_empty_n => mc_pe1_empty_n,
-        mc_pe1_read => merger_U0_mc_pe1_read,
-        m_pe1_dout => m_pe1_dout,
-        m_pe1_empty_n => m_pe1_empty_n,
-        m_pe1_read => merger_U0_m_pe1_read,
-        result_pe1_din => merger_U0_result_pe1_din,
-        result_pe1_full_n => result_pe1_full_n,
-        result_pe1_write => merger_U0_result_pe1_write,
-        efinish122_din => merger_U0_efinish122_din,
-        efinish122_full_n => efinish1_full_n,
-        efinish122_write => merger_U0_efinish122_write,
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
         ap_start => merger_U0_ap_start,
         ap_done => merger_U0_ap_done,
-        ap_ready => merger_U0_ap_ready,
+        ap_continue => merger_U0_ap_continue,
         ap_idle => merger_U0_ap_idle,
-        ap_continue => merger_U0_ap_continue);
+        ap_ready => merger_U0_ap_ready,
+        mc_pe1_dout => mc_pe1_dout,
+        mc_pe1_num_data_valid => mc_pe1_num_data_valid,
+        mc_pe1_fifo_cap => mc_pe1_fifo_cap,
+        mc_pe1_empty_n => mc_pe1_empty_n,
+        mc_pe1_read => merger_U0_mc_pe1_read,
+        m_pe1_dout => m_pe1_dout,
+        m_pe1_num_data_valid => m_pe1_num_data_valid,
+        m_pe1_fifo_cap => m_pe1_fifo_cap,
+        m_pe1_empty_n => m_pe1_empty_n,
+        m_pe1_read => merger_U0_m_pe1_read,
+        result_pe1_din => merger_U0_result_pe1_din,
+        result_pe1_num_data_valid => result_pe1_num_data_valid,
+        result_pe1_fifo_cap => result_pe1_fifo_cap,
+        result_pe1_full_n => result_pe1_full_n,
+        result_pe1_write => merger_U0_result_pe1_write,
+        efinish122_din => merger_U0_efinish122_din,
+        efinish122_num_data_valid => efinish1_num_data_valid,
+        efinish122_fifo_cap => efinish1_fifo_cap,
+        efinish122_full_n => efinish1_full_n,
+        efinish122_write => merger_U0_efinish122_write);
 
     merger_50_U0 : component spmm_merger_50
     port map (
-        mc_pe2_dout => mc_pe2_dout,
-        mc_pe2_empty_n => mc_pe2_empty_n,
-        mc_pe2_read => merger_50_U0_mc_pe2_read,
-        m_pe2_dout => m_pe2_dout,
-        m_pe2_empty_n => m_pe2_empty_n,
-        m_pe2_read => merger_50_U0_m_pe2_read,
-        result_pe2_din => merger_50_U0_result_pe2_din,
-        result_pe2_full_n => result_pe2_full_n,
-        result_pe2_write => merger_50_U0_result_pe2_write,
-        efinish223_din => merger_50_U0_efinish223_din,
-        efinish223_full_n => efinish2_full_n,
-        efinish223_write => merger_50_U0_efinish223_write,
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
         ap_start => merger_50_U0_ap_start,
         ap_done => merger_50_U0_ap_done,
-        ap_ready => merger_50_U0_ap_ready,
+        ap_continue => merger_50_U0_ap_continue,
         ap_idle => merger_50_U0_ap_idle,
-        ap_continue => merger_50_U0_ap_continue);
+        ap_ready => merger_50_U0_ap_ready,
+        mc_pe2_dout => mc_pe2_dout,
+        mc_pe2_num_data_valid => mc_pe2_num_data_valid,
+        mc_pe2_fifo_cap => mc_pe2_fifo_cap,
+        mc_pe2_empty_n => mc_pe2_empty_n,
+        mc_pe2_read => merger_50_U0_mc_pe2_read,
+        m_pe2_dout => m_pe2_dout,
+        m_pe2_num_data_valid => m_pe2_num_data_valid,
+        m_pe2_fifo_cap => m_pe2_fifo_cap,
+        m_pe2_empty_n => m_pe2_empty_n,
+        m_pe2_read => merger_50_U0_m_pe2_read,
+        result_pe2_din => merger_50_U0_result_pe2_din,
+        result_pe2_num_data_valid => result_pe2_num_data_valid,
+        result_pe2_fifo_cap => result_pe2_fifo_cap,
+        result_pe2_full_n => result_pe2_full_n,
+        result_pe2_write => merger_50_U0_result_pe2_write,
+        efinish223_din => merger_50_U0_efinish223_din,
+        efinish223_num_data_valid => efinish2_num_data_valid,
+        efinish223_fifo_cap => efinish2_fifo_cap,
+        efinish223_full_n => efinish2_full_n,
+        efinish223_write => merger_50_U0_efinish223_write);
 
     merger_51_U0 : component spmm_merger_51
     port map (
-        mc_pe3_dout => mc_pe3_dout,
-        mc_pe3_empty_n => mc_pe3_empty_n,
-        mc_pe3_read => merger_51_U0_mc_pe3_read,
-        m_pe3_dout => m_pe3_dout,
-        m_pe3_empty_n => m_pe3_empty_n,
-        m_pe3_read => merger_51_U0_m_pe3_read,
-        result_pe3_din => merger_51_U0_result_pe3_din,
-        result_pe3_full_n => result_pe3_full_n,
-        result_pe3_write => merger_51_U0_result_pe3_write,
-        efinish324_din => merger_51_U0_efinish324_din,
-        efinish324_full_n => efinish3_full_n,
-        efinish324_write => merger_51_U0_efinish324_write,
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
         ap_start => merger_51_U0_ap_start,
         ap_done => merger_51_U0_ap_done,
-        ap_ready => merger_51_U0_ap_ready,
+        ap_continue => merger_51_U0_ap_continue,
         ap_idle => merger_51_U0_ap_idle,
-        ap_continue => merger_51_U0_ap_continue);
+        ap_ready => merger_51_U0_ap_ready,
+        mc_pe3_dout => mc_pe3_dout,
+        mc_pe3_num_data_valid => mc_pe3_num_data_valid,
+        mc_pe3_fifo_cap => mc_pe3_fifo_cap,
+        mc_pe3_empty_n => mc_pe3_empty_n,
+        mc_pe3_read => merger_51_U0_mc_pe3_read,
+        m_pe3_dout => m_pe3_dout,
+        m_pe3_num_data_valid => m_pe3_num_data_valid,
+        m_pe3_fifo_cap => m_pe3_fifo_cap,
+        m_pe3_empty_n => m_pe3_empty_n,
+        m_pe3_read => merger_51_U0_m_pe3_read,
+        result_pe3_din => merger_51_U0_result_pe3_din,
+        result_pe3_num_data_valid => result_pe3_num_data_valid,
+        result_pe3_fifo_cap => result_pe3_fifo_cap,
+        result_pe3_full_n => result_pe3_full_n,
+        result_pe3_write => merger_51_U0_result_pe3_write,
+        efinish324_din => merger_51_U0_efinish324_din,
+        efinish324_num_data_valid => efinish3_num_data_valid,
+        efinish324_fifo_cap => efinish3_fifo_cap,
+        efinish324_full_n => efinish3_full_n,
+        efinish324_write => merger_51_U0_efinish324_write);
 
     merger_52_U0 : component spmm_merger_52
     port map (
-        mc_pe4_dout => mc_pe4_dout,
-        mc_pe4_empty_n => mc_pe4_empty_n,
-        mc_pe4_read => merger_52_U0_mc_pe4_read,
-        m_pe4_dout => m_pe4_dout,
-        m_pe4_empty_n => m_pe4_empty_n,
-        m_pe4_read => merger_52_U0_m_pe4_read,
-        result_pe4_din => merger_52_U0_result_pe4_din,
-        result_pe4_full_n => result_pe4_full_n,
-        result_pe4_write => merger_52_U0_result_pe4_write,
-        efinish425_din => merger_52_U0_efinish425_din,
-        efinish425_full_n => efinish4_full_n,
-        efinish425_write => merger_52_U0_efinish425_write,
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
         ap_start => merger_52_U0_ap_start,
         ap_done => merger_52_U0_ap_done,
-        ap_ready => merger_52_U0_ap_ready,
+        ap_continue => merger_52_U0_ap_continue,
         ap_idle => merger_52_U0_ap_idle,
-        ap_continue => merger_52_U0_ap_continue);
+        ap_ready => merger_52_U0_ap_ready,
+        mc_pe4_dout => mc_pe4_dout,
+        mc_pe4_num_data_valid => mc_pe4_num_data_valid,
+        mc_pe4_fifo_cap => mc_pe4_fifo_cap,
+        mc_pe4_empty_n => mc_pe4_empty_n,
+        mc_pe4_read => merger_52_U0_mc_pe4_read,
+        m_pe4_dout => m_pe4_dout,
+        m_pe4_num_data_valid => m_pe4_num_data_valid,
+        m_pe4_fifo_cap => m_pe4_fifo_cap,
+        m_pe4_empty_n => m_pe4_empty_n,
+        m_pe4_read => merger_52_U0_m_pe4_read,
+        result_pe4_din => merger_52_U0_result_pe4_din,
+        result_pe4_num_data_valid => result_pe4_num_data_valid,
+        result_pe4_fifo_cap => result_pe4_fifo_cap,
+        result_pe4_full_n => result_pe4_full_n,
+        result_pe4_write => merger_52_U0_result_pe4_write,
+        efinish425_din => merger_52_U0_efinish425_din,
+        efinish425_num_data_valid => efinish4_num_data_valid,
+        efinish425_fifo_cap => efinish4_fifo_cap,
+        efinish425_full_n => efinish4_full_n,
+        efinish425_write => merger_52_U0_efinish425_write);
 
     sub_final_merger_U0 : component spmm_sub_final_merger
     port map (
@@ -21920,7 +21984,7 @@ begin
         if_empty_n => efinish4_empty_n,
         if_read => pe_46_U0_efinish425_read);
 
-    m_pe1_U : component spmm_fifo_w66_d1000_A_x2
+    m_pe1_U : component spmm_fifo_w66_d1000_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -21935,7 +21999,7 @@ begin
         if_empty_n => m_pe1_empty_n,
         if_read => merger_U0_m_pe1_read);
 
-    m_pe2_U : component spmm_fifo_w66_d1000_A_x2
+    m_pe2_U : component spmm_fifo_w66_d1000_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -21950,7 +22014,7 @@ begin
         if_empty_n => m_pe2_empty_n,
         if_read => merger_50_U0_m_pe2_read);
 
-    m_pe3_U : component spmm_fifo_w66_d1000_A_x2
+    m_pe3_U : component spmm_fifo_w66_d1000_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -21965,7 +22029,7 @@ begin
         if_empty_n => m_pe3_empty_n,
         if_read => merger_51_U0_m_pe3_read);
 
-    m_pe4_U : component spmm_fifo_w66_d1000_A_x2
+    m_pe4_U : component spmm_fifo_w66_d1000_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -21980,7 +22044,7 @@ begin
         if_empty_n => m_pe4_empty_n,
         if_read => merger_52_U0_m_pe4_read);
 
-    result_pe1_U : component spmm_fifo_w66_d1000_A_x2
+    result_pe1_U : component spmm_fifo_w66_d1000_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -21995,7 +22059,7 @@ begin
         if_empty_n => result_pe1_empty_n,
         if_read => sub_final_merger_U0_result_pe1_read);
 
-    result_pe2_U : component spmm_fifo_w66_d1000_A_x2
+    result_pe2_U : component spmm_fifo_w66_d1000_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -22010,7 +22074,7 @@ begin
         if_empty_n => result_pe2_empty_n,
         if_read => sub_final_merger_U0_result_pe2_read);
 
-    result_pe3_U : component spmm_fifo_w66_d1000_A_x2
+    result_pe3_U : component spmm_fifo_w66_d1000_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -22025,7 +22089,7 @@ begin
         if_empty_n => result_pe3_empty_n,
         if_read => sub_final_merger_53_U0_result_pe3_read);
 
-    result_pe4_U : component spmm_fifo_w66_d1000_A_x2
+    result_pe4_U : component spmm_fifo_w66_d1000_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -22040,7 +22104,7 @@ begin
         if_empty_n => result_pe4_empty_n,
         if_read => sub_final_merger_53_U0_result_pe4_read);
 
-    final_merger_1_U : component spmm_fifo_w66_d1000_A_x2
+    final_merger_1_U : component spmm_fifo_w66_d1000_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -22055,7 +22119,7 @@ begin
         if_empty_n => final_merger_1_empty_n,
         if_read => final_merger_U0_final_merger_1_read);
 
-    final_merger_2_U : component spmm_fifo_w66_d1000_A_x2
+    final_merger_2_U : component spmm_fifo_w66_d1000_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -22070,7 +22134,7 @@ begin
         if_empty_n => final_merger_2_empty_n,
         if_read => final_merger_U0_final_merger_2_read);
 
-    final_merger_3_U : component spmm_fifo_w66_d1000_A_x2
+    final_merger_3_U : component spmm_fifo_w66_d1000_A
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,

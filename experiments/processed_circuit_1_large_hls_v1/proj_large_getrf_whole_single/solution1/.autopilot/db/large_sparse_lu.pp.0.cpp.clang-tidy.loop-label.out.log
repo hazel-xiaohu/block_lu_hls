@@ -1,0 +1,268 @@
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6896:5: warning: Added loop label VITIS_LOOP_29_1:   [xilinx-label-all-loops]
+    for (lslu_id_t i=0; i<n; ++i) {
+    ^~~
+    VITIS_LOOP_29_1: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6896:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6898:9: warning: Added loop label VITIS_LOOP_31_2:   [xilinx-label-all-loops]
+        for (lslu_id_t p=l_ptr[i]; p<l_ptr[i+1]; ++p) {
+        ^~~
+        VITIS_LOOP_31_2: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6898:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6902:9: warning: Added loop label VITIS_LOOP_35_3:   [xilinx-label-all-loops]
+        for (lslu_id_t p=u_ptr[i]; p<u_ptr[i+1]; ++p) {
+        ^~~
+        VITIS_LOOP_35_3: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6902:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6906:9: warning: Added loop label VITIS_LOOP_39_4:   [xilinx-label-all-loops]
+        for (lslu_id_t p=a_ptr[i]; p<a_ptr[i+1]; ++p) {
+        ^~~
+        VITIS_LOOP_39_4: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6906:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6912:9: warning: Added loop label VITIS_LOOP_45_5:   [xilinx-label-all-loops]
+        for (lslu_id_t p=l_ptr[i]; p<l_ptr[i+1]; ++p) {
+        ^~~
+        VITIS_LOOP_45_5: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6912:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6919:13: warning: Added loop label VITIS_LOOP_52_6:   [xilinx-label-all-loops]
+            for (lslu_id_t q=u_diag_pos[k]+1; q<u_ptr[k+1]; ++q) {
+            ^~~
+            VITIS_LOOP_52_6: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6919:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6926:9: warning: Added loop label VITIS_LOOP_59_7:   [xilinx-label-all-loops]
+        for (lslu_id_t p=u_ptr[i]; p<u_ptr[i+1]; ++p) {
+        ^~~
+        VITIS_LOOP_59_7: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6926:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6958:5: warning: Added loop label VITIS_LOOP_91_1:   [xilinx-label-all-loops]
+    for (lslu_id_t ac=0; ac<active_count; ++ac) {
+    ^~~
+    VITIS_LOOP_91_1: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6958:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6960:9: warning: Added loop label VITIS_LOOP_93_2:   [xilinx-label-all-loops]
+        for (lslu_id_t i=0;i<n;++i) work[i]=0;
+        ^~~
+        VITIS_LOOP_93_2: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6960:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6961:9: warning: Added loop label VITIS_LOOP_94_3:   [xilinx-label-all-loops]
+        for (lslu_id_t p=b_ptr[col];p<b_ptr[col+1];++p) work[b_idx[p]]+=b_val[p];
+        ^~~
+        VITIS_LOOP_94_3: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6961:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6962:9: warning: Added loop label VITIS_LOOP_95_4:   [xilinx-label-all-loops]
+        for (lslu_id_t i=0;i<n;++i)
+        ^~~
+        VITIS_LOOP_95_4: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6962:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6963:13: warning: Added loop label VITIS_LOOP_96_5:   [xilinx-label-all-loops]
+            for (lslu_id_t p=l_ptr[i];p<l_ptr[i+1];++p) {
+            ^~~
+            VITIS_LOOP_96_5: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6963:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6967:9: warning: Added loop label VITIS_LOOP_100_6:   [xilinx-label-all-loops]
+        for (lslu_id_t p=x_ptr[col];p<x_ptr[col+1];++p) {
+        ^~~
+        VITIS_LOOP_100_6: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6967:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6998:5: warning: Added loop label VITIS_LOOP_131_1:   [xilinx-label-all-loops]
+    for (lslu_id_t ar=0; ar<active_count; ++ar) {
+    ^~~
+    VITIS_LOOP_131_1: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:6998:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7000:9: warning: Added loop label VITIS_LOOP_133_2:   [xilinx-label-all-loops]
+        for (lslu_id_t j=0;j<n;++j) work[j]=0;
+        ^~~
+        VITIS_LOOP_133_2: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7000:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7001:9: warning: Added loop label VITIS_LOOP_134_3:   [xilinx-label-all-loops]
+        for (lslu_id_t p=b_ptr[row];p<b_ptr[row+1];++p) work[b_idx[p]]+=b_val[p];
+        ^~~
+        VITIS_LOOP_134_3: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7001:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7002:9: warning: Added loop label VITIS_LOOP_135_4:   [xilinx-label-all-loops]
+        for (lslu_id_t j=0;j<n;++j) {
+        ^~~
+        VITIS_LOOP_135_4: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7002:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7003:13: warning: Added loop label VITIS_LOOP_136_5:   [xilinx-label-all-loops]
+            for (lslu_id_t p=u_col_ptr[j];p<u_col_ptr[j+1];++p) {
+            ^~~
+            VITIS_LOOP_136_5: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7003:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7011:9: warning: Added loop label VITIS_LOOP_144_6:   [xilinx-label-all-loops]
+        for (lslu_id_t p=x_ptr[row];p<x_ptr[row+1];++p) x_val[p]=work[x_idx[p]];
+        ^~~
+        VITIS_LOOP_144_6: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7011:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7038:5: warning: Added loop label VITIS_LOOP_171_1:   [xilinx-label-all-loops]
+    for (lslu_id_t i=0;i<rows;++i) {
+    ^~~
+    VITIS_LOOP_171_1: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7038:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7040:9: warning: Added loop label VITIS_LOOP_173_2:   [xilinx-label-all-loops]
+        for (lslu_id_t p=s_ptr[i];p<s_ptr[i+1];++p) {
+        ^~~
+        VITIS_LOOP_173_2: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7040:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7043:9: warning: Added loop label VITIS_LOOP_176_3:   [xilinx-label-all-loops]
+        for (lslu_id_t p=a_ptr[i];p<a_ptr[i+1];++p) {
+        ^~~
+        VITIS_LOOP_176_3: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7043:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7048:9: warning: Added loop label VITIS_LOOP_181_4:   [xilinx-label-all-loops]
+        for (lslu_id_t p=l_ptr[i];p<l_ptr[i+1];++p) {
+        ^~~
+        VITIS_LOOP_181_4: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7048:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7050:13: warning: Added loop label VITIS_LOOP_183_5:   [xilinx-label-all-loops]
+            for (lslu_id_t q=u_ptr[k];q<u_ptr[k+1];++q) {
+            ^~~
+            VITIS_LOOP_183_5: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7050:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7056:9: warning: Added loop label VITIS_LOOP_189_6:   [xilinx-label-all-loops]
+        for (lslu_id_t p=s_ptr[i];p<s_ptr[i+1];++p) s_val[p]=work[s_idx[p]];
+        ^~~
+        VITIS_LOOP_189_6: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7056:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7090:43: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=lp type=ram_1p impl=bram
+                                          ^
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7091:43: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=li type=ram_1p impl=bram
+                                          ^
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7092:43: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=lv type=ram_1p impl=bram
+                                          ^
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7093:42: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=w type=ram_2p impl=bram
+                                         ^
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7096:2: warning: Added loop label VITIS_LOOP_247_1:   [xilinx-label-all-loops]
+ for (lslu_id_t i=0; i<=n; ++i) lp[i] = l_ptr[i];
+ ^~~
+ VITIS_LOOP_247_1: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7096:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7098:5: warning: Added loop label VITIS_LOOP_249_2:   [xilinx-label-all-loops]
+    for (lslu_id_t p=0; p<lp[n]; ++p) { li[p]=l_idx[p]; lv[p]=l_val[p]; }
+    ^~~
+    VITIS_LOOP_249_2: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7098:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7099:5: warning: Added loop label VITIS_LOOP_250_3:   [xilinx-label-all-loops]
+    for (lslu_id_t base=0; base<active_count; base+=4) {
+    ^~~
+    VITIS_LOOP_250_3: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7099:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7100:9: warning: Added loop label VITIS_LOOP_251_4:   [xilinx-label-all-loops]
+        for (lslu_id_t lane=0; lane<4; ++lane) {
+        ^~~
+        VITIS_LOOP_251_4: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7100:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7106:13: warning: Added loop label VITIS_LOOP_257_5:   [xilinx-label-all-loops]
+            for (lslu_id_t i=0; i<n; ++i) {
+            ^~~
+            VITIS_LOOP_257_5: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7106:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7110:13: warning: Added loop label VITIS_LOOP_261_6:   [xilinx-label-all-loops]
+            for (lslu_id_t p=b_ptr[col]; p<b_ptr[col+1]; ++p) {
+            ^~~
+            VITIS_LOOP_261_6: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7110:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7114:13: warning: Added loop label VITIS_LOOP_265_7:   [xilinx-label-all-loops]
+            for (lslu_id_t i=0; i<n; ++i) {
+            ^~~
+            VITIS_LOOP_265_7: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7114:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7115:17: warning: Added loop label VITIS_LOOP_266_8:   [xilinx-label-all-loops]
+                for (lslu_id_t p=lp[i]; p<lp[i+1]; ++p) {
+                ^~~
+                VITIS_LOOP_266_8: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7115:17: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7122:13: warning: Added loop label VITIS_LOOP_273_9:   [xilinx-label-all-loops]
+            for (lslu_id_t p=x_ptr[col]; p<x_ptr[col+1]; ++p) {
+            ^~~
+            VITIS_LOOP_273_9: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7122:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7128:9: warning: Added loop label VITIS_LOOP_279_10:   [xilinx-label-all-loops]
+        for (lslu_id_t lane=0; lane<4; ++lane) {
+        ^~~
+        VITIS_LOOP_279_10: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7128:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7170:43: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=up type=ram_1p impl=bram
+                                          ^
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7171:43: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=ur type=ram_1p impl=bram
+                                          ^
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7172:43: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=um type=ram_1p impl=bram
+                                          ^
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7173:43: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=ud type=ram_1p impl=bram
+                                          ^
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7174:43: error: Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=uv type=ram_1p impl=bram
+                                          ^
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7175:51: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=diag_recip type=ram_2p impl=bram
+                                                  ^
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7176:42: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=w type=ram_2p impl=bram
+                                         ^
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7179:2: warning: Added loop label VITIS_LOOP_330_1:   [xilinx-label-all-loops]
+ for (lslu_id_t j=0; j<=n; ++j) up[j]=u_col_ptr[j];
+ ^~~
+ VITIS_LOOP_330_1: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7179:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7181:5: warning: Added loop label VITIS_LOOP_332_2:   [xilinx-label-all-loops]
+    for (lslu_id_t j=0; j<n; ++j) ud[j]=u_diag_pos[j];
+    ^~~
+    VITIS_LOOP_332_2: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7181:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7182:5: warning: Added loop label VITIS_LOOP_333_3:   [xilinx-label-all-loops]
+    for (lslu_id_t p=0; p<up[n]; ++p) {
+    ^~~
+    VITIS_LOOP_333_3: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7182:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7189:5: warning: Added loop label VITIS_LOOP_340_4:   [xilinx-label-all-loops]
+    for (lslu_id_t j=0; j<n; ++j) {
+    ^~~
+    VITIS_LOOP_340_4: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7189:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7201:5: warning: Added loop label VITIS_LOOP_352_5:   [xilinx-label-all-loops]
+    for (lslu_id_t base=0; base<active_count; base+=4) {
+    ^~~
+    VITIS_LOOP_352_5: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7201:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7202:9: warning: Added loop label VITIS_LOOP_353_6:   [xilinx-label-all-loops]
+        for (lslu_id_t lane=0; lane<4; ++lane) {
+        ^~~
+        VITIS_LOOP_353_6: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7202:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7208:13: warning: Added loop label VITIS_LOOP_359_7:   [xilinx-label-all-loops]
+            for (lslu_id_t j=0; j<n; ++j) {
+            ^~~
+            VITIS_LOOP_359_7: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7208:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7212:13: warning: Added loop label VITIS_LOOP_363_8:   [xilinx-label-all-loops]
+            for (lslu_id_t p=b_ptr[row]; p<b_ptr[row+1]; ++p) {
+            ^~~
+            VITIS_LOOP_363_8: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7212:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7216:13: warning: Added loop label VITIS_LOOP_367_9:   [xilinx-label-all-loops]
+            for (lslu_id_t j=0; j<n; ++j) {
+            ^~~
+            VITIS_LOOP_367_9: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7216:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7217:17: warning: Added loop label VITIS_LOOP_368_10:   [xilinx-label-all-loops]
+                for (lslu_id_t p=up[j]; p<up[j+1]; ++p) {
+                ^~~
+                VITIS_LOOP_368_10: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7217:17: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7227:13: warning: Added loop label VITIS_LOOP_378_11:   [xilinx-label-all-loops]
+            for (lslu_id_t p=x_ptr[row]; p<x_ptr[row+1]; ++p) {
+            ^~~
+            VITIS_LOOP_378_11: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7227:13: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7232:9: warning: Added loop label VITIS_LOOP_383_12:   [xilinx-label-all-loops]
+        for (lslu_id_t lane=0; lane<4; ++lane) {
+        ^~~
+        VITIS_LOOP_383_12: 
+/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_whole_single/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp:7232:9: note: FIX-IT applied suggested code changes

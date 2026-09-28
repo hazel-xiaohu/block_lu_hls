@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          153617
+        Offset:          153936
         Length:          0
         ReplacementText: 'VITIS_LOOP_1211_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          361137
+        Offset:          361456
         Length:          0
         ReplacementText: 'VITIS_LOOP_676_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -25,7 +25,7 @@ Diagnostics:
     FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          361576
+        Offset:          361895
         Length:          0
         ReplacementText: 'VITIS_LOOP_690_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -34,7 +34,7 @@ Diagnostics:
     FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          362016
+        Offset:          362335
         Length:          0
         ReplacementText: 'VITIS_LOOP_704_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -43,7 +43,7 @@ Diagnostics:
     FilePath:        /output/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          623893
+        Offset:          624212
         Length:          0
         ReplacementText: 'VITIS_LOOP_1245_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          989740
+        Offset:          990059
         Length:          0
         ReplacementText: 'VITIS_LOOP_9_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -61,7 +61,7 @@ Diagnostics:
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          990402
+        Offset:          990721
         Length:          0
         ReplacementText: 'VITIS_LOOP_40_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -70,7 +70,7 @@ Diagnostics:
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          991209
+        Offset:          991528
         Length:          0
         ReplacementText: 'VITIS_LOOP_73_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -79,90 +79,80 @@ Diagnostics:
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          991364
+        Offset:          991683
         Length:          0
         ReplacementText: 'VITIS_LOOP_79_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_87_3:  '
-    FileOffset:      87
+    Message:         'Added loop label VITIS_LOOP_91_3:  '
+    FileOffset:      91
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          991576
+        Offset:          991958
         Length:          0
-        ReplacementText: 'VITIS_LOOP_87_3: '
+        ReplacementText: 'VITIS_LOOP_91_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_125_1:  '
-    FileOffset:      125
+    Message:         'Added loop label VITIS_LOOP_129_1:  '
+    FileOffset:      129
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          992445
+        Offset:          992827
         Length:          0
-        ReplacementText: 'VITIS_LOOP_125_1: '
+        ReplacementText: 'VITIS_LOOP_129_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_154_1:  '
-    FileOffset:      154
+    Message:         'Added loop label VITIS_LOOP_158_1:  '
+    FileOffset:      158
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          993075
+        Offset:          993457
         Length:          0
-        ReplacementText: 'VITIS_LOOP_154_1: '
+        ReplacementText: 'VITIS_LOOP_158_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_160_2:  '
-    FileOffset:      160
+    Message:         'Added loop label VITIS_LOOP_164_2:  '
+    FileOffset:      164
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          993241
+        Offset:          993623
         Length:          0
-        ReplacementText: 'VITIS_LOOP_160_2: '
+        ReplacementText: 'VITIS_LOOP_164_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_199_1:  '
-    FileOffset:      199
+    Message:         'Added loop label VITIS_LOOP_203_1:  '
+    FileOffset:      203
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          994299
+        Offset:          994681
         Length:          0
-        ReplacementText: 'VITIS_LOOP_199_1: '
+        ReplacementText: 'VITIS_LOOP_203_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_207_2:  '
-    FileOffset:      207
+    Message:         'Added loop label VITIS_LOOP_211_2:  '
+    FileOffset:      211
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          994591
+        Offset:          994973
         Length:          0
-        ReplacementText: 'VITIS_LOOP_207_2: '
+        ReplacementText: 'VITIS_LOOP_211_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_253_1:  '
-    FileOffset:      253
+    Message:         'Added loop label VITIS_LOOP_257_1:  '
+    FileOffset:      257
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          995932
+        Offset:          996314
         Length:          0
-        ReplacementText: 'VITIS_LOOP_253_1: '
+        ReplacementText: 'VITIS_LOOP_257_1: '
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      292
+    FileOffset:      296
     FilePath:        rcache.cpp
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
     Message:         'Invalid Directive: for current device, ram_1p + lutram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      295
-    FilePath:        rcache.cpp
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
     FileOffset:      299
-    FilePath:        rcache.cpp
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      301
     FilePath:        rcache.cpp
     Replacements:    
   - DiagnosticName:  clang-diagnostic-error
@@ -195,58 +185,68 @@ Diagnostics:
     FileOffset:      313
     FilePath:        rcache.cpp
     Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      315
+    FilePath:        rcache.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      317
+    FilePath:        rcache.cpp
+    Replacements:    
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_332_1:  '
-    FileOffset:      332
+    Message:         'Added loop label VITIS_LOOP_336_1:  '
+    FileOffset:      336
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          998054
+        Offset:          998436
         Length:          0
-        ReplacementText: 'VITIS_LOOP_332_1: '
+        ReplacementText: 'VITIS_LOOP_336_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_334_2:  '
-    FileOffset:      334
+    Message:         'Added loop label VITIS_LOOP_338_2:  '
+    FileOffset:      338
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          998109
+        Offset:          998491
         Length:          0
-        ReplacementText: 'VITIS_LOOP_334_2: '
+        ReplacementText: 'VITIS_LOOP_338_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_346_3:  '
-    FileOffset:      346
+    Message:         'Added loop label VITIS_LOOP_350_3:  '
+    FileOffset:      350
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          998467
+        Offset:          998849
         Length:          0
-        ReplacementText: 'VITIS_LOOP_346_3: '
+        ReplacementText: 'VITIS_LOOP_350_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_359_4:  '
-    FileOffset:      359
+    Message:         'Added loop label VITIS_LOOP_363_4:  '
+    FileOffset:      363
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          998677
+        Offset:          999059
         Length:          0
-        ReplacementText: 'VITIS_LOOP_359_4: '
+        ReplacementText: 'VITIS_LOOP_363_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_373_5:  '
-    FileOffset:      373
+    Message:         'Added loop label VITIS_LOOP_377_5:  '
+    FileOffset:      377
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          999033
+        Offset:          999415
         Length:          0
-        ReplacementText: 'VITIS_LOOP_373_5: '
+        ReplacementText: 'VITIS_LOOP_377_5: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_432_6:  '
-    FileOffset:      432
+    Message:         'Added loop label VITIS_LOOP_436_6:  '
+    FileOffset:      436
     FilePath:        rcache.cpp
     Replacements:    
       - FilePath:        /output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/rcache.pp.0.cpp
-        Offset:          1000591
+        Offset:          1000973
         Length:          0
-        ReplacementText: 'VITIS_LOOP_432_6: '
+        ReplacementText: 'VITIS_LOOP_436_6: '
 ...

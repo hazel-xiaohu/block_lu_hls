@@ -1,0 +1,4 @@
+kernel,end_marker_ps,clock_period_ns,start_marker_ps,cycles,latency_ms,status
+gessm_v2,20848583000,5,113000,4169694,20.84847,PASS
+tstrf_v2,32508353000,5,113000,6501648,32.50824,PASS
+tstrf_v2_recip,24675563000,5,113000,4935090,24.67545,PASS

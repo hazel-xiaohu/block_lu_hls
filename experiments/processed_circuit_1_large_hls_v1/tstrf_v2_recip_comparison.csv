@@ -1,0 +1,3 @@
+version,cycles,latency_ms,divisions,status
+tstrf_v2_original,6501648,32.50824,107584,PASS
+tstrf_v2_reciprocal,4935090,24.67545,1312,PASS

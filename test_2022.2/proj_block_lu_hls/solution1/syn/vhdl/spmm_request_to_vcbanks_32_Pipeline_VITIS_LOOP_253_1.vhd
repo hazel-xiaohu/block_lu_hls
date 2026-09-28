@@ -95,7 +95,7 @@ attribute shreg_extract : string;
     signal ap_block_state1_pp0_stage0_iter0 : BOOLEAN;
     signal tmp_s_reg_563 : STD_LOGIC_VECTOR (0 downto 0);
     signal enable_reg_567 : STD_LOGIC_VECTOR (0 downto 0);
-    signal tmp_66_reg_611 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_69_reg_611 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_predicate_op55_write_state2 : BOOLEAN;
     signal ap_predicate_op57_write_state2 : BOOLEAN;
     signal ap_block_state2_pp0_stage0_iter1 : BOOLEAN;
@@ -369,7 +369,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((enable_fu_256_p1 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (tmp_s_nbreadreq_fu_172_p3 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
                 tmp_110_reg_615 <= crequest2_dout(208 downto 1);
-                tmp_66_reg_611 <= B_rlen_curr_addr_fu_370_p2(4 downto 4);
+                tmp_69_reg_611 <= B_rlen_curr_addr_fu_370_p2(4 downto 4);
             end if;
         end if;
     end process;
@@ -474,15 +474,15 @@ begin
 
     ap_loop_exit_ready <= ap_condition_exit_pp0_iter0_stage0;
 
-    ap_predicate_op55_write_state2_assign_proc : process(tmp_s_reg_563, enable_reg_567, tmp_66_reg_611)
+    ap_predicate_op55_write_state2_assign_proc : process(tmp_s_reg_563, enable_reg_567, tmp_69_reg_611)
     begin
-                ap_predicate_op55_write_state2 <= ((tmp_66_reg_611 = ap_const_lv1_0) and (enable_reg_567 = ap_const_lv1_0) and (tmp_s_reg_563 = ap_const_lv1_1));
+                ap_predicate_op55_write_state2 <= ((tmp_69_reg_611 = ap_const_lv1_0) and (enable_reg_567 = ap_const_lv1_0) and (tmp_s_reg_563 = ap_const_lv1_1));
     end process;
 
 
-    ap_predicate_op57_write_state2_assign_proc : process(tmp_s_reg_563, enable_reg_567, tmp_66_reg_611)
+    ap_predicate_op57_write_state2_assign_proc : process(tmp_s_reg_563, enable_reg_567, tmp_69_reg_611)
     begin
-                ap_predicate_op57_write_state2 <= ((tmp_66_reg_611 = ap_const_lv1_1) and (enable_reg_567 = ap_const_lv1_0) and (tmp_s_reg_563 = ap_const_lv1_1));
+                ap_predicate_op57_write_state2 <= ((tmp_69_reg_611 = ap_const_lv1_1) and (enable_reg_567 = ap_const_lv1_0) and (tmp_s_reg_563 = ap_const_lv1_1));
     end process;
 
 

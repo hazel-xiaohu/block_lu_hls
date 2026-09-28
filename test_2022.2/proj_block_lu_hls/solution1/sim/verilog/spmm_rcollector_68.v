@@ -81,8 +81,8 @@ reg    rblock4_blk_n;
 wire    ap_CS_fsm_state4;
 reg   [0:0] tmp_s_reg_340;
 wire   [0:0] temp_control_end_fu_139_p3;
-wire   [2:0] trunc_ln157_fu_135_p1;
-reg   [2:0] trunc_ln157_reg_344;
+wire   [2:0] trunc_ln161_fu_135_p1;
+reg   [2:0] trunc_ln161_reg_344;
 reg   [1:0] temp_control_type_V_reg_352;
 wire   [6:0] rem_fu_167_p3;
 reg   [6:0] rem_reg_358;
@@ -98,18 +98,18 @@ reg   [31:0] result_request_Acid_fu_92;
 reg   [1:0] result_request_type_V_fu_96;
 reg    ap_predicate_op36_write_state2;
 reg    ap_block_state2;
-wire   [229:0] zext_ln186_fu_262_p1;
-wire   [229:0] zext_ln176_fu_317_p1;
+wire   [229:0] zext_ln190_fu_262_p1;
+wire   [229:0] zext_ln180_fu_317_p1;
 reg    ap_block_state4;
 wire   [1:0] tmp_201_fu_157_p4;
 wire   [7:0] mul9_cast_fu_175_p1;
-wire   [87:0] or_ln186_1_fu_194_p6;
-wire   [87:0] or_ln186_fu_208_p2;
+wire   [87:0] or_ln190_1_fu_194_p6;
+wire   [87:0] or_ln190_fu_208_p2;
 wire   [63:0] tmp_241_fu_232_p4;
 wire   [1:0] tmp_240_fu_222_p4;
 wire   [0:0] tmp_fu_214_p3;
-wire   [70:0] or_ln186_6_fu_242_p6;
-wire   [70:0] or_ln186_2_fu_256_p2;
+wire   [70:0] or_ln190_6_fu_242_p6;
+wire   [70:0] or_ln190_2_fu_256_p2;
 wire   [159:0] zext_ln668_fu_267_p1;
 wire   [159:0] lshr_ln668_fu_270_p2;
 wire   [159:0] zext_ln668_1_fu_280_p1;
@@ -174,7 +174,7 @@ end
 always @ (posedge ap_clk) begin
     if (((tmp_s_nbreadreq_fu_100_p3 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
         temp_control_type_V_reg_352 <= {{rcollec_dout[5:4]}};
-        trunc_ln157_reg_344 <= trunc_ln157_fu_135_p1;
+        trunc_ln161_reg_344 <= trunc_ln161_fu_135_p1;
     end
 end
 
@@ -250,9 +250,9 @@ end
 
 always @ (*) begin
     if ((~((tmp_s_reg_340 == 1'd1) & (rblock4_full_n == 1'b0)) & (tmp_s_reg_340 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
-        rblock4_din = zext_ln176_fu_317_p1;
+        rblock4_din = zext_ln180_fu_317_p1;
     end else if ((~(((tmp_s_nbreadreq_fu_100_p3 == 1'd1) & (rcollec_empty_n == 1'b0)) | ((rblock4_full_n == 1'b0) & (ap_predicate_op36_write_state2 == 1'b1))) & (1'b1 == ap_CS_fsm_state2) & (ap_predicate_op36_write_state2 == 1'b1))) begin
-        rblock4_din = zext_ln186_fu_262_p1;
+        rblock4_din = zext_ln190_fu_262_p1;
     end else begin
         rblock4_din = 'bx;
     end
@@ -380,13 +380,13 @@ assign mul15_fu_179_p2 = (mul9_cast_fu_175_p1 + 8'd32);
 
 assign mul9_cast_fu_175_p1 = rem_fu_167_p3;
 
-assign or_ln186_1_fu_194_p6 = {{{{{result_request_Acid1_fu_88}, {result_request_Acid_fu_92}}, {6'd0}}, {result_request_type_V_fu_96}}, {16'd0}};
+assign or_ln190_1_fu_194_p6 = {{{{{result_request_Acid1_fu_88}, {result_request_Acid_fu_92}}, {6'd0}}, {result_request_type_V_fu_96}}, {16'd0}};
 
-assign or_ln186_2_fu_256_p2 = (or_ln186_6_fu_242_p6 | 71'd7);
+assign or_ln190_2_fu_256_p2 = (or_ln190_6_fu_242_p6 | 71'd7);
 
-assign or_ln186_6_fu_242_p6 = {{{{{{{{1'd0}, {tmp_241_fu_232_p4}}}, {tmp_240_fu_222_p4}}}, {tmp_fu_214_p3}}}, {3'd0}};
+assign or_ln190_6_fu_242_p6 = {{{{{{{{1'd0}, {tmp_241_fu_232_p4}}}, {tmp_240_fu_222_p4}}}, {tmp_fu_214_p3}}}, {3'd0}};
 
-assign or_ln186_fu_208_p2 = (or_ln186_1_fu_194_p6 | 88'd7);
+assign or_ln190_fu_208_p2 = (or_ln190_1_fu_194_p6 | 88'd7);
 
 assign rem_fu_167_p3 = {{tmp_201_fu_157_p4}, {5'd0}};
 
@@ -394,23 +394,23 @@ assign temp_control_end_fu_139_p3 = rcollec_dout[32'd3];
 
 assign tmp_201_fu_157_p4 = {{rcollec_dout[7:6]}};
 
-assign tmp_240_fu_222_p4 = {{or_ln186_fu_208_p2[17:16]}};
+assign tmp_240_fu_222_p4 = {{or_ln190_fu_208_p2[17:16]}};
 
-assign tmp_241_fu_232_p4 = {{or_ln186_fu_208_p2[87:24]}};
+assign tmp_241_fu_232_p4 = {{or_ln190_fu_208_p2[87:24]}};
 
 assign tmp_82_nbreadreq_fu_121_p3 = roff1_empty_n;
 
-assign tmp_83_fu_307_p6 = {{{{{Acid1_reg_376}, {Acid_reg_371}}, {temp_control_type_V_reg_352}}, {1'd0}}, {trunc_ln157_reg_344}};
+assign tmp_83_fu_307_p6 = {{{{{Acid1_reg_376}, {Acid_reg_371}}, {temp_control_type_V_reg_352}}, {1'd0}}, {trunc_ln161_reg_344}};
 
-assign tmp_fu_214_p3 = or_ln186_fu_208_p2[32'd8];
+assign tmp_fu_214_p3 = or_ln190_fu_208_p2[32'd8];
 
 assign tmp_s_nbreadreq_fu_100_p3 = rcollec_empty_n;
 
-assign trunc_ln157_fu_135_p1 = rcollec_dout[2:0];
+assign trunc_ln161_fu_135_p1 = rcollec_dout[2:0];
 
-assign zext_ln176_fu_317_p1 = tmp_83_fu_307_p6;
+assign zext_ln180_fu_317_p1 = tmp_83_fu_307_p6;
 
-assign zext_ln186_fu_262_p1 = or_ln186_2_fu_256_p2;
+assign zext_ln190_fu_262_p1 = or_ln190_2_fu_256_p2;
 
 assign zext_ln668_1_fu_280_p1 = mul15_reg_363;
 

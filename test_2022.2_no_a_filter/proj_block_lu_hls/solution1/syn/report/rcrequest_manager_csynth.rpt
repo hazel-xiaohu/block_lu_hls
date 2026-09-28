@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vitis HLS Report for 'rcrequest_manager'
+================================================================
+* Date:           Sat Sep 26 11:00:33 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.401 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------+-------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                      |                   |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |       Instance       |       Module      |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +----------------------+-------------------+---------+---------+----------+----------+-----+-----+---------+
+        |rrequest_splitter_U0  |rrequest_splitter  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |rrequest_manager_U0   |rrequest_manager   |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |rschedule_access_U0   |rschedule_access   |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |rrequest_merger_U0    |rrequest_merger    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |rcollector_U0         |rcollector         |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +----------------------+-------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      22|    -|
+|FIFO             |       74|     -|     930|     294|    -|
+|Instance         |        0|     -|    2896|    3518|    0|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      18|    -|
+|Register         |        -|     -|       5|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       74|     0|    3831|    3852|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        4|     0|      ~0|       1|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------+-------------------+---------+----+------+------+-----+
+    |       Instance       |       Module      | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------+-------------------+---------+----+------+------+-----+
+    |rcollector_U0         |rcollector         |        0|   0|   146|  1372|    0|
+    |rrequest_manager_U0   |rrequest_manager   |        0|   0|   463|   366|    0|
+    |rrequest_merger_U0    |rrequest_merger    |        0|   0|   703|   505|    0|
+    |rrequest_splitter_U0  |rrequest_splitter  |        0|   0|   467|   450|    0|
+    |rschedule_access_U0   |rschedule_access   |        0|   0|  1117|   825|    0|
+    +----------------------+-------------------+---------+----+------+------+-----+
+    |Total                 |                   |        0|   0|  2896|  3518|    0|
+    +----------------------+-------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +--------------+---------+-----+----+-----+------+-----+---------+
+    |     Name     | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +--------------+---------+-----+----+-----+------+-----+---------+
+    |r_first_U     |       13|  155|   0|    -|    64|  230|    14720|
+    |r_req_U       |       13|  155|   0|    -|    64|  230|    14720|
+    |rcollec_U     |       13|  155|   0|    -|    64|  230|    14720|
+    |roff_U        |        9|  155|   0|    -|    64|  160|    10240|
+    |rrequest_U    |       13|  155|   0|    -|    64|  230|    14720|
+    |rscheduler_U  |       13|  155|   0|    -|    64|  230|    14720|
+    +--------------+---------+-----+----+-----+------+-----+---------+
+    |Total         |       74|  930|   0|    0|   384| 1310|    83840|
+    +--------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |ap_idle                                |       and|   0|  0|   2|           1|           1|
+    |ap_sync_continue                       |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                           |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                          |       and|   0|  0|   2|           1|           1|
+    |rrequest_splitter_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |rschedule_access_U0_ap_start           |       and|   0|  0|   2|           1|           1|
+    |ap_sync_rrequest_splitter_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_rschedule_access_U0_ap_ready   |        or|   0|  0|   2|           1|           1|
+    |rcollector_U0_ap_start                 |        or|   0|  0|   2|           1|           1|
+    |rrequest_manager_U0_ap_start           |        or|   0|  0|   2|           1|           1|
+    |rrequest_merger_U0_ap_start            |        or|   0|  0|   2|           1|           1|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                  |          |   0|  0|  22|          11|          11|
+    +---------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                   | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_rrequest_splitter_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_rschedule_access_U0_ap_ready   |   9|          2|    1|          2|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |Total                                      |  18|          4|    2|          4|
+    +-------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+---+----+-----+-----------+
+    |                    Name                   | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_rcollector_U0_ap_start         |  1|   0|    1|          0|
+    |ap_sync_reg_rrequest_manager_U0_ap_start   |  1|   0|    1|          0|
+    |ap_sync_reg_rrequest_merger_U0_ap_start    |  1|   0|    1|          0|
+    |ap_sync_reg_rrequest_splitter_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_rschedule_access_U0_ap_ready   |  1|   0|    1|          0|
+    +-------------------------------------------+---+----+-----+-----------+
+    |Total                                      |  5|   0|    5|          0|
+    +-------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++------------------------+-----+-----+------------+-------------------+--------------+
+|rcache_stream1_dout     |   in|  230|     ap_fifo|     rcache_stream1|       pointer|
+|rcache_stream1_empty_n  |   in|    1|     ap_fifo|     rcache_stream1|       pointer|
+|rcache_stream1_read     |  out|    1|     ap_fifo|     rcache_stream1|       pointer|
+|rrequest1_din           |  out|  230|     ap_fifo|          rrequest1|       pointer|
+|rrequest1_full_n        |   in|    1|     ap_fifo|          rrequest1|       pointer|
+|rrequest1_write         |  out|    1|     ap_fifo|          rrequest1|       pointer|
+|rresponse1_dout         |   in|  168|     ap_fifo|         rresponse1|       pointer|
+|rresponse1_empty_n      |   in|    1|     ap_fifo|         rresponse1|       pointer|
+|rresponse1_read         |  out|    1|     ap_fifo|         rresponse1|       pointer|
+|rblock1_din             |  out|  230|     ap_fifo|            rblock1|       pointer|
+|rblock1_full_n          |   in|    1|     ap_fifo|            rblock1|       pointer|
+|rblock1_write           |  out|    1|     ap_fifo|            rblock1|       pointer|
+|B_rcsr_address0         |  out|   10|   ap_memory|             B_rcsr|         array|
+|B_rcsr_ce0              |  out|    1|   ap_memory|             B_rcsr|         array|
+|B_rcsr_d0               |  out|  128|   ap_memory|             B_rcsr|         array|
+|B_rcsr_q0               |   in|  128|   ap_memory|             B_rcsr|         array|
+|B_rcsr_we0              |  out|    1|   ap_memory|             B_rcsr|         array|
+|B_rcsr_address1         |  out|   10|   ap_memory|             B_rcsr|         array|
+|B_rcsr_ce1              |  out|    1|   ap_memory|             B_rcsr|         array|
+|B_rcsr_d1               |  out|  128|   ap_memory|             B_rcsr|         array|
+|B_rcsr_q1               |   in|  128|   ap_memory|             B_rcsr|         array|
+|B_rcsr_we1              |  out|    1|   ap_memory|             B_rcsr|         array|
+|ap_clk                  |   in|    1|  ap_ctrl_hs|  rcrequest_manager|  return value|
+|ap_rst                  |   in|    1|  ap_ctrl_hs|  rcrequest_manager|  return value|
+|ap_start                |   in|    1|  ap_ctrl_hs|  rcrequest_manager|  return value|
+|B_rcsr_empty_n          |   in|    1|  ap_ctrl_hs|  rcrequest_manager|  return value|
+|B_rcsr_read             |  out|    1|  ap_ctrl_hs|  rcrequest_manager|  return value|
+|ap_done                 |  out|    1|  ap_ctrl_hs|  rcrequest_manager|  return value|
+|ap_ready                |  out|    1|  ap_ctrl_hs|  rcrequest_manager|  return value|
+|ap_idle                 |  out|    1|  ap_ctrl_hs|  rcrequest_manager|  return value|
+|ap_continue             |   in|    1|  ap_ctrl_hs|  rcrequest_manager|  return value|
++------------------------+-----+-----+------------+-------------------+--------------+
+

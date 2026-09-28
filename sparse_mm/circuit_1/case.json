@@ -1,0 +1,292 @@
+{
+  "matrix": "/output/block_lu_hls/sparse_mm/processed_circuit_1.mtx",
+  "prepared_dir": "/output/block_lu_hls/sparse_mm",
+  "n": 2624,
+  "split": [
+    1312,
+    1312
+  ],
+  "tasks": [
+    {
+      "kind": "GETRF",
+      "n": 1312,
+      "active_count": 0,
+      "pivot_eps": 1e-30,
+      "arrays": {
+        "a_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/A11_ptr.bin",
+          "dtype": "u32"
+        },
+        "a_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/A11_idx.bin",
+          "dtype": "u32"
+        },
+        "a_val": {
+          "path": "/output/block_lu_hls/sparse_mm/A11_val.bin",
+          "dtype": "f32"
+        },
+        "l_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/L11_ptr.bin",
+          "dtype": "u32"
+        },
+        "l_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/L11_idx.bin",
+          "dtype": "u32"
+        },
+        "l_val": {
+          "path": "/output/block_lu_hls/sparse_mm/L11_val.bin",
+          "dtype": "f32"
+        },
+        "u_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/U11_ptr.bin",
+          "dtype": "u32"
+        },
+        "u_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/U11_idx.bin",
+          "dtype": "u32"
+        },
+        "u_val": {
+          "path": "/output/block_lu_hls/sparse_mm/U11_val.bin",
+          "dtype": "f32"
+        },
+        "u_diag_pos": {
+          "path": "/output/block_lu_hls/sparse_mm/U11_diag_pos.u32",
+          "dtype": "u32"
+        }
+      }
+    },
+    {
+      "kind": "GESSM",
+      "n": 1312,
+      "active_count": 82,
+      "pivot_eps": 1e-30,
+      "arrays": {
+        "l_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/L11_ptr.bin",
+          "dtype": "u32"
+        },
+        "l_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/L11_idx.bin",
+          "dtype": "u32"
+        },
+        "l_val": {
+          "path": "/output/block_lu_hls/sparse_mm/L11_val.bin",
+          "dtype": "f32"
+        },
+        "b_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/A12_ptr.bin",
+          "dtype": "u32"
+        },
+        "b_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/A12_idx.bin",
+          "dtype": "u32"
+        },
+        "b_val": {
+          "path": "/output/block_lu_hls/sparse_mm/A12_val.bin",
+          "dtype": "f32"
+        },
+        "x_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/U12_ptr.bin",
+          "dtype": "u32"
+        },
+        "x_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/U12_idx.bin",
+          "dtype": "u32"
+        },
+        "x_val_csc": {
+          "path": "/output/block_lu_hls/sparse_mm/U12_val.bin",
+          "dtype": "f32"
+        },
+        "x_csc_to_csr": {
+          "path": "/output/block_lu_hls/sparse_mm/U12_csc_to_csr.u32",
+          "dtype": "u32"
+        },
+        "x_val_csr": {
+          "path": "/output/block_lu_hls/sparse_mm/U12_csr_val.bin",
+          "dtype": "f32"
+        },
+        "active_cols": {
+          "path": "/output/block_lu_hls/sparse_mm/active_cols.u32",
+          "dtype": "u32"
+        },
+        "work": {
+          "path": "/output/block_lu_hls/sparse_mm/gessm_work.f32",
+          "dtype": "f32"
+        }
+      }
+    },
+    {
+      "kind": "TSTRF",
+      "n": 1312,
+      "active_count": 82,
+      "pivot_eps": 1e-30,
+      "arrays": {
+        "u_col_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/U11_csc_ptr.bin",
+          "dtype": "u32"
+        },
+        "u_row_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/U11_csc_idx.bin",
+          "dtype": "u32"
+        },
+        "u_csr_val": {
+          "path": "/output/block_lu_hls/sparse_mm/U11_val.bin",
+          "dtype": "f32"
+        },
+        "u_csc_to_csr": {
+          "path": "/output/block_lu_hls/sparse_mm/U11_csc_to_csr.u32",
+          "dtype": "u32"
+        },
+        "u_diag_pos": {
+          "path": "/output/block_lu_hls/sparse_mm/U11_diag_pos.u32",
+          "dtype": "u32"
+        },
+        "b_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/A21_ptr.bin",
+          "dtype": "u32"
+        },
+        "b_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/A21_idx.bin",
+          "dtype": "u32"
+        },
+        "b_val": {
+          "path": "/output/block_lu_hls/sparse_mm/A21_val.bin",
+          "dtype": "f32"
+        },
+        "x_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/L21_ptr.bin",
+          "dtype": "u32"
+        },
+        "x_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/L21_idx.bin",
+          "dtype": "u32"
+        },
+        "x_val": {
+          "path": "/output/block_lu_hls/sparse_mm/L21_val.bin",
+          "dtype": "f32"
+        },
+        "active_rows": {
+          "path": "/output/block_lu_hls/sparse_mm/active_rows.u32",
+          "dtype": "u32"
+        },
+        "work": {
+          "path": "/output/block_lu_hls/sparse_mm/tstrf_work.f32",
+          "dtype": "f32"
+        }
+      }
+    },
+    {
+      "kind": "SSSSM",
+      "n": 1312,
+      "active_count": 0,
+      "pivot_eps": 1e-30,
+      "arrays": {
+        "a_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/A22_ptr.bin",
+          "dtype": "u32"
+        },
+        "a_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/A22_idx.bin",
+          "dtype": "u32"
+        },
+        "a_val": {
+          "path": "/output/block_lu_hls/sparse_mm/A22_val.bin",
+          "dtype": "f32"
+        },
+        "l_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/L21_ptr.bin",
+          "dtype": "u32"
+        },
+        "l_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/L21_idx.bin",
+          "dtype": "u32"
+        },
+        "l_val": {
+          "path": "/output/block_lu_hls/sparse_mm/L21_val.bin",
+          "dtype": "f32"
+        },
+        "u_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/U12_csr_ptr.bin",
+          "dtype": "u32"
+        },
+        "u_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/U12_csr_idx.bin",
+          "dtype": "u32"
+        },
+        "u_val": {
+          "path": "/output/block_lu_hls/sparse_mm/U12_csr_val.bin",
+          "dtype": "f32"
+        },
+        "s_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/Schur_ptr.bin",
+          "dtype": "u32"
+        },
+        "s_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/Schur_idx.bin",
+          "dtype": "u32"
+        },
+        "s_val": {
+          "path": "/output/block_lu_hls/sparse_mm/Schur_val.bin",
+          "dtype": "f32"
+        },
+        "work": {
+          "path": "/output/block_lu_hls/sparse_mm/ssssm_work.f32",
+          "dtype": "f32"
+        },
+        "mark": {
+          "path": "/output/block_lu_hls/sparse_mm/ssssm_mark.u32",
+          "dtype": "u32"
+        }
+      }
+    },
+    {
+      "kind": "GETRF",
+      "n": 1312,
+      "active_count": 0,
+      "pivot_eps": 1e-30,
+      "arrays": {
+        "a_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/Schur_ptr.bin",
+          "dtype": "u32"
+        },
+        "a_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/Schur_idx.bin",
+          "dtype": "u32"
+        },
+        "a_val": {
+          "path": "/output/block_lu_hls/sparse_mm/Schur_val.bin",
+          "dtype": "f32"
+        },
+        "l_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/L22_ptr.bin",
+          "dtype": "u32"
+        },
+        "l_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/L22_idx.bin",
+          "dtype": "u32"
+        },
+        "l_val": {
+          "path": "/output/block_lu_hls/sparse_mm/L22_val.bin",
+          "dtype": "f32"
+        },
+        "u_ptr": {
+          "path": "/output/block_lu_hls/sparse_mm/U22_ptr.bin",
+          "dtype": "u32"
+        },
+        "u_idx": {
+          "path": "/output/block_lu_hls/sparse_mm/U22_idx.bin",
+          "dtype": "u32"
+        },
+        "u_val": {
+          "path": "/output/block_lu_hls/sparse_mm/U22_val.bin",
+          "dtype": "f32"
+        },
+        "u_diag_pos": {
+          "path": "/output/block_lu_hls/sparse_mm/U22_diag_pos.u32",
+          "dtype": "u32"
+        }
+      }
+    }
+  ],
+  "source_manifest": "/output/block_lu_hls/sparse_mm/manifest.json"
+}

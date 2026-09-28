@@ -1,0 +1,2 @@
+getrf_A11 status=0 n=1312 muladds=7819 divs=2837
+getrf_Schur status=0 n=1312 muladds=278936 divs=11600

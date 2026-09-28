@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'merge_4_to_1_mi_10'" level="0">
-<item name = "Date">Fri Sep 25 15:50:35 2026
+<item name = "Date">Sat Sep 26 09:30:38 2026
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">proj_block_lu_hls</item>

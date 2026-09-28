@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'merger'
 ================================================================
-* Date:           Fri Sep 25 15:51:57 2026
+* Date:           Sat Sep 26 09:32:03 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -25,22 +25,21 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-----+-----+----------+
-    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
-    |   min   |   max   |    min   |    max   | min | max |   Type   |
-    +---------+---------+----------+----------+-----+-----+----------+
-    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
-    +---------+---------+----------+----------+-----+-----+----------+
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
         * Instance: 
-        +---------------------+------------------+---------+---------+----------+----------+-----+-----+---------+
-        |                     |                  |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
-        |       Instance      |      Module      |   min   |   max   |    min   |    max   | min | max |   Type  |
-        +---------------------+------------------+---------+---------+----------+----------+-----+-----+---------+
-        |merge_controller_U0  |merge_controller  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
-        |merge_two_sub_U0     |merge_two_sub     |        ?|        ?|         ?|         ?|    ?|    ?|       no|
-        +---------------------+------------------+---------+---------+----------+----------+-----+-----+---------+
+        +-------------------------+---------------+---------+---------+----------+----------+-----+-----+---------+
+        |                         |               |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |         Instance        |     Module    |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------+---------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_merge_two_sub_fu_20  |merge_two_sub  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-------------------------+---------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
         N/A
@@ -56,13 +55,13 @@
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     -|       -|       -|    -|
 |Expression       |        -|     -|       0|       2|    -|
-|FIFO             |        -|     -|      99|      66|    -|
-|Instance         |       16|     6|    4342|    4607|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |       20|     6|    4299|    4485|    -|
 |Memory           |        -|     -|       -|       -|    -|
-|Multiplexer      |        -|     -|       -|       -|    -|
-|Register         |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      59|    -|
+|Register         |        -|     -|       4|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |       16|     6|    4441|    4675|    0|
+|Total            |       20|     6|    4303|    4546|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |     1488|  3528|  682560|  341280|  112|
 +-----------------+---------+------+--------+--------+-----+
@@ -71,14 +70,13 @@
 
 + Detail: 
     * Instance: 
-    +---------------------+------------------+---------+----+------+------+-----+
-    |       Instance      |      Module      | BRAM_18K| DSP|  FF  |  LUT | URAM|
-    +---------------------+------------------+---------+----+------+------+-----+
-    |merge_controller_U0  |merge_controller  |        0|   0|    39|    87|    0|
-    |merge_two_sub_U0     |merge_two_sub     |       16|   6|  4303|  4520|    0|
-    +---------------------+------------------+---------+----+------+------+-----+
-    |Total                |                  |       16|   6|  4342|  4607|    0|
-    +---------------------+------------------+---------+----+------+------+-----+
+    +-------------------------+---------------+---------+----+------+------+-----+
+    |         Instance        |     Module    | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------+---------------+---------+----+------+------+-----+
+    |grp_merge_two_sub_fu_20  |merge_two_sub  |       20|   6|  4299|  4485|    0|
+    +-------------------------+---------------+---------+----+------+------+-----+
+    |Total                    |               |       20|   6|  4299|  4485|    0|
+    +-------------------------+---------------+---------+----+------+------+-----+
 
     * DSP: 
     N/A
@@ -87,28 +85,41 @@
     N/A
 
     * FIFO: 
-    +-----------+---------+----+----+-----+------+-----+---------+
-    |    Name   | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
-    +-----------+---------+----+----+-----+------+-----+---------+
-    |mresult_U  |        0|  99|   0|    -|     8|   36|      288|
-    +-----------+---------+----+----+-----+------+-----+---------+
-    |Total      |        0|  99|   0|    0|     8|   36|      288|
-    +-----------+---------+----+----+-----+------+-----+---------+
+    N/A
 
     * Expression: 
-    +--------------+----------+----+---+----+------------+------------+
-    | Variable Name| Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +--------------+----------+----+---+----+------------+------------+
-    |ap_idle       |       and|   0|  0|   2|           1|           1|
-    +--------------+----------+----+---+----+------------+------------+
-    |Total         |          |   0|  0|   2|           1|           1|
-    +--------------+----------+----+---+----+------------+------------+
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    N/A
+    +------------------+----+-----------+-----+-----------+
+    |       Name       | LUT| Input Size| Bits| Total Bits|
+    +------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm         |  14|          3|    1|          3|
+    |ap_done           |   9|          2|    1|          2|
+    |efinish122_write  |   9|          2|    1|          2|
+    |m_pe1_read        |   9|          2|    1|          2|
+    |mc_pe1_read       |   9|          2|    1|          2|
+    |result_pe1_write  |   9|          2|    1|          2|
+    +------------------+----+-----------+-----+-----------+
+    |Total             |  59|         13|    6|         13|
+    +------------------+----+-----------+-----+-----------+
 
     * Register: 
-    N/A
+    +--------------------------------------+---+----+-----+-----------+
+    |                 Name                 | FF| LUT| Bits| Const Bits|
+    +--------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                             |  2|   0|    2|          0|
+    |ap_done_reg                           |  1|   0|    1|          0|
+    |grp_merge_two_sub_fu_20_ap_start_reg  |  1|   0|    1|          0|
+    +--------------------------------------+---+----+-----+-----------+
+    |Total                                 |  4|   0|    4|          0|
+    +--------------------------------------+---+----+-----+-----------+
 
 
 
@@ -116,29 +127,37 @@
 == Interface
 ================================================================
 * Summary: 
-+-------------------+-----+-----+------------+--------------+--------------+
-|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
-+-------------------+-----+-----+------------+--------------+--------------+
-|mc_pe1_dout        |   in|   66|     ap_fifo|        mc_pe1|       pointer|
-|mc_pe1_empty_n     |   in|    1|     ap_fifo|        mc_pe1|       pointer|
-|mc_pe1_read        |  out|    1|     ap_fifo|        mc_pe1|       pointer|
-|m_pe1_dout         |   in|   66|     ap_fifo|         m_pe1|       pointer|
-|m_pe1_empty_n      |   in|    1|     ap_fifo|         m_pe1|       pointer|
-|m_pe1_read         |  out|    1|     ap_fifo|         m_pe1|       pointer|
-|result_pe1_din     |  out|   66|     ap_fifo|    result_pe1|       pointer|
-|result_pe1_full_n  |   in|    1|     ap_fifo|    result_pe1|       pointer|
-|result_pe1_write   |  out|    1|     ap_fifo|    result_pe1|       pointer|
-|efinish122_din     |  out|    1|     ap_fifo|    efinish122|       pointer|
-|efinish122_full_n  |   in|    1|     ap_fifo|    efinish122|       pointer|
-|efinish122_write   |  out|    1|     ap_fifo|    efinish122|       pointer|
-|ap_clk             |   in|    1|  ap_ctrl_hs|        merger|  return value|
-|ap_rst             |   in|    1|  ap_ctrl_hs|        merger|  return value|
-|ap_start           |   in|    1|  ap_ctrl_hs|        merger|  return value|
-|ap_done            |  out|    1|  ap_ctrl_hs|        merger|  return value|
-|ap_ready           |  out|    1|  ap_ctrl_hs|        merger|  return value|
-|ap_idle            |  out|    1|  ap_ctrl_hs|        merger|  return value|
-|ap_continue        |   in|    1|  ap_ctrl_hs|        merger|  return value|
-+-------------------+-----+-----+------------+--------------+--------------+
++---------------------------+-----+-----+------------+--------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|        merger|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|        merger|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|        merger|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|        merger|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|        merger|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|        merger|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|        merger|  return value|
+|mc_pe1_dout                |   in|   66|     ap_fifo|        mc_pe1|       pointer|
+|mc_pe1_num_data_valid      |   in|    7|     ap_fifo|        mc_pe1|       pointer|
+|mc_pe1_fifo_cap            |   in|    7|     ap_fifo|        mc_pe1|       pointer|
+|mc_pe1_empty_n             |   in|    1|     ap_fifo|        mc_pe1|       pointer|
+|mc_pe1_read                |  out|    1|     ap_fifo|        mc_pe1|       pointer|
+|m_pe1_dout                 |   in|   66|     ap_fifo|         m_pe1|       pointer|
+|m_pe1_num_data_valid       |   in|   11|     ap_fifo|         m_pe1|       pointer|
+|m_pe1_fifo_cap             |   in|   11|     ap_fifo|         m_pe1|       pointer|
+|m_pe1_empty_n              |   in|    1|     ap_fifo|         m_pe1|       pointer|
+|m_pe1_read                 |  out|    1|     ap_fifo|         m_pe1|       pointer|
+|result_pe1_din             |  out|   66|     ap_fifo|    result_pe1|       pointer|
+|result_pe1_num_data_valid  |   in|   11|     ap_fifo|    result_pe1|       pointer|
+|result_pe1_fifo_cap        |   in|   11|     ap_fifo|    result_pe1|       pointer|
+|result_pe1_full_n          |   in|    1|     ap_fifo|    result_pe1|       pointer|
+|result_pe1_write           |  out|    1|     ap_fifo|    result_pe1|       pointer|
+|efinish122_din             |  out|    1|     ap_fifo|    efinish122|       pointer|
+|efinish122_num_data_valid  |   in|    7|     ap_fifo|    efinish122|       pointer|
+|efinish122_fifo_cap        |   in|    7|     ap_fifo|    efinish122|       pointer|
+|efinish122_full_n          |   in|    1|     ap_fifo|    efinish122|       pointer|
+|efinish122_write           |  out|    1|     ap_fifo|    efinish122|       pointer|
++---------------------------+-----+-----+------------+--------------+--------------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -166,39 +185,26 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 4
+* Number of FSM states : 2
 * Pipeline : 0
-* Dataflow Pipeline: 1
-  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 2 
-2 --> 3 
-3 --> 4 
-4 --> 
+2 --> 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%mresult = alloca i64 1"   --->   Operation 5 'alloca' 'mresult' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.93> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 36> <Depth = 8> <FIFO>
-ST_1 : Operation 6 [2/2] (0.00ns)   --->   "%call_ln336 = call void @merge_controller, i66 %mc_pe1, i36 %mresult" [pe.cpp:336]   --->   Operation 6 'call' 'call_ln336' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 3 [2/2] (0.00ns)   --->   "%call_ln336 = call void @merge_two_sub, i66 %mc_pe1, i66 %result_pe1, i66 %m_pe1, i1 %efinish122" [pe.cpp:336]   --->   Operation 3 'call' 'call_ln336' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 7 [1/2] (0.00ns)   --->   "%call_ln336 = call void @merge_controller, i66 %mc_pe1, i36 %mresult" [pe.cpp:336]   --->   Operation 7 'call' 'call_ln336' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-
-State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln337 = call void @merge_two_sub, i36 %mresult, i66 %result_pe1, i66 %m_pe1, i1 %efinish122" [pe.cpp:337]   --->   Operation 8 'call' 'call_ln337' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-
-State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 9 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln330 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_86" [pe.cpp:330]   --->   Operation 9 'specdataflowpipeline' 'specdataflowpipeline_ln330' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %m_pe1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %efinish122, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %mc_pe1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @mresult_str, i32 1, void @p_str, void @p_str, i32 8, i32 8, i36 %mresult, i36 %mresult"   --->   Operation 14 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i36 %mresult, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 16 [1/2] (0.00ns)   --->   "%call_ln337 = call void @merge_two_sub, i36 %mresult, i66 %result_pe1, i66 %m_pe1, i1 %efinish122" [pe.cpp:337]   --->   Operation 16 'call' 'call_ln337' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%ret_ln339 = ret" [pe.cpp:339]   --->   Operation 17 'ret' 'ret_ln339' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 4 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %result_pe1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 4 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %m_pe1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %efinish122, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %mc_pe1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/2] (0.00ns)   --->   "%call_ln336 = call void @merge_two_sub, i66 %mc_pe1, i66 %result_pe1, i66 %m_pe1, i1 %efinish122" [pe.cpp:336]   --->   Operation 8 'call' 'call_ln336' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%ret_ln337 = ret" [pe.cpp:337]   --->   Operation 9 'ret' 'ret_ln337' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -222,17 +228,12 @@ Port [ efinish122]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0;
 
 <LifeTime>
 <method=bitvector/>
-mresult                    (alloca              ) [ 01111]
-call_ln336                 (call                ) [ 00000]
-specdataflowpipeline_ln330 (specdataflowpipeline) [ 00000]
-specinterface_ln0          (specinterface       ) [ 00000]
-specinterface_ln0          (specinterface       ) [ 00000]
-specinterface_ln0          (specinterface       ) [ 00000]
-specinterface_ln0          (specinterface       ) [ 00000]
-empty                      (specchannel         ) [ 00000]
-specinterface_ln0          (specinterface       ) [ 00000]
-call_ln337                 (call                ) [ 00000]
-ret_ln339                  (ret                 ) [ 00000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+specinterface_ln0 (specinterface) [ 000]
+call_ln336        (call         ) [ 000]
+ret_ln337         (ret          ) [ 000]
 </LifeTime>
 
 <model>
@@ -279,25 +280,25 @@ ret_ln339                  (ret                 ) [ 00000]
 <pin id="9" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="merge_two_sub"/></StgValue>
 </bind>
 </comp>
 
 <comp id="10" class="1001" name="const_10">
 <pin_list>
-<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="merge_controller"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
 </bind>
 </comp>
 
 <comp id="12" class="1001" name="const_12">
 <pin_list>
-<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="merge_two_sub"/></StgValue>
+<StgValue><ssdm name="empty_91"/></StgValue>
 </bind>
 </comp>
 
@@ -306,7 +307,7 @@ ret_ln339                  (ret                 ) [ 00000]
 <pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_SpecDataflowPipeline"/></StgValue>
+<StgValue><ssdm name=""/></StgValue>
 </bind>
 </comp>
 
@@ -315,7 +316,7 @@ ret_ln339                  (ret                 ) [ 00000]
 <pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="empty_141"/></StgValue>
 </bind>
 </comp>
 
@@ -328,95 +329,14 @@ ret_ln339                  (ret                 ) [ 00000]
 </bind>
 </comp>
 
-<comp id="20" class="1001" name="const_20">
+<comp id="20" class="1004" name="grp_merge_two_sub_fu_20">
 <pin_list>
-<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="empty_86"/></StgValue>
-</bind>
-</comp>
-
-<comp id="22" class="1001" name="const_22">
-<pin_list>
-<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
-</bind>
-</comp>
-
-<comp id="24" class="1001" name="const_24">
-<pin_list>
-<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="empty_56"/></StgValue>
-</bind>
-</comp>
-
-<comp id="26" class="1001" name="const_26">
-<pin_list>
-<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="_ssdm_op_SpecChannel"/></StgValue>
-</bind>
-</comp>
-
-<comp id="28" class="1001" name="const_28">
-<pin_list>
-<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="mresult_str"/></StgValue>
-</bind>
-</comp>
-
-<comp id="30" class="1001" name="const_30">
-<pin_list>
-<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name=""/></StgValue>
-</bind>
-</comp>
-
-<comp id="32" class="1001" name="const_32">
-<pin_list>
-<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name="p_str"/></StgValue>
-</bind>
-</comp>
-
-<comp id="34" class="1001" name="const_34">
-<pin_list>
-<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
-</pin_list>
-<bind>
-<StgValue><ssdm name=""/></StgValue>
-</bind>
-</comp>
-
-<comp id="36" class="1004" name="mresult_fu_36">
-<pin_list>
-<pin id="37" dir="0" index="0" bw="1" slack="0"/>
-<pin id="38" dir="1" index="1" bw="36" slack="0"/>
-</pin_list>
-<bind>
-<opcode="alloca(26) " fcode="alloca"/>
-<opset="mresult/1 "/>
-</bind>
-</comp>
-
-<comp id="40" class="1004" name="grp_merge_controller_fu_40">
-<pin_list>
-<pin id="41" dir="0" index="0" bw="0" slack="0"/>
-<pin id="42" dir="0" index="1" bw="66" slack="0"/>
-<pin id="43" dir="0" index="2" bw="36" slack="0"/>
-<pin id="44" dir="1" index="3" bw="0" slack="2147483647"/>
+<pin id="21" dir="0" index="0" bw="0" slack="0"/>
+<pin id="22" dir="0" index="1" bw="66" slack="0"/>
+<pin id="23" dir="0" index="2" bw="66" slack="0"/>
+<pin id="24" dir="0" index="3" bw="66" slack="0"/>
+<pin id="25" dir="0" index="4" bw="1" slack="0"/>
+<pin id="26" dir="1" index="5" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
@@ -424,53 +344,18 @@ ret_ln339                  (ret                 ) [ 00000]
 </bind>
 </comp>
 
-<comp id="47" class="1004" name="grp_merge_two_sub_fu_47">
-<pin_list>
-<pin id="48" dir="0" index="0" bw="0" slack="0"/>
-<pin id="49" dir="0" index="1" bw="36" slack="2"/>
-<pin id="50" dir="0" index="2" bw="66" slack="0"/>
-<pin id="51" dir="0" index="3" bw="66" slack="0"/>
-<pin id="52" dir="0" index="4" bw="1" slack="0"/>
-<pin id="53" dir="1" index="5" bw="0" slack="2147483647"/>
-</pin_list>
-<bind>
-<opcode="call(48) " fcode="call"/>
-<opset="call_ln337/3 "/>
-</bind>
-</comp>
-
-<comp id="58" class="1005" name="mresult_reg_58">
-<pin_list>
-<pin id="59" dir="0" index="0" bw="36" slack="0"/>
-<pin id="60" dir="1" index="1" bw="36" slack="0"/>
-</pin_list>
-<bind>
-<opset="mresult "/>
-</bind>
-</comp>
-
 </comp_list>
 
 <net_list>
-<net id="39"><net_src comp="8" pin="0"/><net_sink comp="36" pin=0"/></net>
+<net id="27"><net_src comp="8" pin="0"/><net_sink comp="20" pin=0"/></net>
 
-<net id="45"><net_src comp="10" pin="0"/><net_sink comp="40" pin=0"/></net>
+<net id="28"><net_src comp="0" pin="0"/><net_sink comp="20" pin=1"/></net>
 
-<net id="46"><net_src comp="0" pin="0"/><net_sink comp="40" pin=1"/></net>
+<net id="29"><net_src comp="4" pin="0"/><net_sink comp="20" pin=2"/></net>
 
-<net id="54"><net_src comp="12" pin="0"/><net_sink comp="47" pin=0"/></net>
+<net id="30"><net_src comp="2" pin="0"/><net_sink comp="20" pin=3"/></net>
 
-<net id="55"><net_src comp="4" pin="0"/><net_sink comp="47" pin=2"/></net>
-
-<net id="56"><net_src comp="2" pin="0"/><net_sink comp="47" pin=3"/></net>
-
-<net id="57"><net_src comp="6" pin="0"/><net_sink comp="47" pin=4"/></net>
-
-<net id="61"><net_src comp="36" pin="1"/><net_sink comp="58" pin=0"/></net>
-
-<net id="62"><net_src comp="58" pin="1"/><net_sink comp="40" pin=2"/></net>
-
-<net id="63"><net_src comp="58" pin="1"/><net_sink comp="47" pin=1"/></net>
+<net id="31"><net_src comp="6" pin="0"/><net_sink comp="20" pin=4"/></net>
 
 </net_list>
 
@@ -479,17 +364,14 @@ ret_ln339                  (ret                 ) [ 00000]
 
 * FSMD analyzer results:
   - Output states:
-	Port: result_pe1 | {3 4 }
-	Port: efinish122 | {3 4 }
+	Port: result_pe1 | {1 2 }
+	Port: efinish122 | {1 2 }
  - Input state : 
 	Port: merger : mc_pe1 | {1 2 }
-	Port: merger : m_pe1 | {3 4 }
+	Port: merger : m_pe1 | {1 2 }
   - Chain level:
 	State 1
-		call_ln336 : 1
 	State 2
-	State 3
-	State 4
 
 
 ============================================================
@@ -497,26 +379,19 @@ ret_ln339                  (ret                 ) [ 00000]
 ============================================================
 
 * Functional unit list:
-|----------|----------------------------|---------|---------|---------|---------|
-| Operation|       Functional Unit      |   DSP   |  Delay  |    FF   |   LUT   |
-|----------|----------------------------|---------|---------|---------|---------|
-|   call   | grp_merge_controller_fu_40 |    0    |    0    |    34   |    36   |
-|          |   grp_merge_two_sub_fu_47  |    6    |  10.64  |   3359  |   2583  |
-|----------|----------------------------|---------|---------|---------|---------|
-|   Total  |                            |    6    |  10.64  |   3393  |   2619  |
-|----------|----------------------------|---------|---------|---------|---------|
+|----------|-------------------------|---------|---------|---------|---------|
+| Operation|     Functional Unit     |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|-------------------------|---------|---------|---------|---------|
+|   call   | grp_merge_two_sub_fu_20 |    6    |  10.591 |   3413  |   2583  |
+|----------|-------------------------|---------|---------|---------|---------|
+|   Total  |                         |    6    |  10.591 |   3413  |   2583  |
+|----------|-------------------------|---------|---------|---------|---------|
 
 Memories:
 N/A
 
 * Register list:
-+--------------+--------+
-|              |   FF   |
-+--------------+--------+
-|mresult_reg_58|   36   |
-+--------------+--------+
-|     Total    |   36   |
-+--------------+--------+
+N/A
 
 * Multiplexer (MUX) list: 
 |--------|------|------|------|--------|
@@ -531,10 +406,10 @@ N/A
 +-----------+--------+--------+--------+--------+
 |           |   DSP  |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+
-|  Function |    6   |   10   |  3393  |  2619  |
+|  Function |    6   |   10   |  3413  |  2583  |
 |   Memory  |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |    -   |    -   |    -   |
-|  Register |    -   |    -   |   36   |    -   |
+|  Register |    -   |    -   |    -   |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |    6   |   10   |  3429  |  2619  |
+|   Total   |    6   |   10   |  3413  |  2583  |
 +-----------+--------+--------+--------+--------+

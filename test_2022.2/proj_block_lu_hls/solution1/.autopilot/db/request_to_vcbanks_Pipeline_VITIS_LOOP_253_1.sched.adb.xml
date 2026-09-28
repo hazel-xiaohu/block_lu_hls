@@ -205,7 +205,7 @@ newFuncRoot:11 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i209 %
 
 <Node id="26" bw="0" op_0_bw="0" op_1_bw="209" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:12 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %vrequest1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+newFuncRoot:12 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %vrequest1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -220,7 +220,7 @@ newFuncRoot:12 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, 
 
 <Node id="27" bw="0" op_0_bw="0" op_1_bw="209" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:13 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %vccache_re_bank1_pe1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+newFuncRoot:13 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %vccache_re_bank1_pe1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -235,7 +235,7 @@ newFuncRoot:13 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, 
 
 <Node id="28" bw="0" op_0_bw="0" op_1_bw="209" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:14 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %vccache_re_bank2_pe1, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0
+newFuncRoot:14 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %vccache_re_bank2_pe1, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -265,7 +265,7 @@ newFuncRoot:15 %br_ln0 = br void %for.body
 
 <Node id="31" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body:0 %specpipeline_ln254 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_86
+for.body:0 %specpipeline_ln254 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_141
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln254"/></StgValue>
@@ -280,7 +280,7 @@ for.body:0 %specpipeline_ln254 = specpipeline void @_ssdm_op_SpecPipeline, i32 1
 
 <Node id="32" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body:1 %specloopname_ln255 = specloopname void @_ssdm_op_SpecLoopName, void @empty_47
+for.body:1 %specloopname_ln255 = specloopname void @_ssdm_op_SpecLoopName, void @empty_40
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln255"/></StgValue>
@@ -588,10 +588,10 @@ if.then2:4 %B_rlen_curr_addr = add i5 %shl_ln, i5 %select_ln260
 
 <Node id="53" bw="1" op_0_bw="1" op_1_bw="5" op_2_bw="32">
 <![CDATA[
-if.then2:5 %tmp_63 = bitselect i1 @_ssdm_op_BitSelect.i1.i5.i32, i5 %B_rlen_curr_addr, i32 4
+if.then2:5 %tmp_66 = bitselect i1 @_ssdm_op_BitSelect.i1.i5.i32, i5 %B_rlen_curr_addr, i32 4
 
 ]]></Node>
-<StgValue><ssdm name="tmp_63"/></StgValue>
+<StgValue><ssdm name="tmp_66"/></StgValue>
 </operation>
 
 <operation id="42" st_id="1" stage="1" lat="1">
@@ -622,7 +622,7 @@ if.then2:6 %tmp_104 = partselect i208 @_ssdm_op_PartSelect.i208.i209.i32.i32, i2
 
 <Node id="56" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-if.then2:8 %br_ln270 = br i1 %tmp_63, void %if.then9, void %if.then12
+if.then2:8 %br_ln270 = br i1 %tmp_66, void %if.then9, void %if.then12
 
 ]]></Node>
 <StgValue><ssdm name="br_ln270"/></StgValue>
@@ -824,7 +824,7 @@ if.then2:7 %p_0 = bitconcatenate i209 @_ssdm_op_BitConcatenate.i209.i208.i1, i20
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp_s" val="1"/>
 <literal name="enable" val="0"/>
-<literal name="tmp_63" val="0"/>
+<literal name="tmp_66" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -842,7 +842,7 @@ if.then9:0 %write_ln271 = write void @_ssdm_op_Write.ap_fifo.volatile.i209P0A, i
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp_s" val="1"/>
 <literal name="enable" val="0"/>
-<literal name="tmp_63" val="0"/>
+<literal name="tmp_66" val="0"/>
 </and_exp></or_exp>
 </condition>
 
@@ -860,7 +860,7 @@ if.then9:1 %br_ln272 = br void %if.end14
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp_s" val="1"/>
 <literal name="enable" val="0"/>
-<literal name="tmp_63" val="1"/>
+<literal name="tmp_66" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -878,7 +878,7 @@ if.then12:0 %write_ln273 = write void @_ssdm_op_Write.ap_fifo.volatile.i209P0A, 
 <condition id="-1">
 <or_exp><and_exp><literal name="tmp_s" val="1"/>
 <literal name="enable" val="0"/>
-<literal name="tmp_63" val="1"/>
+<literal name="tmp_66" val="1"/>
 </and_exp></or_exp>
 </condition>
 

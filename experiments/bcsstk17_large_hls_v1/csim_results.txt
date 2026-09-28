@@ -1,0 +1,16 @@
+whole status=0 ms=306.003 muladds=298021270 divs=1585266
+whole_L rel_l2=4.92172e-05 max_rel=2.3141e+06 nonfinite=0
+whole_U rel_l2=1.57016e-05 max_rel=1.86116e+06 nonfinite=0
+getrf1 status=0 ms=57.2211
+L11 rel_l2=2.13358e-05 max_rel=2.3141e+06 nonfinite=0
+U11 rel_l2=1.71883e-06 max_rel=1.86116e+06 nonfinite=0
+gessm status=0 ms=516.306 active=243
+U12 rel_l2=7.76801e-06 max_rel=83.1616 nonfinite=0
+tstrf status=0 ms=528.75 active=243
+L21 rel_l2=2.92756e-05 max_rel=86.1124 nonfinite=0
+ssssm status=0 ms=6.28908
+Schur rel_l2=5.20721e-07 max_rel=5.52303 nonfinite=0
+getrf2 status=0 ms=242.512
+L22 rel_l2=6.23726e-05 max_rel=9006.23 nonfinite=0
+U22 rel_l2=2.36212e-05 max_rel=8959.59 nonfinite=0
+SUMMARY whole_ms=306.003 blocked_ms=1351.08 ratio_blocked_over_whole=4.41524

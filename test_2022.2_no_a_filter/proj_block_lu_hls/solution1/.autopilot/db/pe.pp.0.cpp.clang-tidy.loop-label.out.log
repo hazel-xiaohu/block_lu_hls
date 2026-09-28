@@ -1,0 +1,85 @@
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:5337:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:5337:7: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:6311:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:6311:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:6325:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:6325:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:6339:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:6339:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:7938:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:7938:7: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10359:2: warning: Added loop label VITIS_LOOP_12_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ) {
+ ^~~
+ VITIS_LOOP_12_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10359:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10382:4: warning: Added loop label VITIS_LOOP_35_2:   [xilinx-label-all-loops]
+   for (id_t i=0; i<b_rlen; ) {
+   ^~~
+   VITIS_LOOP_35_2: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10382:4: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10399:9: error: Invalid Directive: for current device, fmul + fulldsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=psum1 op=fmul impl=fulldsp
+        ^
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10401:9: error: Invalid Directive: for current device, fmul + fulldsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=psum2 op=fmul impl=fulldsp
+        ^
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10403:9: error: Invalid Directive: for current device, fmul + fulldsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=psum3 op=fmul impl=fulldsp
+        ^
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10405:9: error: Invalid Directive: for current device, fmul + fulldsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=psum4 op=fmul impl=fulldsp
+        ^
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10444:5: warning: Added loop label VITIS_LOOP_97_1:   [xilinx-label-all-loops]
+    for (;;) {
+    ^~~
+    VITIS_LOOP_97_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10444:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10469:2: warning: Added loop label VITIS_LOOP_122_1:   [xilinx-label-all-loops]
+ for (id_t i=0, j=0; i<len1 || j<len2; ){
+ ^~~
+ VITIS_LOOP_122_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10469:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10496:9: error: Invalid Directive: for current device, fadd + fulldsp is invalid combination for bind_op [clang-diagnostic-error]
+#pragma HLS BIND_OP variable=m_result op=fadd impl=fulldsp
+        ^
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10518:5: warning: Added loop label VITIS_LOOP_171_1:   [xilinx-label-all-loops]
+    while (na || nb || nc) {
+    ^~~~~
+    VITIS_LOOP_171_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10518:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10576:2: warning: Added loop label VITIS_LOOP_229_1:   [xilinx-label-all-loops]
+ for (bool enable=false; !enable; ) {
+ ^~~
+ VITIS_LOOP_229_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10576:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10688:2: warning: Added loop label VITIS_LOOP_341_1:   [xilinx-label-all-loops]
+ for (id_t i=0; i<5; i++) {
+ ^~~
+ VITIS_LOOP_341_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10688:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10697:3: warning: Added loop label VITIS_LOOP_350_2:   [xilinx-label-all-loops]
+  for (id_t j=0; j<70; j++) {
+  ^~~
+  VITIS_LOOP_350_2: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10697:3: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10722:2: warning: Added loop label VITIS_LOOP_375_1:   [xilinx-label-all-loops]
+ for (id_t i=0; i<350; i++) {
+ ^~~
+ VITIS_LOOP_375_1: 
+/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/pe.pp.0.cpp:10722:2: note: FIX-IT applied suggested code changes

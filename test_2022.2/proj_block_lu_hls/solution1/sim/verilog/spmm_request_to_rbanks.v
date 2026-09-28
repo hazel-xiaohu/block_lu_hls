@@ -163,40 +163,40 @@ reg    B_rcsr_base_c168_blk_n;
 reg    B_rcsr_base_c169_blk_n;
 wire   [5:0] empty_fu_182_p1;
 reg   [5:0] empty_reg_299;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_start;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_done;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_idle;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_ready;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rrequestf_read;
-wire   [229:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank3_din;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank3_write;
-wire   [229:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank2_din;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank2_write;
-wire   [229:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank1_din;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank1_write;
-wire   [229:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank4_din;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank4_write;
-wire   [159:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_data_V_out;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_data_V_out_ap_vld;
-wire   [31:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_Acid1_out;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_Acid1_out_ap_vld;
-wire   [31:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_Acid_out;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_Acid_out_ap_vld;
-wire   [1:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_type_V_out;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_type_V_out_ap_vld;
-wire   [2:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_dest_V_out;
-wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_dest_V_out_ap_vld;
-reg    grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_start_reg;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_start;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_done;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_idle;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_ready;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rrequestf_read;
+wire   [229:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank3_din;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank3_write;
+wire   [229:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank2_din;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank2_write;
+wire   [229:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank1_din;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank1_write;
+wire   [229:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank4_din;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank4_write;
+wire   [159:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_data_V_out;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_data_V_out_ap_vld;
+wire   [31:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_Acid1_out;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_Acid1_out_ap_vld;
+wire   [31:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_Acid_out;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_Acid_out_ap_vld;
+wire   [1:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_type_V_out;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_type_V_out_ap_vld;
+wire   [2:0] grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_dest_V_out;
+wire    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_dest_V_out_ap_vld;
+reg    grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_start_reg;
 wire    ap_CS_fsm_state2;
 wire    ap_CS_fsm_state3;
 reg    ap_block_state1;
 wire   [229:0] p_0_fu_253_p5;
 reg    ap_block_state4;
 wire   [247:0] tmp_fu_201_p8;
-wire   [247:0] or_ln282_fu_219_p2;
+wire   [247:0] or_ln286_fu_219_p2;
 wire   [223:0] tmp_73_fu_243_p4;
 wire   [1:0] tmp_72_fu_233_p4;
-wire   [0:0] tmp_71_fu_225_p3;
+wire   [0:0] tmp_74_fu_225_p3;
 reg   [3:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
@@ -208,52 +208,52 @@ wire    ap_ce_reg;
 initial begin
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 4'd1;
-#0 grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_start_reg = 1'b0;
+#0 grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_start_reg = 1'b0;
 end
 
-spmm_request_to_rbanks_Pipeline_VITIS_LOOP_253_1 grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162(
+spmm_request_to_rbanks_Pipeline_VITIS_LOOP_257_1 grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_start),
-    .ap_done(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_done),
-    .ap_idle(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_idle),
-    .ap_ready(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_ready),
+    .ap_start(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_start),
+    .ap_done(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_done),
+    .ap_idle(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_idle),
+    .ap_ready(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_ready),
     .rrequestf_dout(rrequestf_dout),
     .rrequestf_num_data_valid(3'd0),
     .rrequestf_fifo_cap(3'd0),
     .rrequestf_empty_n(rrequestf_empty_n),
-    .rrequestf_read(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rrequestf_read),
-    .rcache_re_bank3_din(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank3_din),
+    .rrequestf_read(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rrequestf_read),
+    .rcache_re_bank3_din(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank3_din),
     .rcache_re_bank3_num_data_valid(4'd0),
     .rcache_re_bank3_fifo_cap(4'd0),
     .rcache_re_bank3_full_n(rcache_re_bank3_full_n),
-    .rcache_re_bank3_write(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank3_write),
-    .rcache_re_bank2_din(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank2_din),
+    .rcache_re_bank3_write(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank3_write),
+    .rcache_re_bank2_din(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank2_din),
     .rcache_re_bank2_num_data_valid(4'd0),
     .rcache_re_bank2_fifo_cap(4'd0),
     .rcache_re_bank2_full_n(rcache_re_bank2_full_n),
-    .rcache_re_bank2_write(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank2_write),
-    .rcache_re_bank1_din(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank1_din),
+    .rcache_re_bank2_write(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank2_write),
+    .rcache_re_bank1_din(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank1_din),
     .rcache_re_bank1_num_data_valid(4'd0),
     .rcache_re_bank1_fifo_cap(4'd0),
     .rcache_re_bank1_full_n(rcache_re_bank1_full_n),
-    .rcache_re_bank1_write(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank1_write),
-    .rcache_re_bank4_din(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank4_din),
+    .rcache_re_bank1_write(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank1_write),
+    .rcache_re_bank4_din(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank4_din),
     .rcache_re_bank4_num_data_valid(4'd0),
     .rcache_re_bank4_fifo_cap(4'd0),
     .rcache_re_bank4_full_n(rcache_re_bank4_full_n),
-    .rcache_re_bank4_write(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank4_write),
+    .rcache_re_bank4_write(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank4_write),
     .base_addr_rcsr_cast(empty_reg_299),
-    .temp_req_data_V_out(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_data_V_out),
-    .temp_req_data_V_out_ap_vld(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_data_V_out_ap_vld),
-    .temp_req_Acid1_out(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_Acid1_out),
-    .temp_req_Acid1_out_ap_vld(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_Acid1_out_ap_vld),
-    .temp_req_Acid_out(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_Acid_out),
-    .temp_req_Acid_out_ap_vld(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_Acid_out_ap_vld),
-    .temp_req_type_V_out(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_type_V_out),
-    .temp_req_type_V_out_ap_vld(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_type_V_out_ap_vld),
-    .temp_req_dest_V_out(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_dest_V_out),
-    .temp_req_dest_V_out_ap_vld(grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_dest_V_out_ap_vld)
+    .temp_req_data_V_out(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_data_V_out),
+    .temp_req_data_V_out_ap_vld(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_data_V_out_ap_vld),
+    .temp_req_Acid1_out(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_Acid1_out),
+    .temp_req_Acid1_out_ap_vld(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_Acid1_out_ap_vld),
+    .temp_req_Acid_out(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_Acid_out),
+    .temp_req_Acid_out_ap_vld(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_Acid_out_ap_vld),
+    .temp_req_type_V_out(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_type_V_out),
+    .temp_req_type_V_out_ap_vld(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_type_V_out_ap_vld),
+    .temp_req_dest_V_out(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_dest_V_out),
+    .temp_req_dest_V_out_ap_vld(grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_dest_V_out_ap_vld)
 );
 
 always @ (posedge ap_clk) begin
@@ -278,12 +278,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_start_reg <= 1'b0;
+        grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state2)) begin
-            grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_start_reg <= 1'b1;
-        end else if ((grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_ready == 1'b1)) begin
-            grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_start_reg <= 1'b0;
+            grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_start_reg <= 1'b1;
+        end else if ((grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_ready == 1'b1)) begin
+            grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -369,7 +369,7 @@ end
 assign ap_ST_fsm_state2_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_done == 1'b0)) begin
+    if ((grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_done == 1'b0)) begin
         ap_ST_fsm_state3_blk = 1'b1;
     end else begin
         ap_ST_fsm_state3_blk = 1'b0;
@@ -436,9 +436,9 @@ always @ (*) begin
     if ((~((rcache_re_bank4_full_n == 1'b0) | (rcache_re_bank3_full_n == 1'b0) | (rcache_re_bank2_full_n == 1'b0) | (rcache_re_bank1_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state4))) begin
         rcache_re_bank1_din = p_0_fu_253_p5;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        rcache_re_bank1_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank1_din;
+        rcache_re_bank1_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank1_din;
     end else begin
-        rcache_re_bank1_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank1_din;
+        rcache_re_bank1_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank1_din;
     end
 end
 
@@ -446,7 +446,7 @@ always @ (*) begin
     if ((~((rcache_re_bank4_full_n == 1'b0) | (rcache_re_bank3_full_n == 1'b0) | (rcache_re_bank2_full_n == 1'b0) | (rcache_re_bank1_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state4))) begin
         rcache_re_bank1_write = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        rcache_re_bank1_write = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank1_write;
+        rcache_re_bank1_write = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank1_write;
     end else begin
         rcache_re_bank1_write = 1'b0;
     end
@@ -464,9 +464,9 @@ always @ (*) begin
     if ((~((rcache_re_bank4_full_n == 1'b0) | (rcache_re_bank3_full_n == 1'b0) | (rcache_re_bank2_full_n == 1'b0) | (rcache_re_bank1_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state4))) begin
         rcache_re_bank2_din = p_0_fu_253_p5;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        rcache_re_bank2_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank2_din;
+        rcache_re_bank2_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank2_din;
     end else begin
-        rcache_re_bank2_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank2_din;
+        rcache_re_bank2_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank2_din;
     end
 end
 
@@ -474,7 +474,7 @@ always @ (*) begin
     if ((~((rcache_re_bank4_full_n == 1'b0) | (rcache_re_bank3_full_n == 1'b0) | (rcache_re_bank2_full_n == 1'b0) | (rcache_re_bank1_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state4))) begin
         rcache_re_bank2_write = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        rcache_re_bank2_write = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank2_write;
+        rcache_re_bank2_write = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank2_write;
     end else begin
         rcache_re_bank2_write = 1'b0;
     end
@@ -492,9 +492,9 @@ always @ (*) begin
     if ((~((rcache_re_bank4_full_n == 1'b0) | (rcache_re_bank3_full_n == 1'b0) | (rcache_re_bank2_full_n == 1'b0) | (rcache_re_bank1_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state4))) begin
         rcache_re_bank3_din = p_0_fu_253_p5;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        rcache_re_bank3_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank3_din;
+        rcache_re_bank3_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank3_din;
     end else begin
-        rcache_re_bank3_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank3_din;
+        rcache_re_bank3_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank3_din;
     end
 end
 
@@ -502,7 +502,7 @@ always @ (*) begin
     if ((~((rcache_re_bank4_full_n == 1'b0) | (rcache_re_bank3_full_n == 1'b0) | (rcache_re_bank2_full_n == 1'b0) | (rcache_re_bank1_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state4))) begin
         rcache_re_bank3_write = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        rcache_re_bank3_write = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank3_write;
+        rcache_re_bank3_write = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank3_write;
     end else begin
         rcache_re_bank3_write = 1'b0;
     end
@@ -520,9 +520,9 @@ always @ (*) begin
     if ((~((rcache_re_bank4_full_n == 1'b0) | (rcache_re_bank3_full_n == 1'b0) | (rcache_re_bank2_full_n == 1'b0) | (rcache_re_bank1_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state4))) begin
         rcache_re_bank4_din = p_0_fu_253_p5;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        rcache_re_bank4_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank4_din;
+        rcache_re_bank4_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank4_din;
     end else begin
-        rcache_re_bank4_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank4_din;
+        rcache_re_bank4_din = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank4_din;
     end
 end
 
@@ -530,7 +530,7 @@ always @ (*) begin
     if ((~((rcache_re_bank4_full_n == 1'b0) | (rcache_re_bank3_full_n == 1'b0) | (rcache_re_bank2_full_n == 1'b0) | (rcache_re_bank1_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state4))) begin
         rcache_re_bank4_write = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        rcache_re_bank4_write = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rcache_re_bank4_write;
+        rcache_re_bank4_write = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rcache_re_bank4_write;
     end else begin
         rcache_re_bank4_write = 1'b0;
     end
@@ -538,7 +538,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        rrequestf_read = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_rrequestf_read;
+        rrequestf_read = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_rrequestf_read;
     end else begin
         rrequestf_read = 1'b0;
     end
@@ -557,7 +557,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state3;
         end
         ap_ST_fsm_state3 : begin
-            if (((1'b1 == ap_CS_fsm_state3) & (grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_done == 1'b1))) begin
+            if (((1'b1 == ap_CS_fsm_state3) & (grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
@@ -602,18 +602,18 @@ end
 
 assign empty_fu_182_p1 = base_addr_rcsr_dout[5:0];
 
-assign grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_start = grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_ap_start_reg;
+assign grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_start = grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_ap_start_reg;
 
-assign or_ln282_fu_219_p2 = (tmp_fu_201_p8 | 248'd256);
+assign or_ln286_fu_219_p2 = (tmp_fu_201_p8 | 248'd256);
 
-assign p_0_fu_253_p5 = {{{{tmp_73_fu_243_p4}, {tmp_72_fu_233_p4}}, {tmp_71_fu_225_p3}}, {grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_dest_V_out}};
+assign p_0_fu_253_p5 = {{{{tmp_73_fu_243_p4}, {tmp_72_fu_233_p4}}, {tmp_74_fu_225_p3}}, {grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_dest_V_out}};
 
-assign tmp_71_fu_225_p3 = or_ln282_fu_219_p2[32'd8];
+assign tmp_72_fu_233_p4 = {{or_ln286_fu_219_p2[17:16]}};
 
-assign tmp_72_fu_233_p4 = {{or_ln282_fu_219_p2[17:16]}};
+assign tmp_73_fu_243_p4 = {{or_ln286_fu_219_p2[247:24]}};
 
-assign tmp_73_fu_243_p4 = {{or_ln282_fu_219_p2[247:24]}};
+assign tmp_74_fu_225_p3 = or_ln286_fu_219_p2[32'd8];
 
-assign tmp_fu_201_p8 = {{{{{{{grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_data_V_out}, {grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_Acid1_out}}, {grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_Acid_out}}, {6'd0}}, {grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_type_V_out}}, {13'd0}}, {grp_request_to_rbanks_Pipeline_VITIS_LOOP_253_1_fu_162_temp_req_dest_V_out}};
+assign tmp_fu_201_p8 = {{{{{{{grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_data_V_out}, {grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_Acid1_out}}, {grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_Acid_out}}, {6'd0}}, {grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_type_V_out}}, {13'd0}}, {grp_request_to_rbanks_Pipeline_VITIS_LOOP_257_1_fu_162_temp_req_dest_V_out}};
 
 endmodule //spmm_request_to_rbanks

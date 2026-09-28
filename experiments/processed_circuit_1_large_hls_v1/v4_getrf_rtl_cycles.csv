@@ -1,0 +1,8 @@
+configuration,stage,matrix_variant,n,cycles,time_ms,status,source
+whole_v4,GETRF,whole,2624,13965806,69.829030,PASS,RTL_cosim_large_getrf_v4
+blocked_2x2_v4,GETRF,A11,1312,793604,3.968020,PASS,RTL_cosim_large_getrf_v4
+blocked_2x2_v4,GESSM,A12,1312,4169694,20.848470,MEASURED_PRIOR,independent_IP_cosim
+blocked_2x2_v4,TSTRF,A21,1312,4935090,24.675450,MEASURED_PRIOR,independent_IP_cosim_reciprocal
+blocked_2x2_v4,SSSSM,Schur_update,1312,7470498,37.352490,MEASURED_PRIOR,independent_IP_cosim
+blocked_2x2_v4,GETRF,Schur,1312,8158754,40.793770,PASS,RTL_cosim_large_getrf_v4
+blocked_2x2_v4,TOTAL_SERIAL,all_stages,,25527640,127.638200,MIXED_MEASUREMENTS,A11_GESSM_TSTRF_SSSSM_Schur

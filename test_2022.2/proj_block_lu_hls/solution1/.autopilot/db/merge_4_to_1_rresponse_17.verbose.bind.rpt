@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'merge_4_to_1_rresponse_17'
 ================================================================
-* Date:           Fri Sep 25 15:48:24 2026
+* Date:           Sat Sep 26 09:28:29 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -41,7 +41,7 @@
         |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_669_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        |- VITIS_LOOP_665_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
         +--------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -89,81 +89,81 @@ ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%from4_end = alloca i32 1"   --->   
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%from3_end = alloca i32 1"   --->   Operation 6 'alloca' 'from3_end' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%from2_end = alloca i32 1"   --->   Operation 7 'alloca' 'from2_end' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%from1_end = alloca i32 1"   --->   Operation 8 'alloca' 'from1_end' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i168 %rcache_re_bank4_3, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i168 %rcache_re_bank3_3, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i168 %rcache_re_bank2_3, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i168 %rcache_re_bank1_3, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i168 %rresponse3, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%store_ln669 = store i1 0, i1 %from1_end" [util.cpp:669]   --->   Operation 14 'store' 'store_ln669' <Predicate = true> <Delay = 0.42>
-ST_1 : Operation 15 [1/1] (0.42ns)   --->   "%store_ln669 = store i1 0, i1 %from2_end" [util.cpp:669]   --->   Operation 15 'store' 'store_ln669' <Predicate = true> <Delay = 0.42>
-ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln669 = store i1 0, i1 %from3_end" [util.cpp:669]   --->   Operation 16 'store' 'store_ln669' <Predicate = true> <Delay = 0.42>
-ST_1 : Operation 17 [1/1] (0.42ns)   --->   "%store_ln669 = store i1 0, i1 %from4_end" [util.cpp:669]   --->   Operation 17 'store' 'store_ln669' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i168 %rcache_re_bank4_3, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i168 %rcache_re_bank3_3, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i168 %rcache_re_bank2_3, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i168 %rcache_re_bank1_3, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i168 %rresponse3, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%store_ln665 = store i1 0, i1 %from1_end" [util.cpp:665]   --->   Operation 14 'store' 'store_ln665' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 15 [1/1] (0.42ns)   --->   "%store_ln665 = store i1 0, i1 %from2_end" [util.cpp:665]   --->   Operation 15 'store' 'store_ln665' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln665 = store i1 0, i1 %from3_end" [util.cpp:665]   --->   Operation 16 'store' 'store_ln665' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 17 [1/1] (0.42ns)   --->   "%store_ln665 = store i1 0, i1 %from4_end" [util.cpp:665]   --->   Operation 17 'store' 'store_ln665' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 18 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln670 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_86" [util.cpp:670]   --->   Operation 19 'specpipeline' 'specpipeline_ln670' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln671 = specloopname void @_ssdm_op_SpecLoopName, void @empty_52" [util.cpp:671]   --->   Operation 20 'specloopname' 'specloopname_ln671' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i168P0A, i168 %rcache_re_bank1_3, i32 1" [util.cpp:672]   --->   Operation 21 'nbreadreq' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln672 = br i1 %tmp, void %if.else, void %if.then1" [util.cpp:672]   --->   Operation 22 'br' 'br_ln672' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i168P0A, i168 %rcache_re_bank2_3, i32 1" [util.cpp:677]   --->   Operation 23 'nbreadreq' 'tmp_s' <Predicate = (!tmp)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln677 = br i1 %tmp_s, void %if.else11, void %if.then4" [util.cpp:677]   --->   Operation 24 'br' 'br_ln677' <Predicate = (!tmp)> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_160 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i168P0A, i168 %rcache_re_bank3_3, i32 1" [util.cpp:682]   --->   Operation 25 'nbreadreq' 'tmp_160' <Predicate = (!tmp & !tmp_s)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln682 = br i1 %tmp_160, void %if.else20, void %if.then13" [util.cpp:682]   --->   Operation 26 'br' 'br_ln682' <Predicate = (!tmp & !tmp_s)> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_161 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i168P0A, i168 %rcache_re_bank4_3, i32 1" [util.cpp:687]   --->   Operation 27 'nbreadreq' 'tmp_161' <Predicate = (!tmp & !tmp_s & !tmp_160)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
-ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln687 = br i1 %tmp_161, void %if.end33, void %if.then22" [util.cpp:687]   --->   Operation 28 'br' 'br_ln687' <Predicate = (!tmp & !tmp_s & !tmp_160)> <Delay = 0.00>
-ST_1 : Operation 29 [1/1] (1.82ns)   --->   "%rcache_re_bank4_3_read = read i168 @_ssdm_op_Read.ap_fifo.volatile.i168P0A, i168 %rcache_re_bank4_3" [util.cpp:688]   --->   Operation 29 'read' 'rcache_re_bank4_3_read' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
-ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%temp_end_28 = trunc i168 %rcache_re_bank4_3_read" [util.cpp:688]   --->   Operation 30 'trunc' 'temp_end_28' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.00>
-ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%temp_no_use_6 = bitselect i1 @_ssdm_op_BitSelect.i1.i168.i32, i168 %rcache_re_bank4_3_read, i32 1" [util.cpp:688]   --->   Operation 31 'bitselect' 'temp_no_use_6' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.00>
-ST_1 : Operation 32 [1/1] (0.28ns)   --->   "%or_ln690 = or i1 %temp_no_use_6, i1 %temp_end_28" [util.cpp:690]   --->   Operation 32 'or' 'or_ln690' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln690 = br i1 %or_ln690, void %if.then27, void %if.end28" [util.cpp:690]   --->   Operation 33 'br' 'br_ln690' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.00>
-ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_285 = partselect i166 @_ssdm_op_PartSelect.i166.i168.i32.i32, i168 %rcache_re_bank4_3_read, i32 2, i32 167" [util.cpp:691]   --->   Operation 34 'partselect' 'tmp_285' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161 & !or_ln690)> <Delay = 0.00>
-ST_1 : Operation 35 [1/1] (0.42ns)   --->   "%store_ln692 = store i1 %temp_end_28, i1 %from4_end" [util.cpp:692]   --->   Operation 35 'store' 'store_ln692' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.42>
-ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln692 = br void %if.end33" [util.cpp:692]   --->   Operation 36 'br' 'br_ln692' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.00>
-ST_1 : Operation 37 [1/1] (1.82ns)   --->   "%rcache_re_bank3_3_read = read i168 @_ssdm_op_Read.ap_fifo.volatile.i168P0A, i168 %rcache_re_bank3_3" [util.cpp:683]   --->   Operation 37 'read' 'rcache_re_bank3_3_read' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
-ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%temp_end_27 = trunc i168 %rcache_re_bank3_3_read" [util.cpp:683]   --->   Operation 38 'trunc' 'temp_end_27' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.00>
-ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%temp_no_use_5 = bitselect i1 @_ssdm_op_BitSelect.i1.i168.i32, i168 %rcache_re_bank3_3_read, i32 1" [util.cpp:683]   --->   Operation 39 'bitselect' 'temp_no_use_5' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.00>
-ST_1 : Operation 40 [1/1] (0.28ns)   --->   "%or_ln685 = or i1 %temp_no_use_5, i1 %temp_end_27" [util.cpp:685]   --->   Operation 40 'or' 'or_ln685' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln685 = br i1 %or_ln685, void %if.then18, void %if.end19" [util.cpp:685]   --->   Operation 41 'br' 'br_ln685' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.00>
-ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_284 = partselect i166 @_ssdm_op_PartSelect.i166.i168.i32.i32, i168 %rcache_re_bank3_3_read, i32 2, i32 167" [util.cpp:686]   --->   Operation 42 'partselect' 'tmp_284' <Predicate = (!tmp & !tmp_s & tmp_160 & !or_ln685)> <Delay = 0.00>
-ST_1 : Operation 43 [1/1] (0.42ns)   --->   "%store_ln687 = store i1 %temp_end_27, i1 %from3_end" [util.cpp:687]   --->   Operation 43 'store' 'store_ln687' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.42>
-ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln687 = br void %if.end33" [util.cpp:687]   --->   Operation 44 'br' 'br_ln687' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.00>
-ST_1 : Operation 45 [1/1] (1.82ns)   --->   "%rcache_re_bank2_3_read = read i168 @_ssdm_op_Read.ap_fifo.volatile.i168P0A, i168 %rcache_re_bank2_3" [util.cpp:678]   --->   Operation 45 'read' 'rcache_re_bank2_3_read' <Predicate = (!tmp & tmp_s)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
-ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%temp_end_26 = trunc i168 %rcache_re_bank2_3_read" [util.cpp:678]   --->   Operation 46 'trunc' 'temp_end_26' <Predicate = (!tmp & tmp_s)> <Delay = 0.00>
-ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%temp_no_use_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i168.i32, i168 %rcache_re_bank2_3_read, i32 1" [util.cpp:678]   --->   Operation 47 'bitselect' 'temp_no_use_4' <Predicate = (!tmp & tmp_s)> <Delay = 0.00>
-ST_1 : Operation 48 [1/1] (0.28ns)   --->   "%or_ln680 = or i1 %temp_no_use_4, i1 %temp_end_26" [util.cpp:680]   --->   Operation 48 'or' 'or_ln680' <Predicate = (!tmp & tmp_s)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%br_ln680 = br i1 %or_ln680, void %if.then9, void %if.end10" [util.cpp:680]   --->   Operation 49 'br' 'br_ln680' <Predicate = (!tmp & tmp_s)> <Delay = 0.00>
-ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_283 = partselect i166 @_ssdm_op_PartSelect.i166.i168.i32.i32, i168 %rcache_re_bank2_3_read, i32 2, i32 167" [util.cpp:681]   --->   Operation 50 'partselect' 'tmp_283' <Predicate = (!tmp & tmp_s & !or_ln680)> <Delay = 0.00>
-ST_1 : Operation 51 [1/1] (0.42ns)   --->   "%store_ln682 = store i1 %temp_end_26, i1 %from2_end" [util.cpp:682]   --->   Operation 51 'store' 'store_ln682' <Predicate = (!tmp & tmp_s)> <Delay = 0.42>
-ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln682 = br void %if.end33" [util.cpp:682]   --->   Operation 52 'br' 'br_ln682' <Predicate = (!tmp & tmp_s)> <Delay = 0.00>
-ST_1 : Operation 53 [1/1] (1.82ns)   --->   "%rcache_re_bank1_3_read = read i168 @_ssdm_op_Read.ap_fifo.volatile.i168P0A, i168 %rcache_re_bank1_3" [util.cpp:673]   --->   Operation 53 'read' 'rcache_re_bank1_3_read' <Predicate = (tmp)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
-ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%temp_end = trunc i168 %rcache_re_bank1_3_read" [util.cpp:673]   --->   Operation 54 'trunc' 'temp_end' <Predicate = (tmp)> <Delay = 0.00>
-ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%temp_no_use = bitselect i1 @_ssdm_op_BitSelect.i1.i168.i32, i168 %rcache_re_bank1_3_read, i32 1" [util.cpp:673]   --->   Operation 55 'bitselect' 'temp_no_use' <Predicate = (tmp)> <Delay = 0.00>
-ST_1 : Operation 56 [1/1] (0.28ns)   --->   "%or_ln675 = or i1 %temp_no_use, i1 %temp_end" [util.cpp:675]   --->   Operation 56 'or' 'or_ln675' <Predicate = (tmp)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln675 = br i1 %or_ln675, void %if.then2, void %if.end" [util.cpp:675]   --->   Operation 57 'br' 'br_ln675' <Predicate = (tmp)> <Delay = 0.00>
-ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_282 = partselect i166 @_ssdm_op_PartSelect.i166.i168.i32.i32, i168 %rcache_re_bank1_3_read, i32 2, i32 167" [util.cpp:676]   --->   Operation 58 'partselect' 'tmp_282' <Predicate = (tmp & !or_ln675)> <Delay = 0.00>
-ST_1 : Operation 59 [1/1] (0.42ns)   --->   "%store_ln677 = store i1 %temp_end, i1 %from1_end" [util.cpp:677]   --->   Operation 59 'store' 'store_ln677' <Predicate = (tmp)> <Delay = 0.42>
-ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln677 = br void %if.end33" [util.cpp:677]   --->   Operation 60 'br' 'br_ln677' <Predicate = (tmp)> <Delay = 0.00>
-ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%from4_end_4 = load i1 %from4_end" [util.cpp:694]   --->   Operation 61 'load' 'from4_end_4' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%from3_end_4 = load i1 %from3_end" [util.cpp:694]   --->   Operation 62 'load' 'from3_end_4' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%from2_end_28 = load i1 %from2_end" [util.cpp:694]   --->   Operation 63 'load' 'from2_end_28' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%from1_end_28 = load i1 %from1_end" [util.cpp:694]   --->   Operation 64 'load' 'from1_end_28' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node enable)   --->   "%and_ln694 = and i1 %from3_end_4, i1 %from4_end_4" [util.cpp:694]   --->   Operation 65 'and' 'and_ln694' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node enable)   --->   "%and_ln694_3 = and i1 %from2_end_28, i1 %from1_end_28" [util.cpp:694]   --->   Operation 66 'and' 'and_ln694_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 67 [1/1] (0.28ns) (out node of the LUT)   --->   "%enable = and i1 %and_ln694_3, i1 %and_ln694" [util.cpp:694]   --->   Operation 67 'and' 'enable' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln669 = br i1 %enable, void %for.body, void %for.end" [util.cpp:669]   --->   Operation 68 'br' 'br_ln669' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln666 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_141" [util.cpp:666]   --->   Operation 19 'specpipeline' 'specpipeline_ln666' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln667 = specloopname void @_ssdm_op_SpecLoopName, void @empty_65" [util.cpp:667]   --->   Operation 20 'specloopname' 'specloopname_ln667' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i168P0A, i168 %rcache_re_bank1_3, i32 1" [util.cpp:668]   --->   Operation 21 'nbreadreq' 'tmp' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln668 = br i1 %tmp, void %if.else, void %if.then1" [util.cpp:668]   --->   Operation 22 'br' 'br_ln668' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i168P0A, i168 %rcache_re_bank2_3, i32 1" [util.cpp:673]   --->   Operation 23 'nbreadreq' 'tmp_s' <Predicate = (!tmp)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln673 = br i1 %tmp_s, void %if.else11, void %if.then4" [util.cpp:673]   --->   Operation 24 'br' 'br_ln673' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_160 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i168P0A, i168 %rcache_re_bank3_3, i32 1" [util.cpp:678]   --->   Operation 25 'nbreadreq' 'tmp_160' <Predicate = (!tmp & !tmp_s)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln678 = br i1 %tmp_160, void %if.else20, void %if.then13" [util.cpp:678]   --->   Operation 26 'br' 'br_ln678' <Predicate = (!tmp & !tmp_s)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_161 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i168P0A, i168 %rcache_re_bank4_3, i32 1" [util.cpp:683]   --->   Operation 27 'nbreadreq' 'tmp_161' <Predicate = (!tmp & !tmp_s & !tmp_160)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln683 = br i1 %tmp_161, void %if.end33, void %if.then22" [util.cpp:683]   --->   Operation 28 'br' 'br_ln683' <Predicate = (!tmp & !tmp_s & !tmp_160)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (1.82ns)   --->   "%rcache_re_bank4_3_read = read i168 @_ssdm_op_Read.ap_fifo.volatile.i168P0A, i168 %rcache_re_bank4_3" [util.cpp:684]   --->   Operation 29 'read' 'rcache_re_bank4_3_read' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%temp_end_28 = trunc i168 %rcache_re_bank4_3_read" [util.cpp:684]   --->   Operation 30 'trunc' 'temp_end_28' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%temp_no_use_6 = bitselect i1 @_ssdm_op_BitSelect.i1.i168.i32, i168 %rcache_re_bank4_3_read, i32 1" [util.cpp:684]   --->   Operation 31 'bitselect' 'temp_no_use_6' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.28ns)   --->   "%or_ln686 = or i1 %temp_no_use_6, i1 %temp_end_28" [util.cpp:686]   --->   Operation 32 'or' 'or_ln686' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln686 = br i1 %or_ln686, void %if.then27, void %if.end28" [util.cpp:686]   --->   Operation 33 'br' 'br_ln686' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_285 = partselect i166 @_ssdm_op_PartSelect.i166.i168.i32.i32, i168 %rcache_re_bank4_3_read, i32 2, i32 167" [util.cpp:687]   --->   Operation 34 'partselect' 'tmp_285' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161 & !or_ln686)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.42ns)   --->   "%store_ln688 = store i1 %temp_end_28, i1 %from4_end" [util.cpp:688]   --->   Operation 35 'store' 'store_ln688' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.42>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln688 = br void %if.end33" [util.cpp:688]   --->   Operation 36 'br' 'br_ln688' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (1.82ns)   --->   "%rcache_re_bank3_3_read = read i168 @_ssdm_op_Read.ap_fifo.volatile.i168P0A, i168 %rcache_re_bank3_3" [util.cpp:679]   --->   Operation 37 'read' 'rcache_re_bank3_3_read' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%temp_end_27 = trunc i168 %rcache_re_bank3_3_read" [util.cpp:679]   --->   Operation 38 'trunc' 'temp_end_27' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%temp_no_use_5 = bitselect i1 @_ssdm_op_BitSelect.i1.i168.i32, i168 %rcache_re_bank3_3_read, i32 1" [util.cpp:679]   --->   Operation 39 'bitselect' 'temp_no_use_5' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.28ns)   --->   "%or_ln681 = or i1 %temp_no_use_5, i1 %temp_end_27" [util.cpp:681]   --->   Operation 40 'or' 'or_ln681' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln681 = br i1 %or_ln681, void %if.then18, void %if.end19" [util.cpp:681]   --->   Operation 41 'br' 'br_ln681' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_284 = partselect i166 @_ssdm_op_PartSelect.i166.i168.i32.i32, i168 %rcache_re_bank3_3_read, i32 2, i32 167" [util.cpp:682]   --->   Operation 42 'partselect' 'tmp_284' <Predicate = (!tmp & !tmp_s & tmp_160 & !or_ln681)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.42ns)   --->   "%store_ln683 = store i1 %temp_end_27, i1 %from3_end" [util.cpp:683]   --->   Operation 43 'store' 'store_ln683' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.42>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln683 = br void %if.end33" [util.cpp:683]   --->   Operation 44 'br' 'br_ln683' <Predicate = (!tmp & !tmp_s & tmp_160)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (1.82ns)   --->   "%rcache_re_bank2_3_read = read i168 @_ssdm_op_Read.ap_fifo.volatile.i168P0A, i168 %rcache_re_bank2_3" [util.cpp:674]   --->   Operation 45 'read' 'rcache_re_bank2_3_read' <Predicate = (!tmp & tmp_s)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%temp_end_26 = trunc i168 %rcache_re_bank2_3_read" [util.cpp:674]   --->   Operation 46 'trunc' 'temp_end_26' <Predicate = (!tmp & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%temp_no_use_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i168.i32, i168 %rcache_re_bank2_3_read, i32 1" [util.cpp:674]   --->   Operation 47 'bitselect' 'temp_no_use_4' <Predicate = (!tmp & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.28ns)   --->   "%or_ln676 = or i1 %temp_no_use_4, i1 %temp_end_26" [util.cpp:676]   --->   Operation 48 'or' 'or_ln676' <Predicate = (!tmp & tmp_s)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%br_ln676 = br i1 %or_ln676, void %if.then9, void %if.end10" [util.cpp:676]   --->   Operation 49 'br' 'br_ln676' <Predicate = (!tmp & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_283 = partselect i166 @_ssdm_op_PartSelect.i166.i168.i32.i32, i168 %rcache_re_bank2_3_read, i32 2, i32 167" [util.cpp:677]   --->   Operation 50 'partselect' 'tmp_283' <Predicate = (!tmp & tmp_s & !or_ln676)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.42ns)   --->   "%store_ln678 = store i1 %temp_end_26, i1 %from2_end" [util.cpp:678]   --->   Operation 51 'store' 'store_ln678' <Predicate = (!tmp & tmp_s)> <Delay = 0.42>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln678 = br void %if.end33" [util.cpp:678]   --->   Operation 52 'br' 'br_ln678' <Predicate = (!tmp & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (1.82ns)   --->   "%rcache_re_bank1_3_read = read i168 @_ssdm_op_Read.ap_fifo.volatile.i168P0A, i168 %rcache_re_bank1_3" [util.cpp:669]   --->   Operation 53 'read' 'rcache_re_bank1_3_read' <Predicate = (tmp)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 2> <FIFO>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%temp_end = trunc i168 %rcache_re_bank1_3_read" [util.cpp:669]   --->   Operation 54 'trunc' 'temp_end' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%temp_no_use = bitselect i1 @_ssdm_op_BitSelect.i1.i168.i32, i168 %rcache_re_bank1_3_read, i32 1" [util.cpp:669]   --->   Operation 55 'bitselect' 'temp_no_use' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.28ns)   --->   "%or_ln671 = or i1 %temp_no_use, i1 %temp_end" [util.cpp:671]   --->   Operation 56 'or' 'or_ln671' <Predicate = (tmp)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln671 = br i1 %or_ln671, void %if.then2, void %if.end" [util.cpp:671]   --->   Operation 57 'br' 'br_ln671' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_282 = partselect i166 @_ssdm_op_PartSelect.i166.i168.i32.i32, i168 %rcache_re_bank1_3_read, i32 2, i32 167" [util.cpp:672]   --->   Operation 58 'partselect' 'tmp_282' <Predicate = (tmp & !or_ln671)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.42ns)   --->   "%store_ln673 = store i1 %temp_end, i1 %from1_end" [util.cpp:673]   --->   Operation 59 'store' 'store_ln673' <Predicate = (tmp)> <Delay = 0.42>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln673 = br void %if.end33" [util.cpp:673]   --->   Operation 60 'br' 'br_ln673' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%from4_end_4 = load i1 %from4_end" [util.cpp:690]   --->   Operation 61 'load' 'from4_end_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%from3_end_4 = load i1 %from3_end" [util.cpp:690]   --->   Operation 62 'load' 'from3_end_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%from2_end_28 = load i1 %from2_end" [util.cpp:690]   --->   Operation 63 'load' 'from2_end_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%from1_end_28 = load i1 %from1_end" [util.cpp:690]   --->   Operation 64 'load' 'from1_end_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node enable)   --->   "%and_ln690 = and i1 %from3_end_4, i1 %from4_end_4" [util.cpp:690]   --->   Operation 65 'and' 'and_ln690' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node enable)   --->   "%and_ln690_3 = and i1 %from2_end_28, i1 %from1_end_28" [util.cpp:690]   --->   Operation 66 'and' 'and_ln690_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 67 [1/1] (0.28ns) (out node of the LUT)   --->   "%enable = and i1 %and_ln690_3, i1 %and_ln690" [util.cpp:690]   --->   Operation 67 'and' 'enable' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln665 = br i1 %enable, void %for.body, void %for.end" [util.cpp:665]   --->   Operation 68 'br' 'br_ln665' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 1.62>
-ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%or_ln691_6 = bitconcatenate i168 @_ssdm_op_BitConcatenate.i168.i166.i2, i166 %tmp_285, i2 0" [util.cpp:691]   --->   Operation 69 'bitconcatenate' 'or_ln691_6' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161 & !or_ln690)> <Delay = 0.00>
-ST_2 : Operation 70 [1/1] (1.62ns)   --->   "%write_ln691 = write void @_ssdm_op_Write.ap_fifo.volatile.i168P0A, i168 %rresponse3, i168 %or_ln691_6" [util.cpp:691]   --->   Operation 70 'write' 'write_ln691' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161 & !or_ln690)> <Delay = 1.62> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.62> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 16> <FIFO>
-ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln691 = br void %if.end28" [util.cpp:691]   --->   Operation 71 'br' 'br_ln691' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161 & !or_ln690)> <Delay = 0.00>
-ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%or_ln686_6 = bitconcatenate i168 @_ssdm_op_BitConcatenate.i168.i166.i2, i166 %tmp_284, i2 0" [util.cpp:686]   --->   Operation 72 'bitconcatenate' 'or_ln686_6' <Predicate = (!tmp & !tmp_s & tmp_160 & !or_ln685)> <Delay = 0.00>
-ST_2 : Operation 73 [1/1] (1.62ns)   --->   "%write_ln686 = write void @_ssdm_op_Write.ap_fifo.volatile.i168P0A, i168 %rresponse3, i168 %or_ln686_6" [util.cpp:686]   --->   Operation 73 'write' 'write_ln686' <Predicate = (!tmp & !tmp_s & tmp_160 & !or_ln685)> <Delay = 1.62> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.62> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 16> <FIFO>
-ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln686 = br void %if.end19" [util.cpp:686]   --->   Operation 74 'br' 'br_ln686' <Predicate = (!tmp & !tmp_s & tmp_160 & !or_ln685)> <Delay = 0.00>
-ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%or_ln681_6 = bitconcatenate i168 @_ssdm_op_BitConcatenate.i168.i166.i2, i166 %tmp_283, i2 0" [util.cpp:681]   --->   Operation 75 'bitconcatenate' 'or_ln681_6' <Predicate = (!tmp & tmp_s & !or_ln680)> <Delay = 0.00>
-ST_2 : Operation 76 [1/1] (1.62ns)   --->   "%write_ln681 = write void @_ssdm_op_Write.ap_fifo.volatile.i168P0A, i168 %rresponse3, i168 %or_ln681_6" [util.cpp:681]   --->   Operation 76 'write' 'write_ln681' <Predicate = (!tmp & tmp_s & !or_ln680)> <Delay = 1.62> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.62> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 16> <FIFO>
-ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln681 = br void %if.end10" [util.cpp:681]   --->   Operation 77 'br' 'br_ln681' <Predicate = (!tmp & tmp_s & !or_ln680)> <Delay = 0.00>
-ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%or_ln676_6 = bitconcatenate i168 @_ssdm_op_BitConcatenate.i168.i166.i2, i166 %tmp_282, i2 0" [util.cpp:676]   --->   Operation 78 'bitconcatenate' 'or_ln676_6' <Predicate = (tmp & !or_ln675)> <Delay = 0.00>
-ST_2 : Operation 79 [1/1] (1.62ns)   --->   "%write_ln676 = write void @_ssdm_op_Write.ap_fifo.volatile.i168P0A, i168 %rresponse3, i168 %or_ln676_6" [util.cpp:676]   --->   Operation 79 'write' 'write_ln676' <Predicate = (tmp & !or_ln675)> <Delay = 1.62> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.62> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 16> <FIFO>
-ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln676 = br void %if.end" [util.cpp:676]   --->   Operation 80 'br' 'br_ln676' <Predicate = (tmp & !or_ln675)> <Delay = 0.00>
-ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%ret_ln699 = ret" [util.cpp:699]   --->   Operation 81 'ret' 'ret_ln699' <Predicate = (enable)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%or_ln687_6 = bitconcatenate i168 @_ssdm_op_BitConcatenate.i168.i166.i2, i166 %tmp_285, i2 0" [util.cpp:687]   --->   Operation 69 'bitconcatenate' 'or_ln687_6' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161 & !or_ln686)> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (1.62ns)   --->   "%write_ln687 = write void @_ssdm_op_Write.ap_fifo.volatile.i168P0A, i168 %rresponse3, i168 %or_ln687_6" [util.cpp:687]   --->   Operation 70 'write' 'write_ln687' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161 & !or_ln686)> <Delay = 1.62> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.62> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 16> <FIFO>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln687 = br void %if.end28" [util.cpp:687]   --->   Operation 71 'br' 'br_ln687' <Predicate = (!tmp & !tmp_s & !tmp_160 & tmp_161 & !or_ln686)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%or_ln682_6 = bitconcatenate i168 @_ssdm_op_BitConcatenate.i168.i166.i2, i166 %tmp_284, i2 0" [util.cpp:682]   --->   Operation 72 'bitconcatenate' 'or_ln682_6' <Predicate = (!tmp & !tmp_s & tmp_160 & !or_ln681)> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (1.62ns)   --->   "%write_ln682 = write void @_ssdm_op_Write.ap_fifo.volatile.i168P0A, i168 %rresponse3, i168 %or_ln682_6" [util.cpp:682]   --->   Operation 73 'write' 'write_ln682' <Predicate = (!tmp & !tmp_s & tmp_160 & !or_ln681)> <Delay = 1.62> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.62> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 16> <FIFO>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln682 = br void %if.end19" [util.cpp:682]   --->   Operation 74 'br' 'br_ln682' <Predicate = (!tmp & !tmp_s & tmp_160 & !or_ln681)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%or_ln677_6 = bitconcatenate i168 @_ssdm_op_BitConcatenate.i168.i166.i2, i166 %tmp_283, i2 0" [util.cpp:677]   --->   Operation 75 'bitconcatenate' 'or_ln677_6' <Predicate = (!tmp & tmp_s & !or_ln676)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (1.62ns)   --->   "%write_ln677 = write void @_ssdm_op_Write.ap_fifo.volatile.i168P0A, i168 %rresponse3, i168 %or_ln677_6" [util.cpp:677]   --->   Operation 76 'write' 'write_ln677' <Predicate = (!tmp & tmp_s & !or_ln676)> <Delay = 1.62> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.62> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 16> <FIFO>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln677 = br void %if.end10" [util.cpp:677]   --->   Operation 77 'br' 'br_ln677' <Predicate = (!tmp & tmp_s & !or_ln676)> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%or_ln672_6 = bitconcatenate i168 @_ssdm_op_BitConcatenate.i168.i166.i2, i166 %tmp_282, i2 0" [util.cpp:672]   --->   Operation 78 'bitconcatenate' 'or_ln672_6' <Predicate = (tmp & !or_ln671)> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (1.62ns)   --->   "%write_ln672 = write void @_ssdm_op_Write.ap_fifo.volatile.i168P0A, i168 %rresponse3, i168 %or_ln672_6" [util.cpp:672]   --->   Operation 79 'write' 'write_ln672' <Predicate = (tmp & !or_ln671)> <Delay = 1.62> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.62> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 16> <FIFO>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln672 = br void %if.end" [util.cpp:672]   --->   Operation 80 'br' 'br_ln672' <Predicate = (tmp & !or_ln671)> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%ret_ln695 = ret" [util.cpp:695]   --->   Operation 81 'ret' 'ret_ln695' <Predicate = (enable)> <Delay = 0.00>
 
 
 ============================================================
@@ -197,74 +197,74 @@ specinterface_ln0      (specinterface ) [ 000]
 specinterface_ln0      (specinterface ) [ 000]
 specinterface_ln0      (specinterface ) [ 000]
 specinterface_ln0      (specinterface ) [ 000]
-store_ln669            (store         ) [ 000]
-store_ln669            (store         ) [ 000]
-store_ln669            (store         ) [ 000]
-store_ln669            (store         ) [ 000]
+store_ln665            (store         ) [ 000]
+store_ln665            (store         ) [ 000]
+store_ln665            (store         ) [ 000]
+store_ln665            (store         ) [ 000]
 br_ln0                 (br            ) [ 000]
-specpipeline_ln670     (specpipeline  ) [ 000]
-specloopname_ln671     (specloopname  ) [ 000]
+specpipeline_ln666     (specpipeline  ) [ 000]
+specloopname_ln667     (specloopname  ) [ 000]
 tmp                    (nbreadreq     ) [ 011]
-br_ln672               (br            ) [ 000]
+br_ln668               (br            ) [ 000]
 tmp_s                  (nbreadreq     ) [ 011]
-br_ln677               (br            ) [ 000]
+br_ln673               (br            ) [ 000]
 tmp_160                (nbreadreq     ) [ 011]
-br_ln682               (br            ) [ 000]
+br_ln678               (br            ) [ 000]
 tmp_161                (nbreadreq     ) [ 011]
-br_ln687               (br            ) [ 000]
+br_ln683               (br            ) [ 000]
 rcache_re_bank4_3_read (read          ) [ 000]
 temp_end_28            (trunc         ) [ 000]
 temp_no_use_6          (bitselect     ) [ 000]
-or_ln690               (or            ) [ 011]
-br_ln690               (br            ) [ 000]
+or_ln686               (or            ) [ 011]
+br_ln686               (br            ) [ 000]
 tmp_285                (partselect    ) [ 011]
-store_ln692            (store         ) [ 000]
-br_ln692               (br            ) [ 000]
+store_ln688            (store         ) [ 000]
+br_ln688               (br            ) [ 000]
 rcache_re_bank3_3_read (read          ) [ 000]
 temp_end_27            (trunc         ) [ 000]
 temp_no_use_5          (bitselect     ) [ 000]
-or_ln685               (or            ) [ 011]
-br_ln685               (br            ) [ 000]
+or_ln681               (or            ) [ 011]
+br_ln681               (br            ) [ 000]
 tmp_284                (partselect    ) [ 011]
-store_ln687            (store         ) [ 000]
-br_ln687               (br            ) [ 000]
+store_ln683            (store         ) [ 000]
+br_ln683               (br            ) [ 000]
 rcache_re_bank2_3_read (read          ) [ 000]
 temp_end_26            (trunc         ) [ 000]
 temp_no_use_4          (bitselect     ) [ 000]
-or_ln680               (or            ) [ 011]
-br_ln680               (br            ) [ 000]
+or_ln676               (or            ) [ 011]
+br_ln676               (br            ) [ 000]
 tmp_283                (partselect    ) [ 011]
-store_ln682            (store         ) [ 000]
-br_ln682               (br            ) [ 000]
+store_ln678            (store         ) [ 000]
+br_ln678               (br            ) [ 000]
 rcache_re_bank1_3_read (read          ) [ 000]
 temp_end               (trunc         ) [ 000]
 temp_no_use            (bitselect     ) [ 000]
-or_ln675               (or            ) [ 011]
-br_ln675               (br            ) [ 000]
+or_ln671               (or            ) [ 011]
+br_ln671               (br            ) [ 000]
 tmp_282                (partselect    ) [ 011]
-store_ln677            (store         ) [ 000]
-br_ln677               (br            ) [ 000]
+store_ln673            (store         ) [ 000]
+br_ln673               (br            ) [ 000]
 from4_end_4            (load          ) [ 000]
 from3_end_4            (load          ) [ 000]
 from2_end_28           (load          ) [ 000]
 from1_end_28           (load          ) [ 000]
-and_ln694              (and           ) [ 000]
-and_ln694_3            (and           ) [ 000]
+and_ln690              (and           ) [ 000]
+and_ln690_3            (and           ) [ 000]
 enable                 (and           ) [ 011]
-br_ln669               (br            ) [ 000]
-or_ln691_6             (bitconcatenate) [ 000]
-write_ln691            (write         ) [ 000]
-br_ln691               (br            ) [ 000]
-or_ln686_6             (bitconcatenate) [ 000]
-write_ln686            (write         ) [ 000]
-br_ln686               (br            ) [ 000]
-or_ln681_6             (bitconcatenate) [ 000]
-write_ln681            (write         ) [ 000]
-br_ln681               (br            ) [ 000]
-or_ln676_6             (bitconcatenate) [ 000]
-write_ln676            (write         ) [ 000]
-br_ln676               (br            ) [ 000]
-ret_ln699              (ret           ) [ 000]
+br_ln665               (br            ) [ 000]
+or_ln687_6             (bitconcatenate) [ 000]
+write_ln687            (write         ) [ 000]
+br_ln687               (br            ) [ 000]
+or_ln682_6             (bitconcatenate) [ 000]
+write_ln682            (write         ) [ 000]
+br_ln682               (br            ) [ 000]
+or_ln677_6             (bitconcatenate) [ 000]
+write_ln677            (write         ) [ 000]
+br_ln677               (br            ) [ 000]
+or_ln672_6             (bitconcatenate) [ 000]
+write_ln672            (write         ) [ 000]
+br_ln672               (br            ) [ 000]
+ret_ln695              (ret           ) [ 000]
 </LifeTime>
 
 <model>
@@ -338,7 +338,7 @@ ret_ln699              (ret           ) [ 000]
 <pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_56"/></StgValue>
+<StgValue><ssdm name="empty_91"/></StgValue>
 </bind>
 </comp>
 
@@ -356,7 +356,7 @@ ret_ln699              (ret           ) [ 000]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_86"/></StgValue>
+<StgValue><ssdm name="empty_141"/></StgValue>
 </bind>
 </comp>
 
@@ -401,7 +401,7 @@ ret_ln699              (ret           ) [ 000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_52"/></StgValue>
+<StgValue><ssdm name="empty_65"/></StgValue>
 </bind>
 </comp>
 
@@ -639,11 +639,11 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="write(1151) " fcode="write"/>
-<opset="write_ln691/2 write_ln686/2 write_ln681/2 write_ln676/2 "/>
+<opset="write_ln687/2 write_ln682/2 write_ln677/2 write_ln672/2 "/>
 </bind>
 </comp>
 
-<comp id="127" class="1004" name="store_ln669_store_fu_127">
+<comp id="127" class="1004" name="store_ln665_store_fu_127">
 <pin_list>
 <pin id="128" dir="0" index="0" bw="1" slack="0"/>
 <pin id="129" dir="0" index="1" bw="1" slack="0"/>
@@ -651,11 +651,11 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln669/1 "/>
+<opset="store_ln665/1 "/>
 </bind>
 </comp>
 
-<comp id="132" class="1004" name="store_ln669_store_fu_132">
+<comp id="132" class="1004" name="store_ln665_store_fu_132">
 <pin_list>
 <pin id="133" dir="0" index="0" bw="1" slack="0"/>
 <pin id="134" dir="0" index="1" bw="1" slack="0"/>
@@ -663,11 +663,11 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln669/1 "/>
+<opset="store_ln665/1 "/>
 </bind>
 </comp>
 
-<comp id="137" class="1004" name="store_ln669_store_fu_137">
+<comp id="137" class="1004" name="store_ln665_store_fu_137">
 <pin_list>
 <pin id="138" dir="0" index="0" bw="1" slack="0"/>
 <pin id="139" dir="0" index="1" bw="1" slack="0"/>
@@ -675,11 +675,11 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln669/1 "/>
+<opset="store_ln665/1 "/>
 </bind>
 </comp>
 
-<comp id="142" class="1004" name="store_ln669_store_fu_142">
+<comp id="142" class="1004" name="store_ln665_store_fu_142">
 <pin_list>
 <pin id="143" dir="0" index="0" bw="1" slack="0"/>
 <pin id="144" dir="0" index="1" bw="1" slack="0"/>
@@ -687,7 +687,7 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln669/1 "/>
+<opset="store_ln665/1 "/>
 </bind>
 </comp>
 
@@ -715,7 +715,7 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="159" class="1004" name="or_ln690_fu_159">
+<comp id="159" class="1004" name="or_ln686_fu_159">
 <pin_list>
 <pin id="160" dir="0" index="0" bw="1" slack="0"/>
 <pin id="161" dir="0" index="1" bw="1" slack="0"/>
@@ -723,7 +723,7 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln690/1 "/>
+<opset="or_ln686/1 "/>
 </bind>
 </comp>
 
@@ -741,7 +741,7 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="175" class="1004" name="store_ln692_store_fu_175">
+<comp id="175" class="1004" name="store_ln688_store_fu_175">
 <pin_list>
 <pin id="176" dir="0" index="0" bw="1" slack="0"/>
 <pin id="177" dir="0" index="1" bw="1" slack="0"/>
@@ -749,7 +749,7 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln692/1 "/>
+<opset="store_ln688/1 "/>
 </bind>
 </comp>
 
@@ -777,7 +777,7 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="192" class="1004" name="or_ln685_fu_192">
+<comp id="192" class="1004" name="or_ln681_fu_192">
 <pin_list>
 <pin id="193" dir="0" index="0" bw="1" slack="0"/>
 <pin id="194" dir="0" index="1" bw="1" slack="0"/>
@@ -785,7 +785,7 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln685/1 "/>
+<opset="or_ln681/1 "/>
 </bind>
 </comp>
 
@@ -803,7 +803,7 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="208" class="1004" name="store_ln687_store_fu_208">
+<comp id="208" class="1004" name="store_ln683_store_fu_208">
 <pin_list>
 <pin id="209" dir="0" index="0" bw="1" slack="0"/>
 <pin id="210" dir="0" index="1" bw="1" slack="0"/>
@@ -811,7 +811,7 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln687/1 "/>
+<opset="store_ln683/1 "/>
 </bind>
 </comp>
 
@@ -839,7 +839,7 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="225" class="1004" name="or_ln680_fu_225">
+<comp id="225" class="1004" name="or_ln676_fu_225">
 <pin_list>
 <pin id="226" dir="0" index="0" bw="1" slack="0"/>
 <pin id="227" dir="0" index="1" bw="1" slack="0"/>
@@ -847,7 +847,7 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln680/1 "/>
+<opset="or_ln676/1 "/>
 </bind>
 </comp>
 
@@ -865,7 +865,7 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="241" class="1004" name="store_ln682_store_fu_241">
+<comp id="241" class="1004" name="store_ln678_store_fu_241">
 <pin_list>
 <pin id="242" dir="0" index="0" bw="1" slack="0"/>
 <pin id="243" dir="0" index="1" bw="1" slack="0"/>
@@ -873,7 +873,7 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln682/1 "/>
+<opset="store_ln678/1 "/>
 </bind>
 </comp>
 
@@ -901,7 +901,7 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="258" class="1004" name="or_ln675_fu_258">
+<comp id="258" class="1004" name="or_ln671_fu_258">
 <pin_list>
 <pin id="259" dir="0" index="0" bw="1" slack="0"/>
 <pin id="260" dir="0" index="1" bw="1" slack="0"/>
@@ -909,7 +909,7 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln675/1 "/>
+<opset="or_ln671/1 "/>
 </bind>
 </comp>
 
@@ -927,7 +927,7 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="274" class="1004" name="store_ln677_store_fu_274">
+<comp id="274" class="1004" name="store_ln673_store_fu_274">
 <pin_list>
 <pin id="275" dir="0" index="0" bw="1" slack="0"/>
 <pin id="276" dir="0" index="1" bw="1" slack="0"/>
@@ -935,7 +935,7 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln677/1 "/>
+<opset="store_ln673/1 "/>
 </bind>
 </comp>
 
@@ -983,7 +983,7 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="291" class="1004" name="and_ln694_fu_291">
+<comp id="291" class="1004" name="and_ln690_fu_291">
 <pin_list>
 <pin id="292" dir="0" index="0" bw="1" slack="0"/>
 <pin id="293" dir="0" index="1" bw="1" slack="0"/>
@@ -991,11 +991,11 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="and_ln694/1 "/>
+<opset="and_ln690/1 "/>
 </bind>
 </comp>
 
-<comp id="297" class="1004" name="and_ln694_3_fu_297">
+<comp id="297" class="1004" name="and_ln690_3_fu_297">
 <pin_list>
 <pin id="298" dir="0" index="0" bw="1" slack="0"/>
 <pin id="299" dir="0" index="1" bw="1" slack="0"/>
@@ -1003,7 +1003,7 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="and_ln694_3/1 "/>
+<opset="and_ln690_3/1 "/>
 </bind>
 </comp>
 
@@ -1019,7 +1019,7 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="309" class="1004" name="or_ln691_6_fu_309">
+<comp id="309" class="1004" name="or_ln687_6_fu_309">
 <pin_list>
 <pin id="310" dir="0" index="0" bw="168" slack="0"/>
 <pin id="311" dir="0" index="1" bw="166" slack="1"/>
@@ -1028,11 +1028,11 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="or_ln691_6/2 "/>
+<opset="or_ln687_6/2 "/>
 </bind>
 </comp>
 
-<comp id="317" class="1004" name="or_ln686_6_fu_317">
+<comp id="317" class="1004" name="or_ln682_6_fu_317">
 <pin_list>
 <pin id="318" dir="0" index="0" bw="168" slack="0"/>
 <pin id="319" dir="0" index="1" bw="166" slack="1"/>
@@ -1041,11 +1041,11 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="or_ln686_6/2 "/>
+<opset="or_ln682_6/2 "/>
 </bind>
 </comp>
 
-<comp id="325" class="1004" name="or_ln681_6_fu_325">
+<comp id="325" class="1004" name="or_ln677_6_fu_325">
 <pin_list>
 <pin id="326" dir="0" index="0" bw="168" slack="0"/>
 <pin id="327" dir="0" index="1" bw="166" slack="1"/>
@@ -1054,11 +1054,11 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="or_ln681_6/2 "/>
+<opset="or_ln677_6/2 "/>
 </bind>
 </comp>
 
-<comp id="333" class="1004" name="or_ln676_6_fu_333">
+<comp id="333" class="1004" name="or_ln672_6_fu_333">
 <pin_list>
 <pin id="334" dir="0" index="0" bw="168" slack="0"/>
 <pin id="335" dir="0" index="1" bw="166" slack="1"/>
@@ -1067,7 +1067,7 @@ ret_ln699              (ret           ) [ 000]
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="or_ln676_6/2 "/>
+<opset="or_ln672_6/2 "/>
 </bind>
 </comp>
 
@@ -1151,13 +1151,13 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="385" class="1005" name="or_ln690_reg_385">
+<comp id="385" class="1005" name="or_ln686_reg_385">
 <pin_list>
 <pin id="386" dir="0" index="0" bw="1" slack="1"/>
 <pin id="387" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="or_ln690 "/>
+<opset="or_ln686 "/>
 </bind>
 </comp>
 
@@ -1171,13 +1171,13 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="394" class="1005" name="or_ln685_reg_394">
+<comp id="394" class="1005" name="or_ln681_reg_394">
 <pin_list>
 <pin id="395" dir="0" index="0" bw="1" slack="1"/>
 <pin id="396" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="or_ln685 "/>
+<opset="or_ln681 "/>
 </bind>
 </comp>
 
@@ -1191,13 +1191,13 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="403" class="1005" name="or_ln680_reg_403">
+<comp id="403" class="1005" name="or_ln676_reg_403">
 <pin_list>
 <pin id="404" dir="0" index="0" bw="1" slack="1"/>
 <pin id="405" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="or_ln680 "/>
+<opset="or_ln676 "/>
 </bind>
 </comp>
 
@@ -1211,13 +1211,13 @@ ret_ln699              (ret           ) [ 000]
 </bind>
 </comp>
 
-<comp id="412" class="1005" name="or_ln675_reg_412">
+<comp id="412" class="1005" name="or_ln671_reg_412">
 <pin_list>
 <pin id="413" dir="0" index="0" bw="1" slack="1"/>
 <pin id="414" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="or_ln675 "/>
+<opset="or_ln671 "/>
 </bind>
 </comp>
 
@@ -1509,35 +1509,35 @@ ret_ln699              (ret           ) [ 000]
 	Port: merge_4_to_1_rresponse.17 : rcache_re_bank4_3 | {1 }
   - Chain level:
 	State 1
-		store_ln669 : 1
-		store_ln669 : 1
-		store_ln669 : 1
-		store_ln669 : 1
-		or_ln690 : 1
-		br_ln690 : 1
-		store_ln692 : 1
-		or_ln685 : 1
-		br_ln685 : 1
-		store_ln687 : 1
-		or_ln680 : 1
-		br_ln680 : 1
-		store_ln682 : 1
-		or_ln675 : 1
-		br_ln675 : 1
-		store_ln677 : 1
+		store_ln665 : 1
+		store_ln665 : 1
+		store_ln665 : 1
+		store_ln665 : 1
+		or_ln686 : 1
+		br_ln686 : 1
+		store_ln688 : 1
+		or_ln681 : 1
+		br_ln681 : 1
+		store_ln683 : 1
+		or_ln676 : 1
+		br_ln676 : 1
+		store_ln678 : 1
+		or_ln671 : 1
+		br_ln671 : 1
+		store_ln673 : 1
 		from4_end_4 : 1
 		from3_end_4 : 1
 		from2_end_28 : 1
 		from1_end_28 : 1
-		and_ln694 : 2
-		and_ln694_3 : 2
+		and_ln690 : 2
+		and_ln690_3 : 2
 		enable : 2
-		br_ln669 : 2
+		br_ln665 : 2
 	State 2
-		write_ln691 : 1
-		write_ln686 : 1
-		write_ln681 : 1
-		write_ln676 : 1
+		write_ln687 : 1
+		write_ln682 : 1
+		write_ln677 : 1
+		write_ln672 : 1
 
 
 ============================================================
@@ -1548,13 +1548,13 @@ ret_ln699              (ret           ) [ 000]
 |----------|------------------------------------|---------|---------|
 | Operation|           Functional Unit          |    FF   |   LUT   |
 |----------|------------------------------------|---------|---------|
-|          |           or_ln690_fu_159          |    0    |    2    |
-|    or    |           or_ln685_fu_192          |    0    |    2    |
-|          |           or_ln680_fu_225          |    0    |    2    |
-|          |           or_ln675_fu_258          |    0    |    2    |
+|          |           or_ln686_fu_159          |    0    |    2    |
+|    or    |           or_ln681_fu_192          |    0    |    2    |
+|          |           or_ln676_fu_225          |    0    |    2    |
+|          |           or_ln671_fu_258          |    0    |    2    |
 |----------|------------------------------------|---------|---------|
-|          |          and_ln694_fu_291          |    0    |    2    |
-|    and   |         and_ln694_3_fu_297         |    0    |    2    |
+|          |          and_ln690_fu_291          |    0    |    2    |
+|    and   |         and_ln690_3_fu_297         |    0    |    2    |
 |          |            enable_fu_303           |    0    |    2    |
 |----------|------------------------------------|---------|---------|
 |          |         tmp_nbreadreq_fu_64        |    0    |    0    |
@@ -1584,10 +1584,10 @@ ret_ln699              (ret           ) [ 000]
 |          |           tmp_283_fu_231           |    0    |    0    |
 |          |           tmp_282_fu_264           |    0    |    0    |
 |----------|------------------------------------|---------|---------|
-|          |          or_ln691_6_fu_309         |    0    |    0    |
-|bitconcatenate|          or_ln686_6_fu_317         |    0    |    0    |
-|          |          or_ln681_6_fu_325         |    0    |    0    |
-|          |          or_ln676_6_fu_333         |    0    |    0    |
+|          |          or_ln687_6_fu_309         |    0    |    0    |
+|bitconcatenate|          or_ln682_6_fu_317         |    0    |    0    |
+|          |          or_ln677_6_fu_325         |    0    |    0    |
+|          |          or_ln672_6_fu_333         |    0    |    0    |
 |----------|------------------------------------|---------|---------|
 |   Total  |                                    |    0    |    14   |
 |----------|------------------------------------|---------|---------|
@@ -1604,10 +1604,10 @@ N/A
 |from2_end_reg_355|    1   |
 |from3_end_reg_348|    1   |
 |from4_end_reg_341|    1   |
-| or_ln675_reg_412|    1   |
-| or_ln680_reg_403|    1   |
-| or_ln685_reg_394|    1   |
-| or_ln690_reg_385|    1   |
+| or_ln671_reg_412|    1   |
+| or_ln676_reg_403|    1   |
+| or_ln681_reg_394|    1   |
+| or_ln686_reg_385|    1   |
 | tmp_160_reg_377 |    1   |
 | tmp_161_reg_381 |    1   |
 | tmp_282_reg_416 |   166  |

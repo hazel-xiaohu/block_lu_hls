@@ -1,0 +1,223 @@
+
+
+================================================================
+== Vitis HLS Report for 'rcache_Pipeline_VITIS_LOOP_345_1'
+================================================================
+* Date:           Sat Sep 26 10:58:40 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.022 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       34|       34|  0.170 us|  0.170 us|   34|   34|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_345_1  |       32|       32|         1|          1|          1|    32|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.02>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 4 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_lru_count_8, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 5 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_lru_count_7, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 6 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_lru_count_6, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 7 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_lru_count_5, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 8 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_lru_count_4, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 9 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_lru_count_3, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 10 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_lru_count_2, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %p_lru_count_1, i64 666, i64 30, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_76, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 14 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_77, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 15 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_78, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 16 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_79, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 17 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_80, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 18 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_81, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 19 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_82, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 20 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_83, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 21 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_84, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 22 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_85, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 23 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_86, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 24 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_87, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 25 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_88, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 26 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_89, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 27 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_90, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 28 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.42ns)   --->   "%store_ln0 = store i6 0, i6 %i"   --->   Operation 29 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc64"   --->   Operation 30 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%i_5 = load i6 %i" [rcache.cpp:345]   --->   Operation 31 'load' 'i_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.78ns)   --->   "%icmp_ln345 = icmp_eq  i6 %i_5, i6 32" [rcache.cpp:345]   --->   Operation 32 'icmp' 'icmp_ln345' <Predicate = true> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32"   --->   Operation 33 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.78ns)   --->   "%add_ln345 = add i6 %i_5, i6 1" [rcache.cpp:345]   --->   Operation 34 'add' 'add_ln345' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln345 = br i1 %icmp_ln345, void %for.inc64.split, void %for.cond71.preheader.exitStub" [rcache.cpp:345]   --->   Operation 35 'br' 'br_ln345' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln345 = zext i6 %i_5" [rcache.cpp:345]   --->   Operation 36 'zext' 'zext_ln345' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i6.i1, i6 %i_5, i1 0" [rcache.cpp:349]   --->   Operation 37 'bitconcatenate' 'tmp' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln349 = zext i7 %tmp" [rcache.cpp:349]   --->   Operation 38 'zext' 'zext_ln349' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%p_lru_count_1_addr = getelementptr i32 %p_lru_count_1, i64 0, i64 %zext_ln349" [rcache.cpp:349]   --->   Operation 39 'getelementptr' 'p_lru_count_1_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%or_ln349 = or i7 %tmp, i7 1" [rcache.cpp:349]   --->   Operation 40 'or' 'or_ln349' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln349_1 = zext i7 %or_ln349" [rcache.cpp:349]   --->   Operation 41 'zext' 'zext_ln349_1' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%p_lru_count_1_addr_8 = getelementptr i32 %p_lru_count_1, i64 0, i64 %zext_ln349_1" [rcache.cpp:349]   --->   Operation 42 'getelementptr' 'p_lru_count_1_addr_8' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%p_lru_count_2_addr = getelementptr i32 %p_lru_count_2, i64 0, i64 %zext_ln349" [rcache.cpp:350]   --->   Operation 43 'getelementptr' 'p_lru_count_2_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%p_lru_count_2_addr_8 = getelementptr i32 %p_lru_count_2, i64 0, i64 %zext_ln349_1" [rcache.cpp:350]   --->   Operation 44 'getelementptr' 'p_lru_count_2_addr_8' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%p_lru_count_3_addr = getelementptr i32 %p_lru_count_3, i64 0, i64 %zext_ln349" [rcache.cpp:351]   --->   Operation 45 'getelementptr' 'p_lru_count_3_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%p_lru_count_3_addr_8 = getelementptr i32 %p_lru_count_3, i64 0, i64 %zext_ln349_1" [rcache.cpp:351]   --->   Operation 46 'getelementptr' 'p_lru_count_3_addr_8' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%p_lru_count_4_addr = getelementptr i32 %p_lru_count_4, i64 0, i64 %zext_ln349" [rcache.cpp:352]   --->   Operation 47 'getelementptr' 'p_lru_count_4_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%p_lru_count_4_addr_8 = getelementptr i32 %p_lru_count_4, i64 0, i64 %zext_ln349_1" [rcache.cpp:352]   --->   Operation 48 'getelementptr' 'p_lru_count_4_addr_8' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%p_lru_count_5_addr = getelementptr i32 %p_lru_count_5, i64 0, i64 %zext_ln349" [rcache.cpp:353]   --->   Operation 49 'getelementptr' 'p_lru_count_5_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%p_lru_count_5_addr_8 = getelementptr i32 %p_lru_count_5, i64 0, i64 %zext_ln349_1" [rcache.cpp:353]   --->   Operation 50 'getelementptr' 'p_lru_count_5_addr_8' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_lru_count_6_addr = getelementptr i32 %p_lru_count_6, i64 0, i64 %zext_ln349" [rcache.cpp:354]   --->   Operation 51 'getelementptr' 'p_lru_count_6_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%p_lru_count_6_addr_8 = getelementptr i32 %p_lru_count_6, i64 0, i64 %zext_ln349_1" [rcache.cpp:354]   --->   Operation 52 'getelementptr' 'p_lru_count_6_addr_8' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%p_lru_count_7_addr = getelementptr i32 %p_lru_count_7, i64 0, i64 %zext_ln349" [rcache.cpp:355]   --->   Operation 53 'getelementptr' 'p_lru_count_7_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%p_lru_count_7_addr_8 = getelementptr i32 %p_lru_count_7, i64 0, i64 %zext_ln349_1" [rcache.cpp:355]   --->   Operation 54 'getelementptr' 'p_lru_count_7_addr_8' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%p_lru_count_8_addr = getelementptr i32 %p_lru_count_8, i64 0, i64 %zext_ln349" [rcache.cpp:356]   --->   Operation 55 'getelementptr' 'p_lru_count_8_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%p_lru_count_8_addr_8 = getelementptr i32 %p_lru_count_8, i64 0, i64 %zext_ln349_1" [rcache.cpp:356]   --->   Operation 56 'getelementptr' 'p_lru_count_8_addr_8' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%specpipeline_ln346 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_157" [rcache.cpp:346]   --->   Operation 57 'specpipeline' 'specpipeline_ln346' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%specloopname_ln345 = specloopname void @_ssdm_op_SpecLoopName, void @empty_67" [rcache.cpp:345]   --->   Operation 58 'specloopname' 'specloopname_ln345' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (1.23ns)   --->   "%store_ln349 = store i32 0, i7 %p_lru_count_1_addr" [rcache.cpp:349]   --->   Operation 59 'store' 'store_ln349' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 60 [1/1] (1.23ns)   --->   "%store_ln350 = store i32 0, i7 %p_lru_count_2_addr" [rcache.cpp:350]   --->   Operation 60 'store' 'store_ln350' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 61 [1/1] (1.23ns)   --->   "%store_ln351 = store i32 0, i7 %p_lru_count_3_addr" [rcache.cpp:351]   --->   Operation 61 'store' 'store_ln351' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 62 [1/1] (1.23ns)   --->   "%store_ln352 = store i32 0, i7 %p_lru_count_4_addr" [rcache.cpp:352]   --->   Operation 62 'store' 'store_ln352' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 63 [1/1] (1.23ns)   --->   "%store_ln353 = store i32 0, i7 %p_lru_count_5_addr" [rcache.cpp:353]   --->   Operation 63 'store' 'store_ln353' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 64 [1/1] (1.23ns)   --->   "%store_ln354 = store i32 0, i7 %p_lru_count_6_addr" [rcache.cpp:354]   --->   Operation 64 'store' 'store_ln354' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 65 [1/1] (1.23ns)   --->   "%store_ln355 = store i32 0, i7 %p_lru_count_7_addr" [rcache.cpp:355]   --->   Operation 65 'store' 'store_ln355' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 66 [1/1] (1.23ns)   --->   "%store_ln356 = store i32 0, i7 %p_lru_count_8_addr" [rcache.cpp:356]   --->   Operation 66 'store' 'store_ln356' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 67 [1/1] (1.23ns)   --->   "%store_ln349 = store i32 0, i7 %p_lru_count_1_addr_8" [rcache.cpp:349]   --->   Operation 67 'store' 'store_ln349' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 68 [1/1] (1.23ns)   --->   "%store_ln350 = store i32 0, i7 %p_lru_count_2_addr_8" [rcache.cpp:350]   --->   Operation 68 'store' 'store_ln350' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 69 [1/1] (1.23ns)   --->   "%store_ln351 = store i32 0, i7 %p_lru_count_3_addr_8" [rcache.cpp:351]   --->   Operation 69 'store' 'store_ln351' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 70 [1/1] (1.23ns)   --->   "%store_ln352 = store i32 0, i7 %p_lru_count_4_addr_8" [rcache.cpp:352]   --->   Operation 70 'store' 'store_ln352' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 71 [1/1] (1.23ns)   --->   "%store_ln353 = store i32 0, i7 %p_lru_count_5_addr_8" [rcache.cpp:353]   --->   Operation 71 'store' 'store_ln353' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 72 [1/1] (1.23ns)   --->   "%store_ln354 = store i32 0, i7 %p_lru_count_6_addr_8" [rcache.cpp:354]   --->   Operation 72 'store' 'store_ln354' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 73 [1/1] (1.23ns)   --->   "%store_ln355 = store i32 0, i7 %p_lru_count_7_addr_8" [rcache.cpp:355]   --->   Operation 73 'store' 'store_ln355' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 74 [1/1] (1.23ns)   --->   "%store_ln356 = store i32 0, i7 %p_lru_count_8_addr_8" [rcache.cpp:356]   --->   Operation 74 'store' 'store_ln356' <Predicate = (!icmp_ln345)> <Delay = 1.23> <CoreInst = "RAM_T2P_BRAM">   --->   Core 99 'RAM_T2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 128> <RAM>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%p_tag_V_addr = getelementptr i21 %p_tag_V, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 75 'getelementptr' 'p_tag_V_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_addr" [rcache.cpp:361]   --->   Operation 76 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%p_tag_V_76_addr = getelementptr i21 %p_tag_V_76, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 77 'getelementptr' 'p_tag_V_76_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_76_addr" [rcache.cpp:361]   --->   Operation 78 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%p_tag_V_77_addr = getelementptr i21 %p_tag_V_77, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 79 'getelementptr' 'p_tag_V_77_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_77_addr" [rcache.cpp:361]   --->   Operation 80 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%p_tag_V_78_addr = getelementptr i21 %p_tag_V_78, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 81 'getelementptr' 'p_tag_V_78_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_78_addr" [rcache.cpp:361]   --->   Operation 82 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%p_tag_V_79_addr = getelementptr i21 %p_tag_V_79, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 83 'getelementptr' 'p_tag_V_79_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_79_addr" [rcache.cpp:361]   --->   Operation 84 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%p_tag_V_80_addr = getelementptr i21 %p_tag_V_80, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 85 'getelementptr' 'p_tag_V_80_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_80_addr" [rcache.cpp:361]   --->   Operation 86 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%p_tag_V_81_addr = getelementptr i21 %p_tag_V_81, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 87 'getelementptr' 'p_tag_V_81_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_81_addr" [rcache.cpp:361]   --->   Operation 88 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%p_tag_V_82_addr = getelementptr i21 %p_tag_V_82, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 89 'getelementptr' 'p_tag_V_82_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_82_addr" [rcache.cpp:361]   --->   Operation 90 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%p_tag_V_83_addr = getelementptr i21 %p_tag_V_83, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 91 'getelementptr' 'p_tag_V_83_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_83_addr" [rcache.cpp:361]   --->   Operation 92 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%p_tag_V_84_addr = getelementptr i21 %p_tag_V_84, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 93 'getelementptr' 'p_tag_V_84_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_84_addr" [rcache.cpp:361]   --->   Operation 94 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%p_tag_V_85_addr = getelementptr i21 %p_tag_V_85, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 95 'getelementptr' 'p_tag_V_85_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_85_addr" [rcache.cpp:361]   --->   Operation 96 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%p_tag_V_86_addr = getelementptr i21 %p_tag_V_86, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 97 'getelementptr' 'p_tag_V_86_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_86_addr" [rcache.cpp:361]   --->   Operation 98 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%p_tag_V_87_addr = getelementptr i21 %p_tag_V_87, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 99 'getelementptr' 'p_tag_V_87_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_87_addr" [rcache.cpp:361]   --->   Operation 100 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%p_tag_V_88_addr = getelementptr i21 %p_tag_V_88, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 101 'getelementptr' 'p_tag_V_88_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_88_addr" [rcache.cpp:361]   --->   Operation 102 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%p_tag_V_89_addr = getelementptr i21 %p_tag_V_89, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 103 'getelementptr' 'p_tag_V_89_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_89_addr" [rcache.cpp:361]   --->   Operation 104 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%p_tag_V_90_addr = getelementptr i21 %p_tag_V_90, i64 0, i64 %zext_ln345" [rcache.cpp:361]   --->   Operation 105 'getelementptr' 'p_tag_V_90_addr' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.67ns)   --->   "%store_ln361 = store i21 0, i5 %p_tag_V_90_addr" [rcache.cpp:361]   --->   Operation 106 'store' 'store_ln361' <Predicate = (!icmp_ln345)> <Delay = 0.67> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 89 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 21> <Depth = 32> <RAM>
+ST_1 : Operation 107 [1/1] (0.42ns)   --->   "%store_ln345 = store i6 %add_ln345, i6 %i" [rcache.cpp:345]   --->   Operation 107 'store' 'store_ln345' <Predicate = (!icmp_ln345)> <Delay = 0.42>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%br_ln345 = br void %for.inc64" [rcache.cpp:345]   --->   Operation 108 'br' 'br_ln345' <Predicate = (!icmp_ln345)> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 109 'ret' 'ret_ln0' <Predicate = (icmp_ln345)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 2.02ns
+The critical path consists of the following:
+	'alloca' operation ('i') [25]  (0 ns)
+	'load' operation ('i', rcache.cpp:345) on local variable 'i' [53]  (0 ns)
+	'getelementptr' operation ('p_lru_count_1_addr', rcache.cpp:349) [62]  (0 ns)
+	'store' operation ('store_ln349', rcache.cpp:349) of constant 0 on array 'p_lru_count_1' [82]  (1.24 ns)
+	blocking operation 0.785 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

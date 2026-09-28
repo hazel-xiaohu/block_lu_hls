@@ -1,0 +1,135 @@
+
+
+================================================================
+== Vitis HLS Report for 'large_gessm_v2_Pipeline_VITIS_LOOP_257_5'
+================================================================
+* Date:           Sun Sep 27 11:04:31 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_large_gessm_v2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.228 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_257_5  |        ?|        ?|         1|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.22>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i_2 = alloca i32 1"   --->   Operation 4 'alloca' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %w, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 5 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%n_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %n"   --->   Operation 6 'read' 'n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.42ns)   --->   "%store_ln0 = store i12 0, i12 %i_2"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc56"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%i = load i12 %i_2" [large_sparse_lu.cpp:257]   --->   Operation 9 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%zext_ln257_1 = zext i12 %i" [large_sparse_lu.cpp:257]   --->   Operation 10 'zext' 'zext_ln257_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.99ns)   --->   "%icmp_ln257 = icmp_eq  i32 %zext_ln257_1, i32 %n_read" [large_sparse_lu.cpp:257]   --->   Operation 11 'icmp' 'icmp_ln257' <Predicate = true> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.80ns)   --->   "%add_ln257 = add i12 %i, i12 1" [large_sparse_lu.cpp:257]   --->   Operation 12 'add' 'add_ln257' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln257 = br i1 %icmp_ln257, void %for.inc56.split, void %VITIS_LOOP_261_6.exitStub" [large_sparse_lu.cpp:257]   --->   Operation 13 'br' 'br_ln257' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln257 = zext i12 %i" [large_sparse_lu.cpp:257]   --->   Operation 14 'zext' 'zext_ln257' <Predicate = (!icmp_ln257)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specpipeline_ln258 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_15" [large_sparse_lu.cpp:258]   --->   Operation 15 'specpipeline' 'specpipeline_ln258' <Predicate = (!icmp_ln257)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specloopname_ln257 = specloopname void @_ssdm_op_SpecLoopName, void @empty_31" [large_sparse_lu.cpp:257]   --->   Operation 16 'specloopname' 'specloopname_ln257' <Predicate = (!icmp_ln257)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%w_addr = getelementptr i32 %w, i64 0, i64 %zext_ln257" [large_sparse_lu.cpp:259]   --->   Operation 17 'getelementptr' 'w_addr' <Predicate = (!icmp_ln257)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (1.23ns)   --->   "%store_ln259 = store i32 0, i12 %w_addr" [large_sparse_lu.cpp:259]   --->   Operation 18 'store' 'store_ln259' <Predicate = (!icmp_ln257)> <Delay = 1.23> <CoreInst = "RAM_2P_BRAM">   --->   Core 94 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2624> <RAM>
+ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln257 = store i12 %add_ln257, i12 %i_2" [large_sparse_lu.cpp:257]   --->   Operation 19 'store' 'store_ln257' <Predicate = (!icmp_ln257)> <Delay = 0.42>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln257 = br void %for.inc56" [large_sparse_lu.cpp:257]   --->   Operation 20 'br' 'br_ln257' <Predicate = (!icmp_ln257)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 21 'ret' 'ret_ln0' <Predicate = (icmp_ln257)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 2.23ns
+The critical path consists of the following:
+	'alloca' operation ('i') [3]  (0 ns)
+	'load' operation ('i', large_sparse_lu.cpp:257) on local variable 'i' [9]  (0 ns)
+	'getelementptr' operation ('w_addr', large_sparse_lu.cpp:259) [18]  (0 ns)
+	'store' operation ('store_ln259', large_sparse_lu.cpp:259) of constant 0 on array 'w' [19]  (1.24 ns)
+	blocking operation 0.991 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

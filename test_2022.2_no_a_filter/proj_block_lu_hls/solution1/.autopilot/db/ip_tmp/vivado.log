@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Sep 26 11:09:01 2026
+# Process ID: 88329
+# Current directory: /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/ip_tmp
+# Command line: vivado  -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
+# Log file: /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/ip_tmp/vivado.log
+# Journal file: /output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1/.autopilot/db/ip_tmp/vivado.jou
+# Running On: team-fceo5ww5pmwf-main, OS: Linux, CPU Frequency: 1500.000 MHz, CPU Physical cores: 2, Host memory: 100663 MB
+#-----------------------------------------------------------
+source run_vivado_gen_ip.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1316.688 ; gain = 0.023 ; free physical = 83470 ; free virtual = 89426
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/openbayes/home/tools/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'spmm_fmul_32ns_32ns_32_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'spmm_fmul_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'spmm_fmul_32ns_32ns_32_5_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'spmm_fsub_32ns_32ns_32_8_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'spmm_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'spmm_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'spmm_fadd_32ns_32ns_32_8_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'spmm_fadd_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'spmm_fadd_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 11:09:14 2026...

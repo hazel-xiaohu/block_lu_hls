@@ -1,0 +1,229 @@
+---
+MainSourceFile:  /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_29_1:  '
+    FileOffset:      29
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          206389
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_29_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_31_2:  '
+    FileOffset:      31
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          206462
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_31_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_3:  '
+    FileOffset:      35
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          206607
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_39_4:  '
+    FileOffset:      39
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          206752
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_39_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_45_5:  '
+    FileOffset:      45
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          206973
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_45_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_52_6:  '
+    FileOffset:      52
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          207366
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_52_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_59_7:  '
+    FileOffset:      59
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          207632
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_59_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_91_1:  '
+    FileOffset:      91
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          209223
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_91_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_93_2:  '
+    FileOffset:      93
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          209322
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_93_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_94_3:  '
+    FileOffset:      94
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          209369
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_94_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_95_4:  '
+    FileOffset:      95
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          209451
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_95_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_96_5:  '
+    FileOffset:      96
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          209491
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_96_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_100_6:  '
+    FileOffset:      100
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          209675
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_100_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_131_1:  '
+    FileOffset:      131
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          211300
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_131_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_133_2:  '
+    FileOffset:      133
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          211399
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_133_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_134_3:  '
+    FileOffset:      134
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          211446
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_134_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_135_4:  '
+    FileOffset:      135
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          211528
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_135_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_136_5:  '
+    FileOffset:      136
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          211570
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_136_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_144_6:  '
+    FileOffset:      144
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          211989
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_144_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_171_1:  '
+    FileOffset:      171
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          213458
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_171_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_173_2:  '
+    FileOffset:      173
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          213532
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_173_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_176_3:  '
+    FileOffset:      176
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          213660
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_176_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_181_4:  '
+    FileOffset:      181
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          213864
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_181_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_183_5:  '
+    FileOffset:      183
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          213992
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_183_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_189_6:  '
+    FileOffset:      189
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/bcsstk17_large_hls_v1/proj_large_getrf/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          214237
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_189_6: '
+...

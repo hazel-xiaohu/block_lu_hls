@@ -1,0 +1,343 @@
+
+
+================================================================
+== Vitis HLS Report for 'rschedule_access_66'
+================================================================
+* Date:           Sat Sep 26 10:58:37 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.650 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                      |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_73_1     |        ?|        ?|         ?|          -|          -|     ?|        no|
+        | + VITIS_LOOP_79_2    |        ?|        ?|         ?|          -|          -|     ?|        no|
+        |  ++ VITIS_LOOP_79_2  |        ?|        ?|         1|          -|          -|     ?|        no|
+        +----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 17
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 5 3 
+3 --> 4 
+4 --> 5 
+5 --> 5 6 7 17 2 
+6 --> 17 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 4 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%curr_request_data_V = alloca i32 1"   --->   Operation 18 'alloca' 'curr_request_data_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%curr_request_Acid1 = alloca i32 1"   --->   Operation 19 'alloca' 'curr_request_Acid1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%curr_request_Acid = alloca i32 1"   --->   Operation 20 'alloca' 'curr_request_Acid' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%curr_request_dest_V = alloca i32 1"   --->   Operation 21 'alloca' 'curr_request_dest_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i160 %roff1, void @empty_47, i32 0, i32 0, void @empty_157, i32 0, i32 0, void @empty_157, void @empty_157, void @empty_157, i32 0, i32 0, i32 0, i32 0, void @empty_157, void @empty_157, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %r_req, void @empty_47, i32 0, i32 0, void @empty_157, i32 0, i32 0, void @empty_157, void @empty_157, void @empty_157, i32 0, i32 0, i32 0, i32 0, void @empty_157, void @empty_157, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i230 %rscheduler, void @empty_47, i32 0, i32 0, void @empty_157, i32 0, i32 0, void @empty_157, void @empty_157, void @empty_157, i32 0, i32 0, i32 0, i32 0, void @empty_157, void @empty_157, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %brcsr4, void @empty_21, i32 0, i32 0, void @empty_157, i32 0, i32 513, void @empty_128, void @empty_134, void @empty_157, i32 16, i32 16, i32 16, i32 16, void @empty_157, void @empty_157, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i168 %rresponse4, void @empty_47, i32 0, i32 0, void @empty_157, i32 0, i32 0, void @empty_157, void @empty_157, void @empty_157, i32 0, i32 0, i32 0, i32 0, void @empty_157, void @empty_157, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%off_pointer_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %off_pointer"   --->   Operation 27 'read' 'off_pointer_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%Bridx_V = alloca i64 1" [rcache.cpp:70]   --->   Operation 28 'alloca' 'Bridx_V' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 2> <RAM>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%Bridx_V_addr = getelementptr i128 %Bridx_V, i64 0, i64 0"   --->   Operation 29 'getelementptr' 'Bridx_V_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%Bridx_V_addr_1 = getelementptr i128 %Bridx_V, i64 0, i64 1"   --->   Operation 30 'getelementptr' 'Bridx_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 31 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.40>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%specloopname_ln75 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [rcache.cpp:75]   --->   Operation 32 'specloopname' 'specloopname_ln75' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i230P0A, i230 %rscheduler, i32 1" [rcache.cpp:75]   --->   Operation 33 'nbreadreq' 'tmp_s' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 230> <Depth = 64> <FIFO>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln75 = br i1 %tmp_s, void %for.body.backedge, void %if.then" [rcache.cpp:75]   --->   Operation 34 'br' 'br_ln75' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (1.55ns)   --->   "%rscheduler_read = read i230 @_ssdm_op_Read.ap_fifo.volatile.i230P0A, i230 %rscheduler" [rcache.cpp:76]   --->   Operation 35 'read' 'rscheduler_read' <Predicate = (tmp_s)> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 230> <Depth = 64> <FIFO>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%ori_request_dest_V = trunc i230 %rscheduler_read" [rcache.cpp:76]   --->   Operation 36 'trunc' 'ori_request_dest_V' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%ori_request_Acid1 = partselect i32 @_ssdm_op_PartSelect.i32.i230.i32.i32, i230 %rscheduler_read, i32 38, i32 69" [rcache.cpp:76]   --->   Operation 37 'partselect' 'ori_request_Acid1' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%ori_request_end = bitselect i1 @_ssdm_op_BitSelect.i1.i230.i32, i230 %rscheduler_read, i32 3" [rcache.cpp:76]   --->   Operation 38 'bitselect' 'ori_request_end' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%ori_request_Acid = partselect i32 @_ssdm_op_PartSelect.i32.i230.i32.i32, i230 %rscheduler_read, i32 6, i32 37" [rcache.cpp:76]   --->   Operation 39 'partselect' 'ori_request_Acid' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln77 = br i1 %ori_request_end, void %VITIS_LOOP_79_2, void %for.end39.critedge" [rcache.cpp:77]   --->   Operation 40 'br' 'br_ln77' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%curr_request_data_V_load = load i160 %curr_request_data_V" [rcache.cpp:119]   --->   Operation 41 'load' 'curr_request_data_V_load' <Predicate = (tmp_s & ori_request_end)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%curr_request_Acid1_load = load i32 %curr_request_Acid1" [rcache.cpp:119]   --->   Operation 42 'load' 'curr_request_Acid1_load' <Predicate = (tmp_s & ori_request_end)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%curr_request_Acid_load = load i32 %curr_request_Acid" [rcache.cpp:119]   --->   Operation 43 'load' 'curr_request_Acid_load' <Predicate = (tmp_s & ori_request_end)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%curr_request_dest_V_load = load i3 %curr_request_dest_V" [rcache.cpp:119]   --->   Operation 44 'load' 'curr_request_dest_V_load' <Predicate = (tmp_s & ori_request_end)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%or_ln119_2 = bitconcatenate i248 @_ssdm_op_BitConcatenate.i248.i160.i32.i32.i21.i3, i160 %curr_request_data_V_load, i32 %curr_request_Acid1_load, i32 %curr_request_Acid_load, i21 0, i3 %curr_request_dest_V_load" [rcache.cpp:119]   --->   Operation 45 'bitconcatenate' 'or_ln119_2' <Predicate = (tmp_s & ori_request_end)> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%or_ln119 = or i248 %or_ln119_2, i248 131328" [rcache.cpp:119]   --->   Operation 46 'or' 'or_ln119' <Predicate = (tmp_s & ori_request_end)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i248.i32, i248 %or_ln119, i32 8" [rcache.cpp:119]   --->   Operation 47 'bitselect' 'tmp' <Predicate = (tmp_s & ori_request_end)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_12 = partselect i2 @_ssdm_op_PartSelect.i2.i248.i32.i32, i248 %or_ln119, i32 16, i32 17" [rcache.cpp:119]   --->   Operation 48 'partselect' 'tmp_12' <Predicate = (tmp_s & ori_request_end)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_13 = partselect i224 @_ssdm_op_PartSelect.i224.i248.i32.i32, i248 %or_ln119, i32 24, i32 247" [rcache.cpp:119]   --->   Operation 49 'partselect' 'tmp_13' <Predicate = (tmp_s & ori_request_end)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%p_s = bitconcatenate i230 @_ssdm_op_BitConcatenate.i230.i224.i2.i1.i3, i224 %tmp_13, i2 %tmp_12, i1 %tmp, i3 %curr_request_dest_V_load" [rcache.cpp:119]   --->   Operation 50 'bitconcatenate' 'p_s' <Predicate = (tmp_s & ori_request_end)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (1.55ns)   --->   "%write_ln119 = write void @_ssdm_op_Write.ap_fifo.volatile.i230P0A, i230 %r_req, i230 %p_s" [rcache.cpp:119]   --->   Operation 51 'write' 'write_ln119' <Predicate = (tmp_s & ori_request_end)> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 230> <Depth = 64> <FIFO>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%ret_ln120 = ret" [rcache.cpp:120]   --->   Operation 52 'ret' 'ret_ln120' <Predicate = (tmp_s & ori_request_end)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.99>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%access_idx_2 = partselect i30 @_ssdm_op_PartSelect.i30.i230.i32.i32, i230 %rscheduler_read, i32 8, i32 37" [rcache.cpp:76]   --->   Operation 53 'partselect' 'access_idx_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node sub_ln91)   --->   "%access_idx = zext i30 %access_idx_2" [rcache.cpp:76]   --->   Operation 54 'zext' 'access_idx' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%access_idx_cast_cast_cast = zext i30 %access_idx_2" [rcache.cpp:76]   --->   Operation 55 'zext' 'access_idx_cast_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.99ns)   --->   "%add = add i31 %access_idx_cast_cast_cast, i31 2" [rcache.cpp:76]   --->   Operation 56 'add' 'add' <Predicate = true> <Delay = 0.99> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_44 = bitselect i1 @_ssdm_op_BitSelect.i1.i230.i32, i230 %rscheduler_read, i32 8" [rcache.cpp:79]   --->   Operation 57 'bitselect' 'tmp_44' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.99ns)   --->   "%add_ln79 = add i31 %access_idx_cast_cast_cast, i31 1" [rcache.cpp:79]   --->   Operation 58 'add' 'add_ln79' <Predicate = true> <Delay = 0.99> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 59 [1/1] (0.99ns)   --->   "%icmp_ln79 = icmp_ult  i31 %add_ln79, i31 %add" [rcache.cpp:79]   --->   Operation 59 'icmp' 'icmp_ln79' <Predicate = true> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 60 [1/1] (0.00ns) (grouped into LUT with out node sub_ln91)   --->   "%select_ln79 = select i1 %icmp_ln79, i31 %add, i31 %add_ln79" [rcache.cpp:79]   --->   Operation 60 'select' 'select_ln79' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 61 [1/1] (0.00ns) (grouped into LUT with out node sub_ln91)   --->   "%zext_ln79 = zext i31 %select_ln79" [rcache.cpp:79]   --->   Operation 61 'zext' 'zext_ln79' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i34 @_ssdm_op_BitConcatenate.i34.i30.i4, i30 %access_idx_2, i4 0" [rcache.cpp:79]   --->   Operation 62 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%zext_ln79_1 = zext i34 %shl_ln" [rcache.cpp:79]   --->   Operation 63 'zext' 'zext_ln79_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (1.08ns)   --->   "%add_ln79_1 = add i64 %zext_ln79_1, i64 %off_pointer_read" [rcache.cpp:79]   --->   Operation 64 'add' 'add_ln79_1' <Predicate = true> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i60 @_ssdm_op_PartSelect.i60.i64.i32.i32, i64 %add_ln79_1, i32 4, i32 63" [rcache.cpp:91]   --->   Operation 65 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%sext_ln91 = sext i60 %trunc_ln" [rcache.cpp:91]   --->   Operation 66 'sext' 'sext_ln91' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%brcsr4_addr = getelementptr i128 %brcsr4, i64 %sext_ln91" [rcache.cpp:91]   --->   Operation 67 'getelementptr' 'brcsr4_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (1.00ns) (out node of the LUT)   --->   "%sub_ln91 = sub i32 %zext_ln79, i32 %access_idx" [rcache.cpp:91]   --->   Operation 68 'sub' 'sub_ln91' <Predicate = true> <Delay = 1.00> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [1/1] (0.42ns)   --->   "%br_ln79 = br void %for.cond4.outer" [rcache.cpp:79]   --->   Operation 69 'br' 'br_ln79' <Predicate = true> <Delay = 0.42>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%p_t = phi i1 %p_t_1, void %if.end34, i1 0, void %VITIS_LOOP_79_2"   --->   Operation 70 'phi' 'p_t' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4"   --->   Operation 71 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln79 = br void %for.cond4" [rcache.cpp:79]   --->   Operation 72 'br' 'br_ln79' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 2.49>
+ST_5 : Operation 73 [1/1] (0.00ns)   --->   "%br_ln79 = br i1 %p_t, void %for.body6, void %for.body.loopexit" [rcache.cpp:79]   --->   Operation 73 'br' 'br_ln79' <Predicate = (tmp_s)> <Delay = 0.00>
+ST_5 : Operation 74 [1/1] (0.00ns)   --->   "%specloopname_ln81 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [rcache.cpp:81]   --->   Operation 74 'specloopname' 'specloopname_ln81' <Predicate = (tmp_s & !p_t)> <Delay = 0.00>
+ST_5 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_14 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i168P0A, i168 %rresponse4, i32 1" [rcache.cpp:81]   --->   Operation 75 'nbreadreq' 'tmp_14' <Predicate = (tmp_s & !p_t)> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.62> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 16> <FIFO>
+ST_5 : Operation 76 [1/1] (0.00ns)   --->   "%br_ln81 = br i1 %tmp_14, void %if.end34.loopexit, void %if.then8" [rcache.cpp:81]   --->   Operation 76 'br' 'br_ln81' <Predicate = (tmp_s & !p_t)> <Delay = 0.00>
+ST_5 : Operation 77 [1/1] (1.62ns)   --->   "%rresponse4_read = read i168 @_ssdm_op_Read.ap_fifo.volatile.i168P0A, i168 %rresponse4" [rcache.cpp:82]   --->   Operation 77 'read' 'rresponse4_read' <Predicate = (tmp_s & !p_t & tmp_14)> <Delay = 1.62> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.62> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 168> <Depth = 16> <FIFO>
+ST_5 : Operation 78 [1/1] (0.00ns)   --->   "%curr_response_no_use = bitselect i1 @_ssdm_op_BitSelect.i1.i168.i32, i168 %rresponse4_read, i32 1" [rcache.cpp:82]   --->   Operation 78 'bitselect' 'curr_response_no_use' <Predicate = (tmp_s & !p_t & tmp_14)> <Delay = 0.00>
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%br_ln86 = br i1 %curr_response_no_use, void %if.end, void %if.then10" [rcache.cpp:86]   --->   Operation 79 'br' 'br_ln86' <Predicate = (tmp_s & !p_t & tmp_14)> <Delay = 0.00>
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln86 = br void %for.cond4" [rcache.cpp:86]   --->   Operation 80 'br' 'br_ln86' <Predicate = (tmp_s & !p_t & tmp_14 & curr_response_no_use)> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%trunc_ln82_3 = partselect i3 @_ssdm_op_PartSelect.i3.i168.i32.i32, i168 %rresponse4_read, i32 5, i32 7" [rcache.cpp:82]   --->   Operation 81 'partselect' 'trunc_ln82_3' <Predicate = (tmp_s & !p_t & tmp_14 & !curr_response_no_use)> <Delay = 0.00>
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "%trunc_ln82_4 = partselect i160 @_ssdm_op_PartSelect.i160.i168.i32.i32, i168 %rresponse4_read, i32 8, i32 167" [rcache.cpp:82]   --->   Operation 82 'partselect' 'trunc_ln82_4' <Predicate = (tmp_s & !p_t & tmp_14 & !curr_response_no_use)> <Delay = 0.00>
+ST_5 : Operation 83 [1/1] (0.58ns)   --->   "%icmp_ln1019 = icmp_eq  i3 %trunc_ln82_3, i3 2"   --->   Operation 83 'icmp' 'icmp_ln1019' <Predicate = (tmp_s & !p_t & tmp_14 & !curr_response_no_use)> <Delay = 0.58> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%br_ln88 = br i1 %icmp_ln1019, void %if.else, void %for.body16.lr.ph" [rcache.cpp:88]   --->   Operation 84 'br' 'br_ln88' <Predicate = (tmp_s & !p_t & tmp_14 & !curr_response_no_use)> <Delay = 0.00>
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_85 = partselect i64 @_ssdm_op_PartSelect.i64.i230.i32.i32, i230 %rscheduler_read, i32 6, i32 69" [rcache.cpp:105]   --->   Operation 85 'partselect' 'tmp_85' <Predicate = (tmp_s & !p_t & tmp_14 & !curr_response_no_use & icmp_ln1019)> <Delay = 0.00>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%store_ln107 = store i3 %ori_request_dest_V, i3 %curr_request_dest_V" [rcache.cpp:107]   --->   Operation 86 'store' 'store_ln107' <Predicate = (tmp_s & !p_t & tmp_14 & !curr_response_no_use & icmp_ln1019)> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "%store_ln107 = store i32 %ori_request_Acid, i32 %curr_request_Acid" [rcache.cpp:107]   --->   Operation 87 'store' 'store_ln107' <Predicate = (tmp_s & !p_t & tmp_14 & !curr_response_no_use & icmp_ln1019)> <Delay = 0.00>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "%store_ln107 = store i32 %ori_request_Acid1, i32 %curr_request_Acid1" [rcache.cpp:107]   --->   Operation 88 'store' 'store_ln107' <Predicate = (tmp_s & !p_t & tmp_14 & !curr_response_no_use & icmp_ln1019)> <Delay = 0.00>
+ST_5 : Operation 89 [1/1] (0.42ns)   --->   "%br_ln0 = br void %if.end34"   --->   Operation 89 'br' 'br_ln0' <Predicate = (tmp_s & !p_t & !tmp_14)> <Delay = 0.42>
+ST_5 : Operation 90 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.backedge"   --->   Operation 90 'br' 'br_ln0' <Predicate = (tmp_s & p_t)> <Delay = 0.00>
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 91 'br' 'br_ln0' <Predicate = (p_t) | (!tmp_s)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 1.55>
+ST_6 : Operation 92 [1/1] (1.55ns)   --->   "%write_ln108 = write void @_ssdm_op_Write.ap_fifo.volatile.i160P0A, i160 %roff1, i160 %trunc_ln82_4" [rcache.cpp:108]   --->   Operation 92 'write' 'write_ln108' <Predicate = true> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 160> <Depth = 64> <FIFO>
+ST_6 : Operation 93 [1/1] (0.42ns)   --->   "%br_ln0 = br void %if.end34"   --->   Operation 93 'br' 'br_ln0' <Predicate = true> <Delay = 0.42>
+
+State 7 <SV = 5> <Delay = 3.65>
+ST_7 : Operation 94 [7/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i128, i128 %brcsr4_addr, i32 %sub_ln91" [rcache.cpp:91]   --->   Operation 94 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 6> <Delay = 3.65>
+ST_8 : Operation 95 [6/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i128, i128 %brcsr4_addr, i32 %sub_ln91" [rcache.cpp:91]   --->   Operation 95 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 7> <Delay = 3.65>
+ST_9 : Operation 96 [5/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i128, i128 %brcsr4_addr, i32 %sub_ln91" [rcache.cpp:91]   --->   Operation 96 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 8> <Delay = 3.65>
+ST_10 : Operation 97 [4/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i128, i128 %brcsr4_addr, i32 %sub_ln91" [rcache.cpp:91]   --->   Operation 97 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 9> <Delay = 3.65>
+ST_11 : Operation 98 [3/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i128, i128 %brcsr4_addr, i32 %sub_ln91" [rcache.cpp:91]   --->   Operation 98 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 10> <Delay = 3.65>
+ST_12 : Operation 99 [2/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i128, i128 %brcsr4_addr, i32 %sub_ln91" [rcache.cpp:91]   --->   Operation 99 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 11> <Delay = 3.65>
+ST_13 : Operation 100 [1/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i128, i128 %brcsr4_addr, i32 %sub_ln91" [rcache.cpp:91]   --->   Operation 100 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 12> <Delay = 1.85>
+ST_14 : Operation 101 [2/2] (1.85ns)   --->   "%call_ln76 = call void @rschedule_access.66_Pipeline_VITIS_LOOP_91_3, i30 %access_idx_2, i128 %brcsr4, i60 %trunc_ln, i31 %add, i1 %tmp_44, i128 %Bridx_V" [rcache.cpp:76]   --->   Operation 101 'call' 'call_ln76' <Predicate = true> <Delay = 1.85> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 13> <Delay = 0.00>
+ST_15 : Operation 102 [1/2] (0.00ns)   --->   "%call_ln76 = call void @rschedule_access.66_Pipeline_VITIS_LOOP_91_3, i30 %access_idx_2, i128 %brcsr4, i60 %trunc_ln, i31 %add, i1 %tmp_44, i128 %Bridx_V" [rcache.cpp:76]   --->   Operation 102 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 14> <Delay = 0.67>
+ST_16 : Operation 103 [2/2] (0.67ns)   --->   "%Bridx_V_load = load i1 %Bridx_V_addr"   --->   Operation 103 'load' 'Bridx_V_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 2> <RAM>
+ST_16 : Operation 104 [2/2] (0.67ns)   --->   "%p_Val2_s = load i1 %Bridx_V_addr_1"   --->   Operation 104 'load' 'p_Val2_s' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 2> <RAM>
+
+State 17 <SV = 15> <Delay = 2.22>
+ST_17 : Operation 105 [1/2] (0.67ns)   --->   "%Bridx_V_load = load i1 %Bridx_V_addr"   --->   Operation 105 'load' 'Bridx_V_load' <Predicate = (tmp_14 & icmp_ln1019)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 2> <RAM>
+ST_17 : Operation 106 [1/2] (0.67ns)   --->   "%p_Val2_s = load i1 %Bridx_V_addr_1"   --->   Operation 106 'load' 'p_Val2_s' <Predicate = (tmp_14 & icmp_ln1019)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 2> <RAM>
+ST_17 : Operation 107 [1/1] (0.00ns)   --->   "%trunc_ln628 = trunc i128 %p_Val2_s"   --->   Operation 107 'trunc' 'trunc_ln628' <Predicate = (tmp_14 & icmp_ln1019)> <Delay = 0.00>
+ST_17 : Operation 108 [1/1] (0.00ns)   --->   "%p_Result_s = bitconcatenate i160 @_ssdm_op_BitConcatenate.i160.i32.i128, i32 %trunc_ln628, i128 %Bridx_V_load"   --->   Operation 108 'bitconcatenate' 'p_Result_s' <Predicate = (tmp_14 & icmp_ln1019)> <Delay = 0.00>
+ST_17 : Operation 109 [1/1] (0.00ns)   --->   "%or_ln105_3 = bitconcatenate i230 @_ssdm_op_BitConcatenate.i230.i32.i128.i64.i3.i3, i32 %trunc_ln628, i128 %Bridx_V_load, i64 %tmp_85, i3 0, i3 %ori_request_dest_V" [rcache.cpp:105]   --->   Operation 109 'bitconcatenate' 'or_ln105_3' <Predicate = (tmp_14 & icmp_ln1019)> <Delay = 0.00>
+ST_17 : Operation 110 [1/1] (0.00ns)   --->   "%or_ln105 = or i230 %or_ln105_3, i230 32" [rcache.cpp:105]   --->   Operation 110 'or' 'or_ln105' <Predicate = (tmp_14 & icmp_ln1019)> <Delay = 0.00>
+ST_17 : Operation 111 [1/1] (1.55ns)   --->   "%write_ln105 = write void @_ssdm_op_Write.ap_fifo.volatile.i230P0A, i230 %r_req, i230 %or_ln105" [rcache.cpp:105]   --->   Operation 111 'write' 'write_ln105' <Predicate = (tmp_14 & icmp_ln1019)> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 230> <Depth = 64> <FIFO>
+ST_17 : Operation 112 [1/1] (1.55ns)   --->   "%write_ln106 = write void @_ssdm_op_Write.ap_fifo.volatile.i160P0A, i160 %roff1, i160 %p_Result_s" [rcache.cpp:106]   --->   Operation 112 'write' 'write_ln106' <Predicate = (tmp_14 & icmp_ln1019)> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 160> <Depth = 64> <FIFO>
+ST_17 : Operation 113 [1/1] (0.00ns)   --->   "%store_ln107 = store i160 %p_Result_s, i160 %curr_request_data_V" [rcache.cpp:107]   --->   Operation 113 'store' 'store_ln107' <Predicate = (tmp_14 & icmp_ln1019)> <Delay = 0.00>
+ST_17 : Operation 114 [1/1] (0.42ns)   --->   "%br_ln107 = br void %if.end34" [rcache.cpp:107]   --->   Operation 114 'br' 'br_ln107' <Predicate = (tmp_14 & icmp_ln1019)> <Delay = 0.42>
+ST_17 : Operation 115 [1/1] (0.00ns)   --->   "%p_t_1 = phi i1 1, void %for.body16.lr.ph, i1 1, void %if.else, i1 0, void %if.end34.loopexit"   --->   Operation 115 'phi' 'p_t_1' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 116 [1/1] (0.00ns)   --->   "%br_ln79 = br void %for.cond4.outer" [rcache.cpp:79]   --->   Operation 116 'br' 'br_ln79' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 3.4ns
+The critical path consists of the following:
+	fifo read operation ('rscheduler_read', rcache.cpp:76) on port 'rscheduler' (rcache.cpp:76) [26]  (1.56 ns)
+	blocking operation 1.84 ns on control path)
+
+ <State 3>: 3ns
+The critical path consists of the following:
+	'add' operation ('add_ln79', rcache.cpp:79) [38]  (0.996 ns)
+	'icmp' operation ('icmp_ln79', rcache.cpp:79) [39]  (0.998 ns)
+	'select' operation ('select_ln79', rcache.cpp:79) [40]  (0 ns)
+	'sub' operation ('sub_ln91', rcache.cpp:91) [48]  (1.01 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 2.49ns
+The critical path consists of the following:
+	fifo read operation ('rresponse4_read', rcache.cpp:82) on port 'rresponse4' (rcache.cpp:82) [61]  (1.62 ns)
+	'icmp' operation ('icmp_ln1019') [69]  (0.584 ns)
+	blocking operation 0.287 ns on control path)
+
+ <State 6>: 1.56ns
+The critical path consists of the following:
+	fifo write operation ('write_ln108', rcache.cpp:108) on port 'roff1' (rcache.cpp:108) [72]  (1.56 ns)
+
+ <State 7>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', rcache.cpp:91) on port 'brcsr4' (rcache.cpp:91) [75]  (3.65 ns)
+
+ <State 8>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', rcache.cpp:91) on port 'brcsr4' (rcache.cpp:91) [75]  (3.65 ns)
+
+ <State 9>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', rcache.cpp:91) on port 'brcsr4' (rcache.cpp:91) [75]  (3.65 ns)
+
+ <State 10>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', rcache.cpp:91) on port 'brcsr4' (rcache.cpp:91) [75]  (3.65 ns)
+
+ <State 11>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', rcache.cpp:91) on port 'brcsr4' (rcache.cpp:91) [75]  (3.65 ns)
+
+ <State 12>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', rcache.cpp:91) on port 'brcsr4' (rcache.cpp:91) [75]  (3.65 ns)
+
+ <State 13>: 3.65ns
+The critical path consists of the following:
+	bus request operation ('empty', rcache.cpp:91) on port 'brcsr4' (rcache.cpp:91) [75]  (3.65 ns)
+
+ <State 14>: 1.86ns
+The critical path consists of the following:
+	'call' operation ('call_ln76', rcache.cpp:76) to 'rschedule_access.66_Pipeline_VITIS_LOOP_91_3' [76]  (1.86 ns)
+
+ <State 15>: 0ns
+The critical path consists of the following:
+
+ <State 16>: 0.67ns
+The critical path consists of the following:
+	'load' operation ('Bridx_V_load') on array 'Bridx.V', rcache.cpp:70 [77]  (0.67 ns)
+
+ <State 17>: 2.23ns
+The critical path consists of the following:
+	'load' operation ('Bridx_V_load') on array 'Bridx.V', rcache.cpp:70 [77]  (0.67 ns)
+	'or' operation ('or_ln105', rcache.cpp:105) [83]  (0 ns)
+	fifo write operation ('write_ln105', rcache.cpp:105) on port 'r_req' (rcache.cpp:105) [84]  (1.56 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

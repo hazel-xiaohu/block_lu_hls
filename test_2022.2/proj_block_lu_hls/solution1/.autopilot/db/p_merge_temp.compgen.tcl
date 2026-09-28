@@ -10,22 +10,22 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1989 \
-    name m_pe4 \
+    id 1987 \
+    name m_pe1 \
     type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_m_pe4 \
+    corename dc_m_pe1 \
     op interface \
-    ports { m_pe4_dout { I 66 vector } m_pe4_num_data_valid { I 11 vector } m_pe4_fifo_cap { I 11 vector } m_pe4_empty_n { I 1 bit } m_pe4_read { O 1 bit } } \
+    ports { m_pe1_dout { I 66 vector } m_pe1_num_data_valid { I 11 vector } m_pe1_fifo_cap { I 11 vector } m_pe1_empty_n { I 1 bit } m_pe1_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1990 \
+    id 1988 \
     name ping \
     type fifo \
     dir I \
@@ -33,14 +33,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_ping \
     op interface \
-    ports { ping_dout { I 66 vector } ping_empty_n { I 1 bit } ping_read { O 1 bit } } \
+    ports { ping_dout { I 80 vector } ping_empty_n { I 1 bit } ping_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1991 \
+    id 1989 \
     name len1 \
     type other \
     dir I \
@@ -55,7 +55,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1992 \
+    id 1990 \
     name len2_t_read \
     type other \
     dir I \
@@ -70,7 +70,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1993 \
+    id 1991 \
     name ping1 \
     type fifo \
     dir O \
@@ -78,7 +78,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_ping1 \
     op interface \
-    ports { ping1_din { O 66 vector } ping1_full_n { I 1 bit } ping1_write { O 1 bit } } \
+    ports { ping1_din { O 80 vector } ping1_full_n { I 1 bit } ping1_write { O 1 bit } } \
 } "
 }
 

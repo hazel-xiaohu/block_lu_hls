@@ -1,0 +1,80 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "spmm",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/output\/block_lu_hls\/test_2022.2_no_a_filter\/run_hls.tcl",
+          "sourceLine": "41",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "spmm"
+              }]
+          }
+        },
+        {
+          "functionName": "spmm",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/output\/block_lu_hls\/test_2022.2_no_a_filter\/run_hls.tcl",
+          "sourceLine": "41",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "spmm"
+              }]
+          }
+        },
+        {
+          "functionName": "spmm",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "\/output\/block_lu_hls\/test_2022.2_no_a_filter\/run_hls.tcl",
+          "sourceLine": "41",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "spmm"
+              }]
+          }
+        },
+        {
+          "functionName": "spmm",
+          "label": "",
+          "functionLabel": "",
+          "id": "4",
+          "sourceFile": "\/output\/block_lu_hls\/test_2022.2_no_a_filter\/run_hls.tcl",
+          "sourceLine": "41",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "spmm"
+              }]
+          }
+        },
+        {
+          "functionName": "spmm",
+          "label": "",
+          "functionLabel": "",
+          "id": "5",
+          "sourceFile": "\/output\/block_lu_hls\/test_2022.2_no_a_filter\/run_hls.tcl",
+          "sourceLine": "41",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "spmm"
+              }]
+          }
+        }
+      ]
+    }]}

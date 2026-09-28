@@ -164,8 +164,8 @@ extern "C" {
 
 
 
-# 1 "/usr/local/include/gmp.h" 1 3
-# 35 "/usr/local/include/gmp.h" 3
+# 1 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 1 3
+# 34 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 # 1 "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/iosfwd" 1 3
 # 37 "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/iosfwd" 3
 
@@ -1421,7 +1421,7 @@ namespace __cxx11 {
 
 
 }
-# 36 "/usr/local/include/gmp.h" 2 3
+# 35 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 2 3
 # 1 "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cstdio" 1 3
 # 40 "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cstdio" 3
 
@@ -2313,8 +2313,8 @@ namespace std
   using ::__gnu_cxx::vsnprintf;
   using ::__gnu_cxx::vsscanf;
 }
-# 37 "/usr/local/include/gmp.h" 2 3
-# 56 "/usr/local/include/gmp.h" 3
+# 36 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 2 3
+# 55 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 # 1 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stddef.h" 1 3
 # 51 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stddef.h" 3
 typedef long int ptrdiff_t;
@@ -2328,7 +2328,7 @@ typedef struct {
       __attribute__((__aligned__(__alignof__(long double))));
 } max_align_t;
 # 119 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stddef.h" 2 3
-# 57 "/usr/local/include/gmp.h" 2 3
+# 56 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 2 3
 # 1 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/limits.h" 1 3
 # 37 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/limits.h" 3
 # 1 "/usr/include/limits.h" 1 3 4
@@ -2368,8 +2368,8 @@ extern long int __sysconf (int __name) noexcept (true);
 # 65 "/usr/include/x86_64-linux-gnu/bits/xopen_lim.h" 2 3 4
 # 204 "/usr/include/limits.h" 2 3 4
 # 38 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/limits.h" 2 3
-# 58 "/usr/local/include/gmp.h" 2 3
-# 142 "/usr/local/include/gmp.h" 3
+# 57 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 2 3
+# 141 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 typedef unsigned long int mp_limb_t;
 typedef long int mp_limb_signed_t;
 
@@ -2459,9 +2459,7 @@ typedef const __mpf_struct *mpf_srcptr;
 typedef __mpf_struct *mpf_ptr;
 typedef const __mpq_struct *mpq_srcptr;
 typedef __mpq_struct *mpq_ptr;
-typedef __gmp_randstate_struct *gmp_randstate_ptr;
-typedef const __gmp_randstate_struct *gmp_randstate_srcptr;
-# 476 "/usr/local/include/gmp.h" 3
+# 472 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 extern "C" {
 using std::FILE;
 
@@ -2490,37 +2488,37 @@ using std::FILE;
 
 
 
-               void __gmp_randinit (gmp_randstate_ptr, gmp_randalg_t, ...);
+               void __gmp_randinit (gmp_randstate_t, gmp_randalg_t, ...);
 
 
-               void __gmp_randinit_default (gmp_randstate_ptr);
+               void __gmp_randinit_default (gmp_randstate_t);
 
 
-               void __gmp_randinit_lc_2exp (gmp_randstate_ptr, mpz_srcptr, unsigned long int, mp_bitcnt_t);
+               void __gmp_randinit_lc_2exp (gmp_randstate_t, mpz_srcptr, unsigned long int, mp_bitcnt_t);
 
 
-               int __gmp_randinit_lc_2exp_size (gmp_randstate_ptr, mp_bitcnt_t);
+               int __gmp_randinit_lc_2exp_size (gmp_randstate_t, mp_bitcnt_t);
 
 
-               void __gmp_randinit_mt (gmp_randstate_ptr);
+               void __gmp_randinit_mt (gmp_randstate_t);
 
 
-               void __gmp_randinit_set (gmp_randstate_ptr, gmp_randstate_srcptr);
+               void __gmp_randinit_set (gmp_randstate_t, const __gmp_randstate_struct *);
 
 
-               void __gmp_randseed (gmp_randstate_ptr, mpz_srcptr);
+               void __gmp_randseed (gmp_randstate_t, mpz_srcptr);
 
 
-               void __gmp_randseed_ui (gmp_randstate_ptr, unsigned long int);
+               void __gmp_randseed_ui (gmp_randstate_t, unsigned long int);
 
 
-               void __gmp_randclear (gmp_randstate_ptr);
+               void __gmp_randclear (gmp_randstate_t);
 
 
-               unsigned long __gmp_urandomb_ui (gmp_randstate_ptr, unsigned long);
+               unsigned long __gmp_urandomb_ui (gmp_randstate_t, unsigned long);
 
 
-               unsigned long __gmp_urandomm_ui (gmp_randstate_ptr, unsigned long);
+               unsigned long __gmp_urandomm_ui (gmp_randstate_t, unsigned long);
 
 
 
@@ -2531,7 +2529,7 @@ using std::FILE;
 
 
                int __gmp_fprintf (FILE *, const char *, ...);
-# 558 "/usr/local/include/gmp.h" 3
+# 554 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
                int __gmp_printf (const char *, ...);
 
 
@@ -2929,9 +2927,6 @@ using std::FILE;
                void __gmpz_nextprime (mpz_ptr, mpz_srcptr);
 
 
-               int __gmpz_prevprime (mpz_ptr, mpz_srcptr);
-
-
 
                size_t __gmpz_out_raw (FILE *, mpz_srcptr);
 
@@ -2988,7 +2983,7 @@ using std::FILE;
                void __gmpz_rootrem (mpz_ptr, mpz_ptr, mpz_srcptr, unsigned long int);
 
 
-               void __gmpz_rrandomb (mpz_ptr, gmp_randstate_ptr, mp_bitcnt_t);
+               void __gmpz_rrandomb (mpz_ptr, gmp_randstate_t, mp_bitcnt_t);
 
 
                mp_bitcnt_t __gmpz_scan0 (mpz_srcptr, mp_bitcnt_t) noexcept __attribute__ ((__pure__));
@@ -3088,10 +3083,10 @@ using std::FILE;
                void __gmpz_ui_pow_ui (mpz_ptr, unsigned long int, unsigned long int);
 
 
-               void __gmpz_urandomb (mpz_ptr, gmp_randstate_ptr, mp_bitcnt_t);
+               void __gmpz_urandomb (mpz_ptr, gmp_randstate_t, mp_bitcnt_t);
 
 
-               void __gmpz_urandomm (mpz_ptr, gmp_randstate_ptr, mpz_srcptr);
+               void __gmpz_urandomm (mpz_ptr, gmp_randstate_t, mpz_srcptr);
 
 
 
@@ -3437,8 +3432,8 @@ using std::FILE;
                void __gmpf_ui_sub (mpf_ptr, unsigned long int, mpf_srcptr);
 
 
-               void __gmpf_urandomb (mpf_ptr, gmp_randstate_ptr, mp_bitcnt_t);
-# 1472 "/usr/local/include/gmp.h" 3
+               void __gmpf_urandomb (mpf_t, gmp_randstate_t, mp_bitcnt_t);
+# 1465 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
                mp_limb_t __gmpn_add (mp_ptr, mp_srcptr, mp_size_t, mp_srcptr, mp_size_t);
 
 
@@ -3669,7 +3664,7 @@ using std::FILE;
                int __gmpn_sec_invert (mp_ptr, mp_ptr, mp_srcptr, mp_size_t, mp_bitcnt_t, mp_ptr);
 
                mp_size_t __gmpn_sec_invert_itch (mp_size_t) __attribute__ ((__pure__));
-# 1721 "/usr/local/include/gmp.h" 3
+# 1714 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 extern __inline__ __attribute__ ((__gnu_inline__)) void
 __gmpz_abs (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
 {
@@ -3677,7 +3672,7 @@ __gmpz_abs (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
     __gmpz_set (__gmp_w, __gmp_u);
   __gmp_w->_mp_size = ((__gmp_w->_mp_size) >= 0 ? (__gmp_w->_mp_size) : -(__gmp_w->_mp_size));
 }
-# 1745 "/usr/local/include/gmp.h" 3
+# 1738 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 extern __inline__ __attribute__ ((__gnu_inline__))
 
 int
@@ -3726,7 +3721,7 @@ __gmpz_get_ui (mpz_srcptr __gmp_z) noexcept
 
 
   return (__gmp_n != 0 ? __gmp_l : 0);
-# 1801 "/usr/local/include/gmp.h" 3
+# 1794 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 }
 
 
@@ -3833,7 +3828,7 @@ __gmpq_neg (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
     __gmpq_set (__gmp_w, __gmp_u);
   __gmp_w->_mp_num._mp_size = - __gmp_w->_mp_num._mp_size;
 }
-# 2143 "/usr/local/include/gmp.h" 3
+# 2136 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 extern __inline__ __attribute__ ((__gnu_inline__))
 
 mp_limb_t
@@ -3939,22 +3934,21 @@ __gmpn_neg (mp_ptr __gmp_rp, mp_srcptr __gmp_up, mp_size_t __gmp_n)
 
 
 }
-# 2292 "/usr/local/include/gmp.h" 3
+# 2285 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
                   std::ostream& operator<< (std::ostream &, mpz_srcptr);
                   std::ostream& operator<< (std::ostream &, mpq_srcptr);
                   std::ostream& operator<< (std::ostream &, mpf_srcptr);
                   std::istream& operator>> (std::istream &, mpz_ptr);
                   std::istream& operator>> (std::istream &, mpq_ptr);
                   std::istream& operator>> (std::istream &, mpf_ptr);
-# 2323 "/usr/local/include/gmp.h" 3
+# 2316 "/output/xilinx_compat/usr/include/x86_64-linux-gnu/gmp.h" 3
 enum
 {
   GMP_ERROR_NONE = 0,
   GMP_ERROR_UNSUPPORTED_ARGUMENT = 1,
   GMP_ERROR_DIVISION_BY_ZERO = 2,
   GMP_ERROR_SQRT_OF_NEGATIVE = 4,
-  GMP_ERROR_INVALID_ARGUMENT = 8,
-  GMP_ERROR_MPZ_OVERFLOW = 16
+  GMP_ERROR_INVALID_ARGUMENT = 8
 };
 # 5 "./core.h" 2
 # 1 "/output/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 1 3

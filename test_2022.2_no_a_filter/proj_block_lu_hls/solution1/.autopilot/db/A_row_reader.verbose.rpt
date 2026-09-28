@@ -1,0 +1,859 @@
+
+
+================================================================
+== Vitis HLS Report for 'A_row_reader'
+================================================================
+* Date:           Sat Sep 26 11:00:28 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.650 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                 |                                       |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                     Instance                    |                 Module                |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_A_row_reader_Pipeline_VITIS_LOOP_13_1_fu_76  |A_row_reader_Pipeline_VITIS_LOOP_13_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      41|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|     167|     228|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     247|    -|
+|Register         |        -|     -|     107|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     274|     516|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+-----+-----+
+    |                     Instance                    |                 Module                | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+-----+-----+
+    |grp_A_row_reader_Pipeline_VITIS_LOOP_13_1_fu_76  |A_row_reader_Pipeline_VITIS_LOOP_13_1  |        0|   0|  167|  228|    0|
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+-----+-----+
+    |Total                                            |                                       |        0|   0|  167|  228|    0|
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |add_fu_86_p2     |         +|   0|  0|  39|          32|           1|
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|  41|          33|           2|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm             |  65|         12|    1|         12|
+    |ap_done               |   9|          2|    1|          2|
+    |arcsr_blk_n_AR        |   9|          2|    1|          2|
+    |m_axi_arcsr_ARADDR    |  14|          3|   64|        192|
+    |m_axi_arcsr_ARBURST   |   9|          2|    2|          4|
+    |m_axi_arcsr_ARCACHE   |   9|          2|    4|          8|
+    |m_axi_arcsr_ARID      |   9|          2|    1|          2|
+    |m_axi_arcsr_ARLEN     |  14|          3|   32|         96|
+    |m_axi_arcsr_ARLOCK    |   9|          2|    2|          4|
+    |m_axi_arcsr_ARPROT    |   9|          2|    3|          6|
+    |m_axi_arcsr_ARQOS     |   9|          2|    4|          8|
+    |m_axi_arcsr_ARREGION  |   9|          2|    4|          8|
+    |m_axi_arcsr_ARSIZE    |   9|          2|    3|          6|
+    |m_axi_arcsr_ARUSER    |   9|          2|    1|          2|
+    |m_axi_arcsr_ARVALID   |  14|          3|    1|          3|
+    |m_axi_arcsr_RREADY    |   9|          2|    1|          2|
+    |p_A_reader_rs_blk_n   |   9|          2|    1|          2|
+    |p_A_reader_rs_din     |   9|          2|   64|        128|
+    |p_A_reader_rs_write   |  14|          3|    1|          3|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 | 247|         52|  191|        490|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |                             Name                             | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |add_reg_113                                                   |  32|   0|   32|          0|
+    |ap_CS_fsm                                                     |  11|   0|   11|          0|
+    |ap_done_reg                                                   |   1|   0|    1|          0|
+    |grp_A_row_reader_Pipeline_VITIS_LOOP_13_1_fu_76_ap_start_reg  |   1|   0|    1|          0|
+    |trunc_ln13_reg_119                                            |  62|   0|   62|          0|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                         | 107|   0|  107|          0|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+---------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  | Source Object |    C Type    |
++------------------------------+-----+-----+------------+---------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_continue                   |   in|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|m_axi_arcsr_AWVALID           |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWREADY           |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWADDR            |  out|   64|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWID              |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWLEN             |  out|   32|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWSIZE            |  out|    3|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWBURST           |  out|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWLOCK            |  out|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWCACHE           |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWPROT            |  out|    3|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWQOS             |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWREGION          |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWUSER            |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WVALID            |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WREADY            |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WDATA             |  out|   32|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WSTRB             |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WLAST             |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WID               |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WUSER             |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARVALID           |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARREADY           |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARADDR            |  out|   64|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARID              |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARLEN             |  out|   32|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARSIZE            |  out|    3|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARBURST           |  out|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARLOCK            |  out|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARCACHE           |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARPROT            |  out|    3|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARQOS             |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARREGION          |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARUSER            |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RVALID            |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RREADY            |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RDATA             |   in|   32|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RLAST             |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RID               |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RFIFONUM          |   in|    9|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RUSER             |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RRESP             |   in|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_BVALID            |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_BREADY            |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_BRESP             |   in|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_BID               |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_BUSER             |   in|    1|       m_axi|          arcsr|       pointer|
+|A_rcsr                        |   in|   64|     ap_none|         A_rcsr|        scalar|
+|rnum                          |   in|   32|     ap_none|           rnum|        scalar|
+|p_A_reader_rs_din             |  out|   64|     ap_fifo|  p_A_reader_rs|       pointer|
+|p_A_reader_rs_num_data_valid  |   in|    8|     ap_fifo|  p_A_reader_rs|       pointer|
+|p_A_reader_rs_fifo_cap        |   in|    8|     ap_fifo|  p_A_reader_rs|       pointer|
+|p_A_reader_rs_full_n          |   in|    1|     ap_fifo|  p_A_reader_rs|       pointer|
+|p_A_reader_rs_write           |  out|    1|     ap_fifo|  p_A_reader_rs|       pointer|
++------------------------------+-----+-----+------------+---------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.01>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%rnum_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %rnum" [./task_scheduler.h:6]   --->   Operation 12 'read' 'rnum_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.01ns)   --->   "%add = add i32 %rnum_read, i32 1" [./task_scheduler.h:6]   --->   Operation 13 'add' 'add' <Predicate = true> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 3.65>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%A_rcsr_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %A_rcsr" [./task_scheduler.h:6]   --->   Operation 14 'read' 'A_rcsr_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%trunc_ln13 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %A_rcsr_read, i32 2, i32 63" [./task_scheduler.h:13]   --->   Operation 15 'partselect' 'trunc_ln13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln13 = sext i62 %trunc_ln13" [./task_scheduler.h:13]   --->   Operation 16 'sext' 'sext_ln13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%arcsr_addr = getelementptr i32 %arcsr, i64 %sext_ln13" [./task_scheduler.h:13]   --->   Operation 17 'getelementptr' 'arcsr_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [7/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 18 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 3.65>
+ST_3 : Operation 19 [6/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 19 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 3.65>
+ST_4 : Operation 20 [5/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 20 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 3.65>
+ST_5 : Operation 21 [4/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 21 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 3.65>
+ST_6 : Operation 22 [3/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 22 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 3.65>
+ST_7 : Operation 23 [2/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 23 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 3.65>
+ST_8 : Operation 24 [1/7] (3.65ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i64 %arcsr_addr, i32 %add" [./task_scheduler.h:13]   --->   Operation 24 'readreq' 'empty' <Predicate = true> <Delay = 3.65> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 1.41>
+ST_9 : Operation 25 [1/1] (0.00ns)   --->   "%empty_1626 = wait i32 @_ssdm_op_Wait"   --->   Operation 25 'wait' 'empty_1626' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 26 [2/2] (1.41ns)   --->   "%call_ln13 = call void @A_row_reader_Pipeline_VITIS_LOOP_13_1, i32 %arcsr, i62 %trunc_ln13, i32 %add, i64 %p_A_reader_rs" [./task_scheduler.h:13]   --->   Operation 26 'call' 'call_ln13' <Predicate = true> <Delay = 1.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 27 [1/2] (0.00ns)   --->   "%call_ln13 = call void @A_row_reader_Pipeline_VITIS_LOOP_13_1, i32 %arcsr, i62 %trunc_ln13, i32 %add, i64 %p_A_reader_rs" [./task_scheduler.h:13]   --->   Operation 27 'call' 'call_ln13' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 1.64>
+ST_11 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %p_A_reader_rs, void @empty_47, i32 0, i32 0, void @empty_157, i32 0, i32 0, void @empty_157, void @empty_157, void @empty_157, i32 0, i32 0, i32 0, i32 0, void @empty_157, void @empty_157, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %arcsr, void @empty_21, i32 0, i32 0, void @empty_157, i32 0, i32 2050, void @empty_167, void @empty_134, void @empty_157, i32 16, i32 16, i32 16, i32 16, void @empty_157, void @empty_157, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 30 [1/1] (0.00ns)   --->   "%empty_1627 = wait i32 @_ssdm_op_Wait"   --->   Operation 30 'wait' 'empty_1627' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 31 [1/1] (1.64ns)   --->   "%write_ln27 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %p_A_reader_rs, i64 4294967295" [./task_scheduler.h:27]   --->   Operation 31 'write' 'write_ln27' <Predicate = true> <Delay = 1.64> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.64> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 128> <FIFO>
+ST_11 : Operation 32 [1/1] (0.00ns)   --->   "%ret_ln28 = ret" [./task_scheduler.h:28]   --->   Operation 32 'ret' 'ret_ln28' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ arcsr]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=4; pingpong=0; private_global=0; IO mode=m_axi:ce=0
+Port [ A_rcsr]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ rnum]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_A_reader_rs]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+rnum_read         (read         ) [ 000000000000]
+add               (add          ) [ 001111111110]
+A_rcsr_read       (read         ) [ 000000000000]
+trunc_ln13        (partselect   ) [ 000111111110]
+sext_ln13         (sext         ) [ 000000000000]
+arcsr_addr        (getelementptr) [ 000111111000]
+empty             (readreq      ) [ 000000000000]
+empty_1626        (wait         ) [ 000000000000]
+call_ln13         (call         ) [ 000000000000]
+specinterface_ln0 (specinterface) [ 000000000000]
+specinterface_ln0 (specinterface) [ 000000000000]
+empty_1627        (wait         ) [ 000000000000]
+write_ln27        (write        ) [ 000000000000]
+ret_ln28          (ret          ) [ 000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="arcsr">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="arcsr"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="A_rcsr">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="A_rcsr"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="rnum">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rnum"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="p_A_reader_rs">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_A_reader_rs"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i64"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i62.i64.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_ReadReq.m_axi.p1i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Wait"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="A_row_reader_Pipeline_VITIS_LOOP_13_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_47"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_157"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_21"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_167"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_134"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i64P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="rnum_read_read_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="32" slack="0"/>
+<pin id="52" dir="0" index="1" bw="32" slack="0"/>
+<pin id="53" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="rnum_read/1 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="A_rcsr_read_read_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="64" slack="0"/>
+<pin id="58" dir="0" index="1" bw="64" slack="0"/>
+<pin id="59" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="A_rcsr_read/2 "/>
+</bind>
+</comp>
+
+<comp id="62" class="1004" name="grp_readreq_fu_62">
+<pin_list>
+<pin id="63" dir="0" index="0" bw="1" slack="0"/>
+<pin id="64" dir="0" index="1" bw="32" slack="0"/>
+<pin id="65" dir="0" index="2" bw="32" slack="1"/>
+<pin id="66" dir="1" index="3" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="readreq(1154) " fcode="readreq"/>
+<opset="empty/2 "/>
+</bind>
+</comp>
+
+<comp id="68" class="1004" name="write_ln27_write_fu_68">
+<pin_list>
+<pin id="69" dir="0" index="0" bw="0" slack="0"/>
+<pin id="70" dir="0" index="1" bw="64" slack="0"/>
+<pin id="71" dir="0" index="2" bw="33" slack="0"/>
+<pin id="72" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln27/11 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="grp_A_row_reader_Pipeline_VITIS_LOOP_13_1_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="0" slack="0"/>
+<pin id="78" dir="0" index="1" bw="32" slack="0"/>
+<pin id="79" dir="0" index="2" bw="62" slack="7"/>
+<pin id="80" dir="0" index="3" bw="32" slack="8"/>
+<pin id="81" dir="0" index="4" bw="64" slack="0"/>
+<pin id="82" dir="1" index="5" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln13/9 "/>
+</bind>
+</comp>
+
+<comp id="86" class="1004" name="add_fu_86">
+<pin_list>
+<pin id="87" dir="0" index="0" bw="32" slack="0"/>
+<pin id="88" dir="0" index="1" bw="1" slack="0"/>
+<pin id="89" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add/1 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="trunc_ln13_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="62" slack="0"/>
+<pin id="94" dir="0" index="1" bw="64" slack="0"/>
+<pin id="95" dir="0" index="2" bw="3" slack="0"/>
+<pin id="96" dir="0" index="3" bw="7" slack="0"/>
+<pin id="97" dir="1" index="4" bw="62" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="trunc_ln13/2 "/>
+</bind>
+</comp>
+
+<comp id="102" class="1004" name="sext_ln13_fu_102">
+<pin_list>
+<pin id="103" dir="0" index="0" bw="62" slack="0"/>
+<pin id="104" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="sext_ln13/2 "/>
+</bind>
+</comp>
+
+<comp id="106" class="1004" name="arcsr_addr_fu_106">
+<pin_list>
+<pin id="107" dir="0" index="0" bw="64" slack="0"/>
+<pin id="108" dir="0" index="1" bw="64" slack="0"/>
+<pin id="109" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="arcsr_addr/2 "/>
+</bind>
+</comp>
+
+<comp id="113" class="1005" name="add_reg_113">
+<pin_list>
+<pin id="114" dir="0" index="0" bw="32" slack="1"/>
+<pin id="115" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="add "/>
+</bind>
+</comp>
+
+<comp id="119" class="1005" name="trunc_ln13_reg_119">
+<pin_list>
+<pin id="120" dir="0" index="0" bw="62" slack="7"/>
+<pin id="121" dir="1" index="1" bw="62" slack="7"/>
+</pin_list>
+<bind>
+<opset="trunc_ln13 "/>
+</bind>
+</comp>
+
+<comp id="124" class="1005" name="arcsr_addr_reg_124">
+<pin_list>
+<pin id="125" dir="0" index="0" bw="32" slack="1"/>
+<pin id="126" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="arcsr_addr "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="54"><net_src comp="8" pin="0"/><net_sink comp="50" pin=0"/></net>
+
+<net id="55"><net_src comp="4" pin="0"/><net_sink comp="50" pin=1"/></net>
+
+<net id="60"><net_src comp="12" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="61"><net_src comp="2" pin="0"/><net_sink comp="56" pin=1"/></net>
+
+<net id="67"><net_src comp="20" pin="0"/><net_sink comp="62" pin=0"/></net>
+
+<net id="73"><net_src comp="46" pin="0"/><net_sink comp="68" pin=0"/></net>
+
+<net id="74"><net_src comp="6" pin="0"/><net_sink comp="68" pin=1"/></net>
+
+<net id="75"><net_src comp="48" pin="0"/><net_sink comp="68" pin=2"/></net>
+
+<net id="83"><net_src comp="24" pin="0"/><net_sink comp="76" pin=0"/></net>
+
+<net id="84"><net_src comp="0" pin="0"/><net_sink comp="76" pin=1"/></net>
+
+<net id="85"><net_src comp="6" pin="0"/><net_sink comp="76" pin=4"/></net>
+
+<net id="90"><net_src comp="50" pin="2"/><net_sink comp="86" pin=0"/></net>
+
+<net id="91"><net_src comp="10" pin="0"/><net_sink comp="86" pin=1"/></net>
+
+<net id="98"><net_src comp="14" pin="0"/><net_sink comp="92" pin=0"/></net>
+
+<net id="99"><net_src comp="56" pin="2"/><net_sink comp="92" pin=1"/></net>
+
+<net id="100"><net_src comp="16" pin="0"/><net_sink comp="92" pin=2"/></net>
+
+<net id="101"><net_src comp="18" pin="0"/><net_sink comp="92" pin=3"/></net>
+
+<net id="105"><net_src comp="92" pin="4"/><net_sink comp="102" pin=0"/></net>
+
+<net id="110"><net_src comp="0" pin="0"/><net_sink comp="106" pin=0"/></net>
+
+<net id="111"><net_src comp="102" pin="1"/><net_sink comp="106" pin=1"/></net>
+
+<net id="112"><net_src comp="106" pin="2"/><net_sink comp="62" pin=1"/></net>
+
+<net id="116"><net_src comp="86" pin="2"/><net_sink comp="113" pin=0"/></net>
+
+<net id="117"><net_src comp="113" pin="1"/><net_sink comp="62" pin=2"/></net>
+
+<net id="118"><net_src comp="113" pin="1"/><net_sink comp="76" pin=3"/></net>
+
+<net id="122"><net_src comp="92" pin="4"/><net_sink comp="119" pin=0"/></net>
+
+<net id="123"><net_src comp="119" pin="1"/><net_sink comp="76" pin=2"/></net>
+
+<net id="127"><net_src comp="106" pin="2"/><net_sink comp="124" pin=0"/></net>
+
+<net id="128"><net_src comp="124" pin="1"/><net_sink comp="62" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: arcsr | {}
+	Port: p_A_reader_rs | {9 10 11 }
+ - Input state : 
+	Port: A_row_reader : arcsr | {2 3 4 5 6 7 8 9 10 }
+	Port: A_row_reader : A_rcsr | {2 }
+	Port: A_row_reader : rnum | {1 }
+  - Chain level:
+	State 1
+	State 2
+		sext_ln13 : 1
+		arcsr_addr : 2
+		empty : 3
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------------------------------|---------|---------|
+| Operation|                 Functional Unit                 |    FF   |   LUT   |
+|----------|-------------------------------------------------|---------|---------|
+|   call   | grp_A_row_reader_Pipeline_VITIS_LOOP_13_1_fu_76 |   194   |   157   |
+|----------|-------------------------------------------------|---------|---------|
+|    add   |                    add_fu_86                    |    0    |    39   |
+|----------|-------------------------------------------------|---------|---------|
+|   read   |               rnum_read_read_fu_50              |    0    |    0    |
+|          |              A_rcsr_read_read_fu_56             |    0    |    0    |
+|----------|-------------------------------------------------|---------|---------|
+|  readreq |                grp_readreq_fu_62                |    0    |    0    |
+|----------|-------------------------------------------------|---------|---------|
+|   write  |              write_ln27_write_fu_68             |    0    |    0    |
+|----------|-------------------------------------------------|---------|---------|
+|partselect|                 trunc_ln13_fu_92                |    0    |    0    |
+|----------|-------------------------------------------------|---------|---------|
+|   sext   |                 sext_ln13_fu_102                |    0    |    0    |
+|----------|-------------------------------------------------|---------|---------|
+|   Total  |                                                 |   194   |   196   |
+|----------|-------------------------------------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++------------------+--------+
+|                  |   FF   |
++------------------+--------+
+|    add_reg_113   |   32   |
+|arcsr_addr_reg_124|   32   |
+|trunc_ln13_reg_119|   62   |
++------------------+--------+
+|       Total      |   126  |
++------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-------------------|------|------|------|--------||---------||---------|
+|        Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-------------------|------|------|------|--------||---------||---------|
+| grp_readreq_fu_62 |  p1  |   2  |  32  |   64   ||    9    |
+|-------------------|------|------|------|--------||---------||---------|
+|       Total       |      |      |      |   64   ||  0.427  ||    9    |
+|-------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+
+|           |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+
+|  Function |    -   |   194  |   196  |
+|   Memory  |    -   |    -   |    -   |
+|Multiplexer|    0   |    -   |    9   |
+|  Register |    -   |   126  |    -   |
++-----------+--------+--------+--------+
+|   Total   |    0   |   320  |   205  |
++-----------+--------+--------+--------+

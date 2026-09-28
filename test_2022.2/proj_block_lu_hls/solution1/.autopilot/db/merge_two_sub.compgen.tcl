@@ -1,22 +1,22 @@
 # This script segment is generated automatically by AutoPilot
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler spmm_fifo_w66_d1000_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {ping_U}
+	::AP::rtl_comp_handler spmm_fifo_w80_d1000_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {ping_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler spmm_fifo_w66_d1000_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {pong_U}
+	::AP::rtl_comp_handler spmm_fifo_w80_d1000_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {pong_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler spmm_fifo_w66_d1000_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {ping1_U}
+	::AP::rtl_comp_handler spmm_fifo_w80_d1000_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {ping1_U}
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler spmm_fifo_w66_d1000_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {pong1_U}
+	::AP::rtl_comp_handler spmm_fifo_w80_d1000_A BINDTYPE {storage} TYPE {fifo} IMPL {memory} ALLOW_PRAGMA 1 INSTNAME {pong1_U}
 }
 
 
@@ -30,15 +30,45 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1998 \
-    name mresult \
+    id 1996 \
+    name mc_pe4 \
     type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_mresult \
+    corename dc_mc_pe4 \
     op interface \
-    ports { mresult_dout { I 36 vector } mresult_num_data_valid { I 4 vector } mresult_fifo_cap { I 4 vector } mresult_empty_n { I 1 bit } mresult_read { O 1 bit } } \
+    ports { mc_pe4_dout { I 66 vector } mc_pe4_num_data_valid { I 7 vector } mc_pe4_fifo_cap { I 7 vector } mc_pe4_empty_n { I 1 bit } mc_pe4_read { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 1997 \
+    name result_pe4 \
+    type fifo \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_result_pe4 \
+    op interface \
+    ports { result_pe4_din { O 66 vector } result_pe4_num_data_valid { I 11 vector } result_pe4_fifo_cap { I 11 vector } result_pe4_full_n { I 1 bit } result_pe4_write { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 1998 \
+    name m_pe4 \
+    type fifo \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_m_pe4 \
+    op interface \
+    ports { m_pe4_dout { I 66 vector } m_pe4_num_data_valid { I 11 vector } m_pe4_fifo_cap { I 11 vector } m_pe4_empty_n { I 1 bit } m_pe4_read { O 1 bit } } \
 } "
 }
 
@@ -46,44 +76,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 1999 \
-    name result_pe1 \
+    name efinish425 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_result_pe1 \
+    corename dc_efinish425 \
     op interface \
-    ports { result_pe1_din { O 66 vector } result_pe1_num_data_valid { I 11 vector } result_pe1_fifo_cap { I 11 vector } result_pe1_full_n { I 1 bit } result_pe1_write { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 2000 \
-    name m_pe1 \
-    type fifo \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_m_pe1 \
-    op interface \
-    ports { m_pe1_dout { I 66 vector } m_pe1_num_data_valid { I 11 vector } m_pe1_fifo_cap { I 11 vector } m_pe1_empty_n { I 1 bit } m_pe1_read { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 2001 \
-    name efinish122 \
-    type fifo \
-    dir O \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_efinish122 \
-    op interface \
-    ports { efinish122_din { O 1 vector } efinish122_num_data_valid { I 7 vector } efinish122_fifo_cap { I 7 vector } efinish122_full_n { I 1 bit } efinish122_write { O 1 bit } } \
+    ports { efinish425_din { O 1 vector } efinish425_num_data_valid { I 7 vector } efinish425_fifo_cap { I 7 vector } efinish425_full_n { I 1 bit } efinish425_write { O 1 bit } } \
 } "
 }
 
@@ -97,7 +97,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename ap_ctrl \
     op interface \
-    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } ap_continue { I 1 bit } } \
+    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } } \
 } "
 }
 

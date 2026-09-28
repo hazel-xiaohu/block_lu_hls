@@ -1,0 +1,799 @@
+In file included from core.cpp:1:
+In file included from ./core.h:13:
+In file included from /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed.h:10:
+In file included from /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h:16:
+In file included from /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int.h:12:
+/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=and_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=or_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xor_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+In file included from core.cpp:6:
+./task_scheduler.h:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=A_row_reader_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+./task_scheduler.h:36:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=A_element_reader_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+./task_scheduler.h:30:83: warning: unused parameter 'tnum' [-Wunused-parameter]
+void A_element_reader(val_t* A_val, id_t* A_cid, rinfo_stream* A_rlenstream, id_t tnum, avc_stream* Avcstream){
+                                                                                  ^
+./task_scheduler.h:65:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=A_element_filter_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+./task_scheduler.h:97:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=A_element_distributor_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+./task_scheduler.h:84:56: warning: unused parameter 'tnum' [-Wunused-parameter]
+void A_element_distributor(avc_stream* Avcstream, id_t tnum,
+                                                       ^
+core.cpp:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_Bridx_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE off
+        ^
+core.cpp:44:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=generate_data_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE off
+        ^
+core.cpp:87:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_4_to_1_mi_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+core.cpp:121:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=distributer_mi_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/output/block_lu_hls/test_2022.2_no_a_filter/run_hls.tcl:41:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=name=spmm_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=spmm
+        ^
+core.cpp:170:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r1acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r1acc
+        ^
+core.cpp:171:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r2acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r2acc
+        ^
+core.cpp:172:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r3acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r3acc
+        ^
+core.cpp:173:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r4acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r4acc
+        ^
+core.cpp:174:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r5acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r5acc
+        ^
+core.cpp:175:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r6acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r6acc
+        ^
+core.cpp:176:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r7acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r7acc
+        ^
+core.cpp:177:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r8acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r8acc
+        ^
+core.cpp:178:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r1hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r1hit
+        ^
+core.cpp:179:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r2hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r2hit
+        ^
+core.cpp:180:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r3hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r3hit
+        ^
+core.cpp:181:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r4hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r4hit
+        ^
+core.cpp:182:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r5hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r5hit
+        ^
+core.cpp:183:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r6hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r6hit
+        ^
+core.cpp:184:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r7hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r7hit
+        ^
+core.cpp:185:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=r8hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=r8hit
+        ^
+core.cpp:186:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=fnum_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=fnum
+        ^
+core.cpp:187:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=workload_counter1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=workload_counter1
+        ^
+core.cpp:188:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=workload_counter2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=workload_counter2
+        ^
+core.cpp:189:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=workload_counter3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=workload_counter3
+        ^
+core.cpp:190:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=workload_counter4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=workload_counter4
+        ^
+core.cpp:192:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc1acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc1acc
+        ^
+core.cpp:193:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc1hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc1hit
+        ^
+core.cpp:194:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc2acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc2acc
+        ^
+core.cpp:195:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc2hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc2hit
+        ^
+core.cpp:196:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc3acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc3acc
+        ^
+core.cpp:197:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc3hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc3hit
+        ^
+core.cpp:198:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc4acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc4acc
+        ^
+core.cpp:199:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc4hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc4hit
+        ^
+core.cpp:200:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc5acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc5acc
+        ^
+core.cpp:201:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc5hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc5hit
+        ^
+core.cpp:202:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc6acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc6acc
+        ^
+core.cpp:203:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc6hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc6hit
+        ^
+core.cpp:204:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc7acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc7acc
+        ^
+core.cpp:205:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc7hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc7hit
+        ^
+core.cpp:206:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc8acc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc8acc
+        ^
+core.cpp:207:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=mode=s_axilite bundle=ctr port=vc8hit_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite bundle=ctr port=vc8hit
+        ^
+core.cpp:209:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=2050 port=A_rcsr offset=slave bundle=arcsr_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=2050 port=A_rcsr offset=slave bundle=arcsr
+        ^
+core.cpp:210:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=2831 port=A_cid offset=slave bundle=acid_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=2831 port=A_cid offset=slave bundle=acid
+        ^
+core.cpp:211:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=2831 port=A_val offset=slave bundle=aval_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=2831 port=A_val offset=slave bundle=aval
+        ^
+core.cpp:212:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=2050 port=C_rcsr offset=slave bundle=crcsr_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=2050 port=C_rcsr offset=slave bundle=crcsr
+        ^
+core.cpp:213:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=3627 port=C_cid offset=slave bundle=ccid_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=3627 port=C_cid offset=slave bundle=ccid
+        ^
+core.cpp:214:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=3627 port=C_val offset=slave bundle=cval_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=3627 port=C_val offset=slave bundle=cval
+        ^
+core.cpp:215:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=513 port=B_rcsr1 offset=slave bundle=brcsr1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=513 port=B_rcsr1 offset=slave bundle=brcsr1
+        ^
+core.cpp:216:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=513 port=B_rcsr2 offset=slave bundle=brcsr2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=513 port=B_rcsr2 offset=slave bundle=brcsr2
+        ^
+core.cpp:217:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=513 port=B_rcsr3 offset=slave bundle=brcsr3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=513 port=B_rcsr3 offset=slave bundle=brcsr3
+        ^
+core.cpp:218:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=513 port=B_rcsr4 offset=slave bundle=brcsr4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=513 port=B_rcsr4 offset=slave bundle=brcsr4
+        ^
+core.cpp:219:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_val_port1 offset=slave bundle=bv1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_val_port1 offset=slave bundle=bv1
+        ^
+core.cpp:220:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_cid_port1 offset=slave bundle=bc1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_cid_port1 offset=slave bundle=bc1
+        ^
+core.cpp:221:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_val_port2 offset=slave bundle=bv2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_val_port2 offset=slave bundle=bv2
+        ^
+core.cpp:222:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_cid_port2 offset=slave bundle=bc2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_cid_port2 offset=slave bundle=bc2
+        ^
+core.cpp:223:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_val_port3 offset=slave bundle=bv3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_val_port3 offset=slave bundle=bv3
+        ^
+core.cpp:224:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_cid_port3 offset=slave bundle=bc3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_cid_port3 offset=slave bundle=bc3
+        ^
+core.cpp:225:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_val_port4 offset=slave bundle=bv4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_val_port4 offset=slave bundle=bv4
+        ^
+core.cpp:226:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_cid_port4 offset=slave bundle=bc4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_cid_port4 offset=slave bundle=bc4
+        ^
+core.cpp:228:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_val1 offset=slave bundle=bval1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_val1 offset=slave bundle=bval1
+        ^
+core.cpp:229:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_cid1 offset=slave bundle=bcid1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_cid1 offset=slave bundle=bcid1
+        ^
+core.cpp:230:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_val2 offset=slave bundle=bval2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_val2 offset=slave bundle=bval2
+        ^
+core.cpp:231:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_cid2 offset=slave bundle=bcid2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_cid2 offset=slave bundle=bcid2
+        ^
+core.cpp:232:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_val3 offset=slave bundle=bval3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_val3 offset=slave bundle=bval3
+        ^
+core.cpp:233:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_cid3 offset=slave bundle=bcid3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_cid3 offset=slave bundle=bcid3
+        ^
+core.cpp:234:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_val4 offset=slave bundle=bval4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_val4 offset=slave bundle=bval4
+        ^
+core.cpp:235:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=m_axi depth=896 port=B_cid4 offset=slave bundle=bcid4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi depth=896 port=B_cid4 offset=slave bundle=bcid4
+        ^
+core.cpp:237:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=s_axilite port=arnum bundle=ctr_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=arnum bundle=ctr
+        ^
+core.cpp:238:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=s_axilite port=atnum bundle=ctr_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=atnum bundle=ctr
+        ^
+core.cpp:239:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=s_axilite port=brnum bundle=ctr_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=brnum bundle=ctr
+        ^
+core.cpp:240:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=s_axilite port=btnum bundle=ctr_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=btnum bundle=ctr
+        ^
+core.cpp:241:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=s_axilite port=B_rcsr_base bundle=ctr_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=B_rcsr_base bundle=ctr
+        ^
+core.cpp:242:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=s_axilite port=B_val_base bundle=ctr_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=B_val_base bundle=ctr
+        ^
+core.cpp:243:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=s_axilite port=B_cid_base bundle=ctr_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=B_cid_base bundle=ctr
+        ^
+core.cpp:244:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=ctr_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=ctr
+        ^
+core.cpp:246:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=disable_start_propagation_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW disable_start_propagation
+        ^
+core.cpp:251:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=_A_reader_rs depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=_A_reader_rs depth=128
+        ^
+core.cpp:255:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=_A_element_as depth=256_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=_A_element_as depth=256
+        ^
+core.cpp:260:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=pe1_idle depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=pe1_idle depth=128
+        ^
+core.cpp:261:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=pe2_idle depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=pe2_idle depth=128
+        ^
+core.cpp:262:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=pe3_idle depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=pe3_idle depth=128
+        ^
+core.cpp:263:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=pe4_idle depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=pe4_idle depth=128
+        ^
+core.cpp:266:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rm1_idle depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rm1_idle depth=128
+        ^
+core.cpp:267:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rm2_idle depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rm2_idle depth=128
+        ^
+core.cpp:268:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rm3_idle depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rm3_idle depth=128
+        ^
+core.cpp:269:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rm4_idle depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rm4_idle depth=128
+        ^
+core.cpp:286:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=pe1_job depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=pe1_job depth=128
+        ^
+core.cpp:287:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=pe2_job depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=pe2_job depth=128
+        ^
+core.cpp:288:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=pe3_job depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=pe3_job depth=128
+        ^
+core.cpp:289:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=pe4_job depth=128_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=pe4_job depth=128
+        ^
+core.cpp:293:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_stream1 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_stream1 depth=64
+        ^
+core.cpp:294:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_stream2 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_stream2 depth=64
+        ^
+core.cpp:295:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_stream3 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_stream3 depth=64
+        ^
+core.cpp:296:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_stream4 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_stream4 depth=64
+        ^
+core.cpp:300:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rrequest1 depth=4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rrequest1 depth=4
+        ^
+core.cpp:301:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rrequest2 depth=4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rrequest2 depth=4
+        ^
+core.cpp:302:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rrequest3 depth=4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rrequest3 depth=4
+        ^
+core.cpp:303:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rrequest4 depth=4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rrequest4 depth=4
+        ^
+core.cpp:304:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rrequestf depth=4_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rrequestf depth=4
+        ^
+core.cpp:308:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rresponse1 depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rresponse1 depth=16
+        ^
+core.cpp:309:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rresponse2 depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rresponse2 depth=16
+        ^
+core.cpp:310:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rresponse3 depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rresponse3 depth=16
+        ^
+core.cpp:311:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rresponse4 depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rresponse4 depth=16
+        ^
+core.cpp:317:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rblock1 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rblock1 depth=64
+        ^
+core.cpp:318:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rblock2 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rblock2 depth=64
+        ^
+core.cpp:319:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rblock3 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rblock3 depth=64
+        ^
+core.cpp:320:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rblock4 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rblock4 depth=64
+        ^
+core.cpp:324:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_re_bank1 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_re_bank1 depth=8
+        ^
+core.cpp:325:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_re_bank2 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_re_bank2 depth=8
+        ^
+core.cpp:326:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_re_bank3 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_re_bank3 depth=8
+        ^
+core.cpp:327:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_re_bank4 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_re_bank4 depth=8
+        ^
+core.cpp:336:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_bank1_res depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_bank1_res depth=8
+        ^
+core.cpp:337:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_bank2_res depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_bank2_res depth=8
+        ^
+core.cpp:338:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_bank3_res depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_bank3_res depth=8
+        ^
+core.cpp:339:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_bank4_res depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_bank4_res depth=8
+        ^
+core.cpp:343:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_res_final depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_res_final depth=8
+        ^
+core.cpp:348:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_result_bank1_b depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_result_bank1_b depth=64
+        ^
+core.cpp:349:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_result_bank2_b depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_result_bank2_b depth=64
+        ^
+core.cpp:350:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_result_bank3_b depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_result_bank3_b depth=64
+        ^
+core.cpp:351:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_result_bank4_b depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_result_bank4_b depth=64
+        ^
+core.cpp:352:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_result_bank1_d depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_result_bank1_d depth=64
+        ^
+core.cpp:353:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_result_bank2_d depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_result_bank2_d depth=64
+        ^
+core.cpp:354:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_result_bank3_d depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_result_bank3_d depth=64
+        ^
+core.cpp:355:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=rcache_result_bank4_d depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=rcache_result_bank4_d depth=64
+        ^
+core.cpp:359:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=B_rlen_pe1 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=B_rlen_pe1 depth=64
+        ^
+core.cpp:360:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=B_rlen_pe2 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=B_rlen_pe2 depth=64
+        ^
+core.cpp:361:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=B_rlen_pe3 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=B_rlen_pe3 depth=64
+        ^
+core.cpp:362:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=B_rlen_pe4 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=B_rlen_pe4 depth=64
+        ^
+core.cpp:366:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vrequest1 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vrequest1 depth=64
+        ^
+core.cpp:367:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vrequest2 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vrequest2 depth=64
+        ^
+core.cpp:368:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vrequest3 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vrequest3 depth=64
+        ^
+core.cpp:369:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vrequest4 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vrequest4 depth=64
+        ^
+core.cpp:370:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=crequest1 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=crequest1 depth=64
+        ^
+core.cpp:371:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=crequest2 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=crequest2 depth=64
+        ^
+core.cpp:372:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=crequest3 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=crequest3 depth=64
+        ^
+core.cpp:373:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=crequest4 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=crequest4 depth=64
+        ^
+core.cpp:374:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=requests_f depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=requests_f depth=8
+        ^
+core.cpp:377:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank1 depth=64
+        ^
+core.cpp:378:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank2 depth=64
+        ^
+core.cpp:379:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank3 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank3 depth=64
+        ^
+core.cpp:380:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank4 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank4 depth=64
+        ^
+core.cpp:386:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe1 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank1_pe1 depth=8
+        ^
+core.cpp:387:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe2 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank1_pe2 depth=8
+        ^
+core.cpp:388:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe3 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank1_pe3 depth=8
+        ^
+core.cpp:389:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe4 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank1_pe4 depth=8
+        ^
+core.cpp:390:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe5 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank1_pe5 depth=8
+        ^
+core.cpp:391:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe6 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank1_pe6 depth=8
+        ^
+core.cpp:392:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe7 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank1_pe7 depth=8
+        ^
+core.cpp:393:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe8 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank1_pe8 depth=8
+        ^
+core.cpp:394:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe1 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank2_pe1 depth=8
+        ^
+core.cpp:395:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe2 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank2_pe2 depth=8
+        ^
+core.cpp:396:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe3 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank2_pe3 depth=8
+        ^
+core.cpp:397:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe4 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank2_pe4 depth=8
+        ^
+core.cpp:398:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe5 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank2_pe5 depth=8
+        ^
+core.cpp:399:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe6 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank2_pe6 depth=8
+        ^
+core.cpp:400:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe7 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank2_pe7 depth=8
+        ^
+core.cpp:401:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe8 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vccache_re_bank2_pe8 depth=8
+        ^
+core.cpp:402:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe1 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank1_pe1 type=fifo impl=srl
+        ^
+core.cpp:403:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe2 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank1_pe2 type=fifo impl=srl
+        ^
+core.cpp:404:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe3 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank1_pe3 type=fifo impl=srl
+        ^
+core.cpp:405:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe4 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank1_pe4 type=fifo impl=srl
+        ^
+core.cpp:406:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe5 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank1_pe5 type=fifo impl=srl
+        ^
+core.cpp:407:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe6 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank1_pe6 type=fifo impl=srl
+        ^
+core.cpp:408:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe7 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank1_pe7 type=fifo impl=srl
+        ^
+core.cpp:409:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank1_pe8 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank1_pe8 type=fifo impl=srl
+        ^
+core.cpp:410:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe1 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank2_pe1 type=fifo impl=srl
+        ^
+core.cpp:411:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe2 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank2_pe2 type=fifo impl=srl
+        ^
+core.cpp:412:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe3 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank2_pe3 type=fifo impl=srl
+        ^
+core.cpp:413:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe4 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank2_pe4 type=fifo impl=srl
+        ^
+core.cpp:414:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe5 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank2_pe5 type=fifo impl=srl
+        ^
+core.cpp:415:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe6 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank2_pe6 type=fifo impl=srl
+        ^
+core.cpp:416:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe7 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank2_pe7 type=fifo impl=srl
+        ^
+core.cpp:417:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vccache_re_bank2_pe8 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vccache_re_bank2_pe8 type=fifo impl=srl
+        ^
+core.cpp:424:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank1_vres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank1_vres depth=16
+        ^
+core.cpp:425:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank2_vres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank2_vres depth=16
+        ^
+core.cpp:426:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank3_vres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank3_vres depth=16
+        ^
+core.cpp:427:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank4_vres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank4_vres depth=16
+        ^
+core.cpp:428:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank5_vres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank5_vres depth=16
+        ^
+core.cpp:429:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank6_vres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank6_vres depth=16
+        ^
+core.cpp:430:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank7_vres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank7_vres depth=16
+        ^
+core.cpp:431:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank8_vres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank8_vres depth=16
+        ^
+core.cpp:432:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank1_cres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank1_cres depth=16
+        ^
+core.cpp:433:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank2_cres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank2_cres depth=16
+        ^
+core.cpp:434:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank3_cres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank3_cres depth=16
+        ^
+core.cpp:435:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank4_cres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank4_cres depth=16
+        ^
+core.cpp:436:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank5_cres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank5_cres depth=16
+        ^
+core.cpp:437:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank6_cres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank6_cres depth=16
+        ^
+core.cpp:438:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank7_cres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank7_cres depth=16
+        ^
+core.cpp:439:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank8_cres depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank8_cres depth=16
+        ^
+core.cpp:445:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank1_result depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank1_result depth=8
+        ^
+core.cpp:446:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank2_result depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank2_result depth=8
+        ^
+core.cpp:447:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank3_result depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank3_result depth=8
+        ^
+core.cpp:448:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank4_result depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank4_result depth=8
+        ^
+core.cpp:451:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank1_vresult1 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank1_vresult1 depth=8
+        ^
+core.cpp:452:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank1_cresult1 depth=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vcache_bank1_cresult1 depth=8
+        ^
+core.cpp:453:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank1_vresult1 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vcache_bank1_vresult1 type=fifo impl=srl
+        ^
+core.cpp:454:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vcache_bank1_cresult1 type=fifo impl=srl_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=vcache_bank1_cresult1 type=fifo impl=srl
+        ^
+core.cpp:459:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vresponse1 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vresponse1 depth=64
+        ^
+core.cpp:460:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vresponse2 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vresponse2 depth=64
+        ^
+core.cpp:461:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vresponse3 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vresponse3 depth=64
+        ^
+core.cpp:462:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vresponse4 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vresponse4 depth=64
+        ^
+core.cpp:463:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cresponse1 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cresponse1 depth=64
+        ^
+core.cpp:464:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cresponse2 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cresponse2 depth=64
+        ^
+core.cpp:465:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cresponse3 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cresponse3 depth=64
+        ^
+core.cpp:466:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cresponse4 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cresponse4 depth=64
+        ^
+core.cpp:467:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vresult1 depth=32_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vresult1 depth=32
+        ^
+core.cpp:468:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vresult2 depth=32_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vresult2 depth=32
+        ^
+core.cpp:469:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vresult3 depth=32_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vresult3 depth=32
+        ^
+core.cpp:470:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vresult4 depth=32_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vresult4 depth=32
+        ^
+core.cpp:471:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cresult1 depth=32_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cresult1 depth=32
+        ^
+core.cpp:472:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cresult2 depth=32_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cresult2 depth=32
+        ^
+core.cpp:473:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cresult3 depth=32_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cresult3 depth=32
+        ^
+core.cpp:474:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cresult4 depth=32_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cresult4 depth=32
+        ^
+core.cpp:478:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vblock1 depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vblock1 depth=100
+        ^
+core.cpp:479:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vblock2 depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vblock2 depth=100
+        ^
+core.cpp:480:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vblock3 depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vblock3 depth=100
+        ^
+core.cpp:481:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vblock4 depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vblock4 depth=100
+        ^
+core.cpp:482:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cblock1 depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cblock1 depth=100
+        ^
+core.cpp:483:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cblock2 depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cblock2 depth=100
+        ^
+core.cpp:484:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cblock3 depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cblock3 depth=100
+        ^
+core.cpp:485:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cblock4 depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cblock4 depth=100
+        ^
+core.cpp:488:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vblock1d depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vblock1d depth=100
+        ^
+core.cpp:489:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vblock2d depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vblock2d depth=100
+        ^
+core.cpp:490:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vblock3d depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vblock3d depth=100
+        ^
+core.cpp:491:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=vblock4d depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=vblock4d depth=100
+        ^
+core.cpp:492:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cblock1d depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cblock1d depth=100
+        ^
+core.cpp:493:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cblock2d depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cblock2d depth=100
+        ^
+core.cpp:494:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cblock3d depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cblock3d depth=100
+        ^
+core.cpp:495:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=cblock4d depth=100_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=cblock4d depth=100
+        ^
+core.cpp:500:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=mc_pe1 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=mc_pe1 depth=64
+        ^
+core.cpp:501:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=mc_pe2 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=mc_pe2 depth=64
+        ^
+core.cpp:502:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=mc_pe3 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=mc_pe3 depth=64
+        ^
+core.cpp:503:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=mc_pe4 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=mc_pe4 depth=64
+        ^
+core.cpp:504:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=efinish1 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=efinish1 depth=64
+        ^
+core.cpp:505:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=efinish2 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=efinish2 depth=64
+        ^
+core.cpp:506:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=efinish3 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=efinish3 depth=64
+        ^
+core.cpp:507:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=efinish4 depth=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=efinish4 depth=64
+        ^
+core.cpp:510:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=m_pe1 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=m_pe1 depth=1000
+        ^
+core.cpp:511:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=m_pe2 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=m_pe2 depth=1000
+        ^
+core.cpp:512:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=m_pe3 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=m_pe3 depth=1000
+        ^
+core.cpp:513:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=m_pe4 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=m_pe4 depth=1000
+        ^
+core.cpp:515:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=p_pe1 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=p_pe1 depth=1000
+        ^
+core.cpp:516:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=p_pe2 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=p_pe2 depth=1000
+        ^
+core.cpp:517:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=p_pe3 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=p_pe3 depth=1000
+        ^
+core.cpp:518:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=p_pe4 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=p_pe4 depth=1000
+        ^
+core.cpp:522:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=result_pe1 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=result_pe1 depth=1000
+        ^
+core.cpp:523:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=result_pe2 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=result_pe2 depth=1000
+        ^
+core.cpp:524:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=result_pe3 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=result_pe3 depth=1000
+        ^
+core.cpp:525:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=result_pe4 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=result_pe4 depth=1000
+        ^
+core.cpp:529:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=final_merger_1 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=final_merger_1 depth=1000
+        ^
+core.cpp:530:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=final_merger_2 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=final_merger_2 depth=1000
+        ^
+core.cpp:531:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=final_merger_3 depth=1000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=final_merger_3 depth=1000
+        ^
+core.cpp:532:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=final_len_1 depth=2050_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=final_len_1 depth=2050
+        ^
+core.cpp:533:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=spmm_XLX_SEP_ PragmaOptions=variable=final_len_2 depth=2050_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=final_len_2 depth=2050
+        ^
+264 warnings generated.

@@ -113,7 +113,7 @@ wire   [0:0] tmp_s_nbreadreq_fu_172_p3;
 reg    ap_block_state1_pp0_stage0_iter0;
 reg   [0:0] tmp_s_reg_563;
 reg   [0:0] enable_reg_567;
-reg   [0:0] tmp_67_reg_611;
+reg   [0:0] tmp_70_reg_611;
 reg    ap_predicate_op55_write_state2;
 reg    ap_predicate_op57_write_state2;
 reg    ap_block_state2_pp0_stage0_iter1;
@@ -327,7 +327,7 @@ end
 always @ (posedge ap_clk) begin
     if (((enable_fu_256_p1 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (tmp_s_nbreadreq_fu_172_p3 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         tmp_115_reg_615 <= {{crequest1_dout[208:1]}};
-        tmp_67_reg_611 <= B_rlen_curr_addr_fu_370_p2[32'd4];
+        tmp_70_reg_611 <= B_rlen_curr_addr_fu_370_p2[32'd4];
     end
 end
 
@@ -537,11 +537,11 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 always @ (*) begin
-    ap_predicate_op55_write_state2 = ((tmp_67_reg_611 == 1'd0) & (enable_reg_567 == 1'd0) & (tmp_s_reg_563 == 1'd1));
+    ap_predicate_op55_write_state2 = ((tmp_70_reg_611 == 1'd0) & (enable_reg_567 == 1'd0) & (tmp_s_reg_563 == 1'd1));
 end
 
 always @ (*) begin
-    ap_predicate_op57_write_state2 = ((tmp_67_reg_611 == 1'd1) & (enable_reg_567 == 1'd0) & (tmp_s_reg_563 == 1'd1));
+    ap_predicate_op57_write_state2 = ((tmp_70_reg_611 == 1'd1) & (enable_reg_567 == 1'd0) & (tmp_s_reg_563 == 1'd1));
 end
 
 assign enable_fu_256_p1 = crequest1_dout[0:0];

@@ -185,7 +185,7 @@ void flush_three(merge_stream* a, merge_stream* b, merge_stream* c,
     }
 }
 
-void merge_two_sub(mcontrolr_stream* control_s, merge_stream* result, merge_stream* from, bool_stream* efinish){
+void merge_two_sub(mcontrol_stream* control_s, merge_stream* result, merge_stream* from, bool_stream* efinish){
 
 #pragma HLS ALLOCATION function instances=flush_three limit=1
 
@@ -204,6 +204,7 @@ void merge_two_sub(mcontrolr_stream* control_s, merge_stream* result, merge_stre
 	id_t ef1_l=0, ef2_l=0, ef3_l=0;
 
 	merge_item temp_mi;
+	merge_control temp_control;
 	merge_control_r temp_cr;
 
 	temp_mi.global_end = false;
@@ -227,10 +228,17 @@ void merge_two_sub(mcontrolr_stream* control_s, merge_stream* result, merge_stre
 
 	for (bool enable=false; !enable; ) {
 #pragma HLS PIPELINE off
-		if (!control_s->empty()) {
-			temp_cr = control_s->read();
+		// Read the PE control token directly. The previous nested DATAFLOW
+		// controller could read ahead from mc_pe while the PE was waiting for
+		// the acknowledgement of the preceding token, exposing an RTL cosim
+		// circular wait (mc_pe <-> efinish). The conversion is combinational,
+		// so an intermediate process/FIFO is unnecessary.
+		temp_control = control_s->read();
+		temp_cr.end = temp_control.end;
+		temp_cr.rlen = temp_control.rlen;
+		temp_cr.whether_push = temp_control.partial_end;
 
-			if (!temp_cr.end) {
+		if (!temp_cr.end) {
 				if (temp_cr.whether_push) {
 
 					if (f_minimum_index == 0) {
@@ -313,10 +321,9 @@ void merge_two_sub(mcontrolr_stream* control_s, merge_stream* result, merge_stre
 
 				if (temp_cr.rlen > 0) curr_iter += 1;
 				efinish->write(false);
-			}
-
-			enable = temp_cr.end;
 		}
+
+		enable = temp_cr.end;
 	}
 
 	from->read(); // Consume convert_pblock_to_mergeitem termination.
@@ -326,16 +333,7 @@ void merge_two_sub(mcontrolr_stream* control_s, merge_stream* result, merge_stre
 }
 
 void merger(mcontrol_stream* control, merge_stream* from, merge_stream* result, bool_stream* efinish){
-
-#pragma HLS DATAFLOW
-    SPMM_DATAFLOW_BEGIN();
-
-	mcontrolr_stream mresult;
-#pragma HLS STREAM variable=mresult depth=8
-
-	SPMM_STAGE(merge_controller(control, &mresult));
-	SPMM_STAGE(merge_two_sub(&mresult, result, from, efinish));
-    SPMM_DATAFLOW_END();
+	merge_two_sub(control, result, from, efinish);
 }
 
 void generate_mccontrol(mcontrol_stream* mcontrol, merge_stream* to, val_t* in, bool_stream* finish){
@@ -400,4 +398,3 @@ void merger_test(val_t* in, val_t* out){
 	SPMM_STAGE(from_ms_to_val(&mr, out));
     SPMM_DATAFLOW_END();
 }
-

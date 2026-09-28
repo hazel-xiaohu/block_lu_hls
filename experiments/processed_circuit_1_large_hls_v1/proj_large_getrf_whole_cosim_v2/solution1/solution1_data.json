@@ -1,0 +1,5087 @@
+{
+  "Top": "large_getrf",
+  "RtlTop": "large_getrf",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "large_getrf_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_hs",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "zynquplus",
+    "Device": "xczu15eg",
+    "Package": "-ffvb1156",
+    "Speed": "-2-i",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "a_ptr": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "unsigned int const *",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_a0",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "a_ptr_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "a_ptr_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "a_idx": {
+      "index": "1",
+      "direction": "in",
+      "srcType": "unsigned int const *",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_a1",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "a_idx_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "a_idx_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "a_val": {
+      "index": "2",
+      "direction": "in",
+      "srcType": "float const *",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_a2",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "a_val_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "a_val_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "l_ptr": {
+      "index": "3",
+      "direction": "in",
+      "srcType": "unsigned int const *",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_l0",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "l_ptr_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "l_ptr_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "l_idx": {
+      "index": "4",
+      "direction": "in",
+      "srcType": "unsigned int const *",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_l1",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "l_idx_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "l_idx_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "l_val": {
+      "index": "5",
+      "direction": "out",
+      "srcType": "float*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_l2",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "l_val_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "l_val_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "u_ptr": {
+      "index": "6",
+      "direction": "in",
+      "srcType": "unsigned int const *",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_u0",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "u_ptr_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "u_ptr_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "u_idx": {
+      "index": "7",
+      "direction": "in",
+      "srcType": "unsigned int const *",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_u1",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "u_idx_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "u_idx_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "u_val": {
+      "index": "8",
+      "direction": "inout",
+      "srcType": "float*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_u2",
+          "name": "",
+          "usage": "data",
+          "direction": "inout"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "u_val_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "u_val_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "u_diag_pos": {
+      "index": "9",
+      "direction": "in",
+      "srcType": "unsigned int const *",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_u3",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "u_diag_pos_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "u_diag_pos_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "work": {
+      "index": "10",
+      "direction": "inout",
+      "srcType": "float*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_w0",
+          "name": "",
+          "usage": "data",
+          "direction": "inout"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "work_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "work_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "mark": {
+      "index": "11",
+      "direction": "inout",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "interface",
+          "interface": "m_axi_w1",
+          "name": "",
+          "usage": "data",
+          "direction": "inout"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "mark_1",
+          "usage": "address",
+          "direction": "in"
+        },
+        {
+          "type": "register",
+          "interface": "s_axi_control",
+          "name": "mark_2",
+          "usage": "address",
+          "direction": "in"
+        }
+      ]
+    },
+    "n": {
+      "index": "12",
+      "direction": "in",
+      "srcType": "unsigned int",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "n",
+          "name": "n",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "pivot_eps": {
+      "index": "13",
+      "direction": "in",
+      "srcType": "float",
+      "srcSize": "32",
+      "hwRefs": [{
+          "type": "port",
+          "interface": "pivot_eps",
+          "name": "pivot_eps",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "status": {
+      "index": "14",
+      "direction": "out",
+      "srcType": "unsigned int*",
+      "srcSize": "32",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "status",
+          "name": "status",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "status_ap_vld",
+          "name": "status_ap_vld",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "muladds": {
+      "index": "15",
+      "direction": "out",
+      "srcType": "long unsigned int*",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "muladds",
+          "name": "muladds",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "muladds_ap_vld",
+          "name": "muladds_ap_vld",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    },
+    "divisions": {
+      "index": "16",
+      "direction": "out",
+      "srcType": "long unsigned int*",
+      "srcSize": "64",
+      "hwRefs": [
+        {
+          "type": "port",
+          "interface": "divisions",
+          "name": "divisions",
+          "usage": "data",
+          "direction": "out"
+        },
+        {
+          "type": "port",
+          "interface": "divisions_ap_vld",
+          "name": "divisions_ap_vld",
+          "usage": "control",
+          "direction": "out"
+        }
+      ]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": ["config_interface -m_axi_latency=0"],
+    "DirectiveTcl": ["set_directive_top large_getrf -name large_getrf"],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "large_getrf"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "5",
+    "Uncertainty": "1.35",
+    "IsCombinational": "0",
+    "II": "undef",
+    "Latency": "undef"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "large_getrf",
+    "Version": "1.0",
+    "DisplayName": "Large_getrf",
+    "Revision": "2609271309",
+    "Description": "An IP generated by Vitis HLS",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "xilinx_com_hls_large_getrf_1_0.zip"
+  },
+  "Files": {
+    "CSource": ["..\/..\/large_sparse_lu.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/large_getrf_a0_m_axi.vhd",
+      "impl\/vhdl\/large_getrf_a1_m_axi.vhd",
+      "impl\/vhdl\/large_getrf_a2_m_axi.vhd",
+      "impl\/vhdl\/large_getrf_control_s_axi.vhd",
+      "impl\/vhdl\/large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1.vhd",
+      "impl\/vhdl\/large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1.vhd",
+      "impl\/vhdl\/large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1.vhd",
+      "impl\/vhdl\/large_getrf_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/large_getrf_fmul_32ns_32ns_32_5_max_dsp_1.vhd",
+      "impl\/vhdl\/large_getrf_l0_m_axi.vhd",
+      "impl\/vhdl\/large_getrf_l1_m_axi.vhd",
+      "impl\/vhdl\/large_getrf_l2_m_axi.vhd",
+      "impl\/vhdl\/large_getrf_large_getrf_Pipeline_VITIS_LOOP_31_2.vhd",
+      "impl\/vhdl\/large_getrf_large_getrf_Pipeline_VITIS_LOOP_35_3.vhd",
+      "impl\/vhdl\/large_getrf_large_getrf_Pipeline_VITIS_LOOP_39_4.vhd",
+      "impl\/vhdl\/large_getrf_large_getrf_Pipeline_VITIS_LOOP_52_6.vhd",
+      "impl\/vhdl\/large_getrf_large_getrf_Pipeline_VITIS_LOOP_59_7.vhd",
+      "impl\/vhdl\/large_getrf_u0_m_axi.vhd",
+      "impl\/vhdl\/large_getrf_u1_m_axi.vhd",
+      "impl\/vhdl\/large_getrf_u2_m_axi.vhd",
+      "impl\/vhdl\/large_getrf_u3_m_axi.vhd",
+      "impl\/vhdl\/large_getrf_w0_m_axi.vhd",
+      "impl\/vhdl\/large_getrf_w1_m_axi.vhd",
+      "impl\/vhdl\/large_getrf.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/large_getrf_a0_m_axi.v",
+      "impl\/verilog\/large_getrf_a1_m_axi.v",
+      "impl\/verilog\/large_getrf_a2_m_axi.v",
+      "impl\/verilog\/large_getrf_control_s_axi.v",
+      "impl\/verilog\/large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1.v",
+      "impl\/verilog\/large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1.v",
+      "impl\/verilog\/large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1.v",
+      "impl\/verilog\/large_getrf_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/large_getrf_fmul_32ns_32ns_32_5_max_dsp_1.v",
+      "impl\/verilog\/large_getrf_l0_m_axi.v",
+      "impl\/verilog\/large_getrf_l1_m_axi.v",
+      "impl\/verilog\/large_getrf_l2_m_axi.v",
+      "impl\/verilog\/large_getrf_large_getrf_Pipeline_VITIS_LOOP_31_2.v",
+      "impl\/verilog\/large_getrf_large_getrf_Pipeline_VITIS_LOOP_35_3.v",
+      "impl\/verilog\/large_getrf_large_getrf_Pipeline_VITIS_LOOP_39_4.v",
+      "impl\/verilog\/large_getrf_large_getrf_Pipeline_VITIS_LOOP_52_6.v",
+      "impl\/verilog\/large_getrf_large_getrf_Pipeline_VITIS_LOOP_59_7.v",
+      "impl\/verilog\/large_getrf_u0_m_axi.v",
+      "impl\/verilog\/large_getrf_u1_m_axi.v",
+      "impl\/verilog\/large_getrf_u2_m_axi.v",
+      "impl\/verilog\/large_getrf_u3_m_axi.v",
+      "impl\/verilog\/large_getrf_w0_m_axi.v",
+      "impl\/verilog\/large_getrf_w1_m_axi.v",
+      "impl\/verilog\/large_getrf.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/large_getrf_v1_0\/data\/large_getrf.mdd",
+      "impl\/misc\/drivers\/large_getrf_v1_0\/data\/large_getrf.tcl",
+      "impl\/misc\/drivers\/large_getrf_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/large_getrf_v1_0\/src\/xlarge_getrf.c",
+      "impl\/misc\/drivers\/large_getrf_v1_0\/src\/xlarge_getrf.h",
+      "impl\/misc\/drivers\/large_getrf_v1_0\/src\/xlarge_getrf_hw.h",
+      "impl\/misc\/drivers\/large_getrf_v1_0\/src\/xlarge_getrf_linux.c",
+      "impl\/misc\/drivers\/large_getrf_v1_0\/src\/xlarge_getrf_sinit.c"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "Subcore": [
+      "impl\/misc\/large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1_ip.tcl",
+      "impl\/misc\/large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl",
+      "impl\/misc\/large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip.tcl",
+      "impl\/misc\/large_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip.tcl"
+    ],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/large_getrf.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": [
+      {
+        "Name": "large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 4 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name large_getrf_faddfsub_32ns_32ns_32_6_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "Name": "large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 1 CONFIG.c_result_fraction_width 0 CONFIG.component_name large_getrf_fcmp_32ns_32ns_1_2_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Compare CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "Name": "large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 14 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name large_getrf_fdiv_32ns_32ns_32_16_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Divide CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "Name": "large_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 3 CONFIG.c_mult_usage Max_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name large_getrf_fmul_32ns_32ns_32_5_max_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Multiply CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      }
+    ]
+  },
+  "Interfaces": {
+    "s_axi_control": {
+      "type": "axi4lite",
+      "busTypeName": "aximm",
+      "mode": "slave",
+      "dataWidth": "32",
+      "addrWidth": "8",
+      "portPrefix": "s_axi_control_",
+      "paramPrefix": "C_S_AXI_CONTROL_",
+      "ports": [
+        "s_axi_control_ARADDR",
+        "s_axi_control_ARREADY",
+        "s_axi_control_ARVALID",
+        "s_axi_control_AWADDR",
+        "s_axi_control_AWREADY",
+        "s_axi_control_AWVALID",
+        "s_axi_control_BREADY",
+        "s_axi_control_BRESP",
+        "s_axi_control_BVALID",
+        "s_axi_control_RDATA",
+        "s_axi_control_RREADY",
+        "s_axi_control_RRESP",
+        "s_axi_control_RVALID",
+        "s_axi_control_WDATA",
+        "s_axi_control_WREADY",
+        "s_axi_control_WSTRB",
+        "s_axi_control_WVALID"
+      ],
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "description": "Control signals",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "3",
+              "name": "RESERVED_1",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "1",
+              "name": "RESERVED_2",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "9",
+              "width": "1",
+              "name": "INTERRUPT",
+              "access": "R",
+              "description": "Control signal Register for 'interrupt'."
+            },
+            {
+              "offset": "10",
+              "width": "22",
+              "name": "RESERVED_3",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "description": "Global Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "description": "IP Interrupt Enable Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED_0",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "description": "IP Interrupt Status Register",
+          "range": "32",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "RTOW",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "RTOW",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED_0",
+              "access": "R",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x10",
+          "name": "a_ptr_1",
+          "access": "W",
+          "description": "Data signal of a_ptr",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "a_ptr",
+              "access": "W",
+              "description": "Bit 31 to 0 of a_ptr"
+            }]
+        },
+        {
+          "offset": "0x14",
+          "name": "a_ptr_2",
+          "access": "W",
+          "description": "Data signal of a_ptr",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "a_ptr",
+              "access": "W",
+              "description": "Bit 63 to 32 of a_ptr"
+            }]
+        },
+        {
+          "offset": "0x1c",
+          "name": "a_idx_1",
+          "access": "W",
+          "description": "Data signal of a_idx",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "a_idx",
+              "access": "W",
+              "description": "Bit 31 to 0 of a_idx"
+            }]
+        },
+        {
+          "offset": "0x20",
+          "name": "a_idx_2",
+          "access": "W",
+          "description": "Data signal of a_idx",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "a_idx",
+              "access": "W",
+              "description": "Bit 63 to 32 of a_idx"
+            }]
+        },
+        {
+          "offset": "0x28",
+          "name": "a_val_1",
+          "access": "W",
+          "description": "Data signal of a_val",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "a_val",
+              "access": "W",
+              "description": "Bit 31 to 0 of a_val"
+            }]
+        },
+        {
+          "offset": "0x2c",
+          "name": "a_val_2",
+          "access": "W",
+          "description": "Data signal of a_val",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "a_val",
+              "access": "W",
+              "description": "Bit 63 to 32 of a_val"
+            }]
+        },
+        {
+          "offset": "0x34",
+          "name": "l_ptr_1",
+          "access": "W",
+          "description": "Data signal of l_ptr",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "l_ptr",
+              "access": "W",
+              "description": "Bit 31 to 0 of l_ptr"
+            }]
+        },
+        {
+          "offset": "0x38",
+          "name": "l_ptr_2",
+          "access": "W",
+          "description": "Data signal of l_ptr",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "l_ptr",
+              "access": "W",
+              "description": "Bit 63 to 32 of l_ptr"
+            }]
+        },
+        {
+          "offset": "0x40",
+          "name": "l_idx_1",
+          "access": "W",
+          "description": "Data signal of l_idx",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "l_idx",
+              "access": "W",
+              "description": "Bit 31 to 0 of l_idx"
+            }]
+        },
+        {
+          "offset": "0x44",
+          "name": "l_idx_2",
+          "access": "W",
+          "description": "Data signal of l_idx",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "l_idx",
+              "access": "W",
+              "description": "Bit 63 to 32 of l_idx"
+            }]
+        },
+        {
+          "offset": "0x4c",
+          "name": "l_val_1",
+          "access": "W",
+          "description": "Data signal of l_val",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "l_val",
+              "access": "W",
+              "description": "Bit 31 to 0 of l_val"
+            }]
+        },
+        {
+          "offset": "0x50",
+          "name": "l_val_2",
+          "access": "W",
+          "description": "Data signal of l_val",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "l_val",
+              "access": "W",
+              "description": "Bit 63 to 32 of l_val"
+            }]
+        },
+        {
+          "offset": "0x58",
+          "name": "u_ptr_1",
+          "access": "W",
+          "description": "Data signal of u_ptr",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "u_ptr",
+              "access": "W",
+              "description": "Bit 31 to 0 of u_ptr"
+            }]
+        },
+        {
+          "offset": "0x5c",
+          "name": "u_ptr_2",
+          "access": "W",
+          "description": "Data signal of u_ptr",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "u_ptr",
+              "access": "W",
+              "description": "Bit 63 to 32 of u_ptr"
+            }]
+        },
+        {
+          "offset": "0x64",
+          "name": "u_idx_1",
+          "access": "W",
+          "description": "Data signal of u_idx",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "u_idx",
+              "access": "W",
+              "description": "Bit 31 to 0 of u_idx"
+            }]
+        },
+        {
+          "offset": "0x68",
+          "name": "u_idx_2",
+          "access": "W",
+          "description": "Data signal of u_idx",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "u_idx",
+              "access": "W",
+              "description": "Bit 63 to 32 of u_idx"
+            }]
+        },
+        {
+          "offset": "0x70",
+          "name": "u_val_1",
+          "access": "W",
+          "description": "Data signal of u_val",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "u_val",
+              "access": "W",
+              "description": "Bit 31 to 0 of u_val"
+            }]
+        },
+        {
+          "offset": "0x74",
+          "name": "u_val_2",
+          "access": "W",
+          "description": "Data signal of u_val",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "u_val",
+              "access": "W",
+              "description": "Bit 63 to 32 of u_val"
+            }]
+        },
+        {
+          "offset": "0x7c",
+          "name": "u_diag_pos_1",
+          "access": "W",
+          "description": "Data signal of u_diag_pos",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "u_diag_pos",
+              "access": "W",
+              "description": "Bit 31 to 0 of u_diag_pos"
+            }]
+        },
+        {
+          "offset": "0x80",
+          "name": "u_diag_pos_2",
+          "access": "W",
+          "description": "Data signal of u_diag_pos",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "u_diag_pos",
+              "access": "W",
+              "description": "Bit 63 to 32 of u_diag_pos"
+            }]
+        },
+        {
+          "offset": "0x88",
+          "name": "work_1",
+          "access": "W",
+          "description": "Data signal of work",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "work",
+              "access": "W",
+              "description": "Bit 31 to 0 of work"
+            }]
+        },
+        {
+          "offset": "0x8c",
+          "name": "work_2",
+          "access": "W",
+          "description": "Data signal of work",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "work",
+              "access": "W",
+              "description": "Bit 63 to 32 of work"
+            }]
+        },
+        {
+          "offset": "0x94",
+          "name": "mark_1",
+          "access": "W",
+          "description": "Data signal of mark",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "mark",
+              "access": "W",
+              "description": "Bit 31 to 0 of mark"
+            }]
+        },
+        {
+          "offset": "0x98",
+          "name": "mark_2",
+          "access": "W",
+          "description": "Data signal of mark",
+          "range": "32",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "mark",
+              "access": "W",
+              "description": "Bit 63 to 32 of mark"
+            }]
+        }
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "16",
+          "argName": "a_ptr"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "28",
+          "argName": "a_idx"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "40",
+          "argName": "a_val"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "52",
+          "argName": "l_ptr"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "64",
+          "argName": "l_idx"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "76",
+          "argName": "l_val"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "88",
+          "argName": "u_ptr"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "100",
+          "argName": "u_idx"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "112",
+          "argName": "u_val"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "124",
+          "argName": "u_diag_pos"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "136",
+          "argName": "work"
+        },
+        {
+          "constraint_type": "pragma interface",
+          "mode": "s_axilite",
+          "register_option": "0",
+          "offset": "148",
+          "argName": "mark"
+        }
+      ]
+    },
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {
+        "ASSOCIATED_BUSIF": "s_axi_control:m_axi_a0:m_axi_a1:m_axi_a2:m_axi_l0:m_axi_l1:m_axi_l2:m_axi_u0:m_axi_u1:m_axi_u2:m_axi_u3:m_axi_w0:m_axi_w1",
+        "ASSOCIATED_RESET": "ap_rst_n"
+      },
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
+    },
+    "interrupt": {
+      "type": "interrupt",
+      "busTypeName": "interrupt",
+      "mode": "master",
+      "dataWidth": "1",
+      "busParams": {"SENSITIVITY": "LEVEL_HIGH"},
+      "portMap": {"interrupt": "INTERRUPT"},
+      "ports": ["interrupt"]
+    },
+    "m_axi_a0": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_a0_",
+      "paramPrefix": "C_M_AXI_A0_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_a0_ARADDR",
+        "m_axi_a0_ARBURST",
+        "m_axi_a0_ARCACHE",
+        "m_axi_a0_ARID",
+        "m_axi_a0_ARLEN",
+        "m_axi_a0_ARLOCK",
+        "m_axi_a0_ARPROT",
+        "m_axi_a0_ARQOS",
+        "m_axi_a0_ARREADY",
+        "m_axi_a0_ARREGION",
+        "m_axi_a0_ARSIZE",
+        "m_axi_a0_ARUSER",
+        "m_axi_a0_ARVALID",
+        "m_axi_a0_AWADDR",
+        "m_axi_a0_AWBURST",
+        "m_axi_a0_AWCACHE",
+        "m_axi_a0_AWID",
+        "m_axi_a0_AWLEN",
+        "m_axi_a0_AWLOCK",
+        "m_axi_a0_AWPROT",
+        "m_axi_a0_AWQOS",
+        "m_axi_a0_AWREADY",
+        "m_axi_a0_AWREGION",
+        "m_axi_a0_AWSIZE",
+        "m_axi_a0_AWUSER",
+        "m_axi_a0_AWVALID",
+        "m_axi_a0_BID",
+        "m_axi_a0_BREADY",
+        "m_axi_a0_BRESP",
+        "m_axi_a0_BUSER",
+        "m_axi_a0_BVALID",
+        "m_axi_a0_RDATA",
+        "m_axi_a0_RID",
+        "m_axi_a0_RLAST",
+        "m_axi_a0_RREADY",
+        "m_axi_a0_RRESP",
+        "m_axi_a0_RUSER",
+        "m_axi_a0_RVALID",
+        "m_axi_a0_WDATA",
+        "m_axi_a0_WID",
+        "m_axi_a0_WLAST",
+        "m_axi_a0_WREADY",
+        "m_axi_a0_WSTRB",
+        "m_axi_a0_WUSER",
+        "m_axi_a0_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "a_ptr"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "a_ptr"
+        }
+      ]
+    },
+    "m_axi_a1": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_a1_",
+      "paramPrefix": "C_M_AXI_A1_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_a1_ARADDR",
+        "m_axi_a1_ARBURST",
+        "m_axi_a1_ARCACHE",
+        "m_axi_a1_ARID",
+        "m_axi_a1_ARLEN",
+        "m_axi_a1_ARLOCK",
+        "m_axi_a1_ARPROT",
+        "m_axi_a1_ARQOS",
+        "m_axi_a1_ARREADY",
+        "m_axi_a1_ARREGION",
+        "m_axi_a1_ARSIZE",
+        "m_axi_a1_ARUSER",
+        "m_axi_a1_ARVALID",
+        "m_axi_a1_AWADDR",
+        "m_axi_a1_AWBURST",
+        "m_axi_a1_AWCACHE",
+        "m_axi_a1_AWID",
+        "m_axi_a1_AWLEN",
+        "m_axi_a1_AWLOCK",
+        "m_axi_a1_AWPROT",
+        "m_axi_a1_AWQOS",
+        "m_axi_a1_AWREADY",
+        "m_axi_a1_AWREGION",
+        "m_axi_a1_AWSIZE",
+        "m_axi_a1_AWUSER",
+        "m_axi_a1_AWVALID",
+        "m_axi_a1_BID",
+        "m_axi_a1_BREADY",
+        "m_axi_a1_BRESP",
+        "m_axi_a1_BUSER",
+        "m_axi_a1_BVALID",
+        "m_axi_a1_RDATA",
+        "m_axi_a1_RID",
+        "m_axi_a1_RLAST",
+        "m_axi_a1_RREADY",
+        "m_axi_a1_RRESP",
+        "m_axi_a1_RUSER",
+        "m_axi_a1_RVALID",
+        "m_axi_a1_WDATA",
+        "m_axi_a1_WID",
+        "m_axi_a1_WLAST",
+        "m_axi_a1_WREADY",
+        "m_axi_a1_WSTRB",
+        "m_axi_a1_WUSER",
+        "m_axi_a1_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "a_idx"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "a_idx"
+        }
+      ]
+    },
+    "m_axi_a2": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_a2_",
+      "paramPrefix": "C_M_AXI_A2_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_a2_ARADDR",
+        "m_axi_a2_ARBURST",
+        "m_axi_a2_ARCACHE",
+        "m_axi_a2_ARID",
+        "m_axi_a2_ARLEN",
+        "m_axi_a2_ARLOCK",
+        "m_axi_a2_ARPROT",
+        "m_axi_a2_ARQOS",
+        "m_axi_a2_ARREADY",
+        "m_axi_a2_ARREGION",
+        "m_axi_a2_ARSIZE",
+        "m_axi_a2_ARUSER",
+        "m_axi_a2_ARVALID",
+        "m_axi_a2_AWADDR",
+        "m_axi_a2_AWBURST",
+        "m_axi_a2_AWCACHE",
+        "m_axi_a2_AWID",
+        "m_axi_a2_AWLEN",
+        "m_axi_a2_AWLOCK",
+        "m_axi_a2_AWPROT",
+        "m_axi_a2_AWQOS",
+        "m_axi_a2_AWREADY",
+        "m_axi_a2_AWREGION",
+        "m_axi_a2_AWSIZE",
+        "m_axi_a2_AWUSER",
+        "m_axi_a2_AWVALID",
+        "m_axi_a2_BID",
+        "m_axi_a2_BREADY",
+        "m_axi_a2_BRESP",
+        "m_axi_a2_BUSER",
+        "m_axi_a2_BVALID",
+        "m_axi_a2_RDATA",
+        "m_axi_a2_RID",
+        "m_axi_a2_RLAST",
+        "m_axi_a2_RREADY",
+        "m_axi_a2_RRESP",
+        "m_axi_a2_RUSER",
+        "m_axi_a2_RVALID",
+        "m_axi_a2_WDATA",
+        "m_axi_a2_WID",
+        "m_axi_a2_WLAST",
+        "m_axi_a2_WREADY",
+        "m_axi_a2_WSTRB",
+        "m_axi_a2_WUSER",
+        "m_axi_a2_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "a_val"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "a_val"
+        }
+      ]
+    },
+    "m_axi_l0": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_l0_",
+      "paramPrefix": "C_M_AXI_L0_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_l0_ARADDR",
+        "m_axi_l0_ARBURST",
+        "m_axi_l0_ARCACHE",
+        "m_axi_l0_ARID",
+        "m_axi_l0_ARLEN",
+        "m_axi_l0_ARLOCK",
+        "m_axi_l0_ARPROT",
+        "m_axi_l0_ARQOS",
+        "m_axi_l0_ARREADY",
+        "m_axi_l0_ARREGION",
+        "m_axi_l0_ARSIZE",
+        "m_axi_l0_ARUSER",
+        "m_axi_l0_ARVALID",
+        "m_axi_l0_AWADDR",
+        "m_axi_l0_AWBURST",
+        "m_axi_l0_AWCACHE",
+        "m_axi_l0_AWID",
+        "m_axi_l0_AWLEN",
+        "m_axi_l0_AWLOCK",
+        "m_axi_l0_AWPROT",
+        "m_axi_l0_AWQOS",
+        "m_axi_l0_AWREADY",
+        "m_axi_l0_AWREGION",
+        "m_axi_l0_AWSIZE",
+        "m_axi_l0_AWUSER",
+        "m_axi_l0_AWVALID",
+        "m_axi_l0_BID",
+        "m_axi_l0_BREADY",
+        "m_axi_l0_BRESP",
+        "m_axi_l0_BUSER",
+        "m_axi_l0_BVALID",
+        "m_axi_l0_RDATA",
+        "m_axi_l0_RID",
+        "m_axi_l0_RLAST",
+        "m_axi_l0_RREADY",
+        "m_axi_l0_RRESP",
+        "m_axi_l0_RUSER",
+        "m_axi_l0_RVALID",
+        "m_axi_l0_WDATA",
+        "m_axi_l0_WID",
+        "m_axi_l0_WLAST",
+        "m_axi_l0_WREADY",
+        "m_axi_l0_WSTRB",
+        "m_axi_l0_WUSER",
+        "m_axi_l0_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "l_ptr"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "l_ptr"
+        }
+      ]
+    },
+    "m_axi_l1": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_l1_",
+      "paramPrefix": "C_M_AXI_L1_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_l1_ARADDR",
+        "m_axi_l1_ARBURST",
+        "m_axi_l1_ARCACHE",
+        "m_axi_l1_ARID",
+        "m_axi_l1_ARLEN",
+        "m_axi_l1_ARLOCK",
+        "m_axi_l1_ARPROT",
+        "m_axi_l1_ARQOS",
+        "m_axi_l1_ARREADY",
+        "m_axi_l1_ARREGION",
+        "m_axi_l1_ARSIZE",
+        "m_axi_l1_ARUSER",
+        "m_axi_l1_ARVALID",
+        "m_axi_l1_AWADDR",
+        "m_axi_l1_AWBURST",
+        "m_axi_l1_AWCACHE",
+        "m_axi_l1_AWID",
+        "m_axi_l1_AWLEN",
+        "m_axi_l1_AWLOCK",
+        "m_axi_l1_AWPROT",
+        "m_axi_l1_AWQOS",
+        "m_axi_l1_AWREADY",
+        "m_axi_l1_AWREGION",
+        "m_axi_l1_AWSIZE",
+        "m_axi_l1_AWUSER",
+        "m_axi_l1_AWVALID",
+        "m_axi_l1_BID",
+        "m_axi_l1_BREADY",
+        "m_axi_l1_BRESP",
+        "m_axi_l1_BUSER",
+        "m_axi_l1_BVALID",
+        "m_axi_l1_RDATA",
+        "m_axi_l1_RID",
+        "m_axi_l1_RLAST",
+        "m_axi_l1_RREADY",
+        "m_axi_l1_RRESP",
+        "m_axi_l1_RUSER",
+        "m_axi_l1_RVALID",
+        "m_axi_l1_WDATA",
+        "m_axi_l1_WID",
+        "m_axi_l1_WLAST",
+        "m_axi_l1_WREADY",
+        "m_axi_l1_WSTRB",
+        "m_axi_l1_WUSER",
+        "m_axi_l1_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "l_idx"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "l_idx"
+        }
+      ]
+    },
+    "m_axi_l2": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_l2_",
+      "paramPrefix": "C_M_AXI_L2_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "WRITE_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_l2_ARADDR",
+        "m_axi_l2_ARBURST",
+        "m_axi_l2_ARCACHE",
+        "m_axi_l2_ARID",
+        "m_axi_l2_ARLEN",
+        "m_axi_l2_ARLOCK",
+        "m_axi_l2_ARPROT",
+        "m_axi_l2_ARQOS",
+        "m_axi_l2_ARREADY",
+        "m_axi_l2_ARREGION",
+        "m_axi_l2_ARSIZE",
+        "m_axi_l2_ARUSER",
+        "m_axi_l2_ARVALID",
+        "m_axi_l2_AWADDR",
+        "m_axi_l2_AWBURST",
+        "m_axi_l2_AWCACHE",
+        "m_axi_l2_AWID",
+        "m_axi_l2_AWLEN",
+        "m_axi_l2_AWLOCK",
+        "m_axi_l2_AWPROT",
+        "m_axi_l2_AWQOS",
+        "m_axi_l2_AWREADY",
+        "m_axi_l2_AWREGION",
+        "m_axi_l2_AWSIZE",
+        "m_axi_l2_AWUSER",
+        "m_axi_l2_AWVALID",
+        "m_axi_l2_BID",
+        "m_axi_l2_BREADY",
+        "m_axi_l2_BRESP",
+        "m_axi_l2_BUSER",
+        "m_axi_l2_BVALID",
+        "m_axi_l2_RDATA",
+        "m_axi_l2_RID",
+        "m_axi_l2_RLAST",
+        "m_axi_l2_RREADY",
+        "m_axi_l2_RRESP",
+        "m_axi_l2_RUSER",
+        "m_axi_l2_RVALID",
+        "m_axi_l2_WDATA",
+        "m_axi_l2_WID",
+        "m_axi_l2_WLAST",
+        "m_axi_l2_WREADY",
+        "m_axi_l2_WSTRB",
+        "m_axi_l2_WUSER",
+        "m_axi_l2_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "l_val"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "l_val"
+        }
+      ]
+    },
+    "m_axi_u0": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_u0_",
+      "paramPrefix": "C_M_AXI_U0_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_u0_ARADDR",
+        "m_axi_u0_ARBURST",
+        "m_axi_u0_ARCACHE",
+        "m_axi_u0_ARID",
+        "m_axi_u0_ARLEN",
+        "m_axi_u0_ARLOCK",
+        "m_axi_u0_ARPROT",
+        "m_axi_u0_ARQOS",
+        "m_axi_u0_ARREADY",
+        "m_axi_u0_ARREGION",
+        "m_axi_u0_ARSIZE",
+        "m_axi_u0_ARUSER",
+        "m_axi_u0_ARVALID",
+        "m_axi_u0_AWADDR",
+        "m_axi_u0_AWBURST",
+        "m_axi_u0_AWCACHE",
+        "m_axi_u0_AWID",
+        "m_axi_u0_AWLEN",
+        "m_axi_u0_AWLOCK",
+        "m_axi_u0_AWPROT",
+        "m_axi_u0_AWQOS",
+        "m_axi_u0_AWREADY",
+        "m_axi_u0_AWREGION",
+        "m_axi_u0_AWSIZE",
+        "m_axi_u0_AWUSER",
+        "m_axi_u0_AWVALID",
+        "m_axi_u0_BID",
+        "m_axi_u0_BREADY",
+        "m_axi_u0_BRESP",
+        "m_axi_u0_BUSER",
+        "m_axi_u0_BVALID",
+        "m_axi_u0_RDATA",
+        "m_axi_u0_RID",
+        "m_axi_u0_RLAST",
+        "m_axi_u0_RREADY",
+        "m_axi_u0_RRESP",
+        "m_axi_u0_RUSER",
+        "m_axi_u0_RVALID",
+        "m_axi_u0_WDATA",
+        "m_axi_u0_WID",
+        "m_axi_u0_WLAST",
+        "m_axi_u0_WREADY",
+        "m_axi_u0_WSTRB",
+        "m_axi_u0_WUSER",
+        "m_axi_u0_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "u_ptr"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "u_ptr"
+        }
+      ]
+    },
+    "m_axi_u1": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_u1_",
+      "paramPrefix": "C_M_AXI_U1_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_u1_ARADDR",
+        "m_axi_u1_ARBURST",
+        "m_axi_u1_ARCACHE",
+        "m_axi_u1_ARID",
+        "m_axi_u1_ARLEN",
+        "m_axi_u1_ARLOCK",
+        "m_axi_u1_ARPROT",
+        "m_axi_u1_ARQOS",
+        "m_axi_u1_ARREADY",
+        "m_axi_u1_ARREGION",
+        "m_axi_u1_ARSIZE",
+        "m_axi_u1_ARUSER",
+        "m_axi_u1_ARVALID",
+        "m_axi_u1_AWADDR",
+        "m_axi_u1_AWBURST",
+        "m_axi_u1_AWCACHE",
+        "m_axi_u1_AWID",
+        "m_axi_u1_AWLEN",
+        "m_axi_u1_AWLOCK",
+        "m_axi_u1_AWPROT",
+        "m_axi_u1_AWQOS",
+        "m_axi_u1_AWREADY",
+        "m_axi_u1_AWREGION",
+        "m_axi_u1_AWSIZE",
+        "m_axi_u1_AWUSER",
+        "m_axi_u1_AWVALID",
+        "m_axi_u1_BID",
+        "m_axi_u1_BREADY",
+        "m_axi_u1_BRESP",
+        "m_axi_u1_BUSER",
+        "m_axi_u1_BVALID",
+        "m_axi_u1_RDATA",
+        "m_axi_u1_RID",
+        "m_axi_u1_RLAST",
+        "m_axi_u1_RREADY",
+        "m_axi_u1_RRESP",
+        "m_axi_u1_RUSER",
+        "m_axi_u1_RVALID",
+        "m_axi_u1_WDATA",
+        "m_axi_u1_WID",
+        "m_axi_u1_WLAST",
+        "m_axi_u1_WREADY",
+        "m_axi_u1_WSTRB",
+        "m_axi_u1_WUSER",
+        "m_axi_u1_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "u_idx"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "u_idx"
+        }
+      ]
+    },
+    "m_axi_u2": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_u2_",
+      "paramPrefix": "C_M_AXI_U2_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_WRITE",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_u2_ARADDR",
+        "m_axi_u2_ARBURST",
+        "m_axi_u2_ARCACHE",
+        "m_axi_u2_ARID",
+        "m_axi_u2_ARLEN",
+        "m_axi_u2_ARLOCK",
+        "m_axi_u2_ARPROT",
+        "m_axi_u2_ARQOS",
+        "m_axi_u2_ARREADY",
+        "m_axi_u2_ARREGION",
+        "m_axi_u2_ARSIZE",
+        "m_axi_u2_ARUSER",
+        "m_axi_u2_ARVALID",
+        "m_axi_u2_AWADDR",
+        "m_axi_u2_AWBURST",
+        "m_axi_u2_AWCACHE",
+        "m_axi_u2_AWID",
+        "m_axi_u2_AWLEN",
+        "m_axi_u2_AWLOCK",
+        "m_axi_u2_AWPROT",
+        "m_axi_u2_AWQOS",
+        "m_axi_u2_AWREADY",
+        "m_axi_u2_AWREGION",
+        "m_axi_u2_AWSIZE",
+        "m_axi_u2_AWUSER",
+        "m_axi_u2_AWVALID",
+        "m_axi_u2_BID",
+        "m_axi_u2_BREADY",
+        "m_axi_u2_BRESP",
+        "m_axi_u2_BUSER",
+        "m_axi_u2_BVALID",
+        "m_axi_u2_RDATA",
+        "m_axi_u2_RID",
+        "m_axi_u2_RLAST",
+        "m_axi_u2_RREADY",
+        "m_axi_u2_RRESP",
+        "m_axi_u2_RUSER",
+        "m_axi_u2_RVALID",
+        "m_axi_u2_WDATA",
+        "m_axi_u2_WID",
+        "m_axi_u2_WLAST",
+        "m_axi_u2_WREADY",
+        "m_axi_u2_WSTRB",
+        "m_axi_u2_WUSER",
+        "m_axi_u2_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "u_val"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "u_val"
+        }
+      ]
+    },
+    "m_axi_u3": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_u3_",
+      "paramPrefix": "C_M_AXI_U3_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_ONLY",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_u3_ARADDR",
+        "m_axi_u3_ARBURST",
+        "m_axi_u3_ARCACHE",
+        "m_axi_u3_ARID",
+        "m_axi_u3_ARLEN",
+        "m_axi_u3_ARLOCK",
+        "m_axi_u3_ARPROT",
+        "m_axi_u3_ARQOS",
+        "m_axi_u3_ARREADY",
+        "m_axi_u3_ARREGION",
+        "m_axi_u3_ARSIZE",
+        "m_axi_u3_ARUSER",
+        "m_axi_u3_ARVALID",
+        "m_axi_u3_AWADDR",
+        "m_axi_u3_AWBURST",
+        "m_axi_u3_AWCACHE",
+        "m_axi_u3_AWID",
+        "m_axi_u3_AWLEN",
+        "m_axi_u3_AWLOCK",
+        "m_axi_u3_AWPROT",
+        "m_axi_u3_AWQOS",
+        "m_axi_u3_AWREADY",
+        "m_axi_u3_AWREGION",
+        "m_axi_u3_AWSIZE",
+        "m_axi_u3_AWUSER",
+        "m_axi_u3_AWVALID",
+        "m_axi_u3_BID",
+        "m_axi_u3_BREADY",
+        "m_axi_u3_BRESP",
+        "m_axi_u3_BUSER",
+        "m_axi_u3_BVALID",
+        "m_axi_u3_RDATA",
+        "m_axi_u3_RID",
+        "m_axi_u3_RLAST",
+        "m_axi_u3_RREADY",
+        "m_axi_u3_RRESP",
+        "m_axi_u3_RUSER",
+        "m_axi_u3_RVALID",
+        "m_axi_u3_WDATA",
+        "m_axi_u3_WID",
+        "m_axi_u3_WLAST",
+        "m_axi_u3_WREADY",
+        "m_axi_u3_WSTRB",
+        "m_axi_u3_WUSER",
+        "m_axi_u3_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "u_diag_pos"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "u_diag_pos"
+        }
+      ]
+    },
+    "m_axi_w0": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_w0_",
+      "paramPrefix": "C_M_AXI_W0_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_WRITE",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_w0_ARADDR",
+        "m_axi_w0_ARBURST",
+        "m_axi_w0_ARCACHE",
+        "m_axi_w0_ARID",
+        "m_axi_w0_ARLEN",
+        "m_axi_w0_ARLOCK",
+        "m_axi_w0_ARPROT",
+        "m_axi_w0_ARQOS",
+        "m_axi_w0_ARREADY",
+        "m_axi_w0_ARREGION",
+        "m_axi_w0_ARSIZE",
+        "m_axi_w0_ARUSER",
+        "m_axi_w0_ARVALID",
+        "m_axi_w0_AWADDR",
+        "m_axi_w0_AWBURST",
+        "m_axi_w0_AWCACHE",
+        "m_axi_w0_AWID",
+        "m_axi_w0_AWLEN",
+        "m_axi_w0_AWLOCK",
+        "m_axi_w0_AWPROT",
+        "m_axi_w0_AWQOS",
+        "m_axi_w0_AWREADY",
+        "m_axi_w0_AWREGION",
+        "m_axi_w0_AWSIZE",
+        "m_axi_w0_AWUSER",
+        "m_axi_w0_AWVALID",
+        "m_axi_w0_BID",
+        "m_axi_w0_BREADY",
+        "m_axi_w0_BRESP",
+        "m_axi_w0_BUSER",
+        "m_axi_w0_BVALID",
+        "m_axi_w0_RDATA",
+        "m_axi_w0_RID",
+        "m_axi_w0_RLAST",
+        "m_axi_w0_RREADY",
+        "m_axi_w0_RRESP",
+        "m_axi_w0_RUSER",
+        "m_axi_w0_RVALID",
+        "m_axi_w0_WDATA",
+        "m_axi_w0_WID",
+        "m_axi_w0_WLAST",
+        "m_axi_w0_WREADY",
+        "m_axi_w0_WSTRB",
+        "m_axi_w0_WUSER",
+        "m_axi_w0_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "work"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "work"
+        }
+      ]
+    },
+    "m_axi_w1": {
+      "type": "axi4full",
+      "busTypeName": "aximm",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "64",
+      "portPrefix": "m_axi_w1_",
+      "paramPrefix": "C_M_AXI_W1_",
+      "preferredUsageValue": "MEMORY",
+      "busParams": {
+        "NUM_READ_OUTSTANDING": "16",
+        "NUM_WRITE_OUTSTANDING": "16",
+        "MAX_READ_BURST_LENGTH": "16",
+        "MAX_WRITE_BURST_LENGTH": "16",
+        "MAX_BURST_LENGTH": "256",
+        "PROTOCOL": "AXI4",
+        "READ_WRITE_MODE": "READ_WRITE",
+        "HAS_BURST": "0",
+        "SUPPORTS_NARROW_BURST": "0"
+      },
+      "ports": [
+        "m_axi_w1_ARADDR",
+        "m_axi_w1_ARBURST",
+        "m_axi_w1_ARCACHE",
+        "m_axi_w1_ARID",
+        "m_axi_w1_ARLEN",
+        "m_axi_w1_ARLOCK",
+        "m_axi_w1_ARPROT",
+        "m_axi_w1_ARQOS",
+        "m_axi_w1_ARREADY",
+        "m_axi_w1_ARREGION",
+        "m_axi_w1_ARSIZE",
+        "m_axi_w1_ARUSER",
+        "m_axi_w1_ARVALID",
+        "m_axi_w1_AWADDR",
+        "m_axi_w1_AWBURST",
+        "m_axi_w1_AWCACHE",
+        "m_axi_w1_AWID",
+        "m_axi_w1_AWLEN",
+        "m_axi_w1_AWLOCK",
+        "m_axi_w1_AWPROT",
+        "m_axi_w1_AWQOS",
+        "m_axi_w1_AWREADY",
+        "m_axi_w1_AWREGION",
+        "m_axi_w1_AWSIZE",
+        "m_axi_w1_AWUSER",
+        "m_axi_w1_AWVALID",
+        "m_axi_w1_BID",
+        "m_axi_w1_BREADY",
+        "m_axi_w1_BRESP",
+        "m_axi_w1_BUSER",
+        "m_axi_w1_BVALID",
+        "m_axi_w1_RDATA",
+        "m_axi_w1_RID",
+        "m_axi_w1_RLAST",
+        "m_axi_w1_RREADY",
+        "m_axi_w1_RRESP",
+        "m_axi_w1_RUSER",
+        "m_axi_w1_RVALID",
+        "m_axi_w1_WDATA",
+        "m_axi_w1_WID",
+        "m_axi_w1_WLAST",
+        "m_axi_w1_WREADY",
+        "m_axi_w1_WSTRB",
+        "m_axi_w1_WUSER",
+        "m_axi_w1_WVALID"
+      ],
+      "constraints": [
+        {
+          "constraint_type": "pragma interface",
+          "mode": "m_axi",
+          "register_option": "0",
+          "offset": "slave",
+          "latency": "0",
+          "num_read_outstanding": "16",
+          "num_write_outstanding": "16",
+          "max_read_burst_length": "16",
+          "max_write_burst_length": "16",
+          "max_widen_bitwidth": "0",
+          "argName": "mark"
+        },
+        {
+          "constraint_type": "bitwidth",
+          "orig_bitwidth": "32",
+          "final_bitwidth": "32",
+          "argName": "mark"
+        }
+      ]
+    },
+    "n": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"n": "DATA"},
+      "ports": ["n"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "n"
+        }]
+    },
+    "pivot_eps": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_none",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portMap": {"pivot_eps": "DATA"},
+      "ports": ["pivot_eps"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "pivot_eps"
+        }]
+    },
+    "status": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_vld",
+      "mode": "master",
+      "dataWidth": "32",
+      "portMap": {"status": "DATA"},
+      "ports": ["status"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "status"
+        }]
+    },
+    "muladds": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_vld",
+      "mode": "master",
+      "dataWidth": "64",
+      "portMap": {"muladds": "DATA"},
+      "ports": ["muladds"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "muladds"
+        }]
+    },
+    "divisions": {
+      "type": "data",
+      "busTypeName": "data",
+      "protocol": "ap_vld",
+      "mode": "master",
+      "dataWidth": "64",
+      "portMap": {"divisions": "DATA"},
+      "ports": ["divisions"],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "ap_none",
+          "register_option": "0",
+          "argName": "divisions"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "s_axi_control_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_AWADDR": {
+      "dir": "in",
+      "width": "8"
+    },
+    "s_axi_control_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_control_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_control_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_ARADDR": {
+      "dir": "in",
+      "width": "8"
+    },
+    "s_axi_control_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_control_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_control_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_control_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_control_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "interrupt": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a0_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a0_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a0_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_a0_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a0_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_a0_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a0_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a0_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a0_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a0_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a0_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a0_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a0_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a0_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a0_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a0_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_a0_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a0_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a0_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a0_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a0_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a0_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a0_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_a0_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a0_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_a0_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a0_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a0_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a0_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a0_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a0_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a0_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a0_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a0_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a0_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a0_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_a0_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a0_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a0_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a0_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_a0_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a0_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a0_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_a0_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a0_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a1_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a1_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a1_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_a1_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a1_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_a1_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a1_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a1_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a1_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a1_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a1_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a1_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a1_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a1_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a1_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a1_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_a1_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a1_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a1_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a1_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a1_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a1_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a1_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_a1_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a1_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_a1_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a1_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a1_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a1_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a1_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a1_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a1_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a1_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a1_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a1_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a1_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_a1_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a1_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a1_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a1_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_a1_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a1_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a1_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_a1_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a1_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a2_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a2_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a2_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_a2_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a2_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_a2_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a2_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a2_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a2_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a2_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a2_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a2_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a2_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a2_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a2_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a2_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_a2_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a2_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a2_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a2_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a2_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a2_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a2_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_a2_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a2_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_a2_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a2_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a2_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_a2_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a2_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_a2_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a2_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_a2_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a2_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a2_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a2_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_a2_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a2_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a2_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a2_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_a2_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_a2_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_a2_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_a2_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_a2_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l0_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l0_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l0_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_l0_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l0_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_l0_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l0_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l0_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l0_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l0_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l0_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l0_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l0_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l0_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l0_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l0_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_l0_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l0_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l0_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l0_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l0_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l0_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l0_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_l0_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l0_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_l0_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l0_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l0_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l0_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l0_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l0_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l0_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l0_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l0_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l0_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l0_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_l0_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l0_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l0_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l0_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_l0_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l0_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l0_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_l0_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l0_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l1_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l1_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l1_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_l1_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l1_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_l1_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l1_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l1_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l1_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l1_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l1_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l1_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l1_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l1_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l1_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l1_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_l1_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l1_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l1_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l1_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l1_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l1_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l1_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_l1_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l1_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_l1_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l1_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l1_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l1_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l1_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l1_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l1_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l1_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l1_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l1_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l1_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_l1_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l1_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l1_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l1_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_l1_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l1_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l1_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_l1_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l1_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l2_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l2_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l2_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_l2_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l2_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_l2_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l2_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l2_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l2_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l2_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l2_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l2_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l2_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l2_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l2_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l2_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_l2_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l2_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l2_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l2_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l2_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l2_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l2_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_l2_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l2_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_l2_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l2_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l2_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_l2_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l2_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_l2_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l2_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_l2_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l2_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l2_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l2_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_l2_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l2_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l2_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l2_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_l2_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_l2_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_l2_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_l2_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_l2_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u0_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u0_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u0_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_u0_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u0_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_u0_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u0_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u0_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u0_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u0_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u0_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u0_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u0_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u0_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u0_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u0_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_u0_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u0_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u0_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u0_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u0_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u0_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u0_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_u0_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u0_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_u0_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u0_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u0_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u0_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u0_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u0_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u0_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u0_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u0_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u0_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u0_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_u0_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u0_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u0_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u0_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_u0_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u0_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u0_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_u0_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u0_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u1_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u1_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u1_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_u1_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u1_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_u1_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u1_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u1_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u1_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u1_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u1_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u1_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u1_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u1_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u1_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u1_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_u1_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u1_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u1_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u1_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u1_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u1_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u1_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_u1_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u1_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_u1_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u1_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u1_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u1_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u1_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u1_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u1_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u1_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u1_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u1_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u1_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_u1_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u1_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u1_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u1_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_u1_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u1_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u1_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_u1_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u1_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u2_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u2_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u2_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_u2_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u2_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_u2_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u2_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u2_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u2_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u2_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u2_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u2_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u2_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u2_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u2_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u2_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_u2_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u2_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u2_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u2_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u2_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u2_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u2_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_u2_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u2_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_u2_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u2_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u2_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u2_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u2_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u2_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u2_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u2_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u2_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u2_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u2_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_u2_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u2_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u2_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u2_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_u2_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u2_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u2_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_u2_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u2_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u3_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u3_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u3_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_u3_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u3_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_u3_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u3_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u3_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u3_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u3_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u3_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u3_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u3_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u3_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u3_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u3_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_u3_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u3_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u3_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u3_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u3_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u3_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u3_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_u3_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u3_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_u3_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u3_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u3_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_u3_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u3_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_u3_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u3_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_u3_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u3_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u3_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u3_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_u3_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u3_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u3_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u3_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_u3_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_u3_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_u3_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_u3_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_u3_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w0_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w0_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w0_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_w0_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w0_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_w0_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_w0_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_w0_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_w0_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w0_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_w0_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w0_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w0_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w0_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w0_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w0_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_w0_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w0_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w0_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w0_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w0_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w0_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w0_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_w0_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w0_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_w0_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_w0_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_w0_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_w0_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w0_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_w0_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w0_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w0_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w0_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w0_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w0_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_w0_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w0_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w0_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w0_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_w0_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w0_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w0_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_w0_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w0_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w1_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w1_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w1_AWADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_w1_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w1_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_w1_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_w1_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_w1_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_w1_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w1_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_w1_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w1_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w1_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w1_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w1_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w1_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_w1_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w1_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w1_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w1_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w1_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w1_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w1_ARADDR": {
+      "dir": "out",
+      "width": "64"
+    },
+    "m_axi_w1_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w1_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_w1_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_w1_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_w1_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_w1_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w1_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_w1_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w1_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_w1_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w1_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w1_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w1_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_w1_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w1_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w1_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w1_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_w1_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_w1_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_w1_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_w1_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_w1_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "n": {
+      "dir": "in",
+      "width": "32"
+    },
+    "pivot_eps": {
+      "dir": "in",
+      "width": "32"
+    },
+    "status": {
+      "dir": "out",
+      "width": "32"
+    },
+    "status_ap_vld": {
+      "dir": "out",
+      "width": "1"
+    },
+    "muladds": {
+      "dir": "out",
+      "width": "64"
+    },
+    "muladds_ap_vld": {
+      "dir": "out",
+      "width": "1"
+    },
+    "divisions": {
+      "dir": "out",
+      "width": "64"
+    },
+    "divisions_ap_vld": {
+      "dir": "out",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "large_getrf",
+      "Instances": [
+        {
+          "ModuleName": "large_getrf_Pipeline_VITIS_LOOP_31_2",
+          "InstanceName": "grp_large_getrf_Pipeline_VITIS_LOOP_31_2_fu_557"
+        },
+        {
+          "ModuleName": "large_getrf_Pipeline_VITIS_LOOP_35_3",
+          "InstanceName": "grp_large_getrf_Pipeline_VITIS_LOOP_35_3_fu_573"
+        },
+        {
+          "ModuleName": "large_getrf_Pipeline_VITIS_LOOP_39_4",
+          "InstanceName": "grp_large_getrf_Pipeline_VITIS_LOOP_39_4_fu_589"
+        },
+        {
+          "ModuleName": "large_getrf_Pipeline_VITIS_LOOP_52_6",
+          "InstanceName": "grp_large_getrf_Pipeline_VITIS_LOOP_52_6_fu_608"
+        },
+        {
+          "ModuleName": "large_getrf_Pipeline_VITIS_LOOP_59_7",
+          "InstanceName": "grp_large_getrf_Pipeline_VITIS_LOOP_59_7_fu_632"
+        }
+      ]
+    },
+    "Info": {
+      "large_getrf_Pipeline_VITIS_LOOP_31_2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "large_getrf_Pipeline_VITIS_LOOP_35_3": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "large_getrf_Pipeline_VITIS_LOOP_39_4": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "large_getrf_Pipeline_VITIS_LOOP_52_6": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "large_getrf_Pipeline_VITIS_LOOP_59_7": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "large_getrf": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "large_getrf_Pipeline_VITIS_LOOP_31_2": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "1.35",
+          "Estimate": "3.650"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_31_2",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "10"
+          }],
+        "Area": {
+          "FF": "277",
+          "AVAIL_FF": "682560",
+          "UTIL_FF": "~0",
+          "LUT": "355",
+          "AVAIL_LUT": "341280",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "1488",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "3528",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "112",
+          "UTIL_URAM": "0"
+        }
+      },
+      "large_getrf_Pipeline_VITIS_LOOP_35_3": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "1.35",
+          "Estimate": "3.650"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_35_3",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "10"
+          }],
+        "Area": {
+          "FF": "277",
+          "AVAIL_FF": "682560",
+          "UTIL_FF": "~0",
+          "LUT": "355",
+          "AVAIL_LUT": "341280",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "1488",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "3528",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "112",
+          "UTIL_URAM": "0"
+        }
+      },
+      "large_getrf_Pipeline_VITIS_LOOP_39_4": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "1.35",
+          "Estimate": "6.598"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_39_4",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "18",
+            "PipelineDepth": "35"
+          }],
+        "Area": {
+          "FF": "503",
+          "AVAIL_FF": "682560",
+          "UTIL_FF": "~0",
+          "LUT": "699",
+          "AVAIL_LUT": "341280",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "1488",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "3528",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "112",
+          "UTIL_URAM": "0"
+        }
+      },
+      "large_getrf_Pipeline_VITIS_LOOP_52_6": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "1.35",
+          "Estimate": "6.826"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_52_6",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "18",
+            "PipelineDepth": "39"
+          }],
+        "Area": {
+          "DSP": "3",
+          "AVAIL_DSP": "3528",
+          "UTIL_DSP": "~0",
+          "FF": "723",
+          "AVAIL_FF": "682560",
+          "UTIL_FF": "~0",
+          "LUT": "920",
+          "AVAIL_LUT": "341280",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "1488",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "112",
+          "UTIL_URAM": "0"
+        }
+      },
+      "large_getrf_Pipeline_VITIS_LOOP_59_7": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "1.35",
+          "Estimate": "3.650"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_59_7",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "1",
+            "PipelineDepth": "12"
+          }],
+        "Area": {
+          "FF": "313",
+          "AVAIL_FF": "682560",
+          "UTIL_FF": "~0",
+          "LUT": "287",
+          "AVAIL_LUT": "341280",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "1488",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "3528",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "112",
+          "UTIL_URAM": "0"
+        }
+      },
+      "large_getrf": {
+        "Latency": {
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "1.35",
+          "Estimate": "6.826"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_29_1",
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepth": "",
+            "Loops": [{
+                "Name": "VITIS_LOOP_45_5",
+                "TripCount": "",
+                "Latency": "",
+                "PipelineII": "",
+                "PipelineDepth": ""
+              }]
+          }],
+        "Area": {
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "1488",
+          "UTIL_BRAM": "0",
+          "DSP": "3",
+          "AVAIL_DSP": "3528",
+          "UTIL_DSP": "~0",
+          "FF": "15190",
+          "AVAIL_FF": "682560",
+          "UTIL_FF": "2",
+          "LUT": "23513",
+          "AVAIL_LUT": "341280",
+          "UTIL_LUT": "6",
+          "URAM": "0",
+          "AVAIL_URAM": "112",
+          "UTIL_URAM": "0"
+        }
+      }
+    }
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2026-09-27 13:09:17 +0000",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2022.2"
+  }
+}

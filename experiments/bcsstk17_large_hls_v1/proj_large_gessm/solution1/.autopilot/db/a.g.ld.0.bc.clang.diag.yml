@@ -1,0 +1,1296 @@
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 93, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.store.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        workseq
+  - String:          ' '
+  - ArrayName:       work
+  - String:          ' '
+  - BundleName:      gw0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_93_2
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:93:26'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 43 }
+Function:        large_gessm
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_94_3.load.6
+  - String:          ', '
+  - String:          VITIS_LOOP_94_3.load.11
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx8seq
+  - String:          ' '
+  - ArrayName:       b_ptr
+  - String:          ' '
+  - BundleName:      gb0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc22.load.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       b_val
+  - String:          ' '
+  - BundleName:      gb2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:94:26'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc22.load.14
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep35seq
+  - String:          ' '
+  - ArrayName:       b_idx
+  - String:          ' '
+  - BundleName:      gb1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:94:26'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 96, Column: 47 }
+Function:        large_gessm
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_96_5.load.9
+  - String:          ', '
+  - String:          VITIS_LOOP_96_5.load.13
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep36seq
+  - String:          ' '
+  - ArrayName:       l_ptr
+  - String:          ' '
+  - BundleName:      gl0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:95:26'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 44 }
+Function:        large_gessm
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_100_6.load.6
+  - String:          ', '
+  - String:          VITIS_LOOP_100_6.load.9
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx60seq
+  - String:          ' '
+  - ArrayName:       x_ptr
+  - String:          ' '
+  - BundleName:      gx0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc78.load.8
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep37seq
+  - String:          ' '
+  - ArrayName:       x_idx
+  - String:          ' '
+  - BundleName:      gx1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_100_6
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:100:27'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc78.load.20
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep40seq
+  - String:          ' '
+  - ArrayName:       x_csc_to_csr
+  - String:          ' '
+  - BundleName:      gx3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_100_6
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:100:27'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc78.store.21
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep41seq
+  - String:          ' '
+  - ArrayName:       x_val_csc
+  - String:          ' '
+  - BundleName:      gx2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_100_6
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:100:27'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 91, Column: 22 }
+Function:        large_gessm
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          VITIS_LOOP_93_2.load.5
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        active_colsseq
+  - String:          ' '
+  - ArrayName:       active_cols
+  - String:          ' '
+  - BundleName:      ga0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 96, Column: 30 }
+Function:        large_gessm
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_96_5
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:96:30'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 88 }
+Function:        large_gessm
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc22.load.17
+  - String:          ' '
+  - ArrayName:       work
+  - String:          ' '
+  - BundleName:      gw0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:94:26'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 88 }
+Function:        large_gessm
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc22.store.19
+  - String:          ' '
+  - ArrayName:       work
+  - String:          ' '
+  - BundleName:      gw0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:94:26'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 96, Column: 47 }
+Function:        large_gessm
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep36seq
+  - String:          ' '
+  - ArrayName:       l_ptr
+  - String:          ' '
+  - BundleName:      gl0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:95:26'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 101, Column: 32 }
+Function:        large_gessm
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc78.load.17
+  - String:          ' '
+  - ArrayName:       work
+  - String:          ' '
+  - BundleName:      gw0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_100_6
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:100:27'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 102, Column: 55 }
+Function:        large_gessm
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc78.store.27
+  - String:          ' '
+  - ArrayName:       x_val_csr
+  - String:          ' '
+  - BundleName:      gx4
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_100_6
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:100:27'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 43 }
+Function:        large_gessm
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx8seq
+  - String:          ' '
+  - ArrayName:       b_ptr
+  - String:          ' '
+  - BundleName:      gb0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 44 }
+Function:        large_gessm
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx60seq
+  - String:          ' '
+  - ArrayName:       x_ptr
+  - String:          ' '
+  - BundleName:      gx0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       b_val
+  - String:          ' '
+  - BundleName:      gb2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep35seq
+  - String:          ' '
+  - ArrayName:       b_idx
+  - String:          ' '
+  - BundleName:      gb1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep37seq
+  - String:          ' '
+  - ArrayName:       x_idx
+  - String:          ' '
+  - BundleName:      gx1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep40seq
+  - String:          ' '
+  - ArrayName:       x_csc_to_csr
+  - String:          ' '
+  - BundleName:      gx3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 93, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        workseq
+  - String:          ' '
+  - ArrayName:       work
+  - String:          ' '
+  - BundleName:      gw0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep41seq
+  - String:          ' '
+  - ArrayName:       x_val_csc
+  - String:          ' '
+  - BundleName:      gx2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep37seq
+  - String:          ' '
+  - ArrayName:       x_idx
+  - String:          ' '
+  - BundleName:      gx1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_100_6
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:100:27'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep40seq
+  - String:          ' '
+  - ArrayName:       x_csc_to_csr
+  - String:          ' '
+  - BundleName:      gx3
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_100_6
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:100:27'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep41seq
+  - String:          ' '
+  - ArrayName:       x_val_csc
+  - String:          ' '
+  - BundleName:      gx2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_100_6
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:100:27'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 44 }
+Function:        large_gessm
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx60seq
+  - String:          ' '
+  - ArrayName:       x_ptr
+  - String:          ' '
+  - BundleName:      gx0
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 96, Column: 47 }
+Function:        large_gessm
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep36seq
+  - String:          ' '
+  - ArrayName:       l_ptr
+  - String:          ' '
+  - BundleName:      gl0
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       b_val
+  - String:          ' '
+  - BundleName:      gb2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:94:26'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep35seq
+  - String:          ' '
+  - ArrayName:       b_idx
+  - String:          ' '
+  - BundleName:      gb1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_94_3
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:94:26'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 43 }
+Function:        large_gessm
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        arrayidx8seq
+  - String:          ' '
+  - ArrayName:       b_ptr
+  - String:          ' '
+  - BundleName:      gb0
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 93, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        workseq
+  - String:          ' '
+  - ArrayName:       work
+  - String:          ' '
+  - BundleName:      gw0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_93_2
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:93:26'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 91, Column: 22 }
+Function:        large_gessm
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        active_colsseq
+  - String:          ' '
+  - ArrayName:       active_cols
+  - String:          ' '
+  - BundleName:      ga0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 91, Column: 22 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      ga0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 91, Column: 22 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_91_1
+  - String:          '''('
+  - LoopLoc:         'large_sparse_lu.cpp:91:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      ga0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 93, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gw0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_93_2
+  - String:          ' '
+  - LoopLoc:         'large_sparse_lu.cpp:93:26'
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 93, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_93_2
+  - String:          '''('
+  - LoopLoc:         'large_sparse_lu.cpp:93:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gw0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 43 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gb0
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 43 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gb0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gb2
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gb2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gb1
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 94, Column: 26 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gb1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 96, Column: 47 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gl0
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 96, Column: 47 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gl0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 44 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq6
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gx0
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 44 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gx0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq7
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gx1
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gx1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq8
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gx3
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gx3
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq9
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gx2
+  - String:          ' '
+  - Function:        large_gessm
+    DebugLoc:        { File: large_sparse_lu.cpp, Line: 75, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: large_sparse_lu.cpp, Line: 100, Column: 27 }
+Function:        large_gessm
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gx2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

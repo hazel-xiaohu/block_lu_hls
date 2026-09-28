@@ -1,195 +1,195 @@
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:5343:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:5337:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
       for (i = 0; i < __N - 1; ++i) {
       ^~~
       VITIS_LOOP_1211_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:5343:7: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6317:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:5337:7: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6311:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
     for (unsigned i = low; i != high; ++i) {
     ^~~
     VITIS_LOOP_676_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6317:5: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6331:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6311:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6325:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
     for (unsigned i = low; i != high; ++i) {
     ^~~
     VITIS_LOOP_690_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6331:5: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6345:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6325:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6339:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
     for (unsigned i = low; i != high; ++i) {
     ^~~
     VITIS_LOOP_704_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6345:5: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:7944:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:6339:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:7938:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
       for (i = 0; i < __N - 1; ++i) {
       ^~~
       VITIS_LOOP_1245_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:7944:7: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10438:2: warning: Added loop label VITIS_LOOP_12_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:7938:7: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10432:2: warning: Added loop label VITIS_LOOP_12_1:   [xilinx-label-all-loops]
  for (bool enable=false; !enable; ){
  ^~~
  VITIS_LOOP_12_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10438:2: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10474:2: warning: Added loop label VITIS_LOOP_48_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10432:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10468:2: warning: Added loop label VITIS_LOOP_48_1:   [xilinx-label-all-loops]
  for (bool enable=false; !enable; ){
  ^~~
  VITIS_LOOP_48_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10474:2: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10513:2: warning: Added loop label VITIS_LOOP_87_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10468:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10507:2: warning: Added loop label VITIS_LOOP_87_1:   [xilinx-label-all-loops]
  for (bool enable=false; !enable; ){
  ^~~
  VITIS_LOOP_87_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10513:2: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10518:5: warning: Added loop label VITIS_LOOP_92_2:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10507:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10512:5: warning: Added loop label VITIS_LOOP_92_2:   [xilinx-label-all-loops]
     for (id_t _t=0; _t<1; ) {
     ^~~
     VITIS_LOOP_92_2: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10518:5: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10531:9: warning: Added loop label VITIS_LOOP_105_3:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10512:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10525:9: warning: Added loop label VITIS_LOOP_105_3:   [xilinx-label-all-loops]
         for (id_t _t=begin_block_idx+8; _t<=end_block_idx; _t++) {
         ^~~
         VITIS_LOOP_105_3: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10531:9: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10538:8: warning: Added loop label VITIS_LOOP_112_4:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10525:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10532:8: warning: Added loop label VITIS_LOOP_112_4:   [xilinx-label-all-loops]
        for (id_t _t=begin_block_idx; _t<=end_block_idx; _t++) {
        ^~~
        VITIS_LOOP_112_4: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10538:8: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10578:2: warning: Added loop label VITIS_LOOP_152_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10532:8: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10572:2: warning: Added loop label VITIS_LOOP_152_1:   [xilinx-label-all-loops]
  for (bool enable=false; !enable; ){
  ^~~
  VITIS_LOOP_152_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10578:2: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10602:5: warning: Added loop label VITIS_LOOP_176_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10572:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10596:5: warning: Added loop label VITIS_LOOP_176_1:   [xilinx-label-all-loops]
     for (;;) {
     ^~~
     VITIS_LOOP_176_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10602:5: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10611:9: warning: Added loop label VITIS_LOOP_185_2:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10596:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10605:9: warning: Added loop label VITIS_LOOP_185_2:   [xilinx-label-all-loops]
         for (id_t i=first; i<=last; ++i) {
         ^~~
         VITIS_LOOP_185_2: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10611:9: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10679:2: warning: Added loop label VITIS_LOOP_253_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10605:9: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10673:2: warning: Added loop label VITIS_LOOP_253_1:   [xilinx-label-all-loops]
  for (bool enable=false; !enable; ) {
  ^~~
  VITIS_LOOP_253_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10679:2: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10719:46: error: Invalid Directive: for current device, ram_1p + uram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10673:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10713:46: error: Invalid Directive: for current device, ram_1p + uram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_data type=ram_1p impl=uram
                                              ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10722:45: error: Invalid Directive: for current device, ram_1p + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10716:45: error: Invalid Directive: for current device, ram_1p + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_tag type=ram_1p impl=lutram
                                             ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10729:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10723:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_1 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10731:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10725:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_2 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10733:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10727:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_3 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10735:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10729:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_4 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10737:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10731:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_5 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10739:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10733:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_6 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10741:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10735:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_7 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10743:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10737:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_8 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10762:2: warning: Added loop label VITIS_LOOP_336_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10756:2: warning: Added loop label VITIS_LOOP_336_1:   [xilinx-label-all-loops]
  for (id_t i=0; i<64; i++) {
  ^~~
  VITIS_LOOP_336_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10762:2: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10764:2: warning: Added loop label VITIS_LOOP_338_2:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10756:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10758:2: warning: Added loop label VITIS_LOOP_338_2:   [xilinx-label-all-loops]
  for (id_t way=0; way<2; ++way) {
  ^~~
  VITIS_LOOP_338_2: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10764:2: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10776:3: warning: Added loop label VITIS_LOOP_350_3:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10758:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10770:3: warning: Added loop label VITIS_LOOP_350_3:   [xilinx-label-all-loops]
   for (id_t j=0; j<16; j++) {
   ^~~
   VITIS_LOOP_350_3: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10776:3: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10789:2: warning: Added loop label VITIS_LOOP_363_4:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10770:3: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10783:2: warning: Added loop label VITIS_LOOP_363_4:   [xilinx-label-all-loops]
  for (bool enable=false; !enable; ){
  ^~~
  VITIS_LOOP_363_4: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10789:2: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10805:5: warning: Added loop label VITIS_LOOP_379_5:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10783:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10799:5: warning: Added loop label VITIS_LOOP_379_5:   [xilinx-label-all-loops]
     for (id_t j=0; j<16; j++) {
     ^~~
     VITIS_LOOP_379_5: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10805:5: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10873:7: warning: Added loop label VITIS_LOOP_456_6:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10799:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10867:7: warning: Added loop label VITIS_LOOP_456_6:   [xilinx-label-all-loops]
       for (ap_uint<5> tl=0; tl<16; tl++) {
       ^~~
       VITIS_LOOP_456_6: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10873:7: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10993:46: error: Invalid Directive: for current device, ram_1p + uram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10867:7: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10987:46: error: Invalid Directive: for current device, ram_1p + uram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_data type=ram_1p impl=uram
                                              ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10996:45: error: Invalid Directive: for current device, ram_1p + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10990:45: error: Invalid Directive: for current device, ram_1p + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_tag type=ram_1p impl=lutram
                                             ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11003:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10997:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_1 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11005:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:10999:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_2 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11007:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11001:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_3 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11009:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11003:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_4 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11011:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11005:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_5 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11013:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11007:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_6 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11015:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11009:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_7 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11017:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11011:53: error: Invalid Directive: for current device, ram_t2p + bram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS BIND_STORAGE variable=_lru_count_8 type=ram_t2p impl=bram
                                                     ^
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11036:2: warning: Added loop label VITIS_LOOP_627_1:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11030:2: warning: Added loop label VITIS_LOOP_627_1:   [xilinx-label-all-loops]
  for (id_t i=0; i<64; i++) {
  ^~~
  VITIS_LOOP_627_1: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11036:2: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11038:2: warning: Added loop label VITIS_LOOP_629_2:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11030:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11032:2: warning: Added loop label VITIS_LOOP_629_2:   [xilinx-label-all-loops]
  for (id_t way=0; way<2; ++way) {
  ^~~
  VITIS_LOOP_629_2: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11038:2: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11050:3: warning: Added loop label VITIS_LOOP_641_3:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11032:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11044:3: warning: Added loop label VITIS_LOOP_641_3:   [xilinx-label-all-loops]
   for (id_t j=0; j<16; j++) {
   ^~~
   VITIS_LOOP_641_3: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11050:3: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11063:2: warning: Added loop label VITIS_LOOP_654_4:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11044:3: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11057:2: warning: Added loop label VITIS_LOOP_654_4:   [xilinx-label-all-loops]
  for (bool enable=false; !enable; ){
  ^~~
  VITIS_LOOP_654_4: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11063:2: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11079:5: warning: Added loop label VITIS_LOOP_670_5:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11057:2: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11073:5: warning: Added loop label VITIS_LOOP_670_5:   [xilinx-label-all-loops]
     for (id_t j=0; j<16; j++) {
     ^~~
     VITIS_LOOP_670_5: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11079:5: note: FIX-IT applied suggested code changes
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11147:7: warning: Added loop label VITIS_LOOP_747_6:   [xilinx-label-all-loops]
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11073:5: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11141:7: warning: Added loop label VITIS_LOOP_747_6:   [xilinx-label-all-loops]
       for (ap_uint<5> tl=0; tl<16; tl++) {
       ^~~
       VITIS_LOOP_747_6: 
-/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11147:7: note: FIX-IT applied suggested code changes
+/output/block_lu_hls/test_2022.2/proj_block_lu_hls/solution1/.autopilot/db/vccache.pp.0.cpp:11141:7: note: FIX-IT applied suggested code changes

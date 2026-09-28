@@ -1,0 +1,7 @@
+Running: xsim.dir/large_tstrf_v2/xsimk -simmode gui -wdb large_tstrf_v2.wdb -simrunnum 0 -socket 51841
+Design successfully loaded
+Design Loading Memory Usage: 38908 KB (Peak: 38908 KB)
+Design Loading CPU Usage: 40 ms
+Simulation completed
+Simulation Memory Usage: 155132 KB (Peak: 178176 KB)
+Simulation CPU Usage: 2104780 ms

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'vcache_38'
 ================================================================
-* Date:           Fri Sep 25 15:49:15 2026
+* Date:           Sat Sep 26 09:29:22 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        proj_block_lu_hls
@@ -149,9 +149,9 @@ ST_1 : Operation 66 [1/1] (0.42ns)   --->   "%store_ln359 = store i32 0, i32 %p_
 State 2 <SV = 1> <Delay = 1.82>
 ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %base_addr_val, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 68 [1/1] (1.82ns)   --->   "%base_addr_val_read = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %base_addr_val"   --->   Operation 68 'read' 'base_addr_val_read' <Predicate = true> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
-ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1031 %vcache_bank2_result, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %vcache_bank2_vres, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %vccache_re_bank2, void @empty_56, i32 0, i32 0, void @empty_86, i32 0, i32 0, void @empty_86, void @empty_86, void @empty_86, i32 0, i32 0, i32 0, i32 0, void @empty_86, void @empty_86, i32 4294967295, i32 0"   --->   Operation 71 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1031 %vcache_bank2_result, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %vcache_bank2_vres, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i209 %vccache_re_bank2, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 71 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%specmemcore_ln293 = specmemcore void @_ssdm_op_SpecMemCore, i1024 %p_data_V, i64 666, i64 20, i64 18446744073709551615" [vccache.cpp:293]   --->   Operation 72 'specmemcore' 'specmemcore_ln293' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%specmemcore_ln296 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_15, i64 666, i64 19, i64 18446744073709551615" [vccache.cpp:296]   --->   Operation 73 'specmemcore' 'specmemcore_ln296' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%specmemcore_ln296 = specmemcore void @_ssdm_op_SpecMemCore, i21 %p_tag_V_14, i64 666, i64 19, i64 18446744073709551615" [vccache.cpp:296]   --->   Operation 74 'specmemcore' 'specmemcore_ln296' <Predicate = true> <Delay = 0.00>
@@ -182,7 +182,7 @@ ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%trunc_ln371 = trunc i32 %base_addr
 ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body90"   --->   Operation 99 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 3.51>
-ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%specloopname_ln365 = specloopname void @_ssdm_op_SpecLoopName, void @empty_29" [vccache.cpp:365]   --->   Operation 100 'specloopname' 'specloopname_ln365' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%specloopname_ln365 = specloopname void @_ssdm_op_SpecLoopName, void @empty_70" [vccache.cpp:365]   --->   Operation 100 'specloopname' 'specloopname_ln365' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_7 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i209P0A, i209 %vccache_re_bank2, i32 1" [vccache.cpp:365]   --->   Operation 101 'nbreadreq' 'tmp_7' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
 ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%br_ln365 = br i1 %tmp_7, void %for.body90.backedge, void %if.then" [vccache.cpp:365]   --->   Operation 102 'br' 'br_ln365' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 103 [1/1] (1.55ns)   --->   "%vccache_re_bank2_read = read i209 @_ssdm_op_Read.ap_fifo.volatile.i209P0A, i209 %vccache_re_bank2" [vccache.cpp:366]   --->   Operation 103 'read' 'vccache_re_bank2_read' <Predicate = (tmp_7)> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 209> <Depth = 64> <FIFO>
@@ -981,8 +981,8 @@ The critical path consists of the following:
 
  <State 8>: 1.24ns
 The critical path consists of the following:
-	'getelementptr' operation ('p_lru_count_1_addr_4', vccache.cpp:429) [435]  (0 ns)
-	'store' operation ('store_ln429', vccache.cpp:429) of variable 'count_load_2', vccache.cpp:429 on array '_lru_count_1', vccache.cpp:302 [470]  (1.24 ns)
+	'getelementptr' operation ('p_lru_count_8_addr_4', vccache.cpp:443) [442]  (0 ns)
+	'store' operation ('store_ln443', vccache.cpp:443) of variable 'count_load_1', vccache.cpp:443 on array '_lru_count_8', vccache.cpp:316 [474]  (1.24 ns)
 
  <State 9>: 2.68ns
 The critical path consists of the following:

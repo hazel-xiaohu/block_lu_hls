@@ -151,40 +151,36 @@ void find_eviction(lru_struct in1, lru_struct in2, lru_struct in3, lru_struct in
 
 void from_rcache_result_to_B_vcrequest(rcache_stream* from1, B_request_stream* to1, B_request_stream* to2, id_stream* B_len){
 
-	rcache_request temp, temp1;
-	id_t first_idx, second_idx;
-	B_row_request temp_result;
-
-	for (bool enable=false; !enable; ){
+	// Use only blocking stream transactions here. Testing downstream full()
+	// while the consumers test empty() creates a combinational ready/valid
+	// feedback path in RTL. It is activated by the first non-empty B row and
+	// can leave XSIM oscillating forever in one delta cycle. The blocking
+	// accesses make backpressure explicit in this process FSM and preserve the
+	// original one-request/one-length protocol.
+	rcache_request pending = {};
+	B_row_request temp_result = {};
+	for (;;) {
 #pragma HLS PIPELINE off
-		if (!from1->empty() && !to2->full()) {
-			temp = from1->read();
+		pending = from1->read();
+		if (pending.dest == 7)
+			break;
 
-			if (temp.dest != 7) {
-//				temp1 = from1->read();
+		temp_result.peID = pending.dest;
+		temp_result.bridx = pending.Acid;
+		temp_result.brlen = pending.Acid1 - pending.Acid;
+		temp_result.end = false;
 
-//				first_idx = (temp.Acid < temp1.Acid) ? temp.Acid : temp1.Acid;
-//				second_idx = (temp.Acid < temp1.Acid) ? temp1.Acid : temp.Acid;
-				first_idx = temp.Acid;
-				second_idx = temp.Acid1;
+		if (temp_result.brlen > 16)
+			to1->write(temp_result);
+		else if (temp_result.brlen != 0)
+			to2->write(temp_result);
 
-				temp_result.peID = temp.dest;
-				temp_result.bridx = first_idx;
-				temp_result.brlen = second_idx - first_idx;
-				temp_result.end = false;
-
-				if ((second_idx - first_idx) > 16)
-					to1->write(temp_result);
-				else if (second_idx != first_idx)
-					to2->write(temp_result);
-
-				B_len->write(second_idx - first_idx);
-			}
-
-			enable = temp.dest == 7;
-		}
+		// Empty rows still need a length token so that the PE consumes exactly
+		// one B_len entry for every scheduled A element.
+		B_len->write(temp_result.brlen);
 	}
 
+	// Both downstream request streams receive exactly one end marker.
 	temp_result.end = true;
 	to1->write(temp_result);
 	to2->write(temp_result);

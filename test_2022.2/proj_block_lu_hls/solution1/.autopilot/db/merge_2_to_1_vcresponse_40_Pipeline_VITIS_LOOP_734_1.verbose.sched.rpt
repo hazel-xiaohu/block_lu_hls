@@ -1,0 +1,201 @@
+
+
+================================================================
+== Vitis HLS Report for 'merge_2_to_1_vcresponse_40_Pipeline_VITIS_LOOP_734_1'
+================================================================
+* Date:           Sat Sep 26 08:40:40 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.869 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_734_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.86>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%end2 = alloca i32 1"   --->   Operation 5 'alloca' 'end2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%end1 = alloca i32 1"   --->   Operation 6 'alloca' 'end1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%temp_result_V = alloca i32 1"   --->   Operation 7 'alloca' 'temp_result_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%temp_peID_V = alloca i32 1"   --->   Operation 8 'alloca' 'temp_peID_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %vcache_bank3_cres, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %vcache_bank4_cres, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %vcache_res_cfinal, void @empty_91, i32 0, i32 0, void @empty_141, i32 0, i32 0, void @empty_141, void @empty_141, void @empty_141, i32 0, i32 0, i32 0, i32 0, void @empty_141, void @empty_141, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.42ns)   --->   "%store_ln0 = store i1 0, i1 %end1"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 13 [1/1] (0.42ns)   --->   "%store_ln0 = store i1 0, i1 %end2"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%br_ln0 = br void %for.cond"   --->   Operation 14 'br' 'br_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%have_read2 = phi i1 0, void %newFuncRoot, i1 %have_read2_3, void %if.end21"   --->   Operation 15 'phi' 'have_read2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%have_read1 = phi i1 0, void %newFuncRoot, i1 %have_read1_2, void %if.end21"   --->   Operation 16 'phi' 'have_read1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%enable = phi i1 0, void %newFuncRoot, i1 %enable_10, void %if.end21"   --->   Operation 17 'phi' 'enable' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln734 = br i1 %enable, void %for.body, void %for.end.exitStub" [util.cpp:734]   --->   Operation 18 'br' 'br_ln734' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln735 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_141" [util.cpp:735]   --->   Operation 19 'specpipeline' 'specpipeline_ln735' <Predicate = (!enable)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln736 = specloopname void @_ssdm_op_SpecLoopName, void @empty_78" [util.cpp:736]   --->   Operation 20 'specloopname' 'specloopname_ln736' <Predicate = (!enable)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln737 = br i1 %have_read1, void %lor.lhs.false, void %land.lhs.true" [util.cpp:737]   --->   Operation 21 'br' 'br_ln737' <Predicate = (!enable)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_s = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i6P0A, i6 %vcache_bank3_cres, i32 1" [util.cpp:737]   --->   Operation 22 'nbreadreq' 'tmp_s' <Predicate = (!enable & !have_read1)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 16> <FIFO>
+ST_1 : Operation 23 [1/1] (0.42ns)   --->   "%br_ln737 = br i1 %tmp_s, void %land.lhs.true, void %if.end" [util.cpp:737]   --->   Operation 23 'br' 'br_ln737' <Predicate = (!enable & !have_read1)> <Delay = 0.42>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln737 = br i1 %have_read2, void %lor.lhs.false1, void %if.then3" [util.cpp:737]   --->   Operation 24 'br' 'br_ln737' <Predicate = (!enable & !tmp_s) | (!enable & have_read1)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_200 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i6P0A, i6 %vcache_bank4_cres, i32 1" [util.cpp:737]   --->   Operation 25 'nbreadreq' 'tmp_200' <Predicate = (!enable & !tmp_s & !have_read2) | (!enable & have_read1 & !have_read2)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 16> <FIFO>
+ST_1 : Operation 26 [1/1] (0.42ns)   --->   "%br_ln737 = br i1 %tmp_200, void %if.then3, void %if.end" [util.cpp:737]   --->   Operation 26 'br' 'br_ln737' <Predicate = (!enable & !tmp_s & !have_read2) | (!enable & have_read1 & !have_read2)> <Delay = 0.42>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%have_read2_1 = phi i1 %have_read2, void %lor.lhs.false, i1 0, void %lor.lhs.false1"   --->   Operation 27 'phi' 'have_read2_1' <Predicate = (!enable & !have_read2 & tmp_200) | (!enable & !have_read1 & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%have_read1_1 = phi i1 0, void %lor.lhs.false, i1 %have_read1, void %lor.lhs.false1"   --->   Operation 28 'phi' 'have_read1_1' <Predicate = (!enable & !have_read2 & tmp_200) | (!enable & !have_read1 & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln744 = br i1 %have_read1_1, void %land.rhs, void %land.end" [util.cpp:744]   --->   Operation 29 'br' 'br_ln744' <Predicate = (!enable & !have_read2 & tmp_200) | (!enable & !have_read1 & tmp_s)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_203 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i6P0A, i6 %vcache_bank3_cres, i32 1" [util.cpp:744]   --->   Operation 30 'nbreadreq' 'tmp_203' <Predicate = (!enable & !have_read2 & tmp_200 & !have_read1_1) | (!enable & !have_read1 & tmp_s & !have_read1_1)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 16> <FIFO>
+ST_1 : Operation 31 [1/1] (0.42ns)   --->   "%br_ln745 = br i1 %have_read2_1, void %land.rhs6, void %land.end9" [util.cpp:745]   --->   Operation 31 'br' 'br_ln745' <Predicate = (!enable & !have_read2 & tmp_200 & !have_read1_1) | (!enable & !have_read1 & tmp_s & !have_read1_1)> <Delay = 0.42>
+ST_1 : Operation 32 [1/1] (0.42ns)   --->   "%br_ln745 = br i1 %have_read2_1, void %land.rhs6, void %land.end9" [util.cpp:745]   --->   Operation 32 'br' 'br_ln745' <Predicate = (!enable & !have_read2 & tmp_200 & have_read1_1) | (!enable & !have_read1 & tmp_s & have_read1_1)> <Delay = 0.42>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%empty = phi i1 %tmp_203, void %land.rhs, i1 0, void %land.end" [util.cpp:744]   --->   Operation 33 'phi' 'empty' <Predicate = (!enable & !have_read2 & tmp_200 & !have_read2_1) | (!enable & !have_read1 & tmp_s & !have_read2_1)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%have_read1_14445 = phi i1 0, void %land.rhs, i1 1, void %land.end"   --->   Operation 34 'phi' 'have_read1_14445' <Predicate = (!enable & !have_read2 & tmp_200 & !have_read2_1) | (!enable & !have_read1 & tmp_s & !have_read2_1)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_204 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i6P0A, i6 %vcache_bank4_cres, i32 1" [util.cpp:745]   --->   Operation 35 'nbreadreq' 'tmp_204' <Predicate = (!enable & !have_read2 & tmp_200 & !have_read2_1) | (!enable & !have_read1 & tmp_s & !have_read2_1)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 16> <FIFO>
+ST_1 : Operation 36 [1/1] (0.47ns)   --->   "%br_ln747 = br i1 %empty, void %if.else, void %if.then10" [util.cpp:747]   --->   Operation 36 'br' 'br_ln747' <Predicate = (!enable & !have_read2 & tmp_200 & !have_read2_1) | (!enable & !have_read1 & tmp_s & !have_read2_1)> <Delay = 0.47>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%empty_713 = phi i1 %tmp_203, void %land.rhs, i1 0, void %land.end" [util.cpp:744]   --->   Operation 37 'phi' 'empty_713' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1) | (!enable & !have_read1 & tmp_s & have_read2_1)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%have_read1_14446 = phi i1 0, void %land.rhs, i1 1, void %land.end"   --->   Operation 38 'phi' 'have_read1_14446' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1) | (!enable & !have_read1 & tmp_s & have_read2_1)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.47ns)   --->   "%br_ln747 = br i1 %empty_713, void %if.else, void %if.then10" [util.cpp:747]   --->   Operation 39 'br' 'br_ln747' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1) | (!enable & !have_read1 & tmp_s & have_read2_1)> <Delay = 0.47>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_201 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i6P0A, i6 %vcache_bank3_cres, i32 1" [util.cpp:744]   --->   Operation 40 'nbreadreq' 'tmp_201' <Predicate = (!enable & !tmp_s & !tmp_200) | (!enable & !tmp_s & have_read2) | (!enable & have_read1 & !tmp_200) | (!enable & have_read1 & have_read2)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 16> <FIFO>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_202 = nbreadreq i1 @_ssdm_op_NbReadReq.ap_fifo.i6P0A, i6 %vcache_bank4_cres, i32 1" [util.cpp:745]   --->   Operation 41 'nbreadreq' 'tmp_202' <Predicate = (!enable & !tmp_s & !tmp_200) | (!enable & !tmp_s & have_read2) | (!enable & have_read1 & !tmp_200) | (!enable & have_read1 & have_read2)> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 16> <FIFO>
+ST_1 : Operation 42 [1/1] (0.47ns)   --->   "%br_ln747 = br i1 %tmp_201, void %if.else, void %if.then10" [util.cpp:747]   --->   Operation 42 'br' 'br_ln747' <Predicate = (!enable & !tmp_s & !tmp_200) | (!enable & !tmp_s & have_read2) | (!enable & have_read1 & !tmp_200) | (!enable & have_read1 & have_read2)> <Delay = 0.47>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%empty_714 = phi i1 %tmp_202, void %if.then3, i1 %tmp_204, void %land.rhs6, i1 0, void %land.end9" [util.cpp:745]   --->   Operation 43 'phi' 'empty_714' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty) | (!enable & !tmp_s & !tmp_200 & !tmp_201) | (!enable & !tmp_s & have_read2 & !tmp_201) | (!enable & have_read1 & !tmp_200 & !tmp_201) | (!enable & have_read1 & have_read2 & !tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%have_read1_1444651 = phi i1 0, void %if.then3, i1 %have_read1_14445, void %land.rhs6, i1 %have_read1_14446, void %land.end9"   --->   Operation 44 'phi' 'have_read1_1444651' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty) | (!enable & !tmp_s & !tmp_200 & !tmp_201) | (!enable & !tmp_s & have_read2 & !tmp_201) | (!enable & have_read1 & !tmp_200 & !tmp_201) | (!enable & have_read1 & have_read2 & !tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%have_read2_1424850 = phi i1 0, void %if.then3, i1 0, void %land.rhs6, i1 1, void %land.end9"   --->   Operation 45 'phi' 'have_read2_1424850' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty) | (!enable & !tmp_s & !tmp_200 & !tmp_201) | (!enable & !tmp_s & have_read2 & !tmp_201) | (!enable & have_read1 & !tmp_200 & !tmp_201) | (!enable & have_read1 & have_read2 & !tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.47ns)   --->   "%br_ln756 = br i1 %empty_714, void %if.end21, void %if.then14" [util.cpp:756]   --->   Operation 46 'br' 'br_ln756' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty) | (!enable & !tmp_s & !tmp_200 & !tmp_201) | (!enable & !tmp_s & have_read2 & !tmp_201) | (!enable & have_read1 & !tmp_200 & !tmp_201) | (!enable & have_read1 & have_read2 & !tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty)> <Delay = 0.47>
+ST_1 : Operation 47 [1/1] (1.82ns)   --->   "%vcache_bank4_cres_read = read i6 @_ssdm_op_Read.ap_fifo.volatile.i6P0A, i6 %vcache_bank4_cres" [util.cpp:757]   --->   Operation 47 'read' 'vcache_bank4_cres_read' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714) | (!enable & !tmp_s & !tmp_200 & !tmp_201 & empty_714) | (!enable & !tmp_s & have_read2 & !tmp_201 & empty_714) | (!enable & have_read1 & !tmp_200 & !tmp_201 & empty_714) | (!enable & have_read1 & have_read2 & !tmp_201 & empty_714) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty & empty_714)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 16> <FIFO>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%temp_result_V_4 = trunc i6 %vcache_bank4_cres_read" [util.cpp:757]   --->   Operation 48 'trunc' 'temp_result_V_4' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714) | (!enable & !tmp_s & !tmp_200 & !tmp_201 & empty_714) | (!enable & !tmp_s & have_read2 & !tmp_201 & empty_714) | (!enable & have_read1 & !tmp_200 & !tmp_201 & empty_714) | (!enable & have_read1 & have_read2 & !tmp_201 & empty_714) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty & empty_714)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%end2_17 = bitselect i1 @_ssdm_op_BitSelect.i1.i6.i32, i6 %vcache_bank4_cres_read, i32 2" [util.cpp:757]   --->   Operation 49 'bitselect' 'end2_17' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714) | (!enable & !tmp_s & !tmp_200 & !tmp_201 & empty_714) | (!enable & !tmp_s & have_read2 & !tmp_201 & empty_714) | (!enable & have_read1 & !tmp_200 & !tmp_201 & empty_714) | (!enable & have_read1 & have_read2 & !tmp_201 & empty_714) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty & empty_714)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%temp_peID_V_38 = partselect i3 @_ssdm_op_PartSelect.i3.i6.i32.i32, i6 %vcache_bank4_cres_read, i32 3, i32 5" [util.cpp:757]   --->   Operation 50 'partselect' 'temp_peID_V_38' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714) | (!enable & !tmp_s & !tmp_200 & !tmp_201 & empty_714) | (!enable & !tmp_s & have_read2 & !tmp_201 & empty_714) | (!enable & have_read1 & !tmp_200 & !tmp_201 & empty_714) | (!enable & have_read1 & have_read2 & !tmp_201 & empty_714) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty & empty_714)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln759 = br i1 %end2_17, void %if.then17, void %if.end18" [util.cpp:759]   --->   Operation 51 'br' 'br_ln759' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714) | (!enable & !tmp_s & !tmp_200 & !tmp_201 & empty_714) | (!enable & !tmp_s & have_read2 & !tmp_201 & empty_714) | (!enable & have_read1 & !tmp_200 & !tmp_201 & empty_714) | (!enable & have_read1 & have_read2 & !tmp_201 & empty_714) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty & empty_714)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.42ns)   --->   "%store_ln765 = store i3 %temp_peID_V_38, i3 %temp_peID_V" [util.cpp:765]   --->   Operation 52 'store' 'store_ln765' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714) | (!enable & !tmp_s & !tmp_200 & !tmp_201 & empty_714) | (!enable & !tmp_s & have_read2 & !tmp_201 & empty_714) | (!enable & have_read1 & !tmp_200 & !tmp_201 & empty_714) | (!enable & have_read1 & have_read2 & !tmp_201 & empty_714) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty & empty_714)> <Delay = 0.42>
+ST_1 : Operation 53 [1/1] (0.42ns)   --->   "%store_ln765 = store i2 %temp_result_V_4, i2 %temp_result_V" [util.cpp:765]   --->   Operation 53 'store' 'store_ln765' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714) | (!enable & !tmp_s & !tmp_200 & !tmp_201 & empty_714) | (!enable & !tmp_s & have_read2 & !tmp_201 & empty_714) | (!enable & have_read1 & !tmp_200 & !tmp_201 & empty_714) | (!enable & have_read1 & have_read2 & !tmp_201 & empty_714) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty & empty_714)> <Delay = 0.42>
+ST_1 : Operation 54 [1/1] (0.42ns)   --->   "%store_ln765 = store i1 %end2_17, i1 %end2" [util.cpp:765]   --->   Operation 54 'store' 'store_ln765' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714) | (!enable & !tmp_s & !tmp_200 & !tmp_201 & empty_714) | (!enable & !tmp_s & have_read2 & !tmp_201 & empty_714) | (!enable & have_read1 & !tmp_200 & !tmp_201 & empty_714) | (!enable & have_read1 & have_read2 & !tmp_201 & empty_714) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty & empty_714)> <Delay = 0.42>
+ST_1 : Operation 55 [1/1] (0.47ns)   --->   "%br_ln765 = br void %if.end21" [util.cpp:765]   --->   Operation 55 'br' 'br_ln765' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714) | (!enable & !tmp_s & !tmp_200 & !tmp_201 & empty_714) | (!enable & !tmp_s & have_read2 & !tmp_201 & empty_714) | (!enable & have_read1 & !tmp_200 & !tmp_201 & empty_714) | (!enable & have_read1 & have_read2 & !tmp_201 & empty_714) | (!enable & !have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714) | (!enable & !have_read1 & tmp_s & !have_read2_1 & !empty & empty_714)> <Delay = 0.47>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%have_read2_1424849 = phi i1 0, void %if.then3, i1 0, void %land.rhs6, i1 1, void %land.end9"   --->   Operation 56 'phi' 'have_read2_1424849' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & empty) | (!enable & !tmp_s & !tmp_200 & tmp_201) | (!enable & !tmp_s & have_read2 & tmp_201) | (!enable & have_read1 & !tmp_200 & tmp_201) | (!enable & have_read1 & have_read2 & tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & empty)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (1.82ns)   --->   "%vcache_bank3_cres_read = read i6 @_ssdm_op_Read.ap_fifo.volatile.i6P0A, i6 %vcache_bank3_cres" [util.cpp:748]   --->   Operation 57 'read' 'vcache_bank3_cres_read' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & empty) | (!enable & !tmp_s & !tmp_200 & tmp_201) | (!enable & !tmp_s & have_read2 & tmp_201) | (!enable & have_read1 & !tmp_200 & tmp_201) | (!enable & have_read1 & have_read2 & tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & empty)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 16> <FIFO>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%temp_result_V_3 = trunc i6 %vcache_bank3_cres_read" [util.cpp:748]   --->   Operation 58 'trunc' 'temp_result_V_3' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & empty) | (!enable & !tmp_s & !tmp_200 & tmp_201) | (!enable & !tmp_s & have_read2 & tmp_201) | (!enable & have_read1 & !tmp_200 & tmp_201) | (!enable & have_read1 & have_read2 & tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & empty)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%end1_17 = bitselect i1 @_ssdm_op_BitSelect.i1.i6.i32, i6 %vcache_bank3_cres_read, i32 2" [util.cpp:748]   --->   Operation 59 'bitselect' 'end1_17' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & empty) | (!enable & !tmp_s & !tmp_200 & tmp_201) | (!enable & !tmp_s & have_read2 & tmp_201) | (!enable & have_read1 & !tmp_200 & tmp_201) | (!enable & have_read1 & have_read2 & tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & empty)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%temp_peID_V_37 = partselect i3 @_ssdm_op_PartSelect.i3.i6.i32.i32, i6 %vcache_bank3_cres_read, i32 3, i32 5" [util.cpp:748]   --->   Operation 60 'partselect' 'temp_peID_V_37' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & empty) | (!enable & !tmp_s & !tmp_200 & tmp_201) | (!enable & !tmp_s & have_read2 & tmp_201) | (!enable & have_read1 & !tmp_200 & tmp_201) | (!enable & have_read1 & have_read2 & tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & empty)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%br_ln750 = br i1 %end1_17, void %if.then11, void %if.end12" [util.cpp:750]   --->   Operation 61 'br' 'br_ln750' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & empty) | (!enable & !tmp_s & !tmp_200 & tmp_201) | (!enable & !tmp_s & have_read2 & tmp_201) | (!enable & have_read1 & !tmp_200 & tmp_201) | (!enable & have_read1 & have_read2 & tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & empty)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.42ns)   --->   "%store_ln756 = store i3 %temp_peID_V_37, i3 %temp_peID_V" [util.cpp:756]   --->   Operation 62 'store' 'store_ln756' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & empty) | (!enable & !tmp_s & !tmp_200 & tmp_201) | (!enable & !tmp_s & have_read2 & tmp_201) | (!enable & have_read1 & !tmp_200 & tmp_201) | (!enable & have_read1 & have_read2 & tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & empty)> <Delay = 0.42>
+ST_1 : Operation 63 [1/1] (0.42ns)   --->   "%store_ln756 = store i2 %temp_result_V_3, i2 %temp_result_V" [util.cpp:756]   --->   Operation 63 'store' 'store_ln756' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & empty) | (!enable & !tmp_s & !tmp_200 & tmp_201) | (!enable & !tmp_s & have_read2 & tmp_201) | (!enable & have_read1 & !tmp_200 & tmp_201) | (!enable & have_read1 & have_read2 & tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & empty)> <Delay = 0.42>
+ST_1 : Operation 64 [1/1] (0.42ns)   --->   "%store_ln756 = store i1 %end1_17, i1 %end1" [util.cpp:756]   --->   Operation 64 'store' 'store_ln756' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & empty) | (!enable & !tmp_s & !tmp_200 & tmp_201) | (!enable & !tmp_s & have_read2 & tmp_201) | (!enable & have_read1 & !tmp_200 & tmp_201) | (!enable & have_read1 & have_read2 & tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & empty)> <Delay = 0.42>
+ST_1 : Operation 65 [1/1] (0.47ns)   --->   "%br_ln756 = br void %if.end21" [util.cpp:756]   --->   Operation 65 'br' 'br_ln756' <Predicate = (!enable & !have_read2 & tmp_200 & have_read2_1 & empty_713) | (!enable & !have_read2 & tmp_200 & !have_read2_1 & empty) | (!enable & !tmp_s & !tmp_200 & tmp_201) | (!enable & !tmp_s & have_read2 & tmp_201) | (!enable & have_read1 & !tmp_200 & tmp_201) | (!enable & have_read1 & have_read2 & tmp_201) | (!enable & !have_read1 & tmp_s & have_read2_1 & empty_713) | (!enable & !have_read1 & tmp_s & !have_read2_1 & empty)> <Delay = 0.47>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%have_read2_3 = phi i1 %have_read2_1424849, void %if.end12, i1 1, void %if.end18, i1 %have_read2_1424850, void %if.else"   --->   Operation 66 'phi' 'have_read2_3' <Predicate = (!enable)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%have_read1_2 = phi i1 1, void %if.end12, i1 %have_read1_1444651, void %if.end18, i1 %have_read1_1444651, void %if.else"   --->   Operation 67 'phi' 'have_read1_2' <Predicate = (!enable)> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%temp_result_V_load = load i2 %temp_result_V"   --->   Operation 78 'load' 'temp_result_V_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%temp_peID_V_load = load i3 %temp_peID_V"   --->   Operation 79 'load' 'temp_peID_V_load' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i3P0A, i3 %temp_peID_V_out, i3 %temp_peID_V_load"   --->   Operation 80 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i2P0A, i2 %temp_result_V_out, i2 %temp_result_V_load"   --->   Operation 81 'write' 'write_ln0' <Predicate = (enable)> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 82 'ret' 'ret_ln0' <Predicate = (enable)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.82>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%p_04 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i3.i1.i2, i3 %temp_peID_V_38, i1 0, i2 %temp_result_V_4" [util.cpp:760]   --->   Operation 68 'bitconcatenate' 'p_04' <Predicate = (!have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714 & !end2_17) | (!have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714 & !end2_17) | (!tmp_s & !tmp_200 & !tmp_201 & empty_714 & !end2_17) | (!tmp_s & have_read2 & !tmp_201 & empty_714 & !end2_17) | (have_read1 & !tmp_200 & !tmp_201 & empty_714 & !end2_17) | (have_read1 & have_read2 & !tmp_201 & empty_714 & !end2_17) | (!have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714 & !end2_17) | (!have_read1 & tmp_s & !have_read2_1 & !empty & empty_714 & !end2_17)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (1.82ns)   --->   "%write_ln760 = write void @_ssdm_op_Write.ap_fifo.volatile.i6P0A, i6 %vcache_res_cfinal, i6 %p_04" [util.cpp:760]   --->   Operation 69 'write' 'write_ln760' <Predicate = (!have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714 & !end2_17) | (!have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714 & !end2_17) | (!tmp_s & !tmp_200 & !tmp_201 & empty_714 & !end2_17) | (!tmp_s & have_read2 & !tmp_201 & empty_714 & !end2_17) | (have_read1 & !tmp_200 & !tmp_201 & empty_714 & !end2_17) | (have_read1 & have_read2 & !tmp_201 & empty_714 & !end2_17) | (!have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714 & !end2_17) | (!have_read1 & tmp_s & !have_read2_1 & !empty & empty_714 & !end2_17)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 2> <FIFO>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln760 = br void %if.end18" [util.cpp:760]   --->   Operation 70 'br' 'br_ln760' <Predicate = (!have_read2 & tmp_200 & have_read2_1 & !empty_713 & empty_714 & !end2_17) | (!have_read2 & tmp_200 & !have_read2_1 & !empty & empty_714 & !end2_17) | (!tmp_s & !tmp_200 & !tmp_201 & empty_714 & !end2_17) | (!tmp_s & have_read2 & !tmp_201 & empty_714 & !end2_17) | (have_read1 & !tmp_200 & !tmp_201 & empty_714 & !end2_17) | (have_read1 & have_read2 & !tmp_201 & empty_714 & !end2_17) | (!have_read1 & tmp_s & have_read2_1 & !empty_713 & empty_714 & !end2_17) | (!have_read1 & tmp_s & !have_read2_1 & !empty & empty_714 & !end2_17)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i3.i1.i2, i3 %temp_peID_V_37, i1 0, i2 %temp_result_V_3" [util.cpp:751]   --->   Operation 71 'bitconcatenate' 'p_0' <Predicate = (!have_read2 & tmp_200 & have_read2_1 & empty_713 & !end1_17) | (!have_read2 & tmp_200 & !have_read2_1 & empty & !end1_17) | (!tmp_s & !tmp_200 & tmp_201 & !end1_17) | (!tmp_s & have_read2 & tmp_201 & !end1_17) | (have_read1 & !tmp_200 & tmp_201 & !end1_17) | (have_read1 & have_read2 & tmp_201 & !end1_17) | (!have_read1 & tmp_s & have_read2_1 & empty_713 & !end1_17) | (!have_read1 & tmp_s & !have_read2_1 & empty & !end1_17)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (1.82ns)   --->   "%write_ln751 = write void @_ssdm_op_Write.ap_fifo.volatile.i6P0A, i6 %vcache_res_cfinal, i6 %p_0" [util.cpp:751]   --->   Operation 72 'write' 'write_ln751' <Predicate = (!have_read2 & tmp_200 & have_read2_1 & empty_713 & !end1_17) | (!have_read2 & tmp_200 & !have_read2_1 & empty & !end1_17) | (!tmp_s & !tmp_200 & tmp_201 & !end1_17) | (!tmp_s & have_read2 & tmp_201 & !end1_17) | (have_read1 & !tmp_200 & tmp_201 & !end1_17) | (have_read1 & have_read2 & tmp_201 & !end1_17) | (!have_read1 & tmp_s & have_read2_1 & empty_713 & !end1_17) | (!have_read1 & tmp_s & !have_read2_1 & empty & !end1_17)> <Delay = 1.82> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 2> <FIFO>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%br_ln751 = br void %if.end12" [util.cpp:751]   --->   Operation 73 'br' 'br_ln751' <Predicate = (!have_read2 & tmp_200 & have_read2_1 & empty_713 & !end1_17) | (!have_read2 & tmp_200 & !have_read2_1 & empty & !end1_17) | (!tmp_s & !tmp_200 & tmp_201 & !end1_17) | (!tmp_s & have_read2 & tmp_201 & !end1_17) | (have_read1 & !tmp_200 & tmp_201 & !end1_17) | (have_read1 & have_read2 & tmp_201 & !end1_17) | (!have_read1 & tmp_s & have_read2_1 & empty_713 & !end1_17) | (!have_read1 & tmp_s & !have_read2_1 & empty & !end1_17)> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%end2_18 = load i1 %end2" [util.cpp:767]   --->   Operation 74 'load' 'end2_18' <Predicate = (!enable)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%end1_18 = load i1 %end1" [util.cpp:767]   --->   Operation 75 'load' 'end1_18' <Predicate = (!enable)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.28ns)   --->   "%enable_10 = and i1 %end1_18, i1 %end2_18" [util.cpp:767]   --->   Operation 76 'and' 'enable_10' <Predicate = (!enable)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln734 = br void %for.cond" [util.cpp:734]   --->   Operation 77 'br' 'br_ln734' <Predicate = (!enable)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 3.87ns
+The critical path consists of the following:
+	fifo read operation ('vcache_bank3_cres_read', util.cpp:748) on port 'vcache_bank3_cres' (util.cpp:748) [77]  (1.83 ns)
+	'store' operation ('store_ln756', util.cpp:756) of variable 'temp.peID.V', util.cpp:748 on local variable 'temp.peID.V' [87]  (0.427 ns)
+	blocking operation 1.62 ns on control path)
+
+ <State 2>: 1.83ns
+The critical path consists of the following:
+	fifo write operation ('write_ln751', util.cpp:751) on port 'vcache_res_cfinal' (util.cpp:751) [84]  (1.83 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

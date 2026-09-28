@@ -1,0 +1,210 @@
+
+
+================================================================
+== Vitis HLS Report for 'A_row_reader'
+================================================================
+* Date:           Sat Sep 26 11:00:28 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.650 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                 |                                       |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                     Instance                    |                 Module                |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_A_row_reader_Pipeline_VITIS_LOOP_13_1_fu_76  |A_row_reader_Pipeline_VITIS_LOOP_13_1  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      41|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|     167|     228|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|     247|    -|
+|Register         |        -|     -|     107|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|     274|     516|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1488|  3528|  682560|  341280|  112|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+-----+-----+
+    |                     Instance                    |                 Module                | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+-----+-----+
+    |grp_A_row_reader_Pipeline_VITIS_LOOP_13_1_fu_76  |A_row_reader_Pipeline_VITIS_LOOP_13_1  |        0|   0|  167|  228|    0|
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+-----+-----+
+    |Total                                            |                                       |        0|   0|  167|  228|    0|
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |add_fu_86_p2     |         +|   0|  0|  39|          32|           1|
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|  41|          33|           2|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm             |  65|         12|    1|         12|
+    |ap_done               |   9|          2|    1|          2|
+    |arcsr_blk_n_AR        |   9|          2|    1|          2|
+    |m_axi_arcsr_ARADDR    |  14|          3|   64|        192|
+    |m_axi_arcsr_ARBURST   |   9|          2|    2|          4|
+    |m_axi_arcsr_ARCACHE   |   9|          2|    4|          8|
+    |m_axi_arcsr_ARID      |   9|          2|    1|          2|
+    |m_axi_arcsr_ARLEN     |  14|          3|   32|         96|
+    |m_axi_arcsr_ARLOCK    |   9|          2|    2|          4|
+    |m_axi_arcsr_ARPROT    |   9|          2|    3|          6|
+    |m_axi_arcsr_ARQOS     |   9|          2|    4|          8|
+    |m_axi_arcsr_ARREGION  |   9|          2|    4|          8|
+    |m_axi_arcsr_ARSIZE    |   9|          2|    3|          6|
+    |m_axi_arcsr_ARUSER    |   9|          2|    1|          2|
+    |m_axi_arcsr_ARVALID   |  14|          3|    1|          3|
+    |m_axi_arcsr_RREADY    |   9|          2|    1|          2|
+    |p_A_reader_rs_blk_n   |   9|          2|    1|          2|
+    |p_A_reader_rs_din     |   9|          2|   64|        128|
+    |p_A_reader_rs_write   |  14|          3|    1|          3|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 | 247|         52|  191|        490|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |                             Name                             | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |add_reg_113                                                   |  32|   0|   32|          0|
+    |ap_CS_fsm                                                     |  11|   0|   11|          0|
+    |ap_done_reg                                                   |   1|   0|    1|          0|
+    |grp_A_row_reader_Pipeline_VITIS_LOOP_13_1_fu_76_ap_start_reg  |   1|   0|    1|          0|
+    |trunc_ln13_reg_119                                            |  62|   0|   62|          0|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                         | 107|   0|  107|          0|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+---------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  | Source Object |    C Type    |
++------------------------------+-----+-----+------------+---------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_continue                   |   in|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|   A_row_reader|  return value|
+|m_axi_arcsr_AWVALID           |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWREADY           |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWADDR            |  out|   64|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWID              |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWLEN             |  out|   32|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWSIZE            |  out|    3|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWBURST           |  out|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWLOCK            |  out|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWCACHE           |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWPROT            |  out|    3|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWQOS             |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWREGION          |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_AWUSER            |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WVALID            |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WREADY            |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WDATA             |  out|   32|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WSTRB             |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WLAST             |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WID               |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_WUSER             |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARVALID           |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARREADY           |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARADDR            |  out|   64|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARID              |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARLEN             |  out|   32|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARSIZE            |  out|    3|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARBURST           |  out|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARLOCK            |  out|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARCACHE           |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARPROT            |  out|    3|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARQOS             |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARREGION          |  out|    4|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_ARUSER            |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RVALID            |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RREADY            |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RDATA             |   in|   32|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RLAST             |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RID               |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RFIFONUM          |   in|    9|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RUSER             |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_RRESP             |   in|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_BVALID            |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_BREADY            |  out|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_BRESP             |   in|    2|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_BID               |   in|    1|       m_axi|          arcsr|       pointer|
+|m_axi_arcsr_BUSER             |   in|    1|       m_axi|          arcsr|       pointer|
+|A_rcsr                        |   in|   64|     ap_none|         A_rcsr|        scalar|
+|rnum                          |   in|   32|     ap_none|           rnum|        scalar|
+|p_A_reader_rs_din             |  out|   64|     ap_fifo|  p_A_reader_rs|       pointer|
+|p_A_reader_rs_num_data_valid  |   in|    8|     ap_fifo|  p_A_reader_rs|       pointer|
+|p_A_reader_rs_fifo_cap        |   in|    8|     ap_fifo|  p_A_reader_rs|       pointer|
+|p_A_reader_rs_full_n          |   in|    1|     ap_fifo|  p_A_reader_rs|       pointer|
+|p_A_reader_rs_write           |  out|    1|     ap_fifo|  p_A_reader_rs|       pointer|
++------------------------------+-----+-----+------------+---------------+--------------+
+

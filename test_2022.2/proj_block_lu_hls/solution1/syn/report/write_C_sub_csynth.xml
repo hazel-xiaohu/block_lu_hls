@@ -32,7 +32,7 @@
 <Interval-max>undef</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_977_1>
+<VITIS_LOOP_973_1>
 <Slack>3.65</Slack>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
@@ -40,7 +40,7 @@
 <IterationLatency>undef</IterationLatency>
 <InstanceList>
 </InstanceList>
-<VITIS_LOOP_984_2>
+<VITIS_LOOP_980_2>
 <Slack>3.65</Slack>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
@@ -48,7 +48,7 @@
 <IterationLatency>undef</IterationLatency>
 <InstanceList>
 </InstanceList>
-<VITIS_LOOP_987_3>
+<VITIS_LOOP_983_3>
 <Slack>3.65</Slack>
 <TripCount>undef</TripCount>
 <Latency>undef</Latency>
@@ -56,9 +56,9 @@
 <IterationLatency>10</IterationLatency>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_987_3>
-</VITIS_LOOP_984_2>
-</VITIS_LOOP_977_1>
+</VITIS_LOOP_983_3>
+</VITIS_LOOP_980_2>
+</VITIS_LOOP_973_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 

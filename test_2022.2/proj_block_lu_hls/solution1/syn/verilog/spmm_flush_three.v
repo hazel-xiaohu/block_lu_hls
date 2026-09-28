@@ -23,11 +23,11 @@ module spmm_flush_three (
         pong_dout,
         pong_empty_n,
         pong_read,
-        result_pe4_din,
-        result_pe4_num_data_valid,
-        result_pe4_fifo_cap,
-        result_pe4_full_n,
-        result_pe4_write,
+        result_pe1_din,
+        result_pe1_num_data_valid,
+        result_pe1_fifo_cap,
+        result_pe1_full_n,
+        result_pe1_write,
         na,
         nb,
         nc
@@ -41,20 +41,20 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [65:0] ping_dout;
+input  [79:0] ping_dout;
 input   ping_empty_n;
 output   ping_read;
-input  [65:0] ping1_dout;
+input  [79:0] ping1_dout;
 input   ping1_empty_n;
 output   ping1_read;
-input  [65:0] pong_dout;
+input  [79:0] pong_dout;
 input   pong_empty_n;
 output   pong_read;
-output  [65:0] result_pe4_din;
-input  [10:0] result_pe4_num_data_valid;
-input  [10:0] result_pe4_fifo_cap;
-input   result_pe4_full_n;
-output   result_pe4_write;
+output  [65:0] result_pe1_din;
+input  [10:0] result_pe1_num_data_valid;
+input  [10:0] result_pe1_fifo_cap;
+input   result_pe1_full_n;
+output   result_pe1_write;
 input  [31:0] na;
 input  [31:0] nb;
 input  [31:0] nc;
@@ -63,7 +63,7 @@ reg ap_idle;
 reg ping_read;
 reg ping1_read;
 reg pong_read;
-reg result_pe4_write;
+reg result_pe1_write;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
@@ -117,7 +117,7 @@ reg    ping_blk_n;
 wire    ap_block_pp0_stage0;
 reg    ping1_blk_n;
 reg    pong_blk_n;
-reg    result_pe4_blk_n;
+reg    result_pe1_blk_n;
 reg    ap_block_pp0_stage0_11001;
 wire   [0:0] icmp_ln171_fu_241_p2;
 reg   [0:0] icmp_ln171_reg_818;
@@ -207,15 +207,15 @@ wire   [0:0] or_ln173_1_fu_271_p2;
 wire   [0:0] hx_1_fu_531_p2;
 reg   [0:0] ap_sig_allocacmp_hx_load_1;
 reg   [31:0] x_val_fu_76;
-wire   [31:0] x_val_1_fu_291_p1;
+wire   [31:0] x_val_1_fu_281_p1;
 reg   [31:0] x_cid_fu_80;
 reg   [31:0] ap_sig_allocacmp_x_cid_2;
 reg   [31:0] y_val_fu_84;
-wire   [31:0] y_val_1_fu_353_p1;
+wire   [31:0] y_val_1_fu_343_p1;
 reg   [31:0] y_cid_fu_88;
 reg   [31:0] ap_sig_allocacmp_y_cid_3;
 reg   [31:0] z_val_fu_92;
-wire   [31:0] z_val_1_fu_415_p1;
+wire   [31:0] z_val_1_fu_405_p1;
 reg   [31:0] z_cid_fu_96;
 reg   [31:0] ap_sig_allocacmp_z_cid_3;
 reg    ap_block_pp0_stage0_01001;
@@ -314,7 +314,7 @@ spmm_fadd_32ns_32ns_32_8_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_8_full_dsp_1_U1978(
+fadd_32ns_32ns_32_8_full_dsp_1_U1976(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_143_p0),
@@ -329,7 +329,7 @@ spmm_fadd_32ns_32ns_32_8_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_8_full_dsp_1_U1979(
+fadd_32ns_32ns_32_8_full_dsp_1_U1977(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_147_p0),
@@ -624,7 +624,7 @@ always @ (posedge ap_clk) begin
         if ((ap_loop_init == 1'b1)) begin
             x_val_fu_76 <= 32'd0;
         end else if ((1'b1 == ap_condition_741)) begin
-            x_val_fu_76 <= x_val_1_fu_291_p1;
+            x_val_fu_76 <= x_val_1_fu_281_p1;
         end
     end
 end
@@ -644,7 +644,7 @@ always @ (posedge ap_clk) begin
         if ((ap_loop_init == 1'b1)) begin
             y_val_fu_84 <= 32'd0;
         end else if ((1'b1 == ap_condition_748)) begin
-            y_val_fu_84 <= y_val_1_fu_353_p1;
+            y_val_fu_84 <= y_val_1_fu_343_p1;
         end
     end
 end
@@ -664,7 +664,7 @@ always @ (posedge ap_clk) begin
         if ((ap_loop_init == 1'b1)) begin
             z_val_fu_92 <= 32'd0;
         end else if ((1'b1 == ap_condition_754)) begin
-            z_val_fu_92 <= z_val_1_fu_415_p1;
+            z_val_fu_92 <= z_val_1_fu_405_p1;
         end
     end
 end
@@ -936,17 +936,17 @@ end
 
 always @ (*) begin
     if (((ap_enable_reg_pp0_iter16 == 1'b1) & (1'b0 == ap_block_pp0_stage0))) begin
-        result_pe4_blk_n = result_pe4_full_n;
+        result_pe1_blk_n = result_pe1_full_n;
     end else begin
-        result_pe4_blk_n = 1'b1;
+        result_pe1_blk_n = 1'b1;
     end
 end
 
 always @ (*) begin
     if (((ap_enable_reg_pp0_iter16 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001))) begin
-        result_pe4_write = 1'b1;
+        result_pe1_write = 1'b1;
     end else begin
-        result_pe4_write = 1'b0;
+        result_pe1_write = 1'b0;
     end
 end
 
@@ -982,15 +982,15 @@ assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_01001 = (((ap_enable_reg_pp0_iter16 == 1'b1) & (result_pe4_full_n == 1'b0)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (((ap_predicate_op84_read_state2 == 1'b1) & (ping1_empty_n == 1'b0)) | ((ap_predicate_op68_read_state2 == 1'b1) & (ping_empty_n == 1'b0)) | ((ap_predicate_op100_read_state2 == 1'b1) & (pong_empty_n == 1'b0)))));
+    ap_block_pp0_stage0_01001 = (((ap_enable_reg_pp0_iter16 == 1'b1) & (result_pe1_full_n == 1'b0)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (((ap_predicate_op84_read_state2 == 1'b1) & (ping1_empty_n == 1'b0)) | ((ap_predicate_op68_read_state2 == 1'b1) & (ping_empty_n == 1'b0)) | ((ap_predicate_op100_read_state2 == 1'b1) & (pong_empty_n == 1'b0)))));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = (((ap_enable_reg_pp0_iter16 == 1'b1) & (result_pe4_full_n == 1'b0)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (((ap_predicate_op84_read_state2 == 1'b1) & (ping1_empty_n == 1'b0)) | ((ap_predicate_op68_read_state2 == 1'b1) & (ping_empty_n == 1'b0)) | ((ap_predicate_op100_read_state2 == 1'b1) & (pong_empty_n == 1'b0)))));
+    ap_block_pp0_stage0_11001 = (((ap_enable_reg_pp0_iter16 == 1'b1) & (result_pe1_full_n == 1'b0)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (((ap_predicate_op84_read_state2 == 1'b1) & (ping1_empty_n == 1'b0)) | ((ap_predicate_op68_read_state2 == 1'b1) & (ping_empty_n == 1'b0)) | ((ap_predicate_op100_read_state2 == 1'b1) & (pong_empty_n == 1'b0)))));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = (((ap_enable_reg_pp0_iter16 == 1'b1) & (result_pe4_full_n == 1'b0)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (((ap_predicate_op84_read_state2 == 1'b1) & (ping1_empty_n == 1'b0)) | ((ap_predicate_op68_read_state2 == 1'b1) & (ping_empty_n == 1'b0)) | ((ap_predicate_op100_read_state2 == 1'b1) & (pong_empty_n == 1'b0)))));
+    ap_block_pp0_stage0_subdone = (((ap_enable_reg_pp0_iter16 == 1'b1) & (result_pe1_full_n == 1'b0)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & (((ap_predicate_op84_read_state2 == 1'b1) & (ping1_empty_n == 1'b0)) | ((ap_predicate_op68_read_state2 == 1'b1) & (ping_empty_n == 1'b0)) | ((ap_predicate_op100_read_state2 == 1'b1) & (pong_empty_n == 1'b0)))));
 end
 
 assign ap_block_state10_pp0_stage0_iter9 = ~(1'b1 == 1'b1);
@@ -1008,7 +1008,7 @@ assign ap_block_state15_pp0_stage0_iter14 = ~(1'b1 == 1'b1);
 assign ap_block_state16_pp0_stage0_iter15 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_state17_pp0_stage0_iter16 = (result_pe4_full_n == 1'b0);
+    ap_block_state17_pp0_stage0_iter16 = (result_pe1_full_n == 1'b0);
 end
 
 assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
@@ -1135,7 +1135,7 @@ assign out_val_4_fu_699_p3 = ((and_ln183_reg_847_pp0_iter15_reg[0:0] == 1'b1) ? 
 
 assign out_val_fu_684_p3 = ((icmp_ln171_reg_818[0:0] == 1'b1) ? select_ln181_fu_677_p3 : 32'd0);
 
-assign result_pe4_din = tmp_fu_709_p3;
+assign result_pe1_din = tmp_fu_709_p3;
 
 assign select_ln171_1_fu_537_p3 = ((icmp_ln171_fu_241_p2[0:0] == 1'b1) ? select_ln181_1_fu_511_p3 : 32'd0);
 
@@ -1159,7 +1159,7 @@ assign trunc_ln174_fu_339_p1 = ping1_dout[31:0];
 
 assign trunc_ln175_fu_401_p1 = pong_dout[31:0];
 
-assign x_val_1_fu_291_p1 = trunc_ln173_fu_277_p1;
+assign x_val_1_fu_281_p1 = trunc_ln173_fu_277_p1;
 
 assign xor_ln171_fu_525_p2 = (1'd1 ^ and_ln171_fu_519_p2);
 
@@ -1173,8 +1173,8 @@ assign xor_ln182_fu_579_p2 = (1'd1 ^ and_ln182_fu_557_p2);
 
 assign xor_ln183_fu_625_p2 = (1'd1 ^ and_ln183_fu_603_p2);
 
-assign y_val_1_fu_353_p1 = trunc_ln174_fu_339_p1;
+assign y_val_1_fu_343_p1 = trunc_ln174_fu_339_p1;
 
-assign z_val_1_fu_415_p1 = trunc_ln175_fu_401_p1;
+assign z_val_1_fu_405_p1 = trunc_ln175_fu_401_p1;
 
 endmodule //spmm_flush_three

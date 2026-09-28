@@ -105,7 +105,7 @@ attribute shreg_extract : string;
     signal or_ln85_fu_133_p2 : STD_LOGIC_VECTOR (247 downto 0);
     signal tmp_168_fu_157_p4 : STD_LOGIC_VECTOR (223 downto 0);
     signal tmp_167_fu_147_p4 : STD_LOGIC_VECTOR (1 downto 0);
-    signal tmp_112_fu_139_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_104_fu_139_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (2 downto 0);
     signal ap_block_state1 : BOOLEAN;
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
@@ -355,7 +355,7 @@ begin
 
     grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_ap_start <= grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_ap_start_reg;
     or_ln85_fu_133_p2 <= (tmp_fu_115_p8 or ap_const_lv248_lc_4);
-    p_0_fu_167_p5 <= (((tmp_168_fu_157_p4 & tmp_167_fu_147_p4) & tmp_112_fu_139_p3) & grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_temp_dest_V_out);
+    p_0_fu_167_p5 <= (((tmp_168_fu_157_p4 & tmp_167_fu_147_p4) & tmp_104_fu_139_p3) & grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_temp_dest_V_out);
 
     rrequest1_read_assign_proc : process(grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_rrequest1_read, ap_CS_fsm_state2)
     begin
@@ -430,7 +430,7 @@ begin
         end if; 
     end process;
 
-    tmp_112_fu_139_p3 <= or_ln85_fu_133_p2(8 downto 8);
+    tmp_104_fu_139_p3 <= or_ln85_fu_133_p2(8 downto 8);
     tmp_167_fu_147_p4 <= or_ln85_fu_133_p2(17 downto 16);
     tmp_168_fu_157_p4 <= or_ln85_fu_133_p2(247 downto 24);
     tmp_fu_115_p8 <= ((((((grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_temp_data_V_out & grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_temp_Acid1_out) & grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_temp_Acid_out) & ap_const_lv6_0) & grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_temp_type_V_out) & ap_const_lv13_0) & grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_temp_dest_V_out);

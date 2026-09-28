@@ -1,0 +1,160 @@
+---
+MainSourceFile:  /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      41
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      42
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      43
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      44
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      45
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      46
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_47_1:  '
+    FileOffset:      47
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          208755
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_47_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_51_2:  '
+    FileOffset:      51
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          208895
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_51_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_53_3:  '
+    FileOffset:      53
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          208964
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_53_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_57_4:  '
+    FileOffset:      57
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          209100
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_57_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_61_5:  '
+    FileOffset:      61
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          209236
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_61_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_68_6:  '
+    FileOffset:      68
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          209603
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_68_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_80_7:  '
+    FileOffset:      80
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          210288
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_80_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_84_8:  '
+    FileOffset:      84
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          210417
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_84_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_90_9:  '
+    FileOffset:      90
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          210736
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_90_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_98_10:  '
+    FileOffset:      98
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          211161
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_98_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_98_11:  '
+    FileOffset:      98
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          211194
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_98_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_101_12:  '
+    FileOffset:      101
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          211361
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_101_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_107_13:  '
+    FileOffset:      107
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          211734
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_107_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_116_14:  '
+    FileOffset:      116
+    FilePath:        getrf_v4.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1/.autopilot/db/getrf_v4.pp.0.cpp
+        Offset:          212110
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_116_14: '
+...

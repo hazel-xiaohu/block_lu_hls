@@ -122,7 +122,7 @@ wire   [247:0] tmp_fu_115_p8;
 wire   [247:0] or_ln85_fu_133_p2;
 wire   [223:0] tmp_168_fu_157_p4;
 wire   [1:0] tmp_167_fu_147_p4;
-wire   [0:0] tmp_112_fu_139_p3;
+wire   [0:0] tmp_104_fu_139_p3;
 reg   [2:0] ap_NS_fsm;
 reg    ap_block_state1;
 reg    ap_ST_fsm_state1_blk;
@@ -368,9 +368,9 @@ assign grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_ap_start = grp_m
 
 assign or_ln85_fu_133_p2 = (tmp_fu_115_p8 | 248'd256);
 
-assign p_0_fu_167_p5 = {{{{tmp_168_fu_157_p4}, {tmp_167_fu_147_p4}}, {tmp_112_fu_139_p3}}, {grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_temp_dest_V_out}};
+assign p_0_fu_167_p5 = {{{{tmp_168_fu_157_p4}, {tmp_167_fu_147_p4}}, {tmp_104_fu_139_p3}}, {grp_merge_4_to_1_rrequest_Pipeline_VITIS_LOOP_24_1_fu_81_temp_dest_V_out}};
 
-assign tmp_112_fu_139_p3 = or_ln85_fu_133_p2[32'd8];
+assign tmp_104_fu_139_p3 = or_ln85_fu_133_p2[32'd8];
 
 assign tmp_167_fu_147_p4 = {{or_ln85_fu_133_p2[17:16]}};
 

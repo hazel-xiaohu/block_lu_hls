@@ -141,8 +141,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_pe4_dout</name>
-<Object>m_pe4</Object>
+<name>m_pe1_dout</name>
+<Object>m_pe1</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -152,8 +152,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_pe4_num_data_valid</name>
-<Object>m_pe4</Object>
+<name>m_pe1_num_data_valid</name>
+<Object>m_pe1</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -163,8 +163,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_pe4_fifo_cap</name>
-<Object>m_pe4</Object>
+<name>m_pe1_fifo_cap</name>
+<Object>m_pe1</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -174,8 +174,8 @@
 <Attribute>unknown</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_pe4_empty_n</name>
-<Object>m_pe4</Object>
+<name>m_pe1_empty_n</name>
+<Object>m_pe1</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -185,8 +185,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>m_pe4_read</name>
-<Object>m_pe4</Object>
+<name>m_pe1_read</name>
+<Object>m_pe1</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -203,7 +203,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>66</Bits>
+<Bits>80</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -236,7 +236,7 @@
 <IOProtocol>ap_fifo</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>66</Bits>
+<Bits>80</Bits>
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>

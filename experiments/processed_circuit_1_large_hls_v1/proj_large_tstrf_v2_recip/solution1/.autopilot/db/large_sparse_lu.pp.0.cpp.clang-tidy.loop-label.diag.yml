@@ -1,0 +1,482 @@
+---
+MainSourceFile:  /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_29_1:  '
+    FileOffset:      29
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          207147
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_29_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_31_2:  '
+    FileOffset:      31
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          207220
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_31_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_3:  '
+    FileOffset:      35
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          207365
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_39_4:  '
+    FileOffset:      39
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          207510
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_39_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_45_5:  '
+    FileOffset:      45
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          207731
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_45_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_52_6:  '
+    FileOffset:      52
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          208124
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_52_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_59_7:  '
+    FileOffset:      59
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          208390
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_59_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_91_1:  '
+    FileOffset:      91
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          209973
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_91_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_93_2:  '
+    FileOffset:      93
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          210072
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_93_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_94_3:  '
+    FileOffset:      94
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          210119
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_94_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_95_4:  '
+    FileOffset:      95
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          210201
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_95_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_96_5:  '
+    FileOffset:      96
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          210241
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_96_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_100_6:  '
+    FileOffset:      100
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          210425
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_100_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_131_1:  '
+    FileOffset:      131
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          212042
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_131_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_133_2:  '
+    FileOffset:      133
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          212141
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_133_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_134_3:  '
+    FileOffset:      134
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          212188
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_134_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_135_4:  '
+    FileOffset:      135
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          212270
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_135_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_136_5:  '
+    FileOffset:      136
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          212312
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_136_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_144_6:  '
+    FileOffset:      144
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          212731
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_144_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_171_1:  '
+    FileOffset:      171
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          214192
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_171_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_173_2:  '
+    FileOffset:      173
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          214266
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_173_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_176_3:  '
+    FileOffset:      176
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          214394
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_176_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_181_4:  '
+    FileOffset:      181
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          214598
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_181_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_183_5:  '
+    FileOffset:      183
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          214726
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_183_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_189_6:  '
+    FileOffset:      189
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          214971
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_189_6: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      241
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      242
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      243
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      244
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_247_1:  '
+    FileOffset:      247
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          217035
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_249_2:  '
+    FileOffset:      249
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          217147
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_249_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_250_3:  '
+    FileOffset:      250
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          217221
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_250_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_251_4:  '
+    FileOffset:      251
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          217282
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_251_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_257_5:  '
+    FileOffset:      257
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          217554
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_257_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_261_6:  '
+    FileOffset:      261
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          217655
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_261_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_265_7:  '
+    FileOffset:      265
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          217791
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_265_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_266_8:  '
+    FileOffset:      266
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          217839
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_266_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_273_9:  '
+    FileOffset:      273
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          218096
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_273_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_279_10:  '
+    FileOffset:      279
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          218307
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_279_10: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      321
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      322
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      323
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      324
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_1p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      325
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      326
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      327
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_330_1:  '
+    FileOffset:      330
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          220919
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_330_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_332_2:  '
+    FileOffset:      332
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          221033
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_332_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_333_3:  '
+    FileOffset:      333
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          221088
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_333_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_340_4:  '
+    FileOffset:      340
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          221223
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_340_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_352_5:  '
+    FileOffset:      352
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          221588
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_352_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_353_6:  '
+    FileOffset:      353
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          221649
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_353_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_359_7:  '
+    FileOffset:      359
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          221911
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_359_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_363_8:  '
+    FileOffset:      363
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          222010
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_363_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_367_9:  '
+    FileOffset:      367
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          222146
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_367_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_368_10:  '
+    FileOffset:      368
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          222194
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_368_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_378_11:  '
+    FileOffset:      378
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          222498
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_378_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_383_12:  '
+    FileOffset:      383
+    FilePath:        large_sparse_lu.cpp
+    Replacements:    
+      - FilePath:        /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_tstrf_v2_recip/solution1/.autopilot/db/large_sparse_lu.pp.0.cpp
+        Offset:          222637
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_383_12: '
+...

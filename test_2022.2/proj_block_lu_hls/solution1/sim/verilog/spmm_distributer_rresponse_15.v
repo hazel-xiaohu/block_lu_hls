@@ -128,9 +128,9 @@ wire   [167:0] or_ln112_1_fu_216_p2;
 reg    ap_block_state3;
 wire   [191:0] or_ln112_2_fu_138_p9;
 wire   [191:0] or_ln112_fu_158_p2;
-wire   [159:0] tmp_312_fu_192_p4;
-wire   [2:0] tmp_311_fu_182_p4;
-wire   [2:0] tmp_310_fu_172_p4;
+wire   [159:0] tmp_308_fu_192_p4;
+wire   [2:0] tmp_307_fu_182_p4;
+wire   [2:0] tmp_306_fu_172_p4;
 wire   [0:0] tmp_fu_164_p3;
 wire   [167:0] or_ln112_6_fu_202_p6;
 reg   [2:0] ap_NS_fsm;
@@ -442,15 +442,15 @@ assign or_ln112_1_fu_216_p2 = (or_ln112_6_fu_202_p6 | 168'd1);
 
 assign or_ln112_2_fu_138_p9 = {{{{{{{{grp_distributer_rresponse_15_Pipeline_VITIS_LOOP_92_1_fu_108_temp_data_V_out}, {5'd0}}, {grp_distributer_rresponse_15_Pipeline_VITIS_LOOP_92_1_fu_108_temp_result_V_out}}, {5'd0}}, {grp_distributer_rresponse_15_Pipeline_VITIS_LOOP_92_1_fu_108_temp_dest_V_out}}, {7'd0}}, {grp_distributer_rresponse_15_Pipeline_VITIS_LOOP_92_1_fu_108_temp_no_use_out}}, {8'd0}};
 
-assign or_ln112_6_fu_202_p6 = {{{{{tmp_312_fu_192_p4}, {tmp_311_fu_182_p4}}, {tmp_310_fu_172_p4}}, {tmp_fu_164_p3}}, {1'd0}};
+assign or_ln112_6_fu_202_p6 = {{{{{tmp_308_fu_192_p4}, {tmp_307_fu_182_p4}}, {tmp_306_fu_172_p4}}, {tmp_fu_164_p3}}, {1'd0}};
 
 assign or_ln112_fu_158_p2 = (or_ln112_2_fu_138_p9 | 192'd1);
 
-assign tmp_310_fu_172_p4 = {{or_ln112_fu_158_p2[18:16]}};
+assign tmp_306_fu_172_p4 = {{or_ln112_fu_158_p2[18:16]}};
 
-assign tmp_311_fu_182_p4 = {{or_ln112_fu_158_p2[26:24]}};
+assign tmp_307_fu_182_p4 = {{or_ln112_fu_158_p2[26:24]}};
 
-assign tmp_312_fu_192_p4 = {{or_ln112_fu_158_p2[191:32]}};
+assign tmp_308_fu_192_p4 = {{or_ln112_fu_158_p2[191:32]}};
 
 assign tmp_fu_164_p3 = or_ln112_fu_158_p2[32'd8];
 

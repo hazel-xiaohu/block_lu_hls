@@ -72,30 +72,30 @@ reg    ap_done_reg;
 wire    ap_CS_fsm_state1;
 reg    vcache_bank1_cresult1_blk_n;
 wire    ap_CS_fsm_state3;
-wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_start;
-wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_done;
-wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_idle;
-wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_ready;
-wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank4_result_read;
-wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank3_result_read;
-wire   [1030:0] grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank1_cresult1_din;
-wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank1_cresult1_write;
-wire   [1023:0] grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_data_V_out;
-wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_data_V_out_ap_vld;
-wire   [2:0] grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_peID_V_out;
-wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_peID_V_out_ap_vld;
-wire   [2:0] grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_type_V_out;
-wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_type_V_out_ap_vld;
-reg    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_start_reg;
+wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_start;
+wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_done;
+wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_idle;
+wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_ready;
+wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank4_result_read;
+wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank3_result_read;
+wire   [1030:0] grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank1_cresult1_din;
+wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank1_cresult1_write;
+wire   [1023:0] grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_data_V_out;
+wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_data_V_out_ap_vld;
+wire   [2:0] grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_peID_V_out;
+wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_peID_V_out_ap_vld;
+wire   [2:0] grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_type_V_out;
+wire    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_type_V_out_ap_vld;
+reg    grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_start_reg;
 reg    ap_block_state1_ignore_call8;
 wire    ap_CS_fsm_state2;
-wire   [1030:0] or_ln571_4_fu_167_p2;
-wire   [1047:0] or_ln571_s_fu_103_p7;
-wire   [1047:0] or_ln571_fu_119_p2;
+wire   [1030:0] or_ln567_2_fu_167_p2;
+wire   [1047:0] or_ln567_1_fu_103_p7;
+wire   [1047:0] or_ln567_fu_119_p2;
 wire   [1023:0] tmp_301_fu_145_p4;
 wire   [2:0] tmp2_fu_135_p4;
 wire   [2:0] tmp_s_fu_125_p4;
-wire   [1030:0] or_ln571_1_fu_155_p5;
+wire   [1030:0] or_ln567_4_fu_155_p5;
 reg   [2:0] ap_NS_fsm;
 reg    ap_block_state1;
 reg    ap_ST_fsm_state1_blk;
@@ -107,37 +107,37 @@ wire    ap_ce_reg;
 initial begin
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 3'd1;
-#0 grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_start_reg = 1'b0;
+#0 grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_start_reg = 1'b0;
 end
 
-spmm_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1 grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81(
+spmm_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1 grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_start),
-    .ap_done(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_done),
-    .ap_idle(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_idle),
-    .ap_ready(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_ready),
+    .ap_start(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_start),
+    .ap_done(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_done),
+    .ap_idle(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_idle),
+    .ap_ready(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_ready),
     .vcache_bank4_result_dout(vcache_bank4_result_dout),
     .vcache_bank4_result_num_data_valid(4'd0),
     .vcache_bank4_result_fifo_cap(4'd0),
     .vcache_bank4_result_empty_n(vcache_bank4_result_empty_n),
-    .vcache_bank4_result_read(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank4_result_read),
+    .vcache_bank4_result_read(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank4_result_read),
     .vcache_bank3_result_dout(vcache_bank3_result_dout),
     .vcache_bank3_result_num_data_valid(4'd0),
     .vcache_bank3_result_fifo_cap(4'd0),
     .vcache_bank3_result_empty_n(vcache_bank3_result_empty_n),
-    .vcache_bank3_result_read(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank3_result_read),
-    .vcache_bank1_cresult1_din(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank1_cresult1_din),
+    .vcache_bank3_result_read(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank3_result_read),
+    .vcache_bank1_cresult1_din(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank1_cresult1_din),
     .vcache_bank1_cresult1_num_data_valid(4'd0),
     .vcache_bank1_cresult1_fifo_cap(4'd0),
     .vcache_bank1_cresult1_full_n(vcache_bank1_cresult1_full_n),
-    .vcache_bank1_cresult1_write(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank1_cresult1_write),
-    .temp_data_V_out(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_data_V_out),
-    .temp_data_V_out_ap_vld(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_data_V_out_ap_vld),
-    .temp_peID_V_out(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_peID_V_out),
-    .temp_peID_V_out_ap_vld(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_peID_V_out_ap_vld),
-    .temp_type_V_out(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_type_V_out),
-    .temp_type_V_out_ap_vld(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_type_V_out_ap_vld)
+    .vcache_bank1_cresult1_write(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank1_cresult1_write),
+    .temp_data_V_out(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_data_V_out),
+    .temp_data_V_out_ap_vld(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_data_V_out_ap_vld),
+    .temp_peID_V_out(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_peID_V_out),
+    .temp_peID_V_out_ap_vld(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_peID_V_out_ap_vld),
+    .temp_type_V_out(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_type_V_out),
+    .temp_type_V_out_ap_vld(grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_type_V_out_ap_vld)
 );
 
 always @ (posedge ap_clk) begin
@@ -162,12 +162,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_start_reg <= 1'b0;
+        grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_start_reg <= 1'b0;
     end else begin
         if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_start_reg <= 1'b1;
-        end else if ((grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_ready == 1'b1)) begin
-            grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_start_reg <= 1'b0;
+            grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_start_reg <= 1'b1;
+        end else if ((grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_ready == 1'b1)) begin
+            grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -181,7 +181,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_done == 1'b0)) begin
+    if ((grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_done == 1'b0)) begin
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
@@ -230,11 +230,11 @@ end
 
 always @ (*) begin
     if (((vcache_bank1_cresult1_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
-        vcache_bank1_cresult1_din = or_ln571_4_fu_167_p2;
+        vcache_bank1_cresult1_din = or_ln567_2_fu_167_p2;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        vcache_bank1_cresult1_din = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank1_cresult1_din;
+        vcache_bank1_cresult1_din = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank1_cresult1_din;
     end else begin
-        vcache_bank1_cresult1_din = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank1_cresult1_din;
+        vcache_bank1_cresult1_din = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank1_cresult1_din;
     end
 end
 
@@ -242,7 +242,7 @@ always @ (*) begin
     if (((vcache_bank1_cresult1_full_n == 1'b1) & (1'b1 == ap_CS_fsm_state3))) begin
         vcache_bank1_cresult1_write = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        vcache_bank1_cresult1_write = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank1_cresult1_write;
+        vcache_bank1_cresult1_write = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank1_cresult1_write;
     end else begin
         vcache_bank1_cresult1_write = 1'b0;
     end
@@ -250,7 +250,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        vcache_bank3_result_read = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank3_result_read;
+        vcache_bank3_result_read = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank3_result_read;
     end else begin
         vcache_bank3_result_read = 1'b0;
     end
@@ -258,7 +258,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        vcache_bank4_result_read = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_vcache_bank4_result_read;
+        vcache_bank4_result_read = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_vcache_bank4_result_read;
     end else begin
         vcache_bank4_result_read = 1'b0;
     end
@@ -274,7 +274,7 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -307,20 +307,20 @@ always @ (*) begin
     ap_block_state1_ignore_call8 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
 end
 
-assign grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_start = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_ap_start_reg;
+assign grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_start = grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_ap_start_reg;
 
-assign or_ln571_1_fu_155_p5 = {{{{tmp_301_fu_145_p4}, {tmp2_fu_135_p4}}, {tmp_s_fu_125_p4}}, {1'd0}};
+assign or_ln567_1_fu_103_p7 = {{{{{{grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_data_V_out}, {5'd0}}, {grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_peID_V_out}}, {5'd0}}, {grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_529_1_fu_81_temp_type_V_out}}, {8'd0}};
 
-assign or_ln571_4_fu_167_p2 = (or_ln571_1_fu_155_p5 | 1031'd1);
+assign or_ln567_2_fu_167_p2 = (or_ln567_4_fu_155_p5 | 1031'd1);
 
-assign or_ln571_fu_119_p2 = (or_ln571_s_fu_103_p7 | 1048'd1);
+assign or_ln567_4_fu_155_p5 = {{{{tmp_301_fu_145_p4}, {tmp2_fu_135_p4}}, {tmp_s_fu_125_p4}}, {1'd0}};
 
-assign or_ln571_s_fu_103_p7 = {{{{{{grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_data_V_out}, {5'd0}}, {grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_peID_V_out}}, {5'd0}}, {grp_merge_2_to_1_vcresult_42_Pipeline_VITIS_LOOP_533_1_fu_81_temp_type_V_out}}, {8'd0}};
+assign or_ln567_fu_119_p2 = (or_ln567_1_fu_103_p7 | 1048'd1);
 
-assign tmp2_fu_135_p4 = {{or_ln571_fu_119_p2[18:16]}};
+assign tmp2_fu_135_p4 = {{or_ln567_fu_119_p2[18:16]}};
 
-assign tmp_301_fu_145_p4 = {{or_ln571_fu_119_p2[1047:24]}};
+assign tmp_301_fu_145_p4 = {{or_ln567_fu_119_p2[1047:24]}};
 
-assign tmp_s_fu_125_p4 = {{or_ln571_fu_119_p2[10:8]}};
+assign tmp_s_fu_125_p4 = {{or_ln567_fu_119_p2[10:8]}};
 
 endmodule //spmm_merge_2_to_1_vcresult_42

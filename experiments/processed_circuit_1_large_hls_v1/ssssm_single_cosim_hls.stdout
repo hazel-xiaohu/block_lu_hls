@@ -1,0 +1,301 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'root' on host 'team-fceo5ww5pmwf-main' (Linux_x86_64 version 6.8.0-138-generic) on Sun Sep 27 15:46:42 +0000 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.3 LTS
+INFO: [HLS 200-10] In directory '/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1'
+WARNING: [HLS 200-40] Environment variable 'C_INCLUDE_PATH' is set to /output/xilinx_compat/usr/include:/output/xilinx_compat/usr/include/x86_64-linux-gnu.
+WARNING: [HLS 200-40] Environment variable 'CPLUS_INCLUDE_PATH' is set to /output/xilinx_compat/usr/include:/output/xilinx_compat/usr/include/x86_64-linux-gnu.
+Sourcing Tcl script 'run_cosim_ssssm_single.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset proj_large_ssssm_single_cosim 
+INFO: [HLS 200-10] Creating and opening project '/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_ssssm_single_cosim'.
+INFO: [HLS 200-1510] Running: add_files large_sparse_lu.cpp 
+INFO: [HLS 200-10] Adding design file 'large_sparse_lu.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb_large_sparse_lu_ssssm_single.cpp 
+INFO: [HLS 200-10] Adding test bench file 'tb_large_sparse_lu_ssssm_single.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top large_ssssm 
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_ssssm_single_cosim/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu15eg-ffvb1156-2-i 
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+INFO: [HLS 200-1510] Running: create_clock -period 5.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+Running Dispatch Server on port: 43745
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.02 seconds; current allocated memory: 197.508 MB.
+INFO: [HLS 200-10] Analyzing design file 'large_sparse_lu.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.76 seconds. CPU system time: 0.73 seconds. Elapsed time: 1.54 seconds; current allocated memory: 205.223 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'ss0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:173:44)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_173_2'(large_sparse_lu.cpp:173:27) has been inferred on bundle 'ss1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:173:27)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'sa0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:176:44)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'sl0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:181:44)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'su0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:183:48)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 has been inferred on bundle 'ss1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:189:27)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 has been inferred on bundle 'ss2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (large_sparse_lu.cpp:189:27)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.14 seconds. CPU system time: 0.69 seconds. Elapsed time: 3.91 seconds; current allocated memory: 205.684 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 205.684 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 206.477 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 206.578 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_173_2' (large_sparse_lu.cpp:173) in function 'large_ssssm' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_176_3' (large_sparse_lu.cpp:176) in function 'large_ssssm' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_183_5' (large_sparse_lu.cpp:183) in function 'large_ssssm' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_189_6' (large_sparse_lu.cpp:189) in function 'large_ssssm' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 229.086 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_181_4' (large_sparse_lu.cpp:181:42) in function 'large_ssssm' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_171_1' (large_sparse_lu.cpp:171:38) in function 'large_ssssm' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.11 seconds; current allocated memory: 259.227 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'large_ssssm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_ssssm_Pipeline_VITIS_LOOP_173_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_173_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, loop 'VITIS_LOOP_173_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.14 seconds; current allocated memory: 259.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 259.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_ssssm_Pipeline_VITIS_LOOP_176_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_176_3'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln178', large_sparse_lu.cpp:178)) in the first pipeline iteration (II = 1 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln178', large_sparse_lu.cpp:178)) in the first pipeline iteration (II = 2 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln178', large_sparse_lu.cpp:178)) in the first pipeline iteration (II = 3 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln178', large_sparse_lu.cpp:178)) in the first pipeline iteration (II = 4 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-880] The II Violation in module 'large_ssssm_Pipeline_VITIS_LOOP_176_3' (loop 'VITIS_LOOP_176_3'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus response operation ('sw0_addr_1_resp', large_sparse_lu.cpp:179) on port 'sw0' (large_sparse_lu.cpp:179) and bus request operation ('sw0_load_req', large_sparse_lu.cpp:179) on port 'sw0' (large_sparse_lu.cpp:179).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'large_ssssm_Pipeline_VITIS_LOOP_176_3' (loop 'VITIS_LOOP_176_3'): Unable to enforce a carried dependence constraint (II = 21, distance = 1, offset = 1) between bus response operation ('sw0_addr_1_resp', large_sparse_lu.cpp:179) on port 'sw0' (large_sparse_lu.cpp:179) and bus request operation ('sw0_load_req', large_sparse_lu.cpp:179) on port 'sw0' (large_sparse_lu.cpp:179).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 22, Depth = 42, loop 'VITIS_LOOP_176_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 259.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 259.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_ssssm_Pipeline_VITIS_LOOP_183_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_183_5'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln185', large_sparse_lu.cpp:185)) in the first pipeline iteration (II = 1 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln185', large_sparse_lu.cpp:185)) in the first pipeline iteration (II = 2 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln185', large_sparse_lu.cpp:185)) in the first pipeline iteration (II = 3 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln185', large_sparse_lu.cpp:185)) in the first pipeline iteration (II = 4 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-880] The II Violation in module 'large_ssssm_Pipeline_VITIS_LOOP_183_5' (loop 'VITIS_LOOP_183_5'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus response operation ('sw0_addr_3_resp', large_sparse_lu.cpp:186) on port 'sw0' (large_sparse_lu.cpp:186) and bus request operation ('sw0_load_2_req', large_sparse_lu.cpp:186) on port 'sw0' (large_sparse_lu.cpp:186).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'large_ssssm_Pipeline_VITIS_LOOP_183_5' (loop 'VITIS_LOOP_183_5'): Unable to enforce a carried dependence constraint (II = 21, distance = 1, offset = 1) between bus response operation ('sw0_addr_3_resp', large_sparse_lu.cpp:186) on port 'sw0' (large_sparse_lu.cpp:186) and bus request operation ('sw0_load_2_req', large_sparse_lu.cpp:186) on port 'sw0' (large_sparse_lu.cpp:186).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 22, Depth = 46, loop 'VITIS_LOOP_183_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 259.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 259.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_ssssm_Pipeline_VITIS_LOOP_189_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_189_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'VITIS_LOOP_189_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 259.227 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 259.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_ssssm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 260.863 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 264.863 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_ssssm_Pipeline_VITIS_LOOP_173_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_ssssm_Pipeline_VITIS_LOOP_173_2' pipeline 'VITIS_LOOP_173_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_173_2/m_axi_ss1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_ssssm_Pipeline_VITIS_LOOP_173_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 264.863 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_ssssm_Pipeline_VITIS_LOOP_176_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_ssssm_Pipeline_VITIS_LOOP_176_3' pipeline 'VITIS_LOOP_176_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_8_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_ssssm_Pipeline_VITIS_LOOP_176_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.15 seconds; current allocated memory: 267.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_ssssm_Pipeline_VITIS_LOOP_183_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_8_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_ssssm_Pipeline_VITIS_LOOP_183_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 271.332 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_ssssm_Pipeline_VITIS_LOOP_189_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_ssssm_Pipeline_VITIS_LOOP_189_6' pipeline 'VITIS_LOOP_189_6' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss1_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_ssssm_Pipeline_VITIS_LOOP_189_6/m_axi_ss2_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_ssssm_Pipeline_VITIS_LOOP_189_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 275.125 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_ssssm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/sa0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/sa1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/sa2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/sl0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/sl1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/sl2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/su0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/su1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/su2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/ss0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/ss1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/ss2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/sw0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/sw1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/a_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/a_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/a_val' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/l_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/l_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/l_val' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/u_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/u_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/u_val' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/s_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/s_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/s_val' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/work' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/mark' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/rows' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/status' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_ssssm/muladds' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'large_ssssm' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'a_ptr', 'a_idx', 'a_val', 'l_ptr', 'l_idx', 'l_val', 'u_ptr', 'u_idx', 'u_val', 's_ptr', 's_idx', 's_val', 'work', 'mark' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_8_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_ssssm'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.33 seconds; current allocated memory: 281.109 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.73 seconds. CPU system time: 0.08 seconds. Elapsed time: 0.89 seconds; current allocated memory: 301.414 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 5.39 seconds. CPU system time: 0.07 seconds. Elapsed time: 5.5 seconds; current allocated memory: 304.840 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for large_ssssm.
+INFO: [VLOG 209-307] Generating Verilog RTL for large_ssssm.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 273.97 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 12.68 seconds. CPU system time: 1.75 seconds. Elapsed time: 15.45 seconds; current allocated memory: 107.332 MB.
+INFO: [HLS 200-1510] Running: cosim_design -setup -trace_level none -argv /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/prepared/ 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_large_ssssm.cpp
+   Compiling large_sparse_lu.cpp_pre.cpp.tb.cpp
+   Compiling tb_large_sparse_lu_ssssm_single.cpp_pre.cpp.tb.cpp
+   Compiling apatb_large_ssssm_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+ssssm status=0 n=1312 muladds=135228
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_vivado_gen_ip.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1253.520 ; gain = 0.023 ; free physical = 89556 ; free virtual = 93620
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/openbayes/home/tools/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'large_ssssm_fmul_32ns_32ns_32_5_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_ssssm_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_ssssm_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'large_ssssm_faddfsub_32ns_32ns_32_8_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_ssssm_faddfsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_ssssm_faddfsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 27 15:47:31 2026...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 19.44 seconds. CPU system time: 4.45 seconds. Elapsed time: 33.44 seconds; current allocated memory: 13.586 MB.
+INFO: [HLS 200-112] Total CPU user time: 1962.07 seconds. Total CPU system time: 28.94 seconds. Total elapsed time: 1978.21 seconds; peak allocated memory: 318.426 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Sep 27 16:19:39 2026...

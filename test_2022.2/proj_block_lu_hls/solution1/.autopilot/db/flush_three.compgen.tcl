@@ -16,7 +16,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1981 \
+    id 1979 \
     name ping \
     type fifo \
     dir I \
@@ -24,14 +24,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_ping \
     op interface \
-    ports { ping_dout { I 66 vector } ping_empty_n { I 1 bit } ping_read { O 1 bit } } \
+    ports { ping_dout { I 80 vector } ping_empty_n { I 1 bit } ping_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1982 \
+    id 1980 \
     name ping1 \
     type fifo \
     dir I \
@@ -39,14 +39,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_ping1 \
     op interface \
-    ports { ping1_dout { I 66 vector } ping1_empty_n { I 1 bit } ping1_read { O 1 bit } } \
+    ports { ping1_dout { I 80 vector } ping1_empty_n { I 1 bit } ping1_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1983 \
+    id 1981 \
     name pong \
     type fifo \
     dir I \
@@ -54,14 +54,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_pong \
     op interface \
-    ports { pong_dout { I 66 vector } pong_empty_n { I 1 bit } pong_read { O 1 bit } } \
+    ports { pong_dout { I 80 vector } pong_empty_n { I 1 bit } pong_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1984 \
+    id 1982 \
     name na \
     type other \
     dir I \
@@ -76,7 +76,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1985 \
+    id 1983 \
     name nb \
     type other \
     dir I \
@@ -91,7 +91,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1986 \
+    id 1984 \
     name nc \
     type other \
     dir I \
@@ -106,15 +106,15 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1987 \
-    name result_pe4 \
+    id 1985 \
+    name result_pe1 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_result_pe4 \
+    corename dc_result_pe1 \
     op interface \
-    ports { result_pe4_din { O 66 vector } result_pe4_num_data_valid { I 11 vector } result_pe4_fifo_cap { I 11 vector } result_pe4_full_n { I 1 bit } result_pe4_write { O 1 bit } } \
+    ports { result_pe1_din { O 66 vector } result_pe1_num_data_valid { I 11 vector } result_pe1_fifo_cap { I 11 vector } result_pe1_full_n { I 1 bit } result_pe1_write { O 1 bit } } \
 } "
 }
 

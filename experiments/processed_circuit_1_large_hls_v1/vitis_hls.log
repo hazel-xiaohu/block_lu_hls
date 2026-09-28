@@ -1,0 +1,554 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'root' on host 'team-fceo5ww5pmwf-main' (Linux_x86_64 version 6.8.0-138-generic) on Mon Sep 28 02:13:27 +0000 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.3 LTS
+INFO: [HLS 200-10] In directory '/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1'
+WARNING: [HLS 200-40] Environment variable 'C_INCLUDE_PATH' is set to /output/xilinx_compat/usr/include:/output/xilinx_compat/usr/include/x86_64-linux-gnu.
+WARNING: [HLS 200-40] Environment variable 'CPLUS_INCLUDE_PATH' is set to /output/xilinx_compat/usr/include:/output/xilinx_compat/usr/include/x86_64-linux-gnu.
+Sourcing Tcl script 'run_getrf_v4.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset proj_large_getrf_v4 
+INFO: [HLS 200-10] Opening and resetting project '/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4'.
+INFO: [HLS 200-1510] Running: add_files large_sparse_lu.cpp 
+INFO: [HLS 200-10] Adding design file 'large_sparse_lu.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files getrf_v2.cpp 
+INFO: [HLS 200-10] Adding design file 'getrf_v2.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files getrf_v3.cpp 
+INFO: [HLS 200-10] Adding design file 'getrf_v3.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files getrf_v4.cpp 
+INFO: [HLS 200-10] Adding design file 'getrf_v4.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb_getrf_v4.cpp 
+INFO: [HLS 200-10] Adding test bench file 'tb_getrf_v4.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top large_getrf_v4 
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/proj_large_getrf_v4/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xczu15eg-ffvb1156-2-i 
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+INFO: [HLS 200-1510] Running: create_clock -period 5.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+Running Dispatch Server on port: 42131
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.03 seconds; current allocated memory: 197.539 MB.
+INFO: [HLS 200-10] Analyzing design file 'getrf_v4.cpp' ... 
+WARNING: [HLS 207-5559] Only for/while loops support the 'Unroll ' (getrf_v4.cpp:108:9)
+INFO: [HLS 200-10] Analyzing design file 'getrf_v3.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'getrf_v2.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'large_sparse_lu.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.2 seconds. CPU system time: 2.85 seconds. Elapsed time: 5.25 seconds; current allocated memory: 206.324 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_90_9' (getrf_v4.cpp:90:34) in function 'large_getrf_v4' completely with a factor of 4 (getrf_v4.cpp:15:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::data() const' into 'fp_struct<float>::to_float() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:351:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_float() const' into 'fp_struct<float>::to_ieee() const' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:375:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::to_ieee() const' into 'float generic_copysign<float>(float, float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_copysign.h:10:0)
+INFO: [HLS 214-178] Inlining function 'float generic_copysign<float>(float, float)' into 'float generic_fabs<float>(float)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_fabs.h:12:0)
+INFO: [HLS 214-178] Inlining function 'float generic_fabs<float>(float)' into 'fabsf' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/c/fabsfloat.cpp:7:0)
+INFO: [HLS 214-178] Inlining function 'fabsf' into 'large_getrf_v4' (getrf_v4.cpp:15:0)
+INFO: [HLS 214-248] Applying array_partition to 'work_bank': Complete partitioning on dimension 1. (getrf_v4.cpp:34:16)
+INFO: [HLS 214-248] Applying array_partition to 'pattern_bank': Complete partitioning on dimension 1. (getrf_v4.cpp:35:15)
+INFO: [HLS 214-248] Applying array_partition to 'worktag_bank': Complete partitioning on dimension 1. (getrf_v4.cpp:35:50)
+INFO: [HLS 214-248] Applying array_partition to 'js': Complete partitioning on dimension 1. (getrf_v4.cpp:85:27)
+INFO: [HLS 214-248] Applying array_partition to 'vs': Complete partitioning on dimension 1. (getrf_v4.cpp:85:51)
+INFO: [HLS 214-248] Applying array_partition to 'valid': Complete partitioning on dimension 1. (getrf_v4.cpp:85:69)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'v4l0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (getrf_v4.cpp:53:42)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_53_3'(getrf_v4.cpp:53:26) has been inferred on bundle 'v4l1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (getrf_v4.cpp:53:26)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'v4u0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (getrf_v4.cpp:57:42)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 has been inferred on bundle 'v4u1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (getrf_v4.cpp:57:26)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'v4a0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (getrf_v4.cpp:61:42)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_80_7'(getrf_v4.cpp:80:30) has been inferred on bundle 'v4u1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (getrf_v4.cpp:80:30)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_80_7'(getrf_v4.cpp:80:30) has been inferred on bundle 'v4u2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (getrf_v4.cpp:80:30)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 has been inferred on bundle 'v4u1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (getrf_v4.cpp:116:28)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 has been inferred on bundle 'v4u2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (getrf_v4.cpp:116:28)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.86 seconds. CPU system time: 0.82 seconds. Elapsed time: 4.79 seconds; current allocated memory: 207.035 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 207.035 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.14 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.18 seconds; current allocated memory: 234.551 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.29 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.32 seconds; current allocated memory: 273.848 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_98_11' (getrf_v4.cpp:89) in function 'large_getrf_v4' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_101_12' (getrf_v4.cpp:101) in function 'large_getrf_v4' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_107_13' (getrf_v4.cpp:107) in function 'large_getrf_v4' automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (getrf_v4.cpp:89:7) to (getrf_v4.cpp:98:86) in function 'large_getrf_v4'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.51 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.6 seconds; current allocated memory: 339.457 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_98_10' (getrf_v4.cpp:89:7) in function 'large_getrf_v4' the outer loop is not a perfect loop because either the parent loop or the sub loop has no computeable trip count.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_84_8' (getrf_v4.cpp:84:44) in function 'large_getrf_v4' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_68_6' (getrf_v4.cpp:68:40) in function 'large_getrf_v4' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_51_2' (getrf_v4.cpp:51:36) in function 'large_getrf_v4' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-472] Inferring partial write operation for 'pattern_bank' (getrf_v4.cpp:49:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'worktag_bank' (getrf_v4.cpp:49:59)
+INFO: [HLS 200-472] Inferring partial write operation for 'inv_diag' (getrf_v4.cpp:49:73)
+INFO: [HLS 200-472] Inferring partial write operation for 'pattern_bank' (getrf_v4.cpp:55:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'pattern_bank' (getrf_v4.cpp:59:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'work_bank' (getrf_v4.cpp:65:74)
+INFO: [HLS 200-472] Inferring partial write operation for 'worktag_bank' (getrf_v4.cpp:65:104)
+INFO: [HLS 200-472] Inferring partial write operation for 'work_bank' (getrf_v4.cpp:66:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'work_bank' (getrf_v4.cpp:72:74)
+INFO: [HLS 200-472] Inferring partial write operation for 'worktag_bank' (getrf_v4.cpp:72:104)
+INFO: [HLS 200-472] Inferring partial write operation for 'row_idx' (getrf_v4.cpp:82:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'row_val' (getrf_v4.cpp:82:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'work_bank' (getrf_v4.cpp:103:86)
+INFO: [HLS 200-472] Inferring partial write operation for 'worktag_bank' (getrf_v4.cpp:103:116)
+INFO: [HLS 200-472] Inferring partial write operation for 'work_bank' (getrf_v4.cpp:104:49)
+INFO: [HLS 200-472] Inferring partial write operation for 'work_bank' (getrf_v4.cpp:110:86)
+INFO: [HLS 200-472] Inferring partial write operation for 'worktag_bank' (getrf_v4.cpp:110:116)
+INFO: [HLS 200-472] Inferring partial write operation for 'work_bank' (getrf_v4.cpp:111:49)
+INFO: [HLS 200-472] Inferring partial write operation for 'work_bank' (getrf_v4.cpp:119:74)
+INFO: [HLS 200-472] Inferring partial write operation for 'worktag_bank' (getrf_v4.cpp:119:104)
+INFO: [HLS 200-472] Inferring partial write operation for 'inv_diag' (getrf_v4.cpp:124:20)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.38 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.51 seconds; current allocated memory: 430.809 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'large_getrf_v4' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_v4_Pipeline_VITIS_LOOP_47_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_47_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_47_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.22 seconds; current allocated memory: 430.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 434.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_53_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_53_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 434.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 434.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_57_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_57_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 434.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 434.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_v4_Pipeline_VITIS_LOOP_61_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_61_5'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln64', getrf_v4.cpp:64)) in the first pipeline iteration (II = 1 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln64', getrf_v4.cpp:64)) in the first pipeline iteration (II = 2 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln64', getrf_v4.cpp:64)) in the first pipeline iteration (II = 3 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln64', getrf_v4.cpp:64)) in the first pipeline iteration (II = 4 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln64', getrf_v4.cpp:64)) in the first pipeline iteration (II = 7 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln64_1', getrf_v4.cpp:64)) in the first pipeline iteration (II = 8 cycles).
+Resolution: For help on HLS 200-878 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-878.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 9, Depth = 23, loop 'VITIS_LOOP_61_5'
+WARNING: [HLS 200-871] Estimated clock period (4.887ns) exceeds the target (target clock period: 5ns, clock uncertainty: 1.35ns, effective delay budget: 3.65ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'large_getrf_v4_Pipeline_VITIS_LOOP_61_5' consists of the following:	bus read operation ('c', getrf_v4.cpp:63) on port 'v4a1' (getrf_v4.cpp:63) [63]  (3.65 ns)
+	'getelementptr' operation ('pattern_bank_addr', getrf_v4.cpp:64) [69]  (0 ns)
+	'load' operation ('pattern_bank_load', getrf_v4.cpp:64) on array 'pattern_bank' [74]  (1.24 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 434.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 434.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_80_7'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_80_7'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 434.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 434.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_v4_Pipeline_VITIS_LOOP_98_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_98_11'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_98_11'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 434.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 434.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_v4_Pipeline_VITIS_LOOP_107_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_107_13'.
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_v4_Pipeline_VITIS_LOOP_107_13' (loop 'VITIS_LOOP_107_13'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('work_bank_addr_write_ln111', getrf_v4.cpp:111) of variable 'sub1', getrf_v4.cpp:111 on array 'work_bank' and 'store' operation ('work_bank_addr_write_ln110', getrf_v4.cpp:110) of constant 0 on array 'work_bank'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_v4_Pipeline_VITIS_LOOP_107_13' (loop 'VITIS_LOOP_107_13'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('work_bank_addr_write_ln111', getrf_v4.cpp:111) of variable 'sub1', getrf_v4.cpp:111 on array 'work_bank' and 'store' operation ('work_bank_addr_write_ln110', getrf_v4.cpp:110) of constant 0 on array 'work_bank'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_v4_Pipeline_VITIS_LOOP_107_13' (loop 'VITIS_LOOP_107_13'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('work_bank_addr_write_ln111', getrf_v4.cpp:111) of variable 'sub1', getrf_v4.cpp:111 on array 'work_bank' and 'store' operation ('work_bank_addr_write_ln110', getrf_v4.cpp:110) of constant 0 on array 'work_bank'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_v4_Pipeline_VITIS_LOOP_107_13' (loop 'VITIS_LOOP_107_13'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('work_bank_addr_write_ln111', getrf_v4.cpp:111) of variable 'sub1', getrf_v4.cpp:111 on array 'work_bank' and 'store' operation ('work_bank_addr_write_ln110', getrf_v4.cpp:110) of constant 0 on array 'work_bank'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_v4_Pipeline_VITIS_LOOP_107_13' (loop 'VITIS_LOOP_107_13'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between 'store' operation ('work_bank_addr_write_ln111', getrf_v4.cpp:111) of variable 'sub1', getrf_v4.cpp:111 on array 'work_bank' and 'store' operation ('work_bank_addr_write_ln110', getrf_v4.cpp:110) of constant 0 on array 'work_bank'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 12, Depth = 16, loop 'VITIS_LOOP_107_13'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 434.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 435.215 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_v4_Pipeline_VITIS_LOOP_101_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_101_12'.
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_v4_Pipeline_VITIS_LOOP_101_12' (loop 'VITIS_LOOP_101_12'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('work_bank_addr_write_ln104', getrf_v4.cpp:104) of variable 'sub', getrf_v4.cpp:104 on array 'work_bank' and 'store' operation ('work_bank_addr_write_ln103', getrf_v4.cpp:103) of constant 0 on array 'work_bank'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_v4_Pipeline_VITIS_LOOP_101_12' (loop 'VITIS_LOOP_101_12'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('work_bank_addr_write_ln104', getrf_v4.cpp:104) of variable 'sub', getrf_v4.cpp:104 on array 'work_bank' and 'store' operation ('work_bank_addr_write_ln103', getrf_v4.cpp:103) of constant 0 on array 'work_bank'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_v4_Pipeline_VITIS_LOOP_101_12' (loop 'VITIS_LOOP_101_12'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('work_bank_addr_write_ln104', getrf_v4.cpp:104) of variable 'sub', getrf_v4.cpp:104 on array 'work_bank' and 'store' operation ('work_bank_addr_write_ln103', getrf_v4.cpp:103) of constant 0 on array 'work_bank'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_v4_Pipeline_VITIS_LOOP_101_12' (loop 'VITIS_LOOP_101_12'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('work_bank_addr_write_ln104', getrf_v4.cpp:104) of variable 'sub', getrf_v4.cpp:104 on array 'work_bank' and 'store' operation ('work_bank_addr_write_ln103', getrf_v4.cpp:103) of constant 0 on array 'work_bank'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_v4_Pipeline_VITIS_LOOP_101_12' (loop 'VITIS_LOOP_101_12'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between 'store' operation ('work_bank_addr_write_ln104', getrf_v4.cpp:104) of variable 'sub', getrf_v4.cpp:104 on array 'work_bank' and 'store' operation ('work_bank_addr_write_ln103', getrf_v4.cpp:103) of constant 0 on array 'work_bank'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 12, Depth = 16, loop 'VITIS_LOOP_101_12'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 435.301 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 436.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_116_14'.
+WARNING: [HLS 200-880] The II Violation in module 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14' (loop 'VITIS_LOOP_116_14'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('worktag_bank_addr_write_ln119', getrf_v4.cpp:119) of variable 'tmp' on array 'worktag_bank' and 'load' operation ('worktag_bank_load', getrf_v4.cpp:119) on array 'worktag_bank'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 8, loop 'VITIS_LOOP_116_14'
+WARNING: [HLS 200-871] Estimated clock period (4.129ns) exceeds the target (target clock period: 5ns, clock uncertainty: 1.35ns, effective delay budget: 3.65ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14' consists of the following:	'load' operation ('worktag_bank_load', getrf_v4.cpp:119) on array 'worktag_bank' [59]  (1.24 ns)
+	'mux' operation ('tmp_4', getrf_v4.cpp:119) [63]  (0.525 ns)
+	'icmp' operation ('icmp_ln119', getrf_v4.cpp:119) [65]  (1.13 ns)
+	blocking operation 1.24 ns on control path)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 436.230 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 436.816 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'large_getrf_v4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-871] Estimated clock period (5.207ns) exceeds the target (target clock period: 5ns, clock uncertainty: 1.35ns, effective delay budget: 3.65ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'large_getrf_v4' consists of the following:	'call' operation ('targetBlock', getrf_v4.cpp:61) to 'large_getrf_v4_Pipeline_VITIS_LOOP_61_5' [208]  (5.21 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.54 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.59 seconds; current allocated memory: 440.895 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'worktag_bank' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'worktag_bank_1' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'worktag_bank_2' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'worktag_bank_3' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'work_bank' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'work_bank_1' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'work_bank_2' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'work_bank_3' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'inv_diag' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'row_idx' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'row_val' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'pattern_bank' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'pattern_bank_1' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'pattern_bank_2' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'pattern_bank_3' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.71 seconds. CPU system time: 0 seconds. Elapsed time: 0.78 seconds; current allocated memory: 441.824 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_v4_Pipeline_VITIS_LOOP_47_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_v4_Pipeline_VITIS_LOOP_47_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.51 seconds; current allocated memory: 441.824 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3' pipeline 'VITIS_LOOP_53_3' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3/m_axi_v4l1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_v4_Pipeline_VITIS_LOOP_53_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.15 seconds; current allocated memory: 441.953 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4' pipeline 'VITIS_LOOP_57_4' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4/m_axi_v4u1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_v4_Pipeline_VITIS_LOOP_57_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 443.219 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_v4_Pipeline_VITIS_LOOP_61_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_v4_Pipeline_VITIS_LOOP_61_5' pipeline 'VITIS_LOOP_61_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_v4_Pipeline_VITIS_LOOP_61_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 444.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7' pipeline 'VITIS_LOOP_80_7' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u1_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7/m_axi_v4u2_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_v4_Pipeline_VITIS_LOOP_80_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.35 seconds; current allocated memory: 446.496 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_v4_Pipeline_VITIS_LOOP_98_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_42_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_v4_Pipeline_VITIS_LOOP_98_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 450.496 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_v4_Pipeline_VITIS_LOOP_107_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_v4_Pipeline_VITIS_LOOP_107_13' pipeline 'VITIS_LOOP_107_13' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_8_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_v4_Pipeline_VITIS_LOOP_107_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 451.641 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_v4_Pipeline_VITIS_LOOP_101_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_v4_Pipeline_VITIS_LOOP_101_12' pipeline 'VITIS_LOOP_101_12' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_8_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_v4_Pipeline_VITIS_LOOP_101_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 454.422 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14' pipeline 'VITIS_LOOP_116_14' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u2_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14/m_axi_v4u1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_v4_Pipeline_VITIS_LOOP_116_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.33 seconds; current allocated memory: 458.398 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'large_getrf_v4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/v4a0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/v4a1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/v4a2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/v4l0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/v4l1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/v4l2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/v4u0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/v4u1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/v4u2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/v4u3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/a_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/a_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/a_val' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/l_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/l_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/l_val' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/u_ptr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/u_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/u_val' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/u_diag_pos' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/n' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/pivot_eps' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/status' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/muladds' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'large_getrf_v4/divisions' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'large_getrf_v4' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'a_ptr', 'a_idx', 'a_val', 'l_ptr', 'l_idx', 'l_val', 'u_ptr', 'u_idx', 'u_val', 'u_diag_pos', 'n', 'pivot_eps' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_5_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_42_32_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'large_getrf_v4'.
+INFO: [RTMG 210-278] Implementing memory 'large_getrf_v4_work_bank_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'large_getrf_v4_inv_diag_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'large_getrf_v4_row_idx_RAM_1P_BRAM_1R1W' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.32 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.54 seconds; current allocated memory: 468.441 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.54 seconds. CPU system time: 0.16 seconds. Elapsed time: 1.9 seconds; current allocated memory: 488.254 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 4.64 seconds. CPU system time: 0.07 seconds. Elapsed time: 4.76 seconds; current allocated memory: 496.672 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for large_getrf_v4.
+INFO: [VLOG 209-307] Generating Verilog RTL for large_getrf_v4.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 192.05 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 17.95 seconds. CPU system time: 4.39 seconds. Elapsed time: 24.53 seconds; current allocated memory: 299.133 MB.
+INFO: [HLS 200-1510] Running: cosim_design -setup -trace_level none -argv /output/block_lu_hls/experiments/processed_circuit_1_large_hls_v1/prepared/ 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_large_getrf_v4.cpp
+   Compiling getrf_v2.cpp_pre.cpp.tb.cpp
+   Compiling getrf_v3.cpp_pre.cpp.tb.cpp
+   Compiling getrf_v4.cpp_pre.cpp.tb.cpp
+   Compiling large_sparse_lu.cpp_pre.cpp.tb.cpp
+   Compiling tb_getrf_v4.cpp_pre.cpp.tb.cpp
+   Compiling apatb_large_getrf_v4_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+getrf_v4 status=0 n=2624 max_abs_L=1.8701e-06 max_abs_U=2.40207e-05 muladds=484052 divs=2624
+GETRF_V4_PASS
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_vivado_gen_ip.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1265.000 ; gain = 0.023 ; free physical = 90816 ; free virtual = 93529
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/openbayes/home/tools/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'large_getrf_v4_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_getrf_v4_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_getrf_v4_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'large_getrf_v4_fmul_32ns_32ns_32_5_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_getrf_v4_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_getrf_v4_fmul_32ns_32ns_32_5_max_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'large_getrf_v4_fadd_32ns_32ns_32_6_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_getrf_v4_fadd_32ns_32ns_32_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_getrf_v4_fadd_32ns_32ns_32_6_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'large_getrf_v4_fdiv_32ns_32ns_32_16_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_getrf_v4_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_getrf_v4_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'large_getrf_v4_fsub_32ns_32ns_32_8_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'large_getrf_v4_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'large_getrf_v4_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 28 02:14:33 2026...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 19.85 seconds. CPU system time: 6.24 seconds. Elapsed time: 40.32 seconds; current allocated memory: 12.207 MB.

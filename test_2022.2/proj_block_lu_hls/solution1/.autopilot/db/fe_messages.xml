@@ -38,7 +38,7 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="core.cpp:121:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="distributer_mi" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/output/block_lu_hls/test_2022.2/run_hls.tcl:41:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/output/block_lu_hls/test_2022.2/run_only_csynth.tcl:12:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="spmm" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=spmm" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="core.cpp:170:9" msg_body="HLS pragma dump">
@@ -845,37 +845,31 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:197:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merge_two_sub" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=pong1 depth=1000" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:229:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:230:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merge_two_sub" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:330:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="merger" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:334:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=mresult depth=8" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:344:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:342:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="generate_mccontrol" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:353:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:351:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="generate_mccontrol" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:378:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:376:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="from_ms_to_val" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:385:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:383:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merger_test" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=350 port=in offset=slave bundle=in" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:386:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:384:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merger_test" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=350 port=out offset=slave bundle=out" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:388:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:386:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merger_test" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=ctr" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:390:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:388:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merger_test" ARG_PragmaIsValid="1" ARG_PragmaOptions="disable_start_propagation" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:396:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="pe.cpp:394:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merger_test" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=ms depth=70" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
@@ -899,103 +893,103 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:80:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rschedule_access" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:88:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:92:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rschedule_access" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:126:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:130:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rrequest_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:155:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:159:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcollector" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:161:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:165:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcollector" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:190:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:194:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="packed_row_ptr" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:200:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:204:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="prepare_b_rcsr" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:208:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:212:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="prepare_b_rcsr" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:219:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="disable_start_propagation" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:223:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=rcollec depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:224:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=rrequest depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:225:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=rscheduler depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="disable_start_propagation" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:227:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=r_first depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=rcollec depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:228:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=rrequest depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:229:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=rscheduler depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:231:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=r_first depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:232:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=r_req depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:230:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:234:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcrequest_manager" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=roff depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:254:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:258:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="request_to_rbanks" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:292:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:296:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_data type=ram_1p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:295:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:299:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_tag type=ram_1p impl=lutram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:296:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:300:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_tag complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:299:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:303:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_lru_count_1 type=ram_t2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:301:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:305:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_lru_count_2 type=ram_t2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:303:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:307:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_lru_count_3 type=ram_t2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:305:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:309:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_lru_count_4 type=ram_t2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:307:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:311:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_lru_count_5 type=ram_t2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:309:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:313:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_lru_count_6 type=ram_t2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:311:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:315:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_lru_count_7 type=ram_t2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:313:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:317:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=_lru_count_8 type=ram_t2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:329:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:333:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp_lru complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:333:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:337:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:335:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:339:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:347:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:351:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:360:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:364:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:374:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:378:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:433:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="rcache.cpp:437:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="rcache" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
@@ -1016,79 +1010,79 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:123:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="find_eviction" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:159:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:163:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="from_rcache_result_to_B_vcrequest" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:215:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:211:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merge_4_to_1_vcrequest" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:283:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:279:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="distributer_vcresponse" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:314:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:310:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="distributer_vcresult" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:350:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:346:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="distributer_vcresult" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:374:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:370:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="distributer_vcresult" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:415:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:411:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merge_8_to_1_vcresult" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:482:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:478:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merge_2_to_1_vcresult" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:534:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:530:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merge_2_to_1_vcresult" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:596:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:592:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merge_4_to_1_vcresult" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:670:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:666:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merge_4_to_1_rresponse" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:716:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:712:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="merge_2_to_1_vcresponse" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:761:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:757:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="final_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:774:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:770:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="final_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:803:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:799:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="final_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=m_result op=fadd impl=fulldsp" ARG_PragmaType="bind_op" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:836:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:832:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="sub_final_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:847:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:843:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="sub_final_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:874:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:870:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="sub_final_merger" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=m_result op=fadd impl=fulldsp" ARG_PragmaType="bind_op" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:905:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:901:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="convert_pblock_to_mergeitem" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:911:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:907:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="convert_pblock_to_mergeitem" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:936:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:932:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="write_C_rid_rlen" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:951:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:947:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="write_C_val_cid" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:956:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:952:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="write_C_val_cid" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:978:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:974:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="write_C_sub" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:985:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="util.cpp:981:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="write_C_sub" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
@@ -1286,13 +1280,13 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="vccache.cpp:748:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="ccache" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="rcache.cpp:211:44" msg_body="Inlining function 'packed_row_ptr(ap_uint&lt;128&gt; const*, unsigned int)' into 'prepare_b_rcsr(ap_uint&lt;128&gt;*, ap_uint&lt;128&gt;*, unsigned int, hls::stream&lt;ap_uint&lt;2831&gt;, 0&gt;*)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="rcache.cpp:215:44" msg_body="Inlining function 'packed_row_ptr(ap_uint&lt;128&gt; const*, unsigned int)' into 'prepare_b_rcsr(ap_uint&lt;128&gt;*, ap_uint&lt;128&gt;*, unsigned int, hls::stream&lt;ap_uint&lt;2831&gt;, 0&gt;*)'">
         <args Callee="packed_row_ptr(ap_uint&lt;128&gt; const*, unsigned int)" Caller="prepare_b_rcsr(ap_uint&lt;128&gt;*, ap_uint&lt;128&gt;*, unsigned int, hls::stream&lt;ap_uint&lt;2831&gt;, 0&gt;*)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="rcache.cpp:211:11" msg_body="Inlining function 'packed_row_ptr(ap_uint&lt;128&gt; const*, unsigned int)' into 'prepare_b_rcsr(ap_uint&lt;128&gt;*, ap_uint&lt;128&gt;*, unsigned int, hls::stream&lt;ap_uint&lt;2831&gt;, 0&gt;*)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="rcache.cpp:215:11" msg_body="Inlining function 'packed_row_ptr(ap_uint&lt;128&gt; const*, unsigned int)' into 'prepare_b_rcsr(ap_uint&lt;128&gt;*, ap_uint&lt;128&gt;*, unsigned int, hls::stream&lt;ap_uint&lt;2831&gt;, 0&gt;*)'">
         <args Callee="packed_row_ptr(ap_uint&lt;128&gt; const*, unsigned int)" Caller="prepare_b_rcsr(ap_uint&lt;128&gt;*, ap_uint&lt;128&gt;*, unsigned int, hls::stream&lt;ap_uint&lt;2831&gt;, 0&gt;*)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="rcache.cpp:461:7" msg_body="Inlining function 'find_eviction(lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, unsigned int*)' into 'rcache(hls::stream&lt;rcache_request, 0&gt;*, unsigned int, hls::stream&lt;rcache_response, 0&gt;*, unsigned int*, unsigned int*, hls::stream&lt;manager_idle, 0&gt;*)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="rcache.cpp:465:7" msg_body="Inlining function 'find_eviction(lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, unsigned int*)' into 'rcache(hls::stream&lt;rcache_request, 0&gt;*, unsigned int, hls::stream&lt;rcache_response, 0&gt;*, unsigned int*, unsigned int*, hls::stream&lt;manager_idle, 0&gt;*)'">
         <args Callee="find_eviction(lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, unsigned int*)" Caller="rcache(hls::stream&lt;rcache_request, 0&gt;*, unsigned int, hls::stream&lt;rcache_response, 0&gt;*, unsigned int*, unsigned int*, hls::stream&lt;manager_idle, 0&gt;*)"/>
     </msg>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="vccache.cpp:485:7" msg_body="Inlining function 'find_eviction(lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, unsigned int*)' into 'vcache(hls::stream&lt;vccache_request, 0&gt;*, unsigned int, hls::stream&lt;vccache_response, 0&gt;*, hls::stream&lt;vccache_result, 0&gt;*, unsigned int*, unsigned int*)'">
@@ -1301,13 +1295,13 @@
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="vccache.cpp:776:7" msg_body="Inlining function 'find_eviction(lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, unsigned int*)' into 'ccache(hls::stream&lt;vccache_request, 0&gt;*, unsigned int, hls::stream&lt;vccache_response, 0&gt;*, hls::stream&lt;vccache_result, 0&gt;*, unsigned int*, unsigned int*)'">
         <args Callee="find_eviction(lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, lru_struct, unsigned int*)" Caller="ccache(hls::stream&lt;vccache_request, 0&gt;*, unsigned int, hls::stream&lt;vccache_response, 0&gt;*, hls::stream&lt;vccache_result, 0&gt;*, unsigned int*, unsigned int*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="util.cpp:987:22" msg_body="Loop 'VITIS_LOOP_987_3' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_987_3"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="util.cpp:983:22" msg_body="Loop 'VITIS_LOOP_983_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_983_3"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="util.cpp:804:13" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="util.cpp:800:13" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="anonymous"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="util.cpp:875:13" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="util.cpp:871:13" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="anonymous"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="pe.cpp:150:13" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
@@ -1334,11 +1328,11 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="vccache.cpp:350:21" msg_body="Loop 'VITIS_LOOP_350_3' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="VITIS_LOOP_350_3"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="rcache.cpp:334:20" msg_body="Loop 'VITIS_LOOP_334_2' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_334_2"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="rcache.cpp:338:20" msg_body="Loop 'VITIS_LOOP_338_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_338_2"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="rcache.cpp:346:21" msg_body="Loop 'VITIS_LOOP_346_3' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_346_3"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="rcache.cpp:350:21" msg_body="Loop 'VITIS_LOOP_350_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_350_3"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="./task_scheduler.h:99:20" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="anonymous"/>
@@ -1346,11 +1340,11 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="./task_scheduler.h:66:6" msg_body="Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="anonymous"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="util.cpp:756:0" msg_body="Unrolling loop 'anonymous' (util.cpp:804:13) in function 'final_merger' completely with a factor of 1">
-        <args Factor="1" LoopLoc="util.cpp:804:13" LoopName="anonymous"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="util.cpp:752:0" msg_body="Unrolling loop 'anonymous' (util.cpp:800:13) in function 'final_merger' completely with a factor of 1">
+        <args Factor="1" LoopLoc="util.cpp:800:13" LoopName="anonymous"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="util.cpp:829:0" msg_body="Unrolling loop 'anonymous' (util.cpp:875:13) in function 'sub_final_merger' completely with a factor of 1">
-        <args Factor="1" LoopLoc="util.cpp:875:13" LoopName="anonymous"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="util.cpp:825:0" msg_body="Unrolling loop 'anonymous' (util.cpp:871:13) in function 'sub_final_merger' completely with a factor of 1">
+        <args Factor="1" LoopLoc="util.cpp:871:13" LoopName="anonymous"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="pe.cpp:111:0" msg_body="Unrolling loop 'anonymous' (pe.cpp:150:13) in function '_merge_temp' completely with a factor of 1">
         <args Factor="1" LoopLoc="pe.cpp:150:13" LoopName="anonymous"/>
@@ -1388,17 +1382,17 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="vccache.cpp:287:0" msg_body="Unrolling loop 'VITIS_LOOP_350_3' (vccache.cpp:350:21) in function 'vcache' completely with a factor of 16">
         <args Factor="16" LoopLoc="vccache.cpp:350:21" LoopName="VITIS_LOOP_350_3"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="rcache.cpp:289:0" msg_body="Unrolling loop 'VITIS_LOOP_373_5' (rcache.cpp:373:23) in function 'rcache' completely with a factor of 16">
-        <args Factor="16" LoopLoc="rcache.cpp:373:23" LoopName="VITIS_LOOP_373_5"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="rcache.cpp:293:0" msg_body="Unrolling loop 'VITIS_LOOP_377_5' (rcache.cpp:377:23) in function 'rcache' completely with a factor of 16">
+        <args Factor="16" LoopLoc="rcache.cpp:377:23" LoopName="VITIS_LOOP_377_5"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="rcache.cpp:289:0" msg_body="Unrolling loop 'VITIS_LOOP_432_6' (rcache.cpp:432:25) in function 'rcache' completely with a factor of 16">
-        <args Factor="16" LoopLoc="rcache.cpp:432:25" LoopName="VITIS_LOOP_432_6"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="rcache.cpp:293:0" msg_body="Unrolling loop 'VITIS_LOOP_436_6' (rcache.cpp:436:25) in function 'rcache' completely with a factor of 16">
+        <args Factor="16" LoopLoc="rcache.cpp:436:25" LoopName="VITIS_LOOP_436_6"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="rcache.cpp:289:0" msg_body="Unrolling loop 'VITIS_LOOP_334_2' (rcache.cpp:334:20) in function 'rcache' completely with a factor of 2">
-        <args Factor="2" LoopLoc="rcache.cpp:334:20" LoopName="VITIS_LOOP_334_2"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="rcache.cpp:293:0" msg_body="Unrolling loop 'VITIS_LOOP_338_2' (rcache.cpp:338:20) in function 'rcache' completely with a factor of 2">
+        <args Factor="2" LoopLoc="rcache.cpp:338:20" LoopName="VITIS_LOOP_338_2"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="rcache.cpp:289:0" msg_body="Unrolling loop 'VITIS_LOOP_346_3' (rcache.cpp:346:21) in function 'rcache' completely with a factor of 16">
-        <args Factor="16" LoopLoc="rcache.cpp:346:21" LoopName="VITIS_LOOP_346_3"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="rcache.cpp:293:0" msg_body="Unrolling loop 'VITIS_LOOP_350_3' (rcache.cpp:350:21) in function 'rcache' completely with a factor of 16">
+        <args Factor="16" LoopLoc="rcache.cpp:350:21" LoopName="VITIS_LOOP_350_3"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./task_scheduler.h:88:0" msg_body="Unrolling loop 'anonymous' (./task_scheduler.h:99:20) in function 'A_element_distributor' completely with a factor of 1">
         <args Factor="1" LoopLoc="./task_scheduler.h:99:20" LoopName="anonymous"/>
@@ -1409,7 +1403,7 @@
     <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-366" msg_severity="WARNING" msg_loc="core.cpp:554:2" msg_body="Duplicating function 'rcrequest_manager(hls::stream&lt;rcache_request, 0&gt;*, hls::stream&lt;rcache_request, 0&gt;*, hls::stream&lt;rcache_response, 0&gt;*, hls::stream&lt;rcache_request, 0&gt;*, ap_uint&lt;128&gt;*)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.">
         <args Name="rcrequest_manager(hls::stream&lt;rcache_request, 0&gt;*, hls::stream&lt;rcache_request, 0&gt;*, hls::stream&lt;rcache_response, 0&gt;*, hls::stream&lt;rcache_request, 0&gt;*, ap_uint&lt;128&gt;*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-366" msg_severity="WARNING" msg_loc="rcache.cpp:235:2" msg_body="Duplicating function 'rschedule_access(hls::stream&lt;rcache_request, 0&gt;*, hls::stream&lt;rcache_response, 0&gt;*, hls::stream&lt;ap_uint&lt;160&gt;, 0&gt;*, ap_uint&lt;128&gt;*, hls::stream&lt;rcache_request, 0&gt;*) (.40.48.54)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.">
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-366" msg_severity="WARNING" msg_loc="rcache.cpp:239:2" msg_body="Duplicating function 'rschedule_access(hls::stream&lt;rcache_request, 0&gt;*, hls::stream&lt;rcache_response, 0&gt;*, hls::stream&lt;ap_uint&lt;160&gt;, 0&gt;*, ap_uint&lt;128&gt;*, hls::stream&lt;rcache_request, 0&gt;*) (.40.48.54)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.">
         <args Name="rschedule_access(hls::stream&lt;rcache_request, 0&gt;*, hls::stream&lt;rcache_response, 0&gt;*, hls::stream&lt;ap_uint&lt;160&gt;, 0&gt;*, ap_uint&lt;128&gt;*, hls::stream&lt;rcache_request, 0&gt;*) (.40.48.54)"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="pe.cpp:4:0" msg_body="Inlining function 'float Reinterpret&lt;float, ap_uint&lt;32&gt; &gt;(ap_uint&lt;32&gt; const&amp;)' into 'pe(hls::stream&lt;block, 0&gt;*, hls::stream&lt;block, 0&gt;*, hls::stream&lt;block, 0&gt;*, hls::stream&lt;block, 0&gt;*, hls::stream&lt;pe_job, 0&gt;*, hls::stream&lt;partial_block, 0&gt;*, hls::stream&lt;unsigned int, 0&gt;*, hls::stream&lt;merge_control, 0&gt;*, hls::stream&lt;bool, 0&gt;*, hls::stream&lt;bool, 0&gt;*, unsigned int*)'">
@@ -1418,10 +1412,10 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="pe.cpp:4:0" msg_body="Inlining function 'ap_uint&lt;32&gt; Reinterpret&lt;ap_uint&lt;32&gt;, float&gt;(float const&amp;)' into 'pe(hls::stream&lt;block, 0&gt;*, hls::stream&lt;block, 0&gt;*, hls::stream&lt;block, 0&gt;*, hls::stream&lt;block, 0&gt;*, hls::stream&lt;pe_job, 0&gt;*, hls::stream&lt;partial_block, 0&gt;*, hls::stream&lt;unsigned int, 0&gt;*, hls::stream&lt;merge_control, 0&gt;*, hls::stream&lt;bool, 0&gt;*, hls::stream&lt;bool, 0&gt;*, unsigned int*)'">
         <args Callee="ap_uint&lt;32&gt; Reinterpret&lt;ap_uint&lt;32&gt;, float&gt;(float const&amp;)" Caller="pe(hls::stream&lt;block, 0&gt;*, hls::stream&lt;block, 0&gt;*, hls::stream&lt;block, 0&gt;*, hls::stream&lt;block, 0&gt;*, hls::stream&lt;pe_job, 0&gt;*, hls::stream&lt;partial_block, 0&gt;*, hls::stream&lt;unsigned int, 0&gt;*, hls::stream&lt;merge_control, 0&gt;*, hls::stream&lt;bool, 0&gt;*, hls::stream&lt;bool, 0&gt;*, unsigned int*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="util.cpp:900:0" msg_body="Inlining function 'float Reinterpret&lt;float, ap_uint&lt;32&gt; &gt;(ap_uint&lt;32&gt; const&amp;)' into 'convert_pblock_to_mergeitem(hls::stream&lt;partial_block, 0&gt;*, hls::stream&lt;merge_item, 0&gt;*)'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="util.cpp:896:0" msg_body="Inlining function 'float Reinterpret&lt;float, ap_uint&lt;32&gt; &gt;(ap_uint&lt;32&gt; const&amp;)' into 'convert_pblock_to_mergeitem(hls::stream&lt;partial_block, 0&gt;*, hls::stream&lt;merge_item, 0&gt;*)'">
         <args Callee="float Reinterpret&lt;float, ap_uint&lt;32&gt; &gt;(ap_uint&lt;32&gt; const&amp;)" Caller="convert_pblock_to_mergeitem(hls::stream&lt;partial_block, 0&gt;*, hls::stream&lt;merge_item, 0&gt;*)"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="rcache.cpp:294:17" msg_body="Applying array_partition to '_tag': Complete partitioning on dimension 2.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="rcache.cpp:298:17" msg_body="Applying array_partition to '_tag': Complete partitioning on dimension 2.">
         <args Dim="2" Mode="Complete" UOName="_tag"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="vccache.cpp:290:13" msg_body="Applying array_partition to '_filled': Complete partitioning on dimension 2.">
@@ -1558,9 +1552,6 @@
     </msg>
     <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:523:39" msg_body="Aggregating fifo (hls::stream) variable 'result_pe3' with compact=bit mode in 66-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="66" HwTyName="fifo (hls::stream)" Name="result_pe3"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="pe.cpp:333:19" msg_body="Aggregating fifo (hls::stream) variable 'mresult' with compact=bit mode in 36-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="36" HwTyName="fifo (hls::stream)" Name="mresult"/>
     </msg>
     <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:516:17" msg_body="Aggregating fifo (hls::stream) variable 'p_pe1' with compact=bit mode in 263-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="263" HwTyName="fifo (hls::stream)" Name="p_pe1"/>
@@ -1832,9 +1823,6 @@
     <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:349:82" msg_body="Aggregating fifo (hls::stream) variable 'rcache_result_bank4_d' with compact=bit mode in 68-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="68" HwTyName="fifo (hls::stream)" Name="rcache_result_bank4_d"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="rcache.cpp:222:35" msg_body="Aggregating fifo (hls::stream) variable 'rscheduler' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rscheduler"/>
-    </msg>
     <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:318:16" msg_body="Aggregating fifo (hls::stream) variable 'rblock1' with compact=bit mode in 230-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rblock1"/>
     </msg>
@@ -1846,57 +1834,6 @@
     </msg>
     <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:318:43" msg_body="Aggregating fifo (hls::stream) variable 'rblock4' with compact=bit mode in 230-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rblock4"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:325:16" msg_body="Aggregating fifo (hls::stream) variable 'rcache_re_bank1' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_re_bank1"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:325:33" msg_body="Aggregating fifo (hls::stream) variable 'rcache_re_bank2' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_re_bank2"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:325:50" msg_body="Aggregating fifo (hls::stream) variable 'rcache_re_bank3' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_re_bank3"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:325:67" msg_body="Aggregating fifo (hls::stream) variable 'rcache_re_bank4' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_re_bank4"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:301:60" msg_body="Aggregating fifo (hls::stream) variable 'rrequestf' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequestf"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:301:27" msg_body="Aggregating fifo (hls::stream) variable 'rrequest2' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequest2"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:301:38" msg_body="Aggregating fifo (hls::stream) variable 'rrequest3' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequest3"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:301:49" msg_body="Aggregating fifo (hls::stream) variable 'rrequest4' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequest4"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:301:16" msg_body="Aggregating fifo (hls::stream) variable 'rrequest1' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequest1"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="rcache.cpp:222:16" msg_body="Aggregating fifo (hls::stream) variable 'rcollec' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcollec"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="rcache.cpp:226:25" msg_body="Aggregating fifo (hls::stream) variable 'r_req' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="r_req"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="rcache.cpp:226:16" msg_body="Aggregating fifo (hls::stream) variable 'r_first' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="r_first"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="rcache.cpp:222:25" msg_body="Aggregating fifo (hls::stream) variable 'rrequest' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequest"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:294:16" msg_body="Aggregating fifo (hls::stream) variable 'rcache_stream1' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_stream1"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:294:64" msg_body="Aggregating fifo (hls::stream) variable 'rcache_stream4' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_stream4"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:294:48" msg_body="Aggregating fifo (hls::stream) variable 'rcache_stream3' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_stream3"/>
-    </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:294:32" msg_body="Aggregating fifo (hls::stream) variable 'rcache_stream2' with compact=bit mode in 230-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_stream2"/>
     </msg>
     <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:309:19" msg_body="Aggregating fifo (hls::stream) variable 'rresponse1' with compact=bit mode in 168-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="168" HwTyName="fifo (hls::stream)" Name="rresponse1"/>
@@ -1969,6 +1906,60 @@
     </msg>
     <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:337:73" msg_body="Aggregating fifo (hls::stream) variable 'rcache_bank4_res' with compact=bit mode in 168-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="168" HwTyName="fifo (hls::stream)" Name="rcache_bank4_res"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="rcache.cpp:226:35" msg_body="Aggregating fifo (hls::stream) variable 'rscheduler' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rscheduler"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:325:16" msg_body="Aggregating fifo (hls::stream) variable 'rcache_re_bank1' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_re_bank1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:325:33" msg_body="Aggregating fifo (hls::stream) variable 'rcache_re_bank2' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_re_bank2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:325:50" msg_body="Aggregating fifo (hls::stream) variable 'rcache_re_bank3' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_re_bank3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:325:67" msg_body="Aggregating fifo (hls::stream) variable 'rcache_re_bank4' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_re_bank4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:301:60" msg_body="Aggregating fifo (hls::stream) variable 'rrequestf' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequestf"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:301:27" msg_body="Aggregating fifo (hls::stream) variable 'rrequest2' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequest2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:301:38" msg_body="Aggregating fifo (hls::stream) variable 'rrequest3' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequest3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:301:49" msg_body="Aggregating fifo (hls::stream) variable 'rrequest4' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequest4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:301:16" msg_body="Aggregating fifo (hls::stream) variable 'rrequest1' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequest1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="rcache.cpp:226:16" msg_body="Aggregating fifo (hls::stream) variable 'rcollec' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcollec"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="rcache.cpp:230:25" msg_body="Aggregating fifo (hls::stream) variable 'r_req' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="r_req"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="rcache.cpp:230:16" msg_body="Aggregating fifo (hls::stream) variable 'r_first' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="r_first"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="rcache.cpp:226:25" msg_body="Aggregating fifo (hls::stream) variable 'rrequest' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rrequest"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:294:16" msg_body="Aggregating fifo (hls::stream) variable 'rcache_stream1' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_stream1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:294:64" msg_body="Aggregating fifo (hls::stream) variable 'rcache_stream4' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_stream4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:294:48" msg_body="Aggregating fifo (hls::stream) variable 'rcache_stream3' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_stream3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="core.cpp:294:32" msg_body="Aggregating fifo (hls::stream) variable 'rcache_stream2' with compact=bit mode in 230-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="230" HwTyName="fifo (hls::stream)" Name="rcache_stream2"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

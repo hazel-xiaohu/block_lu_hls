@@ -1,0 +1,178 @@
+
+
+================================================================
+== Vitis HLS Report for 'collector_90_Pipeline_VITIS_LOOP_185_2'
+================================================================
+* Date:           Sat Sep 26 10:59:18 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_block_lu_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu15eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.893 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_185_2  |        ?|        ?|         3|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.89>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 6 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%hit_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %hit"   --->   Operation 7 'read' 'hit_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%tmp = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %empty"   --->   Operation 8 'read' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%zext_ln184_read = read i30 @_ssdm_op_Read.ap_auto.i30, i30 %zext_ln184"   --->   Operation 9 'read' 'zext_ln184_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%trunc_ln_read = read i2 @_ssdm_op_Read.ap_auto.i2, i2 %trunc_ln"   --->   Operation 10 'read' 'trunc_ln_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%cached_V_6_read = read i1024 @_ssdm_op_Read.ap_auto.i1024, i1024 %cached_V_6"   --->   Operation 11 'read' 'cached_V_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%add_ln185_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %add_ln185"   --->   Operation 12 'read' 'add_ln185_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln183_read = read i30 @_ssdm_op_Read.ap_auto.i30, i30 %zext_ln183"   --->   Operation 13 'read' 'zext_ln183_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln184_cast = zext i30 %zext_ln184_read"   --->   Operation 14 'zext' 'zext_ln184_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln183_cast = zext i30 %zext_ln183_read"   --->   Operation 15 'zext' 'zext_ln183_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i134 %cblock3, void @empty_47, i32 0, i32 0, void @empty_157, i32 0, i32 0, void @empty_157, void @empty_157, void @empty_157, i32 0, i32 0, i32 0, i32 0, void @empty_157, void @empty_157, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %coff4, void @empty_47, i32 0, i32 0, void @empty_157, i32 0, i32 0, void @empty_157, void @empty_157, void @empty_157, i32 0, i32 0, i32 0, i32 0, void @empty_157, void @empty_157, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.42ns)   --->   "%store_ln0 = store i31 %zext_ln183_cast, i31 %i"   --->   Operation 18 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body"   --->   Operation 19 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%i_32 = load i31 %i" [vccache.cpp:185]   --->   Operation 20 'load' 'i_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.99ns)   --->   "%icmp_ln185 = icmp_ult  i31 %i_32, i31 %add_ln185_read" [vccache.cpp:185]   --->   Operation 21 'icmp' 'icmp_ln185' <Predicate = true> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln185 = br i1 %icmp_ln185, void %cleanup.cont.critedge.loopexit.exitStub, void %for.body.split" [vccache.cpp:185]   --->   Operation 22 'br' 'br_ln185' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.99ns)   --->   "%icmp_ln188 = icmp_eq  i31 %i_32, i31 %zext_ln183_cast" [vccache.cpp:188]   --->   Operation 23 'icmp' 'icmp_ln188' <Predicate = (icmp_ln185)> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.99ns)   --->   "%icmp_ln189 = icmp_eq  i31 %i_32, i31 %zext_ln184_cast" [vccache.cpp:189]   --->   Operation 24 'icmp' 'icmp_ln189' <Predicate = (icmp_ln185)> <Delay = 0.99> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (1.00ns)   --->   "%sub_ln190 = sub i31 %i_32, i31 %zext_ln183_cast" [vccache.cpp:190]   --->   Operation 25 'sub' 'sub_ln190' <Predicate = (icmp_ln185)> <Delay = 1.00> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_141 = partselect i28 @_ssdm_op_PartSelect.i28.i31.i32.i32, i31 %sub_ln190, i32 3, i32 30" [vccache.cpp:190]   --->   Operation 26 'partselect' 'tmp_141' <Predicate = (icmp_ln185)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (1.01ns)   --->   "%icmp_ln190 = icmp_eq  i28 %tmp_141, i28 0" [vccache.cpp:190]   --->   Operation 27 'icmp' 'icmp_ln190' <Predicate = (icmp_ln185)> <Delay = 1.01> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.28ns)   --->   "%and_ln190 = and i1 %hit_read, i1 %icmp_ln190" [vccache.cpp:190]   --->   Operation 28 'and' 'and_ln190' <Predicate = (icmp_ln185)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln190 = br i1 %and_ln190, void %if.else, void %if.then23" [vccache.cpp:190]   --->   Operation 29 'br' 'br_ln190' <Predicate = (icmp_ln185)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%trunc_ln628 = trunc i31 %sub_ln190"   --->   Operation 30 'trunc' 'trunc_ln628' <Predicate = (icmp_ln185 & and_ln190)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_142 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i3.i7, i3 %trunc_ln628, i7 0"   --->   Operation 31 'bitconcatenate' 'tmp_142' <Predicate = (icmp_ln185 & and_ln190)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln628 = zext i10 %tmp_142"   --->   Operation 32 'zext' 'zext_ln628' <Predicate = (icmp_ln185 & and_ln190)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (1.88ns)   --->   "%lshr_ln628 = lshr i1024 %cached_V_6_read, i1024 %zext_ln628"   --->   Operation 33 'lshr' 'lshr_ln628' <Predicate = (icmp_ln185 & and_ln190)> <Delay = 1.88> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%output_data_V = trunc i1024 %lshr_ln628"   --->   Operation 34 'trunc' 'output_data_V' <Predicate = (icmp_ln185 & and_ln190)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.42ns)   --->   "%br_ln191 = br void %for.inc" [vccache.cpp:191]   --->   Operation 35 'br' 'br_ln191' <Predicate = (icmp_ln185 & and_ln190)> <Delay = 0.42>
+ST_1 : Operation 36 [1/1] (1.00ns)   --->   "%i_33 = add i31 %i_32, i31 1" [vccache.cpp:185]   --->   Operation 36 'add' 'i_33' <Predicate = (icmp_ln185)> <Delay = 1.00> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.42ns)   --->   "%store_ln185 = store i31 %i_33, i31 %i" [vccache.cpp:185]   --->   Operation 37 'store' 'store_ln185' <Predicate = (icmp_ln185)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 1.55>
+ST_2 : Operation 38 [1/1] (1.55ns)   --->   "%output_data_V_7 = read i128 @_ssdm_op_Read.ap_fifo.volatile.i128P0A, i128 %coff4" [vccache.cpp:193]   --->   Operation 38 'read' 'output_data_V_7' <Predicate = (icmp_ln185 & !and_ln190)> <Delay = 1.55> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.55> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 64> <FIFO>
+ST_2 : Operation 39 [1/1] (0.42ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 39 'br' 'br_ln0' <Predicate = (icmp_ln185 & !and_ln190)> <Delay = 0.42>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 50 'ret' 'ret_ln0' <Predicate = (!icmp_ln185)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.88>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%specpipeline_ln186 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_157" [vccache.cpp:186]   --->   Operation 40 'specpipeline' 'specpipeline_ln186' <Predicate = (icmp_ln185)> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%specloopname_ln185 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13" [vccache.cpp:185]   --->   Operation 41 'specloopname' 'specloopname_ln185' <Predicate = (icmp_ln185)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.17ns)   --->   "%output_begin_V = select i1 %icmp_ln188, i2 %trunc_ln_read, i2 0"   --->   Operation 42 'select' 'output_begin_V' <Predicate = (icmp_ln185)> <Delay = 0.17> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln187 = zext i2 %output_begin_V" [vccache.cpp:187]   --->   Operation 43 'zext' 'zext_ln187' <Predicate = (icmp_ln185)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.17ns)   --->   "%output_end_V = select i1 %icmp_ln189, i2 %tmp, i2 3"   --->   Operation 44 'select' 'output_end_V' <Predicate = (icmp_ln185)> <Delay = 0.17> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%zext_ln187_3 = zext i2 %output_end_V" [vccache.cpp:187]   --->   Operation 45 'zext' 'zext_ln187_3' <Predicate = (icmp_ln185)> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%output_data_V_6 = phi i128 %output_data_V, void %if.then23, i128 %output_data_V_7, void %if.else"   --->   Operation 46 'phi' 'output_data_V_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i134 @_ssdm_op_BitConcatenate.i134.i128.i3.i3, i128 %output_data_V_6, i3 %zext_ln187_3, i3 %zext_ln187" [vccache.cpp:194]   --->   Operation 47 'bitconcatenate' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (1.70ns)   --->   "%write_ln194 = write void @_ssdm_op_Write.ap_fifo.volatile.i134P0A, i134 %cblock3, i134 %p_0" [vccache.cpp:194]   --->   Operation 48 'write' 'write_ln194' <Predicate = true> <Delay = 1.70> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.70> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 134> <Depth = 100> <FIFO>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%br_ln185 = br void %for.body" [vccache.cpp:185]   --->   Operation 49 'br' 'br_ln185' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 1.35ns.
+
+ <State 1>: 2.89ns
+The critical path consists of the following:
+	'alloca' operation ('i') [10]  (0 ns)
+	'load' operation ('i', vccache.cpp:185) on local variable 'i' [25]  (0 ns)
+	'sub' operation ('sub_ln190', vccache.cpp:190) [37]  (1.01 ns)
+	'lshr' operation ('lshr_ln628') [49]  (1.89 ns)
+
+ <State 2>: 1.56ns
+The critical path consists of the following:
+	fifo read operation ('output.data.V', vccache.cpp:193) on port 'coff4' (vccache.cpp:193) [43]  (1.56 ns)
+
+ <State 3>: 1.88ns
+The critical path consists of the following:
+	'select' operation ('output.begin.V') [32]  (0.179 ns)
+	fifo write operation ('write_ln194', vccache.cpp:194) on port 'cblock3' (vccache.cpp:194) [55]  (1.7 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

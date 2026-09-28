@@ -1,0 +1,71 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'root' on host 'team-fceo5ww5pmwf-main' (Linux_x86_64 version 6.8.0-138-generic) on Sat Sep 26 11:07:24 +0000 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.3 LTS
+INFO: [HLS 200-10] In directory '/output/block_lu_hls/test_2022.2_no_a_filter'
+WARNING: [HLS 200-40] Environment variable 'C_INCLUDE_PATH' is set to /output/xilinx_compat/usr/include:/output/xilinx_compat/usr/include/x86_64-linux-gnu.
+WARNING: [HLS 200-40] Environment variable 'CPLUS_INCLUDE_PATH' is set to /output/xilinx_compat/usr/include:/output/xilinx_compat/usr/include/x86_64-linux-gnu.
+Sourcing Tcl script 'run_only_cosim_2048.tcl'
+INFO: [HLS 200-1510] Running: open_project proj_block_lu_hls 
+INFO: [HLS 200-10] Opening project '/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls'.
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Opening solution '/output/block_lu_hls/test_2022.2_no_a_filter/proj_block_lu_hls/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu15eg-ffvb1156-2-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: cosim_design -setup -trace_level none 
+Running Dispatch Server on port: 42369
+WARNING: [COSIM 212-384] This design has internal non-blocking FIFO/Stream accesses, which may result in mismatches or simulation hanging.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/openbayes/home/tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling apatb_spmm.cpp
+   Compiling core.cpp_pre.cpp.tb.cpp
+   Compiling pe.cpp_pre.cpp.tb.cpp
+   Compiling rcache.cpp_pre.cpp.tb.cpp
+   Compiling tb.cpp_pre.cpp.tb.cpp
+   Compiling util.cpp_pre.cpp.tb.cpp
+   Compiling vccache.cpp_pre.cpp.tb.cpp
+   Compiling apatb_spmm_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+RUN benchmark first 2048 rows
+PASS benchmark first 2048 rows (nnz=3626)
+All SpMM checks passed.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_vivado_gen_ip.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1316.688 ; gain = 0.023 ; free physical = 83470 ; free virtual = 89426
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/openbayes/home/tools/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'spmm_fmul_32ns_32ns_32_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'spmm_fmul_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'spmm_fmul_32ns_32ns_32_5_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'spmm_fsub_32ns_32ns_32_8_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'spmm_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'spmm_fsub_32ns_32ns_32_8_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'spmm_fadd_32ns_32ns_32_8_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'spmm_fadd_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'spmm_fadd_32ns_32ns_32_8_full_dsp_1_ip'...
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 11:09:14 2026...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 105.33 seconds. CPU system time: 8.51 seconds. Elapsed time: 113.32 seconds; current allocated memory: 46.469 MB.
+已自动为 run_xsim.sh 添加 -cc gcc 选项并设置执行权限
+INFO: [HLS 200-112] Total CPU user time: 3800.13 seconds. Total CPU system time: 75.71 seconds. Total elapsed time: 3457.23 seconds; peak allocated memory: 243.598 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sat Sep 26 12:05:00 2026...
