@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Sep 28 07:01:07 2026
+# Process ID: 118415
+# Current directory: /output/block_lu_hls/zu15eg_vivado_v1
+# Command line: vivado -mode batch -source query_ps4.tcl -nojournal
+# Log file: /output/block_lu_hls/zu15eg_vivado_v1/vivado.log
+# Journal file: 
+# Running On: team-fceo5ww5pmwf-main, OS: Linux, CPU Frequency: 1500.000 MHz, CPU Physical cores: 2, Host memory: 100663 MB
+#-----------------------------------------------------------
+source query_ps4.tcl
+# create_project -in_memory -part xczu15eg-ffvb1156-2-i
+# create_bd_design q
+Wrote  : </output/block_lu_hls/zu15eg_vivado_v1/.srcs/sources_1/bd/q/q.bd> 
+# set v [lindex [get_ipdefs *zynq_ultra_ps_e*] end]
+# create_bd_cell -type ip -vlnv $v ps
+# set_property -dict [list CONFIG.PSU__USE__M_AXI_GP0 {1} CONFIG.PSU__USE__M_AXI_GP1 {0} CONFIG.PSU__USE__M_AXI_GP2 {0} CONFIG.PSU__USE__S_AXI_GP0 {1} CONFIG.PSU__USE__S_AXI_GP1 {0} CONFIG.PSU__USE__S_AXI_GP2 {0} CONFIG.PSU__USE__S_AXI_GP3 {0} CONFIG.PSU__USE__S_AXI_GP4 {0} CONFIG.PSU__USE__S_AXI_GP5 {0} CONFIG.PSU__USE__S_AXI_GP6 {0}] [get_bd_cells ps]
+# puts "INTF=[get_bd_intf_pins ps/*]"
+INTF=/ps/M_AXI_HPM0_FPD /ps/S_AXI_HPC0_FPD
+# exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 28 07:01:20 2026...
