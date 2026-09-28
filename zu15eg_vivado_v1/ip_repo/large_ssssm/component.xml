@@ -20130,7 +20130,7 @@
       <xilinx:displayName>large_ssssm Block-LU kernel</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-09-28T06:56:46Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2026-09-28T10:04:00Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>

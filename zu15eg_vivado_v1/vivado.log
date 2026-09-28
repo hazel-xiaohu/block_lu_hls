@@ -2,12 +2,147 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Sep 28 07:53:21 2026
-# Process ID: 146292
+# Start of session at: Mon Sep 28 10:44:01 2026
+# Process ID: 187787
 # Current directory: /output/block_lu_hls/zu15eg_vivado_v1
-# Command line: vivado -mode gui vivado_project/block_lu_zu15eg.xpr
+# Command line: vivado -mode batch -source 03_build_and_export.tcl
 # Log file: /output/block_lu_hls/zu15eg_vivado_v1/vivado.log
 # Journal file: /output/block_lu_hls/zu15eg_vivado_v1/vivado.jou
 # Running On: team-fceo5ww5pmwf-main, OS: Linux, CPU Frequency: 1500.000 MHz, CPU Physical cores: 2, Host memory: 100663 MB
 #-----------------------------------------------------------
-start_gui
+source 03_build_and_export.tcl
+# set root [file normalize [file dirname [info script]]]
+# set project_dir "$root/vivado_project"
+# set project_name "block_lu_zu15eg"
+# catch {config_webtalk -user off}
+# catch {set_param project.enableWebtalk false}
+# set host_libudev "/usr/lib/x86_64-linux-gnu/libudev.so.1"
+# if {[file exists $host_libudev]} {
+#   set ::env(LD_PRELOAD) $host_libudev
+# }
+# open_project "$project_dir/$project_name.xpr"
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/output/block_lu_hls/zu15eg_vivado_v1/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/openbayes/home/tools/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_zynq_ultra_ps_e_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_zynq_ultra_ps_e_0_0/block_lu_bd_zynq_ultra_ps_e_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_zynq_ultra_ps_e_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_zynq_ultra_ps_e_0_0/block_lu_bd_zynq_ultra_ps_e_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_zynq_ultra_ps_e_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_zynq_ultra_ps_e_0_0/block_lu_bd_zynq_ultra_ps_e_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_zynq_ultra_ps_e_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_zynq_ultra_ps_e_0_0/block_lu_bd_zynq_ultra_ps_e_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_zynq_ultra_ps_e_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_zynq_ultra_ps_e_0_0/block_lu_bd_zynq_ultra_ps_e_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_rst_pl0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_rst_pl0_0/block_lu_bd_rst_pl0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_rst_pl0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_rst_pl0_0/block_lu_bd_rst_pl0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_rst_pl0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_rst_pl0_0/block_lu_bd_rst_pl0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_rst_pl0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_rst_pl0_0/block_lu_bd_rst_pl0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_rst_pl0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_rst_pl0_0/block_lu_bd_rst_pl0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_ctrl_smartconnect_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_ctrl_smartconnect_0/block_lu_bd_axi_ctrl_smartconnect_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_ctrl_smartconnect_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_ctrl_smartconnect_0/block_lu_bd_axi_ctrl_smartconnect_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_ctrl_smartconnect_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_ctrl_smartconnect_0/block_lu_bd_axi_ctrl_smartconnect_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_ctrl_smartconnect_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_ctrl_smartconnect_0/block_lu_bd_axi_ctrl_smartconnect_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_ctrl_smartconnect_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_ctrl_smartconnect_0/block_lu_bd_axi_ctrl_smartconnect_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect0_0/block_lu_bd_axi_data_smartconnect0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect0_0/block_lu_bd_axi_data_smartconnect0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect0_0/block_lu_bd_axi_data_smartconnect0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect0_0/block_lu_bd_axi_data_smartconnect0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect0_0/block_lu_bd_axi_data_smartconnect0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect1_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect1_0/block_lu_bd_axi_data_smartconnect1_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect1_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect1_0/block_lu_bd_axi_data_smartconnect1_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect1_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect1_0/block_lu_bd_axi_data_smartconnect1_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect1_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect1_0/block_lu_bd_axi_data_smartconnect1_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect1_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect1_0/block_lu_bd_axi_data_smartconnect1_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect2_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect2_0/block_lu_bd_axi_data_smartconnect2_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect2_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect2_0/block_lu_bd_axi_data_smartconnect2_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect2_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect2_0/block_lu_bd_axi_data_smartconnect2_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect2_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect2_0/block_lu_bd_axi_data_smartconnect2_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect2_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect2_0/block_lu_bd_axi_data_smartconnect2_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect3_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect3_0/block_lu_bd_axi_data_smartconnect3_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect3_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect3_0/block_lu_bd_axi_data_smartconnect3_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect3_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect3_0/block_lu_bd_axi_data_smartconnect3_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect3_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect3_0/block_lu_bd_axi_data_smartconnect3_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_smartconnect3_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_smartconnect3_0/block_lu_bd_axi_data_smartconnect3_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_aggregate_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_aggregate_0/block_lu_bd_axi_data_aggregate_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_aggregate_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_aggregate_0/block_lu_bd_axi_data_aggregate_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_aggregate_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_aggregate_0/block_lu_bd_axi_data_aggregate_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_aggregate_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_aggregate_0/block_lu_bd_axi_data_aggregate_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_axi_data_aggregate_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_axi_data_aggregate_0/block_lu_bd_axi_data_aggregate_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_getrf_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_getrf_0_0/block_lu_bd_getrf_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_getrf_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_getrf_0_0/block_lu_bd_getrf_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_getrf_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_getrf_0_0/block_lu_bd_getrf_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_getrf_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_getrf_0_0/block_lu_bd_getrf_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_getrf_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_getrf_0_0/block_lu_bd_getrf_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_gessm_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_gessm_0_0/block_lu_bd_gessm_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_gessm_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_gessm_0_0/block_lu_bd_gessm_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_gessm_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_gessm_0_0/block_lu_bd_gessm_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_gessm_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_gessm_0_0/block_lu_bd_gessm_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_gessm_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_gessm_0_0/block_lu_bd_gessm_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_0_0/block_lu_bd_tstrf_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_0_0/block_lu_bd_tstrf_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_0_0/block_lu_bd_tstrf_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_0_0/block_lu_bd_tstrf_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_0_0/block_lu_bd_tstrf_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_ssssm_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_ssssm_0_0/block_lu_bd_ssssm_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_ssssm_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_ssssm_0_0/block_lu_bd_ssssm_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_ssssm_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_ssssm_0_0/block_lu_bd_ssssm_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_ssssm_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_ssssm_0_0/block_lu_bd_ssssm_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_ssssm_0_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_ssssm_0_0/block_lu_bd_ssssm_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_gessm_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_gessm_cfg_0/block_lu_bd_gessm_cfg_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_gessm_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_gessm_cfg_0/block_lu_bd_gessm_cfg_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_gessm_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_gessm_cfg_0/block_lu_bd_gessm_cfg_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_gessm_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_gessm_cfg_0/block_lu_bd_gessm_cfg_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_gessm_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_gessm_cfg_0/block_lu_bd_gessm_cfg_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_cfg_0/block_lu_bd_tstrf_cfg_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_cfg_0/block_lu_bd_tstrf_cfg_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_cfg_0/block_lu_bd_tstrf_cfg_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_cfg_0/block_lu_bd_tstrf_cfg_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_cfg_0/block_lu_bd_tstrf_cfg_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_eps_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_eps_0/block_lu_bd_tstrf_eps_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_eps_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_eps_0/block_lu_bd_tstrf_eps_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_eps_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_eps_0/block_lu_bd_tstrf_eps_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_eps_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_eps_0/block_lu_bd_tstrf_eps_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_tstrf_eps_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_tstrf_eps_0/block_lu_bd_tstrf_eps_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_ssssm_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_ssssm_cfg_0/block_lu_bd_ssssm_cfg_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_ssssm_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_ssssm_cfg_0/block_lu_bd_ssssm_cfg_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_ssssm_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_ssssm_cfg_0/block_lu_bd_ssssm_cfg_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_ssssm_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_ssssm_cfg_0/block_lu_bd_ssssm_cfg_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'block_lu_bd_ssssm_cfg_0' generated file not found '/output/block_lu_hls/zu15eg_vivado_v1/vivado_project/block_lu_zu15eg.gen/sources_1/bd/block_lu_bd/ip/block_lu_bd_ssssm_cfg_0/block_lu_bd_ssssm_cfg_0_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1555.148 ; gain = 240.164 ; free physical = 17465 ; free virtual = 93253
+# file mkdir "$root/output"
+# set_property strategy Flow_PerfOptimized_high [get_runs synth_1]
+# launch_runs synth_1 -jobs 1
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_axi_ctrl_smartconnect_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_axi_data_aggregate_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_axi_data_smartconnect0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_axi_data_smartconnect1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_axi_data_smartconnect2_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_axi_data_smartconnect3_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_gessm_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_gessm_cfg_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_getrf_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_rst_pl0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_ssssm_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_ssssm_cfg_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_tstrf_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_tstrf_cfg_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_tstrf_eps_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP block_lu_bd_zynq_ultra_ps_e_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_axi_ctrl_smartconnect_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_axi_data_aggregate_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_axi_data_smartconnect0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_axi_data_smartconnect1_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_axi_data_smartconnect2_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_axi_data_smartconnect3_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_gessm_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_ssssm_cfg_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_tstrf_eps_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_gessm_cfg_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_tstrf_cfg_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_getrf_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_ssssm_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_zynq_ultra_ps_e_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_rst_pl0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: block_lu_bd_tstrf_0_0
+ERROR: [Common 17-69] Command failed:  Run 'synth_1' needs to be reset before launching. The run can be reset using the Tcl command 'reset_run synth_1'.
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 28 10:44:36 2026...

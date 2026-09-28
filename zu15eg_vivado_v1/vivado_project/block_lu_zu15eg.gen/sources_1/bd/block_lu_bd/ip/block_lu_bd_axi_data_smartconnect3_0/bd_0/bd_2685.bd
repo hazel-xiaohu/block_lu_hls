@@ -4575,7 +4575,7 @@
                 "value": "0"
               },
               "MEP_IDENTIFIER": {
-                "value": "27"
+                "value": "5"
               },
               "MEP_IDENTIFIER_WIDTH": {
                 "value": "6"
@@ -5931,7 +5931,7 @@
                 "value": "0"
               },
               "MEP_IDENTIFIER": {
-                "value": "26"
+                "value": "4"
               },
               "MEP_IDENTIFIER_WIDTH": {
                 "value": "6"
@@ -8249,10 +8249,10 @@
                 "value": "0b0000000000000000"
               },
               "SSC004_ROUTE": {
-                "value": "0b0000000000000000"
+                "value": "0b0000000000000010"
               },
               "SSC005_ROUTE": {
-                "value": "0b0000000000000000"
+                "value": "0b0000000000000001"
               },
               "SSC006_ROUTE": {
                 "value": "0b0000000000000000"
@@ -8315,10 +8315,10 @@
                 "value": "0b0000000000000000"
               },
               "SSC026_ROUTE": {
-                "value": "0b0000000000000010"
+                "value": "0b0000000000000000"
               },
               "SSC027_ROUTE": {
-                "value": "0b0000000000000001"
+                "value": "0b0000000000000000"
               },
               "SSC028_ROUTE": {
                 "value": "0b0000000000000000"

@@ -328,7 +328,7 @@ output wire m_axi_rready;
     .C_NUM_READ_THREADS(1),
     .C_NUM_WRITE_THREADS(1),
     .C_MEP_IDENTIFIER_WIDTH(6),
-    .C_MEP_IDENTIFIER(46),
+    .C_MEP_IDENTIFIER(24),
     .C_SEP_ROUTE_WIDTH(2),
     .C_RDATA_WIDTH(32),
     .C_WDATA_WIDTH(32),
@@ -343,7 +343,7 @@ output wire m_axi_rready;
     .C_NUM_WRITE_OUTSTANDING(2),
     .C_SINGLE_ISSUING(0)
   ) inst (
-    .mep_identifier(6'H2E),
+    .mep_identifier(6'H18),
     .aclk(aclk),
     .aclken(1'D1),
     .aresetn(aresetn),

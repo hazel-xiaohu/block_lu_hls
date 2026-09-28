@@ -43,7 +43,9 @@ connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0] [get_bd_pins rst_pl0/e
 # One SmartConnect for PS control-register accesses.
 create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 axi_ctrl_smartconnect
 set_property CONFIG.NUM_SI {1} [get_bd_cells axi_ctrl_smartconnect]
-set_property CONFIG.NUM_MI {4} [get_bd_cells axi_ctrl_smartconnect]
+# Four HLS control ports plus GPIO-backed scalar inputs for the kernels whose
+# legacy RTL exposes n/active_count/rows as top-level pins.
+set_property CONFIG.NUM_MI {8} [get_bd_cells axi_ctrl_smartconnect]
 connect_bd_intf_net [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_FPD] [get_bd_intf_pins axi_ctrl_smartconnect/S00_AXI]
 
 # SmartConnect has a maximum of 16 slave interfaces in Vivado 2022.2.
@@ -70,6 +72,22 @@ create_bd_cell -type ip -vlnv xilinx.com:hls:large_gessm_v2:1.0 gessm_0
 create_bd_cell -type ip -vlnv xilinx.com:hls:large_tstrf_v2:1.0 tstrf_0
 create_bd_cell -type ip -vlnv xilinx.com:hls:large_ssssm:1.0 ssssm_0
 
+# The packaged GESSM/TSTRF/SSSSM RTL was generated without s_axilite pragmas
+# on scalar inputs. Expose those pins through AXI GPIO so software can set
+# them per task; otherwise the generated BD ties them to zero.
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 gessm_cfg
+set_property -dict [list CONFIG.C_GPIO_WIDTH {32} CONFIG.C_IS_DUAL {1} \
+  CONFIG.C_GPIO2_WIDTH {32} CONFIG.C_ALL_OUTPUTS {1} \
+  CONFIG.C_ALL_OUTPUTS_2 {1}] [get_bd_cells gessm_cfg]
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 tstrf_cfg
+set_property -dict [list CONFIG.C_GPIO_WIDTH {32} CONFIG.C_IS_DUAL {1} \
+  CONFIG.C_GPIO2_WIDTH {32} CONFIG.C_ALL_OUTPUTS {1} \
+  CONFIG.C_ALL_OUTPUTS_2 {1}] [get_bd_cells tstrf_cfg]
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 tstrf_eps
+set_property -dict [list CONFIG.C_GPIO_WIDTH {32} CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells tstrf_eps]
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 ssssm_cfg
+set_property -dict [list CONFIG.C_GPIO_WIDTH {32} CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells ssssm_cfg]
+
 # The HLS-generated IP metadata advertises 100 MHz, while the default PS
 # PLL produces 96.968727 MHz.  Normalize all kernel bus metadata to the
 # actual PL0 frequency before validation.
@@ -84,6 +102,22 @@ foreach k $kernels {
     connect_bd_net [get_bd_pins rst_pl0/peripheral_aresetn] [get_bd_pins $k/ap_rst_n]
     incr ctrl_index
 }
+
+# GPIO control addresses follow the four HLS control banks (M04..M07).
+set cfg_gpios {gessm_cfg tstrf_cfg tstrf_eps ssssm_cfg}
+set cfg_index 4
+foreach g $cfg_gpios {
+    connect_bd_intf_net [get_bd_intf_pins axi_ctrl_smartconnect/M0${cfg_index}_AXI] [get_bd_intf_pins $g/S_AXI]
+    connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins $g/s_axi_aclk]
+    connect_bd_net [get_bd_pins rst_pl0/interconnect_aresetn] [get_bd_pins $g/s_axi_aresetn]
+    incr cfg_index
+}
+connect_bd_net [get_bd_pins gessm_cfg/gpio_io_o]  [get_bd_pins gessm_0/active_count]
+connect_bd_net [get_bd_pins gessm_cfg/gpio2_io_o] [get_bd_pins gessm_0/n]
+connect_bd_net [get_bd_pins tstrf_cfg/gpio_io_o]  [get_bd_pins tstrf_0/active_count]
+connect_bd_net [get_bd_pins tstrf_cfg/gpio2_io_o] [get_bd_pins tstrf_0/n]
+connect_bd_net [get_bd_pins tstrf_eps/gpio_io_o] [get_bd_pins tstrf_0/pivot_eps]
+connect_bd_net [get_bd_pins ssssm_cfg/gpio_io_o]  [get_bd_pins ssssm_0/rows]
 
 # Connect all kernel AXI master bundles to the fan-in SmartConnects.
 set data_si 0

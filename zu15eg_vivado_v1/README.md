@@ -40,3 +40,32 @@ The board-specific DDR configuration must be checked before implementation.
 If the board has a vendor board preset, apply it to the PS before validating
 the block design. UART and SD1 MIO assignments now match the supplied board wiring:
 UART0=MIO42..43, SD1=4Bit/SD2.0 on MIO46..51, CD=MIO45.
+
+## Vitis SD-card software
+
+A standalone A53/FatFs task-graph runner, binary packer, and XSCT build
+script are in `vitis/`. It reads a symbolically ordered `.blu` file from
+PS SD1, places its CSR/CSC arrays in DDR, and dispatches the four HLS IPs.
+The current GESSM/TSTRF/SSSSM scalar pins must be exposed through the AXI
+GPIO additions in `02_create_bd.tcl`; regenerate the XSA after that change.
+See `vitis/README.md` before booting.
+## Vivado 2022.2 container workaround
+
+On this Ubuntu/container host, source the persistent compatibility environment before batch Vivado. It preloads the host `libudev.so.1` to avoid the Vivado 2022.2 FlexLM/WebTalk `realloc(): invalid pointer` crash:
+
+```bash
+source /output/xilinx_compat/xilinx_compat.sh
+vivado -mode batch -source 03_build_and_export.tcl
+```
+
+If a previous Vivado process was terminated during `launch_runs`, reset the stale run once before retrying:
+
+```tcl
+open_project vivado_project/block_lu_zu15eg.xpr
+reset_run synth_1
+reset_run impl_1
+close_project
+```
+
+The `Auto Incremental Compile: No reference checkpoint` message is informational; it falls back to a normal synthesis run.
+

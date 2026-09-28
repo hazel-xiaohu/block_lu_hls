@@ -78,6 +78,14 @@ block_lu_bd_axi_ctrl_smartconnect_0_sc::block_lu_bd_axi_ctrl_smartconnect_0_sc(c
   M02_AXI_tlm_aximm_write_socket = mp_impl->M02_AXI_tlm_aximm_write_socket;
   M03_AXI_tlm_aximm_read_socket = mp_impl->M03_AXI_tlm_aximm_read_socket;
   M03_AXI_tlm_aximm_write_socket = mp_impl->M03_AXI_tlm_aximm_write_socket;
+  M04_AXI_tlm_aximm_read_socket = mp_impl->M04_AXI_tlm_aximm_read_socket;
+  M04_AXI_tlm_aximm_write_socket = mp_impl->M04_AXI_tlm_aximm_write_socket;
+  M05_AXI_tlm_aximm_read_socket = mp_impl->M05_AXI_tlm_aximm_read_socket;
+  M05_AXI_tlm_aximm_write_socket = mp_impl->M05_AXI_tlm_aximm_write_socket;
+  M06_AXI_tlm_aximm_read_socket = mp_impl->M06_AXI_tlm_aximm_read_socket;
+  M06_AXI_tlm_aximm_write_socket = mp_impl->M06_AXI_tlm_aximm_write_socket;
+  M07_AXI_tlm_aximm_read_socket = mp_impl->M07_AXI_tlm_aximm_read_socket;
+  M07_AXI_tlm_aximm_write_socket = mp_impl->M07_AXI_tlm_aximm_write_socket;
 }
 
 block_lu_bd_axi_ctrl_smartconnect_0_sc::~block_lu_bd_axi_ctrl_smartconnect_0_sc()

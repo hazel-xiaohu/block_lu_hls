@@ -23,6 +23,10 @@
       "gessm_0": "",
       "tstrf_0": "",
       "ssssm_0": "",
+      "gessm_cfg": "",
+      "tstrf_cfg": "",
+      "tstrf_eps": "",
+      "ssssm_cfg": "",
       "kernel_irq_concat": ""
     },
     "components": {
@@ -231,7 +235,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "50"
+                "value": "3"
               }
             }
           },
@@ -325,7 +329,7 @@
         "inst_hier_path": "axi_ctrl_smartconnect",
         "parameters": {
           "NUM_MI": {
-            "value": "4"
+            "value": "8"
           },
           "NUM_SI": {
             "value": "1"
@@ -348,7 +352,11 @@
               "M00_AXI",
               "M01_AXI",
               "M02_AXI",
-              "M03_AXI"
+              "M03_AXI",
+              "M04_AXI",
+              "M05_AXI",
+              "M06_AXI",
+              "M07_AXI"
             ]
           },
           "M00_AXI": {
@@ -445,6 +453,130 @@
             }
           },
           "M03_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "1"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          },
+          "M04_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "1"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          },
+          "M05_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "1"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          },
+          "M06_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "1"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          },
+          "M07_AXI": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
@@ -1705,7 +1837,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "2"
+                "value": "40"
               }
             }
           },
@@ -1720,7 +1852,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "1"
+                "value": "2"
               }
             }
           },
@@ -1735,7 +1867,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "3"
+                "value": "39"
               }
             }
           },
@@ -1750,7 +1882,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "4"
+                "value": "38"
               }
             }
           },
@@ -1765,7 +1897,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "5"
+                "value": "37"
               }
             }
           },
@@ -1780,7 +1912,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "6"
+                "value": "36"
               }
             }
           },
@@ -1795,7 +1927,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "7"
+                "value": "35"
               }
             }
           },
@@ -1810,7 +1942,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "8"
+                "value": "34"
               }
             }
           },
@@ -1825,7 +1957,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "9"
+                "value": "33"
               }
             }
           },
@@ -1840,7 +1972,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "10"
+                "value": "32"
               }
             }
           },
@@ -1912,7 +2044,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "12"
+                "value": "30"
               }
             }
           },
@@ -1927,7 +2059,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "11"
+                "value": "31"
               }
             }
           },
@@ -1942,7 +2074,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "13"
+                "value": "29"
               }
             }
           },
@@ -1957,7 +2089,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "14"
+                "value": "28"
               }
             }
           },
@@ -1972,7 +2104,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "15"
+                "value": "51"
               }
             }
           },
@@ -1987,7 +2119,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "16"
+                "value": "50"
               }
             }
           },
@@ -2002,7 +2134,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "17"
+                "value": "49"
               }
             }
           },
@@ -2017,7 +2149,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "18"
+                "value": "48"
               }
             }
           },
@@ -2032,7 +2164,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "19"
+                "value": "47"
               }
             }
           },
@@ -2047,7 +2179,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "20"
+                "value": "46"
               }
             }
           },
@@ -2062,7 +2194,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "21"
+                "value": "45"
               }
             }
           },
@@ -2077,7 +2209,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "22"
+                "value": "44"
               }
             }
           },
@@ -2092,7 +2224,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "23"
+                "value": "43"
               }
             }
           },
@@ -2176,7 +2308,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "49"
+                "value": "27"
               }
             }
           },
@@ -2191,7 +2323,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "51"
+                "value": "1"
               }
             }
           },
@@ -2206,7 +2338,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "48"
+                "value": "26"
               }
             }
           },
@@ -2221,7 +2353,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "47"
+                "value": "25"
               }
             }
           },
@@ -2236,7 +2368,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "46"
+                "value": "24"
               }
             }
           },
@@ -2251,7 +2383,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "45"
+                "value": "23"
               }
             }
           },
@@ -2266,7 +2398,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "44"
+                "value": "22"
               }
             }
           },
@@ -2281,7 +2413,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "43"
+                "value": "21"
               }
             }
           },
@@ -2296,7 +2428,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "42"
+                "value": "20"
               }
             }
           },
@@ -2311,7 +2443,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "25"
+                "value": "41"
               }
             }
           },
@@ -2326,7 +2458,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "41"
+                "value": "19"
               }
             }
           },
@@ -2341,7 +2473,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "40"
+                "value": "18"
               }
             }
           },
@@ -2356,7 +2488,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "39"
+                "value": "17"
               }
             }
           },
@@ -2440,7 +2572,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "38"
+                "value": "16"
               }
             }
           },
@@ -2455,7 +2587,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "37"
+                "value": "15"
               }
             }
           },
@@ -2470,7 +2602,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "36"
+                "value": "14"
               }
             }
           },
@@ -2485,7 +2617,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "24"
+                "value": "42"
               }
             }
           },
@@ -2500,7 +2632,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "35"
+                "value": "13"
               }
             }
           },
@@ -2515,7 +2647,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "34"
+                "value": "12"
               }
             }
           },
@@ -2530,7 +2662,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "33"
+                "value": "11"
               }
             }
           },
@@ -2545,7 +2677,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "32"
+                "value": "10"
               }
             }
           },
@@ -2560,7 +2692,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "31"
+                "value": "9"
               }
             }
           },
@@ -2575,7 +2707,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "30"
+                "value": "8"
               }
             }
           },
@@ -2590,7 +2722,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "29"
+                "value": "7"
               }
             }
           },
@@ -2605,7 +2737,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "28"
+                "value": "6"
               }
             }
           },
@@ -2620,7 +2752,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "27"
+                "value": "5"
               }
             }
           },
@@ -2635,7 +2767,7 @@
             },
             "parameters": {
               "master_id": {
-                "value": "26"
+                "value": "4"
               }
             }
           },
@@ -2706,6 +2838,80 @@
           }
         }
       },
+      "gessm_cfg": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "block_lu_bd_gessm_cfg_0",
+        "xci_path": "ip/block_lu_bd_gessm_cfg_0/block_lu_bd_gessm_cfg_0.xci",
+        "inst_hier_path": "gessm_cfg",
+        "parameters": {
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_ALL_OUTPUTS_2": {
+            "value": "1"
+          },
+          "C_GPIO2_WIDTH": {
+            "value": "32"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "32"
+          },
+          "C_IS_DUAL": {
+            "value": "1"
+          }
+        }
+      },
+      "tstrf_cfg": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "block_lu_bd_tstrf_cfg_0",
+        "xci_path": "ip/block_lu_bd_tstrf_cfg_0/block_lu_bd_tstrf_cfg_0.xci",
+        "inst_hier_path": "tstrf_cfg",
+        "parameters": {
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_ALL_OUTPUTS_2": {
+            "value": "1"
+          },
+          "C_GPIO2_WIDTH": {
+            "value": "32"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "32"
+          },
+          "C_IS_DUAL": {
+            "value": "1"
+          }
+        }
+      },
+      "tstrf_eps": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "block_lu_bd_tstrf_eps_0",
+        "xci_path": "ip/block_lu_bd_tstrf_eps_0/block_lu_bd_tstrf_eps_0.xci",
+        "inst_hier_path": "tstrf_eps",
+        "parameters": {
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "32"
+          }
+        }
+      },
+      "ssssm_cfg": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "block_lu_bd_ssssm_cfg_0",
+        "xci_path": "ip/block_lu_bd_ssssm_cfg_0/block_lu_bd_ssssm_cfg_0.xci",
+        "inst_hier_path": "ssssm_cfg",
+        "parameters": {
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "32"
+          }
+        }
+      },
       "kernel_irq_concat": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "block_lu_bd_kernel_irq_concat_0",
@@ -2741,6 +2947,30 @@
         "interface_ports": [
           "axi_ctrl_smartconnect/M03_AXI",
           "ssssm_0/s_axi_control"
+        ]
+      },
+      "axi_ctrl_smartconnect_M04_AXI": {
+        "interface_ports": [
+          "axi_ctrl_smartconnect/M04_AXI",
+          "gessm_cfg/S_AXI"
+        ]
+      },
+      "axi_ctrl_smartconnect_M05_AXI": {
+        "interface_ports": [
+          "axi_ctrl_smartconnect/M05_AXI",
+          "tstrf_cfg/S_AXI"
+        ]
+      },
+      "axi_ctrl_smartconnect_M06_AXI": {
+        "interface_ports": [
+          "axi_ctrl_smartconnect/M06_AXI",
+          "tstrf_eps/S_AXI"
+        ]
+      },
+      "axi_ctrl_smartconnect_M07_AXI": {
+        "interface_ports": [
+          "axi_ctrl_smartconnect/M07_AXI",
+          "ssssm_cfg/S_AXI"
         ]
       },
       "axi_data_aggregate_M00_AXI": {
@@ -3087,6 +3317,18 @@
           "kernel_irq_concat/In1"
         ]
       },
+      "gessm_cfg_gpio2_io_o": {
+        "ports": [
+          "gessm_cfg/gpio2_io_o",
+          "gessm_0/n"
+        ]
+      },
+      "gessm_cfg_gpio_io_o": {
+        "ports": [
+          "gessm_cfg/gpio_io_o",
+          "gessm_0/active_count"
+        ]
+      },
       "getrf_0_interrupt": {
         "ports": [
           "getrf_0/interrupt",
@@ -3102,6 +3344,10 @@
       "rst_pl0_interconnect_aresetn": {
         "ports": [
           "rst_pl0/interconnect_aresetn",
+          "gessm_cfg/s_axi_aresetn",
+          "tstrf_cfg/s_axi_aresetn",
+          "tstrf_eps/s_axi_aresetn",
+          "ssssm_cfg/s_axi_aresetn",
           "axi_ctrl_smartconnect/aresetn",
           "axi_data_aggregate/aresetn",
           "axi_data_smartconnect0/aresetn",
@@ -3125,10 +3371,34 @@
           "kernel_irq_concat/In3"
         ]
       },
+      "ssssm_cfg_gpio_io_o": {
+        "ports": [
+          "ssssm_cfg/gpio_io_o",
+          "ssssm_0/rows"
+        ]
+      },
       "tstrf_0_interrupt": {
         "ports": [
           "tstrf_0/interrupt",
           "kernel_irq_concat/In2"
+        ]
+      },
+      "tstrf_cfg_gpio2_io_o": {
+        "ports": [
+          "tstrf_cfg/gpio2_io_o",
+          "tstrf_0/n"
+        ]
+      },
+      "tstrf_cfg_gpio_io_o": {
+        "ports": [
+          "tstrf_cfg/gpio_io_o",
+          "tstrf_0/active_count"
+        ]
+      },
+      "tstrf_eps_gpio_io_o": {
+        "ports": [
+          "tstrf_eps/gpio_io_o",
+          "tstrf_0/pivot_eps"
         ]
       },
       "zynq_ultra_ps_e_0_pl_clk0": {
@@ -3139,6 +3409,10 @@
           "gessm_0/ap_clk",
           "tstrf_0/ap_clk",
           "ssssm_0/ap_clk",
+          "gessm_cfg/s_axi_aclk",
+          "tstrf_cfg/s_axi_aclk",
+          "tstrf_eps/s_axi_aclk",
+          "ssssm_cfg/s_axi_aclk",
           "axi_ctrl_smartconnect/aclk",
           "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk",
           "zynq_ultra_ps_e_0/saxihpc0_fpd_aclk",
@@ -3166,6 +3440,11 @@
                 "offset": "0x00A0000000",
                 "range": "4K"
               },
+              "SEG_gessm_cfg_Reg": {
+                "address_block": "/gessm_cfg/S_AXI/Reg",
+                "offset": "0x00A0010000",
+                "range": "64K"
+              },
               "SEG_getrf_0_reg0": {
                 "address_block": "/getrf_0/s_axi_control/reg0",
                 "offset": "0x00A0001000",
@@ -3176,10 +3455,25 @@
                 "offset": "0x00A0002000",
                 "range": "4K"
               },
+              "SEG_ssssm_cfg_Reg": {
+                "address_block": "/ssssm_cfg/S_AXI/Reg",
+                "offset": "0x00A0020000",
+                "range": "64K"
+              },
               "SEG_tstrf_0_reg0": {
                 "address_block": "/tstrf_0/s_axi_control/reg0",
                 "offset": "0x00A0003000",
                 "range": "4K"
+              },
+              "SEG_tstrf_cfg_Reg": {
+                "address_block": "/tstrf_cfg/S_AXI/Reg",
+                "offset": "0x00A0030000",
+                "range": "64K"
+              },
+              "SEG_tstrf_eps_Reg": {
+                "address_block": "/tstrf_eps/S_AXI/Reg",
+                "offset": "0x00A0040000",
+                "range": "64K"
               }
             }
           }
