@@ -64,5 +64,14 @@ export PB_ROLL_RTL_SETUP_ONLY=1
 cd "$root"
 timeout "${timeout_sec}s" vitis_hls -f hls/scripts/run_parallel4x4_rolling_rtl_cosim.tcl > "$build/hls_rtl_setup.log" 2>&1
 unset PB_ROLL_RTL_SETUP_ONLY
+sim_script="$build/solution1/sim/verilog/run_xsim.sh"
+if [[ ! -x "$sim_script" ]]; then
+  echo "ERROR: cosim setup did not generate XSIM launcher: $sim_script" >&2
+  tail -40 "$build/hls_rtl_setup.log" >&2 || true
+  exit 4
+fi
+echo "PB_RTL_SETUP_DONE sim_script=$sim_script"
+echo "PB_RTL_XSIM_START log=$log timeout_sec=$timeout_sec"
 timeout "${timeout_sec}s" bash tools/run_quiet_xsim.sh "$build" "$log"
+echo "PB_RTL_XSIM_DONE log=$log"
 echo "PB_PARALLEL4X4_ROLLING_RTL_DONE log=$log"
