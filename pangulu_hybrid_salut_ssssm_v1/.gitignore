@@ -1,0 +1,24 @@
+# Vitis HLS/Vivado generated projects and reports
+hls/build/
+vivado/
+*.log
+*.jou
+*.str
+*.wdb
+*.vcd
+*.xpr
+*.xsa
+*.bit
+
+# Generated host binaries and matrix images
+host_adapter/build/
+artifacts/*.bin
+artifacts/*.flat
+artifacts/*.flat.bin
+
+# Temporary simulation output
+xsim.dir/
+.Xil/
+__pycache__/
+*.pyc
+
