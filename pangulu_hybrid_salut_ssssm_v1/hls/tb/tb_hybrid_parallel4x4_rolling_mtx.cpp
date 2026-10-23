@@ -1,4 +1,4 @@
-#include "hybrid_parallel4x4_rolling.h"
+#include "../src/hybrid_parallel4x4_rolling.h"
 #include "pb_mtx_flat_adapter.hpp"
 
 #include <algorithm>
