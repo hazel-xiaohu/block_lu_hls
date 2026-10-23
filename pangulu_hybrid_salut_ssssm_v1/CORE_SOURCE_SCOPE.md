@@ -28,6 +28,28 @@ This directory contains the source snapshot for the experimental
 - RTL co-simulation: `run_parallel4x4_rolling_rtl_cosim.sh`
 - Protocol-only 510-task gate: `run_rolling_pool_510_regression.sh`
 
+## First run on a new host
+
+The snapshot vendors the required single-process PanguLU CPU front end under
+`host_adapter/pangulu_cpu`; no `/output/block_lu_hls/...` source tree is
+required.  The CSim and wide-512 validation entry points automatically build
+the ignored host executables on first use:
+
+```bash
+source /path/to/Xilinx/Vitis_HLS/2022.2/settings64.sh
+bash run_parallel4x4_rolling_csim.sh
+```
+
+To build the Matrix Market adapter explicitly, run:
+
+```bash
+bash host_adapter/build_mtx_to_flat_abi.sh
+```
+
+Required host tools are `gcc`, `g++`, Bash, and Vitis HLS 2022.2. The
+`/output/xilinx_compat/xilinx_compat.sh` environment is optional and is only
+loaded when it exists.
+
 The protocol-only gate defines `PB_ROLL_DIAG_STUB_KERNEL`; it must not be
 reported as a real floating-point RTL result. The full real-float 510-task
 co-simulation had not completed successfully at the time of this snapshot:

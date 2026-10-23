@@ -2,10 +2,16 @@
 set -euo pipefail
 
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-cpu_root="/output/block_lu_hls/pangulu_dual_schedule_fpga_v1/03_vitis/pangulu_cpu"
+cpu_root="${PB_PANGULU_CPU_ROOT:-$root/host_adapter/pangulu_cpu}"
 inc="$cpu_root/include"
 out="$root/host_adapter/build"
 mkdir -p "$out"
+
+if [[ ! -d "$inc" || ! -d "$cpu_root/src" ]]; then
+  echo "ERROR: vendored PanguLU CPU source is missing: $cpu_root" >&2
+  echo "Expected include/ and src/ below that directory." >&2
+  exit 2
+fi
 
 cc=${CC:-gcc}
 cxx=${CXX:-g++}

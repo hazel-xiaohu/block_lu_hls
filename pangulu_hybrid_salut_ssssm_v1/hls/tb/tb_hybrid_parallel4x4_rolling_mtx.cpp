@@ -83,8 +83,11 @@ static void dag_width(const pb_mtx_flat_image &image,pb_hls_u32 &levels,
 
 int main(int argc,char **argv)
 {
-    const char *flat=argc>1?argv[1]:
-        "/output/pangulu_hybrid_salut_ssssm_v1/artifacts/rolling_top1024_nb256.flat.bin";
+    if(argc<=1){
+        std::printf("PB_ROLL_MTX_ERROR missing flat-image argument\n");
+        return 1;
+    }
+    const char *flat=argv[1];
     pb_mtx_flat_image image;std::string error;
     if(pb_mtx_flat_read_binary(flat,image,error)!=0){
         std::printf("PB_ROLL_MTX_ERROR load=%s\n",error.c_str());return 1;

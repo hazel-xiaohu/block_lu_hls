@@ -8,8 +8,23 @@ flat="$artifact_dir/rolling_top1024_nb16.flat.bin"
 csim_build="${PB_ROLL_CSIM_BUILD:-$root/hls/build/parallel4x4_rolling_nb16_wide512_csim}"
 mkdir -p "$artifact_dir"
 
-source /output/xilinx_compat/xilinx_compat.sh
-export LANG=C LC_ALL=C LOCPATH=/output/xilinx_compat/locale
+if [[ -f /output/xilinx_compat/xilinx_compat.sh ]]; then
+  source /output/xilinx_compat/xilinx_compat.sh
+fi
+export LANG=C LC_ALL=C
+
+if [[ ! -x "$root/host_adapter/build/mtx_to_flat_abi" ]]; then
+  echo "[setup] building host-side Matrix Market adapter"
+  "$root/host_adapter/build_mtx_to_flat_abi.sh"
+fi
+if [[ ! -x "$root/host_adapter/build/model_rolling_dag_cycles" ]]; then
+  echo "[setup] building DAG cycle model"
+  "$root/host_adapter/build_dag_cycle_model.sh"
+fi
+if ! command -v vitis_hls >/dev/null 2>&1; then
+  echo "ERROR: vitis_hls is not in PATH; source the Xilinx/Vitis 2022.2 settings64.sh first." >&2
+  exit 127
+fi
 
 "$root/host_adapter/build/mtx_to_flat_abi" "$input_mtx" "$flat" 16 identity
 

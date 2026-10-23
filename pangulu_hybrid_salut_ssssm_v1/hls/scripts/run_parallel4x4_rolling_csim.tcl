@@ -3,7 +3,7 @@ set root [file normalize "$script_dir/../.."]
 set hls [file normalize "$script_dir/.."]
 set src "$hls/src"
 set tb "$hls/tb"
-set cpu "/output/block_lu_hls/pangulu_dual_schedule_fpga_v1/03_vitis/pangulu_cpu"
+set cpu "$root/host_adapter/pangulu_cpu"
 set build [expr {[info exists ::env(PB_ROLL_CSIM_BUILD)] ?
                  [file normalize $::env(PB_ROLL_CSIM_BUILD)] :
                  "$hls/build/parallel4x4_rolling_csim"}]

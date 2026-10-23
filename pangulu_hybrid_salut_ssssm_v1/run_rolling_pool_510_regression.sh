@@ -11,8 +11,21 @@ build="${PB_ROLL_RTL_BUILD:-$root/hls/build/rolling510_externalcache_ready64}"
 flat="${PB_ROLL_FLAT:-$root/artifacts/rolling_top1024_nb16.flat.bin}"
 timeout_sec="${RTL_TIMEOUT_SEC:-14400}"
 
-source /output/xilinx_compat/xilinx_compat.sh
-export LANG=C LC_ALL=C LOCPATH=/output/xilinx_compat/locale
+if [[ -f /output/xilinx_compat/xilinx_compat.sh ]]; then
+  source /output/xilinx_compat/xilinx_compat.sh
+fi
+export LANG=C LC_ALL=C
+if ! command -v vitis_hls >/dev/null 2>&1; then
+  echo "ERROR: vitis_hls is not in PATH; source the Xilinx/Vitis 2022.2 settings64.sh first." >&2
+  exit 127
+fi
+if [[ ! -x "$root/host_adapter/build/mtx_to_flat_abi" ]]; then
+  "$root/host_adapter/build_mtx_to_flat_abi.sh"
+fi
+if [[ ! -f "$flat" ]]; then
+  "$root/host_adapter/build/mtx_to_flat_abi" \
+    "$root/hls/tb/data/processed_circuit_1_top1024.mtx" "$flat" 16 identity
+fi
 export PB_ROLL_RTL_BUILD="$build"
 export PB_ROLL_FLAT="$flat"
 export PB_ROLL_MAX_TASKS=512
