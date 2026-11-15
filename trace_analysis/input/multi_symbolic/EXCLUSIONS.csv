@@ -1,0 +1,7 @@
+matrix,reason,symbolic_union_nnz,action
+cage12,post-symbolic fill explosion,570274806,incomplete export removed
+nd6k,post-symbolic fill too large for atomic Pilot,81449168,completed export removed
+av41092,post-symbolic fill explosion,285020588,completed export removed
+appu,post-symbolic fill explosion,167904086,export interrupted before file creation
+Trefethen_20000b,post-symbolic fill explosion,168744041,incomplete export removed
+bayer01,post-symbolic fill explosion,137546563,completed export removed

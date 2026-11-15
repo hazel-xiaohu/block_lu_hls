@@ -1,0 +1,8 @@
+__pycache__/
+tests/__pycache__/
+bin/*.o
+bin/*.a
+bin/PanguLU_symbolic_export
+input/*.tar.gz
+input/raw_extract/
+input/*_after_symbolic.mtx

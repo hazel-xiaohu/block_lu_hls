@@ -1,0 +1,2 @@
+scope,block_size,scalar_strict_atomic_updates,selected_atomic_updates,excluded_panel_or_diagonal_updates,excluded_fraction
+block-trailing,512,10358177,4303630,6054547,0.5845185885508618

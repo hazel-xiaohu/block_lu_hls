@@ -1,0 +1,7 @@
+method,atomic_updates,canonical_event_ids,duplicate_event_ids,event_hash_sum,event_hash_xor,event_hash_sum2,l_unique_lines,u_unique_lines,a_unique_lines,l_hash,u_hash,a_hash,elapsed_seconds
+operation,4303630,4303630,0,ae7fb777a9806aec,8dd04be56f95bde2,39bed227d2bb886a,14713,14713,15136,12293bb583f0ab4c,4bd985cf8dcb4bb7,56d32db9dff8d251,0.142391
+operation-block-order,4303630,4303630,0,ae7fb777a9806aec,8dd04be56f95bde2,39bed227d2bb886a,14713,14713,15136,12293bb583f0ab4c,4bd985cf8dcb4bb7,56d32db9dff8d251,0.144514
+segment-native,4303630,4303630,0,ae7fb777a9806aec,8dd04be56f95bde2,39bed227d2bb886a,14713,14713,15136,12293bb583f0ab4c,4bd985cf8dcb4bb7,56d32db9dff8d251,0.148897
+segment-l-affinity,4303630,4303630,0,ae7fb777a9806aec,8dd04be56f95bde2,39bed227d2bb886a,14713,14713,15136,12293bb583f0ab4c,4bd985cf8dcb4bb7,56d32db9dff8d251,0.150560
+segment-cache-aware,4303630,4303630,0,ae7fb777a9806aec,8dd04be56f95bde2,39bed227d2bb886a,14713,14713,15136,12293bb583f0ab4c,4bd985cf8dcb4bb7,56d32db9dff8d251,0.224385
+block,4303630,4303630,0,ae7fb777a9806aec,8dd04be56f95bde2,39bed227d2bb886a,14713,14713,15136,12293bb583f0ab4c,4bd985cf8dcb4bb7,56d32db9dff8d251,0.144514

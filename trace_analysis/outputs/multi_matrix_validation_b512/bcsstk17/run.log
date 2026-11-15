@@ -1,0 +1,8 @@
+PB_LRU_BUILD n=10974 union_nnz=2170488 atomic=69446838 segment_tasks=8054 block_tasks=169 target_blocks=97 lines=356828 seconds=1.484
+PB_LRU_METHOD method=operation atomic=69446838 unique=79535/79535/86888 events=69446838 duplicates=0 seconds=2.356
+PB_LRU_METHOD method=operation-block-order atomic=69446838 unique=79535/79535/86888 events=69446838 duplicates=0 seconds=2.394
+PB_LRU_METHOD method=segment-native atomic=69446838 unique=79535/79535/86888 events=69446838 duplicates=0 seconds=2.378
+PB_LRU_METHOD method=segment-l-affinity atomic=69446838 unique=79535/79535/86888 events=69446838 duplicates=0 seconds=2.415
+PB_LRU_METHOD method=segment-cache-aware atomic=69446838 unique=79535/79535/86888 events=69446838 duplicates=0 seconds=3.561
+PB_LRU_METHOD method=block atomic=69446838 unique=79535/79535/86888 events=69446838 duplicates=0 seconds=2.394
+PB_LRU_PILOT_PASS output=/output/block_lu_hls/trace_analysis/outputs/multi_matrix_validation_b512/bcsstk17

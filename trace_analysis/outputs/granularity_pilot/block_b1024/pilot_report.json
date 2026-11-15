@@ -1,0 +1,188 @@
+{
+  "block_factor_counts": {
+    "block_tasks": 147,
+    "l_blocks": 45,
+    "targets": 80,
+    "u_blocks": 45,
+    "zero_effective_mac_tasks": 20
+  },
+  "configuration": {
+    "block_size": 1024,
+    "cache_line_bytes": 64,
+    "dependency_descriptor_bytes": 8,
+    "dependency_edges_semantics": "contribution descriptors; not the later full execution DAG",
+    "full_operation_trace_materialized": false,
+    "index_bytes": 4,
+    "index_type": "int32",
+    "operation_vliw_full_load_assumption": true,
+    "operation_vliw_lanes": 16,
+    "operation_vliw_padding_slots": 1,
+    "scalar_strict_atomic_updates_before_block_scope": 1271271358,
+    "scope": "block-trailing",
+    "scope_definition": "I=floor(i/B)>K=floor(k/B) and J=floor(j/B)>K",
+    "segment_height": 1024,
+    "task_descriptor_bytes": 32,
+    "value_bytes": 4,
+    "value_type": "fp32"
+  },
+  "counts": [
+    {
+      "atomic_updates": 552143071,
+      "dependency_edges": 34508942,
+      "descriptor_bytes": 1380357680,
+      "grain_size": 16,
+      "method": "operation",
+      "targets": 2390871,
+      "tasks": 34508942
+    },
+    {
+      "atomic_updates": 552143071,
+      "dependency_edges": 3474456,
+      "descriptor_bytes": 28251232,
+      "grain_size": 1024,
+      "method": "segment",
+      "targets": 14237,
+      "tasks": 14237
+    },
+    {
+      "atomic_updates": 552143071,
+      "dependency_edges": 147,
+      "descriptor_bytes": 5880,
+      "grain_size": 1024,
+      "method": "block",
+      "targets": 80,
+      "tasks": 147
+    }
+  ],
+  "coverage_audit": {
+    "excluded_fraction": 0.5656764643320156,
+    "excluded_panel_or_diagonal_updates": 719128287,
+    "scalar_strict_atomic_updates": 1271271358,
+    "selected_atomic_updates": 552143071
+  },
+  "expected_block_baseline_validation": {
+    "differences": {},
+    "expected": {
+      "block_tasks": 147,
+      "l_blocks": 45,
+      "targets": 80,
+      "u_blocks": 45
+    },
+    "passed": true,
+    "performed": true
+  },
+  "input": {
+    "confirmed_kind": "post-symbolic-lu-union",
+    "diagonal_nnz": 22835,
+    "matrix": "/output/block_lu_hls/trace_analysis/input/Zd_Jac3_db_after_symbolic.mtx",
+    "matrix_sha256": "7b039edcdd59a56cb6533650d837afca5d340c9d319dbba61d36219e129ebfb6",
+    "n": 22835,
+    "strict_l_nnz": 3011796,
+    "strict_u_nnz": 3011796
+  },
+  "schema": "granularity-count-v2",
+  "target_update_summary": {
+    "block": {
+      "count": 80,
+      "max": 10,
+      "mean": 1.8375,
+      "median": 1.0,
+      "min": 1,
+      "p95": 6.0
+    },
+    "operation": {
+      "count": 2390871,
+      "max": 1772,
+      "mean": 230.93804349962838,
+      "median": 176.0,
+      "min": 1,
+      "p95": 832.0
+    },
+    "segment": {
+      "count": 14237,
+      "max": 1772,
+      "mean": 244.04411041652034,
+      "median": 182.0,
+      "min": 1,
+      "p95": 853.0
+    }
+  },
+  "task_mac_summary": {
+    "block": {
+      "count": 147,
+      "max": 33981933,
+      "mean": 3756075.31292517,
+      "median": 396779.0,
+      "min": 0,
+      "p95": 16678991.49999996
+    },
+    "operation": {
+      "count": 34508942,
+      "max": 16,
+      "mean": 16.0,
+      "median": 16.0,
+      "min": 16,
+      "p95": 16.0
+    },
+    "segment": {
+      "count": 14237,
+      "max": 383675,
+      "mean": 38782.262485074105,
+      "median": 15824.0,
+      "min": 1,
+      "p95": 182745.7999999999
+    }
+  },
+  "update_only_dag": {
+    "metrics": [
+      {
+        "chains_or_independent_targets": 2390871,
+        "critical_path_macs": 1772,
+        "critical_path_tasks": 1772,
+        "criticality_4worker_makespan_cycles": 8627236,
+        "criticality_4worker_utilization": 0.9999999402328857,
+        "criticality_8worker_makespan_cycles": 4313618,
+        "criticality_8worker_utilization": 0.9999999402328857,
+        "initial_ready_macs": 2390871,
+        "method": "operation",
+        "peak_ready_tasks": 149430,
+        "tasks": 34508942,
+        "total_macs": 552143071,
+        "work_span_parallelism": 19474.572234762978
+      },
+      {
+        "chains_or_independent_targets": 14237,
+        "critical_path_macs": 383675,
+        "critical_path_tasks": 1,
+        "criticality_4worker_makespan_cycles": 138035768,
+        "criticality_4worker_utilization": 0.9999999981888752,
+        "criticality_8worker_makespan_cycles": 69017884,
+        "criticality_8worker_utilization": 0.9999999981888752,
+        "initial_ready_macs": 552143071,
+        "method": "segment",
+        "peak_ready_tasks": 14237,
+        "tasks": 14237,
+        "total_macs": 552143071,
+        "work_span_parallelism": 1439.090561021698
+      },
+      {
+        "chains_or_independent_targets": 80,
+        "critical_path_macs": 114956135,
+        "critical_path_tasks": 10,
+        "critical_target": "13:13",
+        "criticality_4worker_makespan_cycles": 138038078,
+        "criticality_4worker_utilization": 0.9999832636759837,
+        "criticality_8worker_makespan_cycles": 114956135,
+        "criticality_8worker_utilization": 0.600384519495197,
+        "initial_ready_macs": 117468567,
+        "method": "block",
+        "peak_ready_tasks": 80,
+        "tasks": 147,
+        "total_macs": 552143071,
+        "work_span_parallelism": 4.803076155961576
+      }
+    ],
+    "ordering": "same scalar/block A target updates are ordered by k/K; distinct targets are independent",
+    "scope": "SSSSM updates only; factor-production GETRF/GESSM/TSTRF dependencies excluded"
+  }
+}

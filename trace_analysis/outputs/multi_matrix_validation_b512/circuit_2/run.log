@@ -1,0 +1,8 @@
+PB_LRU_BUILD n=4510 union_nnz=43996 atomic=272492 segment_tasks=650 block_tasks=63 target_blocks=34 lines=6299 seconds=0.061
+PB_LRU_METHOD method=operation atomic=272492 unique=2060/2060/1363 events=272492 duplicates=0 seconds=0.010
+PB_LRU_METHOD method=operation-block-order atomic=272492 unique=2060/2060/1363 events=272492 duplicates=0 seconds=0.010
+PB_LRU_METHOD method=segment-native atomic=272492 unique=2060/2060/1363 events=272492 duplicates=0 seconds=0.010
+PB_LRU_METHOD method=segment-l-affinity atomic=272492 unique=2060/2060/1363 events=272492 duplicates=0 seconds=0.011
+PB_LRU_METHOD method=segment-cache-aware atomic=272492 unique=2060/2060/1363 events=272492 duplicates=0 seconds=0.014
+PB_LRU_METHOD method=block atomic=272492 unique=2060/2060/1363 events=272492 duplicates=0 seconds=0.010
+PB_LRU_PILOT_PASS output=/output/block_lu_hls/trace_analysis/outputs/multi_matrix_validation_b512/circuit_2

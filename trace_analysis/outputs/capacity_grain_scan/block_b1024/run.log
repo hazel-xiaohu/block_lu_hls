@@ -1,0 +1,53 @@
+PB_LRU_BUILD n=22835 union_nnz=6046427 atomic=552143071 segment_tasks=14237 block_tasks=147 target_blocks=80 lines=1051809 seconds=9.136
+PB_LRU_PROGRESS method=segment-cache-aware cache=1048576 atomic=100115156
+PB_LRU_PROGRESS method=segment-cache-aware cache=1048576 atomic=200012559
+PB_LRU_PROGRESS method=segment-l-affinity atomic=100074988
+PB_LRU_PROGRESS method=segment-native atomic=100016330
+PB_LRU_PROGRESS method=operation atomic=100140559
+PB_LRU_PROGRESS method=block atomic=109128258
+PB_LRU_PROGRESS method=segment-cache-aware cache=1048576 atomic=300024506
+PB_LRU_PROGRESS method=segment-cache-aware cache=1048576 atomic=400032648
+PB_LRU_PROGRESS method=segment-l-affinity atomic=200102635
+PB_LRU_PROGRESS method=segment-native atomic=200034312
+PB_LRU_PROGRESS method=block atomic=200200729
+PB_LRU_PROGRESS method=segment-cache-aware cache=1048576 atomic=500064685
+PB_LRU_PROGRESS method=operation atomic=200081339
+PB_LRU_PROGRESS method=segment-cache-aware cache=4194304 atomic=100031118
+PB_LRU_PROGRESS method=segment-l-affinity atomic=300025437
+PB_LRU_PROGRESS method=segment-native atomic=300124728
+PB_LRU_PROGRESS method=block atomic=306996896
+PB_LRU_PROGRESS method=segment-cache-aware cache=4194304 atomic=200025381
+PB_LRU_PROGRESS method=operation atomic=300032526
+PB_LRU_PROGRESS method=segment-cache-aware cache=4194304 atomic=300021831
+PB_LRU_PROGRESS method=segment-l-affinity atomic=400042330
+PB_LRU_PROGRESS method=segment-native atomic=400004408
+PB_LRU_PROGRESS method=segment-cache-aware cache=4194304 atomic=400012444
+PB_LRU_PROGRESS method=block atomic=400581110
+PB_LRU_PROGRESS method=operation atomic=400144918
+PB_LRU_PROGRESS method=segment-cache-aware cache=4194304 atomic=500331725
+PB_LRU_PROGRESS method=segment-l-affinity atomic=500055621
+PB_LRU_PROGRESS method=segment-native atomic=500047478
+PB_LRU_PROGRESS method=segment-cache-aware cache=8388608 atomic=100034135
+PB_LRU_PROGRESS method=block atomic=514943595
+PB_LRU_PROGRESS method=operation atomic=500066239
+PB_LRU_PROGRESS method=segment-cache-aware cache=8388608 atomic=200005163
+PB_LRU_PROGRESS method=segment-cache-aware cache=8388608 atomic=300031823
+PB_LRU_PROGRESS method=segment-cache-aware cache=8388608 atomic=400004109
+PB_LRU_PROGRESS method=segment-cache-aware cache=8388608 atomic=500171294
+PB_LRU_PROGRESS method=segment-cache-aware cache=16777216 atomic=100034135
+PB_LRU_PROGRESS method=segment-cache-aware cache=16777216 atomic=200025381
+PB_LRU_PROGRESS method=segment-cache-aware cache=16777216 atomic=300021831
+PB_LRU_PROGRESS method=segment-cache-aware cache=16777216 atomic=400012444
+PB_LRU_PROGRESS method=segment-cache-aware cache=16777216 atomic=500331725
+PB_LRU_PROGRESS method=segment-cache-aware cache=33554432 atomic=100034135
+PB_LRU_PROGRESS method=segment-cache-aware cache=33554432 atomic=200025381
+PB_LRU_PROGRESS method=segment-cache-aware cache=33554432 atomic=300021831
+PB_LRU_PROGRESS method=segment-cache-aware cache=33554432 atomic=400012444
+PB_LRU_PROGRESS method=segment-cache-aware cache=33554432 atomic=500331725
+PB_LRU_METHOD method=operation atomic=552143071 unique=221129/221129/298859 events=552143071 duplicates=0 seconds=37.127
+PB_LRU_METHOD method=operation-block-order atomic=552143071 unique=221129/221129/298859 events=552143071 duplicates=0 seconds=35.503
+PB_LRU_METHOD method=segment-native atomic=552143071 unique=221129/221129/298859 events=552143071 duplicates=0 seconds=34.845
+PB_LRU_METHOD method=segment-l-affinity atomic=552143071 unique=221129/221129/298859 events=552143071 duplicates=0 seconds=33.598
+PB_LRU_METHOD method=segment-cache-aware atomic=552143071 unique=221129/221129/298859 events=552143071 duplicates=0 seconds=72.268
+PB_LRU_METHOD method=block atomic=552143071 unique=221129/221129/298859 events=552143071 duplicates=0 seconds=35.503
+PB_LRU_PILOT_PASS output=/output/block_lu_hls/trace_analysis/outputs/capacity_grain_scan/block_b1024

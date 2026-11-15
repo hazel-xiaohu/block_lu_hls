@@ -1,0 +1,8 @@
+PB_LRU_BUILD n=19362 union_nnz=422124 atomic=3927174 segment_tasks=5326 block_tasks=376 target_blocks=199 lines=65752 seconds=0.422
+PB_LRU_METHOD method=operation atomic=3927174 unique=16933/16933/15406 events=3927174 duplicates=0 seconds=0.129
+PB_LRU_METHOD method=operation-block-order atomic=3927174 unique=16933/16933/15406 events=3927174 duplicates=0 seconds=0.133
+PB_LRU_METHOD method=segment-native atomic=3927174 unique=16933/16933/15406 events=3927174 duplicates=0 seconds=0.136
+PB_LRU_METHOD method=segment-l-affinity atomic=3927174 unique=16933/16933/15406 events=3927174 duplicates=0 seconds=0.138
+PB_LRU_METHOD method=segment-cache-aware atomic=3927174 unique=16933/16933/15406 events=3927174 duplicates=0 seconds=0.218
+PB_LRU_METHOD method=block atomic=3927174 unique=16933/16933/15406 events=3927174 duplicates=0 seconds=0.133
+PB_LRU_PILOT_PASS output=/output/block_lu_hls/trace_analysis/outputs/multi_matrix_validation_b512/rajat08

@@ -1,0 +1,181 @@
+{
+  "block_factor_counts": {
+    "block_tasks": 188,
+    "l_blocks": 56,
+    "targets": 97,
+    "u_blocks": 56,
+    "zero_effective_mac_tasks": 18
+  },
+  "configuration": {
+    "block_size": 512,
+    "cache_line_bytes": 64,
+    "dependency_descriptor_bytes": 8,
+    "dependency_edges_semantics": "contribution descriptors; not the later full execution DAG",
+    "full_operation_trace_materialized": false,
+    "index_bytes": 4,
+    "index_type": "int32",
+    "operation_vliw_full_load_assumption": true,
+    "operation_vliw_lanes": 16,
+    "operation_vliw_padding_slots": 2,
+    "scalar_strict_atomic_updates_before_block_scope": 10358177,
+    "scope": "block-trailing",
+    "scope_definition": "I=floor(i/B)>K=floor(k/B) and J=floor(j/B)>K",
+    "segment_height": 512,
+    "task_descriptor_bytes": 32,
+    "value_bytes": 4,
+    "value_type": "fp32"
+  },
+  "counts": [
+    {
+      "atomic_updates": 4303630,
+      "dependency_edges": 268977,
+      "descriptor_bytes": 10759080,
+      "grain_size": 16,
+      "method": "operation",
+      "targets": 121086,
+      "tasks": 268977
+    },
+    {
+      "atomic_updates": 4303630,
+      "dependency_edges": 146827,
+      "descriptor_bytes": 1289432,
+      "grain_size": 512,
+      "method": "segment",
+      "targets": 3588,
+      "tasks": 3588
+    },
+    {
+      "atomic_updates": 4303630,
+      "dependency_edges": 188,
+      "descriptor_bytes": 7520,
+      "grain_size": 512,
+      "method": "block",
+      "targets": 97,
+      "tasks": 188
+    }
+  ],
+  "coverage_audit": {
+    "excluded_fraction": 0.5845185885508618,
+    "excluded_panel_or_diagonal_updates": 6054547,
+    "scalar_strict_atomic_updates": 10358177,
+    "selected_atomic_updates": 4303630
+  },
+  "expected_block_baseline_validation": {
+    "passed": null,
+    "performed": false
+  },
+  "input": {
+    "confirmed_kind": "post-symbolic-lu-union",
+    "diagonal_nnz": 10000,
+    "matrix": "/output/block_lu_hls/trace_analysis/input/multi_symbolic/cryg10000_after_symbolic.mtx",
+    "matrix_sha256": "2f827f58d633745e9a1d615292e2ac417e792d2c45e4767c98f68efddd64c736",
+    "n": 10000,
+    "strict_l_nnz": 187355,
+    "strict_u_nnz": 187355
+  },
+  "schema": "granularity-count-v2",
+  "target_update_summary": {
+    "block": {
+      "count": 97,
+      "max": 17,
+      "mean": 1.9381443298969072,
+      "median": 1.0,
+      "min": 1,
+      "p95": 5.0
+    },
+    "operation": {
+      "count": 121086,
+      "max": 321,
+      "mean": 35.541928876996515,
+      "median": 25.0,
+      "min": 1,
+      "p95": 108.0
+    },
+    "segment": {
+      "count": 3588,
+      "max": 321,
+      "mean": 40.921683389074694,
+      "median": 24.0,
+      "min": 1,
+      "p95": 162.64999999999964
+    }
+  },
+  "task_mac_summary": {
+    "block": {
+      "count": 188,
+      "max": 545880,
+      "mean": 22891.64893617021,
+      "median": 5514.0,
+      "min": 0,
+      "p95": 78957.10000000002
+    },
+    "operation": {
+      "count": 268977,
+      "max": 16,
+      "mean": 16.0,
+      "median": 16.0,
+      "min": 16,
+      "p95": 16.0
+    },
+    "segment": {
+      "count": 3588,
+      "max": 19075,
+      "mean": 1199.4509476031214,
+      "median": 313.5,
+      "min": 1,
+      "p95": 6219.0
+    }
+  },
+  "update_only_dag": {
+    "metrics": [
+      {
+        "chains_or_independent_targets": 121086,
+        "critical_path_macs": 321,
+        "critical_path_tasks": 321,
+        "criticality_4worker_makespan_cycles": 67245,
+        "criticality_4worker_utilization": 0.9999883820358391,
+        "criticality_8worker_makespan_cycles": 33623,
+        "criticality_8worker_utilization": 0.9999735114356244,
+        "initial_ready_macs": 121086,
+        "method": "operation",
+        "peak_ready_tasks": 7568,
+        "tasks": 268977,
+        "total_macs": 4303630,
+        "work_span_parallelism": 837.9345794392524
+      },
+      {
+        "chains_or_independent_targets": 3588,
+        "critical_path_macs": 19075,
+        "critical_path_tasks": 1,
+        "criticality_4worker_makespan_cycles": 1075908,
+        "criticality_4worker_utilization": 0.9999995352762504,
+        "criticality_8worker_makespan_cycles": 537954,
+        "criticality_8worker_utilization": 0.9999995352762504,
+        "initial_ready_macs": 4303630,
+        "method": "segment",
+        "peak_ready_tasks": 3588,
+        "tasks": 3588,
+        "total_macs": 4303630,
+        "work_span_parallelism": 225.61625163827
+      },
+      {
+        "chains_or_independent_targets": 97,
+        "critical_path_macs": 2032408,
+        "critical_path_tasks": 17,
+        "critical_target": "19:19",
+        "criticality_4worker_makespan_cycles": 2032408,
+        "criticality_4worker_utilization": 0.5293757454211949,
+        "criticality_8worker_makespan_cycles": 2032408,
+        "criticality_8worker_utilization": 0.26468787271059746,
+        "initial_ready_macs": 297054,
+        "method": "block",
+        "peak_ready_tasks": 97,
+        "tasks": 188,
+        "total_macs": 4303630,
+        "work_span_parallelism": 2.1175029816847797
+      }
+    ],
+    "ordering": "same scalar/block A target updates are ordered by k/K; distinct targets are independent",
+    "scope": "SSSSM updates only; factor-production GETRF/GESSM/TSTRF dependencies excluded"
+  }
+}

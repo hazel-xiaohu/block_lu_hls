@@ -1,0 +1,4 @@
+method,tasks,chains_or_independent_targets,peak_ready_tasks,initial_ready_macs,critical_path_tasks,critical_path_macs,total_macs,work_span_parallelism,criticality_4worker_makespan_cycles,criticality_4worker_utilization,criticality_8worker_makespan_cycles,criticality_8worker_utilization,critical_target
+operation,4340428,695102,43444,695102,936,936,69446838,4637.209401709401,1085107,0.9999998560049839,542554,0.9999989344378624,
+segment,8054,8054,8054,69446838,1,85776,69446838,809.6301762730834,17361711,0.9999999136029853,8680856,0.9999998560049839,
+block,169,97,97,13463221,13,14538076,69446838,4.776893311054365,17361863,0.9999911587829025,14538076,0.5971116638817956,21:21

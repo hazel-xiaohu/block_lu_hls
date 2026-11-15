@@ -1,0 +1,64 @@
+{
+  "schema": "granularity-pilot-config-v2",
+  "input": {
+    "name": "Zd_Jac3_db_after_symbolic.mtx",
+    "kind": "post-reorder post-symbolic L/U union",
+    "n": 22835,
+    "symbolic_union_nnz": 6046427,
+    "symbolic_mtx_sha256": "7b039edcdd59a56cb6533650d837afca5d340c9d319dbba61d36219e129ebfb6",
+    "raw_archive_sha256": "79218bd1e3b25ee566c67496ba025342853bbce3594572c362f03b7b683db7ac",
+    "raw_mtx_sha256": "cca5c10066179ca58465a57ec4965ddee56c466cb2846ea64b29d225a1c40ce8"
+  },
+  "count_scope": {
+    "name": "block-trailing",
+    "condition": "floor(i/B)>floor(k/B) and floor(j/B)>floor(k/B)",
+    "scalar_strict_audit": "also report sum_k |L_rows(k)|*|U_cols(k)| before block filtering"
+  },
+  "value_type": "fp32",
+  "value_bytes": 4,
+  "index_type": "int32",
+  "index_bytes": 4,
+  "cache_line_bytes": 64,
+  "address_layout": {
+    "regions": "disjoint 64-byte-aligned L/U/A regions",
+    "L_order": "column-major, row-sorted",
+    "U_order": "row-major, column-sorted",
+    "A_order": "column-major, row-sorted scalar targets of the selected block-trailing sparse product",
+    "record_layout": "AoS: fp32 value followed by int32 index",
+    "record_bytes": 8,
+    "line_attribution": "record start address; each 8-byte record belongs to one 64-byte line"
+  },
+  "operation_vliw": {
+    "reference": "OOLU, IEEE Transactions on Computers, 2025, DOI 10.1109/TC.2025.3605751",
+    "pe_lanes": 16,
+    "full_load_assumption": true,
+    "task_definition": "one VLIW bundle issues 16 scalar operations; final incomplete bundle is represented with padding slots",
+    "cache_trace_effect": "scalar event order and L/U/A accesses are unchanged; only task/dependency cardinality and normalized control metadata are bundled"
+  },
+  "traversal_order": {
+    "operation": "16-lane VLIW bundles over the k,i,j lexicographic scalar stream",
+    "operation_block_order": "16-lane VLIW bundle cardinality with the exact block (I,J,K),k,i,j scalar atom order",
+    "segment_native": "task (j,s), then k,i lexicographic",
+    "segment_l_affinity": "task (s,j), then k,i lexicographic",
+    "segment_cache_aware": "one ascending-j queue head per segment; select maximum resident L/U/A footprint, tie by (j,s)",
+    "block": "task (I,J,K), then k,i,j lexicographic"
+  },
+  "cache_policy": "fully-associative write-back/write-allocate LRU",
+  "cache_capacities_mib_pilot": [4, 16],
+  "cache_capacities_mib_full_scan": [1, 4, 8, 16, 32],
+  "block_sizes": [256, 512, 1024],
+  "segment_height": "same as block size",
+  "task_descriptor_bytes": 32,
+  "dependency_descriptor_bytes": 8,
+  "control_word_bytes": 4,
+  "descriptor_model_note": "normalized model: 8x32-bit words/task plus 2x32-bit words/dependency; not claimed as OOLU's literal instruction encoding",
+  "normalized_control_width_scan_bytes_per_task": [0, 1, 2, 4, 8, 16, 32, 40],
+  "metadata_amortization_repeats": [1, 2, 5, 10, 20, 100],
+  "metadata_interpretation": {
+    "footprint": "static storage required by the normalized descriptor representation",
+    "stream_each_run": "upper-bound model that fetches the full footprint on every factorization",
+    "preload_once": "footprint divided by the number of repeated numerical factorizations",
+    "online_generate": "zero external metadata bytes; generator compute/storage cost is explicitly excluded"
+  },
+  "full_atomic_trace": false
+}

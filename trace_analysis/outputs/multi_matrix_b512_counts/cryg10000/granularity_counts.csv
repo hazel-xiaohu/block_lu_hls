@@ -1,0 +1,4 @@
+method,grain_size,atomic_updates,tasks,dependency_edges,targets,descriptor_bytes
+operation,16,4303630,268977,268977,121086,10759080
+segment,512,4303630,3588,146827,3588,1289432
+block,512,4303630,188,188,97,7520

@@ -1,0 +1,8 @@
+PB_LRU_BUILD n=18510 union_nnz=851076 atomic=19158926 segment_tasks=9540 block_tasks=674 target_blocks=262 lines=141637 seconds=0.829
+PB_LRU_METHOD method=operation atomic=19158926 unique=41957/41957/37565 events=19158926 duplicates=0 seconds=0.655
+PB_LRU_METHOD method=operation-block-order atomic=19158926 unique=41957/41957/37565 events=19158926 duplicates=0 seconds=0.655
+PB_LRU_METHOD method=segment-native atomic=19158926 unique=41957/41957/37565 events=19158926 duplicates=0 seconds=0.679
+PB_LRU_METHOD method=segment-l-affinity atomic=19158926 unique=41957/41957/37565 events=19158926 duplicates=0 seconds=0.677
+PB_LRU_METHOD method=segment-cache-aware atomic=19158926 unique=41957/41957/37565 events=19158926 duplicates=0 seconds=1.006
+PB_LRU_METHOD method=block atomic=19158926 unique=41957/41957/37565 events=19158926 duplicates=0 seconds=0.655
+PB_LRU_PILOT_PASS output=/output/block_lu_hls/trace_analysis/outputs/multi_matrix_validation_b512/shermanACb
