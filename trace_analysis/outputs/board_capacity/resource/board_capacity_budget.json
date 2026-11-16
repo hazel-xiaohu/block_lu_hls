@@ -1,0 +1,140 @@
+{
+  "board_total": {
+    "mib": 7.20703125,
+    "physical_bytes": 7557120,
+    "ramb18": 0.0,
+    "ramb36": 744.0,
+    "uram288": 112.0
+  },
+  "budget_semantics": "Unified BRAM+URAM physical-bit upper bound remaining after the complete placed 4-LU+4-SSSSM design; existing worker windows, pool cache, FIFOs, scheduler and control are already deducted.",
+  "cache_model_boundary": "The replay treats the remaining storage as one ideal fully-associative LRU. Tag/LRU logic, banking, ports, fragmentation and routing margin for a future physical cache are not modeled.",
+  "lua_net_capacity": {
+    "cache_line_aligned_bytes": 5882112,
+    "cache_line_aligned_mib": 5.609619140625,
+    "mib": 5.609619140625,
+    "physical_bytes": 5882112,
+    "ramb18": 0.0,
+    "ramb36": 444.5,
+    "uram288": 104.0
+  },
+  "placed_design_fixed": {
+    "mib": 1.597412109375,
+    "physical_bytes": 1675008,
+    "ramb18": 11.0,
+    "ramb36": 294.0,
+    "uram288": 8.0
+  },
+  "reports": {
+    "hierarchical_utilization": {
+      "path": "/output/pangulu_hybrid_salut_ssssm_v1/vivado_parallel4x4_v1/output/utilization_hier.rpt",
+      "sha256": "2ad198d8ff652d2e88779bb1cc1ba4bf9d48242f64c26e24c87e12fa0125529f"
+    },
+    "timing": {
+      "report": "/output/pangulu_hybrid_salut_ssssm_v1/vivado_parallel4x4_v1/output/timing_summary.rpt",
+      "sha256": "fafa884ba787a021b451236d9a6cd5110e74dba41c36b3f42a767d7e102419f0",
+      "ths_ns": 0.0,
+      "tns_ns": 0.0,
+      "whs_ns": 0.009,
+      "wns_ns": 5.475
+    },
+    "utilization": {
+      "path": "/output/pangulu_hybrid_salut_ssssm_v1/vivado_parallel4x4_v1/project/pangulu_parallel4x4_zu15eg.runs/impl_1/pangulu_parallel4x4_bd_wrapper_utilization_placed.rpt",
+      "sha256": "61d66ea8b2038517ef6e4e4b7ce957129bbf361f93c8888bb5b60e61e829d9c4"
+    }
+  },
+  "resource_units": {
+    "cache_line_bytes": 64,
+    "ramb18_bytes": 2304,
+    "ramb36_bytes": 4608,
+    "uram288_bytes": 36864
+  },
+  "schema": "board-capacity-budget-v1",
+  "vivado": {
+    "date": "Sat Oct 24 15:09:47 2026",
+    "design": "pangulu_parallel4x4_bd_wrapper",
+    "design_state": "Fully Placed",
+    "device": "xczu15eg-ffvb1156-2-i",
+    "tool_version": "Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022"
+  },
+  "worker_breakdown": {
+    "direct_worker_rows": [
+      {
+        "dsp": 62.0,
+        "ramb18": 0.0,
+        "ramb36": 64.0,
+        "uram": 0.0,
+        "worker_id": 0
+      },
+      {
+        "dsp": 62.0,
+        "ramb18": 0.0,
+        "ramb36": 64.0,
+        "uram": 0.0,
+        "worker_id": 1
+      },
+      {
+        "dsp": 62.0,
+        "ramb18": 0.0,
+        "ramb36": 64.0,
+        "uram": 0.0,
+        "worker_id": 2
+      },
+      {
+        "dsp": 62.0,
+        "ramb18": 0.0,
+        "ramb36": 64.0,
+        "uram": 0.0,
+        "worker_id": 3
+      },
+      {
+        "dsp": 14.0,
+        "ramb18": 0.0,
+        "ramb36": 4.0,
+        "uram": 0.0,
+        "worker_id": 4
+      },
+      {
+        "dsp": 14.0,
+        "ramb18": 0.0,
+        "ramb36": 4.0,
+        "uram": 0.0,
+        "worker_id": 5
+      },
+      {
+        "dsp": 14.0,
+        "ramb18": 0.0,
+        "ramb36": 4.0,
+        "uram": 0.0,
+        "worker_id": 6
+      },
+      {
+        "dsp": 14.0,
+        "ramb18": 0.0,
+        "ramb36": 4.0,
+        "uram": 0.0,
+        "worker_id": 7
+      }
+    ],
+    "lu_workers_0_3": {
+      "mib": 1.125,
+      "physical_bytes": 1179648,
+      "ramb18": 0.0,
+      "ramb36": 256.0,
+      "uram288": 0.0
+    },
+    "non_worker_pool_fifo_scheduler_control": {
+      "mib": 0.402099609375,
+      "physical_bytes": 421632,
+      "ramb18": 11.0,
+      "ramb36": 22.0,
+      "uram288": 8.0
+    },
+    "ssssm_workers_4_7": {
+      "mib": 0.0703125,
+      "physical_bytes": 73728,
+      "ramb18": 0.0,
+      "ramb36": 16.0,
+      "uram288": 0.0
+    }
+  }
+}

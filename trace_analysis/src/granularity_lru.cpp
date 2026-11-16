@@ -70,6 +70,14 @@ struct SegmentTask {
   std::vector<uint32_t> footprint_lines;
 };
 
+struct ColumnContribution {
+  // One U(k,j) dependency of target column j.  Traversing these records by j,
+  // then their L ranges by i, produces the left-looking (j,k,i) atom order.
+  uint32_t k;
+  uint32_t u_pos;
+  uint32_t u_line;
+};
+
 struct BlockContribution {
   // The Cartesian product of these L and U ranges forms the scalar updates
   // contributed by pivot k to one (I,J,K) block task.
@@ -113,6 +121,9 @@ struct Pattern {
   // which is exactly the SSSSM/block-trailing scope modeled here.
   std::vector<std::vector<Entry>> active_lower;
   std::vector<std::vector<Entry>> active_upper;
+  // column_contributions[j] is sorted by k because it is populated while k
+  // increases.  It supports an operation-level left-looking control trace.
+  std::vector<std::vector<ColumnContribution>> column_contributions;
   // Maps a dense (I,J) block coordinate to a compact target-block slot.
   std::vector<int32_t> target_block_slot;
   // Per-slot B-by-B table from scalar A(i,j) to its compact cache-line ID.
@@ -484,6 +495,7 @@ Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t seg
   // order regardless of how a scheduling method later visits those events.
   p.active_lower.resize(p.n);
   p.active_upper.resize(p.n);
+  p.column_contributions.resize(p.n);
   p.event_base.resize(static_cast<size_t>(p.n) + 1, 0);
   std::vector<uint8_t> target_blocks(static_cast<size_t>(p.block_count) * p.block_count, 0);
   std::vector<std::vector<uint32_t>> lblocks_by_kblock(p.block_count);
@@ -503,6 +515,16 @@ Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t seg
     p.atomic_updates += static_cast<uint64_t>(p.active_lower[k].size()) * p.active_upper[k].size();
   }
   p.event_base[p.n] = p.atomic_updates;
+
+  // Invert active U(k,j) once so the matched operation baseline can traverse
+  // target columns as j -> k -> i without an O(n^2) search for U(k,j).
+  for (uint32_t k = 0; k < p.n; ++k) {
+    const auto &us = p.active_upper[k];
+    for (uint32_t u_pos = 0; u_pos < us.size(); ++u_pos) {
+      const Entry &u = us[u_pos];
+      p.column_contributions[u.index].push_back(ColumnContribution{k, u_pos, u.line});
+    }
+  }
 
   // The outer product of L and U block coordinates identifies every A block
   // that can receive at least one update from this symbolic pattern.
@@ -744,6 +766,49 @@ SimulationResult simulate_operation(const Pattern &p, const std::vector<uint64_t
   return {m, results};
 }
 
+SimulationResult simulate_operation_column_order(const Pattern &p,
+                                                 const std::vector<uint64_t> &capacities) {
+  MethodStats m;
+  m.method = "operation-column-order";
+  m.grain_size = kOperationLanes;
+  m.tasks = ceil_div(p.atomic_updates, kOperationLanes);
+  m.dependencies = m.tasks;
+  m.descriptor_bytes = m.tasks * kTaskDescriptorBytes + m.dependencies * kDependencyDescriptorBytes;
+  StreamSimulator sim(p, capacities);
+  const auto start = std::chrono::steady_clock::now();
+  uint64_t next_progress = 100000000ULL;
+  // Fine-grained left-looking order: target column j, dependency/pivot k,
+  // then every active row i in L(:,k).  VLIW bundling changes only control
+  // cardinality; it never adds padded memory events.
+  for (uint32_t j = 0; j < p.n; ++j) {
+    for (const ColumnContribution &contribution : p.column_contributions[j]) {
+      const auto &ls = p.active_lower[contribution.k];
+      const uint64_t u_count = p.active_upper[contribution.k].size();
+      for (uint32_t index = 0; index < ls.size(); ++index) {
+        const Entry &l = ls[index];
+        const uint32_t a_line = target_line(p, l.index, j);
+        const uint64_t event_id = p.event_base[contribution.k] +
+                                  static_cast<uint64_t>(index) * u_count + contribution.u_pos;
+        sim.mark_event(event_id, l.line, contribution.u_line, a_line);
+        sim.access(l.line, Kind::L);
+        sim.access(contribution.u_line, Kind::U);
+        sim.access(a_line, Kind::A, true);
+        ++m.atomic_updates;
+      }
+    }
+    if (m.atomic_updates >= next_progress) {
+      log_line("PB_LRU_PROGRESS method=operation-column-order atomic=" +
+               std::to_string(m.atomic_updates));
+      next_progress += 100000000ULL;
+    }
+  }
+  std::vector<CacheResult> results;
+  sim.finish(m, results);
+  m.elapsed_seconds =
+      std::chrono::duration<double>(std::chrono::steady_clock::now() - start).count();
+  return {m, results};
+}
+
 SimulationResult simulate_segment_order(const Pattern &p, const std::vector<uint64_t> &capacities,
                                         const std::vector<uint32_t> &order,
                                         const std::string &method_name) {
@@ -879,9 +944,16 @@ SimulationResult simulate_segment_cache_aware(const Pattern &p,
   return merged;
 }
 
-SimulationResult simulate_block(const Pattern &p, const std::vector<uint64_t> &capacities) {
+enum class BlockTaskOrder { IJK, KIJ };
+enum class BlockAtomOrder { KIJ, JKI };
+
+SimulationResult simulate_block_order(const Pattern &p,
+                                      const std::vector<uint64_t> &capacities,
+                                      const std::string &method,
+                                      BlockTaskOrder task_order,
+                                      BlockAtomOrder atom_order) {
   MethodStats m;
-  m.method = "block";
+  m.method = method;
   m.grain_size = p.block_size;
   m.tasks = p.block_tasks.size();
   m.dependencies = p.block_tasks.size();
@@ -889,30 +961,78 @@ SimulationResult simulate_block(const Pattern &p, const std::vector<uint64_t> &c
   StreamSimulator sim(p, capacities);
   const auto start = std::chrono::steady_clock::now();
   uint64_t next_progress = 100000000ULL;
-  // Tasks are lexicographic (I,J,K). Within a task, contributions and ranges
-  // emit (k,i,j) order, including empty scheduled block products that consume
-  // control metadata but generate no memory accesses.
-  for (const BlockTask &task : p.block_tasks) {
-    for (const BlockContribution &contribution : task.contributions) {
-      const auto &ls = p.active_lower[contribution.k];
-      const auto &us = p.active_upper[contribution.k];
-      for (uint32_t li = contribution.l.begin; li < contribution.l.end; ++li) {
-        const Entry &l = ls[li];
+  // Reorder only references to the canonical BlockTask objects.  Both
+  // traversals therefore use exactly the same task partition, contributions,
+  // empty scheduled products and metadata cardinality.
+  std::vector<const BlockTask *> tasks;
+  tasks.reserve(p.block_tasks.size());
+  for (const BlockTask &task : p.block_tasks) tasks.push_back(&task);
+  if (task_order == BlockTaskOrder::KIJ) {
+    std::sort(tasks.begin(), tasks.end(), [](const BlockTask *a, const BlockTask *b) {
+      return std::tie(a->kblock, a->iblock, a->jblock) <
+             std::tie(b->kblock, b->iblock, b->jblock);
+    });
+  }
+
+  auto emit_atom = [&](const BlockContribution &contribution, uint32_t li,
+                       uint32_t ui) {
+    const auto &ls = p.active_lower[contribution.k];
+    const auto &us = p.active_upper[contribution.k];
+    const Entry &l = ls[li];
+    const Entry &u = us[ui];
+    const uint32_t a_line = target_line(p, l.index, u.index);
+    const uint64_t event_id = p.event_base[contribution.k] +
+                              static_cast<uint64_t>(li) * us.size() + ui;
+    sim.mark_event(event_id, l.line, u.line, a_line);
+    sim.access(l.line, Kind::L);
+    sim.access(u.line, Kind::U);
+    sim.access(a_line, Kind::A, true);
+    ++m.atomic_updates;
+  };
+
+  // The canonical task vector is lexicographic (I,J,K); the alternate is
+  // lexicographic (K,I,J).  Empty products consume metadata but no data.
+  for (const BlockTask *task_ptr : tasks) {
+    const BlockTask &task = *task_ptr;
+    if (atom_order == BlockAtomOrder::KIJ) {
+      // Contribution order is k; each Cartesian product emits i, then j.
+      for (const BlockContribution &contribution : task.contributions) {
+        for (uint32_t li = contribution.l.begin; li < contribution.l.end; ++li) {
+          for (uint32_t ui = contribution.u.begin; ui < contribution.u.end; ++ui) {
+            emit_atom(contribution, li, ui);
+          }
+        }
+      }
+    } else {
+      struct ColumnAtomRange {
+        uint32_t j;
+        uint32_t k;
+        uint32_t ui;
+        const BlockContribution *contribution;
+      };
+      std::vector<ColumnAtomRange> columns;
+      for (const BlockContribution &contribution : task.contributions) {
+        const auto &us = p.active_upper[contribution.k];
         for (uint32_t ui = contribution.u.begin; ui < contribution.u.end; ++ui) {
-          const Entry &u = us[ui];
-          const uint32_t a_line = target_line(p, l.index, u.index);
-          const uint64_t event_id = p.event_base[contribution.k] +
-                                    static_cast<uint64_t>(li) * us.size() + ui;
-          sim.mark_event(event_id, l.line, u.line, a_line);
-          sim.access(l.line, Kind::L);
-          sim.access(u.line, Kind::U);
-          sim.access(a_line, Kind::A, true);
-          ++m.atomic_updates;
+          columns.push_back(ColumnAtomRange{us[ui].index, contribution.k, ui,
+                                            &contribution});
+        }
+      }
+      std::sort(columns.begin(), columns.end(), [](const ColumnAtomRange &a,
+                                                    const ColumnAtomRange &b) {
+        return std::tie(a.j, a.k, a.ui) < std::tie(b.j, b.k, b.ui);
+      });
+      // Each sparse U(k,j) fixes j then k; its L interval emits i.
+      for (const ColumnAtomRange &column : columns) {
+        const BlockContribution &contribution = *column.contribution;
+        for (uint32_t li = contribution.l.begin; li < contribution.l.end; ++li) {
+          emit_atom(contribution, li, column.ui);
         }
       }
     }
     if (m.atomic_updates >= next_progress) {
-      log_line("PB_LRU_PROGRESS method=block atomic=" + std::to_string(m.atomic_updates));
+      log_line("PB_LRU_PROGRESS method=" + method + " atomic=" +
+               std::to_string(m.atomic_updates));
       next_progress += 100000000ULL;
     }
   }
@@ -920,6 +1040,23 @@ SimulationResult simulate_block(const Pattern &p, const std::vector<uint64_t> &c
   sim.finish(m, results);
   m.elapsed_seconds = std::chrono::duration<double>(std::chrono::steady_clock::now() - start).count();
   return {m, results};
+}
+
+SimulationResult simulate_block(const Pattern &p, const std::vector<uint64_t> &capacities) {
+  return simulate_block_order(p, capacities, "block", BlockTaskOrder::IJK,
+                              BlockAtomOrder::KIJ);
+}
+
+SimulationResult simulate_block_kij_order(const Pattern &p,
+                                          const std::vector<uint64_t> &capacities) {
+  return simulate_block_order(p, capacities, "block-kij-order",
+                              BlockTaskOrder::KIJ, BlockAtomOrder::KIJ);
+}
+
+SimulationResult simulate_block_kij_jki_inner(const Pattern &p,
+                                               const std::vector<uint64_t> &capacities) {
+  return simulate_block_order(p, capacities, "block-kij-jki-inner",
+                              BlockTaskOrder::KIJ, BlockAtomOrder::JKI);
 }
 
 SimulationResult make_operation_block_order(const Pattern &p, const SimulationResult &block) {
@@ -933,6 +1070,21 @@ SimulationResult make_operation_block_order(const Pattern &p, const SimulationRe
   // This control intentionally reuses the exact atom order of the Block trace.
   // There is no cache flush at task boundaries, so its data trace is identical
   // while its task/metadata cardinality remains 16-lane VLIW-bundle-level.
+  return result;
+}
+
+SimulationResult make_operation_segment_order(const Pattern &p,
+                                              const SimulationResult &segment_native) {
+  SimulationResult result = segment_native;
+  result.first.method = "operation-segment-order";
+  result.first.grain_size = kOperationLanes;
+  result.first.tasks = ceil_div(p.atomic_updates, kOperationLanes);
+  result.first.dependencies = result.first.tasks;
+  result.first.descriptor_bytes = result.first.tasks * kTaskDescriptorBytes +
+                                  result.first.dependencies * kDependencyDescriptorBytes;
+  // This matched control reuses the exact (j,s,k,i) atom sequence.  With no
+  // task-boundary cache flush, its matrix traffic must equal segment-native;
+  // only operation/VLIW task and metadata cardinality differ.
   return result;
 }
 
@@ -1194,6 +1346,10 @@ void write_outputs_v2(const std::string &output_dir, const Pattern &p,
          << "  \"canonical_event_multisets_identical\": " << (events_identical ? "true" : "false") << ",\n"
          << "  \"event_audit\": \"canonical-event bitset per traversal plus three order-independent 64-bit tuple hashes\",\n"
          << "  \"operation_block_order_reuses_exact_block_atom_sequence\": true,\n"
+         << "  \"block_kij_order_reuses_exact_block_task_partition\": true,\n"
+         << "  \"block_kij_jki_inner_reuses_exact_block_task_partition\": true,\n"
+         << "  \"operation_column_order\": \"j,k,i left-looking atom sequence\",\n"
+         << "  \"operation_segment_order_reuses_exact_segment_native_atom_sequence\": true,\n"
          << "  \"segment_l_affinity_order\": \"(segment,j), internal (k,i)\",\n"
          << "  \"segment_cache_aware_ready_set\": \"one ascending-j head per segment queue; maximize exact resident L/U/A footprint; tie by (j,s)\",\n"
          << "  \"metadata_baseline\": \"32 B/task plus 8 B/contribution descriptor, both integral 32-bit words; operation tasks are 16-lane VLIW bundles; footprint is not claimed as compulsory per-run traffic\",\n"
@@ -1241,6 +1397,8 @@ int main(int argc, char **argv) {
     // Traversals are read-only with respect to Pattern and own their simulator
     // state, so independent methods can be replayed concurrently.
     auto f_operation = std::async(std::launch::async, simulate_operation, std::cref(pattern), std::cref(capacities));
+    auto f_operation_column = std::async(std::launch::async, simulate_operation_column_order,
+                                         std::cref(pattern), std::cref(capacities));
     auto f_segment_native =
         std::async(std::launch::async, simulate_segment_native, std::cref(pattern), std::cref(capacities));
     auto f_segment_l_affinity =
@@ -1248,19 +1406,31 @@ int main(int argc, char **argv) {
     auto f_segment_cache_aware =
         std::async(std::launch::async, simulate_segment_cache_aware, std::cref(pattern), std::cref(capacities));
     auto f_block = std::async(std::launch::async, simulate_block, std::cref(pattern), std::cref(capacities));
+    auto f_block_kij = std::async(std::launch::async, simulate_block_kij_order,
+                                  std::cref(pattern), std::cref(capacities));
+    auto f_block_kij_jki = std::async(std::launch::async, simulate_block_kij_jki_inner,
+                                      std::cref(pattern), std::cref(capacities));
     SimulationResult operation = f_operation.get();
+    SimulationResult operation_column = f_operation_column.get();
     SimulationResult segment_native = f_segment_native.get();
     SimulationResult segment_l_affinity = f_segment_l_affinity.get();
     SimulationResult segment_cache_aware = f_segment_cache_aware.get();
     SimulationResult block = f_block.get();
+    SimulationResult block_kij = f_block_kij.get();
+    SimulationResult block_kij_jki = f_block_kij_jki.get();
     SimulationResult operation_block_order = make_operation_block_order(pattern, block);
+    SimulationResult operation_segment_order = make_operation_segment_order(pattern, segment_native);
     std::vector<SimulationResult> all;
     all.push_back(std::move(operation));
+    all.push_back(std::move(operation_column));
+    all.push_back(std::move(operation_segment_order));
     all.push_back(std::move(operation_block_order));
     all.push_back(std::move(segment_native));
     all.push_back(std::move(segment_l_affinity));
     all.push_back(std::move(segment_cache_aware));
     all.push_back(std::move(block));
+    all.push_back(std::move(block_kij));
+    all.push_back(std::move(block_kij_jki));
     write_outputs_v2(output_dir, pattern, all);
     for (const auto &result : all) {
       std::cout << "PB_LRU_METHOD method=" << result.first.method << " atomic=" << result.first.atomic_updates

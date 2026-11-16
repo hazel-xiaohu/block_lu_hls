@@ -1,0 +1,17 @@
+method,capacity_bytes,tasks,dependencies,metadata_bytes,macs,divisions,logical_flops,l_source_misses,u_source_misses,diagonal_misses,mac_target_misses,division_target_misses,read_misses,writebacks,data_bytes,compulsory_bytes,traffic_amplification,data_bytes_per_flop,total_bytes_with_metadata
+operation-column-order,64,2,2,80,14,6,34,9,10,1,0,0,20,11,1984,256,7.75,58.3529411765,2064
+operation-column-order,128,2,2,80,14,6,34,0,1,1,0,0,2,2,256,256,1,7.52941176471,336
+operation-segment-order,64,2,2,80,14,6,34,9,10,1,0,0,20,11,1984,256,7.75,58.3529411765,2064
+operation-segment-order,128,2,2,80,14,6,34,0,1,1,0,0,2,2,256,256,1,7.52941176471,336
+operation-block-order,64,2,2,80,14,6,34,8,10,2,0,0,20,12,2048,256,8,60.2352941176,2128
+operation-block-order,128,2,2,80,14,6,34,0,1,1,0,0,2,2,256,256,1,7.52941176471,336
+segment-native,64,10,15,440,14,6,34,9,10,1,0,0,20,11,1984,256,7.75,58.3529411765,2424
+segment-native,128,10,15,440,14,6,34,0,1,1,0,0,2,2,256,256,1,7.52941176471,696
+segment-l-affinity,64,10,15,440,14,6,34,7,10,3,0,0,20,13,2112,256,8.25,62.1176470588,2552
+segment-l-affinity,128,10,15,440,14,6,34,0,1,1,0,0,2,2,256,256,1,7.52941176471,696
+segment-cache-aware,64,10,15,440,14,6,34,9,10,1,0,0,20,11,1984,256,7.75,58.3529411765,2424
+segment-cache-aware,128,10,15,440,14,6,34,0,1,1,0,0,2,2,256,256,1,7.52941176471,696
+block,64,5,5,200,14,6,34,8,10,2,0,0,20,12,2048,256,8,60.2352941176,2248
+block,128,5,5,200,14,6,34,0,1,1,0,0,2,2,256,256,1,7.52941176471,456
+block-kij-jki-inner,64,5,5,200,14,6,34,8,10,2,0,0,20,12,2048,256,8,60.2352941176,2248
+block-kij-jki-inner,128,5,5,200,14,6,34,0,1,1,0,0,2,2,256,256,1,7.52941176471,456

@@ -1,0 +1,45 @@
+PB_FULL_LU_INPLACE_BUILD_PASS binary=/output/block_lu_hls/trace_analysis/build/full_lu_inplace_lru
+PB_FULL_LU_INPLACE_BUILD n=7000 records=325442 lines=40681 macs=13002531 divisions=159221 operation_tasks=822611 segment_tasks=23004 block_tasks=196 seconds=0.168627
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=0/7000
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=0/7000
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=0/7000
+PB_FULL_LU_INPLACE_PROGRESS method=block major=0/14
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=4096/7000
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=4096/7000
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=4096/7000
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=6999/7000
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=6999/7000
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=6999/7000
+PB_FULL_LU_INPLACE_PROGRESS method=block major=13/14
+PB_FULL_LU_INPLACE_METHOD method=operation events=13161752 seconds=0.87512
+PB_FULL_LU_INPLACE_METHOD method=segment-column events=13161752 seconds=0.815199
+PB_FULL_LU_INPLACE_METHOD method=segment-l-affinity events=13161752 seconds=0.7934
+PB_FULL_LU_INPLACE_METHOD method=block events=13161752 seconds=0.885832
+PB_FULL_LU_INPLACE_PASS output=outputs/full_lu_inplace_multi_b512_v1/G62
+capacity_mib,method,data_mib,metadata_mib,total_mib,TA
+1,operation,5.107,31.380,36.488,1.0285
+1,operation-block-order,5.118,31.380,36.498,1.0306
+1,segment-column,5.546,4.409,9.955,1.1168
+1,segment-l-affinity,5.104,4.409,9.513,1.0278
+1,block,5.118,0.009,5.127,1.0306
+4,operation,4.966,31.380,36.346,1.0000
+4,operation-block-order,4.966,31.380,36.346,1.0000
+4,segment-column,4.966,4.409,9.375,1.0000
+4,segment-l-affinity,4.966,4.409,9.375,1.0000
+4,block,4.966,0.009,4.975,1.0000
+8,operation,4.966,31.380,36.346,1.0000
+8,operation-block-order,4.966,31.380,36.346,1.0000
+8,segment-column,4.966,4.409,9.375,1.0000
+8,segment-l-affinity,4.966,4.409,9.375,1.0000
+8,block,4.966,0.009,4.975,1.0000
+16,operation,4.966,31.380,36.346,1.0000
+16,operation-block-order,4.966,31.380,36.346,1.0000
+16,segment-column,4.966,4.409,9.375,1.0000
+16,segment-l-affinity,4.966,4.409,9.375,1.0000
+16,block,4.966,0.009,4.975,1.0000
+32,operation,4.966,31.380,36.346,1.0000
+32,operation-block-order,4.966,31.380,36.346,1.0000
+32,segment-column,4.966,4.409,9.375,1.0000
+32,segment-l-affinity,4.966,4.409,9.375,1.0000
+32,block,4.966,0.009,4.975,1.0000
+PB_FULL_LU_INPLACE_SUMMARY_PASS output=outputs/full_lu_inplace_multi_b512_v1/G62/full_lu_inplace_summary.csv

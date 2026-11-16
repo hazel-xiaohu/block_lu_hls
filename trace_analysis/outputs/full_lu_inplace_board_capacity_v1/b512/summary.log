@@ -1,0 +1,7 @@
+capacity_mib,method,data_mib,metadata_mib,total_mib,TA
+6,operation,106.186,3038.128,3144.314,1.1557
+6,operation-block-order,112.178,3038.128,3150.306,1.2209
+6,segment-column,1397.096,99.209,1496.305,15.2060
+6,segment-l-affinity,106.571,99.209,205.779,1.1599
+6,block,112.178,0.031,112.209,1.2209
+PB_FULL_LU_INPLACE_SUMMARY_PASS output=outputs/full_lu_inplace_board_capacity_v1/b512/full_lu_inplace_summary.csv

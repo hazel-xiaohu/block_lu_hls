@@ -1,0 +1,230 @@
+{
+  "configuration": {
+    "block_size": 1024,
+    "classification": {
+      "GESSM": "I=K,J>K",
+      "GETRF": "I=K,J=K",
+      "SSSSM": "I>K,J>K",
+      "TSTRF": "I>K,J=K"
+    },
+    "dag_schedule": "right-looking",
+    "flop_convention": "multiply-subtract=2, division=1",
+    "mac_condition": "i>k and j>k",
+    "scope": "complete strict LU arithmetic",
+    "segment_height": 1024
+  },
+  "coverage": {
+    "block_count": 23,
+    "logical_flops": 2545554512,
+    "scalar_divisions": 3011796,
+    "scalar_macs": 1271271358,
+    "scheduled_tasks": 260
+  },
+  "dag": {
+    "critical_path_flops": 1177122365,
+    "critical_path_tasks": 46,
+    "edges": 523,
+    "initial_ready_tasks": 7,
+    "peak_ready_tasks": 16,
+    "structural_critical_path": [
+      0,
+      1,
+      7,
+      16,
+      17,
+      25,
+      41,
+      42,
+      50,
+      66,
+      67,
+      75,
+      91,
+      92,
+      98,
+      107,
+      108,
+      112,
+      116,
+      117,
+      119,
+      120,
+      121,
+      127,
+      136,
+      137,
+      145,
+      161,
+      162,
+      170,
+      186,
+      187,
+      195,
+      211,
+      212,
+      218,
+      227,
+      228,
+      232,
+      236,
+      237,
+      241,
+      245,
+      246,
+      248,
+      259
+    ],
+    "tasks": 260,
+    "weighted_critical_path": [
+      0,
+      4,
+      7,
+      16,
+      22,
+      30,
+      50,
+      66,
+      71,
+      75,
+      91,
+      95,
+      98,
+      107,
+      110,
+      112,
+      116,
+      118,
+      119,
+      120,
+      125,
+      131,
+      145,
+      161,
+      166,
+      170,
+      186,
+      192,
+      200,
+      218,
+      227,
+      230,
+      232,
+      236,
+      239,
+      241,
+      245,
+      247,
+      248,
+      259
+    ],
+    "work_span_parallelism": 2.162523275139709
+  },
+  "dag_metric_semantics": {
+    "critical_path_flops": "longest path with max(1, logical_flops_per_task) node weight",
+    "peak_ready_tasks": "largest ready-set size under deterministic topological completion order",
+    "work_span_parallelism": "total logical FLOPs divided by weighted critical-path cost"
+  },
+  "generic_worker_schedules": [
+    {
+      "completed": 260,
+      "makespan_flop_units": 1186745831,
+      "worker_utilization": 0.536246782273297,
+      "workers": 4
+    },
+    {
+      "completed": 260,
+      "makespan_flop_units": 1177122365,
+      "worker_utilization": 0.2703154116224782,
+      "workers": 8
+    }
+  ],
+  "granularity_comparison": [
+    {
+      "dependency_descriptors": 1274283154,
+      "metadata_footprint_bytes": 50971326160,
+      "method": "operation-scalar",
+      "note": "one scalar MAC or division per task",
+      "tasks": 1274283154
+    },
+    {
+      "dependency_descriptors": 79642698,
+      "metadata_footprint_bytes": 3185707920,
+      "method": "operation-vliw16-ideal",
+      "note": "ideal full-lane bundles; MAC and division bundles kept separate",
+      "tasks": 79642698
+    },
+    {
+      "dependency_descriptors": 11411256,
+      "metadata_footprint_bytes": 93339072,
+      "method": "segment",
+      "note": "(j,segment) MAC tasks plus (k,segment) division tasks",
+      "tasks": 64032
+    },
+    {
+      "dependency_descriptors": 523,
+      "metadata_footprint_bytes": 12504,
+      "method": "block-complete-lu",
+      "note": "complete GETRF/GESSM/TSTRF/SSSSM DAG",
+      "tasks": 260
+    }
+  ],
+  "input": {
+    "diagonal_nnz": 22835,
+    "kind": "post-symbolic-lu-union",
+    "matrix": "/output/block_lu_hls/trace_analysis/input/Zd_Jac3_db_after_symbolic.mtx",
+    "matrix_sha256": "7b039edcdd59a56cb6533650d837afca5d340c9d319dbba61d36219e129ebfb6",
+    "n": 22835,
+    "strict_l_nnz": 3011796,
+    "strict_u_nnz": 3011796
+  },
+  "kernel_summary": [
+    {
+      "divisions": 1304251,
+      "flop_fraction": 0.2289532179541084,
+      "kernel": "GETRF",
+      "logical_flops": 582812897,
+      "macs": 290754323,
+      "tasks": 23,
+      "zero_mac_tasks": 0
+    },
+    {
+      "divisions": 0,
+      "flop_fraction": 0.16828316265890284,
+      "kernel": "GESSM",
+      "logical_flops": 428373964,
+      "macs": 214186982,
+      "tasks": 45,
+      "zero_mac_tasks": 1
+    },
+    {
+      "divisions": 1707545,
+      "flop_fraction": 0.16895395756506196,
+      "kernel": "TSTRF",
+      "logical_flops": 430081509,
+      "macs": 214186982,
+      "tasks": 45,
+      "zero_mac_tasks": 1
+    },
+    {
+      "divisions": 0,
+      "flop_fraction": 0.4338096618219268,
+      "kernel": "SSSSM",
+      "logical_flops": 1104286142,
+      "macs": 552143071,
+      "tasks": 147,
+      "zero_mac_tasks": 20
+    }
+  ],
+  "limitations": [
+    "Cache-traffic P3-P5 remains frozen to SSSSM/block-trailing and is not relabeled as complete LU.",
+    "This complete-LU stage reports exact symbolic arithmetic/task/DAG coverage; a factor-producing read/write address model is required before claiming complete-LU cache traffic.",
+    "The generic worker schedule uses logical FLOPs as task duration and is an analytical parallelism bound, not measured FPGA cycles."
+  ],
+  "schema": "complete-block-lu-analysis-v1",
+  "trailing_comparison": {
+    "full_lu_macs": 1271271358,
+    "panel_and_diagonal_macs": 719128287,
+    "ssssm_trailing_macs": 552143071,
+    "trailing_fraction": 0.43432353566798443
+  }
+}

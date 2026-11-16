@@ -1,0 +1,5 @@
+method,tasks,dependency_descriptors,metadata_footprint_bytes,note
+operation-scalar,1274283154,1274283154,50971326160,one scalar MAC or division per task
+operation-vliw16-ideal,79642698,79642698,3185707920,ideal full-lane bundles; MAC and division bundles kept separate
+segment,64032,11411256,93339072,"(j,segment) MAC tasks plus (k,segment) division tasks"
+block-complete-lu,260,523,12504,complete GETRF/GESSM/TSTRF/SSSSM DAG

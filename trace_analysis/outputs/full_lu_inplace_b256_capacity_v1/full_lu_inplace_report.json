@@ -1,0 +1,20 @@
+{
+  "schema": "full-lu-inplace-lru-v1",
+  "scope": "complete strict LU: all i>k,j>k MACs plus strict-L divisions",
+  "address_model": "canonical CSC factor union; FP32+uint32 8-byte records; L/U/diagonal updated in place",
+  "cache_policy": "fully associative 64-byte write-back/write-allocate LRU",
+  "block_size": 256,
+  "segment_height": 256,
+  "records": 6046427,
+  "factor_lines": 755804,
+  "macs": 1271271358,
+  "divisions": 3011796,
+  "logical_flops": 2545554512,
+  "unique_read_lines": 754892,
+  "unique_write_lines": 750434,
+  "compulsory_bytes": 96340864,
+  "event_multisets_identical": true,
+  "address_sets_identical": true,
+  "methods": ["operation", "operation-block-order", "segment-column", "segment-l-affinity", "block"],
+  "operation_block_order_semantics": "block access sequence with operation-VLIW16 task metadata; derived from the exact block trace"
+}

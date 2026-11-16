@@ -1,0 +1,27 @@
+capacity_mib,method,data_mib,metadata_mib,total_mib,TA
+1,operation,19556.833,3038.128,22594.961,212.8570
+1,operation-block-order,364.113,3038.128,3402.241,3.9630
+1,segment-column,8522.051,137.010,8659.061,92.7542
+1,segment-l-affinity,19618.101,137.010,19755.110,213.5238
+1,block,364.113,0.119,364.232,3.9630
+4,operation,188.227,3038.128,3226.355,2.0487
+4,operation-block-order,153.623,3038.128,3191.751,1.6720
+4,segment-column,3343.734,137.010,3480.743,36.3933
+4,segment-l-affinity,185.697,137.010,322.707,2.0211
+4,block,153.623,0.119,153.742,1.6720
+8,operation,98.821,3038.128,3136.949,1.0756
+8,operation-block-order,99.177,3038.128,3137.304,1.0794
+8,segment-column,103.173,137.010,240.183,1.1229
+8,segment-l-affinity,99.145,137.010,236.155,1.0791
+8,block,99.177,0.119,99.296,1.0794
+16,operation,91.901,3038.128,3130.029,1.0003
+16,operation-block-order,91.901,3038.128,3130.029,1.0003
+16,segment-column,97.873,137.010,234.882,1.0652
+16,segment-l-affinity,91.901,137.010,228.911,1.0003
+16,block,91.901,0.119,92.020,1.0003
+32,operation,91.898,3038.128,3130.026,1.0002
+32,operation-block-order,91.899,3038.128,3130.027,1.0002
+32,segment-column,94.067,137.010,231.076,1.0238
+32,segment-l-affinity,91.898,137.010,228.908,1.0002
+32,block,91.899,0.119,92.018,1.0002
+PB_FULL_LU_INPLACE_SUMMARY_PASS output=outputs/full_lu_inplace_b256_capacity_v1/full_lu_inplace_summary.csv

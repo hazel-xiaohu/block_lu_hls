@@ -37,14 +37,19 @@
   },
   "traversal_order": {
     "operation": "16-lane VLIW bundles over the k,i,j lexicographic scalar stream",
+    "operation_column_order": "16-lane VLIW bundles over the j,k,i left-looking scalar stream",
+    "operation_segment_order": "operation/VLIW16 task cardinality with the exact segment-native j,s,k,i atom stream",
     "operation_block_order": "16-lane VLIW bundle cardinality with the exact block (I,J,K),k,i,j scalar atom order",
     "segment_native": "task (j,s), then k,i lexicographic",
     "segment_l_affinity": "task (s,j), then k,i lexicographic",
     "segment_cache_aware": "one ascending-j queue head per segment; select maximum resident L/U/A footprint, tie by (j,s)",
-    "block": "task (I,J,K), then k,i,j lexicographic"
+    "block": "task (I,J,K), then k,i,j lexicographic",
+    "block_kij_order": "the same Block task partition sorted by (K,I,J), then k,i,j lexicographic",
+    "block_kij_jki_inner": "the same Block task partition sorted by (K,I,J), then sparse atoms sorted by j,k,i"
   },
   "cache_policy": "fully-associative write-back/write-allocate LRU",
   "cache_capacities_mib_pilot": [4, 16],
+  "cache_capacities_kib_small_scan": [32, 64, 128, 256, 512],
   "cache_capacities_mib_full_scan": [1, 4, 8, 16, 32],
   "block_sizes": [256, 512, 1024],
   "segment_height": "same as block size",
@@ -59,6 +64,17 @@
     "stream_each_run": "upper-bound model that fetches the full footprint on every factorization",
     "preload_once": "footprint divided by the number of repeated numerical factorizations",
     "online_generate": "zero external metadata bytes; generator compute/storage cost is explicitly excluded"
+  },
+  "target_board_capacity": {
+    "device": "xczu15eg-ffvb1156-2-i",
+    "design": "pangulu_parallel4x4_bd_wrapper",
+    "architecture": "placed 4-LU + 4-SSSSM rolling design",
+    "resource_root": "/output/pangulu_hybrid_salut_ssssm_v1/vivado_parallel4x4_v1",
+    "budget_formula": "available BRAM36 physical bytes + available URAM288 physical bytes - all placed-design BRAM36/RAMB18/URAM288 physical bytes",
+    "replay_methods": ["block", "segment-cache-aware"],
+    "replay_block_size": 512,
+    "replay_segment_height": 512,
+    "boundary": "ideal unified fully-associative LRU upper bound; tag/LRU storage, banking, ports, fragmentation and routing margin excluded"
   },
   "full_atomic_trace": false
 }

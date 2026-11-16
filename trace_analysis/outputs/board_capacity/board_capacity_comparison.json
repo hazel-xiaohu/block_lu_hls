@@ -1,0 +1,50 @@
+{
+  "block_control_space_saved_bytes": 40666640,
+  "block_control_space_saved_percent_vs_segment": 99.95929523734613,
+  "block_data_traffic_change_percent_vs_segment": 2.8391327688869086,
+  "block_data_traffic_delta_bytes_vs_segment": 3107136,
+  "block_total_stream_change_percent_vs_segment": -25.01918429241295,
+  "block_total_stream_delta_bytes_vs_segment": -37559504,
+  "cache_bytes": 5882112,
+  "cache_mib": 5.609619140625,
+  "methods": [
+    {
+      "a_reads": 453561,
+      "a_writebacks": 453561,
+      "cache_bytes": 5882112,
+      "cache_mib": 5.609619140625,
+      "control_bytes_per_flop": 1.179855069054224e-05,
+      "control_metadata_footprint_bytes": 16560,
+      "control_metadata_streamed_bytes_per_run": 16560,
+      "data_bytes": 112546752,
+      "data_bytes_per_flop": 0.08018650715748106,
+      "data_gib": 0.10481733083724976,
+      "l_misses": 314272,
+      "logical_flops": 1403562220,
+      "method": "block",
+      "total_bytes_per_flop": 0.0801983057081716,
+      "total_streamed_bytes_per_run": 112563312,
+      "u_misses": 537149
+    },
+    {
+      "a_reads": 449585,
+      "a_writebacks": 449585,
+      "cache_bytes": 5882112,
+      "cache_mib": 5.609619140625,
+      "control_bytes_per_flop": 0.028985676174726333,
+      "control_metadata_footprint_bytes": 40683200,
+      "control_metadata_streamed_bytes_per_run": 40683200,
+      "data_bytes": 109439616,
+      "data_bytes_per_flop": 0.0779727570609588,
+      "data_gib": 0.10192358493804932,
+      "l_misses": 349583,
+      "logical_flops": 1403562220,
+      "method": "segment-cache-aware",
+      "total_bytes_per_flop": 0.10695843323568513,
+      "total_streamed_bytes_per_run": 150122816,
+      "u_misses": 461241
+    }
+  ],
+  "positive_data_delta_means_block_moves_more": true,
+  "schema": "board-capacity-block-vs-segment-v1"
+}

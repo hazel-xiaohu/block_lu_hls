@@ -1,5 +1,7 @@
 __pycache__/
 tests/__pycache__/
+.build/
+build/
 bin/*.o
 bin/*.a
 bin/PanguLU_symbolic_export

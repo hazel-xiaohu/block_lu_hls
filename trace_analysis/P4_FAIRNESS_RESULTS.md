@@ -22,11 +22,34 @@ For 701,781,110 MACs (1,403,562,220 logical FLOPs), the lower bound is
 | Method | 4 MiB data | 4 MiB TA | 16 MiB data | 16 MiB TA |
 |---|---:|---:|---:|---:|
 | Operation VLIW16 | 0.153295 GiB | 1.82171x | 0.085047 GiB | 1.01068x |
+| Operation-column-order VLIW16 | 1.076513 GiB | 12.79296x | 0.088190 GiB | 1.04803x |
+| Operation-segment-order VLIW16 | 1.049396 GiB | 12.47071x | 0.088527 GiB | 1.05203x |
 | Operation-block-order VLIW16 | 0.111827 GiB | 1.32892x | 0.090112 GiB | 1.07087x |
 | Segment-native | 1.049396 GiB | 12.47071x | 0.088527 GiB | 1.05203x |
 | Segment-L-affinity | 0.106597 GiB | 1.26677x | 0.089207 GiB | 1.06011x |
 | Segment-cache-aware | 0.103921 GiB | 1.23496x | 0.091099 GiB | 1.08259x |
 | Block | 0.111827 GiB | 1.32892x | 0.090112 GiB | 1.07087x |
+| Block-KIJ-order | 0.112216 GiB | 1.33353x | 0.085054 GiB | 1.01076x |
+| Block-KIJ-JKI-inner | 0.116372 GiB | 1.38293x | 0.085064 GiB | 1.01087x |
+
+`block-kij-order` is an additional strict right-looking control.  It reuses
+the exact same Block tasks, empty scheduled products, contributions and
+within-task `(k,i,j)` atoms as Block, but sorts tasks by `(K,I,J)` rather than
+`(I,J,K)`.  Its traffic is reported by the regenerated CSVs below; unlike the
+two matched operation controls, equality with Block is neither assumed nor
+required because task order is the independent variable.  Relative to
+`(I,J,K)` Block, `(K,I,J)` uses 0.35% more data traffic at 4 MiB but 5.61%
+less at 16 MiB.  Across 32--512 KiB it uses 0.01--1.10% more, confirming that
+the preferred Block traversal is capacity-dependent rather than universal.
+
+`block-kij-jki-inner` keeps the same strict `(K,I,J)` task order and the same
+Block partition, but changes only the sparse atoms inside each task from
+`(k,i,j)` to `(j,k,i)`.  It therefore isolates CSC target-column locality and
+U-scalar reuse from the L-factor reuse of the original Block inner order.  It
+reduces traffic by 51.62--58.06% relative to `block-kij-order` across
+32--512 KiB, but increases traffic by 3.70% at 4 MiB and only 0.011% at
+16 MiB.  CSC column locality wins under severe capacity pressure, whereas
+retaining the L panel is preferable around 4 MiB.
 
 Segment-L-affinity reduces 4 MiB traffic by 9.84x relative to the native
 column/segment order.  With the FP32 working set, it is 4.7% below Block, and
@@ -41,6 +64,14 @@ scratchpad is modeled.  Under this model, the Block data-traffic benefit over
 native Operation comes from the atom order enabled by block grouping; the
 remaining difference is task/dependency representation.
 
+Operation-segment-order and Segment-native likewise have exactly the same
+matrix traffic because both replay the exact `(j,s,k,i)` atom stream.  Their
+only modeled difference is operation/VLIW versus segment task and metadata
+cardinality.  Operation-column-order uses `(j,k,i)` without row segmentation;
+its contrast with the original `(k,i,j)` Operation shows that traversal order
+alone can dominate traffic, and therefore no traffic difference between
+unmatched orders is attributed solely to task granularity.
+
 ## Exact event-equivalence audit
 
 Every traversal uses a canonical event ID:
@@ -50,7 +81,7 @@ event_id = event_base[k] + l_position * |U_active(k)| + u_position
 ```
 
 For each traversal, an approximately 84 MiB bitset verifies that all
-701,781,110 event IDs occur exactly once.  All six schedules report:
+701,781,110 event IDs occur exactly once.  All ten schedules report:
 
 ```text
 canonical_event_ids = 701,781,110

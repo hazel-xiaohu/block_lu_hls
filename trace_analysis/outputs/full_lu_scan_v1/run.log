@@ -1,0 +1,16 @@
+PB_FULL_LU_PASS n=22835 block_size=256 tasks=2453 edges=5789 macs=1271271358 divisions=3011796 flops=2545554512 trailing_fraction=0.688908 output=/output/block_lu_hls/trace_analysis/outputs/full_lu_scan_v1/block_b256
+  GETRF  tasks=    90 macs=    72592012 div=    604210 flops=   145788234
+  GESSM  tasks=   301 macs=   161445221 div=         0 flops=   322890442
+  TSTRF  tasks=   301 macs=   161445221 div=   2407586 flops=   325298028
+  SSSSM  tasks=  1761 macs=   875788904 div=         0 flops=  1751577808
+PB_FULL_LU_PASS n=22835 block_size=512 tasks=667 edges=1430 macs=1271271358 divisions=3011796 flops=2545554512 trailing_fraction=0.552031 output=/output/block_lu_hls/trace_analysis/outputs/full_lu_scan_v1/block_b512
+  GETRF  tasks=    45 macs=   178347594 div=    967158 flops=   357662346
+  GESSM  tasks=   104 macs=   195571327 div=         0 flops=   391142654
+  TSTRF  tasks=   104 macs=   195571327 div=   2044638 flops=   393187292
+  SSSSM  tasks=   414 macs=   701781110 div=         0 flops=  1403562220
+PB_FULL_LU_PASS n=22835 block_size=1024 tasks=260 edges=523 macs=1271271358 divisions=3011796 flops=2545554512 trailing_fraction=0.434324 output=/output/block_lu_hls/trace_analysis/outputs/full_lu_scan_v1/block_b1024
+  GETRF  tasks=    23 macs=   290754323 div=   1304251 flops=   582812897
+  GESSM  tasks=    45 macs=   214186982 div=         0 flops=   428373964
+  TSTRF  tasks=    45 macs=   214186982 div=   1707545 flops=   430081509
+  SSSSM  tasks=   147 macs=   552143071 div=         0 flops=  1104286142
+PB_FULL_LU_SCAN_PASS output=/output/block_lu_hls/trace_analysis/outputs/full_lu_scan_v1/full_lu_block_size_scan.csv

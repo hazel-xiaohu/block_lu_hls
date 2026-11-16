@@ -1,0 +1,17 @@
+PB_FULL_LU_INPLACE_BUILD n=4510 records=43996 lines=5500 macs=470473 divisions=19743 operation_tasks=30639 segment_tasks=9485 block_tasks=114 seconds=0.0506443
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=0/4510
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=0/4510
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=0/4510
+PB_FULL_LU_INPLACE_PROGRESS method=block major=0/9
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=4096/4510
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=4096/4510
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=4096/4510
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=4509/4510
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=4509/4510
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=4509/4510
+PB_FULL_LU_INPLACE_PROGRESS method=block major=8/9
+PB_FULL_LU_INPLACE_METHOD method=operation events=490216 seconds=0.0318059
+PB_FULL_LU_INPLACE_METHOD method=segment-column events=490216 seconds=0.031429
+PB_FULL_LU_INPLACE_METHOD method=segment-l-affinity events=490216 seconds=0.0300277
+PB_FULL_LU_INPLACE_METHOD method=block events=490216 seconds=0.0323034
+PB_FULL_LU_INPLACE_PASS output=outputs/full_lu_inplace_multi_b512_v1/circuit_2

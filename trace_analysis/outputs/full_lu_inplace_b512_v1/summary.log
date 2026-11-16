@@ -1,0 +1,12 @@
+capacity_mib,method,data_mib,metadata_mib,total_mib,TA
+4,operation,188.227,3038.128,3226.355,2.0487
+4,operation-block-order,159.691,3038.128,3197.819,1.7381
+4,segment-column,3346.187,99.209,3445.395,36.4200
+4,segment-l-affinity,186.426,99.209,285.635,2.0291
+4,block,159.691,0.031,159.722,1.7381
+16,operation,91.901,3038.128,3130.029,1.0003
+16,operation-block-order,92.774,3038.128,3130.901,1.0098
+16,segment-column,97.871,99.209,197.079,1.0652
+16,segment-l-affinity,91.901,99.209,191.110,1.0003
+16,block,92.774,0.031,92.805,1.0098
+PB_FULL_LU_INPLACE_SUMMARY_PASS output=outputs/full_lu_inplace_b512_v1/full_lu_inplace_summary.csv

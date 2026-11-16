@@ -1,0 +1,7 @@
+category,ramb36,ramb18,uram288,physical_bytes,mib
+board_total,744.0,0.0,112.0,7557120,7.20703125
+placed_design_fixed,294.0,11.0,8.0,1675008,1.597412109375
+lu_workers_0_3,256.0,0.0,0.0,1179648,1.125
+ssssm_workers_4_7,16.0,0.0,0.0,73728,0.0703125
+non_worker_pool_fifo_scheduler_control,22.0,11.0,8.0,421632,0.402099609375
+lua_net_capacity,444.5,0.0,104.0,5882112,5.609619140625

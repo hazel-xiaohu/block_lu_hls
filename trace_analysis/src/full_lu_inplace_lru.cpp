@@ -31,10 +31,13 @@ struct Coord { uint32_t row, col; };
 struct Entry { uint32_t index, line; };
 struct Range { uint32_t begin = 0, end = 0; };
 struct Contribution { uint32_t k, u_pos, u_line; Range l; };
+struct UpperRef { uint32_t k = 0, u_pos = 0; };
+struct LowerRef { uint32_t k = 0, l_pos = 0; };
 struct SegmentTask {
   uint32_t j = 0, segment = 0;
   std::vector<Contribution> contributions;
   Range divisions;
+  std::vector<uint32_t> footprint_lines;
 };
 
 struct Pattern {
@@ -46,6 +49,8 @@ struct Pattern {
   uint64_t block_tasks = 0, block_dependencies = 0;
   std::vector<std::vector<Entry>> lower;  // L(i,k), indexed by k.
   std::vector<std::vector<Entry>> upper;  // U(k,j), indexed by k.
+  std::vector<std::vector<LowerRef>> lower_by_row;  // L(i,k), indexed by i.
+  std::vector<std::vector<UpperRef>> upper_by_column;  // U(k,j), indexed by j.
   std::vector<uint32_t> diagonal_line;
   std::vector<uint64_t> mac_base, div_base;
   std::vector<int32_t> target_block_slot;
@@ -134,6 +139,7 @@ class ExactLru {
     }
   }
   const CacheStats &stats() const { return stats_; }
+  bool contains(uint32_t line) const { return (flags_[line] & 1U) != 0; }
 
  private:
   uint32_t capacity_, size_ = 0;
@@ -165,6 +171,13 @@ class StreamSimulator {
     if (word & mask) ++duplicate_events_;
     else { word |= mask; ++unique_events_; }
     hash_sum_ += tuple_hash; hash_xor_ ^= tuple_hash; hash_sum2_ += tuple_hash * tuple_hash;
+  }
+  uint64_t cached_footprint_lines(const std::vector<uint32_t> &lines) const {
+    if (caches_.size() != 1)
+      throw std::runtime_error("cache-aware scheduling requires one capacity per replay");
+    uint64_t hits = 0;
+    for (uint32_t line : lines) hits += caches_[0].contains(line) ? 1U : 0U;
+    return hits;
   }
   void finish(MethodStats &method, std::vector<CacheResult> &results) {
     for (auto &cache : caches_) cache.flush();
@@ -289,6 +302,14 @@ Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t seg
   p.total_lines = static_cast<uint32_t>(ceil_div(ordinal * kRecordBytes, kLineBytes));
   for (auto &row : p.upper)
     std::sort(row.begin(), row.end(), [](const Entry &a, const Entry &b) { return a.index < b.index; });
+  p.lower_by_row.resize(p.n);
+  for (uint32_t k = 0; k < p.n; ++k)
+    for (uint32_t lpos = 0; lpos < p.lower[k].size(); ++lpos)
+      p.lower_by_row[p.lower[k][lpos].index].push_back(LowerRef{k, lpos});
+  p.upper_by_column.resize(p.n);
+  for (uint32_t k = 0; k < p.n; ++k)
+    for (uint32_t upos = 0; upos < p.upper[k].size(); ++upos)
+      p.upper_by_column[p.upper[k][upos].index].push_back(UpperRef{k, upos});
 
   for (int32_t &slot : p.target_block_slot) if (slot == -2) slot = static_cast<int32_t>(p.target_block_count++);
   uint64_t table_size = static_cast<uint64_t>(p.target_block_count) * block_size * block_size;
@@ -348,6 +369,37 @@ Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t seg
   for (auto &item : segment_map) p.segment_schedule.push_back(std::move(item.second));
   p.segment_tasks = mac_task_keys.size() + div_task_keys.size();
   p.segment_dependencies = mac_contributions + p.divisions;
+
+  // Exact cache-line footprints are used only to rank already-legal ready
+  // segment tasks.  A stamp table deduplicates L/U/target/diagonal lines per
+  // task without changing the arithmetic event stream.
+  std::vector<uint32_t> footprint_stamp(p.total_lines, 0);
+  uint32_t footprint_token = 0;
+  for (SegmentTask &task : p.segment_schedule) {
+    if (++footprint_token == 0) {
+      std::fill(footprint_stamp.begin(), footprint_stamp.end(), 0);
+      footprint_token = 1;
+    }
+    auto add_line = [&](uint32_t line) {
+      if (footprint_stamp[line] != footprint_token) {
+        footprint_stamp[line] = footprint_token;
+        task.footprint_lines.push_back(line);
+      }
+    };
+    for (const Contribution &c : task.contributions) {
+      add_line(c.u_line);
+      for (uint32_t li = c.l.begin; li < c.l.end; ++li) {
+        const Entry &l = p.lower[c.k][li];
+        add_line(l.line);
+        add_line(target_line(p, l.index, task.j));
+      }
+    }
+    if (task.divisions.end > task.divisions.begin) {
+      add_line(p.diagonal_line[task.j]);
+      for (uint32_t li = task.divisions.begin; li < task.divisions.end; ++li)
+        add_line(p.lower[task.j][li].line);
+    }
+  }
 
   p.lower_panels.resize(p.block_count); p.upper_panels.resize(p.block_count);
   std::vector<std::set<uint32_t>> lower_sets(p.block_count), upper_sets(p.block_count);
@@ -413,34 +465,119 @@ MethodStats base_stats(const Pattern &p, const std::string &name, uint64_t tasks
   m.metadata_bytes = tasks * kTaskBytes + deps * kDependencyBytes; return m;
 }
 
-SimulationResult simulate_operation(const Pattern &p, const std::vector<uint64_t> &caps) {
-  MethodStats m = base_stats(p, "operation", p.operation_tasks, p.operation_dependencies);
+SimulationResult simulate_operation_column_order(const Pattern &p,
+                                                 const std::vector<uint64_t> &caps) {
+  MethodStats m = base_stats(p, "operation-column-order", p.operation_tasks,
+                             p.operation_dependencies);
   StreamSimulator sim(p, caps); auto start = std::chrono::steady_clock::now();
-  for (uint32_t k = 0; k < p.n; ++k) {
-    for (uint32_t li = 0; li < p.lower[k].size(); ++li) emit_div(p, k, li, sim, m);
-    for (uint32_t li = 0; li < p.lower[k].size(); ++li)
-      for (uint32_t ui = 0; ui < p.upper[k].size(); ++ui) emit_mac(p, k, li, ui, sim, m);
-    log_progress(m.method, k, p.n);
+  // Legal scalar left-looking order: finish every k<j update of column j,
+  // then divide its strict-lower entries by the completed diagonal U(j,j).
+  for (uint32_t j = 0; j < p.n; ++j) {
+    for (const UpperRef &ref : p.upper_by_column[j])
+      for (uint32_t li = 0; li < p.lower[ref.k].size(); ++li)
+        emit_mac(p, ref.k, li, ref.u_pos, sim, m);
+    for (uint32_t li = 0; li < p.lower[j].size(); ++li) emit_div(p, j, li, sim, m);
+    log_progress(m.method, j, p.n);
   }
   std::vector<CacheResult> out; sim.finish(m, out);
   m.seconds = std::chrono::duration<double>(std::chrono::steady_clock::now() - start).count();
   return {std::move(m), std::move(out)};
 }
 
-SimulationResult simulate_segment_column(const Pattern &p, const std::vector<uint64_t> &caps) {
-  MethodStats m = base_stats(p, "segment-column", p.segment_tasks, p.segment_dependencies);
+void execute_segment_task(const Pattern &p, const SegmentTask &task,
+                          StreamSimulator &sim, MethodStats &m) {
+  for (const Contribution &c : task.contributions)
+    for (uint32_t li = c.l.begin; li < c.l.end; ++li)
+      emit_mac(p, c.k, li, c.u_pos, sim, m);
+  if (task.divisions.end > task.divisions.begin)
+    for (uint32_t li = task.divisions.begin; li < task.divisions.end; ++li)
+      emit_div(p, task.j, li, sim, m);
+}
+
+SimulationResult simulate_segment_native(const Pattern &p, const std::vector<uint64_t> &caps) {
+  MethodStats m = base_stats(p, "segment-native", p.segment_tasks, p.segment_dependencies);
   StreamSimulator sim(p, caps); auto start = std::chrono::steady_clock::now();
   uint32_t last_j = kMissing;
   for (const SegmentTask &task : p.segment_schedule) {
-    for (const Contribution &c : task.contributions)
-      for (uint32_t li = c.l.begin; li < c.l.end; ++li) emit_mac(p, c.k, li, c.u_pos, sim, m);
-    if (task.divisions.end > task.divisions.begin)
-      for (uint32_t li = task.divisions.begin; li < task.divisions.end; ++li) emit_div(p, task.j, li, sim, m);
+    execute_segment_task(p, task, sim, m);
     if (task.j != last_j) { log_progress(m.method, task.j, p.n); last_j = task.j; }
   }
   std::vector<CacheResult> out; sim.finish(m, out);
   m.seconds = std::chrono::duration<double>(std::chrono::steady_clock::now() - start).count();
   return {std::move(m), std::move(out)};
+}
+
+SimulationResult simulate_segment_cache_aware_one(const Pattern &p, uint64_t capacity) {
+  MethodStats m = base_stats(p, "segment-cache-aware", p.segment_tasks,
+                             p.segment_dependencies);
+  StreamSimulator sim(p, std::vector<uint64_t>{capacity});
+  auto start = std::chrono::steady_clock::now();
+  const size_t count = p.segment_schedule.size();
+  std::vector<uint32_t> indegree(count, 0);
+  std::vector<std::vector<uint32_t>> successors(count);
+  const uint32_t segment_count = static_cast<uint32_t>(ceil_div(p.n, p.segment_height));
+  std::vector<int32_t> last_in_segment(segment_count, -1), last_in_column(p.n, -1);
+  auto add_edge = [&](uint32_t from, uint32_t to) {
+    successors[from].push_back(to); ++indegree[to];
+  };
+  // A task (j,s) consumes L values produced by earlier j in the same segment,
+  // and U values produced by earlier row segments of the same target column.
+  // These two registered predecessor chains form a legal 2-D wavefront DAG.
+  for (uint32_t index = 0; index < count; ++index) {
+    const SegmentTask &task = p.segment_schedule[index];
+    if (last_in_segment[task.segment] >= 0)
+      add_edge(static_cast<uint32_t>(last_in_segment[task.segment]), index);
+    if (last_in_column[task.j] >= 0)
+      add_edge(static_cast<uint32_t>(last_in_column[task.j]), index);
+    last_in_segment[task.segment] = static_cast<int32_t>(index);
+    last_in_column[task.j] = static_cast<int32_t>(index);
+  }
+  std::vector<uint32_t> ready;
+  for (uint32_t index = 0; index < count; ++index)
+    if (indegree[index] == 0) ready.push_back(index);
+  uint64_t completed = 0;
+  while (!ready.empty()) {
+    size_t best_pos = 0; uint64_t best_hits = 0;
+    for (size_t pos = 0; pos < ready.size(); ++pos) {
+      const SegmentTask &task = p.segment_schedule[ready[pos]];
+      uint64_t hits = sim.cached_footprint_lines(task.footprint_lines);
+      const SegmentTask &best = p.segment_schedule[ready[best_pos]];
+      if (pos == 0 || hits > best_hits ||
+          (hits == best_hits && std::tie(task.j, task.segment) <
+                                std::tie(best.j, best.segment))) {
+        best_pos = pos; best_hits = hits;
+      }
+    }
+    uint32_t index = ready[best_pos];
+    ready[best_pos] = ready.back(); ready.pop_back();
+    execute_segment_task(p, p.segment_schedule[index], sim, m); ++completed;
+    for (uint32_t next : successors[index]) {
+      if (--indegree[next] == 0) ready.push_back(next);
+    }
+  }
+  if (completed != count) throw std::runtime_error("segment cache-aware DAG did not complete");
+  std::vector<CacheResult> out; sim.finish(m, out);
+  m.seconds = std::chrono::duration<double>(std::chrono::steady_clock::now() - start).count();
+  return {std::move(m), std::move(out)};
+}
+
+SimulationResult simulate_segment_cache_aware(const Pattern &p,
+                                              const std::vector<uint64_t> &caps) {
+  SimulationResult merged; bool first = true;
+  for (uint64_t capacity : caps) {
+    SimulationResult one = simulate_segment_cache_aware_one(p, capacity);
+    if (first) { merged.first = one.first; first = false; }
+    else {
+      const MethodStats &a = merged.first, &b = one.first;
+      if (a.macs != b.macs || a.divisions != b.divisions ||
+          a.hash_sum != b.hash_sum || a.hash_xor != b.hash_xor ||
+          a.hash_sum2 != b.hash_sum2)
+        throw std::runtime_error("capacity-specific segment schedules changed event multiset");
+      merged.first.seconds += b.seconds;
+    }
+    merged.second.insert(merged.second.end(), one.second.begin(), one.second.end());
+  }
+  return merged;
 }
 
 SimulationResult simulate_segment_l_affinity(const Pattern &p, const std::vector<uint64_t> &caps) {
@@ -463,43 +600,140 @@ SimulationResult simulate_segment_l_affinity(const Pattern &p, const std::vector
   return {std::move(m), std::move(out)};
 }
 
-SimulationResult simulate_block(const Pattern &p, const std::vector<uint64_t> &caps) {
+void emit_block_update(const Pattern &p, uint32_t kb, uint32_t ib, uint32_t jb,
+                       StreamSimulator &sim, MethodStats &m) {
+  uint32_t kbegin = kb * p.block_size, kend = std::min(p.n, kbegin + p.block_size);
+  struct ColumnContribution {
+    uint32_t j, k, upos;
+    Range lower;
+  };
+  std::vector<ColumnContribution> columns;
+  for (uint32_t k = kbegin; k < kend; ++k) {
+    Range lr = block_range(p.lower[k], ib, p.block_size);
+    Range ur = block_range(p.upper[k], jb, p.block_size);
+    for (uint32_t ui = ur.begin; ui < ur.end; ++ui)
+      columns.push_back(ColumnContribution{p.upper[k][ui].index, k, ui, lr});
+  }
+  std::sort(columns.begin(), columns.end(), [](const ColumnContribution &a,
+                                                const ColumnContribution &b) {
+    return std::tie(a.j, a.k, a.upos) < std::tie(b.j, b.k, b.upos);
+  });
+  for (const ColumnContribution &column : columns)
+    for (uint32_t li = column.lower.begin; li < column.lower.end; ++li)
+      emit_mac(p, column.k, li, column.upos, sim, m);
+}
+
+void emit_getrf(const Pattern &p, uint32_t kb, StreamSimulator &sim, MethodStats &m) {
+  uint32_t kbegin = kb * p.block_size, kend = std::min(p.n, kbegin + p.block_size);
+  // Column-oriented diagonal factorization.  Before column j is divided,
+  // finish every in-block contribution L(:,k)U(k,j), k<j.  The resulting
+  // atom order is j -> k -> i, followed by the divisions of column j.
+  for (uint32_t j = kbegin; j < kend; ++j) {
+    for (const UpperRef &ref : p.upper_by_column[j]) {
+      if (ref.k < kbegin || ref.k >= kend) continue;
+      Range lr = block_range(p.lower[ref.k], kb, p.block_size);
+      for (uint32_t li = lr.begin; li < lr.end; ++li)
+        emit_mac(p, ref.k, li, ref.u_pos, sim, m);
+    }
+    Range lr = block_range(p.lower[j], kb, p.block_size);
+    for (uint32_t li = lr.begin; li < lr.end; ++li) emit_div(p, j, li, sim, m);
+  }
+}
+
+void emit_gessm(const Pattern &p, uint32_t kb, uint32_t jb,
+                StreamSimulator &sim, MethodStats &m) {
+  uint32_t kbegin = kb * p.block_size, kend = std::min(p.n, kbegin + p.block_size);
+  uint32_t jbegin = jb * p.block_size, jend = std::min(p.n, jbegin + p.block_size);
+  // Every upper-panel column is an independent triangular solve.  Complete
+  // it in j -> k -> i order so U(k,j) is consumed down the target column.
+  for (uint32_t j = jbegin; j < jend; ++j) {
+    for (const UpperRef &ref : p.upper_by_column[j]) {
+      if (ref.k < kbegin || ref.k >= kend) continue;
+      Range lr = block_range(p.lower[ref.k], kb, p.block_size);
+      for (uint32_t li = lr.begin; li < lr.end; ++li)
+        emit_mac(p, ref.k, li, ref.u_pos, sim, m);
+    }
+  }
+}
+
+void emit_tstrf(const Pattern &p, uint32_t ib, uint32_t kb,
+                StreamSimulator &sim, MethodStats &m) {
+  uint32_t kbegin = kb * p.block_size, kend = std::min(p.n, kbegin + p.block_size);
+  uint32_t ibegin = ib * p.block_size, iend = std::min(p.n, ibegin + p.block_size);
+  // Every lower-panel row is an independent right-side triangular solve.
+  // For a fixed i, divide L(i,k) and immediately apply its remaining U row:
+  // i -> k -> division -> j.
+  for (uint32_t i = ibegin; i < iend; ++i) {
+    for (const LowerRef &ref : p.lower_by_row[i]) {
+      if (ref.k < kbegin || ref.k >= kend) continue;
+      emit_div(p, ref.k, ref.l_pos, sim, m);
+      Range ur = block_range(p.upper[ref.k], kb, p.block_size);
+      for (uint32_t ui = ur.begin; ui < ur.end; ++ui)
+        emit_mac(p, ref.k, ref.l_pos, ui, sim, m);
+    }
+  }
+}
+
+SimulationResult simulate_block_left_looking(const Pattern &p,
+                                             const std::vector<uint64_t> &caps) {
   MethodStats m = base_stats(p, "block", p.block_tasks, p.block_dependencies);
   StreamSimulator sim(p, caps); auto start = std::chrono::steady_clock::now();
+  for (uint32_t qb = 0; qb < p.block_count; ++qb) {
+    // Complete each target diagonal/panel with every previous pivot block,
+    // then immediately run the task that produces the next L/U factors.
+    for (uint32_t pb = 0; pb < qb; ++pb)
+      emit_block_update(p, pb, qb, qb, sim, m);
+    emit_getrf(p, qb, sim, m);
+    for (uint32_t jb : p.upper_panels[qb]) {
+      for (uint32_t pb = 0; pb < qb; ++pb)
+        emit_block_update(p, pb, qb, jb, sim, m);
+      emit_gessm(p, qb, jb, sim, m);
+    }
+    for (uint32_t ib : p.lower_panels[qb]) {
+      for (uint32_t pb = 0; pb < qb; ++pb)
+        emit_block_update(p, pb, ib, qb, sim, m);
+      emit_tstrf(p, ib, qb, sim, m);
+    }
+    log_progress(m.method, qb, p.block_count);
+  }
+  std::vector<CacheResult> out; sim.finish(m, out);
+  m.seconds = std::chrono::duration<double>(std::chrono::steady_clock::now() - start).count();
+  return {std::move(m), std::move(out)};
+}
+
+SimulationResult simulate_block_right_looking(const Pattern &p,
+                                              const std::vector<uint64_t> &caps,
+                                              const std::string &method) {
+  MethodStats m = base_stats(p, method, p.block_tasks, p.block_dependencies);
+  StreamSimulator sim(p, caps); auto start = std::chrono::steady_clock::now();
   for (uint32_t kb = 0; kb < p.block_count; ++kb) {
-    uint32_t kbegin = kb * p.block_size, kend = std::min(p.n, kbegin + p.block_size);
-    // GETRF(K,K).
-    for (uint32_t k = kbegin; k < kend; ++k) {
-      Range lr = block_range(p.lower[k], kb, p.block_size), ur = block_range(p.upper[k], kb, p.block_size);
-      for (uint32_t li = lr.begin; li < lr.end; ++li) emit_div(p, k, li, sim, m);
-      for (uint32_t li = lr.begin; li < lr.end; ++li)
-        for (uint32_t ui = ur.begin; ui < ur.end; ++ui) emit_mac(p, k, li, ui, sim, m);
-    }
-    // GESSM(K,J).
-    for (uint32_t jb : p.upper_panels[kb]) for (uint32_t k = kbegin; k < kend; ++k) {
-      Range lr = block_range(p.lower[k], kb, p.block_size), ur = block_range(p.upper[k], jb, p.block_size);
-      for (uint32_t li = lr.begin; li < lr.end; ++li)
-        for (uint32_t ui = ur.begin; ui < ur.end; ++ui) emit_mac(p, k, li, ui, sim, m);
-    }
-    // TSTRF(I,K).
-    for (uint32_t ib : p.lower_panels[kb]) for (uint32_t k = kbegin; k < kend; ++k) {
-      Range lr = block_range(p.lower[k], ib, p.block_size), ur = block_range(p.upper[k], kb, p.block_size);
-      for (uint32_t li = lr.begin; li < lr.end; ++li) emit_div(p, k, li, sim, m);
-      for (uint32_t li = lr.begin; li < lr.end; ++li)
-        for (uint32_t ui = ur.begin; ui < ur.end; ++ui) emit_mac(p, k, li, ui, sim, m);
-    }
-    // SSSSM(I,J,K).
-    for (uint32_t ib : p.lower_panels[kb]) for (uint32_t jb : p.upper_panels[kb])
-      for (uint32_t k = kbegin; k < kend; ++k) {
-        Range lr = block_range(p.lower[k], ib, p.block_size), ur = block_range(p.upper[k], jb, p.block_size);
-        for (uint32_t li = lr.begin; li < lr.end; ++li)
-          for (uint32_t ui = ur.begin; ui < ur.end; ++ui) emit_mac(p, k, li, ui, sim, m);
-      }
+    emit_getrf(p, kb, sim, m);
+    for (uint32_t jb : p.upper_panels[kb]) emit_gessm(p, kb, jb, sim, m);
+    for (uint32_t ib : p.lower_panels[kb]) emit_tstrf(p, ib, kb, sim, m);
+    for (uint32_t ib : p.lower_panels[kb])
+      for (uint32_t jb : p.upper_panels[kb])
+        emit_block_update(p, kb, ib, jb, sim, m);
     log_progress(m.method, kb, p.block_count);
   }
   std::vector<CacheResult> out; sim.finish(m, out);
   m.seconds = std::chrono::duration<double>(std::chrono::steady_clock::now() - start).count();
   return {std::move(m), std::move(out)};
+}
+
+SimulationResult simulate_block_kij_jki_inner(const Pattern &p,
+                                              const std::vector<uint64_t> &caps) {
+  return simulate_block_right_looking(p, caps, "block-kij-jki-inner");
+}
+
+SimulationResult make_operation_matched(const Pattern &p, const SimulationResult &source,
+                                        const std::string &name) {
+  SimulationResult result = source;
+  result.first.method = name;
+  result.first.tasks = p.operation_tasks;
+  result.first.dependencies = p.operation_dependencies;
+  result.first.metadata_bytes = p.operation_tasks * kTaskBytes +
+                                p.operation_dependencies * kDependencyBytes;
+  return result;
 }
 
 std::vector<uint64_t> parse_capacities(const std::string &text) {
@@ -548,11 +782,6 @@ void write_outputs(const std::string &dir, const Pattern &p, const std::vector<S
   for (const auto &result : all) for (const CacheResult &cache : result.second) {
     const auto &m = result.first;
     write_traffic_row(m.method, m.tasks, m.dependencies, m.metadata_bytes, m, cache);
-    if (m.method == "block") {
-      uint64_t operation_metadata = p.operation_tasks * kTaskBytes + p.operation_dependencies * kDependencyBytes;
-      write_traffic_row("operation-block-order", p.operation_tasks, p.operation_dependencies,
-                        operation_metadata, m, cache);
-    }
   }
   std::ofstream audit(dir + "/full_lu_inplace_event_audit.csv");
   audit << "method,macs,divisions,unique_events,duplicate_events,event_hash_sum,event_hash_xor,event_hash_sum2,unique_read_lines,unique_write_lines,read_hash,write_hash,elapsed_seconds\n";
@@ -565,7 +794,7 @@ void write_outputs(const std::string &dir, const Pattern &p, const std::vector<S
   }
   std::ofstream report(dir + "/full_lu_inplace_report.json");
   report << "{\n"
-         << "  \"schema\": \"full-lu-inplace-lru-v1\",\n"
+         << "  \"schema\": \"full-lu-inplace-lru-v4-eight-trajectories\",\n"
          << "  \"scope\": \"complete strict LU: all i>k,j>k MACs plus strict-L divisions\",\n"
          << "  \"address_model\": \"canonical CSC factor union; FP32+uint32 8-byte records; L/U/diagonal updated in place\",\n"
          << "  \"cache_policy\": \"fully associative 64-byte write-back/write-allocate LRU\",\n"
@@ -581,8 +810,12 @@ void write_outputs(const std::string &dir, const Pattern &p, const std::vector<S
          << "  \"compulsory_bytes\": " << compulsory << ",\n"
          << "  \"event_multisets_identical\": true,\n"
          << "  \"address_sets_identical\": true,\n"
-         << "  \"methods\": [\"operation\", \"operation-block-order\", \"segment-column\", \"segment-l-affinity\", \"block\"],\n"
-         << "  \"operation_block_order_semantics\": \"block access sequence with operation-VLIW16 task metadata; derived from the exact block trace\"\n"
+         << "  \"methods\": [\"operation-column-order\", \"operation-segment-order\", \"operation-block-order\", \"segment-native\", \"segment-l-affinity\", \"segment-cache-aware\", \"block\", \"block-kij-jki-inner\"],\n"
+         << "  \"operation_segment_order_semantics\": \"exact segment-native trace with operation-VLIW16 metadata\",\n"
+         << "  \"operation_block_order_semantics\": \"exact target-resident block trace with operation-VLIW16 metadata\",\n"
+         << "  \"block_semantics\": \"legal target-resident left-looking completion of diagonal/panel blocks before GETRF/GESSM/TSTRF; every SSSSM block uses j,k,i atoms\",\n"
+         << "  \"factor_kernel_semantics\": \"GETRF and GESSM are column-oriented j,k,i; TSTRF is row-oriented i,k,j; GETRF/TSTRF divisions precede same-pivot updates\",\n"
+         << "  \"block_kij_jki_inner_semantics\": \"strict right-looking K,I,J tasks with oriented factor kernels and j,k,i SSSSM atoms\"\n"
          << "}\n";
 }
 
@@ -604,12 +837,37 @@ int main(int argc, char **argv) {
               << " operation_tasks=" << p.operation_tasks << " segment_tasks=" << p.segment_tasks
               << " block_tasks=" << p.block_tasks << " seconds="
               << std::chrono::duration<double>(std::chrono::steady_clock::now() - build_start).count() << '\n';
-    auto fo = std::async(std::launch::async, simulate_operation, std::cref(p), std::cref(capacities));
-    auto fs = std::async(std::launch::async, simulate_segment_column, std::cref(p), std::cref(capacities));
-    auto fl = std::async(std::launch::async, simulate_segment_l_affinity, std::cref(p), std::cref(capacities));
-    auto fb = std::async(std::launch::async, simulate_block, std::cref(p), std::cref(capacities));
+    auto foc = std::async(std::launch::async, simulate_operation_column_order,
+                          std::cref(p), std::cref(capacities));
+    auto fs = std::async(std::launch::async, simulate_segment_native,
+                         std::cref(p), std::cref(capacities));
+    auto fl = std::async(std::launch::async, simulate_segment_l_affinity,
+                         std::cref(p), std::cref(capacities));
+    auto fca = std::async(std::launch::async, simulate_segment_cache_aware,
+                          std::cref(p), std::cref(capacities));
+    auto fb = std::async(std::launch::async, simulate_block_left_looking,
+                         std::cref(p), std::cref(capacities));
+    auto fbj = std::async(std::launch::async, simulate_block_kij_jki_inner,
+                          std::cref(p), std::cref(capacities));
+    SimulationResult operation_column = foc.get();
+    SimulationResult segment_native = fs.get();
+    SimulationResult segment_l_affinity = fl.get();
+    SimulationResult segment_cache_aware = fca.get();
+    SimulationResult block = fb.get();
+    SimulationResult block_kij_jki = fbj.get();
+    SimulationResult operation_segment = make_operation_matched(
+        p, segment_native, "operation-segment-order");
+    SimulationResult operation_block = make_operation_matched(
+        p, block, "operation-block-order");
     std::vector<SimulationResult> all;
-    all.push_back(fo.get()); all.push_back(fs.get()); all.push_back(fl.get()); all.push_back(fb.get());
+    all.push_back(std::move(operation_column));
+    all.push_back(std::move(operation_segment));
+    all.push_back(std::move(operation_block));
+    all.push_back(std::move(segment_native));
+    all.push_back(std::move(segment_l_affinity));
+    all.push_back(std::move(segment_cache_aware));
+    all.push_back(std::move(block));
+    all.push_back(std::move(block_kij_jki));
     write_outputs(output, p, all);
     for (const auto &result : all)
       std::cout << "PB_FULL_LU_INPLACE_METHOD method=" << result.first.method

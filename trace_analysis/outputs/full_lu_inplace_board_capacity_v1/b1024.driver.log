@@ -1,0 +1,35 @@
+PB_FULL_LU_INPLACE_BUILD_PASS binary=/output/block_lu_hls/trace_analysis/build/full_lu_inplace_lru
+PB_FULL_LU_INPLACE_BUILD n=22835 records=6046427 lines=755804 macs=1271271358 divisions=3011796 operation_tasks=79642698 segment_tasks=64032 block_tasks=260 seconds=2.34296
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=block major=0/23
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=12288/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=12288/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=20480/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=22834/22835
+PB_FULL_LU_INPLACE_PROGRESS method=block major=22/23
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=20480/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=22834/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=22834/22835
+PB_FULL_LU_INPLACE_METHOD method=operation events=1274283154 seconds=35.8765
+PB_FULL_LU_INPLACE_METHOD method=segment-column events=1274283154 seconds=36.7744
+PB_FULL_LU_INPLACE_METHOD method=segment-l-affinity events=1274283154 seconds=33.8308
+PB_FULL_LU_INPLACE_METHOD method=block events=1274283154 seconds=35.3657
+PB_FULL_LU_INPLACE_PASS output=outputs/full_lu_inplace_board_capacity_v1/b1024
+capacity_mib,method,data_mib,metadata_mib,total_mib,TA
+6,operation,106.186,3038.128,3144.314,1.1557
+6,operation-block-order,124.234,3038.128,3162.362,1.3522
+6,segment-column,1397.256,89.015,1486.271,15.2078
+6,segment-l-affinity,106.571,89.015,195.586,1.1599
+6,block,124.234,0.012,124.246,1.3522
+PB_FULL_LU_INPLACE_SUMMARY_PASS output=outputs/full_lu_inplace_board_capacity_v1/b1024/full_lu_inplace_summary.csv

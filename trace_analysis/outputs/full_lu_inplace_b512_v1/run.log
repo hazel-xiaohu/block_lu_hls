@@ -1,0 +1,27 @@
+PB_FULL_LU_INPLACE_BUILD n=22835 records=6046427 lines=755804 macs=1271271358 divisions=3011796 operation_tasks=79642698 segment_tasks=78750 block_tasks=667 seconds=2.46367
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=block major=0/45
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=12288/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=20480/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=22834/22835
+PB_FULL_LU_INPLACE_PROGRESS method=block major=44/45
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=12288/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-column major=22834/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=20480/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation major=22834/22835
+PB_FULL_LU_INPLACE_METHOD method=operation events=1274283154 seconds=60.008
+PB_FULL_LU_INPLACE_METHOD method=segment-column events=1274283154 seconds=56.9765
+PB_FULL_LU_INPLACE_METHOD method=segment-l-affinity events=1274283154 seconds=51.0305
+PB_FULL_LU_INPLACE_METHOD method=block events=1274283154 seconds=53.7908
+PB_FULL_LU_INPLACE_PASS output=outputs/full_lu_inplace_b512_v1

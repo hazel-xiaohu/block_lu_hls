@@ -1,0 +1,33 @@
+PB_FULL_LU_INPLACE_BUILD n=22835 records=6046427 lines=755804 macs=1271271358 divisions=3011796 operation_tasks=79642698 segment_tasks=78750 block_tasks=667 seconds=12.0933
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-native major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=block major=0/45
+PB_FULL_LU_INPLACE_PROGRESS method=block-kij-jki-inner major=0/45
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-native major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-native major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=12288/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=12288/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=20480/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=22834/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=20480/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=22834/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-native major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-native major=22834/22835
+PB_FULL_LU_INPLACE_PROGRESS method=block-kij-jki-inner major=44/45
+PB_FULL_LU_INPLACE_PROGRESS method=block major=44/45
+PB_FULL_LU_INPLACE_METHOD method=operation-column-order events=1274283154 seconds=148.767
+PB_FULL_LU_INPLACE_METHOD method=operation-segment-order events=1274283154 seconds=165.117
+PB_FULL_LU_INPLACE_METHOD method=operation-block-order events=1274283154 seconds=176.541
+PB_FULL_LU_INPLACE_METHOD method=segment-native events=1274283154 seconds=165.117
+PB_FULL_LU_INPLACE_METHOD method=segment-l-affinity events=1274283154 seconds=149.819
+PB_FULL_LU_INPLACE_METHOD method=segment-cache-aware events=1274283154 seconds=360.788
+PB_FULL_LU_INPLACE_METHOD method=block events=1274283154 seconds=176.541
+PB_FULL_LU_INPLACE_METHOD method=block-kij-jki-inner events=1274283154 seconds=167.625
+PB_FULL_LU_INPLACE_PASS output=outputs/full_lu_inplace_b512_eight_traces_v4

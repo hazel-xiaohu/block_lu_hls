@@ -1,0 +1,27 @@
+capacity_mib,method,data_mib,metadata_mib,total_mib,TA
+1,operation,14.597,87.759,102.356,1.1251
+1,operation-block-order,15.223,87.759,102.982,1.1734
+1,segment-column,53.462,17.188,70.650,4.1208
+1,segment-l-affinity,14.612,17.188,31.799,1.1263
+1,block,15.223,0.048,15.271,1.1734
+4,operation,12.974,87.759,100.733,1.0000
+4,operation-block-order,12.974,87.759,100.733,1.0000
+4,segment-column,14.255,17.188,31.443,1.0988
+4,segment-l-affinity,12.974,17.188,30.161,1.0000
+4,block,12.974,0.048,13.022,1.0000
+8,operation,12.974,87.759,100.733,1.0000
+8,operation-block-order,12.974,87.759,100.733,1.0000
+8,segment-column,12.974,17.188,30.161,1.0000
+8,segment-l-affinity,12.974,17.188,30.161,1.0000
+8,block,12.974,0.048,13.022,1.0000
+16,operation,12.974,87.759,100.733,1.0000
+16,operation-block-order,12.974,87.759,100.733,1.0000
+16,segment-column,12.974,17.188,30.161,1.0000
+16,segment-l-affinity,12.974,17.188,30.161,1.0000
+16,block,12.974,0.048,13.022,1.0000
+32,operation,12.974,87.759,100.733,1.0000
+32,operation-block-order,12.974,87.759,100.733,1.0000
+32,segment-column,12.974,17.188,30.161,1.0000
+32,segment-l-affinity,12.974,17.188,30.161,1.0000
+32,block,12.974,0.048,13.022,1.0000
+PB_FULL_LU_INPLACE_SUMMARY_PASS output=outputs/full_lu_inplace_multi_b512_v1/shermanACb/full_lu_inplace_summary.csv

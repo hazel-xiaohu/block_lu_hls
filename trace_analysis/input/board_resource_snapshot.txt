@@ -1,0 +1,36 @@
+Source design: /output/pangulu_hybrid_salut_ssssm_v1/vivado_parallel4x4_v1
+Vivado: 2022.2 build 3671981
+Device: xczu15eg-ffvb1156-2-i
+Design: pangulu_parallel4x4_bd_wrapper
+Design state: Fully Placed
+Architecture: 4 LU workers + 4 SSSSM workers (SSSSM worker IDs 4..7)
+
+Placed summary source:
+  project/pangulu_parallel4x4_zu15eg.runs/impl_1/pangulu_parallel4x4_bd_wrapper_utilization_placed.rpt
+  sha256 61d66ea8b2038517ef6e4e4b7ce957129bbf361f93c8888bb5b60e61e829d9c4
+  Block RAM Tile: used 299.5, available 744
+  RAMB36E2: 294
+  RAMB18E2: 11
+  URAM288: used 8, available 112
+
+Post-route hierarchy source:
+  output/utilization_hier.rpt
+  sha256 2ad198d8ff652d2e88779bb1cc1ba4bf9d48242f64c26e24c87e12fa0125529f
+  LU workers 0..3: 64 RAMB36 and 62 DSP each
+  SSSSM workers 4..7: 4 RAMB36 and 14 DSP each
+  All direct workers: 272 RAMB36, 0 RAMB18, 0 URAM
+  Non-worker remainder: 22 RAMB36, 11 RAMB18, 8 URAM
+  ctrl_sc: 0 RAMB36, 0 RAMB18, 0 URAM
+  data_sc: 0 RAMB36, 0 RAMB18, 0 URAM
+  ready queues/dependency state: LUTRAM in the hierarchy report
+
+Timing source: output/timing_summary.rpt
+  WNS 5.475 ns, TNS 0.000 ns, WHS 0.009 ns, THS 0.000 ns
+  All user-specified timing constraints are met.
+
+Capacity convention:
+  RAMB36 = 36 Kibit = 4608 bytes
+  RAMB18 = 18 Kibit = 2304 bytes
+  URAM288 = 288 Kibit = 36864 bytes
+  Net L/U/A upper bound = total physical BRAM+URAM bytes - all placed-design BRAM+URAM bytes
+  The result is an ideal-cache capacity point, not a physical cache implementation proof.
