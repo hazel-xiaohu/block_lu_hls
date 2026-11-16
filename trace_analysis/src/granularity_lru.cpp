@@ -22,6 +22,8 @@
 
 namespace {
 
+// Sentinel used by the sparse A lookup table before a product entry receives
+// its compact cache-line address.
 constexpr uint32_t kMissing = std::numeric_limits<uint32_t>::max();
 // OOLU-style operation model: one VLIW bundle issues 16 scalar MACs.
 // Matrix values and sparse indices are both 32-bit, so each AoS record is 8 B.
@@ -32,21 +34,27 @@ constexpr uint64_t kTaskDescriptorBytes = 32;
 constexpr uint64_t kDependencyDescriptorBytes = 8;
 
 struct Coord {
+  // Zero-based matrix coordinate read from the Matrix Market input.
   uint32_t row;
   uint32_t col;
 };
 
 struct Entry {
+  // Row index for an L entry, or column index for a U entry.
   uint32_t index;
+  // Global cache-line ID in the disjoint L/U/A address space.
   uint32_t line;
 };
 
 struct Range {
+  // Half-open interval [begin, end) into an active L or U entry vector.
   uint32_t begin;
   uint32_t end;
 };
 
 struct SegmentContribution {
+  // A contribution fixes pivot k and one U(k,j), then streams a range of
+  // L(i,k) entries belonging to the same row segment.
   uint32_t k;
   uint32_t u_pos;
   uint32_t u_line;
@@ -54,19 +62,24 @@ struct SegmentContribution {
 };
 
 struct SegmentTask {
+  // SALUT-style task identity: target column j and row-segment number.
   uint32_t j;
   uint32_t segment;
   std::vector<SegmentContribution> contributions;
+  // Deduplicated cache-line working set used only by the cache-aware scheduler.
   std::vector<uint32_t> footprint_lines;
 };
 
 struct BlockContribution {
+  // The Cartesian product of these L and U ranges forms the scalar updates
+  // contributed by pivot k to one (I,J,K) block task.
   uint32_t k;
   Range l;
   Range u;
 };
 
 struct BlockTask {
+  // Block coordinates use zero-based B-by-B tiles.
   uint32_t iblock;
   uint32_t jblock;
   uint32_t kblock;
@@ -74,6 +87,8 @@ struct BlockTask {
 };
 
 struct Pattern {
+  // Input sparsity statistics. Diagonal coordinates belong to neither strict L
+  // nor strict U in this trailing-update experiment.
   uint32_t n = 0;
   uint64_t union_nnz = 0;
   uint64_t lower_nnz = 0;
@@ -89,18 +104,26 @@ struct Pattern {
   uint32_t a_base = 0;
   uint32_t total_lines = 0;
   uint64_t atomic_updates = 0;
+  // event_base[k] is the first canonical event ID for pivot k.
   std::vector<uint64_t> event_base;
+  // lower[k] stores L(:,k); upper[k] stores U(k,:).
   std::vector<std::vector<Entry>> lower;
   std::vector<std::vector<Entry>> upper;
+  // Active vectors retain only entries strictly beyond k's diagonal block,
+  // which is exactly the SSSSM/block-trailing scope modeled here.
   std::vector<std::vector<Entry>> active_lower;
   std::vector<std::vector<Entry>> active_upper;
+  // Maps a dense (I,J) block coordinate to a compact target-block slot.
   std::vector<int32_t> target_block_slot;
+  // Per-slot B-by-B table from scalar A(i,j) to its compact cache-line ID.
   std::vector<uint32_t> target_line_table;
   std::vector<SegmentTask> segment_tasks;
   std::vector<BlockTask> block_tasks;
 };
 
 struct MethodStats {
+  // Scheduling/control statistics and order-independent correctness audits for
+  // one traversal method. Cache traffic is stored separately per capacity.
   std::string method;
   uint32_t grain_size = 0;
   uint64_t tasks = 0;
@@ -122,6 +145,8 @@ struct MethodStats {
 };
 
 struct CacheStats {
+  // L and U are read-only. A uses write-allocate/write-back, so its incoming
+  // line fills and dirty evictions are counted separately.
   uint64_t l_misses = 0;
   uint64_t u_misses = 0;
   uint64_t a_reads = 0;
@@ -130,6 +155,8 @@ struct CacheStats {
 
 enum class Kind : uint8_t { L = 0, U = 1, A = 2 };
 
+// Both helpers operate on unsigned values; all callers provide nonzero
+// alignment/divisor values.
 uint64_t align_up(uint64_t value, uint64_t alignment) {
   return ((value + alignment - 1) / alignment) * alignment;
 }
@@ -139,6 +166,7 @@ uint64_t ceil_div(uint64_t value, uint64_t divisor) {
 }
 
 uint64_t splitmix64(uint64_t x) {
+  // This mixer is used as a deterministic audit hash, not as a PRNG here.
   x += 0x9e3779b97f4a7c15ULL;
   x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9ULL;
   x = (x ^ (x >> 27)) * 0x94d049bb133111ebULL;
@@ -147,6 +175,8 @@ uint64_t splitmix64(uint64_t x) {
 
 class ExactLru {
  public:
+  // The cache is fully associative. Arrays indexed by global line ID implement
+  // an intrusive doubly linked MRU-to-LRU list without per-access allocation.
   ExactLru(uint32_t total_lines, uint32_t capacity_lines)
       : capacity_(capacity_lines), prev_(total_lines, -1), next_(total_lines, -1),
         flags_(total_lines, 0) {}
@@ -154,6 +184,7 @@ class ExactLru {
   inline void touch(uint32_t line, Kind kind, bool write) {
     uint8_t &flag = flags_[line];
     if ((flag & 1U) != 0U) {
+      // Cache hit: unlink the resident line and move it to the MRU head.
       if (line != static_cast<uint32_t>(head_)) {
         const int32_t p = prev_[line];
         const int32_t n = next_[line];
@@ -169,6 +200,8 @@ class ExactLru {
       return;
     }
 
+    // A miss transfers one 64-byte line into the cache. A reads are counted
+    // separately because an A line will subsequently become dirty.
     if (kind == Kind::L) {
       ++stats_.l_misses;
     } else if (kind == Kind::U) {
@@ -178,6 +211,8 @@ class ExactLru {
     }
 
     if (size_ == capacity_) {
+      // Evict the LRU tail. Only A can be dirty in this workload, so every
+      // dirty victim contributes one A writeback.
       const uint32_t victim = static_cast<uint32_t>(tail_);
       const int32_t new_tail = prev_[victim];
       if ((flags_[victim] & 2U) != 0U) ++stats_.a_writebacks;
@@ -190,6 +225,7 @@ class ExactLru {
     }
 
     flag = static_cast<uint8_t>(1U | (write ? 2U : 0U));
+    // Insert the newly fetched line at the MRU head.
     prev_[line] = -1;
     next_[line] = head_;
     if (head_ >= 0) prev_[head_] = static_cast<int32_t>(line);
@@ -199,6 +235,8 @@ class ExactLru {
   }
 
   void flush_dirty() {
+    // Account for dirty A lines still resident when the trace ends. This makes
+    // traffic comparable to a completed run whose output is committed.
     int32_t line = head_;
     while (line >= 0) {
       if ((flags_[line] & 2U) != 0U) {
@@ -219,6 +257,7 @@ class ExactLru {
   int32_t tail_ = -1;
   std::vector<int32_t> prev_;
   std::vector<int32_t> next_;
+  // Bit 0 means resident; bit 1 means dirty.
   std::vector<uint8_t> flags_;
   CacheStats stats_;
 };
@@ -230,6 +269,9 @@ struct CacheResult {
 
 class StreamSimulator {
  public:
+  // One logical access stream is replayed into every requested cache capacity
+  // in parallel. Cache-aware scheduling intentionally restricts this to one
+  // capacity because the chosen task order depends on cache residency.
   StreamSimulator(const Pattern &pattern, const std::vector<uint64_t> &capacities)
       : pattern_(pattern), seen_(pattern.total_lines, 0),
         event_seen_((pattern.atomic_updates + 63) / 64, 0) {
@@ -247,6 +289,8 @@ class StreamSimulator {
   }
 
   inline void mark_event(uint64_t event_id, uint32_t l_line, uint32_t u_line, uint32_t a_line) {
+    // Canonical IDs make traversal order irrelevant: every legal method must
+    // visit each scalar L(i,k)*U(k,j) update exactly once.
     if (event_id >= pattern_.atomic_updates) throw std::runtime_error("canonical event id is out of range");
     uint64_t &word = event_seen_[event_id >> 6];
     const uint64_t mask = 1ULL << (event_id & 63U);
@@ -261,6 +305,8 @@ class StreamSimulator {
     const uint64_t ha = splitmix64(a_line);
     hash ^= (hu << 21) | (hu >> 43);
     hash ^= (ha << 42) | (ha >> 22);
+    // Sum, XOR, and sum-of-squares are all commutative, giving three compact
+    // order-independent checks of the complete (L,U,A) event multiset.
     event_hash_sum_ += hash;
     event_hash_xor_ ^= hash;
     event_hash_sum2_ += hash * hash;
@@ -274,7 +320,10 @@ class StreamSimulator {
   }
 
   void finish(MethodStats &method, std::vector<CacheResult> &results) {
+    // Finalize write-back traffic before extracting per-capacity counters.
     for (ExactLru &cache : caches_) cache.flush_dirty();
+    // seen_ is a three-bit ownership mask. It audits unique address sets
+    // independently of cache hits, misses, and traversal order.
     for (uint32_t line = 0; line < pattern_.total_lines; ++line) {
       const uint8_t mask = seen_[line];
       if ((mask & 1U) != 0U) {
@@ -327,6 +376,9 @@ void log_line(const std::string &message) {
 }
 
 uint32_t target_line(const Pattern &p, uint32_t i, uint32_t j) {
+  // Resolve A(i,j) through its compact target-block slot. A lookup failure is
+  // an internal consistency error because every emitted L*U product was used
+  // to construct this table in build_pattern().
   const uint32_t ib = i / p.block_size;
   const uint32_t jb = j / p.block_size;
   const int32_t slot = p.target_block_slot[static_cast<size_t>(ib) * p.block_count + jb];
@@ -372,6 +424,8 @@ std::vector<Coord> read_matrix_market(const std::string &path, uint32_t &n) {
     out << "declared " << declared << " entries but parsed " << coords.size();
     throw std::runtime_error(out.str());
   }
+  // Canonical column-major ordering makes L(:,k) naturally row sorted after
+  // partitioning, while the explicit U-row sort below handles U(k,:).
   std::sort(coords.begin(), coords.end(), [](const Coord &a, const Coord &b) {
     return std::tie(a.col, a.row) < std::tie(b.col, b.row);
   });
@@ -407,6 +461,9 @@ Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t seg
     std::sort(row.begin(), row.end(), [](const Entry &a, const Entry &b) { return a.index < b.index; });
   }
 
+  // Lay out L, U, and A in non-overlapping 64-byte-aligned regions. Each sparse
+  // record is attributed to the line containing the start of its 8-byte AoS
+  // record, so no record straddles a line.
   const uint64_t l_bytes = p.lower_nnz * kRecordBytes;
   const uint64_t u_bytes = p.upper_nnz * kRecordBytes;
   p.l_base = 0;
@@ -422,6 +479,9 @@ Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t seg
     for (Entry &entry : row) entry.line = p.u_base + static_cast<uint32_t>((ordinal++ * kRecordBytes) / kLineBytes);
   }
 
+  // Restrict the trace to block-trailing updates and precompute canonical event
+  // ranges. Within pivot k, event IDs use row-major (L position, U position)
+  // order regardless of how a scheduling method later visits those events.
   p.active_lower.resize(p.n);
   p.active_upper.resize(p.n);
   p.event_base.resize(static_cast<size_t>(p.n) + 1, 0);
@@ -444,6 +504,8 @@ Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t seg
   }
   p.event_base[p.n] = p.atomic_updates;
 
+  // The outer product of L and U block coordinates identifies every A block
+  // that can receive at least one update from this symbolic pattern.
   for (uint32_t kb = 0; kb < p.block_count; ++kb) {
     auto &lbs = lblocks_by_kblock[kb];
     auto &ubs = ublocks_by_kblock[kb];
@@ -459,6 +521,7 @@ Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t seg
   }
 
   p.target_block_slot.assign(target_blocks.size(), -1);
+  // Compact only present target blocks; absent (I,J) coordinates keep slot -1.
   for (size_t key = 0; key < target_blocks.size(); ++key) {
     if (target_blocks[key]) p.target_block_slot[key] = static_cast<int32_t>(p.target_block_count++);
   }
@@ -622,6 +685,8 @@ uint64_t segment_dependency_count(const Pattern &p) {
 
 void execute_segment_task(const Pattern &p, const SegmentTask &task, StreamSimulator &sim,
                           MethodStats &m) {
+  // A segment contribution fixes U(k,j); pairing it with its L interval emits
+  // the same canonical scalar events as the operation-order traversal.
   for (const SegmentContribution &contribution : task.contributions) {
     const auto &ls = p.active_lower[contribution.k];
     const uint64_t u_count = p.active_upper[contribution.k].size();
@@ -649,6 +714,9 @@ SimulationResult simulate_operation(const Pattern &p, const std::vector<uint64_t
   StreamSimulator sim(p, capacities);
   const auto start = std::chrono::steady_clock::now();
   uint64_t next_progress = 100000000ULL;
+  // Baseline atom order is lexicographic (k, i, j). Control accounting groups
+  // consecutive scalar updates into ideal fully occupied 16-lane VLIW bundles;
+  // the final bundle may contain padding slots but emits no extra memory event.
   for (uint32_t k = 0; k < p.n; ++k) {
     const auto &ls = p.active_lower[k];
     const auto &us = p.active_upper[k];
@@ -702,6 +770,8 @@ SimulationResult simulate_segment_order(const Pattern &p, const std::vector<uint
 }
 
 SimulationResult simulate_segment_native(const Pattern &p, const std::vector<uint64_t> &capacities) {
+  // build_pattern() creates tasks in map order (j, segment), which is the
+  // native SALUT-style traversal used by this control case.
   std::vector<uint32_t> order(p.segment_tasks.size());
   std::iota(order.begin(), order.end(), 0);
   return simulate_segment_order(p, capacities, order, "segment-native");
@@ -711,6 +781,8 @@ SimulationResult simulate_segment_l_affinity(const Pattern &p,
                                              const std::vector<uint64_t> &capacities) {
   std::vector<uint32_t> order(p.segment_tasks.size());
   std::iota(order.begin(), order.end(), 0);
+  // Group equal row segments to encourage L reuse while preserving target
+  // column order inside each segment.
   std::stable_sort(order.begin(), order.end(), [&](uint32_t a, uint32_t b) {
     const SegmentTask &ta = p.segment_tasks[a];
     const SegmentTask &tb = p.segment_tasks[b];
@@ -783,6 +855,8 @@ SimulationResult simulate_segment_cache_aware_one(const Pattern &p, uint64_t cap
 
 SimulationResult simulate_segment_cache_aware(const Pattern &p,
                                               const std::vector<uint64_t> &capacities) {
+  // Since residency changes with capacity, each capacity needs its own greedy
+  // schedule. The resulting runs are merged after their event sets are audited.
   SimulationResult merged;
   bool first = true;
   for (uint64_t capacity : capacities) {
@@ -815,6 +889,9 @@ SimulationResult simulate_block(const Pattern &p, const std::vector<uint64_t> &c
   StreamSimulator sim(p, capacities);
   const auto start = std::chrono::steady_clock::now();
   uint64_t next_progress = 100000000ULL;
+  // Tasks are lexicographic (I,J,K). Within a task, contributions and ranges
+  // emit (k,i,j) order, including empty scheduled block products that consume
+  // control metadata but generate no memory accesses.
   for (const BlockTask &task : p.block_tasks) {
     for (const BlockContribution &contribution : task.contributions) {
       const auto &ls = p.active_lower[contribution.k];
@@ -860,6 +937,7 @@ SimulationResult make_operation_block_order(const Pattern &p, const SimulationRe
 }
 
 std::vector<uint64_t> parse_capacities(const std::string &text) {
+  // Accept comma-separated byte counts with optional binary K/M suffixes.
   std::vector<uint64_t> values;
   std::istringstream input(text);
   std::string token;
@@ -953,6 +1031,9 @@ std::vector<uint64_t> parse_capacities(const std::string &text) {
 
 void write_outputs_v2(const std::string &output_dir, const Pattern &p,
                       const std::vector<SimulationResult> &all) {
+  // Primary traffic table: matrix traffic is kept separate from the normalized
+  // task/dependency metadata model so alternative control widths and reuse
+  // assumptions can be evaluated without replaying the trace.
   const std::string csv_path = output_dir + "/cache_traffic.csv";
   std::ofstream csv(csv_path);
   if (!csv) throw std::runtime_error("cannot create " + csv_path);
@@ -1001,6 +1082,8 @@ void write_outputs_v2(const std::string &output_dir, const Pattern &p,
           << ',' << std::fixed << std::setprecision(6) << m.elapsed_seconds << '\n';
   }
 
+  // Sensitivity scan for hypothetical fixed control bytes per task. Unlike the
+  // baseline descriptor model, this deliberately ignores contribution count.
   const std::array<uint32_t, 8> widths{{0, 1, 2, 4, 8, 16, 32, 40}};
   const std::string width_path = output_dir + "/descriptor_width_scan.csv";
   std::ofstream width_csv(width_path);
@@ -1023,6 +1106,8 @@ void write_outputs_v2(const std::string &output_dir, const Pattern &p,
     }
   }
 
+  // Report three metadata delivery interpretations: stream every run, preload
+  // once and amortize, or generate online with no external metadata traffic.
   const std::array<uint32_t, 6> repeats{{1, 2, 5, 10, 20, 100}};
   const std::string amortization_path = output_dir + "/metadata_amortization.csv";
   std::ofstream amortization(amortization_path);
@@ -1037,6 +1122,9 @@ void write_outputs_v2(const std::string &output_dir, const Pattern &p,
     }
   }
 
+  // Require both address-set equality and canonical-event multiset equality.
+  // The former catches gross coverage errors; the latter also catches duplicate
+  // or substituted scalar updates that happen to touch the same cache lines.
   bool addresses_identical = true;
   bool events_identical = true;
   const MethodStats &reference = all.at(0).first;
@@ -1073,6 +1161,8 @@ void write_outputs_v2(const std::string &output_dir, const Pattern &p,
       if (result.first.method == "block") block_data_largest = data;
     }
   }
+  // At the largest simulated cache, compute how many control bytes per VLIW
+  // bundle would offset Block's data-traffic disadvantage, when one exists.
   const uint64_t operation_vliw_bundles = ceil_div(p.atomic_updates, kOperationLanes);
   const uint64_t operation_padding_slots = operation_vliw_bundles * kOperationLanes - p.atomic_updates;
   const double break_even_bytes_per_task =
@@ -1148,6 +1238,8 @@ int main(int argc, char **argv) {
               << " lines=" << pattern.total_lines << " seconds=" << std::fixed << std::setprecision(3)
               << build_seconds << '\n';
 
+    // Traversals are read-only with respect to Pattern and own their simulator
+    // state, so independent methods can be replayed concurrently.
     auto f_operation = std::async(std::launch::async, simulate_operation, std::cref(pattern), std::cref(capacities));
     auto f_segment_native =
         std::async(std::launch::async, simulate_segment_native, std::cref(pattern), std::cref(capacities));
