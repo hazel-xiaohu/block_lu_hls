@@ -196,6 +196,23 @@ bash run_full_lu_inplace_pilot.sh \
   outputs/full_lu_inplace_b512_capacity_v1
 ```
 
+The optional fifth and sixth arguments select the cache-line size in bytes and
+a comma-separated trajectory subset.  Defaults remain `64 all`.  The frozen
+32-B line experiment uses the original ten capacity points and only
+OC/SN/SL/BRJ:
+
+```bash
+bash run_full_lu_inplace_pilot.sh \
+  input/Zd_Jac3_db_after_symbolic.mtx 512 \
+  32K,64K,128K,256K,512K,1M,4M,8M,16M,32M \
+  outputs/full_lu_inplace_b512_line32_four_traces_v1 \
+  32 OC,SN,SL,BRJ
+python3 analyze_cache_line32.py \
+  outputs/full_lu_inplace_b512_line32_four_traces_v1/full_lu_inplace_cache_traffic.csv \
+  outputs/full_lu_inplace_b512_eight_traces_v4/full_lu_inplace_cache_traffic.csv \
+  outputs/full_lu_inplace_b512_line32_four_traces_v1
+```
+
 Methods include operation, two legal segment orders, Block, and the key
 `operation-block-order` control.  The latter uses the exact Block access order
 but retains operation/VLIW16 metadata, separating locality/order gains from

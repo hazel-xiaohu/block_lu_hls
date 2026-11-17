@@ -1,0 +1,27 @@
+PB_FULL_LU_INPLACE_BUILD n=22835 records=6046427 lines=1511607 line_bytes=32 macs=1271271358 divisions=3011796 operation_tasks=79642698 segment_tasks=78750 block_tasks=667 seconds=12.862
+PB_FULL_LU_INPLACE_PROGRESS method=segment-native major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=0/22835
+PB_FULL_LU_INPLACE_PROGRESS method=block-kij-jki-inner major=0/45
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-native major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=4096/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-native major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=12288/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=8192/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=12288/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=20480/22835
+PB_FULL_LU_INPLACE_PROGRESS method=operation-column-order major=22834/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=20480/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-l-affinity major=22834/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-native major=16384/22835
+PB_FULL_LU_INPLACE_PROGRESS method=segment-native major=22834/22835
+PB_FULL_LU_INPLACE_PROGRESS method=block-kij-jki-inner major=44/45
+PB_FULL_LU_INPLACE_METHOD method=operation-column-order events=1274283154 seconds=161.416
+PB_FULL_LU_INPLACE_METHOD method=segment-native events=1274283154 seconds=171.101
+PB_FULL_LU_INPLACE_METHOD method=segment-l-affinity events=1274283154 seconds=163.084
+PB_FULL_LU_INPLACE_METHOD method=block-kij-jki-inner events=1274283154 seconds=182.775
+PB_FULL_LU_INPLACE_PASS output=trace_analysis/outputs/full_lu_inplace_b512_line32_four_traces_v1

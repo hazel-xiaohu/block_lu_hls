@@ -1,0 +1,11 @@
+capacity_bytes,capacity_label,ranking_32,ranking_64,winner_32,winner_64,changed_from_previous_32,changed_vs_64
+32768,32 KiB,OC < BRJ < SN < SL,OC < SN < BRJ < SL,OC,OC,0,1
+65536,64 KiB,BRJ < OC < SN < SL,OC < BRJ < SN < SL,BRJ,OC,1,1
+131072,128 KiB,BRJ < OC < SN < SL,BRJ < OC < SN < SL,BRJ,BRJ,0,0
+262144,256 KiB,BRJ < OC < SN < SL,BRJ < OC < SN < SL,BRJ,BRJ,0,0
+524288,512 KiB,BRJ < OC < SN < SL,BRJ < OC < SN < SL,BRJ,BRJ,0,0
+1048576,1 MiB,BRJ < OC < SN < SL,BRJ < OC < SN < SL,BRJ,BRJ,0,0
+4194304,4 MiB,BRJ < SL < SN < OC,BRJ < SL < SN < OC,BRJ,BRJ,1,0
+8388608,8 MiB,SL < BRJ < SN < OC,SL < BRJ < SN < OC,SL,SL,1,0
+16777216,16 MiB,SL < BRJ < SN < OC,SL < BRJ < SN < OC,SL,SL,0,0
+33554432,32 MiB,SL < BRJ < SN < OC,SL < BRJ < SN < OC,SL,SL,0,0

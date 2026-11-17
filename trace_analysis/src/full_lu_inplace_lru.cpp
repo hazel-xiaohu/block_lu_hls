@@ -21,7 +21,7 @@
 namespace {
 
 constexpr uint32_t kMissing = std::numeric_limits<uint32_t>::max();
-constexpr uint64_t kLineBytes = 64;
+constexpr uint64_t kDefaultLineBytes = 64;
 constexpr uint64_t kRecordBytes = 8;  // FP32 value + uint32 index.
 constexpr uint64_t kOperationLanes = 16;
 constexpr uint64_t kTaskBytes = 32;
@@ -42,6 +42,7 @@ struct SegmentTask {
 
 struct Pattern {
   uint32_t n = 0, block_size = 0, segment_height = 0, block_count = 0;
+  uint32_t line_bytes = kDefaultLineBytes;
   uint32_t total_lines = 0, target_block_count = 0;
   uint64_t input_records = 0, macs = 0, divisions = 0, events = 0;
   uint64_t operation_tasks = 0, operation_dependencies = 0;
@@ -154,9 +155,9 @@ class StreamSimulator {
   StreamSimulator(const Pattern &p, const std::vector<uint64_t> &capacities)
       : pattern_(p), seen_(p.total_lines, 0), event_seen_((p.events + 63) / 64, 0) {
     for (uint64_t bytes : capacities) {
-      if (bytes % kLineBytes) throw std::runtime_error("capacity is not 64-byte aligned");
+      if (bytes % p.line_bytes) throw std::runtime_error("capacity is not cache-line aligned");
       capacities_.push_back(bytes);
-      caches_.emplace_back(p.total_lines, static_cast<uint32_t>(bytes / kLineBytes));
+      caches_.emplace_back(p.total_lines, static_cast<uint32_t>(bytes / p.line_bytes));
     }
   }
   inline void access(uint32_t line, AccessKind kind, bool write = false) {
@@ -273,8 +274,10 @@ uint32_t target_line(const Pattern &p, uint32_t row, uint32_t col) {
   return line;
 }
 
-Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t segment_height) {
+Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t segment_height,
+                      uint32_t line_bytes) {
   Pattern p; p.block_size = block_size; p.segment_height = segment_height;
+  p.line_bytes = line_bytes;
   std::vector<Coord> coords = read_matrix_market(path, p.n);
   p.block_count = static_cast<uint32_t>(ceil_div(p.n, block_size));
   p.lower.resize(p.n); p.upper.resize(p.n); p.diagonal_line.assign(p.n, kMissing);
@@ -282,7 +285,7 @@ Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t seg
   std::vector<uint8_t> present_diag(p.n, 0);
   uint64_t ordinal = 0;
   for (const Coord &coord : coords) {
-    uint32_t line = static_cast<uint32_t>((ordinal++ * kRecordBytes) / kLineBytes);
+    uint32_t line = static_cast<uint32_t>((ordinal++ * kRecordBytes) / p.line_bytes);
     if (coord.row > coord.col) p.lower[coord.col].push_back({coord.row, line});
     else if (coord.row < coord.col) p.upper[coord.row].push_back({coord.col, line});
     else { p.diagonal_line[coord.row] = line; present_diag[coord.row] = 1; }
@@ -293,13 +296,13 @@ Pattern build_pattern(const std::string &path, uint32_t block_size, uint32_t seg
   // virtual zero-valued diagonal record only when an external test input lacks one.
   for (uint32_t k = 0; k < p.n; ++k) {
     if (!present_diag[k]) {
-      p.diagonal_line[k] = static_cast<uint32_t>((ordinal++ * kRecordBytes) / kLineBytes);
+      p.diagonal_line[k] = static_cast<uint32_t>((ordinal++ * kRecordBytes) / p.line_bytes);
       size_t key = static_cast<size_t>(k / block_size) * p.block_count + k / block_size;
       if (p.target_block_slot[key] < 0) p.target_block_slot[key] = -2;
     }
   }
   p.input_records = ordinal;
-  p.total_lines = static_cast<uint32_t>(ceil_div(ordinal * kRecordBytes, kLineBytes));
+  p.total_lines = static_cast<uint32_t>(ceil_div(ordinal * kRecordBytes, p.line_bytes));
   for (auto &row : p.upper)
     std::sort(row.begin(), row.end(), [](const Entry &a, const Entry &b) { return a.index < b.index; });
   p.lower_by_row.resize(p.n);
@@ -750,6 +753,42 @@ std::vector<uint64_t> parse_capacities(const std::string &text) {
   return out;
 }
 
+std::set<std::string> parse_methods(const std::string &text) {
+  static const std::map<std::string, std::string> aliases = {
+      {"OC", "operation-column-order"},
+      {"OS", "operation-segment-order"},
+      {"OB", "operation-block-order"},
+      {"SN", "segment-native"},
+      {"SL", "segment-l-affinity"},
+      {"SC", "segment-cache-aware"},
+      {"B", "block"},
+      {"BRJ", "block-kij-jki-inner"},
+  };
+  std::set<std::string> methods;
+  if (text == "all" || text == "ALL") {
+    for (const auto &entry : aliases) methods.insert(entry.second);
+    return methods;
+  }
+  std::stringstream stream(text);
+  std::string item;
+  while (std::getline(stream, item, ',')) {
+    if (item.empty()) continue;
+    auto alias = aliases.find(item);
+    if (alias != aliases.end()) {
+      methods.insert(alias->second);
+      continue;
+    }
+    bool known = false;
+    for (const auto &entry : aliases) {
+      if (item == entry.second) { known = true; break; }
+    }
+    if (!known) throw std::runtime_error("unknown method selector: " + item);
+    methods.insert(item);
+  }
+  if (methods.empty()) throw std::runtime_error("no trajectory methods supplied");
+  return methods;
+}
+
 void write_outputs(const std::string &dir, const Pattern &p, const std::vector<SimulationResult> &all) {
   std::filesystem::create_directories(dir);
   const MethodStats &reference = all.front().first;
@@ -762,17 +801,17 @@ void write_outputs(const std::string &dir, const Pattern &p, const std::vector<S
         m.write_hash != reference.write_hash)
       throw std::runtime_error("methods do not cover the same in-place LU event/address multiset");
   }
-  uint64_t compulsory = (reference.unique_read_lines + reference.unique_write_lines) * kLineBytes;
+  uint64_t compulsory = (reference.unique_read_lines + reference.unique_write_lines) * p.line_bytes;
   uint64_t flops = 2 * p.macs + p.divisions;
   std::ofstream traffic(dir + "/full_lu_inplace_cache_traffic.csv");
-  traffic << "method,capacity_bytes,tasks,dependencies,metadata_bytes,macs,divisions,logical_flops";
+  traffic << "method,capacity_bytes,cache_line_bytes,tasks,dependencies,metadata_bytes,macs,divisions,logical_flops";
   for (const char *name : kAccessNames) traffic << ',' << name << "_misses";
   traffic << ",read_misses,writebacks,data_bytes,compulsory_bytes,traffic_amplification,data_bytes_per_flop,total_bytes_with_metadata\n";
   auto write_traffic_row = [&](const std::string &method, uint64_t tasks, uint64_t dependencies,
                                uint64_t metadata, const MethodStats &m, const CacheResult &cache) {
     uint64_t reads = cache.stats.reads();
-    uint64_t bytes = (reads + cache.stats.writebacks) * kLineBytes;
-    traffic << method << ',' << cache.capacity_bytes << ',' << tasks << ',' << dependencies << ','
+    uint64_t bytes = (reads + cache.stats.writebacks) * p.line_bytes;
+    traffic << method << ',' << cache.capacity_bytes << ',' << p.line_bytes << ',' << tasks << ',' << dependencies << ','
             << metadata << ',' << m.macs << ',' << m.divisions << ',' << flops;
     for (uint64_t value : cache.stats.misses) traffic << ',' << value;
     traffic << ',' << reads << ',' << cache.stats.writebacks << ',' << bytes << ',' << compulsory << ','
@@ -794,10 +833,15 @@ void write_outputs(const std::string &dir, const Pattern &p, const std::vector<S
   }
   std::ofstream report(dir + "/full_lu_inplace_report.json");
   report << "{\n"
-         << "  \"schema\": \"full-lu-inplace-lru-v4-eight-trajectories\",\n"
+         << "  \"schema\": \""
+         << (all.size() == 8 ? "full-lu-inplace-lru-v4-eight-trajectories"
+                             : "full-lu-inplace-lru-v4-selected-trajectories")
+         << "\",\n"
          << "  \"scope\": \"complete strict LU: all i>k,j>k MACs plus strict-L divisions\",\n"
          << "  \"address_model\": \"canonical CSC factor union; FP32+uint32 8-byte records; L/U/diagonal updated in place\",\n"
-         << "  \"cache_policy\": \"fully associative 64-byte write-back/write-allocate LRU\",\n"
+         << "  \"cache_policy\": \"fully associative " << p.line_bytes
+         << "-byte write-back/write-allocate LRU\",\n"
+         << "  \"cache_line_bytes\": " << p.line_bytes << ",\n"
          << "  \"block_size\": " << p.block_size << ",\n"
          << "  \"segment_height\": " << p.segment_height << ",\n"
          << "  \"records\": " << p.input_records << ",\n"
@@ -810,7 +854,12 @@ void write_outputs(const std::string &dir, const Pattern &p, const std::vector<S
          << "  \"compulsory_bytes\": " << compulsory << ",\n"
          << "  \"event_multisets_identical\": true,\n"
          << "  \"address_sets_identical\": true,\n"
-         << "  \"methods\": [\"operation-column-order\", \"operation-segment-order\", \"operation-block-order\", \"segment-native\", \"segment-l-affinity\", \"segment-cache-aware\", \"block\", \"block-kij-jki-inner\"],\n"
+         << "  \"methods\": [";
+  for (size_t index = 0; index < all.size(); ++index) {
+    if (index) report << ", ";
+    report << '"' << all[index].first.method << '"';
+  }
+  report << "],\n"
          << "  \"operation_segment_order_semantics\": \"exact segment-native trace with operation-VLIW16 metadata\",\n"
          << "  \"operation_block_order_semantics\": \"exact target-resident block trace with operation-VLIW16 metadata\",\n"
          << "  \"block_semantics\": \"legal target-resident left-looking completion of diagonal/panel blocks before GETRF/GESSM/TSTRF; every SSSSM block uses j,k,i atoms\",\n"
@@ -823,51 +872,64 @@ void write_outputs(const std::string &dir, const Pattern &p, const std::vector<S
 
 int main(int argc, char **argv) {
   try {
-    if (argc != 6) {
-      std::cerr << "usage: " << argv[0] << " MATRIX BLOCK_SIZE SEGMENT_HEIGHT CACHE_SIZES OUTPUT_DIR\n";
+    if (argc < 6 || argc > 8) {
+      std::cerr << "usage: " << argv[0]
+                << " MATRIX BLOCK_SIZE SEGMENT_HEIGHT CACHE_SIZES OUTPUT_DIR"
+                << " [CACHE_LINE_BYTES=64] [METHODS=all]\n";
       return 2;
     }
     std::string matrix = argv[1], output = argv[5];
     uint32_t block_size = std::stoul(argv[2]), segment_height = std::stoul(argv[3]);
+    uint32_t line_bytes = argc >= 7 ? std::stoul(argv[6]) : kDefaultLineBytes;
+    if (line_bytes < kRecordBytes || line_bytes % kRecordBytes != 0 ||
+        (line_bytes & (line_bytes - 1)) != 0)
+      throw std::runtime_error("cache line must be a power of two and a multiple of the 8-byte record");
+    std::set<std::string> selected = parse_methods(argc >= 8 ? argv[7] : "all");
     auto capacities = parse_capacities(argv[4]);
     auto build_start = std::chrono::steady_clock::now();
-    Pattern p = build_pattern(matrix, block_size, segment_height);
+    Pattern p = build_pattern(matrix, block_size, segment_height, line_bytes);
     std::cerr << "PB_FULL_LU_INPLACE_BUILD n=" << p.n << " records=" << p.input_records
-              << " lines=" << p.total_lines << " macs=" << p.macs << " divisions=" << p.divisions
+              << " lines=" << p.total_lines << " line_bytes=" << p.line_bytes
+              << " macs=" << p.macs << " divisions=" << p.divisions
               << " operation_tasks=" << p.operation_tasks << " segment_tasks=" << p.segment_tasks
               << " block_tasks=" << p.block_tasks << " seconds="
               << std::chrono::duration<double>(std::chrono::steady_clock::now() - build_start).count() << '\n';
-    auto foc = std::async(std::launch::async, simulate_operation_column_order,
-                          std::cref(p), std::cref(capacities));
-    auto fs = std::async(std::launch::async, simulate_segment_native,
-                         std::cref(p), std::cref(capacities));
-    auto fl = std::async(std::launch::async, simulate_segment_l_affinity,
-                         std::cref(p), std::cref(capacities));
-    auto fca = std::async(std::launch::async, simulate_segment_cache_aware,
-                          std::cref(p), std::cref(capacities));
-    auto fb = std::async(std::launch::async, simulate_block_left_looking,
-                         std::cref(p), std::cref(capacities));
-    auto fbj = std::async(std::launch::async, simulate_block_kij_jki_inner,
-                          std::cref(p), std::cref(capacities));
-    SimulationResult operation_column = foc.get();
-    SimulationResult segment_native = fs.get();
-    SimulationResult segment_l_affinity = fl.get();
-    SimulationResult segment_cache_aware = fca.get();
-    SimulationResult block = fb.get();
-    SimulationResult block_kij_jki = fbj.get();
-    SimulationResult operation_segment = make_operation_matched(
-        p, segment_native, "operation-segment-order");
-    SimulationResult operation_block = make_operation_matched(
-        p, block, "operation-block-order");
+    auto wants = [&](const std::string &method) { return selected.count(method) != 0; };
+    std::map<std::string, std::future<SimulationResult>> jobs;
+    if (wants("operation-column-order"))
+      jobs.emplace("operation-column-order", std::async(std::launch::async,
+          simulate_operation_column_order, std::cref(p), std::cref(capacities)));
+    if (wants("segment-native") || wants("operation-segment-order"))
+      jobs.emplace("segment-native", std::async(std::launch::async,
+          simulate_segment_native, std::cref(p), std::cref(capacities)));
+    if (wants("segment-l-affinity"))
+      jobs.emplace("segment-l-affinity", std::async(std::launch::async,
+          simulate_segment_l_affinity, std::cref(p), std::cref(capacities)));
+    if (wants("segment-cache-aware"))
+      jobs.emplace("segment-cache-aware", std::async(std::launch::async,
+          simulate_segment_cache_aware, std::cref(p), std::cref(capacities)));
+    if (wants("block") || wants("operation-block-order"))
+      jobs.emplace("block", std::async(std::launch::async,
+          simulate_block_left_looking, std::cref(p), std::cref(capacities)));
+    if (wants("block-kij-jki-inner"))
+      jobs.emplace("block-kij-jki-inner", std::async(std::launch::async,
+          simulate_block_kij_jki_inner, std::cref(p), std::cref(capacities)));
+    std::map<std::string, SimulationResult> direct;
+    for (auto &job : jobs) direct.emplace(job.first, job.second.get());
     std::vector<SimulationResult> all;
-    all.push_back(std::move(operation_column));
-    all.push_back(std::move(operation_segment));
-    all.push_back(std::move(operation_block));
-    all.push_back(std::move(segment_native));
-    all.push_back(std::move(segment_l_affinity));
-    all.push_back(std::move(segment_cache_aware));
-    all.push_back(std::move(block));
-    all.push_back(std::move(block_kij_jki));
+    const std::array<std::string, 8> method_order = {
+        "operation-column-order", "operation-segment-order", "operation-block-order",
+        "segment-native", "segment-l-affinity", "segment-cache-aware", "block",
+        "block-kij-jki-inner"};
+    for (const std::string &method : method_order) {
+      if (!wants(method)) continue;
+      if (method == "operation-segment-order")
+        all.push_back(make_operation_matched(p, direct.at("segment-native"), method));
+      else if (method == "operation-block-order")
+        all.push_back(make_operation_matched(p, direct.at("block"), method));
+      else
+        all.push_back(std::move(direct.at(method)));
+    }
     write_outputs(output, p, all);
     for (const auto &result : all)
       std::cout << "PB_FULL_LU_INPLACE_METHOD method=" << result.first.method
